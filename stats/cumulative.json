@@ -1,0 +1,79 @@
+{
+  "updated": "2026-04-11",
+  "tennis_atp": {
+    "total_predictions": 11,
+    "hits": 6,
+    "hit_rate": 0.545,
+    "ev_total": -1.12,
+    "pending": 1,
+    "tournaments": [
+      { "id": "2026-MC", "name": "Monte-Carlo 2026",
+        "predictions": 11, "hits": 6, "hit_rate": 0.545, "ev_total": -1.12,
+        "status": "in_progress",
+        "note": "F予測済（Alcaraz go EV+18.9% 信頼度82%）。4/12結果待ち。" }
+    ]
+  },
+  "tennis_wta": {
+    "total_predictions": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "ev_total": 0,
+    "status": "稼働開始（2026-04-10）"
+  },
+  "nhl": {
+    "total_predictions": 2,
+    "hits": 1,
+    "hit_rate": null,
+    "ev_total": 0.333,
+    "pending": 1,
+    "status": "in_progress"
+  },
+  "ufl": {
+    "total_predictions": 1,
+    "hits": 0,
+    "hit_rate": null,
+    "ev_total": 0,
+    "pending": 1,
+    "status": "in_progress"
+  },
+  "nrl": {
+    "total_predictions": 1,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "ev_total": -1.0,
+    "pending": 0,
+    "status": "in_progress",
+    "note": "R6 Rabbitohs vs Raiders → MISS（Raiders 30-22勝利）"
+  },
+  "superrugby": {
+    "total_predictions": 1,
+    "hits": null,
+    "hit_rate": null,
+    "ev_total": 0,
+    "pending": 1,
+    "status": "in_progress",
+    "note": "R9 Crusaders GO（4/11 Suncorp）。結果待ち。"
+  },
+  "nfl": {
+    "total_predictions": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "ev_total": 0,
+    "status": "プレシーズン（2026年9月開幕予定）"
+  },
+  "cfl": {
+    "total_predictions": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "ev_total": 0,
+    "status": "プレシーズン（2026年6月開幕予定）"
+  },
+  "nba": {
+    "total_predictions": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "ev_total": 0,
+    "pending": 1,
+    "status": "4/12分析済。Rockets(NBA-001) CONDITIONAL GO（-500/1.20 EV+5.6%）B008確認後確定。Cavaliers(NBA-002) PENDING_ODDS（オッズ未取得）。"
+  }
+}

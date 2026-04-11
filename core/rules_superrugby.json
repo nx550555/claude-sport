@@ -1,0 +1,84 @@
+{
+  "sport": "superrugby",
+  "league": "Super Rugby Pacific",
+  "version": "1.0",
+  "updated": "2026-04-10",
+  "bet_type": "Head-to-Head (H2H) のみ",
+  "target": "Super Rugby Pacific レギュラーシーズン・ファイナルズ全試合",
+  "important_note": "ラグビーユニオン（15人制）。NRL（ラグビーリーグ13人制）とは別競技。ルール・戦術・指標が異なる。",
+  "league_profile": {
+    "teams": 12,
+    "conferences": {
+      "nz": ["Blues", "Crusaders", "Chiefs", "Hurricanes", "Highlanders"],
+      "australia": ["Brumbies", "Reds", "Waratahs", "Western Force"],
+      "pacific": ["Fijian Drua", "Moana Pasifika"]
+    },
+    "season": "2月〜7月（レギュラーシーズン16ラウンド + ファイナルズ）",
+    "note": "NZチームが歴史的に強い。Pacificチームは地元開催で脅威。旅程の影響が大きい。"
+  },
+  "screening": {
+    "L1_metric_primary": "Points Differential per Game（得失点差/試合）",
+    "L1_threshold": 7,
+    "L1_metric_alt": "Attack Rating / Defence Rating（statsinsider.com.au）",
+    "L1_alt_threshold": "Attack差またはDefence差が上位/下位4チームで乖離",
+    "L1_note": "7点差 ≈ 1トライ＋ゴール分。ラグビーユニオンのスコア単位に合わせた閾値。",
+    "critical": "先発フッカー・スクラムハーフ（SH）・フライハーフ（FH）の確認が必須"
+  },
+  "thresholds": {
+    "recommend_go": { "confidence_min": 75, "ev_min": 5 },
+    "skip": "信頼度75%未満 または EV+5%未満"
+  },
+  "ev_formula": "(推定勝率 × H2Hオッズ) - 1",
+  "layers": {
+    "L1": "シーズン得失点差/試合（チーム地力）",
+    "L2": "直近4試合の対戦相手レベル加重フォーム（±12%）",
+    "L3": "セットピース勝率・テリトリー%・ボール保持率（±8%）",
+    "L4": "ホームグラウンド・移動距離・怪我・国際ウィーク（±15%）"
+  },
+  "data_sources": {
+    "team_stats": "https://www.super.rugby/stats/（公式スタッツ）",
+    "advanced_stats": "https://www.statsinsider.com.au/sport-hub/rugby/schedule",
+    "odds": "TAB / Sportsbet / OddsPortal（国際）",
+    "injuries": "https://www.espn.com/rugby/（ESPN Super Rugby）/ 各チーム公式",
+    "lineups": "espn.com/rugby（木曜〜金曜発表）"
+  },
+  "rules": [
+    {
+      "id": "S001", "type": "initial", "title": "L1スクリーニング（得失点差）",
+      "body": "シーズン累積得失点差÷試合数（Points Diff/G）を算出。差が7点以上の試合のみ候補とする。statsinsider.comのAttack/Defence Ratingが利用可能な場合は優先使用。Round1〜2は閾値を12点に引き上げ（サンプル不足）。"
+    },
+    {
+      "id": "S002", "type": "initial", "title": "L2フォーム品質（直近4試合）",
+      "body": "直近4試合の対戦相手得失点差を加重評価。強豪（NZトップ3またはAUSトップ2）相手に勝利: +6%。Pacificチームのみへの勝利: -2%。4連勝: +5%。4連敗: -7%。"
+    },
+    {
+      "id": "S003", "type": "initial", "title": "L3セットピース補正",
+      "body": "ラインアウト勝率（シーズン）: 差10%以上で+4%。スクラム優位: 差が顕著なら+2%。テリトリー%差: 差10%以上で+3%。ペナルティ数/試合差: 差3以上で-3%（多い側）。"
+    },
+    {
+      "id": "S004", "type": "initial", "title": "ホームグラウンドアドバンテージ",
+      "body": "ホームチームに+5%固定補正。ただし例外: ① 中立地試合（ファイナルズ決勝等）: 0%。② Eden Park（Blues）は特に有利→+7%（難攻不落の記録あり）。③ Fijian Drua地元開催（Suva）: +8%（アウェーチームへの強烈プレッシャー）。"
+    },
+    {
+      "id": "S005", "type": "initial", "title": "移動距離補正",
+      "body": "NZ→オーストラリア（逆も）: -3%（長距離移動・時差1〜3時間）。NZ/豪州→太平洋諸島（Fiji/Samoa）: -6%（長距離＋気候・時差）。太平洋チームの豪NZ遠征: Drua/Moana Pasifikaは慣れているため-2%のみ。同国内移動（NZ国内・豪国内）: 0%。"
+    },
+    {
+      "id": "S006", "type": "initial", "title": "主力選手欠場補正",
+      "body": "スクラムハーフ（#9）欠場: -7%（試合運びの要）。フライハーフ（#10）欠場: -7%（司令塔）。フッカー（#2）欠場: -4%（ラインアウト・スクラムに直結）。ロック（#4/#5）主力欠場: -3%。複数欠場は累積（上限-12%）。"
+    },
+    {
+      "id": "S007", "type": "initial", "title": "国際ウィーク（IRBウィンドウ）補正",
+      "body": "IRB国際ウィーク中はテストマッチ招集で主力選手（NZ代表・豪代表等）が不在になる。対象ウィーク前後の試合は信頼度を-8%引き下げ（または閾値を83%に引き上げ）。Super Rugbyの試合は国際ウィーク中は開催されないが、直前の試合に影響が出る場合あり。"
+    },
+    {
+      "id": "S008", "type": "initial", "title": "チームリスト確認チェックリスト",
+      "body": "分析前確認必須: ① SH/#9確認（espn/チーム公式）② FH/#10確認 ③ 主力ロック/フッカー出場可否 ④ 天候（屋外試合）。全項目確認後のみGO判断を出す。",
+      "checklist": ["SH#9確認", "FH#10確認", "フッカー#2確認", "天候確認"]
+    },
+    {
+      "id": "S009", "type": "initial", "title": "NZチーム優位補正（歴史的）",
+      "body": "Super Rugby Pacific はNZチームが歴史的に豪州チームを上回る。同程度の得失点差の場合、NZチームにわずかな優位があるが、過信は禁物。cElo差・フォームで判断を優先し、この補正は+1%程度にとどめる。"
+    }
+  ]
+}

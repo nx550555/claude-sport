@@ -1,0 +1,83 @@
+{
+  "sport": "ufl",
+  "version": "1.0",
+  "updated": "2026-04-10",
+  "bet_type": "Moneyline (ML) のみ",
+  "target": "UFL レギュラーシーズン・プレーオフ全試合",
+  "league_profile": {
+    "teams": 8,
+    "season": "3月〜6月（約10週間）",
+    "games_per_team": 10,
+    "format": "2カンファレンス制、上位4チームがプレーオフ",
+    "note": "NFLより市場効率が低い→バリュー発見の余地あり。データはNFLより少ない。"
+  },
+  "screening": {
+    "L1_metric": "Points Differential per Game（得失点差/試合）",
+    "L1_threshold": "差 4点以上を候補",
+    "L1_note": "xGF%相当の高度指標が存在しないため、得失点差を主指標とする。3試合以上の実績が必要（Week1は保留推奨）",
+    "L1_alt": "Yards/Play differential（攻守の1プレーあたりヤード差）が入手可能な場合は優先",
+    "critical": "QBの先発確認が必須（N相当のU006）"
+  },
+  "thresholds": {
+    "recommend_go": { "confidence_min": 75, "ev_min": 5 },
+    "skip": "信頼度75%未満 または EV+5%未満",
+    "week1_note": "Week1は実績なし→推奨保留。Week2以降から本格稼働"
+  },
+  "ev_formula": "(推定勝率 × MLオッズ) - 1",
+  "layers": {
+    "L1": "シーズン得失点差/試合（チーム地力）",
+    "L2": "直近3試合の対戦相手レベル加重フォーム（±10%）",
+    "L3": "ターンオーバー差・レッドゾーン効率・3rd Down成功率（±8%）",
+    "L4": "ホームフィールド・QB状態・怪我・天候（±12%）"
+  },
+  "data_sources": {
+    "team_stats": "https://www.theufl.com/stats（公式スタッツ）",
+    "odds": "DraftKings / FanDuel / BetMGM",
+    "injuries": "https://www.theufl.com/news（公式ニュース）",
+    "advanced": "ESPN UFL stats / Pro Football Reference（季末）"
+  },
+  "rules": [
+    {
+      "id": "U001", "type": "initial", "title": "L1スクリーニング（得失点差）",
+      "body": "シーズン累積得失点差÷試合数（Points Diff/G）を算出。差が4点以上の試合のみ候補とする。Week2以降から有効。Week1は実績なし→全試合スキップ推奨。シーズン序盤（3試合未満）は閾値を6点に引き上げ。Yards/Play diffが入手可能な場合は差0.6以上を閾値とする。",
+      "precision_ranking": "Yards/Play diff > Points Diff/G"
+    },
+    {
+      "id": "U002", "type": "initial", "title": "L2フォーム品質（直近3試合）",
+      "body": "UFLは試合数が少ない（全10試合）ため、直近3試合の対戦相手強度で加重評価する。強豪（勝率6割超）相手に勝利: +5%。弱小（勝率4割未満）相手のみの勝利: -3%。3連勝: +5%。3連敗: -5%。"
+    },
+    {
+      "id": "U003", "type": "initial", "title": "L3スタッツ補正",
+      "body": "① ターンオーバー差（シーズン累積）: +2差以上優位な場合+4%。② レッドゾーンTD率（50%超）: +3%。③ 3rd Down成功率差: 5%以上優位で+3%。④ サック数/試合差: 2以上優位で+2%。"
+    },
+    {
+      "id": "U004", "type": "initial", "title": "ホームフィールドアドバンテージ",
+      "body": "ホームチームに+4%固定補正（NFLより小さい。スタジアム規模・観客数が少ないため）。プレーオフは+6%。中立地試合（チャンピオンシップ）は0%。"
+    },
+    {
+      "id": "U005", "type": "initial", "title": "QB先発確認（最重要）",
+      "body": "先発QBが未確認の場合は推奨保留。スターターと控えの差が大きい場合は-15%補正（NFLより差が小さいことが多い）。確認タイミング: 試合前日〜当日午前中にtheufl.comの公式ニュースで確認。",
+      "checklist": ["先発QB確認", "負傷報告書確認（木曜公開）"]
+    },
+    {
+      "id": "U006", "type": "initial", "title": "怪我・欠場補正",
+      "body": "スターターQB欠場: -15%。第1WR/TE欠場: -5%。第1RB欠場: -3%。複数欠場は累積（上限-15%）。UFLは選手層が薄いため、NFL同等ポジション欠場でもインパクトが大きい。"
+    },
+    {
+      "id": "U007", "type": "initial", "title": "天候補正（屋外スタジアム限定）",
+      "body": "降雨（25mm以上予報）: パスオフェンス優位チームは-3%。強風（30km/h以上）: 同様に-3%。屋内スタジアム開催の場合は0%。UFLの試合は4月〜6月開催のため暑さも考慮（35度超: +2%ホームアドバンテージ拡大）。",
+      "stadiums": {
+        "屋内": ["DC Defenders（Audi Field→屋外）", "要スタジアム別確認"],
+        "note": "theufl.comのスタジアム情報で毎試合確認"
+      }
+    },
+    {
+      "id": "U008", "type": "initial", "title": "シーズン序盤の不確実性割引",
+      "body": "Week1〜2: 実績不足のため全試合SKIP推奨（データなし）。Week3〜4: 信頼度閾値を80%に引き上げ（通常75%）。Week5以降: 通常通り75%閾値で運用。理由: サンプルサイズが小さく得失点差が不安定。"
+    },
+    {
+      "id": "U009", "type": "initial", "title": "ラインナップ確認チェックリスト",
+      "body": "分析前に確認必須: ① 先発QB（theufl.com公式）② 主力WR/TE出場可否 ③ 天候（Weather.com or AccuWeather） ④ 直近の怪我情報（木曜練習レポート）。全項目確認後のみGO判断を出す。"
+    }
+  ]
+}

@@ -1,0 +1,625 @@
+Games
+Playoff Odds	Power Rankings
+Teams	Players
+Goalies		Lines
+Betting	Standings
+Injuries	Data
+About
+Games
+Playoff Odds
+Power Rankings
+Standings
+Betting
+Teams
+Players
+Goalies
+Lines
+Injuries
+Data
+About
+
+
+
+
+
+
+
+Stats updated: Thursday April 9, 2026 at 11:42 PM Eastern Time
+
+
+
+
+2025-2026
+2024-2025
+2023-2024
+2022-2023
+2021-2022
+2020-2021
+2019-2020
+2018-2019
+2017-2018
+2016-2017
+2015-2016
+2014-2015
+2013-2014
+2012-2013
+2011-2012
+2010-2011
+2009-2010
+2008-2009
+ 
+All Situations
+5 on 5
+5 on 4
+4 on 5
+Other
+ 
+Regular Season
+Playoffs
+ 
+All Season
+Last 10 Games
+Last 20 Games
+
+
+Team	Games
+Played	Icetime
+(Minutes)	Goals %	xGoals %	Shot Attempts %
+(Corsi %)	Unblocked
+Shot Attempts %
+(Fenwick %)	Goals
+For	Goals
+Against	Goal
+Differential	Expected
+Goals For	Expected
+Goals Against	Expected Goal
+Differential	Goals For
+Above Expected	Goals Against
+Above Expected	Goals Differential
+Above Expected	PDO
+(Sh%+Sv%)	Shooting % On
+Shots On Goal	Shooting % On
+Unblocked Shots	Shooting %
+On All
+Shot Attempts	% of Shot
+Attempts For
+That Are Blocked	% of Unblocked Shot
+Attempts For
+That Miss Net	Expected % of Unblocked
+Shot Attempts For
+That Miss Net	% of Net Misses
+Above Expected	Save % On
+Shots On Goal	Save % On
+Unblocked Shots	Expected Save % On
+Unblocked Shots	Save %
+Above Expected On
+Unblocked Shots	Penalty Minutes
+Taken Per 60	Penalty Minutes
+Drawn Per 60	Share of Penalty
+Minutes Taken	Goals For
+Per 60	Goals Against
+Per 60
+(GAA)	Goals Differential
+Per 60	Expected
+Goals For
+Per 60	Expected
+Goals Against
+Per 60	Expected Goal
+Differential
+Per 60	Shots On
+Goal For	Shots On
+Goal Against	Unblocked Shots
+Attempts For	Unblocked Shots
+Attempts Against	PIM
+Against	PIM Taken
+By Opponents	% of PIM Taken	Faceoff Win %	Score Adjusted
+Expected Goals %	Flurry Adjusted
+Expected Goals %	Score & Flurry Adjusted
+Expected Goals %	Score Adjusted
+Shot Attempts %
+(Corsi %)	Score Adjusted
+Unblocked Shot Attempts %
+(Fenwick %)	Rebound
+Shots For	Rebound
+Shots Against	Rebound
+Goals For	% of Goals For
+From Rebounds	Rebound
+Goals Against	% of Goals Against
+From Rebounds	High Danger
+Shots For	Medium Danger
+Shots For	Low Danger
+Shots For	High Danger
+Shots Against	Medium Danger
+Shots Against	Low Danger
+Shots Against	Takeaways
+From Opponent	Takeaways
+To Opponent	Share of Takeaways	Giveaways
+To Opponent	Defensive Zone
+Giveaways
+To Opponent	% of Giveaways
+In Defensive Zone	Shots
+Blocked	Hits Given	Hits Taken	% of Hits Given
+
+1	
+	CAR
+	79	3923	53.1%	56.65%	59.98%	59.12%	180	159	21	196.21	150.16	46.05	-16.21	8.84	-25.05	98.06	8.95%	5.62%	4.03%	28.36%	37.18%	26.41%	10.77%	89.11%	92.82%	93.22%	-0.4%	7.48	7.63	49.49%	2.75	2.43	0.32	3	2.29	0.7	2012	1460	3203	2215	489	499	49.49%	50.44%	57.01%	56.56%	56.91%	60.65%	59.73%	248	184	21	11.67%	16	10.06%	201	532	2470	139	490	1586	381	284	57.29%	1152	604	52.43%	768	1489	1755	45.9%
+
+2	
+	COL
+	77	3770	62.57%	56.47%	56.7%	55.9%	209	125	84	189.49	146.05	43.44	19.51	-21.05	40.56	102.04	10.18%	6.82%	4.83%	29.15%	32.94%	27.55%	5.39%	91.87%	94.83%	93.95%	0.87%	7.4	8.29	47.16%	3.33	1.99	1.34	3.01	2.32	0.68	2054	1537	3063	2416	465	521	47.16%	50.85%	57.32%	56.51%	57.36%	57.96%	56.87%	242	214	31	14.83%	14	11.2%	194	522	2347	140	441	1835	287	288	49.91%	1056	541	51.23%	885	1210	1512	44.45%
+
+3	
+	OTT
+	79	3837	52.37%	55.93%	52.97%	53.8%	177	161	16	171.61	135.24	36.37	5.39	25.76	-20.37	99.26	10.15%	6.57%	4.8%	26.93%	35.29%	26.16%	9.13%	89.11%	93.04%	94.16%	-1.11%	9.05	9.99	47.54%	2.77	2.52	0.25	2.67	2.11	0.56	1744	1478	2695	2314	579	639	47.54%	53.23%	56.28%	56.02%	56.36%	53.4%	54.22%	206	182	22	12.43%	22	13.66%	169	506	2020	118	398	1798	326	271	54.61%	1058	571	53.97%	960	1774	1736	50.54%
+
+4	
+	VGK
+	78	3965	49.7%	54.39%	52.28%	52.79%	165	167	-2	165.59	138.88	26.71	-0.59	28.12	-28.71	97.94	9.33%	6.16%	4.4%	28.48%	33.97%	26.54%	7.43%	88.62%	93.03%	94.2%	-1.17%	7.58	8.13	48.27%	2.5	2.53	-0.03	2.5	2.09	0.39	1769	1467	2679	2396	501	537	48.27%	51.1%	54.01%	54.3%	53.94%	51.72%	52.22%	189	183	26	15.76%	24	14.37%	157	503	2019	129	392	1875	285	325	46.72%	1004	470	46.81%	1023	1560	1600	49.37%
+
+5	
+	TBL
+	79	3815	56.46%	53.86%	53.44%	52.58%	188	145	43	169.39	145.12	24.27	18.61	-0.12	18.73	102.03	11.12%	7.06%	5.07%	28.17%	36.48%	26.78%	9.7%	90.91%	93.96%	93.96%	0%	13.11	12.42	51.35%	2.96	2.28	0.68	2.66	2.28	0.38	1691	1596	2662	2401	834	790	51.35%	48.25%	54.1%	53.61%	53.85%	53.92%	52.83%	234	188	24	12.77%	17	11.72%	163	521	1978	125	435	1841	254	320	44.25%	1000	508	50.8%	828	1491	1664	47.26%
+
+6	
+	UTA
+	77	3782	53.66%	52.53%	53.05%	52.69%	176	152	24	166.37	150.36	16.01	9.63	1.64	7.99	100.55	10.44%	6.65%	4.69%	29.39%	36.31%	26.48%	9.83%	90.11%	93.61%	93.67%	-0.07%	8.88	8.52	51.05%	2.79	2.41	0.38	2.63	2.38	0.25	1686	1537	2647	2377	560	537	51.05%	49.54%	52.73%	52.61%	52.82%	53.41%	52.95%	188	190	18	10.23%	23	15.13%	153	496	1998	138	458	1781	284	306	48.14%	1035	488	47.15%	941	1405	1597	46.8%
+
+7	
+	LAK
+	77	3875	50.92%	51.89%	52.27%	52.17%	139	134	5	154.41	143.14	11.27	-15.41	-9.14	-6.27	99.82	8.25%	5.14%	3.6%	30.11%	37.64%	27.13%	10.51%	91.57%	94.59%	94.22%	0.37%	7.76	7.52	50.76%	2.15	2.07	0.08	2.38	2.21	0.17	1685	1590	2702	2477	501	486	50.76%	50.01%	51.53%	51.82%	51.47%	51.92%	51.86%	210	188	14	10.07%	14	10.45%	136	461	2105	109	458	1910	294	290	50.34%	968	423	43.7%	1053	1454	1434	50.35%
+
+8	
+	CBJ
+	79	4000	51.69%	51.81%	50.62%	50.36%	168	157	11	174.41	162.23	12.18	-6.41	-5.23	-1.18	100.34	9.16%	6%	4.27%	28.82%	34.42%	26.48%	7.94%	91.18%	94.31%	94.12%	0.19%	7.92	7.45	51.51%	2.52	2.35	0.16	2.61	2.43	0.18	1835	1781	2798	2758	528	497	51.51%	50.82%	52.16%	51.69%	52.06%	51.24%	50.88%	240	197	19	11.31%	15	9.55%	184	473	2141	159	427	2172	339	302	52.89%	1099	539	49.04%	1076	1468	1367	51.78%
+
+9	
+	EDM
+	79	3988	48.03%	51.64%	50.05%	50.8%	171	185	-14	176.15	164.97	11.18	-5.15	20.03	-25.18	98.14	9.34%	6.28%	4.65%	25.94%	32.78%	26.21%	6.57%	88.8%	92.99%	93.75%	-0.76%	7.94	7.73	50.67%	2.57	2.78	-0.21	2.65	2.47	0.17	1831	1652	2724	2638	528	514	50.67%	52.25%	51.75%	51.5%	51.6%	50.27%	50.91%	204	202	19	11.11%	33	17.84%	177	528	2019	163	461	2014	283	336	45.72%	1136	517	45.51%	1032	1427	1415	50.21%
+
+10	
+	ANA
+	78	3804	46.8%	51.53%	52.19%	52.24%	161	183	-22	177.15	166.62	10.53	-16.15	16.38	-32.53	98.06	8.81%	5.54%	4.04%	27.06%	37.14%	26.99%	10.15%	89.25%	93.12%	93.73%	-0.62%	9.54	9.78	49.39%	2.54	2.89	-0.35	2.79	2.62	0.16	1828	1702	2908	2659	605	620	49.39%	48.39%	50.96%	51.63%	51.06%	51.47%	51.62%	251	209	24	14.91%	19	10.38%	159	528	2221	138	544	1977	314	290	51.99%	1130	553	48.94%	993	1548	1371	53.03%
+
+11	
+	PIT
+	79	3936	54.21%	51.38%	50.3%	50.69%	193	163	30	175.16	165.76	9.4	17.84	-2.76	20.6	101.28	11.01%	7.11%	5.16%	27.41%	35.43%	26.89%	8.54%	90.27%	93.83%	93.72%	0.1%	8.17	7.58	51.89%	2.94	2.48	0.46	2.67	2.51	0.14	1753	1676	2715	2641	536	497	51.89%	47.44%	51.91%	51.45%	51.96%	51.02%	51.27%	208	208	19	9.84%	23	14.11%	173	526	2016	161	486	1994	327	297	52.4%	1133	545	48.1%	1054	1266	1604	44.11%
+
+12	
+	MIN
+	78	3922	52.44%	51.32%	48.06%	48.79%	161	146	15	165.91	157.4	8.51	-4.91	-11.4	6.49	101.11	9.11%	5.98%	4.4%	26.52%	34.3%	26.9%	7.4%	92%	94.83%	94.43%	0.4%	7.5	8.43	47.07%	2.46	2.23	0.23	2.52	2.4	0.12	1768	1825	2691	2824	490	551	47.07%	46.15%	51.8%	51.23%	51.7%	48.69%	49.39%	226	199	16	9.94%	16	10.96%	171	506	2014	127	443	2254	306	286	51.69%	1048	517	49.33%	1133	1590	1355	53.99%
+
+13	
+	PHI
+	79	3920	51.18%	50.7%	48.05%	48.92%	152	145	7	148.46	144.35	4.11	3.54	0.65	2.89	100.4	10.03%	6.49%	4.72%	27.27%	35.27%	26.56%	8.71%	90.37%	94.07%	94.1%	-0.03%	9.12	8.81	50.85%	2.33	2.22	0.11	2.26	2.2	0.06	1516	1506	2342	2445	596	576	50.85%	49.74%	50.6%	50.61%	50.51%	47.9%	48.75%	173	174	15	9.87%	15	10.34%	134	460	1748	144	398	1903	280	277	50.27%	999	471	47.15%	1036	1717	1562	52.36%
+
+14	
+	DAL
+	78	3848	54.67%	50.6%	47.47%	48.08%	158	131	27	151.25	147.64	3.61	6.75	-16.64	23.39	102.21	10.6%	7.12%	5.1%	28.4%	32.85%	26.09%	6.76%	91.6%	94.53%	93.84%	0.69%	8.33	8.51	49.44%	2.46	2.04	0.42	2.35	2.29	0.05	1490	1560	2219	2396	534	546	49.44%	52.29%	51.08%	50.38%	50.85%	48.21%	48.58%	190	194	26	16.46%	21	16.03%	151	467	1601	143	409	1844	292	301	49.24%	1122	511	45.54%	1033	1421	1788	44.28%
+
+15	
+	BUF
+	80	3904	54.71%	49.85%	49.15%	49.66%	186	154	32	166.24	167.24	-1	19.76	-13.24	33	101.84	10.49%	6.86%	5.13%	25.28%	34.6%	26.78%	7.82%	91.35%	94.4%	93.91%	0.48%	9.31	9.68	49.03%	2.86	2.37	0.49	2.55	2.57	-0.02	1773	1781	2711	2748	606	630	49.03%	46.58%	50.09%	49.85%	50.08%	49.64%	49.99%	194	218	15	8.06%	24	15.58%	149	496	2066	153	503	2092	326	307	51.5%	1073	524	48.84%	1005	1415	1743	44.81%
+
+16	
+	WSH
+	79	3846	54.6%	49.85%	49.37%	50.22%	172	143	29	167.79	168.82	-1.03	4.21	-25.82	30.03	101.75	10.21%	6.52%	4.74%	27.31%	36.17%	26.63%	9.54%	91.54%	94.54%	93.55%	0.99%	9.14	8.86	50.78%	2.68	2.23	0.45	2.61	2.62	-0.02	1685	1691	2640	2617	586	568	50.78%	48.4%	49.87%	49.78%	49.8%	49.48%	50.34%	211	204	30	17.44%	18	12.59%	155	517	1968	170	515	1932	293	291	50.17%	1071	523	48.83%	1107	1458	1402	50.98%
+
+17	
+	NJD
+	79	3982	42.95%	49.4%	51.26%	51.28%	131	174	-43	161.69	165.64	-3.95	-30.69	8.36	-39.05	97.15	7.21%	4.71%	3.4%	27.76%	34.73%	27.08%	7.65%	89.94%	93.42%	93.74%	-0.32%	7.37	7.13	50.83%	1.97	2.62	-0.65	2.43	2.49	-0.05	1817	1730	2784	2645	489	473	50.83%	50.47%	49.07%	49.44%	49.11%	50.73%	50.84%	210	219	6	4.58%	25	14.37%	142	484	2158	166	479	2000	311	320	49.29%	1117	541	48.43%	1020	1392	1466	48.71%
+
+18	
+	FLA
+	79	3786	45.54%	49.27%	51.73%	50.87%	148	177	-29	156.23	160.88	-4.65	-8.23	16.12	-24.35	98.33	9.13%	5.67%	4.1%	27.67%	37.92%	26.62%	11.3%	89.2%	92.98%	93.62%	-0.64%	10.41	10.65	49.44%	2.34	2.8	-0.46	2.47	2.54	-0.06	1621	1639	2611	2522	657	672	49.44%	47.21%	49.08%	49.51%	49.34%	51.39%	50.66%	209	212	25	16.89%	28	15.82%	142	465	2004	169	470	1883	262	320	45.02%	1021	515	50.44%	846	1834	1468	55.54%
+
+19	
+	NSH
+	78	3824	45.91%	49.24%	50.34%	48.63%	146	172	-26	159.35	164.3	-4.95	-13.35	7.7	-21.05	99.29	8.84%	5.69%	4.03%	29.2%	35.59%	26.71%	8.88%	90.46%	93.65%	93.94%	-0.28%	8.83	8.74	50.27%	2.29	2.7	-0.41	2.49	2.57	-0.06	1652	1802	2565	2709	563	557	50.27%	49.97%	48.86%	49.14%	48.78%	49.81%	48.17%	220	189	22	15.07%	30	17.44%	167	447	1951	152	471	2086	334	273	55.02%	1057	498	47.11%	865	1429	1491	48.94%
+
+20	
+	STL
+	78	3910	47.4%	49.21%	48.15%	48.02%	146	162	-16	150.33	155.15	-4.82	-4.33	6.85	-11.18	99.61	9.19%	6.1%	4.39%	28.03%	33.7%	26.43%	7.27%	90.41%	93.75%	94.01%	-0.26%	8.32	8.18	50.42%	2.24	2.49	-0.25	2.3	2.38	-0.06	1588	1690	2395	2592	542	533	50.42%	48.62%	49.22%	49.1%	49.09%	47.96%	48.01%	199	191	15	10.27%	23	14.2%	136	472	1787	158	434	2000	281	309	47.63%	1098	521	47.45%	992	1673	1350	55.34%
+
+21	
+	DET
+	79	3900	46.39%	49.04%	48.77%	49.79%	135	156	-21	154.49	160.55	-6.06	-19.49	-4.55	-14.94	98.82	7.96%	5.12%	3.73%	27.16%	35.73%	26.75%	8.98%	90.86%	94.14%	93.97%	0.17%	7.49	8.35	47.28%	2.08	2.4	-0.32	2.37	2.46	-0.09	1696	1707	2639	2661	487	543	47.28%	50.78%	48.93%	49.01%	48.9%	48.57%	49.62%	203	168	15	11.11%	16	10.26%	138	472	2029	144	479	2038	289	269	51.79%	992	482	48.59%	1144	1357	1632	45.4%
+
+22	
+	NYR
+	79	3954	49.67%	48.52%	48.85%	47.92%	149	151	-2	148.64	157.7	-9.06	0.36	-6.7	7.06	100.99	9.59%	6.01%	4.19%	30.37%	37.29%	27.68%	9.61%	91.41%	94.39%	94.14%	0.25%	8.51	7.24	54.05%	2.26	2.29	-0.03	2.25	2.38	-0.14	1554	1757	2478	2693	561	477	54.05%	54.54%	48.25%	48.54%	48.27%	48.43%	47.52%	197	204	18	12.08%	21	13.91%	139	445	1894	147	446	2100	291	320	47.63%	1040	539	51.83%	1034	1943	1484	56.7%
+
+23	
+	WPG
+	78	3905	49.35%	48.16%	48.82%	48.73%	152	156	-4	150.43	161.92	-11.49	1.57	-5.92	7.49	100.46	9.55%	6.08%	4.43%	27.11%	36.32%	27.76%	8.56%	90.91%	94.07%	93.84%	0.23%	7.54	7.39	50.51%	2.34	2.4	-0.06	2.3	2.47	-0.17	1592	1717	2500	2630	491	481	50.51%	51.89%	48.25%	48.06%	48.17%	49.03%	48.93%	190	225	24	15.79%	21	13.46%	144	415	1941	181	452	1997	271	295	47.88%	997	474	47.54%	966	1625	1416	53.44%
+
+24	
+	MTL
+	79	3864	53.45%	48.08%	48.78%	49.66%	178	155	23	155.15	167.52	-12.37	22.85	-12.52	35.37	101.75	11.28%	7.15%	5.15%	27.86%	36.65%	27.3%	9.35%	90.47%	93.86%	93.37%	0.5%	9.8	9.46	50.89%	2.76	2.41	0.36	2.41	2.59	-0.19	1578	1627	2491	2525	631	609	50.89%	51.29%	48.2%	48.28%	48.4%	49.03%	49.87%	173	224	15	8.43%	17	10.97%	138	469	1884	173	518	1834	291	298	49.41%	1037	485	46.77%	1101	1663	1658	50.08%
+
+25	
+	CGY
+	77	3788	44.92%	47.58%	49.62%	49.21%	137	168	-31	150.52	165.85	-15.33	-13.52	2.15	-15.67	98.31	7.92%	5.34%	3.76%	29.61%	32.59%	26.67%	5.92%	90.38%	93.65%	93.73%	-0.08%	8.57	8.95	48.92%	2.17	2.66	-0.49	2.38	2.61	-0.24	1729	1747	2565	2647	541	565	48.92%	49.11%	47.37%	47.74%	47.54%	49.25%	49.09%	183	226	15	10.95%	21	12.5%	146	430	1989	175	482	1990	282	338	45.48%	1083	492	45.43%	1053	1505	1471	50.57%
+
+26	
+	NYI
+	79	3893	48.49%	47.41%	48.75%	49.04%	145	154	-9	158.92	176.28	-17.36	-13.92	-22.28	8.36	99.66	8.62%	5.57%	4.05%	27.17%	35.43%	27.02%	8.41%	91.04%	94.31%	93.49%	0.82%	7.07	7.74	47.76%	2.23	2.37	-0.14	2.43	2.71	-0.26	1682	1719	2605	2707	459	502	47.76%	51.65%	47.25%	47.51%	47.35%	48.55%	48.84%	229	245	22	15.17%	13	8.44%	148	461	1996	183	537	1987	291	301	49.16%	1054	477	45.26%	1054	1484	1515	49.48%
+
+27	
+	SJS
+	77	3756	46.06%	47.21%	46.67%	46.1%	152	178	-26	144.5	161.55	-17.05	7.5	16.45	-8.95	99.89	10.13%	6.79%	4.78%	29.58%	32.98%	26.68%	6.3%	89.76%	93.2%	93.83%	-0.63%	8.35	8.58	49.34%	2.43	2.84	-0.42	2.3	2.57	-0.27	1500	1738	2238	2617	523	537	49.34%	48.07%	46.92%	47.34%	47.06%	46.36%	45.89%	185	210	22	14.47%	21	11.8%	153	407	1678	159	483	1975	285	279	50.53%	990	439	44.34%	1014	1590	1301	55%
+
+28	
+	BOS
+	79	3846	54.55%	47.17%	48.95%	49.03%	174	145	29	152.83	171.2	-18.37	21.17	-26.2	47.37	102.07	10.52%	6.73%	4.83%	28.28%	35.99%	26.59%	9.4%	91.56%	94.6%	93.63%	0.98%	10.73	10.23	51.19%	2.71	2.26	0.45	2.37	2.67	-0.28	1654	1717	2584	2686	688	656	51.19%	53.09%	47.31%	47.12%	47.27%	49.17%	49.19%	213	239	20	11.49%	14	9.66%	142	436	2006	172	529	1985	274	312	46.76%	1027	451	43.91%	1071	1710	1663	50.7%
+
+29	
+	SEA
+	77	3894	49.49%	46.06%	45.26%	45.64%	145	148	-3	139.14	162.94	-23.8	5.86	-14.94	20.8	101.34	9.51%	6.08%	4.43%	27.15%	36.01%	27.23%	8.78%	91.83%	94.79%	94.26%	0.53%	7.3	7.44	49.53%	2.23	2.28	-0.05	2.14	2.5	-0.35	1525	1812	2383	2838	474	483	49.53%	47.69%	45.84%	46.02%	45.81%	44.85%	45.29%	170	229	31	21.38%	14	9.46%	131	386	1866	158	459	2221	311	303	50.65%	1097	491	44.76%	1118	1347	1464	47.92%
+
+30	
+	TOR
+	79	3963	45.45%	45.76%	44.75%	45.05%	165	198	-33	148.76	176.36	-27.6	16.24	21.64	-5.4	100.3	10.27%	6.65%	4.94%	25.7%	35.28%	26.3%	8.98%	90.03%	93.46%	94.18%	-0.71%	8.78	8.07	52.11%	2.5	3	-0.5	2.24	2.66	-0.41	1607	1986	2483	3029	580	533	52.11%	54.38%	45.47%	45.72%	45.45%	44.18%	44.6%	183	210	22	13.33%	19	9.6%	122	475	1886	158	494	2377	300	303	49.75%	1111	532	47.88%	1097	1698	1374	55.27%
+
+31	
+	VAN
+	77	3822	39.06%	44.61%	46.71%	46.46%	125	195	-70	143.77	178.54	-34.77	-18.77	16.46	-35.23	97.52	8.27%	5.16%	3.77%	26.92%	37.67%	27.23%	10.44%	89.24%	93.02%	93.61%	-0.59%	7.72	7.77	49.85%	1.96	3.06	-1.1	2.24	2.79	-0.53	1511	1813	2424	2793	492	495	49.85%	49.29%	43.74%	44.66%	43.78%	45.44%	45.44%	212	207	17	13.6%	25	12.82%	144	387	1893	162	549	2082	303	264	53.44%	990	430	43.43%	992	1544	1374	52.91%
+
+32	
+	CHI
+	79	3940	43.2%	42.47%	45.58%	45.04%	143	188	-45	140.82	190.77	-49.95	2.18	-2.77	4.95	99.54	9.35%	5.96%	4.41%	25.96%	36.24%	26.65%	9.59%	90.18%	93.57%	93.48%	0.09%	7.8	7.67	50.39%	2.18	2.86	-0.69	2.13	2.89	-0.75	1529	1915	2398	2926	512	504	50.39%	46.36%	42.45%	42.79%	42.76%	45.25%	44.88%	186	244	19	13.29%	25	13.3%	144	407	1847	189	560	2177	329	301	52.22%	1023	450	43.99%	941	1233	1688	42.21%
+
+
+
+
+
+--------Basic Metrics------
+xGoals %
+Corsi %
+Fenwick %
+Ice Time (Seconds)
+Goals For
+Goals Against
+----Expected Goal Metrics-----
+xGoals For
+xGoals Against
+Flurry Adjusted xGoals For
+Flurry Adjusted xGoals Against
+Score/Venue Adjusted xGoals For
+Score/Venue Adjusted xGoals Against
+Flurry/Score/Venue Adjusted xGoals For
+Flurry/Score/Venue Adjusted xGoals Against
+--------Shot Danger------
+Goals From Low Danger Shots For
+Goals From Low Danger Shots Against
+Goals From Medium Danger Shots For
+Goals From Medium Danger Shots Against
+Goals From High Danger Shots For
+Goals From High Danger Shots Against
+xGoals From Low Danger Shots For
+xGoals From Low Danger Shots Against
+xGoals From Medium Danger Shots For
+xGoals From Medium Danger Shots Against
+xGoals From High Danger Shots For
+xGoals From High Danger Shots Against
+Low Danger Shots For
+Low Danger Shots Against
+Medium Danger Shots For
+Medium Danger Shots Against
+High Danger Shots For
+High Danger Shots Against
+--------Shot For Outcomes------
+Goals For
+xGoals For
+Rebounds For
+Puck Frozen After Shot For
+xFreezes After Shot For
+Play Stopped After Shot For
+xPlay Stopped After Shot For
+Play Continued In Zone After Shot For
+xPlay Continued In Zone After Shot For
+Play Continued Outside Zone After Shot For
+xPlay Continued Outside Zone After Shot For
+--------Shot Against Outcomes------
+Goals Against
+xGoals Against
+Rebounds Against
+Puck Frozen After Shot Against
+xFreezes After Shot Against
+Play Stopped After Shot Against
+xPlay Stopped After Shot Against
+Play Continued In Zone After Shot Against
+xPlayContinuedInZoneAgainst
+Play Continued Outside Zone After Shot Against
+xPlayContinuedOutsideZoneAgainst
+--------Penalties------
+Penalties Taken
+Penalty Minutes Taken
+Penalties Drawn
+Penalty Minutes Drawn
+--------Rebounds------
+Rebound Goals For
+Rebounds For
+xGoals From Rebound Shots For
+Created xGoals For
+Score Adjusted Created xGoals For
+Score/Flurry Adjusted Credted xGoals For
+Rebound Goals Against
+Rebounds Against
+xGoals From Rebound Shots Against
+Created xGoals Against
+Score Adjusted Created xGoals Against
+Score/Flurry Adjusted Credted xGoals Against
+--------Misc Shot For Metrics------
+Shots on Goal For
+xShots On Goal For
+Missed Shots For
+Shot Attempts For
+Shots On Goal For That Were Saved
+Unblocked Shots For
+Unblocked Shots For That Were Saved
+Score Adjusted Shot Attempts For
+Score Adjusted Unblocked Shots For
+--------Misc Shot Against Metrics------
+Shots on Goal Against
+xShots On Goal Against
+Missed Shots Against
+Shot Attempts Against
+Shots On Goal Against That Were Saved
+Unblocked Shots Against
+Unblocked Shots Against That Were Saved
+Score Adjusted Shot Attempts Against
+Score Adjusted Unblocked Shots Against
+--------Other Metrics------
+Faceoffs Won
+Faceoffs Lost
+Hits Given
+Hits Received
+Takeaways From Opponent
+Takeaways To Opponent
+Giveaways From Opponent
+Giveaways To Opponent
+Defensive Zone Giveaways From Opponent
+Defensive Zone Giveaways To Opponent
+Shots Blocked By Team
+Shots Blocked By Opponent
+	
+3.6
+2.3
+2.4
+2.5
+2.6
+2.7
+2.8
+2.9
+3
+3.1
+3.2
+3.3
+3.4
+3.5
+3.6
+3.7
+3.5
+1
+1.5
+2
+2.5
+3
+3.5
+4
+4.5
+Bad
+Fun
+Good
+Boring
+	
+xGoals For/Against
+xGoals vs Goals
+Corsi For/Against
+PIM For/Against
+xGoals vs Corsi
+Custom Graph
+
+
+
+
+All Situations
+5 on 5
+5 on 4
+4 on 5
+Other
+
+
+
+
+Per 60 Minutes
+Per Game
+Season Totals
+
+
+
+
+2025-2026
+2024-2025
+2023-2024
+2022-2023
+2021-2022
+2020-2021
+2019-2020
+2018-2019
+2017-2018
+2016-2017
+2015-2016
+2014-2015
+2013-2014
+2012-2013
+2011-2012
+2010-2011
+2009-2010
+2008-2009
+
+
+
+
+Regular Season
+Playoffs
+
+
+
+Download Data as CSV
+
+
+--------Basic Metrics------
+xGoals %
+Corsi %
+Fenwick %
+Ice Time (Seconds)
+Goals For
+Goals Against
+----Expected Goal Metrics----
+xGoals For
+xGoals Against
+Flurry Adjusted xGoals For
+Flurry Adjusted xGoals Against
+Score/Venue Adjusted xGoals For
+Score/Venue Adjusted xGoals Against
+Flurry/Score/Venue Adjusted xGoals For
+Flurry/Score/Venue Adjusted xGoals Against
+--------Shot Danger------
+Goals From Low Danger Shots For
+Goals From Low Danger Shots Against
+Goals From Medium Danger Shots For
+Goals From Medium Danger Shots Against
+Goals From High Danger Shots For
+Goals From High Danger Shots Against
+xGoals From Low Danger Shots For
+xGoals From Low Danger Shots Against
+xGoals From Medium Danger Shots For
+xGoals From Medium Danger Shots Against
+xGoals From High Danger Shots For
+xGoals From High Danger Shots Against
+Low Danger Shots For
+Low Danger Shots Against
+Medium Danger Shots For
+Medium Danger Shots Against
+High Danger Shots For
+High Danger Shots Against
+--------Shot For Outcomes------
+Goals For
+xGoals For
+Rebounds For
+Puck Frozen After Shot For
+xFreezes After Shot For
+Play Stopped After Shot For
+xPlay Stopped After Shot For
+Play Continued In Zone After Shot For
+xPlay Continued In Zone After Shot For
+Play Continued Outside Zone After Shot For
+xPlay Continued Outside Zone After Shot For
+--------Shot Against Outcomes------
+Goals Against
+xGoals Against
+Rebounds Against
+Puck Frozen After Shot Against
+xFreezes After Shot Against
+Play Stopped After Shot Against
+xPlay Stopped After Shot Against
+Play Continued In Zone After Shot Against
+xPlayContinuedInZoneAgainst
+Play Continued Outside Zone After Shot Against
+xPlayContinuedOutsideZoneAgainst
+--------Penalties------
+Penalties Taken
+Penalty Minutes Taken
+Penalties Drawn
+Penalty Minutes Drawn
+--------Rebounds------
+Rebound Goals For
+Rebounds For
+xGoals From Rebound Shots For
+Created xGoals For
+Score Adjusted Created xGoals For
+Score/Flurry Adjusted Credted xGoals For
+Rebound Goals Against
+Rebounds Against
+xGoals From Rebound Shots Against
+Created xGoals Against
+Score Adjusted Created xGoals Against
+Score/Flurry Adjusted Credted xGoals Against
+--------Misc Shot For Metrics------
+Shots on Goal For
+xShots On Goal For
+Missed Shots For
+Shot Attempts For
+Shots On Goal For That Were Saved
+Unblocked Shots For
+Unblocked Shots For That Were Saved
+Score Adjusted Shot Attempts For
+Score Adjusted Unblocked Shots For
+--------Misc Shot Against Metrics------
+Shots on Goal Against
+xShots On Goal Against
+Missed Shots Against
+Shot Attempts Against
+Shots On Goal Against That Were Saved
+Unblocked Shots Against
+Unblocked Shots Against That Were Saved
+Score Adjusted Shot Attempts Against
+Score Adjusted Unblocked Shots Against
+--------Other Metrics------
+Faceoffs Won
+Faceoffs Lost
+Hits Given
+Hits Received
+Takeaways From Opponent
+Takeaways To Opponent
+Giveaways From Opponent
+Giveaways To Opponent
+Defensive Zone Giveaways From Opponent
+Defensive Zone Giveaways To Opponent
+Shots Blocked By Team
+Shots Blocked By Opponent
+
+
+
+
+Click A Team's Logo To See Team and Player Stats
+
+
+Atlantic
+	
+Metro
+	
+Central
+	
+Pacific
+
+			
+			
+			
+			
+			
+			
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+Privacy Policy       About       Glossary
+
+
+
+
+
+
+

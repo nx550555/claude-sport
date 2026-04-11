@@ -1,0 +1,17 @@
+{
+  "sport": "nfl",
+  "season": "2026-27",
+  "bet_type": "Moneyline (ML)",
+  "rule_version": "v1.0",
+  "status": "pre_season",
+  "season_start": "2026-09（予定）",
+  "started": null,
+  "summary": {
+    "total": 0,
+    "hit": 0,
+    "hit_rate": null,
+    "ev_total": 0
+  },
+  "games": [],
+  "screening_log": []
+}

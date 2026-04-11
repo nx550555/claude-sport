@@ -1,0 +1,113 @@
+{
+  "sport": "nhl",
+  "season": "2025-26",
+  "bet_type": "Moneyline (ML)",
+  "rule_version": "v1.2",
+  "started": "2026-04-09",
+  "summary": {
+    "total": 2,
+    "hit": 1,
+    "hit_rate": null,
+    "ev_total": null
+  },
+  "games": [
+    {
+      "date": "2026-04-09",
+      "match": "Calgary Flames @ Colorado Avalanche",
+      "home": "Colorado Avalanche",
+      "away": "Calgary Flames",
+      "tier": "go",
+      "rec": "Colorado Avalanche",
+      "rec_odds": 1.333,
+      "rec_odds_american": -300,
+      "ev": 6.6,
+      "confidence": 80,
+      "l1_metric": "xGF%",
+      "l1_data": {
+        "COL_xGF": 56.5,
+        "CGY_xGF": 46.5,
+        "diff": 10.0
+      },
+      "adjustments": {
+        "COL_home": "+5%",
+        "COL_b2b_home": "-4%",
+        "CGY_b2b_away": "+4% net（CGY -8% vs COL -4%）",
+        "CGY_eliminated": "+3%（N008）"
+      },
+      "estimated_win_pct": 80,
+      "b2b": {
+        "COL": "home_b2b",
+        "CGY": "away_b2b"
+      },
+      "standings": {
+        "COL": "51-16-10, 112pt（1位）",
+        "CGY": "32-36-9, 73pt（消化試合確定）"
+      },
+      "rules_applied": ["N001", "N004", "N005", "N008", "N013", "N014"],
+      "goalie_confirmed": true,
+      "checklist_done": true,
+      "note": "COL 3-1 勝利。Presidents' Trophy確定。MacKinnon 52G+2A。予測通りxGF%差10ptの地力差が結果に直結。",
+      "result": "Colorado Avalanche",
+      "score": "3-1",
+      "hit": true,
+      "actual_ev": 0.333,
+      "miss_layer": null
+    },
+    {
+      "date": "2026-04-11",
+      "match": "Ottawa Senators @ New York Islanders",
+      "home": "New York Islanders",
+      "away": "Ottawa Senators",
+      "venue": "UBS Arena, Elmont NY",
+      "tier": "go",
+      "rec": "Ottawa Senators",
+      "rec_odds": 2.53,
+      "ev": 33.1,
+      "confidence": 52.6,
+      "l1_metric": "xGF% (MoneyPuck)",
+      "l1_data": {
+        "OTT_xGF": 55.93,
+        "NYI_xGF": 47.41,
+        "NYI_home_adj": 50.41,
+        "net_diff": 5.52
+      },
+      "adjustments": {
+        "b2b": "両チームなし → 補正不要",
+        "goalies": "Ullmark(OTT)vsソロキン(NYI) → 両エース・互角",
+        "injuries": "両チーム主要離脱者なし確認"
+      },
+      "estimated_win_pct": 52.6,
+      "market_implied_pct": 39.5,
+      "market_gap": 13.1,
+      "standings": {
+        "OTT": "xGF% 55.93% リーグ3位",
+        "NYI": "xGF% 47.41% リーグ26位"
+      },
+      "goalie_confirmed": false,
+      "rules_applied": ["N001", "N004", "N006"],
+      "checklist_done": true,
+      "result": null,
+      "score": null,
+      "hit": null,
+      "actual_ev": null,
+      "miss_layer": null,
+      "note": "市場が50/50評価(2.52/2.53)だが、OTTはリーグ3位xGF%でNYI(26位)に対し実質5.52ptの優位。両チーム非B2B。Ullmark vs Sorokin両エース互角。市場乖離13.1ptが根拠。"
+    }
+  ],
+  "screening_log": [
+    {
+      "date": "2026-04-09",
+      "total_games": 14,
+      "l1_passed": 4,
+      "l1_metric_used": "xGF%（nhlforecasts.com）",
+      "l1_failed": 10,
+      "go_recommendations": 1,
+      "skipped_after_l1": [
+        { "match": "CAR @ CHI", "reason": "CAR B2B away → 信頼度64%（75%未達）" },
+        { "match": "VGK @ SEA", "reason": "VGK B2B away → 信頼度58%（75%未達）" },
+        { "match": "VAN @ LA",  "reason": "LA信頼度75%達成もEV+3.3%（5%未達）" }
+      ],
+      "notable": "GF%（得失点率）を使用した場合の誤判断ケース：PIT@NJがGO候補（+20.5%EV）だったが、xGF%では差0.4ptで完全スキップ対象。xGF%の必要性が実証された"
+    }
+  ]
+}

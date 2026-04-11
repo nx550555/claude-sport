@@ -1,0 +1,117 @@
+{
+  "sport": "superrugby",
+  "league": "Super Rugby Pacific",
+  "season": "2026",
+  "bet_type": "Head-to-Head (H2H)",
+  "rule_version": "v1.0",
+  "started": "2026-04-10",
+  "summary": {
+    "total": 1,
+    "hit": null,
+    "hit_rate": null,
+    "ev_total": 0
+  },
+  "standings_snapshot": {
+    "as_of": "Round 8終了後（2026-04-10時点）",
+    "source": "Wikipedia / super.rugby",
+    "table": [
+      { "pos": 1, "team": "Hurricanes",     "W": 5, "L": 1, "PD": 166,  "PD_per_game": 27.7 },
+      { "pos": 2, "team": "Blues",           "W": 5, "L": 2, "PD": 95,   "PD_per_game": 13.6 },
+      { "pos": 3, "team": "Brumbies",        "W": 5, "L": 3, "PD": 54,   "PD_per_game": 7.7  },
+      { "pos": 4, "team": "Chiefs",          "W": 5, "L": 2, "PD": 59,   "PD_per_game": 8.4  },
+      { "pos": 5, "team": "Crusaders",       "W": 4, "L": 3, "PD": 49,   "PD_per_game": 7.0  },
+      { "pos": 6, "team": "Reds",            "W": 4, "L": 3, "PD": -41,  "PD_per_game": -5.9 },
+      { "pos": 7, "team": "Highlanders",     "W": 3, "L": 5, "PD": -48,  "PD_per_game": -6.9 },
+      { "pos": 8, "team": "Waratahs",        "W": 3, "L": 4, "PD": -43,  "PD_per_game": -6.1 },
+      { "pos": 9, "team": "Western Force",   "W": 2, "L": 5, "PD": -29,  "PD_per_game": -4.1 },
+      { "pos": 10, "team": "Fijian Drua",   "W": 2, "L": 5, "PD": -100, "PD_per_game": -14.3 },
+      { "pos": 11, "team": "Moana Pasifika", "W": 1, "L": 6, "PD": -162, "PD_per_game": -23.1 }
+    ]
+  },
+  "games": [
+    {
+      "date": "2026-04-11",
+      "match": "Queensland Reds vs Crusaders",
+      "home": "Queensland Reds",
+      "away": "Crusaders",
+      "venue": "Suncorp Stadium, Brisbane",
+      "round": 9,
+      "tier": "go",
+      "rec": "Crusaders",
+      "rec_odds": 1.54,
+      "ev": 17.0,
+      "confidence": 76,
+      "l1_metric": "Points Differential/Game",
+      "l1_data": {
+        "CRU_PD_per_game": 7.0,
+        "RED_PD_per_game": -5.9,
+        "diff": 12.9
+      },
+      "adjustments": {
+        "reds_home": "+5%（Suncorp Brisbane HOME）→ Crusaders優位に-5%適用",
+        "h2h_suncorp": "Crusaders at Suncorp 5連勝 → +4%（H2H逆転）",
+        "form": "Crusaders 3連勝・4/5 → +5%; Reds直近勝利も2連敗後 → ±0%"
+      },
+      "lineups_confirmed": true,
+      "lineup_detail": {
+        "Reds": "Campbell(FB), Daugunu(W), Flook(W), Paisami(C), Ryan(C), Gordon(10), Thomas(9), Wilson(8), McReight(c)(7), Brial(6), Salakaia-Loto, Uru, Bloomfield, Faessler, Ross. 主力欠場なし",
+        "Crusaders": "McNicholl(FB), Fihaki(W), Fainga'anuku(W), Havili(c)(C), Reece(C), Kemara(10), Hotham(9), Lio-Willie(8), Kellow(7), Gardiner(6), Hannah, Shalfoon, Newell, Bell, Bower. 主力欠場なし"
+      },
+      "h2h_context": "Reds vs Crusadersの過去14戦で1勝のみ（Reds）。Suncorp Stadiumで5連勝中（Crusaders）。",
+      "estimated_win_pct": 76,
+      "rules_applied": ["S001", "S002", "S004", "S005", "S008"],
+      "checklist_done": true,
+      "result": null,
+      "score": null,
+      "hit": null,
+      "actual_ev": null,
+      "miss_layer": null,
+      "note": "ラインナップ確認完了でSKIP→GO昇格。Crusaders H2H圧倒的優位、Suncorp 5連勝。Reds HOME補正を上回るH2H優位性。EV+17.0%、信頼度76%。"
+    }
+  ],
+  "screening_log": [
+    {
+      "date": "2026-04-10",
+      "round": 9,
+      "note": "初回分析。ラインナップ未確認のためGO判断なし。S008チェックリスト未完了。",
+      "total_games": 5,
+      "already_finished": 1,
+      "l1_passed": 4,
+      "go_recommendations": 0,
+      "skipped_after_l1": [
+        {
+          "match": "Brumbies 14-10 Highlanders",
+          "reason": "試合済み（分析前に終了）。予測なし。"
+        },
+        {
+          "match": "Hurricanes vs Blues (4/11, Wellington)",
+          "reason": "L1差14.1pt ✓ / HOME +5% / 信頼度~77-78% / オッズ1.34 → EV約+3-4%（5%閾値未達）→ SKIP",
+          "odds": { "Hurricanes": 1.34, "Blues": 3.20 },
+          "l1_diff": 14.1,
+          "confidence_est": 78,
+          "ev_est": 3.5
+        },
+        {
+          "match": "Reds vs Crusaders (4/11, Suncorp Brisbane)",
+          "reason": "L1差12.9pt ✓（Crusaders優位） / Reds HOME +5% / Crusadesがブリスベンで5連勝（H2H逆転） / ラインナップ未確認 → 信頼度74%→ SKIP（閾値75%未達）。ラインナップ確認後に再評価要",
+          "odds": { "Crusaders": 1.54, "Reds": 2.60 },
+          "l1_diff": 12.9,
+          "confidence_est": 74,
+          "ev_if_75pct": 15.5,
+          "note": "★要再評価：ラインナップ確認・75%達成なら GO（EV+15%超）"
+        },
+        {
+          "match": "Chiefs vs Moana Pasifika (4/11, Rotorua)",
+          "reason": "L1差31.5pt ✓（Chiefs圧倒的優位） / オッズが短すぎる予測（~1.20-1.25）→ EV計算困難 / ラインナップ未確認 → SKIP",
+          "l1_diff": 31.5
+        },
+        {
+          "match": "Fijian Drua vs Western Force (4/11, Lautoka)",
+          "reason": "L1差10.2pt ✓（Force優位） / Drua地元Fiji HOME+8% → Force優位を打ち消す / 信頼度が両チームとも75%未満の見込み → SKIP",
+          "l1_diff": 10.2
+        }
+      ],
+      "notable": "初回分析。Reds vs CrusadersはL1・H2Hともに強いシグナルだがラインナップ確認が条件。次回ラインナップ確認後に再評価する。"
+    }
+  ]
+}

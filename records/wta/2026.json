@@ -1,0 +1,33 @@
+{
+  "sport": "tennis_wta",
+  "season": "2026",
+  "bet_type": "Moneyline (ML)",
+  "rule_version": "v1.0",
+  "started": "2026-04-10",
+  "summary": {
+    "total": 0,
+    "hit": 0,
+    "hit_rate": null,
+    "ev_total": 0
+  },
+  "tournaments": [
+    {
+      "name": "Porsche Tennis Grand Prix Stuttgart",
+      "short": "Stuttgart",
+      "tier": "WTA500",
+      "surface": "Clay (indoor)",
+      "dates": "2026-04-13 to 2026-04-19",
+      "status": "upcoming",
+      "note": "クレーシーズン初戦（indoor clay）。開幕時にドロー・オッズ・cElo確認後に分析開始",
+      "checklist": [
+        "tennisabstract.comでWTA cElo（Clay）上位選手を確認",
+        "ドローを確認してR1/R2で差80以上のマッチアップを抽出",
+        "OddsPortalでオッズを取得してEV計算",
+        "信頼度≥75% AND EV>+5%の試合のみ推奨（go）"
+      ],
+      "indoor_clay_note": "Stuttgartはindoor clay（屋内クレー）。屋外クレーより速い可能性あり。サーブ力のある選手を過小評価しないよう注意。W007の表面特化補正を緩めに適用",
+      "predictions": []
+    }
+  ],
+  "screening_log": []
+}

@@ -1,0 +1,90 @@
+{
+  "system": "マルチスポーツベッティング分析システム",
+  "version": "2.0",
+  "updated": "2026-04-10",
+  "sports_active": ["tennis_atp", "tennis_wta", "nhl", "ufl", "nrl", "superrugby", "nba"],
+  "sports_preseason": ["nfl", "cfl"],
+  "sports_excluded": ["ahl"],
+  "sports_active_note": {
+    "tennis_atp": "クレーシーズン進行中（MC2026 F待ち）",
+    "tennis_wta": "クレーシーズン進行中（Stuttgart 4/13開幕）",
+    "nhl": "レギュラーシーズン終盤・プレーオフ直前",
+    "ufl": "Week3進行中（〜6月）",
+    "nrl": "Round6進行中（〜9月）",
+    "superrugby": "Round9進行中（〜7月）",
+    "nba": "レギュラーシーズン終盤・プレーオフ直前（2025-26）"
+  },
+  "sports_preseason_note": {
+    "nfl": "2026年9月開幕予定",
+    "cfl": "2026年6月開幕予定"
+  },
+  "sports_excluded_detail": {
+    "ahl": {
+      "name": "AHL（American Hockey League）",
+      "category": "ice_hockey",
+      "investigated": "2026-04-11",
+      "verdict": "対象外（3つの構造的障壁が重複）",
+      "blockers": {
+        "L1指標なし": "xGF%（NHLのMoneyPuck相当）を提供するAHL対応サービスが存在しない。ahltracker.com・quanthockey.com・naturalstattrick.com・eliteprospects.comをすべて実地確認済み。使えるのはGF%のみでN001③最終手段扱い（-5%ペナルティ毎回発動）。",
+        "ゴーリー確認不可": "dailyfaceoff.comはNHL専用。AHL向けの一元的ゴーリー先発確認サービスが存在せず、N006（GO判断の前提条件）を満たせない。各チーム公式X（30チーム分）の個別監視は実運用上困難。",
+        "ラインナップ不安定": "NHLチームが試合直前にコールアップ・センドダウンを実施。事前分析が試合直前に無効化されるリスクが常にある。"
+      },
+      "not_blockers": {
+        "オッズ": "OddsPortal等でAHLオッズは存在する",
+        "基本成績": "GF/GA/PP%/PK%/PDOはquanthockey.com/ahlで取得可能"
+      },
+      "reactivation": [
+        "AHL向けxGF%モデルが公開される",
+        "AHLゴーリー先発の一元確認ワークフローを確立する",
+        "（補足）プレーオフ期間はコールアップ制限でラインナップが安定するため試験稼働の選択肢あり"
+      ],
+      "detail_ref": "core/rules_nhl.json → N015"
+    }
+  },
+  "sport_categories": {
+    "tennis": ["tennis_atp", "tennis_wta"],
+    "rugby": ["nrl", "superrugby"],
+    "ice_hockey": ["nhl"],
+    "american_football": ["ufl", "nfl", "cfl"],
+    "basketball": ["nba"]
+  },
+  "common_layers": {
+    "L1": "地力評価（スポーツ固有のEloレーティングまたは得失点差指標）",
+    "L2": "直近フォーム品質スコア（対戦相手の強さを実測）",
+    "L3": "スタッツ補正（数値指標）±5〜8%",
+    "L4": "外部要因補正（怪我・体調・モチベーション・ホーム）±10〜15%"
+  },
+  "common_thresholds": {
+    "recommend": "信頼度≥75% AND EV>+5%",
+    "skip": "上記以外すべて"
+  },
+  "ev_formula": "(推定勝率 × オッズ) - 1",
+  "rules_files": {
+    "tennis_atp":  "core/rules_tennis.json",
+    "tennis_wta":  "core/rules_wta.json",
+    "nhl":         "core/rules_nhl.json",
+    "ufl":         "core/rules_ufl.json",
+    "nrl":         "core/rules_nrl.json",
+    "superrugby":  "core/rules_superrugby.json",
+    "nfl":         "core/rules_nfl.json",
+    "cfl":         "core/rules_cfl.json",
+    "nba":         "core/rules_nba.json"
+  },
+  "records_files": {
+    "tennis_atp":  "records/tennis/2026-MC.json",
+    "tennis_wta":  "records/wta/2026.json",
+    "nhl":         "records/nhl/2025-26.json",
+    "ufl":         "records/ufl/2026.json",
+    "nrl":         "records/nrl/2026.json",
+    "superrugby":  "records/superrugby/2026.json",
+    "nfl":         "records/nfl/2026-27.json",
+    "cfl":         "records/cfl/2026.json",
+    "nba":         "records/nba/2025-26.json"
+  },
+  "workflow": {
+    "before_analysis": "対象スポーツのrules_{sport}.json + records/{sport}/を読み込んでから分析依頼",
+    "after_result": "records/{sport}/{year}.jsonに結果を追記",
+    "rule_update": "rules_{sport}.jsonを上書き保存",
+    "stats_update": "stats/cumulative.jsonを更新"
+  }
+}

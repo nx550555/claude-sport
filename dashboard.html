@@ -1,0 +1,1969 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sports Betting Dashboard</title>
+<style>
+:root {
+  --bg:#0d1117; --surface:#161b22; --surface2:#21262d; --border:#30363d;
+  --text:#e6edf3; --text2:#8b949e;
+  --go:#238636; --go-l:#2ea043; --go-bg:#0f2c1a;
+  --warn:#d29922; --warn-bg:#2d2100;
+  --miss:#f85149;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:14px;}
+
+.hdr{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;}
+.hdr h1{font-size:17px;font-weight:700;}
+.hdr-right{display:flex;gap:10px;align-items:center;font-size:12px;color:var(--text2);}
+
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--border);background:var(--surface);padding:0 24px;overflow-x:auto;}
+.tab{padding:10px 18px;font-size:13px;font-weight:500;cursor:pointer;border-bottom:2px solid transparent;color:var(--text2);transition:.15s;white-space:nowrap;flex-shrink:0;}
+.tab.active{color:var(--text);border-bottom-color:#58a6ff;}
+.tab:hover{color:var(--text);}
+.tab-content{display:none;padding:20px 24px;max-width:1280px;margin:0 auto;}
+.tab-content.active{display:block;}
+
+.section{margin-bottom:28px;}
+.section-title{font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--text2);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--border);}
+
+.overview-top{display:flex;gap:16px;margin-bottom:20px;flex-wrap:wrap;}
+.big-stat{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 20px;flex:1;min-width:160px;text-align:center;}
+.bs-label{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--text2);margin-bottom:6px;}
+.bs-val{font-size:32px;font-weight:700;line-height:1;}
+.bs-sub{font-size:11px;color:var(--text2);margin-top:4px;}
+
+.sport-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;}
+.sport-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 16px;}
+.sport-card-header{font-size:13px;font-weight:700;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;}
+.rule-ver{font-size:10px;font-weight:400;color:var(--text2);background:var(--surface2);padding:1px 6px;border-radius:4px;}
+.sport-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.sm{text-align:center;}
+.sm-label{font-size:10px;color:var(--text2);text-transform:uppercase;}
+.sm-val{font-size:18px;font-weight:700;}
+.preseason-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 16px;opacity:.7;}
+.ps-badge{font-size:10px;background:#0369a130;color:#38bdf8;border:1px solid #0369a150;border-radius:4px;padding:1px 6px;}
+
+.active-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;}
+.active-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;}
+.ac-sport{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--text2);margin-bottom:6px;}
+.ac-match{font-size:13px;color:var(--text2);margin-bottom:4px;}
+.ac-rec{font-size:15px;font-weight:600;margin-bottom:10px;}
+.ac-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:10px;}
+.acm{text-align:center;background:var(--surface2);border-radius:6px;padding:6px 4px;}
+.acm-l{font-size:9px;color:var(--text2);text-transform:uppercase;}
+.acm-v{font-size:14px;font-weight:600;}
+.acm-v.odds{color:#e3b341;} .acm-v.ev{color:#3fb950;} .acm-v.rule{font-size:11px;color:#8b949e;} .acm-v.warn{color:#d29922;}
+.ac-note{font-size:11px;color:var(--text2);line-height:1.5;margin-bottom:8px;}
+.ac-date{font-size:11px;color:var(--text2);}
+.ac-cond{font-size:11px;color:#d29922;background:#2d210030;border:1px solid #d2992240;border-radius:4px;padding:4px 8px;margin-bottom:8px;}
+
+.badge{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:10px;text-transform:uppercase;letter-spacing:.04em;}
+.badge-hit{background:#0f2c1a;color:#3fb950;border:1px solid var(--go);}
+.badge-miss{background:#2d1014;color:#f85149;border:1px solid var(--miss);}
+.badge-pending{background:var(--warn-bg);color:var(--warn);border:1px solid var(--warn);}
+.badge-go{background:var(--go-bg);color:var(--go-l);border:1px solid var(--go);}
+.badge-warn{background:var(--warn-bg);color:var(--warn);border:1px solid var(--warn);}
+.badge-skip{background:var(--surface2);color:var(--text2);border:1px solid var(--border);}
+.badge-cond{background:#1a2640;color:#58a6ff;border:1px solid #1f6feb;}
+.sport-tag{font-size:12px;font-weight:600;}
+
+.table-wrap{overflow-x:auto;}
+.data-table{width:100%;border-collapse:collapse;font-size:12px;}
+.data-table th{text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:var(--text2);padding:7px 10px;border-bottom:1px solid var(--border);font-weight:500;white-space:nowrap;}
+.data-table td{padding:9px 10px;border-bottom:1px solid rgba(48,54,61,.5);vertical-align:middle;}
+.data-table tr:hover td{background:rgba(255,255,255,.02);}
+.data-table tr:last-child td{border-bottom:none;}
+.match-cell{max-width:220px;font-size:12px;}
+.ev-pos{color:#3fb950;font-weight:600;}
+.ev-neg{color:#f85149;font-weight:600;}
+
+.rules-list{display:flex;flex-direction:column;gap:14px;}
+.rule-entry{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px;}
+.rule-header{display:flex;align-items:center;gap:12px;margin-bottom:8px;font-weight:600;}
+.rule-ver-badge{font-size:12px;background:var(--surface2);border:1px solid var(--border);padding:2px 8px;border-radius:4px;}
+.rule-date{font-size:11px;color:var(--text2);margin-left:auto;}
+.rule-trigger{font-size:12px;color:var(--warn);margin-bottom:8px;}
+.rule-changes{padding-left:20px;font-size:12px;line-height:1.8;color:var(--text2);}
+.rule-changes li{margin-bottom:2px;}
+.rule-result{font-size:12px;margin-top:8px;padding-top:8px;border-top:1px solid var(--border);}
+.rule-note{font-size:11px;color:var(--text2);margin-top:6px;font-style:italic;}
+
+.footer{text-align:center;padding:16px;color:var(--text2);font-size:11px;border-top:1px solid var(--border);margin-top:24px;}
+
+@media(max-width:768px){
+  .tab-content{padding:14px 12px;}
+  .hdr{padding:10px 14px;flex-wrap:wrap;gap:6px;}
+  .hdr h1{font-size:15px;}
+  .hdr-right{font-size:11px;gap:6px;}
+  .tabs{padding:0 8px;}
+  .tab{padding:9px 12px;font-size:12px;}
+  .active-grid{grid-template-columns:1fr;}
+  .sport-cards{grid-template-columns:1fr 1fr;}
+  .overview-top{gap:10px;}
+  .big-stat{min-width:120px;padding:12px 14px;}
+  .bs-val{font-size:26px;}
+  .sport-bar-label{width:110px;font-size:11px;}
+  .sport-bar-meta{display:none;}
+}
+@media(max-width:600px){
+  .tab-content{padding:12px 10px;}
+  .hdr{padding:10px 12px;}
+  .hdr h1{font-size:14px;}
+  .hdr-right span:first-child{display:none;}
+  .overview-top{flex-direction:column;gap:8px;}
+  .big-stat{min-width:unset;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;text-align:left;}
+  .bs-label{margin-bottom:0;flex:1;}
+  .bs-val{font-size:24px;margin-right:8px;}
+  .bs-sub{display:none;}
+  .sport-cards{grid-template-columns:1fr;}
+  .sport-metrics{grid-template-columns:repeat(3,1fr);}
+  .sport-metrics .sm-val{font-size:16px;}
+  .ac-metrics{grid-template-columns:repeat(2,1fr);}
+  .tabs{padding:0 6px;}
+  .tab{padding:8px 10px;font-size:11px;}
+  .grow-stats{grid-template-columns:repeat(2,1fr)!important;}
+  .gs-val{font-size:22px;}
+  .chart-row{flex-direction:column!important;}
+  .chart-row .chart-wrap.chart-narrow{flex:unset;}
+  .sport-bar-label{width:90px;font-size:11px;}
+  .sport-bar-meta{display:none;}
+  .sport-bar-val{font-size:10px;}
+  .data-table{font-size:11px;}
+  .data-table td,.data-table th{padding:6px 6px;}
+  .match-cell{max-width:120px;}
+  .rule-entry{padding:12px;}
+  .tg-title{font-size:12px;}
+  .tg-desc{font-size:11px;}
+  .tg-metrics{gap:4px;}
+  .tg-metric{font-size:10px;padding:1px 5px;}
+  svg{max-width:100%;}
+  .section-title{font-size:12px;}
+  .ac-rec{font-size:14px;}
+  .badge{font-size:9px;padding:2px 5px;}
+  #content-upset [style*="grid-template-columns:1fr 1fr 1fr"]{display:flex!important;flex-direction:column!important;}
+  #content-upset [style*="grid-template-columns:1fr 1fr"]{display:flex!important;flex-direction:column!important;}
+  #content-upset [style*="grid-template-columns:1fr 1fr"] > div{width:100%!important;}
+}
+
+/* ===== Charts & Growth Timeline ===== */
+.chart-wrap{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px;margin-bottom:16px;}
+.chart-row{display:flex;gap:16px;margin-bottom:16px;}
+.chart-row .chart-wrap{margin-bottom:0;flex:1;}
+.chart-row .chart-wrap.chart-narrow{flex:0 0 220px;}
+.chart-title{font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px;}
+.sport-bar-row{display:flex;align-items:center;gap:12px;margin-bottom:10px;}
+.sport-bar-label{width:148px;font-size:12px;font-weight:600;flex-shrink:0;}
+.sport-bar-track{flex:1;background:var(--surface2);border-radius:4px;height:20px;position:relative;overflow:hidden;}
+.sport-bar-fill{height:100%;border-radius:4px;}
+.sport-bar-val{position:absolute;right:8px;top:50%;transform:translateY(-50%);font-size:11px;font-weight:700;}
+.sport-bar-meta{width:130px;font-size:11px;color:var(--text2);text-align:right;flex-shrink:0;}
+.grow-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px;padding-bottom:20px;border-bottom:1px solid var(--border);}
+.gs-item{text-align:center;}
+.gs-label{font-size:10px;color:var(--text2);text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px;}
+.gs-val{font-size:30px;font-weight:700;line-height:1.1;}
+.gs-sub{font-size:10px;color:var(--text2);margin-top:3px;}
+.timeline-grow{position:relative;padding-left:30px;}
+.timeline-grow::before{content:'';position:absolute;left:9px;top:10px;bottom:10px;width:2px;background:linear-gradient(to bottom,#f85149,#3fb950);}
+.tg-item{position:relative;padding:10px 0 10px 18px;margin-bottom:2px;}
+.tg-dot{position:absolute;left:-25px;top:13px;width:14px;height:14px;border-radius:50%;border:2px solid var(--bg);}
+.tg-date{font-size:11px;color:var(--text2);margin-bottom:3px;}
+.tg-title{font-size:13px;font-weight:700;margin-bottom:4px;}
+.tg-desc{font-size:12px;color:var(--text2);line-height:1.6;margin-bottom:6px;}
+.tg-metrics{display:flex;gap:6px;flex-wrap:wrap;}
+.tg-metric{font-size:11px;background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:2px 8px;}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <h1>⚡ Sports Betting Dashboard</h1>
+  <div class="hdr-right">
+    <span>GO 16件 / 確定 12件 / 待機 4件</span>
+    <span style="background:#21262d;border:1px solid #30363d;border-radius:6px;padding:3px 8px;font-size:11px;">
+      最終更新: <span id="last-updated-time">2026-04-11 手動</span>
+    </span>
+    <span style="background:#0f2c1a;border:1px solid #238636;border-radius:6px;padding:3px 8px;font-size:11px;color:#3fb950;">
+      次回: <span id="next-update-time">—</span>
+    </span>
+  </div>
+</div>
+
+<div class="tabs">
+  <div class="tab active" id="tab-overview" onclick="showTab('overview')">📊 概要</div>
+  <div class="tab" id="tab-active"   onclick="showTab('active')">✅ アクティブ推奨</div>
+  <div class="tab" id="tab-history"  onclick="showTab('history')">📋 全履歴</div>
+  <div class="tab" id="tab-analysislog" onclick="showTab('analysislog')">🔍 分析ログ</div>
+  <div class="tab" id="tab-timeline" onclick="showTab('timeline')">📈 成長分析</div>
+  <div class="tab" id="tab-upset"    onclick="showTab('upset')">🎯 アップセット分析</div>
+  <div class="tab" id="tab-rules"    onclick="showTab('rules')">⚙️ ルール変更履歴</div>
+  <div class="tab" id="tab-excluded" onclick="showTab('excluded')">🚫 除外リーグ</div>
+</div>
+
+<!-- ===== 概要 ===== -->
+<div class="tab-content active" id="content-overview">
+  <div class="section-title">総合パフォーマンス</div>
+  <div class="section">
+    <div class="overview-top">
+      <div class="big-stat">
+        <div class="bs-label">総GO回数</div>
+        <div class="bs-val">16</div>
+        <div class="bs-sub">結果確定: 12件</div>
+      </div>
+      <div class="big-stat">
+        <div class="bs-label">通算正答率</div>
+        <div class="bs-val" style="color:#e3b341;">58.3%</div>
+        <div class="bs-sub">7HIT / 12試合</div>
+      </div>
+      <div class="big-stat">
+        <div class="bs-label">累積EV合計</div>
+        <div class="bs-val" style="color:#f85149;">-1.787</div>
+        <div class="bs-sub">単位: 賭け金1あたり</div>
+      </div>
+      <div class="big-stat">
+        <div class="bs-label">待機中</div>
+        <div class="bs-val" style="color:#d29922;">4</div>
+        <div class="bs-sub">テニスF・NHL・UFL・SuperRugby</div>
+      </div>
+    </div>
+
+    <div class="section-title">種目別成績</div>
+    <div class="sport-cards">
+      <div class="sport-card">
+        <div class="sport-card-header" style="color:#79c0ff;">🎾 ATP Tennis <span class="rule-ver">v2.0</span></div>
+        <div class="sport-metrics">
+          <div class="sm"><div class="sm-label">GO回数</div><div class="sm-val">11</div></div>
+          <div class="sm"><div class="sm-label">結果済</div><div class="sm-val">10</div></div>
+          <div class="sm"><div class="sm-label">的中</div><div class="sm-val">6</div></div>
+          <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#e3b341;">60.0%</div></div>
+          <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#f85149;">-1.120</div></div>
+          <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#e3b341;">1(F)</div></div>
+        </div>
+      </div>
+      <div class="sport-card">
+        <div class="sport-card-header" style="color:#f9a8d4;">🎾 WTA Tennis <span class="rule-ver">v1.0</span></div>
+        <div class="sport-metrics">
+          <div class="sm"><div class="sm-label">GO回数</div><div class="sm-val">0</div></div>
+          <div class="sm"><div class="sm-label">結果済</div><div class="sm-val">0</div></div>
+          <div class="sm"><div class="sm-label">的中</div><div class="sm-val">—</div></div>
+          <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#8b949e;">—</div></div>
+          <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#8b949e;">—</div></div>
+          <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#38bdf8;">開幕4/13</div></div>
+        </div>
+      </div>
+      <div class="sport-card">
+        <div class="sport-card-header" style="color:#a5f3fc;">🏒 NHL <span class="rule-ver">v1.2</span></div>
+        <div class="sport-metrics">
+          <div class="sm"><div class="sm-label">GO回数</div><div class="sm-val">2</div></div>
+          <div class="sm"><div class="sm-label">結果済</div><div class="sm-val">1</div></div>
+          <div class="sm"><div class="sm-label">的中</div><div class="sm-val">1</div></div>
+          <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#3fb950;">100.0%</div></div>
+          <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#3fb950;">+0.333</div></div>
+          <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#e3b341;">1</div></div>
+        </div>
+      </div>
+      <div class="sport-card">
+        <div class="sport-card-header" style="color:#fca5a5;">🏈 UFL <span class="rule-ver">v1.0</span></div>
+        <div class="sport-metrics">
+          <div class="sm"><div class="sm-label">GO回数</div><div class="sm-val">1</div></div>
+          <div class="sm"><div class="sm-label">結果済</div><div class="sm-val">0</div></div>
+          <div class="sm"><div class="sm-label">的中</div><div class="sm-val">—</div></div>
+          <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#8b949e;">—</div></div>
+          <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#8b949e;">—</div></div>
+          <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#e3b341;">1</div></div>
+        </div>
+      </div>
+      <div class="sport-card">
+        <div class="sport-card-header" style="color:#86efac;">🏉 NRL <span class="rule-ver">v1.0</span></div>
+        <div class="sport-metrics">
+          <div class="sm"><div class="sm-label">GO回数</div><div class="sm-val">1</div></div>
+          <div class="sm"><div class="sm-label">結果済</div><div class="sm-val">1</div></div>
+          <div class="sm"><div class="sm-label">的中</div><div class="sm-val">0</div></div>
+          <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#f85149;">0.0%</div></div>
+          <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#f85149;">-1.000</div></div>
+          <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#8b949e;">0</div></div>
+        </div>
+      </div>
+      <div class="sport-card">
+        <div class="sport-card-header" style="color:#c4b5fd;">🏉 Super Rugby Pacific <span class="rule-ver">v1.0</span></div>
+        <div class="sport-metrics">
+          <div class="sm"><div class="sm-label">GO回数</div><div class="sm-val">1</div></div>
+          <div class="sm"><div class="sm-label">結果済</div><div class="sm-val">0</div></div>
+          <div class="sm"><div class="sm-label">的中</div><div class="sm-val">—</div></div>
+          <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#8b949e;">—</div></div>
+          <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#8b949e;">—</div></div>
+          <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#e3b341;">1</div></div>
+        </div>
+      </div>
+      <div class="sport-card">
+        <div class="sport-card-header" style="color:#fca5a5;">🏀 NBA <span class="rule-ver">v1.0</span></div>
+        <div class="sport-metrics">
+          <div class="sm"><div class="sm-label">GO回数</div><div class="sm-val">0</div></div>
+          <div class="sm"><div class="sm-label">結果済</div><div class="sm-val">0</div></div>
+          <div class="sm"><div class="sm-label">的中</div><div class="sm-val">—</div></div>
+          <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#8b949e;">—</div></div>
+          <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#8b949e;">—</div></div>
+          <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#58a6ff;">条件付GO 1</div></div>
+        </div>
+      </div>
+      <div class="preseason-card">
+        <div class="sport-card-header" style="color:#6b7280;">🏈 NFL <span class="ps-badge">プレシーズン</span></div>
+        <div style="font-size:12px;color:#6b7280;">2026年9月開幕予定 | rules_nfl.json v1.0 準備済 | L1: DVOA (Football Outsiders)</div>
+      </div>
+      <div class="preseason-card">
+        <div class="sport-card-header" style="color:#6b7280;">🏈 CFL <span class="ps-badge">プレシーズン</span></div>
+        <div style="font-size:12px;color:#6b7280;">2026年6月開幕予定 | rules_cfl.json v1.0 準備済 | L1: 得失点差/試合（差5点以上）</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== アクティブ推奨 ===== -->
+<div class="tab-content" id="content-active">
+  <div class="section-title">アクティブ GO 推奨 — 結果待ち</div>
+  <div class="section"><div class="active-grid">
+
+    <div class="active-card" style="border-color:#79c0ff60;background:linear-gradient(135deg,#79c0ff10,transparent);border-width:2px;">
+      <div class="ac-sport">🎾 ATP — MC2026 決勝 ⭐ 最優先</div>
+      <div class="ac-match">Alcaraz C.(1) vs Zverev A.(3)</div>
+      <div class="ac-rec">推奨: <strong style="color:#3fb950;">Alcaraz Carlos</strong></div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">~1.45</div></div>
+        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">+18.9%</div></div>
+        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">82.0%</div></div>
+        <div class="acm"><div class="acm-l">ルール</div><div class="acm-v rule">R001+R004</div></div>
+      </div>
+      <div class="ac-note">cElo差~130。Alcaraz: QF 6-1 6-3+SF省エネ勝利。Zverev: 2試合連続3セット消耗。DC（ディフェンディングチャンピオン）・H2Hクレー優勢。オッズ≥1.35でGO維持。</div>
+      <div class="ac-date">📅 2026-04-12</div>
+    </div>
+
+    <div class="active-card" style="border-color:#a5f3fc30;background:linear-gradient(135deg,#a5f3fc08,transparent);">
+      <div class="ac-sport">🏒 NHL</div>
+      <div class="ac-match">Ottawa Senators @ New York Islanders</div>
+      <div class="ac-rec">推奨: <strong style="color:#e3b341;">Ottawa Senators</strong></div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">2.53</div></div>
+        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">+33.1%</div></div>
+        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">52.6%</div></div>
+        <div class="acm"><div class="acm-l">ルール</div><div class="acm-v rule">v1.2</div></div>
+      </div>
+      <div class="ac-note">xGF%: OTT 55.93%(3位) vs NYI 47.41%(26位)。差5.52pt。市場50/50だが実力差あり。市場乖離13.1ptが根拠。</div>
+      <div class="ac-date">📅 2026-04-11</div>
+    </div>
+
+    <div class="active-card" style="border-color:#fca5a530;background:linear-gradient(135deg,#fca5a508,transparent);">
+      <div class="ac-sport">🏈 UFL Week 3</div>
+      <div class="ac-match">Columbus Aviators @ Dallas Renegades</div>
+      <div class="ac-rec">推奨: <strong style="color:#e3b341;">Dallas Renegades</strong></div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">1.32</div></div>
+        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">+8.2%</div></div>
+        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">82.0%</div></div>
+        <div class="acm"><div class="acm-l">ルール</div><div class="acm-v rule">v1.0</div></div>
+      </div>
+      <div class="ac-note">Dallas 2-0、PD +17.5/試合。Columbus 0-2、PD -12.5/試合。Austin Reed QB確認済(7TD/2試合)。</div>
+      <div class="ac-date">📅 2026-04-13</div>
+    </div>
+
+    <div class="active-card" style="border-color:#c4b5fd60;background:linear-gradient(135deg,#c4b5fd10,transparent);border-width:2px;">
+      <div class="ac-sport">🏉 Super Rugby Pacific Round 9</div>
+      <div class="ac-match">Queensland Reds vs Crusaders (Suncorp Stadium, Brisbane)</div>
+      <div class="ac-rec">推奨: <strong style="color:#3fb950;">Crusaders</strong></div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">1.54</div></div>
+        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">+17.0%</div></div>
+        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">76%</div></div>
+        <div class="acm"><div class="acm-l">ルール</div><div class="acm-v rule">S001+S004</div></div>
+      </div>
+      <div class="ac-note">ラインナップ確認済・主力欠場なし→GO昇格。H2H: Reds vs Crusaders 過去14戦1勝のみ。Suncorp 5連勝中。L1差12.9pt。EV+17.0%。</div>
+      <div class="ac-date">📅 2026-04-11</div>
+    </div>
+
+    <div class="active-card" style="border-color:#1f6feb80;background:linear-gradient(135deg,#1f6feb10,transparent);">
+      <div class="ac-sport">🏀 NBA — Grizzlies @ Rockets（条件付GO）</div>
+      <div class="ac-match">2026-04-12 / Toyota Center, Houston</div>
+      <div class="ac-rec" style="color:#3fb950;">Rockets（条件付GO）</div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">1.20 (-500)</div></div>
+        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">+5.6%</div></div>
+        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">88%</div></div>
+        <div class="acm"><div class="acm-l">L1差</div><div class="acm-v" style="color:#58a6ff;">+10.6</div></div>
+      </div>
+      <div class="ac-cond">⚠ 条件: 当日11am EST のB008（NBA公式傷病リスト）でRockets主力ACTIVE確認後GO。休養確認→SKIP。</div>
+      <div class="ac-note">Grizzlies: 25-54・13名IR・8選手active（実質Gリーグ品質）。Rockets: W4確定・VanVleet OUT(ACL)・Sengun ACTIVE・W3シード争い動機あり。EV(0.88×1.20)-1=+5.6%。</div>
+      <div class="ac-date">📅 2026-04-12（最終日）</div>
+    </div>
+    <div class="active-card" style="border-color:#d2992240;background:linear-gradient(135deg,#d2992208,transparent);">
+      <div class="ac-sport">🏀 NBA — Wizards @ Cavaliers（オッズ待ち）</div>
+      <div class="ac-match">2026-04-12 / Rocket Mortgage FieldHouse, Cleveland</div>
+      <div class="ac-rec" style="color:#d29922;">オッズ確認・Mitchell出場可否待ち</div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">L1差</div><div class="acm-v warn">+15.2</div></div>
+        <div class="acm"><div class="acm-l">CAV NRtg</div><div class="acm-v">+4.0</div></div>
+        <div class="acm"><div class="acm-l">WAS NRtg</div><div class="acm-v" style="color:#f85149;">-11.2</div></div>
+        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v warn">未取得</div></div>
+      </div>
+      <div class="ac-cond">⚠ EV試算: -500(1.20)なら+9.2% / -700(1.143)なら+3.9%（SKIP）/ -1000以上はEV不足。オッズ-500以内 + Mitchell ACTIVE → GO。</div>
+      <div class="ac-note">L1差15.2（NBA最大級）。Wizards 17-57(最下位)。Mitchell DTD→4/12復帰目標（最後の正規シーズン試合）。Allen DTD。過去同カードでは-1600の極端なオッズ→EV不足の可能性高。</div>
+      <div class="ac-date">📅 2026-04-12（最終日）</div>
+    </div>
+
+  </div></div>
+</div>
+
+<!-- ===== 全履歴 ===== -->
+<div class="tab-content" id="content-history">
+  <div class="section-title">全GO/CAUTION 推奨履歴</div>
+  <div class="section">
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>日付</th><th>スポーツ</th><th>大会/ラウンド</th><th>試合</th>
+            <th>Tier</th><th>推奨</th><th>オッズ</th><th>予測EV</th>
+            <th>確信度</th><th>結果</th><th>スコア</th><th>実績EV</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr style="background:rgba(88,166,255,.06);">
+          <td>2026-04-12</td>
+          <td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td>
+          <td style="font-size:12px;">Monte-Carlo Masters 2026 F</td>
+          <td class="match-cell">Alcaraz C.(1) vs Zverev A.(3)</td>
+          <td><span class="badge badge-go">GO</span></td>
+          <td style="color:#3fb950;font-weight:600;">Alcaraz</td>
+          <td style="color:#e3b341;">~1.45</td>
+          <td class="ev-pos">+18.9%</td>
+          <td>82%</td>
+          <td><span class="badge badge-pending">⏳ 4/12待機</span></td>
+          <td style="color:#8b949e;">—</td>
+          <td style="color:#8b949e;">—</td>
+        </tr>
+        <tr style="background:rgba(46,160,67,.06);">
+          <td>2026-04-11</td>
+          <td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td>
+          <td style="font-size:12px;">Monte-Carlo Masters 2026 SF</td>
+          <td class="match-cell">Alcaraz C.(1) vs de Minaur A.(5)</td>
+          <td><span class="badge badge-go">GO</span></td>
+          <td style="color:#e3b341;font-weight:600;">Alcaraz</td>
+          <td style="color:#e3b341;">~1.50</td>
+          <td class="ev-pos">+24.5%</td>
+          <td>83%</td>
+          <td><span class="badge badge-hit">✓ HIT</span></td>
+          <td style="color:#8b949e;">確認中</td>
+          <td class="ev-pos">+0.500</td>
+        </tr>
+        <tr style="background:rgba(248,81,73,.04);">
+          <td>2026-04-11</td>
+          <td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td>
+          <td style="font-size:12px;">Monte-Carlo Masters 2026 SF</td>
+          <td class="match-cell">Sinner J.(2) vs Zverev A.(3)</td>
+          <td><span class="badge badge-go">GO</span></td>
+          <td style="color:#e3b341;font-weight:600;">Sinner</td>
+          <td style="color:#e3b341;">~1.65</td>
+          <td class="ev-pos">+27.1%</td>
+          <td>77%</td>
+          <td><span class="badge badge-miss">✗ MISS</span></td>
+          <td style="color:#8b949e;">Zverev 4-6 6-4 7-5</td>
+          <td class="ev-neg">-1.000</td>
+        </tr>
+        <tr>
+          <td>2026-04-13</td>
+          <td><span class="sport-tag" style="color:#fca5a5;">🏈 UFL</span></td>
+          <td style="font-size:12px;">UFL 2026 Week 3</td>
+          <td class="match-cell">Columbus Aviators @ Dallas Renegades</td>
+          <td><span class="badge badge-go">GO</span></td>
+          <td style="color:#e3b341;font-weight:600;">Dallas Renegades</td>
+          <td style="color:#e3b341;">1.32</td>
+          <td class="ev-pos">+8.2%</td>
+          <td>82%</td>
+          <td><span class="badge badge-pending">⏳ 待機中</span></td>
+          <td style="color:#8b949e;">—</td>
+          <td class="ev-neg">—</td>
+        </tr>
+        <tr>
+          <td>2026-04-11</td>
+          <td><span class="sport-tag" style="color:#86efac;">🏉 NRL</span></td>
+          <td style="font-size:12px;">NRL 2026 Round 6</td>
+          <td class="match-cell">South Sydney Rabbitohs vs Canberra Raiders</td>
+          <td><span class="badge badge-go">GO</span></td>
+          <td style="color:#e3b341;font-weight:600;">South Sydney Rabbitohs</td>
+          <td style="color:#e3b341;">1.55</td>
+          <td class="ev-pos">+20.9%</td>
+          <td>78%</td>
+          <td><span class="badge badge-miss">✗ MISS</span></td>
+          <td style="color:#8b949e;">Rabbitohs 22-30 Raiders</td>
+          <td class="ev-neg">-1.000</td>
+        </tr>
+        <tr style="background:rgba(196,181,253,.04);">
+          <td>2026-04-11</td>
+          <td><span class="sport-tag" style="color:#c4b5fd;">🏉 S.Rugby</span></td>
+          <td style="font-size:12px;">Super Rugby Pacific R9</td>
+          <td class="match-cell">Queensland Reds vs Crusaders</td>
+          <td><span class="badge badge-go">GO</span></td>
+          <td style="color:#3fb950;font-weight:600;">Crusaders</td>
+          <td style="color:#e3b341;">1.54</td>
+          <td class="ev-pos">+17.0%</td>
+          <td>76%</td>
+          <td><span class="badge badge-pending">⏳ 今夜</span></td>
+          <td style="color:#8b949e;">—</td>
+          <td style="color:#8b949e;">—</td>
+        </tr>
+        <tr>
+          <td>2026-04-11</td>
+          <td><span class="sport-tag" style="color:#a5f3fc;">🏒 NHL</span></td>
+          <td style="font-size:12px;">NHL 2025-26</td>
+          <td class="match-cell">Ottawa Senators @ New York Islanders</td>
+          <td><span class="badge badge-go">GO</span></td>
+          <td style="color:#e3b341;font-weight:600;">Ottawa Senators</td>
+          <td style="color:#e3b341;">2.53</td>
+          <td class="ev-pos">+33.1%</td>
+          <td>53%</td>
+          <td><span class="badge badge-pending">⏳ 待機中</span></td>
+          <td style="color:#8b949e;">—</td>
+          <td class="ev-neg">—</td>
+        </tr>
+        <tr>
+          <td>2026-04-10</td>
+          <td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td>
+          <td style="font-size:12px;">Monte-Carlo Masters 2026 QF</td>
+          <td class="match-cell">Alcaraz C.(1) vs Bublik A.(8)</td>
+          <td><span class="badge badge-go">GO</span></td>
+          <td style="color:#e3b341;font-weight:600;">Alcaraz</td>
+          <td style="color:#e3b341;">1.25</td>
+          <td class="ev-pos">+11.3%</td>
+          <td>85%</td>
+          <td><span class="badge badge-hit">✓ HIT</span></td>
+          <td style="color:#8b949e;">6-1 6-3</td>
+          <td class="ev-pos">+0.250</td>
+        </tr>
+        <tr>
+          <td>2026-04-10</td>
+          <td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td>
+          <td style="font-size:12px;">Monte-Carlo Masters 2026 QF</td>
+          <td class="match-cell">Sinner J.(2) vs Auger-Aliassime F.(6)</td>
+          <td><span class="badge badge-go">GO</span></td>
+          <td style="color:#e3b341;font-weight:600;">Sinner</td>
+          <td style="color:#e3b341;">1.38</td>
+          <td class="ev-pos">+17.4%</td>
+          <td>82%</td>
+          <td><span class="badge badge-hit">✓ HIT</span></td>
+          <td style="color:#8b949e;">6-3 6-4</td>
+          <td class="ev-pos">+0.380</td>
+        </tr>
+        <tr>
+          <td>2026-04-10</td>
+          <td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td>
+          <td style="font-size:12px;">Monte-Carlo Masters 2026 QF</td>
+          <td class="match-cell">Zverev A.(3) vs Fonseca J.</td>
+          <td><span class="badge badge-go">GO</span></td>
+          <td style="color:#e3b341;font-weight:600;">Zverev</td>
+          <td style="color:#e3b341;">1.55</td>
+          <td class="ev-pos">+19.4%</td>
+          <td>77%</td>
+          <td><span class="badge badge-hit">✓ HIT</span></td>
+          <td style="color:#8b949e;">4-6 6-4 7-5</td>
+          <td class="ev-pos">+0.550</td>
+        </tr>
+        <tr>
+          <td>2026-04-09</td>
+          <td><span class="sport-tag" style="color:#a5f3fc;">🏒 NHL</span></td>
+          <td style="font-size:12px;">NHL 2025-26</td>
+          <td class="match-cell">Calgary Flames @ Colorado Avalanche</td>
+          <td><span class="badge badge-go">GO</span></td>
+          <td style="color:#e3b341;font-weight:600;">Colorado Avalanche</td>
+          <td style="color:#e3b341;">1.33</td>
+          <td class="ev-pos">+6.6%</td>
+          <td>80%</td>
+          <td><span class="badge badge-hit">✓ HIT</span></td>
+          <td style="color:#8b949e;">3-1</td>
+          <td class="ev-pos">+0.333</td>
+        </tr>
+        <tr>
+          <td>2026-04-05</td>
+          <td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td>
+          <td style="font-size:12px;">Monte-Carlo Masters 2026 R16</td>
+          <td class="match-cell">Vacherot V.(WC) vs Hurkacz H.(PR)</td>
+          <td><span class="badge badge-go">GO</span></td>
+          <td style="color:#e3b341;font-weight:600;">Vacherot</td>
+          <td style="color:#e3b341;">1.57</td>
+          <td class="ev-pos">+11.2%</td>
+          <td>78%</td>
+          <td><span class="badge badge-hit">✓ HIT</span></td>
+          <td style="color:#8b949e;">6-7(4) 6-3 6-4</td>
+          <td class="ev-pos">+0.570</td>
+        </tr>
+        <tr>
+          <td>2026-04-05</td>
+          <td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td>
+          <td style="font-size:12px;">Monte-Carlo Masters 2026 R16</td>
+          <td class="match-cell">Berrettini M.(WC) vs Fonseca J.</td>
+          <td><span class="badge badge-go">GO</span></td>
+          <td style="color:#e3b341;font-weight:600;">Berrettini</td>
+          <td style="color:#e3b341;">1.72</td>
+          <td class="ev-pos">+8.4%</td>
+          <td>77%</td>
+          <td><span class="badge badge-miss">✗ MISS</span></td>
+          <td style="color:#8b949e;">6-3 6-2</td>
+          <td class="ev-neg">-1.000</td>
+        </tr>
+        <tr>
+          <td>2026-04-05</td>
+          <td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td>
+          <td style="font-size:12px;">Monte-Carlo Masters 2026 R32</td>
+          <td class="match-cell">Marozsan F. vs Hurkacz H.(PR)</td>
+          <td><span class="badge badge-warn">CAUTION</span></td>
+          <td style="color:#e3b341;font-weight:600;">Marozsan</td>
+          <td style="color:#e3b341;">1.73</td>
+          <td class="ev-pos">+2.1%</td>
+          <td>90%</td>
+          <td><span class="badge badge-miss">✗ MISS</span></td>
+          <td style="color:#8b949e;">Hurkacz勝利</td>
+          <td class="ev-neg">-1.000</td>
+        </tr>
+        <tr>
+          <td>2026-04-05</td>
+          <td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td>
+          <td style="font-size:12px;">Monte-Carlo Masters 2026 R32</td>
+          <td class="match-cell">Fonseca J. vs Rinderknech A.</td>
+          <td><span class="badge badge-warn">CAUTION</span></td>
+          <td style="color:#e3b341;font-weight:600;">Rinderknech</td>
+          <td style="color:#e3b341;">3.50</td>
+          <td class="ev-pos">+43.5%</td>
+          <td>72%</td>
+          <td><span class="badge badge-miss">✗ MISS</span></td>
+          <td style="color:#8b949e;">7-5 4-6 6-3</td>
+          <td class="ev-neg">-1.000</td>
+        </tr>
+        <tr>
+          <td>2026-04-05</td>
+          <td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td>
+          <td style="font-size:12px;">Monte-Carlo Masters 2026 R32</td>
+          <td class="match-cell">Auger-Aliassime F.(6) vs Cilic M.</td>
+          <td><span class="badge badge-go">GO</span></td>
+          <td style="color:#e3b341;font-weight:600;">Auger-Aliassime</td>
+          <td style="color:#e3b341;">1.63</td>
+          <td class="ev-pos">+7.6%</td>
+          <td>85%</td>
+          <td><span class="badge badge-hit">✓ HIT</span></td>
+          <td style="color:#8b949e;">7-6 7-6 6-3</td>
+          <td class="ev-pos">+0.630</td>
+        </tr>
+        <tr>
+          <td>2026-04-05</td>
+          <td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td>
+          <td style="font-size:12px;">Monte-Carlo Masters 2026 R32</td>
+          <td class="match-cell">Cerundolo F.(16) vs Machac T.</td>
+          <td><span class="badge badge-go">GO</span></td>
+          <td style="color:#e3b341;font-weight:600;">Cerundolo</td>
+          <td style="color:#e3b341;">1.53</td>
+          <td class="ev-pos">+14.8%</td>
+          <td>93%</td>
+          <td><span class="badge badge-miss">✗ MISS</span></td>
+          <td style="color:#8b949e;">7-6 6-2</td>
+          <td class="ev-neg">-1.000</td>
+        </tr>
+        <tr>
+          <td>2026-04-05</td>
+          <td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td>
+          <td style="font-size:12px;">Monte-Carlo Masters 2026 R32</td>
+          <td class="match-cell">Medvedev D.(7) vs Berrettini M.(WC)</td>
+          <td><span class="badge badge-go">GO</span></td>
+          <td style="color:#e3b341;font-weight:600;">Medvedev</td>
+          <td style="color:#e3b341;">1.90</td>
+          <td class="ev-pos">+15.0%</td>
+          <td>90%</td>
+          <td><span class="badge badge-miss">✗ MISS</span></td>
+          <td style="color:#8b949e;">6-0 6-0</td>
+          <td class="ev-neg">-1.000</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 分析ログ ===== -->
+<div class="tab-content" id="content-analysislog">
+  <div class="section">
+    <div class="section-title">分析ログ — 全スクリーニング記録</div>
+    <p style="font-size:12px;color:var(--text2);margin-bottom:16px;line-height:1.7;">
+      GO推奨だけでなく、分析してスキップした試合・L1で落とした試合を含む全記録。何を見てどう判断したかを残す。<br>
+      <span style="color:#d29922;">⚠ テニスは2026-04-05〜のGOのみ記録。SKIP詳細は次大会から追跡開始。</span>
+    </p>
+
+    <!-- セッション集計 -->
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;">
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 14px;font-size:12px;min-width:160px;">
+        <div style="color:var(--text2);font-size:10px;text-transform:uppercase;margin-bottom:4px;">NBA 4/12（最終日）</div>
+        <div>分析 <b>15</b> 試合 &nbsp;|&nbsp; <span style="color:#58a6ff;">条件付GO 1</span> &nbsp;|&nbsp; <span style="color:#d29922;">PENDING 1</span> &nbsp;|&nbsp; <span style="color:#8b949e;">SKIP 13</span></div>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 14px;font-size:12px;min-width:160px;">
+        <div style="color:var(--text2);font-size:10px;text-transform:uppercase;margin-bottom:4px;">NHL 4/09〜11</div>
+        <div>分析 <b>16</b> 試合 &nbsp;|&nbsp; <span style="color:#3fb950;">GO 2</span> &nbsp;|&nbsp; <span style="color:#8b949e;">SKIP 4</span> &nbsp;|&nbsp; <span style="color:#6b7280;">L1落 10</span></div>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 14px;font-size:12px;min-width:160px;">
+        <div style="color:var(--text2);font-size:10px;text-transform:uppercase;margin-bottom:4px;">NRL R6 4/10</div>
+        <div>分析 <b>7</b> 試合 &nbsp;|&nbsp; <span style="color:#f85149;">GO 1(MISS)</span> &nbsp;|&nbsp; <span style="color:#8b949e;">SKIP 4</span> &nbsp;|&nbsp; <span style="color:#6b7280;">対象外 2</span></div>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 14px;font-size:12px;min-width:160px;">
+        <div style="color:var(--text2);font-size:10px;text-transform:uppercase;margin-bottom:4px;">Super Rugby R9 4/10</div>
+        <div>分析 <b>5</b> 試合 &nbsp;|&nbsp; <span style="color:#3fb950;">GO 1</span> &nbsp;|&nbsp; <span style="color:#8b949e;">SKIP 4</span></div>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 14px;font-size:12px;min-width:160px;">
+        <div style="color:var(--text2);font-size:10px;text-transform:uppercase;margin-bottom:4px;">UFL Week3 4/10</div>
+        <div>分析 <b>4</b> 試合 &nbsp;|&nbsp; <span style="color:#3fb950;">GO 1</span> &nbsp;|&nbsp; <span style="color:#8b949e;">SKIP 3</span></div>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 14px;font-size:12px;min-width:160px;">
+        <div style="color:var(--text2);font-size:10px;text-transform:uppercase;margin-bottom:4px;">テニス MC2026</div>
+        <div><span style="color:#d29922;">GOのみ記録</span> <b>13</b> GO &nbsp;|&nbsp; SKIP未追跡</div>
+      </div>
+    </div>
+
+    <!-- マスターテーブル -->
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>日付</th><th>スポーツ</th><th>試合</th>
+            <th style="text-align:right;">L1差</th><th>判定</th><th>理由 / メモ</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        <!-- ══ NBA 2026-04-12 最終日 ══ -->
+        <tr style="background:#161b22;border-left:3px solid #58a6ff;">
+          <td colspan="6" style="font-size:11px;font-weight:600;padding:7px 10px;color:#58a6ff;">
+            📅 2026-04-12 &nbsp;—&nbsp; 🏀 NBA レギュラーシーズン最終日（15試合スクリーニング）
+            <span style="float:right;font-weight:400;color:#8b949e;">条件付GO 1 | PENDING 1 | SKIP（理由あり）6 | L1差不足 6 | データ不足 2</span>
+          </td>
+        </tr>
+        <tr style="background:rgba(31,111,235,.06);">
+          <td>04/12</td>
+          <td><span class="sport-tag" style="color:#fca5a5;">🏀 NBA</span></td>
+          <td class="match-cell">Grizzlies @ Rockets</td>
+          <td style="text-align:right;color:#58a6ff;font-weight:600;">+10.6</td>
+          <td><span class="badge badge-cond">条件付GO</span></td>
+          <td style="font-size:11px;color:var(--text2);">Grizzlies 8選手active（実質Gリーグ）。ML -500(1.20)、EV+5.6%。B008 Rockets主力ACTIVE確認後→GO。</td>
+        </tr>
+        <tr style="background:rgba(210,153,34,.05);">
+          <td>04/12</td>
+          <td><span class="sport-tag" style="color:#fca5a5;">🏀 NBA</span></td>
+          <td class="match-cell">Wizards @ Cavaliers</td>
+          <td style="text-align:right;color:#d29922;font-weight:600;">+15.2</td>
+          <td><span class="badge badge-pending">PENDING</span></td>
+          <td style="font-size:11px;color:var(--text2);">L1差NBA最大級。オッズ未取得。-700以上ならEV不足。Mitchell DTD→4/12復帰目標。オッズ-500以内+ACTIVE→GO。</td>
+        </tr>
+        <tr>
+          <td>04/12</td>
+          <td><span class="sport-tag" style="color:#fca5a5;">🏀 NBA</span></td>
+          <td class="match-cell">Suns @ Thunder</td>
+          <td style="text-align:right;color:#8b949e;">+10.6</td>
+          <td><span class="badge badge-skip">SKIP</span></td>
+          <td style="font-size:11px;color:var(--text2);">Thunder W1(66-16)→主力確実に休養。B011シーズン終盤補正。</td>
+        </tr>
+        <tr>
+          <td>04/12</td>
+          <td><span class="sport-tag" style="color:#fca5a5;">🏀 NBA</span></td>
+          <td class="match-cell">Pelicans @ Timberwolves</td>
+          <td style="text-align:right;color:#8b949e;">+7.7</td>
+          <td><span class="badge badge-skip">SKIP</span></td>
+          <td style="font-size:11px;color:var(--text2);">Wolves W6確定→休養リスク高（B011）。両チーム意欲低の可能性。</td>
+        </tr>
+        <tr>
+          <td>04/12</td>
+          <td><span class="sport-tag" style="color:#fca5a5;">🏀 NBA</span></td>
+          <td class="match-cell">Magic @ Celtics</td>
+          <td style="text-align:right;color:#8b949e;">+7.4</td>
+          <td><span class="badge badge-skip">SKIP</span></td>
+          <td style="font-size:11px;color:var(--text2);">市場がCeltics休養を織り込み（Magic -166ファボリット）。実際のエッジなし。</td>
+        </tr>
+        <tr>
+          <td>04/12</td>
+          <td><span class="sport-tag" style="color:#fca5a5;">🏀 NBA</span></td>
+          <td class="match-cell">Bucks @ 76ers</td>
+          <td style="text-align:right;color:#8b949e;">+5.8</td>
+          <td><span class="badge badge-skip">SKIP</span></td>
+          <td style="font-size:11px;color:var(--text2);">Embiid OUT(appendicitis)→76ers実効NRtg大幅低下。L1差が事実上消滅。</td>
+        </tr>
+        <tr>
+          <td>04/12</td>
+          <td><span class="sport-tag" style="color:#fca5a5;">🏀 NBA</span></td>
+          <td class="match-cell">Pistons @ Pacers</td>
+          <td style="text-align:right;color:#8b949e;">不明</td>
+          <td><span class="badge badge-skip">SKIP</span></td>
+          <td style="font-size:11px;color:var(--text2);">Pistons E1確定→主力確実に休養。Pacers NRtg未取得。</td>
+        </tr>
+        <tr>
+          <td>04/12</td>
+          <td><span class="sport-tag" style="color:#fca5a5;">🏀 NBA</span></td>
+          <td class="match-cell">Jazz @ Lakers</td>
+          <td style="text-align:right;color:#8b949e;">不明</td>
+          <td><span class="badge badge-skip">SKIP</span></td>
+          <td style="font-size:11px;color:var(--text2);">Jazz NRtg未取得。Lakers W5確定→休養リスク。</td>
+        </tr>
+        <tr style="opacity:.65;">
+          <td>04/12</td>
+          <td><span class="sport-tag" style="color:#fca5a5;">🏀 NBA</span></td>
+          <td class="match-cell">Hawks @ Heat</td>
+          <td style="text-align:right;color:#6b7280;">+0.7</td>
+          <td><span class="badge badge-skip" style="opacity:.7;">L1差不足</span></td>
+          <td style="font-size:11px;color:#6b7280;">NRtg差0.7 ＜ 5pt閾値</td>
+        </tr>
+        <tr style="opacity:.65;">
+          <td>04/12</td>
+          <td><span class="sport-tag" style="color:#fca5a5;">🏀 NBA</span></td>
+          <td class="match-cell">Hornets @ Knicks</td>
+          <td style="text-align:right;color:#6b7280;">+1.9</td>
+          <td><span class="badge badge-skip" style="opacity:.7;">L1差不足</span></td>
+          <td style="font-size:11px;color:#6b7280;">NRtg差1.9 ＜ 5pt閾値。市場Knicks休養織り込み済（Hornets -290）。</td>
+        </tr>
+        <tr style="opacity:.65;">
+          <td>04/12</td>
+          <td><span class="sport-tag" style="color:#fca5a5;">🏀 NBA</span></td>
+          <td class="match-cell">Nuggets @ Spurs</td>
+          <td style="text-align:right;color:#6b7280;">+3.4</td>
+          <td><span class="badge badge-skip" style="opacity:.7;">L1差不足</span></td>
+          <td style="font-size:11px;color:#6b7280;">NRtg差3.4 ＜ 5pt閾値</td>
+        </tr>
+        <tr style="opacity:.65;">
+          <td>04/12</td>
+          <td><span class="sport-tag" style="color:#fca5a5;">🏀 NBA</span></td>
+          <td class="match-cell">Bulls @ Mavericks</td>
+          <td style="text-align:right;color:#6b7280;">+0.8</td>
+          <td><span class="badge badge-skip" style="opacity:.7;">L1差不足</span></td>
+          <td style="font-size:11px;color:#6b7280;">NRtg差0.8 ＜ 5pt閾値</td>
+        </tr>
+        <tr style="opacity:.65;">
+          <td>04/12</td>
+          <td><span class="sport-tag" style="color:#fca5a5;">🏀 NBA</span></td>
+          <td class="match-cell">Warriors @ Clippers</td>
+          <td style="text-align:right;color:#6b7280;">+1.6</td>
+          <td><span class="badge badge-skip" style="opacity:.7;">L1差不足</span></td>
+          <td style="font-size:11px;color:#6b7280;">NRtg差1.6 ＜ 5pt閾値</td>
+        </tr>
+        <tr style="opacity:.65;">
+          <td>04/12</td>
+          <td><span class="sport-tag" style="color:#fca5a5;">🏀 NBA</span></td>
+          <td class="match-cell">Nets @ Raptors</td>
+          <td style="text-align:right;color:#6b7280;">不明</td>
+          <td><span class="badge badge-skip" style="opacity:.7;">データ不足</span></td>
+          <td style="font-size:11px;color:#6b7280;">Nets NRtg未取得。Raptors NRtg +2.5（低）。</td>
+        </tr>
+        <tr style="opacity:.65;">
+          <td>04/12</td>
+          <td><span class="sport-tag" style="color:#fca5a5;">🏀 NBA</span></td>
+          <td class="match-cell">Kings @ Trail Blazers</td>
+          <td style="text-align:right;color:#6b7280;">不明</td>
+          <td><span class="badge badge-skip" style="opacity:.7;">データ不足</span></td>
+          <td style="font-size:11px;color:#6b7280;">Kings NRtg未取得。Trail Blazers W9 play-in motivated。</td>
+        </tr>
+
+        <!-- ══ NHL 2026-04-11 ══ -->
+        <tr style="background:#161b22;border-left:3px solid #a5f3fc;">
+          <td colspan="6" style="font-size:11px;font-weight:600;padding:7px 10px;color:#a5f3fc;">
+            📅 2026-04-11 &nbsp;—&nbsp; 🏒 NHL（1試合分析）
+            <span style="float:right;font-weight:400;color:#8b949e;">GO 1 | SKIP詳細未記録</span>
+          </td>
+        </tr>
+        <tr style="background:rgba(46,160,67,.06);">
+          <td>04/11</td>
+          <td><span class="sport-tag" style="color:#a5f3fc;">🏒 NHL</span></td>
+          <td class="match-cell">Ottawa Senators @ NY Islanders</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">xGF+5.52</td>
+          <td><span class="badge badge-go">GO</span></td>
+          <td style="font-size:11px;color:var(--text2);">OTT xGF% リーグ3位(55.93%) vs NYI 26位(47.41%)。市場乖離13.1pt。ML 2.53 EV+33.1%。⏳結果待ち。</td>
+        </tr>
+
+        <!-- ══ UFL 2026-04-10 Week3 ══ -->
+        <tr style="background:#161b22;border-left:3px solid #fca5a5;">
+          <td colspan="6" style="font-size:11px;font-weight:600;padding:7px 10px;color:#fca5a5;">
+            📅 2026-04-10 &nbsp;—&nbsp; 🏈 UFL Week3（4試合スクリーニング）
+            <span style="float:right;font-weight:400;color:#8b949e;">GO 1 | SKIP 3</span>
+          </td>
+        </tr>
+        <tr style="background:rgba(46,160,67,.06);">
+          <td>04/10</td>
+          <td><span class="sport-tag" style="color:#fca5a5;">🏈 UFL</span></td>
+          <td class="match-cell">Columbus @ Dallas</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">+30.0</td>
+          <td><span class="badge badge-go">GO</span></td>
+          <td style="font-size:11px;color:var(--text2);">Dallas 2-0・Columbus 0-2。ML 1.32 EV+8.2%。Week3 80%閾値を82%で通過。⏳4/13結果待ち。</td>
+        </tr>
+        <tr>
+          <td>04/10</td>
+          <td><span class="sport-tag" style="color:#fca5a5;">🏈 UFL</span></td>
+          <td class="match-cell">Louisville vs Orlando</td>
+          <td style="text-align:right;color:#8b949e;">—</td>
+          <td><span class="badge badge-skip">SKIP</span></td>
+          <td style="font-size:11px;color:var(--text2);">Week3閾値80%に対し推定信頼度75% → U008でSKIP</td>
+        </tr>
+        <tr>
+          <td>04/10</td>
+          <td><span class="sport-tag" style="color:#fca5a5;">🏈 UFL</span></td>
+          <td class="match-cell">DC vs Houston</td>
+          <td style="text-align:right;color:#8b949e;">—</td>
+          <td><span class="badge badge-skip">SKIP</span></td>
+          <td style="font-size:11px;color:var(--text2);">DC 1.33オッズ・80%時EV+6.4%のみ → Week3保守判断SKIP（EV閾値ギリギリ）</td>
+        </tr>
+        <tr>
+          <td>04/10</td>
+          <td><span class="sport-tag" style="color:#fca5a5;">🏈 UFL</span></td>
+          <td class="match-cell">St.Louis vs Birmingham</td>
+          <td style="text-align:right;color:#6b7280;">—</td>
+          <td><span class="badge badge-skip" style="opacity:.7;">L1差不足</span></td>
+          <td style="font-size:11px;color:#6b7280;">L1差5pt弱シグナル + 市場はBirmingham優勢 → SKIP</td>
+        </tr>
+
+        <!-- ══ Super Rugby 2026-04-10 R9 ══ -->
+        <tr style="background:#161b22;border-left:3px solid #c4b5fd;">
+          <td colspan="6" style="font-size:11px;font-weight:600;padding:7px 10px;color:#c4b5fd;">
+            📅 2026-04-10 &nbsp;—&nbsp; 🏉 Super Rugby R9（5試合スクリーニング）
+            <span style="float:right;font-weight:400;color:#8b949e;">GO 0→1（翌日ラインナップ確認後昇格） | SKIP 4</span>
+          </td>
+        </tr>
+        <tr style="background:rgba(46,160,67,.06);">
+          <td>04/10→11</td>
+          <td><span class="sport-tag" style="color:#c4b5fd;">🏉 S.Rugby</span></td>
+          <td class="match-cell">Reds vs Crusaders</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">+12.9</td>
+          <td><span class="badge badge-go">GO</span></td>
+          <td style="font-size:11px;color:var(--text2);">初日74%(SKIP)→ラインナップ確認で76%→GO昇格。ML 1.54 EV+17.0%。H2H Suncorp 5連勝(Crusaders)。⏳今夜。</td>
+        </tr>
+        <tr>
+          <td>04/10</td>
+          <td><span class="sport-tag" style="color:#c4b5fd;">🏉 S.Rugby</span></td>
+          <td class="match-cell">Hurricanes vs Blues</td>
+          <td style="text-align:right;color:#8b949e;">+14.1</td>
+          <td><span class="badge badge-skip">SKIP</span></td>
+          <td style="font-size:11px;color:var(--text2);">L1差✓・信頼度78%✓。オッズ1.34 → EV = (0.78×1.34)-1 = +4.5%（5%閾値未達）。</td>
+        </tr>
+        <tr>
+          <td>04/10</td>
+          <td><span class="sport-tag" style="color:#c4b5fd;">🏉 S.Rugby</span></td>
+          <td class="match-cell">Chiefs vs Moana Pasifika</td>
+          <td style="text-align:right;color:#8b949e;">+31.5</td>
+          <td><span class="badge badge-skip">SKIP</span></td>
+          <td style="font-size:11px;color:var(--text2);">地力差は圧倒的だがオッズが短すぎる（~1.20-1.25予想）→EV成立困難。ラインナップ未確認。</td>
+        </tr>
+        <tr>
+          <td>04/10</td>
+          <td><span class="sport-tag" style="color:#c4b5fd;">🏉 S.Rugby</span></td>
+          <td class="match-cell">Fijian Drua vs Western Force</td>
+          <td style="text-align:right;color:#8b949e;">+10.2</td>
+          <td><span class="badge badge-skip">SKIP</span></td>
+          <td style="font-size:11px;color:var(--text2);">Force優位だがDrua地元Fiji(Lautoka)HOME+8%で差が消滅。信頼度75%未満。</td>
+        </tr>
+        <tr style="opacity:.65;">
+          <td>04/10</td>
+          <td><span class="sport-tag" style="color:#c4b5fd;">🏉 S.Rugby</span></td>
+          <td class="match-cell">Brumbies 14-10 Highlanders</td>
+          <td style="text-align:right;color:#6b7280;">—</td>
+          <td><span class="badge badge-skip" style="opacity:.7;">試合済</span></td>
+          <td style="font-size:11px;color:#6b7280;">分析前に試合終了。予測なし。</td>
+        </tr>
+
+        <!-- ══ NRL 2026-04-10 R6 ══ -->
+        <tr style="background:#161b22;border-left:3px solid #86efac;">
+          <td colspan="6" style="font-size:11px;font-weight:600;padding:7px 10px;color:#86efac;">
+            📅 2026-04-10 &nbsp;—&nbsp; 🏉 NRL Round 6（7試合スクリーニング）
+            <span style="float:right;font-weight:400;color:#8b949e;">GO 1(→MISS) | SKIP 4 | 対象外 2</span>
+          </td>
+        </tr>
+        <tr style="background:rgba(248,81,73,.04);">
+          <td>04/11</td>
+          <td><span class="sport-tag" style="color:#86efac;">🏉 NRL</span></td>
+          <td class="match-cell">Rabbitohs vs Raiders</td>
+          <td style="text-align:right;color:#f85149;font-weight:600;">+17.3</td>
+          <td><span class="badge badge-miss">MISS</span></td>
+          <td style="font-size:11px;color:var(--text2);">Rabbitohs 1.55 EV+20.9% 信頼度78%。Raiders 1-4(崖っぷち)の背水モチベーション未考慮。小サンプル(5試合)PD過信。→R011/R012制定。</td>
+        </tr>
+        <tr>
+          <td>04/10</td>
+          <td><span class="sport-tag" style="color:#86efac;">🏉 NRL</span></td>
+          <td class="match-cell">Sharks vs Roosters</td>
+          <td style="text-align:right;color:#8b949e;">+12.4</td>
+          <td><span class="badge badge-skip">SKIP</span></td>
+          <td style="font-size:11px;color:var(--text2);">L1差✓。ただし信頼度65%（R010チェック後、75%未達）→SKIP。市場はRoosters優位で逆転オッズ。</td>
+        </tr>
+        <tr style="opacity:.65;">
+          <td>04/10</td>
+          <td><span class="sport-tag" style="color:#86efac;">🏉 NRL</span></td>
+          <td class="match-cell">Storm vs Warriors</td>
+          <td style="text-align:right;color:#6b7280;">+5.2</td>
+          <td><span class="badge badge-skip" style="opacity:.7;">L1差不足</span></td>
+          <td style="font-size:11px;color:#6b7280;">PD差5.2 ＜ 6pt閾値</td>
+        </tr>
+        <tr style="opacity:.65;">
+          <td>04/10</td>
+          <td><span class="sport-tag" style="color:#86efac;">🏉 NRL</span></td>
+          <td class="match-cell">Eels vs Titans</td>
+          <td style="text-align:right;color:#6b7280;">+0.8</td>
+          <td><span class="badge badge-skip" style="opacity:.7;">L1差不足</span></td>
+          <td style="font-size:11px;color:#6b7280;">PD差0.8 ＜ 6pt閾値</td>
+        </tr>
+        <tr style="opacity:.65;">
+          <td>04/10</td>
+          <td><span class="sport-tag" style="color:#86efac;">🏉 NRL</span></td>
+          <td class="match-cell">Tigers vs Knights</td>
+          <td style="text-align:right;color:#6b7280;">+4.6</td>
+          <td><span class="badge badge-skip" style="opacity:.7;">L1差不足</span></td>
+          <td style="font-size:11px;color:#6b7280;">PD差4.6 ＜ 6pt閾値</td>
+        </tr>
+        <tr style="opacity:.5;">
+          <td>04/10</td>
+          <td><span class="sport-tag" style="color:#86efac;">🏉 NRL</span></td>
+          <td class="match-cell">（2試合 — ライブ中/終了）</td>
+          <td style="text-align:right;color:#6b7280;">—</td>
+          <td><span class="badge badge-skip" style="opacity:.5;">対象外</span></td>
+          <td style="font-size:11px;color:#6b7280;">スクリーニング時点で試合中または終了済み</td>
+        </tr>
+
+        <!-- ══ NHL 2026-04-09 ══ -->
+        <tr style="background:#161b22;border-left:3px solid #a5f3fc;">
+          <td colspan="6" style="font-size:11px;font-weight:600;padding:7px 10px;color:#a5f3fc;">
+            📅 2026-04-09 &nbsp;—&nbsp; 🏒 NHL（14試合スクリーニング）
+            <span style="float:right;font-weight:400;color:#8b949e;">GO 1(HIT) | SKIP 3 | L1差不足 10</span>
+          </td>
+        </tr>
+        <tr style="background:rgba(46,160,67,.06);">
+          <td>04/09</td>
+          <td><span class="sport-tag" style="color:#a5f3fc;">🏒 NHL</span></td>
+          <td class="match-cell">Calgary @ Colorado</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">xGF+10.0</td>
+          <td><span class="badge badge-hit">HIT</span></td>
+          <td style="font-size:11px;color:var(--text2);">COL xGF 56.5% vs CGY 46.5%。ML 1.333 EV+6.6%。COL 3-1勝利（Presidents' Trophy確定）。</td>
+        </tr>
+        <tr>
+          <td>04/09</td>
+          <td><span class="sport-tag" style="color:#a5f3fc;">🏒 NHL</span></td>
+          <td class="match-cell">Carolina @ Chicago</td>
+          <td style="text-align:right;color:#8b949e;">—</td>
+          <td><span class="badge badge-skip">SKIP</span></td>
+          <td style="font-size:11px;color:var(--text2);">CAR B2B away → 信頼度64%（75%未達）</td>
+        </tr>
+        <tr>
+          <td>04/09</td>
+          <td><span class="sport-tag" style="color:#a5f3fc;">🏒 NHL</span></td>
+          <td class="match-cell">Vegas @ Seattle</td>
+          <td style="text-align:right;color:#8b949e;">—</td>
+          <td><span class="badge badge-skip">SKIP</span></td>
+          <td style="font-size:11px;color:var(--text2);">VGK B2B away → 信頼度58%（75%未達）</td>
+        </tr>
+        <tr>
+          <td>04/09</td>
+          <td><span class="sport-tag" style="color:#a5f3fc;">🏒 NHL</span></td>
+          <td class="match-cell">Vancouver @ LA Kings</td>
+          <td style="text-align:right;color:#8b949e;">—</td>
+          <td><span class="badge badge-skip">SKIP</span></td>
+          <td style="font-size:11px;color:var(--text2);">L1差✓・信頼度✓。オッズ不利 → EV+3.3%（5%閾値未達）。</td>
+        </tr>
+        <tr style="opacity:.5;">
+          <td>04/09</td>
+          <td><span class="sport-tag" style="color:#a5f3fc;">🏒 NHL</span></td>
+          <td class="match-cell">（他10試合）</td>
+          <td style="text-align:right;color:#6b7280;">—</td>
+          <td><span class="badge badge-skip" style="opacity:.5;">L1差不足</span></td>
+          <td style="font-size:11px;color:#6b7280;">xGF%差 ＜ 5pt。L1スクリーニングで除外。</td>
+        </tr>
+
+        <!-- ══ Tennis MC2026 ══ -->
+        <tr style="background:#161b22;border-left:3px solid #79c0ff;">
+          <td colspan="6" style="font-size:11px;font-weight:600;padding:7px 10px;color:#79c0ff;">
+            📅 2026-04-05〜12 &nbsp;—&nbsp; 🎾 テニス MC2026（GOのみ記録 / SKIP未追跡）
+            <span style="float:right;font-weight:400;color:#d29922;">⚠ スクリーニングログ未実装期間。次大会から全試合追跡開始。</span>
+          </td>
+        </tr>
+        <tr style="opacity:.8;">
+          <td>04/05</td>
+          <td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td>
+          <td class="match-cell">R32: 5試合（GO/CAUTION）</td>
+          <td style="text-align:right;color:#8b949e;">—</td>
+          <td><span class="badge badge-go">5 GO</span></td>
+          <td style="font-size:11px;color:#8b949e;">Medvedev MISS / Cerundolo MISS / Auger-Aliassime HIT / Fonseca(CAUTION) MISS / Marozsan(CAUTION) MISS。SKIPデータなし。</td>
+        </tr>
+        <tr style="opacity:.8;">
+          <td>04/07</td>
+          <td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td>
+          <td class="match-cell">R16: 2試合（GO）</td>
+          <td style="text-align:right;color:#8b949e;">—</td>
+          <td><span class="badge badge-go">2 GO</span></td>
+          <td style="font-size:11px;color:#8b949e;">Berrettini MISS / Vacherot HIT。SKIPデータなし。</td>
+        </tr>
+        <tr style="opacity:.8;">
+          <td>04/10</td>
+          <td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td>
+          <td class="match-cell">QF: 3試合（GO）</td>
+          <td style="text-align:right;color:#8b949e;">—</td>
+          <td><span class="badge badge-go">3 GO</span></td>
+          <td style="font-size:11px;color:#8b949e;">Alcaraz HIT / Sinner HIT / Zverev HIT。SKIPデータなし。</td>
+        </tr>
+        <tr style="opacity:.8;">
+          <td>04/11</td>
+          <td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td>
+          <td class="match-cell">SF: 2試合（GO）</td>
+          <td style="text-align:right;color:#8b949e;">—</td>
+          <td><span class="badge badge-go">2 GO</span></td>
+          <td style="font-size:11px;color:#8b949e;">Alcaraz HIT / Sinner MISS。SKIPデータなし。</td>
+        </tr>
+        <tr style="opacity:.8;">
+          <td>04/12</td>
+          <td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td>
+          <td class="match-cell">F: 1試合（GO）</td>
+          <td style="text-align:right;color:#8b949e;">—</td>
+          <td><span class="badge badge-go">1 GO</span></td>
+          <td style="font-size:11px;color:#8b949e;">Alcaraz PENDING（4/12試合後確認）。SKIPデータなし。</td>
+        </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 凡例 -->
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;font-size:11px;color:var(--text2);">
+      <div><span class="badge badge-go">GO</span> 推奨（信頼度≥75% + EV>+5%）</div>
+      <div><span class="badge badge-cond">条件付GO</span> 特定条件クリアでGO</div>
+      <div><span class="badge badge-pending">PENDING</span> データ待ち</div>
+      <div><span class="badge badge-skip">SKIP</span> L1通過後に信頼度/EV等で除外</div>
+      <div><span class="badge badge-skip" style="opacity:.7;">L1差不足</span> L1スクリーニング未通過</div>
+      <div><span class="badge badge-hit">HIT</span> 的中</div>
+      <div><span class="badge badge-miss">MISS</span> 外れ</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== 成長分析 ===== -->
+<div class="tab-content" id="content-timeline">
+
+  <!-- Row 1: 正答率折れ線 + EV推移 -->
+  <div class="chart-row">
+    <div class="chart-wrap">
+      <div class="chart-title">正答率推移（全体・GO確定試合）</div>
+      <svg viewBox="0 0 720 195" style="width:100%;display:block;">
+        <line x1="58" y1="15" x2="705" y2="15" stroke="#21262d"/>
+        <line x1="58" y1="55" x2="705" y2="55" stroke="#21262d"/>
+        <line x1="58" y1="95" x2="705" y2="95" stroke="#21262d"/>
+        <line x1="58" y1="135" x2="705" y2="135" stroke="#21262d"/>
+        <line x1="58" y1="170" x2="705" y2="170" stroke="#21262d"/>
+        <line x1="58" y1="55" x2="705" y2="55" stroke="#d29922" stroke-dasharray="5,3" stroke-width="1.3" opacity="0.7"/>
+        <text x="707" y="59" fill="#d29922" font-size="9">75%</text>
+        <text x="50" y="173" text-anchor="end" fill="#8b949e" font-size="10">0%</text>
+        <text x="50" y="138" text-anchor="end" fill="#8b949e" font-size="10">25%</text>
+        <text x="50" y="98" text-anchor="end" fill="#8b949e" font-size="10">50%</text>
+        <text x="50" y="58" text-anchor="end" fill="#8b949e" font-size="10">75%</text>
+        <text x="50" y="18" text-anchor="end" fill="#8b949e" font-size="10">100%</text>
+        <!-- y=170-pct*1.55 | x=60+n*64 (11点) -->
+        <polygon points="60,170 124,170 188,118 252,131 316,108 380,93 444,82 508,73 572,67 636,62 700,71 700,170" fill="#3fb950" opacity="0.07"/>
+        <polyline points="60,170 124,170 188,118 252,131 316,108 380,93 444,82 508,73 572,67 636,62 700,71" fill="none" stroke="#3fb950" stroke-width="2.2" stroke-linejoin="round"/>
+        <circle cx="60"  cy="170" r="4.5" fill="#f85149"/>
+        <circle cx="124" cy="170" r="4.5" fill="#f85149"/>
+        <circle cx="188" cy="118" r="4.5" fill="#3fb950"/>
+        <circle cx="252" cy="131" r="4.5" fill="#f85149"/>
+        <circle cx="316" cy="108" r="4.5" fill="#3fb950"/>
+        <circle cx="380" cy="93"  r="4.5" fill="#3fb950"/>
+        <circle cx="444" cy="82"  r="4.5" fill="#3fb950"/>
+        <circle cx="508" cy="73"  r="4.5" fill="#3fb950"/>
+        <circle cx="572" cy="67"  r="4.5" fill="#3fb950"/>
+        <circle cx="636" cy="62"  r="4.5" fill="#3fb950"/>
+        <circle cx="700" cy="71"  r="5.5" fill="#f85149" stroke="#0d1117" stroke-width="2"/>
+        <rect x="360" y="76" width="40" height="14" rx="3" fill="#0c2d4e" opacity="0.9"/>
+        <text x="380" y="86" text-anchor="middle" fill="#a5f3fc" font-size="9" font-weight="600">NHL</text>
+        <line x1="316" y1="58" x2="636" y2="58" stroke="#3fb950" stroke-dasharray="3,2" opacity="0.35" stroke-width="1"/>
+        <text x="476" y="54" text-anchor="middle" fill="#3fb950" font-size="9" opacity="0.7">6連続HIT (#5〜#10) ▶</text>
+        <text x="60"  y="185" text-anchor="middle" fill="#8b949e" font-size="9">#1</text>
+        <text x="124" y="185" text-anchor="middle" fill="#8b949e" font-size="9">#2</text>
+        <text x="188" y="185" text-anchor="middle" fill="#8b949e" font-size="9">#3</text>
+        <text x="252" y="185" text-anchor="middle" fill="#8b949e" font-size="9">#4</text>
+        <text x="316" y="185" text-anchor="middle" fill="#8b949e" font-size="9">#5</text>
+        <text x="380" y="185" text-anchor="middle" fill="#a5f3fc" font-size="9">#6</text>
+        <text x="444" y="185" text-anchor="middle" fill="#8b949e" font-size="9">#7</text>
+        <text x="508" y="185" text-anchor="middle" fill="#8b949e" font-size="9">#8</text>
+        <text x="572" y="185" text-anchor="middle" fill="#8b949e" font-size="9">#9</text>
+        <text x="636" y="185" text-anchor="middle" fill="#3fb950" font-size="9">#10</text>
+        <text x="700" y="185" text-anchor="middle" fill="#f85149" font-size="9" font-weight="700">#11</text>
+        <rect x="656" y="50" width="52" height="18" rx="3" fill="#2d1014" stroke="#f85149" stroke-width="1"/>
+        <text x="682" y="62" text-anchor="middle" fill="#f85149" font-size="11" font-weight="700">63.6%</text>
+      </svg>
+    </div>
+    <div class="chart-wrap chart-narrow">
+      <div class="chart-title">累積EV推移</div>
+      <svg viewBox="0 0 210 195" style="width:100%;display:block;">
+        <!-- スケール: +0.5〜-2.5, 0線=y56, px/unit=50.7 -->
+        <!-- y = 56 + ev * (-50.7) = 56 - ev*50.7 (負のev→下へ) -->
+        <line x1="44" y1="56" x2="198" y2="56" stroke="#3fb950" stroke-dasharray="4,3" stroke-width="1.2" opacity="0.7"/>
+        <text x="200" y="60" fill="#3fb950" font-size="8">0.0</text>
+        <line x1="44" y1="81"  x2="198" y2="81"  stroke="#21262d"/>
+        <line x1="44" y1="107" x2="198" y2="107" stroke="#21262d"/>
+        <line x1="44" y1="132" x2="198" y2="132" stroke="#21262d"/>
+        <line x1="44" y1="157" x2="198" y2="157" stroke="#21262d"/>
+        <text x="38" y="60"  text-anchor="end" fill="#3fb950" font-size="8">0</text>
+        <text x="38" y="85"  text-anchor="end" fill="#8b949e" font-size="8">-0.5</text>
+        <text x="38" y="111" text-anchor="end" fill="#8b949e" font-size="8">-1.0</text>
+        <text x="38" y="136" text-anchor="end" fill="#8b949e" font-size="8">-1.5</text>
+        <text x="38" y="161" text-anchor="end" fill="#8b949e" font-size="8">-2.0</text>
+        <!-- x: 44,59,74,90,105,120,136,151,166,182,198 (11点) -->
+        <!-- ev: -1.0,-2.0,-1.37,-2.37,-1.8,-1.467,-0.917,-0.537,-0.287,+0.213,-0.787 -->
+        <!-- y = 56-ev*50.7: 107,157,125,176,147,130,103,83,71,45,96 -->
+        <polygon points="44,107 59,157 74,125 90,176 105,147 120,130 136,103 151,83 166,71 182,45 198,96 198,56 44,56" fill="#f85149" opacity="0.07"/>
+        <polyline points="44,107 59,157 74,125 90,176 105,147 120,130 136,103 151,83 166,71 182,45 198,96" fill="none" stroke="#f85149" stroke-width="1.8" stroke-linejoin="round" opacity="0.85"/>
+        <circle cx="44"  cy="107" r="3" fill="#f85149" opacity="0.8"/>
+        <circle cx="59"  cy="157" r="3" fill="#f85149" opacity="0.8"/>
+        <circle cx="74"  cy="125" r="3" fill="#e3b341" opacity="0.8"/>
+        <circle cx="90"  cy="176" r="3" fill="#f85149" opacity="0.8"/>
+        <circle cx="105" cy="147" r="3" fill="#e3b341" opacity="0.8"/>
+        <circle cx="120" cy="130" r="3" fill="#e3b341" opacity="0.8"/>
+        <circle cx="136" cy="103" r="3" fill="#3fb950" opacity="0.9"/>
+        <circle cx="151" cy="83"  r="3" fill="#3fb950" opacity="0.9"/>
+        <circle cx="166" cy="71"  r="3" fill="#3fb950" opacity="0.9"/>
+        <circle cx="182" cy="45"  r="3.5" fill="#3fb950" stroke="#0d1117" stroke-width="1.5"/>
+        <circle cx="198" cy="96"  r="4" fill="#f85149" stroke="#0d1117" stroke-width="1.5"/>
+        <rect x="138" y="28" width="54" height="16" rx="3" fill="#0f2c1a" stroke="#3fb950" stroke-width="1"/>
+        <text x="165" y="39" text-anchor="middle" fill="#3fb950" font-size="9" font-weight="700">一時+0.213</text>
+        <rect x="148" y="78" width="54" height="16" rx="3" fill="#2d1014" stroke="#f85149" stroke-width="1"/>
+        <text x="175" y="89" text-anchor="middle" fill="#f85149" font-size="10" font-weight="700">-0.787</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- 種目別正答率 -->
+  <div class="section">
+    <div class="section-title">種目別正答率</div>
+    <div class="chart-wrap">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 32px;">
+        <div>
+          <div class="chart-title" style="margin-bottom:12px;">アクティブ種目</div>
+          <div class="sport-bar-row">
+            <div class="sport-bar-label" style="color:#79c0ff;">🎾 ATP Tennis</div>
+            <div class="sport-bar-track">
+              <div class="sport-bar-fill" style="width:60%;background:linear-gradient(90deg,#1a4731,#2ea043);"></div>
+              <div class="sport-bar-val" style="color:#3fb950;">60.0%</div>
+            </div>
+            <div class="sport-bar-meta">6/10 GO | EV -1.500</div>
+          </div>
+          <div class="sport-bar-row">
+            <div class="sport-bar-label" style="color:#a5f3fc;">🏒 NHL</div>
+            <div class="sport-bar-track">
+              <div class="sport-bar-fill" style="width:100%;background:linear-gradient(90deg,#0c2d4e,#58a6ff);"></div>
+              <div class="sport-bar-val" style="color:#79c0ff;">100%</div>
+            </div>
+            <div class="sport-bar-meta">1/1 GO | EV +0.333</div>
+          </div>
+          <div class="sport-bar-row">
+            <div class="sport-bar-label" style="color:#fca5a5;">🏈 UFL</div>
+            <div class="sport-bar-track" style="opacity:.5;">
+              <div class="sport-bar-fill" style="width:0%;"></div>
+              <div class="sport-bar-val" style="color:#8b949e;left:8px;transform:none;top:3px;">⏳ 4/13 待機</div>
+            </div>
+            <div class="sport-bar-meta" style="color:#8b949e;">1件 GO済</div>
+          </div>
+          <div class="sport-bar-row">
+            <div class="sport-bar-label" style="color:#86efac;">🏉 NRL</div>
+            <div class="sport-bar-track">
+              <div class="sport-bar-fill" style="width:0%;background:linear-gradient(90deg,#2d1014,#f85149);"></div>
+              <div class="sport-bar-val" style="color:#f85149;">MISS</div>
+            </div>
+            <div class="sport-bar-meta" style="color:#f85149;">0/1 | EV -1.000</div>
+          </div>
+          <div class="sport-bar-row">
+            <div class="sport-bar-label" style="color:#fca5a5;">🏀 NBA</div>
+            <div class="sport-bar-track" style="opacity:.8;">
+              <div class="sport-bar-fill" style="width:30%;background:linear-gradient(90deg,#0c2d4e,#1f6feb);"></div>
+              <span class="sport-bar-val" style="color:#58a6ff;">条件付GO</span>
+            </div>
+            <div class="sport-bar-meta" style="color:#58a6ff;">Rockets -500 EV+5.6%（B008確認待）</div>
+          </div>
+          <div class="sport-bar-row">
+            <div class="sport-bar-label" style="color:#c4b5fd;">🏉 Super Rugby</div>
+            <div class="sport-bar-track" style="opacity:.7;">
+              <div class="sport-bar-fill" style="width:50%;background:linear-gradient(90deg,#1a0f2c,#c4b5fd);"></div>
+              <div class="sport-bar-val" style="color:#c4b5fd;">GO</div>
+            </div>
+            <div class="sport-bar-meta" style="color:#d29922;">1件 GO | 今夜</div>
+          </div>
+        </div>
+        <div>
+          <div class="chart-title" style="margin-bottom:12px;">ラウンド別 ATP Tennis (MC2026)</div>
+          <div class="sport-bar-row">
+            <div class="sport-bar-label" style="color:#8b949e;">R32</div>
+            <div class="sport-bar-track">
+              <div class="sport-bar-fill" style="width:33.3%;background:linear-gradient(90deg,#4a1e1e,#f85149);"></div>
+              <div class="sport-bar-val" style="color:#f85149;">33.3%</div>
+            </div>
+            <div class="sport-bar-meta">1/3 GO的中</div>
+          </div>
+          <div class="sport-bar-row">
+            <div class="sport-bar-label" style="color:#8b949e;">R16</div>
+            <div class="sport-bar-track">
+              <div class="sport-bar-fill" style="width:50%;background:linear-gradient(90deg,#2d2100,#e3b341);"></div>
+              <div class="sport-bar-val" style="color:#e3b341;">50.0%</div>
+            </div>
+            <div class="sport-bar-meta">1/2 GO的中</div>
+          </div>
+          <div class="sport-bar-row">
+            <div class="sport-bar-label" style="color:#8b949e;">QF</div>
+            <div class="sport-bar-track">
+              <div class="sport-bar-fill" style="width:100%;background:linear-gradient(90deg,#1a4731,#2ea043);"></div>
+              <div class="sport-bar-val" style="color:#3fb950;">100%</div>
+            </div>
+            <div class="sport-bar-meta">3/3 GO的中 🎯</div>
+          </div>
+          <div class="sport-bar-row">
+            <div class="sport-bar-label" style="color:#8b949e;">SF</div>
+            <div class="sport-bar-track">
+              <div class="sport-bar-fill" style="width:50%;background:linear-gradient(90deg,#2d2100,#e3b341);"></div>
+              <div class="sport-bar-val" style="color:#e3b341;">50.0%</div>
+            </div>
+            <div class="sport-bar-meta">1/2 GO的中</div>
+          </div>
+          <div style="margin-top:16px;padding:10px 12px;background:var(--surface2);border-radius:6px;font-size:11px;color:var(--text2);line-height:1.8;">
+            📌 <strong style="color:var(--text);">ルール改訂効果</strong><br>
+            v2.0以前: <span style="color:#f85149;">1/5 (20%)</span><br>
+            v2.0以降: <span style="color:#e3b341;">6/7 (85.7%)</span> 改善幅 +65%
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- システム成長タイムライン -->
+  <div class="section">
+    <div class="section-title">システム成長タイムライン</div>
+    <div class="chart-wrap">
+      <div class="grow-stats">
+        <div class="gs-item"><div class="gs-label">対応種目</div><div class="gs-val" style="color:#58a6ff;">8</div><div class="gs-sub">1→2→8（6日間）</div></div>
+        <div class="gs-item"><div class="gs-label">ルール総数</div><div class="gs-val" style="color:#e3b341;">13+</div><div class="gs-sub">8ファイル v1.0〜v2.0</div></div>
+        <div class="gs-item"><div class="gs-label">最高連続HIT</div><div class="gs-val" style="color:#3fb950;">6</div><div class="gs-sub">#5〜#10 達成</div></div>
+        <div class="gs-item"><div class="gs-label">v2.0後正答率</div><div class="gs-val" style="color:#e3b341;">86%</div><div class="gs-sub">6/7 試合的中</div></div>
+      </div>
+      <div class="timeline-grow">
+        <div class="tg-item">
+          <div class="tg-dot" style="background:#f85149;"></div>
+          <div class="tg-date">2026-04-05 &nbsp;|&nbsp; 稼働0日目</div>
+          <div class="tg-title">🎾 ATP Tennis 初戦 → 連敗 → 即日v2.0改訂</div>
+          <div class="tg-desc">MC2026 R32でMedvedev(クレー嫌い補正未設定)・Cerundolo(攻撃型サーブ未考慮)が連敗。パターンを学習し当日中にR008〜R013の5ルールを追加してv2.0へ更新。</div>
+          <div class="tg-metrics">
+            <span class="tg-metric" style="color:#f85149;">初日: 1/5 (20%)</span>
+            <span class="tg-metric">5ルール追加</span>
+            <span class="tg-metric">1種目</span>
+          </div>
+        </div>
+        <div class="tg-item">
+          <div class="tg-dot" style="background:#e3b341;"></div>
+          <div class="tg-date">2026-04-05 (R16) &nbsp;|&nbsp; v2.0 初適用</div>
+          <div class="tg-title">🎾 v2.0即効果 — Vacherot (ホームコートR009) 的中</div>
+          <div class="tg-desc">改訂後初戦でVacherotのホームコートアドバンテージを正確に評価し的中。Berrettini戦はFonsecaの台頭（想定外）で敗退。R16: 1/2。</div>
+          <div class="tg-metrics">
+            <span class="tg-metric" style="color:#e3b341;">R16: 1/2 (50%)</span>
+            <span class="tg-metric">R009 初適用</span>
+          </div>
+        </div>
+        <div class="tg-item">
+          <div class="tg-dot" style="background:#3fb950;"></div>
+          <div class="tg-date">2026-04-09 &nbsp;|&nbsp; 稼働4日目</div>
+          <div class="tg-title">🏒 NHL v1.2 稼働 — xGF%指標で初戦即HIT</div>
+          <div class="tg-desc">GF%→xGF%(MoneyPuck)へ指標変更。COL vs CGY (xGF%差12.5pt・市場乖離13.1pt) でGO→3-1 HIT。2種目目が初戦から機能し累積正答率が50%を突破。</div>
+          <div class="tg-metrics">
+            <span class="tg-metric" style="color:#3fb950;">NHL: 1/1 (100%)</span>
+            <span class="tg-metric">2種目体制</span>
+            <span class="tg-metric">累積50%回復</span>
+          </div>
+        </div>
+        <div class="tg-item">
+          <div class="tg-dot" style="background:#58a6ff;"></div>
+          <div class="tg-date">2026-04-11 &nbsp;|&nbsp; NBA追加</div>
+          <div class="tg-title">🏀 NBA（バスケットボール）追加 — 9種目体制へ</div>
+          <div class="tg-desc">統計ソース実地調査（basketball-reference.com / NBA公式 / cleaningtheglass.com等）を経てrules_nba.json v1.0を作成。バスケ固有の特性（スター依存・ロードマネジメント・3P分散・Four Factors・高地補正）をB001〜B014として実装。NBA公式傷病リスト提出義務（前日5pm/当日11am）によりゴーリー確認問題は存在しない。</div>
+          <div class="tg-metrics">
+            <span class="tg-metric" style="color:#fca5a5;">🏀 NBA v1.0</span>
+            <span class="tg-metric">9種目体制</span>
+            <span class="tg-metric">B001〜B014</span>
+          </div>
+          </div>
+          <div class="tg-item">
+          <div class="tg-dot" style="background:#3fb950;"></div>
+          <div class="tg-date">2026-04-10 (午前) &nbsp;|&nbsp; 稼働5日目</div>
+          <div class="tg-title">🌐 8種目体制完成 + BACKLOGシステム導入</div>
+          <div class="tg-desc">WTA・Super Rugby Pacific・NFL・CFLを一括追加。セッション間継続のためBACKLOG.mdも同時導入。8種目のルールファイルと記録フォルダが揃い、マルチスポーツ分析基盤が確立。</div>
+          <div class="tg-metrics">
+            <span class="tg-metric" style="color:#58a6ff;">8種目 完成</span>
+            <span class="tg-metric">BACKLOG.md 導入</span>
+            <span class="tg-metric">4ルールファイル新規</span>
+          </div>
+        </div>
+        <div class="tg-item">
+          <div class="tg-dot" style="background:#3fb950;"></div>
+          <div class="tg-date">2026-04-10 (QF)</div>
+          <div class="tg-title">🎾 MC2026 QF 3/3 完全的中 — 5連続HIT達成</div>
+          <div class="tg-desc">Alcaraz(6-1 6-3)・Sinner(6-3 6-4)・Zverev(4-6 6-4 7-5)が全予測通り。ドロー構造の誤りをESPN/TennisTonic比較で発見・修正し、SF予測の精度を向上。</div>
+          <div class="tg-metrics">
+            <span class="tg-metric" style="color:#3fb950;">通算: 6/9 (66.7%)</span>
+            <span class="tg-metric" style="color:#3fb950;">5連続HIT達成</span>
+          </div>
+        </div>
+        <div class="tg-item">
+          <div class="tg-dot" style="background:#e3b341;box-shadow:0 0 0 3px rgba(227,179,65,.3);"></div>
+          <div class="tg-date">2026-04-11 (SF) &nbsp;|&nbsp; 最新</div>
+          <div class="tg-title">🎾 MC2026 SF — HIT×1・MISS×1。6連続HIT後に初失敗</div>
+          <div class="tg-desc">Alcaraz がde Minaur を制しファイナルへ（HIT）。Sinnerは Zverev に4-6 6-4 7-5で逆転負け（MISS）。L1差110ptのボーダー判定が課題として浮上。#10でEVが一時+0.213のプラスを記録したが#11のMISSで再びマイナスへ。</div>
+          <div class="tg-metrics">
+            <span class="tg-metric" style="color:#e3b341;">通算: 7/11 (63.6%)</span>
+            <span class="tg-metric" style="color:#3fb950;">最高連続HIT: 6</span>
+            <span class="tg-metric" style="color:#f85149;">振り返り: L1差≥150ルール検討</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 累積記録テーブル -->
+  <div class="section">
+    <div class="section-title">累積記録（GO確定試合）</div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr><th>#</th><th>日付</th><th>スポーツ</th><th>試合</th><th>結果</th><th>実績EV</th><th>累積EV</th><th>累積正答率</th></tr>
+        </thead>
+        <tbody>
+        <tr><td>#1</td><td>2026-04-05</td><td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td><td style="font-size:12px;">Medvedev vs Berrettini</td><td style="color:#f85149;font-weight:700;">✗ MISS</td><td class="ev-neg">-1.000</td><td class="ev-neg">-1.000</td><td style="color:#f85149;">0.0%</td></tr>
+        <tr><td>#2</td><td>2026-04-05</td><td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td><td style="font-size:12px;">Cerundolo vs Machac</td><td style="color:#f85149;font-weight:700;">✗ MISS</td><td class="ev-neg">-1.000</td><td class="ev-neg">-2.000</td><td style="color:#f85149;">0.0%</td></tr>
+        <tr><td>#3</td><td>2026-04-05</td><td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td><td style="font-size:12px;">Auger-Aliassime vs Cilic</td><td style="color:#3fb950;font-weight:700;">✓ HIT</td><td class="ev-pos">+0.630</td><td class="ev-neg">-1.370</td><td style="color:#f85149;">33.3%</td></tr>
+        <tr><td>#4</td><td>2026-04-05</td><td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td><td style="font-size:12px;">Berrettini vs Fonseca (R16)</td><td style="color:#f85149;font-weight:700;">✗ MISS</td><td class="ev-neg">-1.000</td><td class="ev-neg">-2.370</td><td style="color:#f85149;">25.0%</td></tr>
+        <tr><td>#5</td><td>2026-04-05</td><td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td><td style="font-size:12px;">Vacherot vs Hurkacz (R16)</td><td style="color:#3fb950;font-weight:700;">✓ HIT</td><td class="ev-pos">+0.570</td><td class="ev-neg">-1.800</td><td style="color:#e3b341;">40.0%</td></tr>
+        <tr><td>#6</td><td>2026-04-09</td><td><span class="sport-tag" style="color:#a5f3fc;">🏒 NHL</span></td><td style="font-size:12px;">Calgary @ Colorado</td><td style="color:#3fb950;font-weight:700;">✓ HIT</td><td class="ev-pos">+0.333</td><td class="ev-neg">-1.467</td><td style="color:#e3b341;">50.0%</td></tr>
+        <tr><td>#7</td><td>2026-04-10</td><td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td><td style="font-size:12px;">Zverev vs Fonseca (QF)</td><td style="color:#3fb950;font-weight:700;">✓ HIT</td><td class="ev-pos">+0.550</td><td class="ev-neg">-0.917</td><td style="color:#e3b341;">57.1%</td></tr>
+        <tr><td>#8</td><td>2026-04-10</td><td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td><td style="font-size:12px;">Sinner vs FAA (QF)</td><td style="color:#3fb950;font-weight:700;">✓ HIT</td><td class="ev-pos">+0.380</td><td class="ev-neg">-0.537</td><td style="color:#e3b341;">62.5%</td></tr>
+        <tr><td>#9</td><td>2026-04-10</td><td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td><td style="font-size:12px;">Alcaraz vs Bublik (QF)</td><td style="color:#3fb950;font-weight:700;">✓ HIT</td><td class="ev-pos">+0.250</td><td class="ev-neg">-0.287</td><td style="color:#3fb950;">66.7%</td></tr>
+        <tr style="background:rgba(46,160,67,.06);"><td>#10</td><td>2026-04-11</td><td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td><td style="font-size:12px;">Alcaraz vs de Minaur (SF)</td><td style="color:#3fb950;font-weight:700;">✓ HIT</td><td class="ev-pos">+0.500</td><td class="ev-pos">+0.213</td><td style="color:#3fb950;">70.0%</td></tr>
+        <tr style="background:rgba(248,81,73,.04);"><td>#11</td><td>2026-04-11</td><td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td><td style="font-size:12px;">Sinner vs Zverev (SF) 🆕</td><td style="color:#f85149;font-weight:700;">✗ MISS</td><td class="ev-neg">-1.000</td><td class="ev-neg">-0.787</td><td style="color:#e3b341;">63.6%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<!-- ===== ルール変更履歴 ===== -->
+<div class="tab-content" id="content-rules">
+  <div class="section-title">ルール変更履歴 — 予測→結果→修正のサイクル</div>
+  <div class="section"><div class="rules-list">
+
+    <div class="rule-entry" style="border-color:#86efac60;">
+      <div class="rule-header">
+        <span style="color:#86efac;">🏉 NRL</span>
+        <span class="rule-ver-badge">v1.0 → <strong>v1.1</strong>（R011追加）</span>
+        <span class="rule-date">2026-04-11</span>
+      </div>
+      <div class="rule-trigger">📌 トリガー: U005 R6 Rabbitohs vs Raiders MISS。78%信頼度付与 → Raiders 30-22逆転勝利。</div>
+      <ul class="rule-changes">
+        <li><strong>R011新設: 崖っぷちチーム補正（Desperate Team Effect）</strong></li>
+        <li>条件: 格下チームが直近2勝以下 ＋ ラダー下位4位以内 ＋ L1差10〜15pt。本命側の信頼度から<strong>-5%</strong>差し引く。</li>
+        <li>根拠: 1-4のRaidersは背水の陣でモチベーション上乗せ。統計的実力差は考慮したが、この要因を未計上。</li>
+        <li>例外: 5連敗超かつ残留争いなし（消化試合モード）→ 逆に-3%。</li>
+        <li><strong>R012新設: 早期シーズン小サンプル補正（R3-R8）</strong></li>
+        <li>R3-R8（試合数≤8）はL1閾値を <strong>6pt → 12pt に引き上げ</strong>。全試合SKIPではなく、ノイズを吸収できるほど差が大きい試合のみ通過させる。Round 9以降から通常閾値（6pt）に戻す。</li>
+      </ul>
+      <div class="rule-result">🎯 <strong>impact:</strong> 崖っぷちチームへの過信防止（R011） ＋ 小サンプル期の高閾値フィルター（R012）。大差なら早期ラウンドでも分析継続可。</div>
+    </div>
+
+    <div class="rule-entry">
+      <div class="rule-header">
+        <span style="color:#fca5a5;">🏀 NBA バスケットボール</span>
+        <span class="rule-ver-badge">新規 → <strong>v1.0</strong></span>
+        <span class="rule-date">2026-04-11</span>
+      </div>
+      <div class="rule-trigger">📌 トリガー: NBA新規追加。統計ソース実地調査後に作成。</div>
+      <ul class="rule-changes">
+        <li>L1指標: Net Rating差（NRtg = ORtg - DRtg）≥5pt / 100possession → basketball-reference.com</li>
+        <li>L2: 直近15試合NRtgトレンド + 対戦相手品質スコア（±12%）</li>
+        <li>L3: Four Factors補正（eFG%40% / TOV%25% / ORB%20% / FTr15%）± 上限8%</li>
+        <li>L4: スター欠場（-15〜-20%）・B2B（-4〜-8%）・ロードマネジメント・高地補正（デンバー+2%）</li>
+        <li>B008: NBA公式傷病リスト義務提出（前日5pm EST / 当日11am-1pm EST）→ GO判断の前提条件</li>
+        <li>B009: 3P%平均回帰チェック（直近5試合±5%以上で±2〜3%調整）</li>
+        <li>B011: シーズン序盤（〜20試合）は差7pt以上でないとL1通過させない</li>
+      </ul>
+      <div class="rule-result">データソース確認済み: basketball-reference / nba.com/stats / rotowire（傷病） / teamrankings（B2B）</div>
+      <div class="rule-note">💡 NBAはゴーリー確認問題（AHL除外の主因）と同等の課題がなく、公式義務制度でB008を解決。AHLと違い対象化の障壁なし。</div>
+    </div>
+
+    <div class="rule-entry">
+      <div class="rule-header">
+        <span style="color:#79c0ff;">🎾 ATP Tennis — ドロー構造修正</span>
+        <span class="rule-ver-badge">v2.0 → <strong>v2.0（修正）</strong></span>
+        <span class="rule-date">2026-04-10</span>
+      </div>
+      <div class="rule-trigger">📌 トリガー: MC2026 QF全3/3 HIT → ESPNスコアボードでSF組み合わせを確認・ドロー訂正</div>
+      <ul class="rule-changes">
+        <li>【訂正】初回draw_structureのハーフ区分が誤り（Zverevをhalf1_alcarazに誤分類）</li>
+        <li>正しいハーフ：[half1] Alcaraz + de Minaur | [half2] Sinner + Zverev</li>
+        <li>SF1予測: Alcaraz vs de Minaur → GO（信頼度83%、EV+24.5%）</li>
+        <li>SF2予測: Sinner vs Zverev → GO（信頼度77%、EV+27.1%）</li>
+      </ul>
+      <div class="rule-result">QF成績: <span style="color:#3fb950;">3/3 HIT (100%)</span> — Alcaraz 6-1 6-3 / Sinner 6-3 6-4 / Zverev 4-6 6-4 7-5</div>
+      <div class="rule-note">💡 ドロー確認をESPN/公式ソースで行う運用を確立。Alcarazはディフェンディングチャンピオンとして圧倒的QFパフォーマンス。</div>
+    </div>
+
+    <div class="rule-entry">
+      <div class="rule-header">
+        <span style="color:#c4b5fd;">🏉 Super Rugby Pacific</span>
+        <span class="rule-ver-badge">None → <strong>v1.0</strong></span>
+        <span class="rule-date">2026-04-10</span>
+      </div>
+      <div class="rule-trigger">📌 トリガー: Super Rugby Pacific新規追加（ラグビーユニオン）</div>
+      <ul class="rule-changes">
+        <li>L1基準: PD/G差 ≥ 7pt（ユニオン1トライ＋ゴール基準）</li>
+        <li>S004: Fijian Drua地元Fiji HOME+8%（難攻不落の地）</li>
+        <li>S005: NZ→太平洋諸島の移動 -6%（長距離＋気候）</li>
+        <li>S006: SH(#9)/FH(#10)欠場 -7%（司令塔）</li>
+        <li>S009: NZチーム対AUSチームの歴史的優位 +1%（微小）</li>
+      </ul>
+      <div class="rule-result">変更前: <span style="color:#f85149;">未運用</span> → 変更後: <span style="color:#3fb950;">Round 9 初回スクリーニング完了</span></div>
+      <div class="rule-note">💡 Reds vs CrusadersはL1・H2H両方でシグナル強。ラインナップ確認後GO判断予定（EV+15.5%）</div>
+    </div>
+
+    <div class="rule-entry">
+      <div class="rule-header">
+        <span style="color:#f9a8d4;">🎾 WTA Tennis</span>
+        <span class="rule-ver-badge">None → <strong>v1.0</strong></span>
+        <span class="rule-date">2026-04-10</span>
+      </div>
+      <div class="rule-trigger">📌 トリガー: WTA新規追加（ATPと別管理）</div>
+      <ul class="rule-changes">
+        <li>L1指標: Tennis Abstract WTA cElo（ATPと同ソース・Women's tab）</li>
+        <li>W001: cElo閾値80（ATP100より低く設定。WTAのcEloはより精度高い）</li>
+        <li>W004: 怪我不明時 -3%デフォルト（WTAは棄権リスクが高い）</li>
+        <li>W007: 表面特化補正 ±8%（WTAはATPより表面専門化が顕著）</li>
+      </ul>
+      <div class="rule-result">変更前: <span style="color:#f85149;">未運用</span> → 変更後: <span style="color:#3fb950;">Stuttgart開幕 4/13 待ち</span></div>
+      <div class="rule-note">💡 Sabalenka欠場（怪我）でRybakina(1)・Swiatek(2)・Gauff(3)が上位シード。ドロー確認次第スクリーニング開始。</div>
+    </div>
+
+    <div class="rule-entry">
+      <div class="rule-header">
+        <span style="color:#fca5a5;">🏈 NFL</span>
+        <span class="rule-ver-badge">None → <strong>v1.0</strong></span>
+        <span class="rule-date">2026-04-10</span>
+      </div>
+      <div class="rule-trigger">📌 トリガー: NFL新規追加（プレシーズン・2026年9月開幕）</div>
+      <ul class="rule-changes">
+        <li>L1指標: DVOA（Football Outsiders）— 業界最高精度</li>
+        <li>F001: DVOA閾値差10%以上（対戦相手強度補正済み）</li>
+        <li>F005: QB評価 ±8-18%（NFL最重要ポジション）</li>
+        <li>F007: 天候補正（強風50km/h以上でパス系 -5%）</li>
+        <li>F008: バイウィーク明け +4%（NFLではデータが豊富）</li>
+      </ul>
+      <div class="rule-result">変更前: <span style="color:#f85149;">未運用</span> → 変更後: <span style="color:#38bdf8;">プレシーズン待機（9月開幕）</span></div>
+    </div>
+
+    <div class="rule-entry">
+      <div class="rule-header">
+        <span style="color:#fca5a5;">🏈 CFL</span>
+        <span class="rule-ver-badge">None → <strong>v1.0</strong></span>
+        <span class="rule-date">2026-04-10</span>
+      </div>
+      <div class="rule-trigger">📌 トリガー: CFL新規追加（プレシーズン・2026年6月開幕）</div>
+      <ul class="rule-changes">
+        <li>L1指標: 得失点差/試合（差5点以上）</li>
+        <li>C004: Saskatchewan HOME +6%（リーグ最高のファン熱狂度）</li>
+        <li>C007: 東西移動補正 -2〜-3%（地理的距離が大きい）</li>
+        <li>C006: 天候補正（カナダの晩秋：降雪・極寒 -3〜-5%）</li>
+      </ul>
+      <div class="rule-result">変更前: <span style="color:#f85149;">未運用</span> → 変更後: <span style="color:#38bdf8;">プレシーズン待機（6月開幕）</span></div>
+    </div>
+
+    <div class="rule-entry">
+      <div class="rule-header">
+        <span style="color:#fca5a5;">🏈 UFL</span>
+        <span class="rule-ver-badge">None → <strong>v1.0</strong></span>
+        <span class="rule-date">2026-04-10</span>
+      </div>
+      <div class="rule-trigger">📌 トリガー: UFL新規追加</div>
+      <ul class="rule-changes">
+        <li>L1基準: PD/G差 ≥ 4pt</li>
+        <li>U004: ホーム+4%</li>
+        <li>U005: QB先発確認必須</li>
+        <li>U008: Week3-4は確信度80%閾値（サンプル数不足保護）</li>
+      </ul>
+      <div class="rule-result">変更前: <span style="color:#f85149;">未運用</span> → 変更後: <span style="color:#3fb950;">初戦待ち (4/13 Dallas vs Columbus)</span></div>
+      <div class="rule-note">💡 Week1-2データが少ないためWeek3-4は保守的閾値。シーズン後半で閾値を75%に戻す予定</div>
+    </div>
+
+    <div class="rule-entry">
+      <div class="rule-header">
+        <span style="color:#86efac;">🏉 NRL</span>
+        <span class="rule-ver-badge">None → <strong>v1.0</strong></span>
+        <span class="rule-date">2026-04-10</span>
+      </div>
+      <div class="rule-trigger">📌 トリガー: NRL新規追加</div>
+      <ul class="rule-changes">
+        <li>L1基準: PD/G差 ≥ 6pt</li>
+        <li>R001: ホーム+5%</li>
+        <li>R004: 中立地ではホームアドバンテージなし</li>
+        <li>R006: チームリスト確認(木曜20:00 AEST以降)</li>
+        <li>R007: SOO週は閾値85%に引き上げ</li>
+      </ul>
+      <div class="rule-result">変更前: <span style="color:#f85149;">未運用</span> → 変更後: <span style="color:#3fb950;">初戦待ち (4/11 Rabbitohs vs Raiders)</span></div>
+      <div class="rule-note">💡 Sharks vs Roostersは市場とL1が乖離。市場乖離の原因調査が課題。</div>
+    </div>
+
+    <div class="rule-entry">
+      <div class="rule-header">
+        <span style="color:#a5f3fc;">🏒 NHL</span>
+        <span class="rule-ver-badge">v1.0 → <strong>v1.2</strong></span>
+        <span class="rule-date">2026-04-09</span>
+      </div>
+      <div class="rule-trigger">📌 トリガー: 初回運用、xGF%ソースの切替</div>
+      <ul class="rule-changes">
+        <li>L1メトリクス変更: GF%→xGF%(MoneyPuck)に統一</li>
+        <li>N008追加: 消化試合確定チームへの+3%補正</li>
+        <li>N013追加: Presidents'Trophy確定チームへの+2%補正</li>
+        <li>N014追加: MacKinnon等スター不在時のリスク警告</li>
+      </ul>
+      <div class="rule-result">変更前: <span style="color:#f85149;">v1.0: 未運用</span> → 変更後: <span style="color:#3fb950;">初戦: COL vs CGY → 1/1 (100%)</span></div>
+      <div class="rule-note">💡 xGF%を使った場合にPIT@NJがGO候補だったがxGF%では差0.4ptで完全SKIP。xGF%の優位性が実証された</div>
+    </div>
+
+    <div class="rule-entry">
+      <div class="rule-header">
+        <span style="color:#79c0ff;">🎾 ATP Tennis</span>
+        <span class="rule-ver-badge">v1.0 → <strong>v2.0</strong></span>
+        <span class="rule-date">2026-04-05</span>
+      </div>
+      <div class="rule-trigger">📌 トリガー: MC2026 R32 で2連敗</div>
+      <ul class="rule-changes">
+        <li>R008追加: クレー嫌い著名選手（Medvedev等）は初クレー補正-12%以上</li>
+        <li>R009追加: ホームコートWC・棄権受けWCは+2%</li>
+        <li>R010修正: 信頼度75%未満は完全除外（caution廃止）</li>
+        <li>R011追加: 攻撃型サービス選手はcElo差150超でも警戒維持</li>
+        <li>R013追加: PR選手の直近不調はcElo主軸で評価</li>
+      </ul>
+      <div class="rule-result">変更前: <span style="color:#f85149;">R32: 1/5 (20%)</span> → 変更後: <span style="color:#3fb950;">R16: 1/2 (50%) → QF: 2/2確定 (100%)</span></div>
+      <div class="rule-note">💡 Medvedev(L4ミス)・Cerundolo(L2ミス)の2敗から学習。WCの精神的優位とホームコートを過小評価していた。</div>
+    </div>
+
+  </div></div>
+</div>
+
+<!-- ===== アップセット分析 ===== -->
+<div class="tab-content" id="content-upset">
+
+  <!-- 3段階フレームワーク -->
+  <div class="section">
+    <div class="section-title">予測システム 3段階フレームワーク</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:8px;">
+      <div style="background:var(--surface);border:2px solid #58a6ff;border-radius:10px;padding:16px;">
+        <div style="font-size:11px;font-weight:700;color:#58a6ff;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">▶ 第一段階（現在）</div>
+        <div style="font-size:14px;font-weight:700;margin-bottom:6px;">強い側が確実に勝つことを読み取る</div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.7;">cElo・xGF%・PDなどの強さ指標で優位側を特定し、確信度≥75%でGO推奨。外れた場合も要因を蓄積してルール改善へ。</div>
+        <div style="margin-top:10px;font-size:11px;background:#0c2d4e;border:1px solid #1f6feb;border-radius:4px;padding:6px 8px;color:#79c0ff;">現在の的中率: 63.6% (7/11)</div>
+      </div>
+      <div style="background:var(--surface);border:2px solid var(--border);border-radius:10px;padding:16px;opacity:.7;">
+        <div style="font-size:11px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">◎ 第二段階（次）</div>
+        <div style="font-size:14px;font-weight:700;margin-bottom:6px;">逆転する可能性を想定する</div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.7;">アンダードッグが勝つ条件パターン（UF分類）を蓄積・分析。特殊条件が揃う場合はGAMBLE_BETとして別枠で追跡。</div>
+        <div style="margin-top:10px;font-size:11px;background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:6px 8px;color:var(--text2);">データ蓄積中（4件記録済）</div>
+      </div>
+      <div style="background:var(--surface);border:2px solid var(--border);border-radius:10px;padding:16px;opacity:.5;">
+        <div style="font-size:11px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">◇ 第三段階（将来）</div>
+        <div style="font-size:14px;font-weight:700;margin-bottom:6px;">勝者を正しく予測する</div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.7;">第一・第二段階の知見を統合し、どちらが勝つかを精度高く予測。市場に反する逆張りも根拠をもって実行。</div>
+        <div style="margin-top:10px;font-size:11px;background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:6px 8px;color:var(--text2);">〜50試合蓄積後に着手</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- アップセット要因頻度 + キーインサイト -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px;">
+    <div class="chart-wrap" style="margin-bottom:0;">
+      <div class="chart-title">アップセット要因頻度（全種目累計）</div>
+      <div style="margin-bottom:6px;">
+        <div class="sport-bar-row" style="margin-bottom:8px;">
+          <div class="sport-bar-label" style="width:140px;font-size:12px;color:#f85149;">UF03 実力差ボーダー</div>
+          <div class="sport-bar-track"><div class="sport-bar-fill" style="width:75%;background:linear-gradient(90deg,#4a1e1e,#f85149);"></div><div class="sport-bar-val" style="color:#f85149;">3件</div></div>
+        </div>
+        <div class="sport-bar-row" style="margin-bottom:8px;">
+          <div class="sport-bar-label" style="width:140px;font-size:12px;color:#e3b341;">UF02 若手/勢い</div>
+          <div class="sport-bar-track"><div class="sport-bar-fill" style="width:50%;background:linear-gradient(90deg,#2d2100,#e3b341);"></div><div class="sport-bar-val" style="color:#e3b341;">2件</div></div>
+        </div>
+        <div class="sport-bar-row" style="margin-bottom:8px;">
+          <div class="sport-bar-label" style="width:140px;font-size:12px;color:#8b949e;">UF01 環境適性差</div>
+          <div class="sport-bar-track"><div class="sport-bar-fill" style="width:25%;background:linear-gradient(90deg,#21262d,#8b949e);"></div><div class="sport-bar-val" style="color:#8b949e;">1件</div></div>
+        </div>
+        <div class="sport-bar-row" style="margin-bottom:8px;">
+          <div class="sport-bar-label" style="width:140px;font-size:12px;color:#8b949e;">UF04 本命側消耗</div>
+          <div class="sport-bar-track"><div class="sport-bar-fill" style="width:25%;background:linear-gradient(90deg,#21262d,#8b949e);"></div><div class="sport-bar-val" style="color:#8b949e;">1件</div></div>
+        </div>
+        <div class="sport-bar-row" style="margin-bottom:8px;">
+          <div class="sport-bar-label" style="width:140px;font-size:12px;color:#8b949e;">UF05 スタイルミスマッチ</div>
+          <div class="sport-bar-track"><div class="sport-bar-fill" style="width:25%;background:linear-gradient(90deg,#21262d,#8b949e);"></div><div class="sport-bar-val" style="color:#8b949e;">1件</div></div>
+        </div>
+        <div class="sport-bar-row">
+          <div class="sport-bar-label" style="width:140px;font-size:12px;color:#8b949e;">UF09 市場バイアス</div>
+          <div class="sport-bar-track"><div class="sport-bar-fill" style="width:25%;background:linear-gradient(90deg,#21262d,#8b949e);"></div><div class="sport-bar-val" style="color:#8b949e;">1件</div></div>
+        </div>
+      </div>
+      <div style="font-size:10px;color:var(--text2);margin-top:8px;">※ テニスATP 4件のみ。他種目は結果蓄積中</div>
+    </div>
+
+    <div class="chart-wrap" style="margin-bottom:0;display:flex;flex-direction:column;gap:10px;">
+      <div class="chart-title">キーインサイト（現時点）</div>
+      <div style="background:#2d1014;border:1px solid #f8514940;border-radius:8px;padding:12px;">
+        <div style="font-size:11px;font-weight:700;color:#f85149;margin-bottom:4px;">⚠ 最重要課題</div>
+        <div style="font-size:12px;line-height:1.7;">実力差がボーダーラインの試合（テニスcElo差＜130pt）で<strong>4件中3件MISS</strong>。現行のL1閾値が甘く、GO対象外にすべきケースを通過させている。</div>
+      </div>
+      <div style="background:#0f2c1a;border:1px solid #23863640;border-radius:8px;padding:12px;">
+        <div style="font-size:11px;font-weight:700;color:#3fb950;margin-bottom:4px;">✓ 有効なパターン</div>
+        <div style="font-size:12px;line-height:1.7;">実力差が大きい試合（差≥200pt）では外部要因が重ならない限り本命が勝つ傾向。強さ指標の絶対差が信頼できるゾーンの特定が第一優先。</div>
+      </div>
+      <div style="background:#1a2640;border:1px solid #1f6feb40;border-radius:8px;padding:12px;">
+        <div style="font-size:11px;font-weight:700;color:#58a6ff;margin-bottom:4px;">📋 GAMBLE_BET枠（未発動）</div>
+        <div style="font-size:12px;line-height:1.7;">条件：実力差ボーダー＋UF2つ以上＋高オッズ。現在記録0件。第二段階で本格稼働予定。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 確認済みアップセット記録 -->
+  <div class="section">
+    <div class="section-title">確認済みアップセット記録</div>
+    <div style="display:flex;flex-direction:column;gap:12px;">
+
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap;">
+          <span style="font-size:11px;font-weight:700;color:var(--text2);">U001</span>
+          <span style="font-size:11px;color:var(--text2);">2026-04-05 | 🎾 ATP Tennis | MC2026 R32</span>
+          <span style="margin-left:auto;font-size:11px;background:#2d1014;color:#f85149;border:1px solid #f8514950;border-radius:4px;padding:1px 7px;">L4 MISS</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;">
+          <div>
+            <div style="font-size:11px;color:var(--text2);">本命（GO推奨）</div>
+            <div style="font-size:14px;font-weight:700;color:#f85149;">Medvedev D.(7)</div>
+          </div>
+          <div>
+            <div style="font-size:11px;color:var(--text2);">実際の勝者（アンダードッグ）</div>
+            <div style="font-size:14px;font-weight:700;color:#3fb950;">Berrettini M.(WC) &nbsp;<span style="font-size:12px;font-weight:400;">6-0 6-0</span></div>
+          </div>
+        </div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;">
+          <span style="font-size:11px;background:#4a1e1e;color:#f85149;border:1px solid #f8514950;border-radius:4px;padding:2px 8px;">UF01 環境適性差</span>
+          <span style="font-size:11px;background:#4a1e1e;color:#f85149;border:1px solid #f8514950;border-radius:4px;padding:2px 8px;">UF09 市場バイアス</span>
+        </div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.6;">Medvedevのクレー嫌いをL4で評価しきれなかった。cElo差200ptあっても表面適性が逆転。→ <strong style="color:var(--text);">R008として規則化済み</strong></div>
+      </div>
+
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap;">
+          <span style="font-size:11px;font-weight:700;color:var(--text2);">U002</span>
+          <span style="font-size:11px;color:var(--text2);">2026-04-05 | 🎾 ATP Tennis | MC2026 R32</span>
+          <span style="margin-left:auto;font-size:11px;background:#2d1014;color:#f85149;border:1px solid #f8514950;border-radius:4px;padding:1px 7px;">L2 MISS</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;">
+          <div>
+            <div style="font-size:11px;color:var(--text2);">本命（GO推奨）</div>
+            <div style="font-size:14px;font-weight:700;color:#f85149;">Cerundolo F.(16)</div>
+          </div>
+          <div>
+            <div style="font-size:11px;color:var(--text2);">実際の勝者（アンダードッグ）</div>
+            <div style="font-size:14px;font-weight:700;color:#3fb950;">Machac T. &nbsp;<span style="font-size:12px;font-weight:400;">7-6 6-2</span></div>
+          </div>
+        </div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;">
+          <span style="font-size:11px;background:#4a1e1e;color:#f85149;border:1px solid #f8514950;border-radius:4px;padding:2px 8px;">UF03 実力差ボーダー(130pt)</span>
+          <span style="font-size:11px;background:#4a1e1e;color:#f85149;border:1px solid #f8514950;border-radius:4px;padding:2px 8px;">UF05 スタイルミスマッチ</span>
+        </div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.6;">cElo差130ptのボーダーケース。Machacのアグレッシブサーブがクレーベースライナーを崩壊。→ <strong style="color:var(--text);">R011として規則化済み</strong></div>
+      </div>
+
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap;">
+          <span style="font-size:11px;font-weight:700;color:var(--text2);">U003</span>
+          <span style="font-size:11px;color:var(--text2);">2026-04-05 | 🎾 ATP Tennis | MC2026 R16</span>
+          <span style="margin-left:auto;font-size:11px;background:#2d1014;color:#f85149;border:1px solid #f8514950;border-radius:4px;padding:1px 7px;">L4 MISS</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;">
+          <div>
+            <div style="font-size:11px;color:var(--text2);">本命（GO推奨）</div>
+            <div style="font-size:14px;font-weight:700;color:#f85149;">Berrettini M.(WC)</div>
+          </div>
+          <div>
+            <div style="font-size:11px;color:var(--text2);">実際の勝者（アンダードッグ）</div>
+            <div style="font-size:14px;font-weight:700;color:#3fb950;">Fonseca J.(19歳) &nbsp;<span style="font-size:12px;font-weight:400;">6-3 6-2</span></div>
+          </div>
+        </div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;">
+          <span style="font-size:11px;background:#4a1e1e;color:#f85149;border:1px solid #f8514950;border-radius:4px;padding:2px 8px;">UF03 実力差ボーダー(40pt)</span>
+          <span style="font-size:11px;background:#4a1e1e;color:#f85149;border:1px solid #f8514950;border-radius:4px;padding:2px 8px;">UF02 若手/ホットストリーク</span>
+        </div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.6;">cElo差40ptは実質同格。19歳Fonsecaの今大会の勢いが市場に未反映。→ <strong style="color:#e3b341;">ルール候補：cElo差＜80pt＋若手上昇中はGO見送り</strong></div>
+      </div>
+
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap;">
+          <span style="font-size:11px;font-weight:700;color:var(--text2);">U004</span>
+          <span style="font-size:11px;color:var(--text2);">2026-04-11 | 🎾 ATP Tennis | MC2026 SF 🆕</span>
+          <span style="margin-left:auto;font-size:11px;background:#2d1014;color:#f85149;border:1px solid #f8514950;border-radius:4px;padding:1px 7px;">L1 MISS</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;">
+          <div>
+            <div style="font-size:11px;color:var(--text2);">本命（GO推奨）</div>
+            <div style="font-size:14px;font-weight:700;color:#f85149;">Sinner J.(2)</div>
+          </div>
+          <div>
+            <div style="font-size:11px;color:var(--text2);">実際の勝者（アンダードッグ）</div>
+            <div style="font-size:14px;font-weight:700;color:#3fb950;">Zverev A.(3) &nbsp;<span style="font-size:12px;font-weight:400;">4-6 6-4 7-5</span></div>
+          </div>
+        </div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;">
+          <span style="font-size:11px;background:#4a1e1e;color:#f85149;border:1px solid #f8514950;border-radius:4px;padding:2px 8px;">UF03 実力差ボーダー(110pt)</span>
+          <span style="font-size:11px;background:#4a1e1e;color:#f85149;border:1px solid #f8514950;border-radius:4px;padding:2px 8px;">UF04 本命側消耗予測が逆効果</span>
+        </div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.6;">cElo差110ptがボーダー。QF消耗を本命側（Zverev）の弱点と予測したが、逆に覚醒トリガーになった可能性。→ <strong style="color:#e3b341;">ルール候補：cElo差＜130ptはGO→CAUTION格下げ</strong></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ルール改善候補 + GAMBLE_BET定義 -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+    <div class="chart-wrap" style="margin-bottom:0;">
+      <div class="chart-title">ルール改善候補（証拠蓄積中）</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="background:var(--surface2);border-radius:8px;padding:12px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span style="font-size:10px;background:#2d1014;color:#f85149;border:1px solid #f8514950;border-radius:3px;padding:1px 6px;">優先度：高</span>
+            <span style="font-size:12px;font-weight:700;">🎾 R001 閾値強化</span>
+          </div>
+          <div style="font-size:11px;color:var(--text2);line-height:1.7;">現行: cElo差≥80ptでL1通過<br>→ 提案: <strong style="color:var(--text);">差＜130pt → CAUTION / 差＜80pt → SKIP</strong><br>根拠: U002(130pt)・U004(110pt)・U003(40pt) 3件MISS</div>
+        </div>
+        <div style="background:var(--surface2);border-radius:8px;padding:12px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span style="font-size:10px;background:#2d2100;color:#e3b341;border:1px solid #d2992240;border-radius:3px;padding:1px 6px;">優先度：中</span>
+            <span style="font-size:12px;font-weight:700;">🎾 若手ホットストリーク警戒</span>
+          </div>
+          <div style="font-size:11px;color:var(--text2);line-height:1.7;">提案: 25歳以下が今大会で上位シードを連続撃破中の場合 → CAUTION<br>根拠: U003(Fonseca 19歳)</div>
+        </div>
+        <div style="background:var(--surface2);border-radius:8px;padding:12px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span style="font-size:10px;background:#0c2d4e;color:#58a6ff;border:1px solid #1f6feb40;border-radius:3px;padding:1px 6px;">優先度：中</span>
+            <span style="font-size:12px;font-weight:700;">🏒 NHL UFH01・UFH02 追加</span>
+          </div>
+          <div style="font-size:11px;color:var(--text2);line-height:1.7;">提案: バックトゥバック・ホットゴーリーチェックをL4に追加<br>根拠: データ蓄積中</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chart-wrap" style="margin-bottom:0;">
+      <div class="chart-title">GAMBLE_BET枠（別stake管理）</div>
+      <div style="background:#1a2640;border:1px solid #1f6feb40;border-radius:8px;padding:12px;margin-bottom:10px;">
+        <div style="font-size:11px;font-weight:700;color:#58a6ff;margin-bottom:8px;">発動条件（共通）</div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.8;">① 実力差ボーダーゾーン（UF03該当）<br>② アップセット要因 2つ以上重複<br>③ アンダードッグオッズが高い</div>
+      </div>
+      <div style="font-size:11px;font-weight:600;color:var(--text2);margin-bottom:8px;">種目別オッズ閾値</div>
+      <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:12px;font-size:12px;">
+        <div style="display:flex;justify-content:space-between;padding:5px 8px;background:var(--surface2);border-radius:4px;"><span>🎾 Tennis</span><span style="color:#e3b341;">cElo差 50〜130pt ＋ オッズ≥2.50</span></div>
+        <div style="display:flex;justify-content:space-between;padding:5px 8px;background:var(--surface2);border-radius:4px;"><span>🏒 NHL</span><span style="color:#e3b341;">xGF%差＜5pt ＋ オッズ≥3.00</span></div>
+        <div style="display:flex;justify-content:space-between;padding:5px 8px;background:var(--surface2);border-radius:4px;"><span>🏉 NRL</span><span style="color:#e3b341;">PD差＜10 ＋ オッズ≥3.00</span></div>
+        <div style="display:flex;justify-content:space-between;padding:5px 8px;background:var(--surface2);border-radius:4px;"><span>🏉 Super Rugby</span><span style="color:#e3b341;">PD差＜12 ＋ オッズ≥3.00</span></div>
+        <div style="display:flex;justify-content:space-between;padding:5px 8px;background:var(--surface2);border-radius:4px;"><span>🏈 UFL</span><span style="color:#e3b341;">PD差＜15 ＋ オッズ≥3.00</span></div>
+      </div>
+      <div style="background:#0f2c1a;border:1px solid #23863640;border-radius:6px;padding:10px;font-size:11px;color:#3fb950;">
+        ✓ 現在 0件（未発動）<br>通常stakeの1/3以下で管理。GOとは完全に分けて記録。
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ===== 除外リーグ ===== -->
+<div class="tab-content" id="content-excluded">
+  <div class="section-title">分析対象外リーグ — 除外理由記録</div>
+  <div class="section">
+    <p style="font-size:12px;color:var(--text2);margin-bottom:20px;">
+      以下のリーグはオッズが存在するが、分析フレームワークの前提条件を満たせないため対象外としている。<br>
+      将来対象化を検討する際の判断材料として理由を記録する。詳細は <code>core/framework.json → sports_excluded_detail</code> 参照。
+    </p>
+
+    <!-- AHL -->
+    <div style="background:var(--surface);border:1px solid var(--border);border-left:4px solid #6b7280;border-radius:10px;padding:20px;margin-bottom:16px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;">
+        <div>
+          <div style="font-size:16px;font-weight:700;">🏒 AHL（American Hockey League）</div>
+          <div style="font-size:11px;color:var(--text2);margin-top:3px;">アイスホッケー・マイナーリーグ | NHLの下部リーグ | 調査日: 2026-04-11</div>
+        </div>
+        <span style="font-size:11px;font-weight:700;background:#2d1014;color:#f85149;border:1px solid #f8514940;border-radius:6px;padding:4px 10px;white-space:nowrap;">対象外</span>
+      </div>
+
+      <div style="font-size:11px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;">除外理由（3つの構造的障壁）</div>
+
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:16px;">
+
+        <div style="background:rgba(248,81,73,.06);border:1px solid rgba(248,81,73,.2);border-radius:8px;padding:12px 14px;">
+          <div style="font-size:12px;font-weight:700;color:#f85149;margin-bottom:5px;">❌ 障壁① — L1指標（xGF%）が存在しない</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.7;">
+            NHLで使用するxGF%（Expected Goals For%）に相当するAHL対応データが存在しない。<br>
+            <strong>実地確認済みサービス：</strong>ahltracker.com / quanthockey.com/ahl / naturalstattrick.com（NHL専用）/ eliteprospects.com<br>
+            → いずれもxGF%なし。利用可能なのはGF%のみ（N001③「最終手段」扱い・<strong>-5%ペナルティ毎回発動</strong>）。
+          </div>
+        </div>
+
+        <div style="background:rgba(248,81,73,.06);border:1px solid rgba(248,81,73,.2);border-radius:8px;padding:12px 14px;">
+          <div style="font-size:12px;font-weight:700;color:#f85149;margin-bottom:5px;">❌ 障壁② — ゴーリー先発確認手段がない（N006未達）</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.7;">
+            NHLで使用するdailyfaceoff.comはNHL専用。AHL向けの一元的ゴーリー先発確認サービスが存在しない。<br>
+            代替手段は各チーム公式X（30チーム分）の個別監視のみで、標準ワークフロー化が困難。<br>
+            → <strong>N006（ゴーリー確認必須）を満たせずGO判断を出せない。</strong>
+          </div>
+        </div>
+
+        <div style="background:rgba(210,153,34,.06);border:1px solid rgba(210,153,34,.2);border-radius:8px;padding:12px 14px;">
+          <div style="font-size:12px;font-weight:700;color:#d29922;margin-bottom:5px;">⚠️ 障壁③ — ラインナップが構造的に不安定</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.7;">
+            NHLの親チームが怪我・体調等に応じて試合直前にコールアップ・センドダウンを実施。<br>
+            事前分析が試合当日に無効化されるリスクが常にあり、N012（主力欠場補正）が恒常的・予測不可能な形で発動する。
+          </div>
+        </div>
+      </div>
+
+      <div style="font-size:11px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">除外理由ではないもの（誤解防止）</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+        <span style="font-size:11px;background:#0f2c1a;color:#3fb950;border:1px solid #2ea04340;border-radius:6px;padding:3px 10px;">✅ オッズはOddsPortal等で存在する</span>
+        <span style="font-size:11px;background:#0f2c1a;color:#3fb950;border:1px solid #2ea04340;border-radius:6px;padding:3px 10px;">✅ GF/GA/PP%/PK%/PDOは取得可能</span>
+      </div>
+
+      <div style="font-size:11px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">対象化の条件（将来検討用）</div>
+      <div style="font-size:12px;color:var(--text2);line-height:1.8;background:var(--surface2);border-radius:6px;padding:10px 14px;">
+        【必須①】AHL向けxGF%モデルが公開される<br>
+        【必須②】AHLゴーリー先発を一元確認できるサービス・ワークフローを確立する<br>
+        【補足】プレーオフ期間はコールアップ制限でラインナップが安定 → 試験的稼働の選択肢あり
+      </div>
+    </div>
+
+    <!-- 未評価リーグ（将来追加候補） -->
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;opacity:.7;">
+      <div style="font-size:13px;font-weight:700;margin-bottom:8px;color:var(--text2);">未評価リーグ（除外理由未調査）</div>
+      <div style="font-size:12px;color:var(--text2);line-height:1.8;">
+        NBA・MLB・欧州サッカー・ラグビーリーグ（イングランドSuper League等）・その他マイナーリーグ等は<br>
+        現時点では調査・評価を行っていない。除外が確定しているわけではなく、単に未着手。<br>
+        追加検討時は同様の4層分析フレームワーク適用可能性（L1指標・ゴーリー確認相当・ラインナップ安定性）を調査すること。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  Sports Betting Dashboard &nbsp;|&nbsp;
+  ATP v2.0 / WTA v1.0 / NHL v1.2 / UFL v1.0 / NFL v1.0 / CFL v1.0 / NRL v1.0 / Super Rugby v1.0 / NBA v1.0 &nbsp;|&nbsp;
+  Data: tennisabstract · MoneyPuck · DailyFaceoff · basketball-reference · nba.com · OddsPortal · super.rugby · nrl.com · theufl.com · footballoutsiders
+</div>
+
+<script>
+function showTab(id) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  document.getElementById('content-' + id).classList.add('active');
+}
+</script>
+</body>
+</html>

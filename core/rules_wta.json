@@ -1,0 +1,73 @@
+{
+  "sport": "tennis_wta",
+  "version": "1.0",
+  "updated": "2026-04-10",
+  "surface_note": "現在はクレーシーズン。WTAはATPより表面特化が顕著なためサーフェス別cEloを必ず使用",
+  "screening": {
+    "L1_source": "Tennis Abstract WTA cElo (tennisabstract.com → Women's tab)",
+    "L1_threshold": 80,
+    "L1_note": "ATPより閾値を低く設定（80）。WTAはランキング変動が大きくcElo差80以上で十分なシグナル"
+  },
+  "thresholds": {
+    "recommend_go": { "confidence_min": 75, "ev_min": 5 },
+    "skip": "信頼度75%未満 または EV+5%未満"
+  },
+  "ev_formula": "(推定勝率 × オッズ) - 1",
+  "layers": {
+    "L1": "cElo差（Tennis Abstract・サーフェス別WTA専用）",
+    "L2": "直近5試合の対戦相手cEloを実測した品質スコア（±15%）",
+    "L3": "サーブ%・BP変換率・UE数から補正（±5%）",
+    "L4": "怪我・体調・H2H・モチベーション・ホームコート（±12%）"
+  },
+  "wta_vs_atp_differences": {
+    "serve_dominance": "サーブ威力はATPより低い→表面特化が結果に直結しやすい",
+    "surface_specialization": "クレー専門家とハード専門家の差がATPより大きい（cElo差を重視）",
+    "consistency": "試合中のメンタル波動がATPより大きい→ L4補正の影響が大きい",
+    "injury_wd": "棄権・途中退場リスクがATPより高い→確認できない怪我情報には-3%デフォルト加算",
+    "ranking_volatility": "ランキングがATPより変動しやすい→直近フォームをL2で重視"
+  },
+  "data_sources": {
+    "celo": "tennisabstract.com（Women's タブ → Surface cElo）",
+    "stats": "wtatennis.com / matchstat.com（WTA section）",
+    "odds": "OddsPortal / Pinnacle",
+    "draws": "wtatennis.com/tournaments"
+  },
+  "season_2026": {
+    "clay_season": "4月〜6月（Stuttgart→Madrid→Rome→Roland Garros）",
+    "current": "Stuttgart（Porsche Tennis Grand Prix）4月下旬〜"
+  },
+  "rules": [
+    {
+      "id": "W001", "type": "initial", "title": "cEloスクリーニング（WTA）",
+      "body": "Tennis AbstractのWTA cElo（サーフェス別）を一次指標。差80以上の試合のみ候補として深掘りする。ATPより低閾値なのはWTAのcEloがより精度高いシグナルを出すため。"
+    },
+    {
+      "id": "W002", "type": "initial", "title": "L2品質スコア（WTA）",
+      "body": "直近5試合の対戦相手cEloを実測確認。WTAは強豪相手への勝利が特に重要（番狂わせが多いため）。"
+    },
+    {
+      "id": "W003", "type": "initial", "title": "L3スタッツ補正（WTA）",
+      "body": "BP変換率差（5%以上）: ±4%。UE数/試合差: 差5以上で-3%（UE多い側）。1stサーブ確率差: 差10%以上で±3%。"
+    },
+    {
+      "id": "W004", "type": "initial", "title": "L4外部要因補正（WTA）",
+      "body": "ホームコート・地元大会: +2%。怪我不明（確認できない場合）: -3%デフォルト。初クレー試合: -3%（WTAはATPより表面適応時間が必要）。3日連続試合: -4%（WTAは体力消耗が結果に出やすい）。"
+    },
+    {
+      "id": "W005", "type": "initial", "title": "推奨基準（WTA）",
+      "body": "信頼度≥75% AND EV>+5%の両方を満たす場合のみ推奨（go）とする。ATPと同じ基準を適用。"
+    },
+    {
+      "id": "W006", "type": "initial", "title": "信頼度75%未満は完全除外",
+      "body": "ATPのR010と同様。WTAは波乱が多いため信頼度75%未満の試合は推奨・要検討から完全除外。"
+    },
+    {
+      "id": "W007", "type": "initial", "title": "表面特化補正（WTA専用）",
+      "body": "WTAはATPより表面特化が顕著。クレー専門家（WTA Top30のクレーcEloがハードより150以上高い選手）が初ハードに出る場合は-8%。逆にハード専門家の初クレーは-8%。ATPのR008より強めの補正。"
+    },
+    {
+      "id": "W008", "type": "initial", "title": "ランキング外選手（WC/LL）の評価",
+      "body": "WCでも地元大会の場合は+2%（ATPのR009と同様）。ただしWTAのWCは力量差が大きい場合があるため、cElo確認を必須とする。LLは棄権枠のため体調リスクを-2%加算。"
+    }
+  ]
+}

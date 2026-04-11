@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:en.wikipedia.org)",
+      "WebFetch(domain:www.atptour.com)",
+      "WebFetch(domain:tennisuptodate.com)",
+      "WebFetch(domain:www.olympics.com)",
+      "WebFetch(domain:tennistonic.com)",
+      "WebFetch(domain:www.nextgenatpfinals.com)",
+      "WebFetch(domain:www.polsatsport.pl)",
+      "WebFetch(domain:www.flashscore.com)",
+      "WebFetch(domain:www.tennisexplorer.com)",
+      "WebFetch(domain:www.espn.com)",
+      "WebFetch(domain:tennistourcalendar.com)",
+      "WebFetch(domain:montecarlotennismasters.com)",
+      "WebFetch(domain:scores24.live)",
+      "WebFetch(domain:www.tennisabstract.com)",
+      "WebFetch(domain:www.tennisnerd.net)",
+      "WebFetch(domain:www.crushrushnews.com)",
+      "WebFetch(domain:tenngrand.com)",
+      "WebFetch(domain:lastwordonsports.com)",
+      "WebFetch(domain:www.perfect-tennis.com)",
+      "WebFetch(domain:www.tennisratio.com)",
+      "WebFetch(domain:britwatchsports.com)",
+      "WebFetch(domain:polymarket.com)",
+      "WebFetch(domain:moneypuck.com)",
+      "WebFetch(domain:www.naturalstattrick.com)",
+      "WebFetch(domain:www.quanthockey.com)",
+      "WebFetch(domain:www.rnz.co.nz)"
+    ]
+  }
+}

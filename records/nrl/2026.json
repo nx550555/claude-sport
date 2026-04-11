@@ -1,0 +1,75 @@
+{
+  "sport": "nrl",
+  "season": "2026",
+  "bet_type": "Head-to-Head (H2H)",
+  "rule_version": "v1.0",
+  "started": "2026-04-10",
+  "summary": {
+    "total": 1,
+    "hit": 0,
+    "hit_rate": 0.0,
+    "ev_total": -1.0
+  },
+  "games": [
+    {
+      "date": "2026-04-11",
+      "match": "South Sydney Rabbitohs vs Canberra Raiders",
+      "home": "South Sydney Rabbitohs",
+      "away": "Canberra Raiders",
+      "venue": "Optus Stadium, Perth (中立地)",
+      "round": 6,
+      "tier": "go",
+      "rec": "South Sydney Rabbitohs",
+      "rec_odds": 1.55,
+      "ev": 20.9,
+      "confidence": 78,
+      "l1_metric": "Points Differential/Game",
+      "l1_data": {
+        "SOU_PD_per_game": 3.5,
+        "CAN_PD_per_game": -13.8,
+        "diff": 17.3
+      },
+      "adjustments": {
+        "venue_neutral": "中立地のためホームアドバンテージなし (R004)",
+        "soo": "SOO選考なし(4月) → 補正不要 (R007)",
+        "raiders_injury": "Xavier Savage(key WC) 8週間離脱 → Raiders更に弱体化"
+      },
+      "estimated_win_pct": 78,
+      "standings": {
+        "SOU": "3-1, PD=+14 (P4, B1)",
+        "CAN": "1-4, PD=-69 (P5)"
+      },
+      "team_lists": {
+        "SOU": "Cameron Murray(C)確認済, Brandon Smith hooker復帰(プラス要因), 主力全員出場",
+        "CAN": "Xavier Savage欠場(足首8週), Jed Stuart初出場(今季), 戦力低下確認"
+      },
+      "rules_applied": ["R001", "R002", "R004", "R006", "R010"],
+      "checklist_done": true,
+      "result": "loss",
+      "score": "Rabbitohs 22 - Raiders 30",
+      "hit": false,
+      "actual_ev": -1.0,
+      "miss_layer": "L1過信（小サンプル）",
+      "miss_analysis": "Raiders 25-54（シーズン最終週の成績ではなく直前記録）が示す通り弱体だったが個別試合では勝利。PD -13.8/試合のデータはR5終了時点（5試合）の小サンプル。Raiders前半先制(Hudson Young try)、後半Weekes tryで突き放し。Rabbitohs縮小も届かず。",
+      "note": "Rabbitohs 3-1好調。Raiders 1-4で最下位争い、PD -13.8/試合。主力Savage欠場でさらに弱体。Rabbitohs側はBrandon Smith(hooker)復帰がプラス。中立地Perth開催でHAなし。【結果】Raiders逆転勝利 30-22。MISS。"
+    }
+  ],
+  "screening_log": [
+    {
+      "date": "2026-04-10",
+      "round": 6,
+      "total_games": 7,
+      "already_finished": 2,
+      "live_skip": 1,
+      "l1_passed": 1,
+      "go_recommendations": 1,
+      "skipped_after_l1": [
+        { "match": "Sharks vs Roosters", "reason": "L1差12.4ptでR001通過も信頼度65%→R010でSKIP" },
+        { "match": "Storm vs Warriors", "reason": "L1差5.2pt < 6pt閾値未達" },
+        { "match": "Eels vs Titans", "reason": "L1差0.8pt < 6pt閾値未達" },
+        { "match": "Tigers vs Knights", "reason": "L1差4.6pt < 6pt閾値未達" }
+      ],
+      "notable": "NRL Round 6初回分析。Sharks vs Roostersはオッズ逆転（Roosters優位）でL1データと市場が乖離→追加調査要。"
+    }
+  ]
+}

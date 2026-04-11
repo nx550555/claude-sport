@@ -1,0 +1,239 @@
+{
+  "description": "全8種目のアンダードッグ勝利・予測外れの要因分析。第一段階の精度向上と第二段階（逆転予測）への橋渡しデータ。",
+  "phase": 1,
+  "updated": "2026-04-11",
+
+  "framework": {
+    "phase1": "強い側が確実に勝つことを読み取る精度向上（現在）",
+    "phase2": "アンダードッグが逆転する条件パターンの特定",
+    "phase3": "勝者を正しく予測する（どちらが勝つかを当てる）"
+  },
+
+  "upset_tiers": {
+    "GO":          "通常のGO推奨（確信度≥75%、強い側を支持）",
+    "CAUTION":     "GO未満だが一応追跡（確信度60-74%）",
+    "GAMBLE_BET":  "通常基準外。アンダードッグ有利の特殊条件が揃う場合の別枠。別stake管理（通常の1/3以下推奨）"
+  },
+
+  "upset_factor_categories": {
+    "共通": {
+      "UF01": "コート・表面・環境の適性差（クレー嫌い、屋内/屋外、人工芝/天然芝 等）",
+      "UF02": "勢いのある若手・ホットストリーク（市場評価が実力に追いついていない）",
+      "UF03": "実力指標差がボーダーライン（差が小さく逆転が起きやすい）",
+      "UF04": "本命側の体力消耗・連戦疲労（前戦延長/overtime/連日試合等）",
+      "UF05": "スタイルミスマッチ（攻撃型が守備型を崩す、またはその逆）",
+      "UF06": "本命側のモチベーション低下・メンタル要因（消化試合、プレッシャー過多等）",
+      "UF07": "ホームコート/ホームゲームアドバンテージの過小評価",
+      "UF08": "怪我・体調不良・出場停止の事前未把握",
+      "UF09": "市場オッズが実力差を過大評価（名声バイアス・ランキング依存）"
+    },
+    "テニス固有": {
+      "UFT01": "H2H（直接対決）での相性が極端に悪い（クレーでのH2H等）",
+      "UFT02": "第一セット落とした後の精神的崩壊（特定選手のパターン）",
+      "UFT03": "ワイルドカード・地元選手のホームコートアドバンテージ（観客の声援）"
+    },
+    "NHL固有": {
+      "UFH01": "バックトゥバック（連日試合）でのゴーリー疲弊",
+      "UFH02": "ホットゴーリー（直近sv%が異常に高い）",
+      "UFH03": "パワープレー/ペナルティキルの当日マッチアップ",
+      "UFH04": "プレーオフレース終盤のモチベーション差（バブル外チームの諦め）"
+    },
+    "NRL固有": {
+      "UFN01": "主力FW/ハーフ欠場（スクラム・プレイメイカー）",
+      "UFN02": "中立地・長距離移動の影響",
+      "UFN03": "雨天・重いグラウンド（フィジカル系チームに有利）"
+    },
+    "SuperRugby固有": {
+      "UFR01": "国際デューティ（代表選手の疲弊・抜け）",
+      "UFR02": "フィジー・モアナパシフィカの気候適応有利",
+      "UFR03": "ラインアウト・スクラムの特殊戦略が機能した場合"
+    },
+    "UFL固有": {
+      "UFU01": "QB交代・先発変更の直前情報未反映",
+      "UFU02": "リーグ創設期のサンプル不足（各チームの実力評価が不安定）"
+    },
+    "NRL/SuperRugby共通": {
+      "UFG01": "審判・反則傾向のマッチアップ（ペナルティ数が多いチームへの不利）"
+    }
+  },
+
+  "confirmed_upsets": [
+    {
+      "id": "U001",
+      "date": "2026-04-05",
+      "sport": "tennis_atp",
+      "tournament": "MC2026",
+      "round": "R32",
+      "favorite": "Medvedev D.(7)",
+      "underdog": "Berrettini M.(WC)",
+      "strength_diff_metric": "cElo差200pt",
+      "market_odds_underdog": 3.80,
+      "result_score": "6-0 6-0",
+      "upset_factors": ["UF01", "UF09"],
+      "factor_notes": {
+        "UF01": "Medvedevはクレーを明確に苦手（後にR008として規則化）。Berrettiniはクレー得意のイタリア人",
+        "UF09": "市場はランキング(7)で評価。クレー適性を過小評価していた"
+      },
+      "our_prediction": "Medvedev（GO）",
+      "miss_layer": "L4",
+      "learning": "強さ指標差200ptあっても表面適性が逆転する場合がある",
+      "rule_created": "R008（クレー嫌い選手補正）"
+    },
+    {
+      "id": "U002",
+      "date": "2026-04-05",
+      "sport": "tennis_atp",
+      "tournament": "MC2026",
+      "round": "R32",
+      "favorite": "Cerundolo F.(16)",
+      "underdog": "Machac T.",
+      "strength_diff_metric": "cElo差130pt",
+      "market_odds_underdog": 2.60,
+      "result_score": "7-6 6-2",
+      "upset_factors": ["UF03", "UF05"],
+      "factor_notes": {
+        "UF03": "cElo差130ptはボーダーライン。実力差が小さかった",
+        "UF05": "Machacのアグレッシブサーブ・フラットがCerundoloのクレーベースラインゲームを崩壊"
+      },
+      "our_prediction": "Cerundolo（GO）",
+      "miss_layer": "L2",
+      "learning": "クレーでアグレッシブサーブ系がベースライナーを崩せる",
+      "rule_created": "R011（攻撃型サーブ注意）"
+    },
+    {
+      "id": "U003",
+      "date": "2026-04-05",
+      "sport": "tennis_atp",
+      "tournament": "MC2026",
+      "round": "R16",
+      "favorite": "Berrettini M.(WC)",
+      "underdog": "Fonseca J.",
+      "strength_diff_metric": "cElo差40pt",
+      "market_odds_underdog": 2.20,
+      "result_score": "6-3 6-2",
+      "upset_factors": ["UF02", "UF03"],
+      "factor_notes": {
+        "UF02": "Fonseca 19歳、今大会で初のMasters R16。勢いが市場に反映されていなかった",
+        "UF03": "cElo差40ptは極めて小さい。実質同格以上"
+      },
+      "our_prediction": "Berrettini（GO）",
+      "miss_layer": "L4",
+      "learning": "cElo差が50pt未満は事実上同格。若手のホットストリークは要注意",
+      "rule_created": null,
+      "rule_candidate": "cElo差<80ptの場合、若手上昇中ならGO見送り"
+    },
+    {
+      "id": "U004",
+      "date": "2026-04-11",
+      "sport": "tennis_atp",
+      "tournament": "MC2026",
+      "round": "SF",
+      "favorite": "Sinner J.(2)",
+      "underdog": "Zverev A.(3)",
+      "strength_diff_metric": "cElo差110pt",
+      "market_odds_underdog": 2.30,
+      "result_score": "4-6 6-4 7-5",
+      "upset_factors": ["UF03", "UF04"],
+      "factor_notes": {
+        "UF03": "cElo差110ptはボーダー。R001通過させたが実力差は小さかった",
+        "UF04": "ZverevはQFで3セット消耗→疲労予測したが逆に覚醒トリガーになった可能性"
+      },
+      "our_prediction": "Sinner（GO）",
+      "miss_layer": "L1",
+      "learning": "差110ptのボーダーケースでGO通過は過信。QF消耗がアンダードッグの覚醒になる場合がある",
+      "rule_candidate": "cElo差<130ptはGO→CAUTION格下げ、またはGAMBLE_BET候補（逆側）として別追跡"
+    },
+    {
+      "id": "U005",
+      "date": "2026-04-11",
+      "sport": "nrl",
+      "tournament": "NRL 2026",
+      "round": "R6",
+      "favorite": "South Sydney Rabbitohs",
+      "underdog": "Canberra Raiders",
+      "strength_diff_metric": "PD差 17.3pt/試合（Rabbitohs +3.5 / Raiders -13.8）",
+      "market_odds_underdog": 2.50,
+      "result_score": "Rabbitohs 22 - Raiders 30（Raiders 8点差勝利）",
+      "upset_factors": ["UF03_variant", "UF06_variant", "UFN_new"],
+      "factor_notes": {
+        "UF03_variant": "L1差17.3ptは大きく見えるが、サンプル5試合のPDは脆弱。Raiders総失点-69点のうち、単一試合での大量失点（アウトライヤー）が平均を-13.8まで引き下げた可能性が高い。真の実力差は5〜10pt程度かもしれない",
+        "UF06_variant": "1-4のRaidersは背水の陣状態。崖っぷちチームが高いモチベーションで全力プレーする傾向（NRL文化での『desperate team effect』）は分析で考慮されていなかった",
+        "UFN_new": "NRL小サンプル問題: R1〜R8はPD/試合の分散が大きく（6〜8試合で1〜2試合の大敗が全体平均を5〜10pt歪める）、PDベースのL1指標が過大評価になりやすい。R3〜R8の信頼度上限を70%にキャップすべきだった"
+      },
+      "our_prediction": "Rabbitohs（GO）",
+      "confidence_given": 78,
+      "confidence_post_analysis": "適正は65〜68%（小サンプル補正後）",
+      "miss_layer": "L1過信（小サンプル期PD歪み）",
+      "learning": "NRL R3〜R8はPDが5試合以下のサンプルに基づく。単一試合アウトライヤーが-5〜10pt/試合の歪みを生む。この時期の信頼度上限は70%が適切。78%まで上げるには10試合以上の実績が必要。",
+      "rule_created": "R011（崖っぷちチーム補正 -5%）、R012（早期シーズン小サンプル補正 信頼度上限70%）→ rules_nrl.json v1.1 に追記済"
+    }
+  ],
+
+  "gamble_bet_candidates": {
+    "description": "通常GOの基準外。アンダードッグに有利条件が重なる場合の別枠追跡。別stake（通常の1/3以下推奨）",
+    "trigger_conditions_common": [
+      "強さ指標差がボーダーゾーン（UF03該当）",
+      "upset_factorsが2つ以上重なる",
+      "市場オッズが各種目の閾値以上（アンダードッグへの過大評価がある）"
+    ],
+    "trigger_conditions_by_sport": {
+      "tennis_atp": "cElo差50〜130pt ＋ UF2つ以上 ＋ オッズ≥2.50",
+      "tennis_wta": "cElo差50〜130pt ＋ UF2つ以上 ＋ オッズ≥2.50",
+      "nhl":        "xGF%差<5pt ＋ UFH01 or UFH02 ＋ オッズ≥3.00",
+      "nrl":        "PD差<10 ＋ UFN01 or UFN02 ＋ オッズ≥3.00",
+      "superrugby": "PD差<12 ＋ UFR01 or UFR02 ＋ オッズ≥3.00",
+      "ufl":        "PD差<15 ＋ UFU01 ＋ オッズ≥3.00"
+    },
+    "records": []
+  },
+
+  "pattern_summary": {
+    "total_upsets_tracked": 5,
+    "sports_covered": ["tennis_atp", "nrl"],
+    "sports_pending_data": ["tennis_wta","nhl","superrugby","ufl","nfl","cfl"],
+    "upset_factor_frequency": {
+      "UF01": 1,
+      "UF02": 2,
+      "UF03": 3,
+      "UF04": 1,
+      "UF05": 1,
+      "UF09": 1,
+      "UF03_variant(NRL小サンプル)": 1,
+      "UF06_variant(desperate team)": 1
+    },
+    "most_common_factor": "UF03（実力差ボーダーライン）— 5件中3件に出現（NRL小サンプル起因含む）",
+    "key_insight_current": "実力指標差がボーダーラインの試合、またはサンプル不足で指標が信頼できない試合では他要因が結果を左右しやすい。シーズン序盤は信頼度上限のキャップが必要。"
+  },
+
+  "rule_improvement_candidates": [
+    {
+      "sport": "tennis_atp",
+      "priority": "高",
+      "current_rule": "R001: cElo差≥80ptでL1通過",
+      "proposed": "cElo差<130ptはCAUTION、差<80ptはSKIP推奨",
+      "evidence": ["U002(130pt→MISS)", "U004(110pt→MISS)", "U003(40pt→MISS)"]
+    },
+    {
+      "sport": "tennis_atp",
+      "priority": "中",
+      "current_rule": "なし",
+      "proposed": "UF02チェック追加: 若手（25歳以下）が今大会で上位シードを連続撃破中の場合はCAUTION",
+      "evidence": ["U003(Fonseca 19歳)"]
+    },
+    {
+      "sport": "nhl",
+      "priority": "中",
+      "current_rule": "xGF%差≥5ptでL1通過",
+      "proposed": "UFH01(バックトゥバック)・UFH02(ホットゴーリー)チェック追加",
+      "evidence": "データ蓄積中（結果待ち）"
+    },
+    {
+      "sport": "nrl",
+      "priority": "高",
+      "current_rule": "R001: PD差≥6pt + 信頼度75%（R1-R2のみ閾値10ptの制限あり）",
+      "proposed": "R011新設（崖っぷちチーム補正）: 下位4位以内・2勝以下チームへ-5%。R012新設（小サンプル補正）: R3-R8はL1閾値を6pt→12ptに引き上げ（全SKIPではなく、大差のみ通過させる）。",
+      "evidence": ["U005(R6 PD差17.3→MISS: Raiders 1-4背水の陣 + 5試合PDが信頼できず78%過信)"],
+      "implementation": "rules_nrl.json v1.1 にR011・R012として追記済"
+    }
+  ]
+}

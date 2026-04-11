@@ -1,0 +1,68 @@
+{
+  "sport": "ufl",
+  "season": "2026",
+  "bet_type": "Moneyline (ML)",
+  "rule_version": "v1.0",
+  "started": "2026-04-10",
+  "summary": {
+    "total": 0,
+    "hit": 0,
+    "hit_rate": null,
+    "ev_total": 0
+  },
+  "games": [
+    {
+      "date": "2026-04-13",
+      "match": "Columbus Aviators @ Dallas Renegades",
+      "home": "Dallas Renegades",
+      "away": "Columbus Aviators",
+      "week": 3,
+      "tier": "go",
+      "rec": "Dallas Renegades",
+      "rec_odds": 1.32,
+      "ev": 8.2,
+      "confidence": 82,
+      "l1_metric": "Points Differential/Game",
+      "l1_data": {
+        "DAL_PD_per_game": 17.5,
+        "COL_PD_per_game": -12.5,
+        "diff": 30.0
+      },
+      "adjustments": {
+        "DAL_home": "+4% (U004)",
+        "week3_threshold": "80%閾値適用(U008) → 82%で通過"
+      },
+      "estimated_win_pct": 82,
+      "standings": {
+        "DAL": "2-0, PF=67, PA=32",
+        "COL": "0-2, PF=42, PA=67"
+      },
+      "qb_status": {
+        "DAL": "Austin Reed 先発確認済 (7TD/2試合, 616yd)",
+        "COL": "未確認"
+      },
+      "rules_applied": ["U001", "U002", "U004", "U008"],
+      "checklist_done": true,
+      "result": null,
+      "score": null,
+      "hit": null,
+      "actual_ev": null,
+      "miss_layer": null,
+      "note": "Dallas 2-0リーグ最高得点力。Columbus 0-2で先週44-26大敗。Austin Reed QB確認済。Week3閾値80%を82%で通過。"
+    }
+  ],
+  "screening_log": [
+    {
+      "date": "2026-04-10",
+      "week": 3,
+      "total_games": 4,
+      "l1_passed": 3,
+      "go_recommendations": 1,
+      "skipped_after_l1": [
+        { "match": "Louisville vs Orlando", "reason": "Week3閾値80%に対し推定信頼度75% → U008でSKIP" },
+        { "match": "DC vs Houston", "reason": "DC 1.33オッズ、80%時EV+6.4%のみ → Week3保守判断SKIP" },
+        { "match": "St.Louis vs Birmingham", "reason": "L1差5pt弱シグナル + 市場はBirmingham優勢 → SKIP" }
+      ]
+    }
+  ]
+}

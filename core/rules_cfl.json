@@ -1,0 +1,80 @@
+{
+  "sport": "cfl",
+  "version": "1.0",
+  "updated": "2026-04-10",
+  "bet_type": "Moneyline (ML) のみ",
+  "target": "CFL レギュラーシーズン・プレーオフ（Grey Cup）全試合",
+  "season_note": "2026シーズン開幕: 2026年6月予定。現在はオフシーズン。",
+  "league_profile": {
+    "teams": 9,
+    "conferences": {
+      "east": ["Ottawa Redblacks", "Montreal Alouettes", "Toronto Argonauts", "Hamilton Tiger-Cats"],
+      "west": ["Winnipeg Blue Bombers", "Saskatchewan Roughriders", "Calgary Stampeders", "Edmonton Elks", "BC Lions"]
+    },
+    "season": "6月〜11月（レギュラーシーズン18週）+ 11月（GreyCup）",
+    "cfl_vs_nfl": "3ダウン制（NFLは4）。フィールド110ヤード（NFLは100）。シングル（ルージュ）得点あり（キック失敗で1点）。フェアキャッチなし。",
+    "note": "市場効率はNFLより低い→バリュー発見の余地あり。データはNFLより少ない。"
+  },
+  "screening": {
+    "L1_metric": "Points Differential per Game（得失点差/試合）",
+    "L1_threshold": 5,
+    "L1_note": "CFLは得点が多い（平均50点/試合超）。5点差 ≈ 約1プレーの価値差。NFLより閾値を低く設定。",
+    "L1_alt": "Yards/Play differential（攻守の1プレーあたりヤード差）が取得可能な場合は優先",
+    "critical": "先発QBの確認が必須"
+  },
+  "thresholds": {
+    "recommend_go": { "confidence_min": 75, "ev_min": 5 },
+    "skip": "信頼度75%未満 または EV+5%未満",
+    "week1_note": "Week1は実績なし→全試合SKIP推奨"
+  },
+  "ev_formula": "(推定勝率 × MLオッズ) - 1",
+  "layers": {
+    "L1": "シーズン得失点差/試合（チーム地力）",
+    "L2": "直近3試合の対戦相手レベル加重フォーム（±10%）",
+    "L3": "ターンオーバー差・レッドゾーン効率・3rd Down%（±8%）",
+    "L4": "ホームフィールド・QB評価・怪我・天候・東西移動（±12%）"
+  },
+  "data_sources": {
+    "team_stats": "https://www.cfl.ca/stats/（公式スタッツ）",
+    "advanced": "https://www.footballoutsiders.com/（CFL特集あり）",
+    "odds": "Sports Interaction / BetMGM Canada / OddsPortal",
+    "injuries": "https://www.cfl.ca/transactions/（公式トランザクション・怪我情報）",
+    "qb_status": "cfl.ca/news / rotowire"
+  },
+  "rules": [
+    {
+      "id": "C001", "type": "initial", "title": "L1スクリーニング（得失点差）",
+      "body": "シーズン累積得失点差÷試合数（Points Diff/G）を算出。差が5点以上の試合のみ候補とする。CFLは得点が多いため5点差が目安。Yards/Play差が入手可能な場合は差0.5以上を優先。Week1〜2は全試合SKIP（実績なし）。"
+    },
+    {
+      "id": "C002", "type": "initial", "title": "L2フォーム品質（直近3試合）",
+      "body": "CFLは9チームで各チームの対戦数が多い。直近3試合の対戦相手得失点差を加重評価。強豪（得失点差+8以上）相手に勝利: +5%。3連勝: +4%。3連敗: -5%。"
+    },
+    {
+      "id": "C003", "type": "initial", "title": "L3スタッツ補正",
+      "body": "① ターンオーバー差: +2差以上で+4%。② レッドゾーンTD率差（55%が境）: 差10%以上で+3%。③ 3rd Down変換率差: CFL3ダウン制はNFLより転換率が低い→差5%以上で+3%。④ サック数差: 差1.5以上で+2%。"
+    },
+    {
+      "id": "C004", "type": "initial", "title": "ホームフィールドアドバンテージ",
+      "body": "ホームチームに+4%固定補正（NFLより小さい。スタジアム規模が小さく影響が限定的）。Saskatchewan Roughriders（Mosaic Stadium）は例外→+6%（ファン熱狂度がリーグ最高）。プレーオフは+6%。Grey Cup（中立地）は0%。"
+    },
+    {
+      "id": "C005", "type": "initial", "title": "QB先発確認（最重要）",
+      "body": "CFLもQBが最重要ポジション。スターターとバックアップの差はNFLより小さい場合が多いが、確認必須。バックアップQB起用: -10〜-15%。先発QB確認はcfl.ca/newsで試合前日に確認。"
+    },
+    {
+      "id": "C006", "type": "initial", "title": "天候補正（屋外スタジアム中心）",
+      "body": "CFLはほぼ全試合が屋外（BC Place（ドーム）は例外）。晩秋（10〜11月）は気温・降雪が重大要因。強風（50km/h以上）: パスオフェンス優位チームは-5%。気温-5度以下: 寒冷地チーム（Winnipeg・Calgary・Edmonton）に+3%。降雪: 両チームに影響（得点減少→オーバーに注意）。",
+      "dome_stadiums": ["BC Place（BC Lions）"]
+    },
+    {
+      "id": "C007", "type": "initial", "title": "東西移動補正",
+      "body": "CFLは東西に大きく分かれている。東→西（3〜4時間の時差）: アウェーチームに-3%。西→東: -2%（時差が有利方向）。プレーオフでの遠征は-4%。"
+    },
+    {
+      "id": "C008", "type": "initial", "title": "ラインナップ確認チェックリスト",
+      "body": "分析前確認必須: ① 先発QB確認（cfl.ca/news）② 主力WR/RB出場可否 ③ 天候確認（屋外試合） ④ 東西移動距離。全項目確認後のみGO判断を出す。",
+      "checklist": ["先発QB確認", "怪我リスト確認", "天候確認", "東西移動確認"]
+    }
+  ]
+}

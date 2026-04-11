@@ -1,0 +1,71 @@
+{
+  "description": "ルール変更履歴 / スポーツ別正答率への影響を追跡",
+  "log": [
+    {
+      "date": "2026-04-05",
+      "sport": "tennis",
+      "version_from": "v1.0",
+      "version_to": "v2.0",
+      "trigger": "MC2026 R32 で2連敗",
+      "changes": [
+        "R008追加: WC/LL選手の格上戦は信頼度+5%補正を廃止（逆に-5%）",
+        "R009追加: ホームコートプレーヤー(仏・モナコ)に+2%補正",
+        "R011追加: フラット系アタッカーvsクレースペシャリストは信頼度-5%",
+        "R013追加: クレー未経験・初クレー大会は信頼度-7%"
+      ],
+      "result_before": "R32: 1/5 (20%)",
+      "result_after": "R16: 1/2 (50%) → 継続検証中",
+      "note": "Medvedev vs Berrettini(L4ミス), Cerundolo vs Machac(L2ミス)の2敗から学習。WCの精神的優位とホームコートを過小評価していた"
+    },
+    {
+      "date": "2026-04-09",
+      "sport": "nhl",
+      "version_from": "v1.0",
+      "version_to": "v1.2",
+      "trigger": "初回運用、xGF%ソースの切替",
+      "changes": [
+        "L1メトリクス変更: GF%→xGF%(MoneyPuck)に統一",
+        "N008追加: 消化試合確定チームへの+3%補正",
+        "N013追加: Presidents'Trophy確定チームへの+2%補正",
+        "N014追加: MacKinnon等スター不在時のリスク警告"
+      ],
+      "result_before": "v1.0: 未運用",
+      "result_after": "初戦: COL vs CGY → 1/1 (100%)",
+      "note": "xGF%を使った場合にPIT@NJがGO候補だったがxGF%では差0.4ptで完全SKIP。xGF%の優位性が実証された"
+    },
+    {
+      "date": "2026-04-10",
+      "sport": "nrl",
+      "version_from": null,
+      "version_to": "v1.0",
+      "trigger": "NRL新規追加",
+      "changes": [
+        "L1基準: PD/G差 ≥ 6pt",
+        "R001: ホーム+5%",
+        "R004: 中立地ではホームアドバンテージなし",
+        "R006: チームリスト確認(木曜20:00 AEST以降)",
+        "R007: SOO週は閾値85%に引き上げ",
+        "R010: 確信度70%未満はSKIP"
+      ],
+      "result_before": "未運用",
+      "result_after": "初戦待ち (4/11 Rabbitohs vs Raiders)",
+      "note": "初期ルール。Sharks vs Roostersは市場がRoosters優位なのにL1はSharks優位という乖離が生じた。市場乖離の原因調査が課題"
+    },
+    {
+      "date": "2026-04-10",
+      "sport": "ufl",
+      "version_from": null,
+      "version_to": "v1.0",
+      "trigger": "UFL新規追加",
+      "changes": [
+        "L1基準: PD/G差 ≥ 4pt",
+        "U004: ホーム+4%",
+        "U005: QB先発確認必須",
+        "U008: Week3-4は確信度80%閾値（サンプル数不足保護）"
+      ],
+      "result_before": "未運用",
+      "result_after": "初戦待ち (4/13 Dallas vs Columbus)",
+      "note": "Week1-2データが少ないためWeek3-4は保守的閾値。シーズン後半で閾値を75%に戻す予定"
+    }
+  ]
+}

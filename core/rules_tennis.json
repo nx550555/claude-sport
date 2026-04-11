@@ -1,0 +1,58 @@
+{
+  "sport": "tennis",
+  "version": "2.0",
+  "updated": "2026-04-09",
+  "surface_note": "現在はクレーシーズン。サーフェス変更時はcEloソースを切り替える",
+  "screening": {
+    "L1_source": "Tennis Abstract cElo (tennisabstract.com)",
+    "L1_threshold": 100
+  },
+  "thresholds": {
+    "recommend_go": { "confidence_min": 75, "ev_min": 5 },
+    "recommend_caution": { "confidence_min": 65, "ev_min": 3 },
+    "skip": {}
+  },
+  "ev_formula": "(推定勝率 × オッズ) - 1",
+  "layers": {
+    "L1": "cElo差（Tennis Abstract・サーフェス別）",
+    "L2": "直近5試合の対戦相手cEloを実測した品質スコア（±15%）",
+    "L3": "サーブ%・BP変換率・UE数から補正（±5%）",
+    "L4": "怪我・体調・H2H・モチベーション・ホームコート（±10%）"
+  },
+  "rules": [
+    { "id": "R001", "type": "initial", "title": "cEloスクリーニング",
+      "body": "Tennis AbstractのcElo（クレー専用）を一次指標。差100以上の試合のみ候補として深掘りする。" },
+    { "id": "R002", "type": "initial", "title": "L2品質スコア",
+      "body": "勝利した対戦相手の当時のcEloを実測確認してL2スコアを計算。強い相手への勝利を高評価。" },
+    { "id": "R003", "type": "initial", "title": "L3スタッツ補正",
+      "body": "直近3試合のサーブ%・BP変換率・UE数から±5%補正。" },
+    { "id": "R004", "type": "initial", "title": "L4外部要因補正",
+      "body": "怪我・体調・H2H・モチベーション等を-10%〜+8%で補正。" },
+    { "id": "R005", "type": "initial", "title": "推奨基準",
+      "body": "信頼度≥75% AND EV>+5%の両方を満たす場合のみ推奨（go）とする。" },
+    { "id": "R006", "type": "initial", "title": "要検討基準",
+      "body": "信頼度65〜74%の場合は要検討として参考表示のみ。R010により事実上廃止。" },
+    { "id": "R007", "type": "initial", "title": "初クレー選手補正",
+      "body": "今シーズン初のクレー試合となる選手には-2%補正。R008で個別上書き可。" },
+    { "id": "R008", "type": "learned", "source": "MC2026-R32",
+      "title": "クレー嫌い著名選手の初クレー補正強化",
+      "body": "Medvedev等はクレーへの心理的抵抗が公知なため初クレー補正を-12%以上に設定。R007を上書き。",
+      "evidence": "Berrettini 6-0 6-0でMedvedevを49分撃破（2026 MC R32）" },
+    { "id": "R009", "type": "learned", "source": "MC2026-R32",
+      "title": "WC・ホームコートのプラス評価",
+      "body": "WC選手の前試合棄権受け（消耗ゼロ）、または地元ホームコートのWCは+2%評価。",
+      "evidence": "BerrettiniがWC→6-0 6-0。VacherotがモナコWCでMusetti(4)撃破。" },
+    { "id": "R010", "type": "modified", "source": "MC2026-R32",
+      "title": "信頼度75%未満は完全除外",
+      "body": "信頼度70-74%の試合は推奨・要検討から完全除外。参考表示のみ。",
+      "evidence": "要検討2試合が0/2（0%）" },
+    { "id": "R011", "type": "learned", "source": "MC2026-R32",
+      "title": "攻撃型サービス選手のクレー評価補正",
+      "body": "爆発的サービス＋フラット攻撃選手はクレーでも高変数。cElo差150以上でも警戒を維持。",
+      "evidence": "Machac（cElo差153不利）がCerundolo（クレー専門家）に勝利" },
+    { "id": "R013", "type": "learned", "source": "MC2026-R32",
+      "title": "PR選手の直近不調はcElo主軸で評価",
+      "body": "PR（怪我復帰）選手の直近不調はリハビリ期間の一時的なもの。cEloを主軸として過大な下方修正を避ける。",
+      "evidence": "Hurkaczが7連敗（PR）後にDarderi・Marozsanを撃破して復調" }
+  ]
+}

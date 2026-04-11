@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ベッティング分析ダッシュボード</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:14px;background:#f5f4f0;color:#1a1a1a}
+.wrap{max-width:780px;margin:0 auto;padding:14px}
+h1{font-size:18px;font-weight:700;padding:14px 0 2px}
+.meta{font-size:11px;color:#888;margin-bottom:10px}
+.notice{font-size:11px;padding:10px 13px;background:#fff3d4;border-radius:9px;border:1px solid #e8c84a;margin-bottom:14px;line-height:1.7;color:#555}
+.notice strong{color:#7a4400}
+
+nav{display:flex;border-bottom:1.5px solid #ddd;margin-bottom:14px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+.nt{padding:9px 15px;font-size:12px;white-space:nowrap;cursor:pointer;border:none;border-bottom:2.5px solid transparent;color:#888;background:none;font-family:inherit;flex-shrink:0}
+.nt.on{color:#000;border-bottom-color:#000}
+.pn{display:none}.pn.on{display:block}
+
+.sec{font-size:10px;color:#888;letter-spacing:1.5px;margin:16px 0 8px;font-weight:700;text-transform:uppercase}
+.card{background:#fff;border-radius:12px;border:1px solid #e8e8e8;padding:13px;margin-bottom:8px}
+.card.atp  {border-left:4px solid #1D9E75}
+.card.wta  {border-left:4px solid #E85490}
+.card.nhl  {border-left:4px solid #378ADD}
+.card.ufl  {border-left:4px solid #8B0000}
+.card.nfl  {border-left:4px solid #003366}
+.card.cfl  {border-left:4px solid #CC0000}
+.card.nrl  {border-left:4px solid #1B5E20}
+.card.srp  {border-left:4px solid #7B1FA2}
+.card.warn {border-left:4px solid #e8b84a}
+
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:6px}
+.mn{font-size:13px;font-weight:700;flex:1;line-height:1.4}
+.sub{font-size:11px;color:#777;margin-top:2px}
+.badge{font-size:10px;font-weight:700;padding:3px 9px;border-radius:5px;white-space:nowrap}
+.bh {background:#d4f0e4;color:#0a6640}  /* HIT */
+.bm {background:#fde0e0;color:#8b1a1a}  /* MISS */
+.bp {background:#fff3d4;color:#7a4400}  /* PENDING */
+.bs {background:#f0f0f0;color:#555}     /* SKIP */
+.bl {background:#e8d9f5;color:#5b2d8e} /* GO */
+.bi {background:#dbeafe;color:#1e40af} /* INFO */
+.bpre{background:#e0f2fe;color:#0369a1} /* PRESEASON */
+
+.body{font-size:11px;color:#555;line-height:1.7}
+.ev-go{font-size:10px;padding:5px 8px;background:#d4f0e4;border-radius:6px;margin-top:6px;color:#0a6640;font-weight:600}
+.ev-ng{font-size:10px;padding:5px 8px;background:#fde0e0;border-radius:6px;margin-top:6px;color:#8b1a1a}
+.ev-box{font-size:10px;color:#888;padding:5px 8px;background:#f7f6f3;border-radius:6px;margin-top:6px}
+
+/* KPI grid */
+.krow{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-bottom:14px}
+@media(max-width:400px){.krow{grid-template-columns:repeat(2,1fr)}}
+.k{background:#fff;border-radius:10px;padding:10px 7px;text-align:center;border:1px solid #e8e8e8}
+.kn{font-size:22px;font-weight:800;margin-bottom:2px;line-height:1}
+.kl{font-size:9px;color:#999}
+.g{color:#1D9E75}.r{color:#cc2222}.o{color:#c07000}.b{color:#378ADD}
+
+/* Sport summary grid */
+.srow{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin-bottom:14px}
+@media(max-width:400px){.srow{grid-template-columns:1fr}}
+.sk{background:#fff;border-radius:10px;padding:11px 12px;border:1px solid #e8e8e8;border-left:4px solid #ddd}
+.sk.atp{border-left-color:#1D9E75}.sk.wta{border-left-color:#E85490}
+.sk.nhl{border-left-color:#378ADD}.sk.ufl{border-left-color:#8B0000}
+.sk.nrl{border-left-color:#1B5E20}.sk.srp{border-left-color:#7B1FA2}
+.sk.nfl{border-left-color:#003366}.sk.cfl{border-left-color:#CC0000}
+.sk-name{font-size:10px;font-weight:700;color:#888;margin-bottom:5px;letter-spacing:.5px}
+.sk-stat{font-size:18px;font-weight:800;line-height:1;margin-bottom:2px}
+.sk-ev{font-size:10px;color:#888}
+.sk-status{font-size:9px;padding:2px 7px;border-radius:4px;display:inline-block;margin-top:4px}
+.active{background:#d4f0e4;color:#0a6640}
+.pending{background:#fff3d4;color:#7a4400}
+.preseason{background:#e0f2fe;color:#0369a1}
+
+table{width:100%;border-collapse:collapse;font-size:11px}
+th{padding:6px 8px;background:#f7f6f3;border-bottom:1px solid #e8e8e8;font-weight:600;font-size:10px;color:#666;text-align:left}
+td{padding:6px 8px;border-bottom:1px solid #f0f0f0;vertical-align:top}
+tr:last-child td{border-bottom:none}
+.hit-dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:4px;vertical-align:middle}
+.hd-g{background:#1D9E75}.hd-r{background:#cc2222}.hd-y{background:#e8b84a}.hd-b{background:#ccc}
+
+.disc{font-size:10px;color:#999;padding:9px 11px;background:#f7f6f3;border-radius:8px;line-height:1.5;margin-top:10px}
+details summary{font-size:11px;color:#888;cursor:pointer;padding:6px 0;user-select:none;list-style:none}
+details summary::-webkit-details-marker{display:none}
+details[open] summary{color:#333}
+.bl-item{padding:7px 0;border-bottom:1px solid #f0f0f0;font-size:12px;display:flex;gap:8px;align-items:baseline}
+.bl-item:last-child{border-bottom:none}
+.bl-sta{font-size:11px;font-weight:700;width:20px;flex-shrink:0}
+.sta-done{color:#1D9E75}.sta-wip{color:#e8b84a}.sta-todo{color:#888}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>ベッティング分析ダッシュボード</h1>
+<p class="meta">更新: 2026-04-11 | 4種目 8リーグ対応</p>
+
+<div class="notice">
+  <strong>本日の予測・結果待ち：</strong><br>
+  🎾 MC2026 F <strong>Alcaraz go</strong>（4/12 推定オッズ1.45 / EV+18.9% / 信頼度82%）← 最優先<br>
+  🏉 NRL R6 Rabbitohs vs Raiders（4/11 本日）推奨: Rabbitohs 1.55 → 結果待ち<br>
+  🏒 NHL OTT @ NYI（4/11 本日 1PM ET）推奨: Ottawa → 結果待ち<br>
+  🏈 UFL Week3 Dallas vs Columbus（4/13）推奨: Dallas 1.32 → 結果待ち<br>
+  🎾 WTA Stuttgart 開幕 4/13・フレームワーク準備済み・オッズ/ドロー確認後に本分析
+</div>
+
+<nav>
+  <button class="nt on" onclick="sw('s',this)">全体成績</button>
+  <button class="nt" onclick="sw('p',this)">進行中</button>
+  <button class="nt" onclick="sw('t',this)">テニス</button>
+  <button class="nt" onclick="sw('h',this)">アイスホッケー</button>
+  <button class="nt" onclick="sw('a',this)">アメフト</button>
+  <button class="nt" onclick="sw('r',this)">ラグビー</button>
+  <button class="nt" onclick="sw('b',this)">BACKLOG</button>
+</nav>
+
+<!-- ===== 全体成績 ===== -->
+<div id="s" class="pn on">
+  <div class="krow">
+    <div class="k"><div class="kn o">7/11</div><div class="kl">的中率（GO）</div></div>
+    <div class="k"><div class="kn r">-0.787u</div><div class="kl">累積EV</div></div>
+    <div class="k"><div class="kn">11</div><div class="kl">GO予測数</div></div>
+    <div class="k"><div class="kn bp" style="font-size:14px;padding:4px 0">4件</div><div class="kl">結果待ち</div></div>
+  </div>
+
+  <div class="sec">種目別成績</div>
+  <div class="srow">
+    <div class="sk atp">
+      <div class="sk-name">ATP テニス</div>
+      <div class="sk-stat o">6<span style="font-size:13px;font-weight:400;color:#888">/10</span></div>
+      <div class="sk-ev">EV -1.12u（F予測前・SF完了）</div>
+      <div><span class="sk-status active">MC2026 F待ち（4/12）</span></div>
+    </div>
+    <div class="sk wta">
+      <div class="sk-name">WTA テニス</div>
+      <div class="sk-stat" style="color:#888">0<span style="font-size:13px;font-weight:400;color:#888">/0</span></div>
+      <div class="sk-ev">Stuttgart 4/13開幕</div>
+      <div><span class="sk-status pending">ドロー公開待ち</span></div>
+    </div>
+    <div class="sk nhl">
+      <div class="sk-name">NHL</div>
+      <div class="sk-stat g">1<span style="font-size:13px;font-weight:400;color:#888">/1</span></div>
+      <div class="sk-ev">EV +0.333u（OTT@NYI結果待ち）</div>
+      <div><span class="sk-status active">プレーオフ直前</span></div>
+    </div>
+    <div class="sk ufl">
+      <div class="sk-name">UFL</div>
+      <div class="sk-stat" style="color:#888">0<span style="font-size:13px;font-weight:400;color:#888">/0</span></div>
+      <div class="sk-ev">Dallas vs Columbus 4/13</div>
+      <div><span class="sk-status active">Week3</span></div>
+    </div>
+    <div class="sk nrl">
+      <div class="sk-name">NRL</div>
+      <div class="sk-stat" style="color:#888">0<span style="font-size:13px;font-weight:400;color:#888">/0</span></div>
+      <div class="sk-ev">Rabbitohs vs Raiders 4/11</div>
+      <div><span class="sk-status active">Round 6</span></div>
+    </div>
+    <div class="sk srp">
+      <div class="sk-name">Super Rugby Pacific</div>
+      <div class="sk-stat" style="color:#888">0<span style="font-size:13px;font-weight:400;color:#888">/0</span></div>
+      <div class="sk-ev">R9 ラインナップ確認待ち</div>
+      <div><span class="sk-status active">Round 9</span></div>
+    </div>
+    <div class="sk nfl">
+      <div class="sk-name">NFL</div>
+      <div class="sk-stat" style="color:#888">—</div>
+      <div class="sk-ev">2026年9月開幕予定</div>
+      <div><span class="sk-status preseason">プレシーズン</span></div>
+    </div>
+    <div class="sk cfl">
+      <div class="sk-name">CFL</div>
+      <div class="sk-stat" style="color:#888">—</div>
+      <div class="sk-ev">2026年6月開幕予定</div>
+      <div><span class="sk-status preseason">プレシーズン</span></div>
+    </div>
+  </div>
+
+  <div class="sec">ATP MC2026 — ラウンド別推移</div>
+  <table>
+    <tr><th>ラウンド</th><th>GO予測</th><th>的中</th><th>的中率</th><th>EV計</th></tr>
+    <tr><td>R32</td><td>3</td><td>1</td><td class="o">33%</td><td class="r">-1.37u</td></tr>
+    <tr><td>R16</td><td>2</td><td>1</td><td class="o">50%</td><td class="r">-0.43u</td></tr>
+    <tr><td>QF</td><td>3</td><td>3</td><td class="g">100%</td><td class="g">+1.18u</td></tr>
+    <tr><td>SF</td><td>2</td><td>1</td><td class="o">50%</td><td class="r">-0.50u</td></tr>
+    <tr><td>F（予測済）</td><td>1</td><td>—</td><td>—</td><td>4/12確認</td></tr>
+    <tr style="font-weight:700"><td>合計（F除く）</td><td>10</td><td>6</td><td class="o">60%</td><td class="r">-1.12u</td></tr>
+  </table>
+  <p class="disc">※R32の「caution」2件（Fonseca・Marozsan）はR010により別集計（GO対象外）。NHL 1/1 +0.333u を加算すると全体 7/11・EV -0.787u。</p>
+</div>
+
+<!-- ===== 進行中 ===== -->
+<div id="p" class="pn">
+  <div class="sec">結果待ち予測</div>
+
+  <div class="card atp">
+    <div class="top"><div class="mn">🎾 Alcaraz C.(1) vs Zverev A.(3) — 決勝</div><span class="badge bl">GO ★最優先</span></div>
+    <div class="sub">MC2026 F — 2026-04-12</div>
+    <div class="body" style="margin-top:6px">
+      推奨: <strong>Alcaraz</strong> (信頼度82% / 推定オッズ1.45 / EV+18.9%)<br>
+      L1: cElo差~130。L2: Alcaraz省エネ2勝 vs Zverev連続3セット消耗。<br>
+      L4: DC（ディフェンディングチャンピオン）・H2Hクレー優勢・Zverev累積疲労
+    </div>
+    <div class="ev-go">★ EV +18.9% | 信頼度82% | R001・R002・R004・R005適用</div>
+  </div>
+
+  <div class="card atp" style="border-left-color:#ccc">
+    <div class="top"><div class="mn">🎾 MC2026 SF サマリ（完了）</div><span class="badge" style="background:#f0f0f0;color:#555">参考</span></div>
+    <div class="sub">2026-04-11</div>
+    <div class="body" style="margin-top:6px">
+      ✅ Alcaraz vs de Minaur → <strong>Alcaraz HIT</strong> +0.50u<br>
+      ❌ Sinner(推奨) vs Zverev → <strong>Zverev勝利 MISS</strong> -1.00u（cElo差110でボーダー判定・Zverev底力）
+    </div>
+    <div class="ev-box">SF合計 EV -0.50u | 1/2（50%）</div>
+  </div>
+
+  <div class="card nhl">
+    <div class="top"><div class="mn">🏒 Ottawa Senators @ NY Islanders</div><span class="badge bl">GO</span></div>
+    <div class="sub">NHL — 2026-04-11 (明日)</div>
+    <div class="body" style="margin-top:6px">
+      推奨: <strong>Ottawa Senators</strong> (オッズ 2.53 / EV +33.1% / 信頼度52.6%)<br>
+      xGF%: OTT 55.93% (リーグ3位) vs NYI 47.41% (リーグ26位) → 差5.52pt
+    </div>
+    <div class="ev-go">★ EV +33.1% — ただし信頼度52.6%（市場乖離が根拠）</div>
+  </div>
+
+  <div class="card nrl">
+    <div class="top"><div class="mn">🏉 South Sydney Rabbitohs vs Canberra Raiders</div><span class="badge bl">GO</span></div>
+    <div class="sub">NRL Round 6 — 2026-04-11 (明日) | Perth (中立地)</div>
+    <div class="body" style="margin-top:6px">
+      推奨: <strong>South Sydney Rabbitohs</strong> (オッズ 1.55 / EV +20.9% / 信頼度78%)<br>
+      Rabbitohs 3-1 / PD +3.5/試合 vs Raiders 1-4 / PD -13.8/試合。主力Savage欠場。
+    </div>
+    <div class="ev-go">★ EV +20.9% | 信頼度78% | ルール: R001・R002・R004・R006</div>
+  </div>
+
+  <div class="card ufl">
+    <div class="top"><div class="mn">🏈 Dallas Renegades vs Columbus Aviators</div><span class="badge bl">GO</span></div>
+    <div class="sub">UFL Week 3 — 2026-04-13</div>
+    <div class="body" style="margin-top:6px">
+      推奨: <strong>Dallas Renegades</strong> (オッズ 1.32 / EV +8.2% / 信頼度82%)<br>
+      DAL 2-0 / PD +17.5/試合 vs COL 0-2 / PD -12.5/試合。Austin Reed QB確認済。
+    </div>
+    <div class="ev-go">★ EV +8.2% | 信頼度82% | Week3閾値80%通過</div>
+  </div>
+
+  <div class="card srp">
+    <div class="top"><div class="mn">🏉 Queensland Reds vs Crusaders</div><span class="badge bp">要確認</span></div>
+    <div class="sub">Super Rugby Pacific Round 9 — 2026-04-11 (明日) | Suncorp Stadium</div>
+    <div class="body" style="margin-top:6px">
+      ★ラインナップ確認後にGO判断。Crusaders推奨候補。<br>
+      L1差12.9pt/試合（Crusaders優位）/ Crusadersブリスベン5連勝 / ホームアドバン相殺<br>
+      オッズ: Crusaders 1.54 / 信頼度推定74%（75%達成でGO）
+    </div>
+    <div class="ev-box">EV試算: +15.5%（信頼度75%達成の場合）| SH/FH lineup要確認</div>
+  </div>
+
+  <div class="card wta">
+    <div class="top"><div class="mn">🎾 WTA Stuttgart — Porsche Grand Prix</div><span class="badge bp">4/13開幕</span></div>
+    <div class="sub">WTA 500 — 室内クレー | Sabalenka欠場（怪我）</div>
+    <div class="body" style="margin-top:6px">
+      出場: Rybakina(1)・Swiatek(2)・Gauff(3)・Paolini(4) ほかTop10多数<br>
+      ドロー公開後にrules_wta.jsonを適用してスクリーニング予定。
+    </div>
+  </div>
+</div>
+
+<!-- ===== テニス ===== -->
+<div id="t" class="pn">
+  <div class="sec">MC2026 F — 決勝 予測（4/12）</div>
+
+  <div class="card atp">
+    <div class="top"><div class="mn">Alcaraz C.(1) vs Zverev A.(3)</div><span class="badge bl">GO</span></div>
+    <div class="body">
+      推奨: <strong>Alcaraz</strong> | 推定オッズ1.45 / 信頼度82% / EV+18.9%<br>
+      L1: cElo差~130（R001通過）。L2: Alcaraz QF 6-1 6-3+SF省エネ勝利 vs Zverev 2試合連続3セット消耗。<br>
+      L4: ディフェンディングチャンピオン・H2Hクレー優勢・Zverev累積疲労 → 計+6%
+    </div>
+    <div class="ev-go">★ EV +18.9% | 信頼度82% | R001・R002・R004・R005適用 | オッズ≥1.35でgo維持</div>
+  </div>
+
+  <div class="sec">MC2026 SF 結果（4/11）</div>
+
+  <div class="card atp">
+    <div class="top"><div class="mn">Alcaraz C.(1) vs de Minaur A.(5)</div><span class="badge bh">的中</span></div>
+    <div class="body">推奨: Alcaraz ✅ | EV実績: +0.50u<br>
+    cElo差~280。QF圧勝の勢いそのままにSF制覇。ディフェンディングチャンピオンの貫禄。</div>
+    <div class="ev-go">EV +0.50u | R001・R002機能</div>
+  </div>
+
+  <div class="card atp">
+    <div class="top"><div class="mn">Sinner J.(2) vs Zverev A.(3)</div><span class="badge bm">外れ</span></div>
+    <div class="body">推奨: Sinner ✗ | スコア: 4-6 6-4 7-5 (Zverev) | EV: -1.00u<br>
+    cElo差110はボーダー判定の難しさを示した。Zverevの底力・QF消耗跳ね越しを過小評価。<br>
+    <strong>Miss_layer: L1</strong>（cElo差不足・通常≥150推奨。差130以下の試合への注意喚起）</div>
+    <div class="ev-ng">EV -1.00u | 教訓: cElo差110は推奨閾値ギリギリ→次回から差130未満は慎重に</div>
+  </div>
+
+  <div class="sec">MC2026 QF 結果（4/10）</div>
+
+  <div class="card atp">
+    <div class="top"><div class="mn">Sinner J.(2) vs Auger-Aliassime F.(6)</div><span class="badge bh">的中</span></div>
+    <div class="body">推奨: Sinner ✅ | スコア: 6-3 6-4 | EV実績: +0.38u<br>
+    条件（FAA R16勝利）成立確認後にGO。Sinnerの支配力を発揮。</div>
+    <div class="ev-go">EV +0.38u | L1・R007（FAA初クレー）機能</div>
+  </div>
+
+  <div class="card atp">
+    <div class="top"><div class="mn">Zverev A.(3) vs Fonseca J.</div><span class="badge bh">的中</span></div>
+    <div class="body">推奨: Zverev ✅ | スコア: 4-6 6-4 7-5 | EV実績: +0.55u<br>
+    3セットの接戦。R011（若手攻撃型）の変数が出たが最終的にZverev地力勝ち。</div>
+    <div class="ev-go">EV +0.55u</div>
+  </div>
+
+  <div class="card atp">
+    <div class="top"><div class="mn">Alcaraz C.(1) vs Bublik A.(8)</div><span class="badge bh">的中</span></div>
+    <div class="body">推奨: Alcaraz ✅ | スコア: 6-1 6-3 | EV実績: +0.25u<br>
+    ディフェンディングチャンピオンの貫禄。SFへ省エネで進出。</div>
+    <div class="ev-go">EV +0.25u | QF 3/3 全的中</div>
+  </div>
+
+  <div class="card atp" style="border-left-color:#ccc">
+    <div class="top"><div class="mn">de Minaur A.(5) vs Vacherot V.(WC)</div><span class="badge bs">スキップ</span></div>
+    <div class="body">信頼度70% → R010により推奨除外。結果記録対象外。</div>
+  </div>
+
+  <div class="sec">MC2026 R16 結果</div>
+  <div class="card atp">
+    <div class="top"><div class="mn">Vacherot V.(WC) vs Hurkacz H.(PR)</div><span class="badge bh">的中</span></div>
+    <div class="body">推奨: Vacherot ✅ | 6-7(4) 6-3 6-4 | EV: +0.57u<br>モナコ人として初のMC QF進出（Open Era）。R009ホームコート機能。</div>
+    <div class="ev-go">EV +0.57u | R009機能</div>
+  </div>
+  <div class="card atp">
+    <div class="top"><div class="mn">Berrettini M.(WC) vs Fonseca J.</div><span class="badge bm">外れ</span></div>
+    <div class="body">推奨: Berrettini ✗ | 6-3 6-2 (Fonseca) | EV: -1.0u<br>Fonsecaのサービス・アグレッシブプレーがホームコートアドバンテージを上回った。</div>
+    <div class="ev-ng">EV -1.0u | L4ミス</div>
+  </div>
+
+  <div class="sec">MC2026 R32 結果</div>
+  <table>
+    <tr><th>試合</th><th>推奨</th><th>結果</th><th>EV</th></tr>
+    <tr><td>Auger-Aliassime vs Cilic</td><td>FAA</td><td><span class="hit-dot hd-g"></span>的中 7-6 7-6 6-3</td><td class="g">+0.63u</td></tr>
+    <tr><td>Medvedev vs Berrettini</td><td>Medvedev</td><td><span class="hit-dot hd-r"></span>外れ 0-6 0-6</td><td class="r">-1.0u</td></tr>
+    <tr><td>Cerundolo vs Machac</td><td>Cerundolo</td><td><span class="hit-dot hd-r"></span>外れ 6-7 2-6</td><td class="r">-1.0u</td></tr>
+    <tr><td>Rinderknech vs Fonseca ⚠️caution</td><td>Rinderknech</td><td><span class="hit-dot hd-r"></span>外れ</td><td class="r">-1.0u</td></tr>
+    <tr><td>Marozsan vs Hurkacz ⚠️caution</td><td>Marozsan</td><td><span class="hit-dot hd-r"></span>外れ</td><td class="r">-1.0u</td></tr>
+  </table>
+
+  <div class="sec">WTA Stuttgart — 初回分析予定</div>
+  <div class="card wta">
+    <div class="top"><div class="mn">Porsche Tennis Grand Prix 2026</div><span class="badge bp">4/13開幕</span></div>
+    <div class="body">
+      WTA 500 / 室内クレー / Stuttgart, Germany<br>
+      主要シード: Rybakina(1)・Swiatek(2)・Gauff(3)・Paolini(4)<br>
+      ※Sabalenka(通常1位)は怪我で欠場<br>
+      ドロー公開後にrules_wta.jsonを適用して分析予定。
+    </div>
+  </div>
+</div>
+
+<!-- ===== アイスホッケー ===== -->
+<div id="h" class="pn">
+  <div class="sec">NHL 2025-26 — 稼働記録</div>
+
+  <div class="card nhl">
+    <div class="top"><div class="mn">Colorado Avalanche vs Calgary Flames</div><span class="badge bh">的中</span></div>
+    <div class="sub">2026-04-09 | COL ホーム</div>
+    <div class="body">推奨: Colorado ✅ | スコア: 3-1 | EV: +0.333u<br>
+    xGF%差10.0pt。MacKinnon 2G+2A。Presidents' Trophy確定。xGF%主導が機能。</div>
+    <div class="ev-go">EV +0.333u | xGF%差10pt → 地力差が直結</div>
+  </div>
+
+  <div class="card nhl">
+    <div class="top"><div class="mn">Ottawa Senators @ NY Islanders</div><span class="badge bl">GO</span></div>
+    <div class="sub">2026-04-11 | UBS Arena</div>
+    <div class="body">
+      推奨: <strong>Ottawa Senators</strong> | オッズ 2.53<br>
+      OTT xGF% 55.93% (3位) vs NYI xGF% 47.41% (26位)<br>
+      ホーム補正後差5.52pt / 市場乖離 13.1pt / 両エースゴーリー互角
+    </div>
+    <div class="ev-go">EV +33.1% | 信頼度52.6% | 市場50/50だが実力差あり</div>
+  </div>
+
+  <div class="sec">L1指標（NHL）</div>
+  <table>
+    <tr><th>優先順位</th><th>指標</th><th>ソース</th><th>閾値</th></tr>
+    <tr><td>① 最優先</td><td>xGF%</td><td>moneypuck.com</td><td>差5pt以上</td></tr>
+    <tr><td>② 代替</td><td>SAT%(Corsi)</td><td>nhl.com 高度統計</td><td>差5pt以上</td></tr>
+    <tr><td>③ 最終手段</td><td>GF%</td><td>hockey-reference</td><td>差5pt以上</td></tr>
+  </table>
+</div>
+
+<!-- ===== アメフト ===== -->
+<div id="a" class="pn">
+  <div class="sec">UFL 2026 — Week3</div>
+
+  <div class="card ufl">
+    <div class="top"><div class="mn">Dallas Renegades vs Columbus Aviators</div><span class="badge bl">GO</span></div>
+    <div class="sub">2026-04-13 | Week 3</div>
+    <div class="body">
+      推奨: <strong>Dallas Renegades</strong> | オッズ 1.32<br>
+      DAL 2-0 / PD +17.5/試合 vs COL 0-2 / PD -12.5/試合 → 差30pt<br>
+      Austin Reed QB確認済（7TD/2試合、616yd）
+    </div>
+    <div class="ev-go">EV +8.2% | 信頼度82% | Week3閾値80%通過</div>
+  </div>
+
+  <div class="sec">UFL Week3 スクリーニングログ</div>
+  <table>
+    <tr><th>試合</th><th>スキップ理由</th></tr>
+    <tr><td>Louisville vs Orlando (4/11)</td><td>Week3閾値80%に対し信頼度75%</td></tr>
+    <tr><td>DC vs Houston (4/12)</td><td>EV+6.4%のみ → Week3保守判断でSKIP</td></tr>
+    <tr><td>St.Louis vs Birmingham (4/13)</td><td>L1差弱 + 市場逆行</td></tr>
+  </table>
+
+  <div class="sec">NFL 2026-27 — プレシーズン</div>
+  <div class="card nfl">
+    <div class="top"><div class="mn">NFL 2026-27シーズン</div><span class="badge bpre">プレシーズン</span></div>
+    <div class="body">
+      開幕予定: 2026年9月<br>
+      ルールファイル準備完了: rules_nfl.json v1.0<br>
+      L1指標: DVOA (Football Outsiders) — 業界最高精度<br>
+      開幕後はWeek1をスキップ、Week2〜から本格稼働。
+    </div>
+  </div>
+
+  <div class="sec">CFL 2026 — プレシーズン</div>
+  <div class="card cfl">
+    <div class="top"><div class="mn">CFL 2026シーズン</div><span class="badge bpre">プレシーズン</span></div>
+    <div class="body">
+      開幕予定: 2026年6月<br>
+      ルールファイル準備完了: rules_cfl.json v1.0<br>
+      L1指標: 得失点差/試合（差5点以上）<br>
+      9チーム制（East 4 / West 5）。3ダウン制。
+    </div>
+  </div>
+</div>
+
+<!-- ===== ラグビー ===== -->
+<div id="r" class="pn">
+  <div class="sec">NRL 2026 — Round 6</div>
+
+  <div class="card nrl">
+    <div class="top"><div class="mn">South Sydney Rabbitohs vs Canberra Raiders</div><span class="badge bl">GO</span></div>
+    <div class="sub">2026-04-11 | Optus Stadium, Perth (中立地)</div>
+    <div class="body">
+      推奨: <strong>South Sydney Rabbitohs</strong> | オッズ 1.55<br>
+      Rabbitohs 3-1 / PD +3.5/試合 vs Raiders 1-4 / PD -13.8/試合<br>
+      Raiders: Xavier Savage（主力WC）8週間離脱確認。Brandon Smith hooker復帰（プラス）
+    </div>
+    <div class="ev-go">EV +20.9% | 信頼度78% | R001・R002・R004・R006適用</div>
+  </div>
+
+  <div class="sec">Super Rugby Pacific 2026 — Round 9</div>
+
+  <div class="card srp">
+    <div class="top"><div class="mn">★ Queensland Reds vs Crusaders</div><span class="badge bp">要ラインナップ確認</span></div>
+    <div class="sub">2026-04-11 | Suncorp Stadium, Brisbane</div>
+    <div class="body">
+      推奨候補: <strong>Crusaders</strong> | オッズ 1.54<br>
+      L1差: 12.9pt/試合（Crusaders +7.0 vs Reds -5.9）<br>
+      H2H: Crusadersがブリスベンで5連勝 → Redsのホームアドバン相殺<br>
+      ⚠️ SH(#9)・FH(#10)ラインナップ確認が必須（S008）
+    </div>
+    <div class="ev-box">EV試算 +15.5%（信頼度75%達成時）| 確認後にGO/SKIPを最終判断</div>
+  </div>
+
+  <div class="card srp" style="border-left-color:#ccc">
+    <div class="top"><div class="mn">Hurricanes vs Blues</div><span class="badge bs">SKIP</span></div>
+    <div class="sub">2026-04-11 | Wellington（Hurricanesホーム）</div>
+    <div class="body">L1差14.1pt ✓ / 信頼度77-78% / オッズ1.34 → EV+3-4%（5%閾値未達）</div>
+  </div>
+
+  <div class="sec">Super Rugby Pacific — 順位表（Round 8後）</div>
+  <table>
+    <tr><th>順位</th><th>チーム</th><th>W</th><th>L</th><th>PD/試合</th></tr>
+    <tr><td>1</td><td>🌪️ Hurricanes</td><td>5</td><td>1</td><td class="g">+27.7</td></tr>
+    <tr><td>2</td><td>🔵 Blues</td><td>5</td><td>2</td><td class="g">+13.6</td></tr>
+    <tr><td>3</td><td>🟡 Brumbies</td><td>5</td><td>3</td><td class="g">+7.7</td></tr>
+    <tr><td>4</td><td>⚫ Chiefs</td><td>5</td><td>2</td><td class="g">+8.4</td></tr>
+    <tr><td>5</td><td>🔴 Crusaders</td><td>4</td><td>3</td><td class="g">+7.0</td></tr>
+    <tr><td>6</td><td>🟥 Reds</td><td>4</td><td>3</td><td class="r">-5.9</td></tr>
+    <tr><td>7</td><td>Highlanders</td><td>3</td><td>5</td><td class="r">-6.9</td></tr>
+    <tr><td>8</td><td>Waratahs</td><td>3</td><td>4</td><td class="r">-6.1</td></tr>
+    <tr><td>9</td><td>Force</td><td>2</td><td>5</td><td class="r">-4.1</td></tr>
+    <tr><td>10</td><td>Fijian Drua</td><td>2</td><td>5</td><td class="r">-14.3</td></tr>
+    <tr><td>11</td><td>Moana Pasifika</td><td>1</td><td>6</td><td class="r">-23.1</td></tr>
+  </table>
+  <p class="disc">※Reds: 4勝3敗だがPD -5.9/試合（接戦運で勝ち越し）。Crusaders: 同じ4-3でPD +7.0（地力が反映）</p>
+</div>
+
+<!-- ===== BACKLOG ===== -->
+<div id="b" class="pn">
+  <div class="sec">作業中 [~]</div>
+  <div class="card warn">
+    <div class="bl-item"><span class="bl-sta sta-wip">[~]</span><span>WTA Stuttgart ドロー確認・本分析（フレームワーク準備済・4/13開幕後にオッズ/cElo確認）</span></div>
+  </div>
+
+  <div class="sec">結果待ち [ ]</div>
+  <div class="card">
+    <div class="bl-item"><span class="bl-sta sta-todo">[ ]</span><span><strong>MC2026 F 結果確認・記録（4/12 Alcaraz go）← 最優先</strong></span></div>
+    <div class="bl-item"><span class="bl-sta sta-todo">[ ]</span><span>NRL Round 6 Rabbitohs vs Raiders 結果確認・記録（4/11本日試合後）</span></div>
+    <div class="bl-item"><span class="bl-sta sta-todo">[ ]</span><span>NHL OTT @ NYI 結果確認・記録（4/11本日 1PM ET試合後）</span></div>
+    <div class="bl-item"><span class="bl-sta sta-todo">[ ]</span><span>UFL Week3 Dallas vs Columbus 結果確認・記録（4/13試合後）</span></div>
+    <div class="bl-item"><span class="bl-sta sta-todo">[ ]</span><span>Super Rugby R9 全4試合結果確認（Hurricanes/Blues・Reds/Crusaders・Chiefs/Moana・Drua/Force）</span></div>
+    <div class="bl-item"><span class="bl-sta sta-todo">[ ]</span><span>Super Rugby R9 Reds vs Crusaders 再評価（ラインナップ確認後GOなら記録）</span></div>
+  </div>
+
+  <div class="sec">今後の予定</div>
+  <div class="card">
+    <div class="bl-item"><span class="bl-sta sta-todo">[ ]</span><span>CFL 2026シーズン開幕対応（2026年6月）</span></div>
+    <div class="bl-item"><span class="bl-sta sta-todo">[ ]</span><span>NFL 2026-27シーズン開幕対応（2026年9月）</span></div>
+  </div>
+
+  <div class="sec">直近完了 [x]（4/11）</div>
+  <div class="card">
+    <div class="bl-item"><span class="bl-sta sta-done">[x]</span><span>MC2026 F予測・記録（Alcaraz go / 信頼度82% / EV+18.9%）</span></div>
+    <div class="bl-item"><span class="bl-sta sta-done">[x]</span><span>MC2026 SF 結果確認・記録（Alcaraz HIT +0.50 / Zverev over Sinner MISS -1.00）</span></div>
+    <div class="bl-item"><span class="bl-sta sta-done">[x]</span><span>ダッシュボード全数値更新（通算63.6% 7/11、EV -0.787）</span></div>
+    <div class="bl-item"><span class="bl-sta sta-done">[x]</span><span>upset_patterns.json 新設（全8種目対応、U001〜U004記録済）</span></div>
+    <div class="bl-item"><span class="bl-sta sta-done">[x]</span><span>3段階フレームワーク定義（Phase1→2→3）・メモリ保存</span></div>
+    <div class="bl-item"><span class="bl-sta sta-done">[x]</span><span>WTA Stuttgart フレームワーク準備（records/wta/2026.json にtournament枠追加）</span></div>
+  </div>
+</div>
+
+</div><!-- /wrap -->
+
+<script>
+function sw(id, btn) {
+  document.querySelectorAll('.pn').forEach(e => e.classList.remove('on'));
+  document.querySelectorAll('.nt').forEach(e => e.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  btn.classList.add('on');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+{
+  "sport": "nhl",
+  "version": "1.2",
+  "updated": "2026-04-09",
+  "bet_type": "Moneyline (ML) のみ",
+  "target": "レギュラーシーズン・プレーオフ問わずオッズが付いている試合すべて",
+  "screening": {
+    "L1_priority": [
+      {
+        "rank": 1,
+        "metric": "xGF%",
+        "source": "MoneyPuck.com（moneypuck.com/teams.htm）",
+        "threshold": "差 5pt以上を候補",
+        "note": "最優先。シュートの質・位置を加味した期待得点率。運の影響が最も小さい"
+      },
+      {
+        "rank": 2,
+        "metric": "SAT%（Corsi For%）",
+        "source": "NHL公式（nhl.com/stats → 高度な統計タブ）",
+        "threshold": "差 5pt以上を候補",
+        "note": "xGF%が取得できない場合に使用。枠外含む全シュート試みの割合。GF%より運の影響が少ない"
+      },
+      {
+        "rank": 3,
+        "metric": "GF%（得失点率）",
+        "source": "NHL公式 / Hockey-Reference",
+        "threshold": "差 5pt以上を候補",
+        "note": "最終手段のみ。PDO（103超は-2pt割り引き）とOT勝利数を必ず補正してから使用。精度が低いため推奨スコアに-5%ペナルティを加算する"
+      }
+    ],
+    "critical": "ゴーリー先発が未確認の場合は推奨を保留（N006）",
+    "pdo_check": "GF%使用時は必ずPDO確認。PDO=（SV%＋SH%）×100。103超なら実力を過大評価している可能性あり"
+  },
+  "thresholds": {
+    "recommend_go": { "confidence_min": 75, "ev_min": 5 },
+    "skip": "信頼度75%未満 または EV+5%未満"
+  },
+  "ev_formula": "(推定勝率 × MLオッズ) - 1",
+  "layers": {
+    "L1": "xGF% シーズン差（チーム地力）",
+    "L2": "直近10試合の対戦相手xGF%加重平均（フォーム品質）±15%",
+    "L3": "PDO・PP%・PK%・SCF%から補正（±5%）",
+    "L4": "ゴーリー・怪我・B2B・ホームアイス・休息日から補正（±12%）"
+  },
+  "data_sources": {
+    "team_stats_xgf": "https://moneypuck.com/teams.htm（xGF%・xGA%・GSAx）",
+    "goalie_starts": "https://www.dailyfaceoff.com（当日9〜11時EST確認）",
+    "injuries": "https://www.nhl.com/injuries / CapFriendly",
+    "odds": "OddsPortal / Pinnacle",
+    "schedule_b2b": "NHL公式スケジュール（B2B確認）"
+  },
+  "rules": [
+    {
+      "id": "N001", "type": "initial", "title": "L1スクリーニング（優先順位付き）",
+      "body": "以下の優先順位でL1指標を選択し、差が5pt以上の試合のみ候補とする。【優先①】xGF%（MoneyPuck）: シュートの質・位置を加味した期待得点率。運の影響が最小で最も信頼性が高い。【優先②】SAT%/Corsi%（NHL公式「高度な統計」）: 全シュート試みの割合。GF%よりも運の影響が少なく、xGF%の代替として有効。【最終手段③】GF%（NHL公式/Hockey-Reference）: 実際の得失点率。PDO・OT勝利数の影響を受けやすいため、使用時はPDO103超で-2pt補正・OT勝利数が多い場合は上方修正し、信頼度スコアに-5%ペナルティを加算する。差5pt未満の試合はコインフリップに近いため除外。",
+      "precision_ranking": "xGF% > SAT%(Corsi) > GF%",
+      "data_sources": {
+        "xGF%": "moneypuck.com/teams.htm",
+        "SAT%": "nhl.com/stats → 高度な統計タブ",
+        "GF%": "quanthockey.com / hockey-reference.com"
+      }
+    },
+    {
+      "id": "N002", "type": "initial", "title": "L2フォーム品質スコア",
+      "body": "直近10試合の対戦相手xGF%を確認し、強い相手に勝った試合を高評価。直近10試合のxGF%平均が上昇トレンドなら+5%、下降なら-5%。"
+    },
+    {
+      "id": "N003", "type": "initial", "title": "L3スタッツ補正",
+      "body": "① PDO（SV%+SH%×100）が103超のチームは+2%の幸運補正がある可能性 → N007参照。② PP% 上位10チーム（22%超）は+2%。③ PK% 下位10チーム（76%未満）は-2%。④ SCF%（Scoring Chances For%）で地力補正。"
+    },
+    {
+      "id": "N004", "type": "initial", "title": "ホームアイスアドバンテージ",
+      "body": "ホームチームに+5%固定補正。プレーオフはシリーズ上位シードのホームに+7%（ファン・慣れたアリーナ効果が増大）。"
+    },
+    {
+      "id": "N005", "type": "initial", "title": "B2B（連戦）補正",
+      "body": "前日試合あり→当日アウェー: -8%。前日試合あり→当日ホーム: -4%。2日連続アウェー移動がある場合はさらに-2%。相手がフレッシュ（2日以上休息）なら差分で判定。"
+    },
+    {
+      "id": "N006", "type": "initial", "title": "ゴーリー先発確認（最重要）",
+      "body": "先発ゴーリーが当日確認できない場合は推奨を保留。バックアップ起用が判明した場合は-10〜-15%追加補正（スターターとの差による）。確認タイミング: 試合当日の朝練習後（現地9〜11時EST）にdailyfaceoff.comで確認。"
+    },
+    {
+      "id": "N007", "type": "initial", "title": "PDO平均回帰注意",
+      "body": "PDO（SV%×100 + SH%×100）が103超のチームは実力以上に勝っている可能性が高い。過大評価を避け、+2%の幸運分を差し引いて評価する。逆にPDO97未満のチームは実力より低く評価されている可能性あり（+2%上乗せ検討）。"
+    },
+    {
+      "id": "N008", "type": "initial", "title": "プレーオフバブル補正",
+      "body": "レギュラーシーズン残り10試合以内でワイルドカード圏内（+1〜-1ポイント差）のチームには+3%補正。消化試合確定チームは-5%（モチベーション低下）。"
+    },
+    {
+      "id": "N009", "type": "initial", "title": "ゴーリー品質補正（GSAx）",
+      "body": "MoneyPuckのGSAx（Goals Saved Above Expected）でゴーリー品質を定量評価。GSAx+10以上（エリート）: +5%。GSAx+5〜+10（上位）: +3%。GSAx-5〜+5（平均）: 0%。GSAx-5〜-10（平均以下）: -3%。GSAx-10以下（替え時）: -5%。両チームのGSAx差を補正値として加算。"
+    },
+    {
+      "id": "N010", "type": "initial", "title": "休息日数補正",
+      "body": "2日以上の休息 vs 0〜1日: +4%。0日（B2B）vs 2日以上休息: -8%（N005と合算可）。プレーオフでは連戦がないため主にレギュラーシーズンで発動。"
+    },
+    {
+      "id": "N011", "type": "initial", "title": "PP/PKマッチアップ補正",
+      "body": "相手のPP%が高く自チームのPK%が低い場合は-2〜-4%。逆（自チームPP強×相手PK弱）は+2%。ペナルティ多いチーム同士の対戦では増幅。"
+    },
+    {
+      "id": "N012", "type": "initial", "title": "主力選手欠場補正",
+      "body": "第1ラインFWの欠場: -5〜-8%（得点力直結）。第1ラインDの欠場: -3〜-5%。主力ゴーリー欠場: N006で別途処理。複数人欠場の場合は累積可（上限-12%）。"
+    },
+    {
+      "id": "N013", "type": "initial", "title": "ホームアイス補正の詳細化",
+      "body": "NHLのホームアドバンテージは『ラストチェンジ権』が最大の理由。ホームコーチは相手のライン交代を見てから自チームのラインを選べるため、毎フェイスオフで有利なマッチアップを作れる。補正値: 通常ホーム +5%。相手がB2B遠征の場合 +8%（N005と合算）。プレーオフのホームシード +7%。ホームが消化試合確定済み +2%（モチベーション低下で半減）。アウェーチームがB2B＋ホーム側がフレッシュの場合はN005を優先して合算。",
+      "reason": "ラストチェンジ権はNHL固有のルールで、コーチングの戦術優位を毎プレーで生む。これは他スポーツのホームアドバンテージと性質が異なる構造的優位。"
+    },
+    {
+      "id": "N015", "type": "scope_note", "title": "AHL（マイナーリーグ）を対象外とする理由【実地検証済み 2026-04-11】",
+      "body": "AHLはオッズが存在するが、以下の理由で現時点では分析対象外とする。2026-04-11に主要統計サイトを実地検証した結果を記録する。",
+      "verified_findings": {
+        "L1指標（xGF%）": {
+          "verdict": "❌ 存在しない（全主要サービスで確認）",
+          "detail": [
+            "ahltracker.com: チームページはGP/W/L/GF/GA/PDO/PP%/PK%のみ。xGF%・Corsi・CF%・SAT%は一切存在しないことを実地確認。",
+            "quanthockey.com/ahl: 選手個人統計（G/A/P/SOG/SH%）のみ。チームxGF%なし。",
+            "naturalstattrick.com: NHL専用（403エラー＋検索結果からNHLのみと確認）。AHL非対応。",
+            "eliteprospects.com: 選手基本統計のみ（G/A/TP/PIM/+/-）。高度統計なし。",
+            "結論: AHLのxGF%を提供しているサービスは現時点で公開されていない。"
+          ]
+        },
+        "代替L1指標（GF%・PDO・PP%・PK%）": {
+          "verdict": "⚠️ 取得可能だが精度が著しく低い",
+          "detail": [
+            "GF%: quanthockey.com/ahlで取得可能。ただしN001③「最終手段」相当のため-5%ペナルティが毎回発動。",
+            "PDO: ahltracker.comで提供。ただしAHLはロースター入れ替えが多くPDOの解釈が困難。",
+            "PP%・PK%: 複数サービスで取得可能。補完指標として有効。",
+            "得失点差/GP: 直接提供サービスはないが計算可能（GF/GP - GA/GP）。",
+            "総評: NHLのxGF%（精度トップ）に相当するAHL指標は存在しない。GF%ベースは過去のPDO・コールアップ影響を受けやすく誤判断リスクが高い。"
+          ]
+        },
+        "ゴーリー先発確認": {
+          "verdict": "❌ 一元的な確認手段が存在しない",
+          "detail": [
+            "dailyfaceoff.com: NHL専用であることを実地確認（AHLページなし）。",
+            "rotowire.com: NHL先発のみ。",
+            "hashtaghockey.com: NHL先発のみ。",
+            "AHL代替手段: 各チームの公式X（旧Twitter）アカウント・ローカルメディア（例: mayorsmanor.com）が個別に情報発信。しかし30チーム分を一元管理する標準ワークフローの構築コストが高い。",
+            "結論: N006（ゴーリー先発確認必須）を満たす手段がなく、GO判断の最低条件を満たせない。"
+          ]
+        },
+        "ラインナップ安定性": {
+          "verdict": "❌ 構造的に不安定",
+          "detail": [
+            "NHLの親チームが怪我・体調等に応じて試合直前にコールアップ・センドダウンを実施。AHLの主力が試合当日にNHLに引き上げられるケースが頻繁に発生。",
+            "実際のAHLハンディキャッパーも『ロースター確認が最重要かつ最困難』と指摘（docsports.com調査）。",
+            "N012（主力欠場補正）が恒常的・予測不可能な形で発動する。"
+          ]
+        },
+        "オッズ・賭けやすさ": {
+          "verdict": "✅ 問題なし",
+          "detail": [
+            "OddsPortal（oddsportal.com/hockey/usa/ahl/）でAHLオッズが存在することを確認。",
+            "Oddschecker・Stake等でも対応。",
+            "ただしNHLスケジュールが少ない日に一般ベッターの資金が流入し、市場効率が下がるため値段が不安定になりやすい。"
+          ]
+        }
+      },
+      "overall_verdict": "当初の懸念「代替指標が曖昧」は正しかった。xGF%は存在せず、GF%代替もN001③ペナルティ込みで精度が著しく低い。加えてゴーリー確認（N006）の根本的な解決策もなく、ラインナップも構造的に不安定。3つの障壁が重なりAHLは現状で対象外が妥当。",
+      "reactivation_conditions": [
+        "【必須①】AHL向けxGF%モデルが公開される（または自前でahltracker.comのOn-Ice/Advancedデータを確認しCorsi相当指標が存在すると判明した場合）",
+        "【必須②】AHLゴーリー先発を試合当日に確認できる一元的サービス・ワークフローを確立する（各チームX公式30件を監視する仕組み等）",
+        "【推奨③】コールアップ・センドダウンをリアルタイム把握できる手段（Elite Prospects Transactions等）を分析フローに組み込む",
+        "【補足】プレーオフ期間はコールアップが制限されるため③のリスクが下がる。その時期限定での試験的稼働も選択肢。"
+      ],
+      "investigated": "2026-04-11",
+      "sources_verified": [
+        "https://www.ahltracker.com/teams （直接アクセス・xGF%なし確認）",
+        "https://www.quanthockey.com/ahl/en/seasons/2025-26/ （直接アクセス・基本統計のみ確認）",
+        "https://www.eliteprospects.com/league/ahl/stats/2025-2026 （直接アクセス・選手統計のみ確認）",
+        "https://www.dailyfaceoff.com/starting-goalies （NHL専用・AHL非対応確認）",
+        "https://www.oddsportal.com/hockey/usa/ahl/ （AHLオッズあり確認）",
+        "https://www.docsports.com/2014/ahl-hockey-betting-expert-tips-wagering-advice-071.html （AHLハンディキャップの実務的困難を確認）"
+      ]
+    },
+    {
+      "id": "N014", "type": "initial", "title": "ラインナップ確認チェックリスト",
+      "body": "分析前に必ず以下を確認する。① 第1ゴーリー先発確認（dailyfaceoff.com / 当日9〜11時EST）。② 第1ラインFW 3人の出場可否（nhl.com/injuries）。③ エースDF（氷上時間トップ2）の出場可否。④ 怪我人リスト全体確認。確認できない項目がある場合は推奨に『条件付き』フラグを立て、確認後に最終判断する。全項目確認済みでなければGO判断は出さない。",
+      "checklist": ["先発G確認", "第1FW全員確認", "エースDF確認", "怪我リスト確認"]
+    }
+  ]
+}
