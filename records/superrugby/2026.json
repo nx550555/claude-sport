@@ -7,9 +7,9 @@
   "started": "2026-04-10",
   "summary": {
     "total": 1,
-    "hit": null,
-    "hit_rate": null,
-    "ev_total": 0
+    "hit": 1,
+    "hit_rate": 1.0,
+    "ev_total": 0.54
   },
   "standings_snapshot": {
     "as_of": "Round 8終了後（2026-04-10時点）",
@@ -61,12 +61,12 @@
       "estimated_win_pct": 76,
       "rules_applied": ["S001", "S002", "S004", "S005", "S008"],
       "checklist_done": true,
-      "result": null,
-      "score": null,
-      "hit": null,
-      "actual_ev": null,
+      "result": "Crusaders",
+      "score": "32-12",
+      "hit": true,
+      "actual_ev": 0.54,
       "miss_layer": null,
-      "note": "ラインナップ確認完了でSKIP→GO昇格。Crusaders H2H圧倒的優位、Suncorp 5連勝。Reds HOME補正を上回るH2H優位性。EV+17.0%、信頼度76%。"
+      "note": "ラインナップ確認完了でSKIP→GO昇格。Crusaders H2H圧倒的優位、Suncorp 5連勝。Reds HOME補正を上回るH2H優位性。EV+17.0%、信頼度76%。【結果】Crusaders 32-12 Reds。大差でHIT。ホームセミファイナル確定。"
     }
   ],
   "screening_log": [

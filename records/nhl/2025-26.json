@@ -6,9 +6,9 @@
   "started": "2026-04-09",
   "summary": {
     "total": 2,
-    "hit": 1,
-    "hit_rate": null,
-    "ev_total": null
+    "hit": 2,
+    "hit_rate": 1.0,
+    "ev_total": 1.863
   },
   "games": [
     {
@@ -86,12 +86,12 @@
       "goalie_confirmed": false,
       "rules_applied": ["N001", "N004", "N006"],
       "checklist_done": true,
-      "result": null,
-      "score": null,
-      "hit": null,
-      "actual_ev": null,
+      "result": "Ottawa Senators",
+      "score": "3-2",
+      "hit": true,
+      "actual_ev": 1.53,
       "miss_layer": null,
-      "note": "市場が50/50評価(2.52/2.53)だが、OTTはリーグ3位xGF%でNYI(26位)に対し実質5.52ptの優位。両チーム非B2B。Ullmark vs Sorokin両エース互角。市場乖離13.1ptが根拠。"
+      "note": "市場が50/50評価(2.52/2.53)だが、OTTはリーグ3位xGF%でNYI(26位)に対し実質5.52ptの優位。両チーム非B2B。Ullmark vs Sorokin両エース互角。市場乖離13.1ptが根拠。【結果】OTT 3-2 NYI。Brady Tkachuk残り13秒決勝点。ReimER先発（Ullmarkではなく）でも予測通りOTT勝利。市場乖離が機能。HIT (+1.53)。"
     }
   ],
   "screening_log": [

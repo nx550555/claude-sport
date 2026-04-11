@@ -22,14 +22,21 @@
 - [ ] MC2026 F 結果確認・記録（4/12試合後）
 - [x] NRL Round 6 Rabbitohs vs Raiders 結果確認・記録 ← Raiders 30-22勝利 → MISS（cumulative更新済）
 - [x] Super Rugby R9 Reds vs Crusaders 再評価 ← ラインナップ確認→GO（Crusaders 1.54 EV+17%）記録済
-- [ ] Super Rugby R9 結果確認（Reds/Crusaders・Hurricanes/Blues・Drua/Force）← 4/11夜 Queensland時間
-- [ ] NHL OTT @ NYI 結果確認・記録（4/11 5PM ET試合）
+- [x] Super Rugby R9 結果確認・記録（Crusaders 32-12 Reds HIT / Hurricanes 52-14 Blues 予測なし）
+- [x] NHL OTT @ NYI 結果確認・記録（Ottawa Senators 3-2 NYI HIT +1.53）
 - [ ] UFL Week3 Dallas vs Columbus 結果確認・記録（4/13試合後）
 - [x] NBA 4/12最終日 分析完了 ← Rockets CONDITIONAL GO（-500/1.20 EV+5.6%）B008確認後確定。Cavaliers PENDING_ODDS（オッズ-500以内+Mitchell ACTIVEでGO候補）
 - [ ] MC2026 F 結果確認・記録（4/12試合後）
 - [~] WTA Stuttgart ドロー確認・分析（開幕4/13）← ドロー4/11公開。cElo差80pt以上のマッチアップ抽出要
 
 ---
+
+## 直近完了（4/11 夜間自動分析）
+
+- [x] NHL OTT @ NYI 結果確認・記録（Ottawa 3-2 HIT / Tkachuk残り13秒決勝点）
+- [x] Super Rugby R9 Reds vs Crusaders 結果確認（Crusaders 32-12 HIT / ホームSF確定）
+- [x] cumulative.json・dashboard.html更新（通算64.3% 9/14、累積EV+0.283）
+- [x] 日次レポート出力（2026-04-11.md）
 
 ## 直近完了（4/11 本日）
 

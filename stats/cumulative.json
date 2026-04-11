@@ -22,11 +22,12 @@
   },
   "nhl": {
     "total_predictions": 2,
-    "hits": 1,
-    "hit_rate": null,
-    "ev_total": 0.333,
-    "pending": 1,
-    "status": "in_progress"
+    "hits": 2,
+    "hit_rate": 1.0,
+    "ev_total": 1.863,
+    "pending": 0,
+    "status": "in_progress",
+    "note": "COL 3-1 HIT(+0.333) / OTT 3-2 NYI HIT(+1.53)。2/2 100%。"
   },
   "ufl": {
     "total_predictions": 1,
@@ -47,12 +48,12 @@
   },
   "superrugby": {
     "total_predictions": 1,
-    "hits": null,
-    "hit_rate": null,
-    "ev_total": 0,
-    "pending": 1,
+    "hits": 1,
+    "hit_rate": 1.0,
+    "ev_total": 0.54,
+    "pending": 0,
     "status": "in_progress",
-    "note": "R9 Crusaders GO（4/11 Suncorp）。結果待ち。"
+    "note": "R9 Crusaders 32-12 Reds HIT(+0.54)。ホームセミファイナル確定。"
   },
   "nfl": {
     "total_predictions": 0,
