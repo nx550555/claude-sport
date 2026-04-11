@@ -1,8 +1,5 @@
-$ErrorActionPreference = "Stop"
 $ProjectDir = "C:\Users\ohwada\Desktop\claude_sport"
-$ClaudeExe  = "C:\Users\ohwada\.local\bin\claude.exe"
 $LogFile    = "$ProjectDir\scripts\auto_update.log"
-
 Set-Location $ProjectDir
 
 $now     = Get-Date
@@ -15,40 +12,24 @@ function Write-Log($msg) {
     Add-Content -Path $LogFile -Value $line -Encoding UTF8
 }
 
-Write-Log "=== Auto update start ==="
+Write-Log "=== Auto push start: $nowStr ==="
 
-$prompt = "Read BACKLOG.md and stats/cumulative.json. Check pending results (hit:null) via WebSearch. Update records/ files and dashboard.html (set last-updated-time to '" + $nowStr + "' and next-update-time to '" + $nextRun + "'). Update stats/cumulative.json and BACKLOG.md. Reply only in Japanese. Keep it concise."
+# dashboard.html のタイムスタンプを更新
+$html = [System.IO.File]::ReadAllText("$ProjectDir\dashboard.html", [System.Text.Encoding]::UTF8)
+$html = $html -replace '(<span id="last-updated-time">)[^<]*(</span>)', ('${1}' + $nowStr + '${2}')
+$html = $html -replace '(<span id="next-update-time">)[^<]*(</span>)', ('${1}' + $nextRun + '${2}')
+[System.IO.File]::WriteAllText("$ProjectDir\dashboard.html", $html, [System.Text.Encoding]::UTF8)
+Write-Log "Timestamp updated"
 
-Write-Log "Running Claude..."
-
-$job = Start-Process -FilePath $ClaudeExe `
-    -ArgumentList "-p", "--permission-mode", "bypassPermissions", "--max-budget-usd", "1.00", $prompt `
-    -WorkingDirectory $ProjectDir `
-    -NoNewWindow -PassThru
-
-$timeout = 600
-if (-not $job.WaitForExit($timeout * 1000)) {
-    $job.Kill()
-    Write-Log "ERROR: Timeout after $timeout seconds - killed"
-    exit 1
+# GitHub Pages へ push
+git add -A
+$changed = git status --porcelain
+if ($changed) {
+    git commit -m ("Auto push " + $now.ToString("yyyy-MM-dd HH:mm"))
+    git push origin main
+    Write-Log "Push complete"
+} else {
+    Write-Log "No changes - skip push"
 }
 
-Write-Log "Claude done (exit code: $($job.ExitCode))"
-
-Write-Log "Pushing to GitHub Pages..."
-try {
-    git add -A
-    $changed = git status --porcelain
-    if ($changed) {
-        git commit -m ("Auto update " + $now.ToString("yyyy-MM-dd HH:mm"))
-        git push origin main
-        Write-Log "Push complete"
-    } else {
-        Write-Log "No changes - skip push"
-    }
-} catch {
-    Write-Log ("ERROR: git push failed - " + $_)
-    exit 1
-}
-
-Write-Log "=== Auto update complete ==="
+Write-Log "=== Done ==="
