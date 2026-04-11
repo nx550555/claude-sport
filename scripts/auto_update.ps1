@@ -16,27 +16,24 @@ function Write-Log($msg) {
 }
 
 Write-Log "=== Auto update start ==="
-Write-Log ("Now: " + $nowStr + " / Next: " + $nextRun)
 
-$p1 = "Auto execution mode. Current time: " + $nowStr + ". Next scheduled run: " + $nextRun + ". "
-$p2 = "Please do the following in order, in Japanese: "
-$p3 = "1. Read BACKLOG.md and stats/cumulative.json, identify unconfirmed results (hit:null or status:pending). "
-$p4 = "2. Search for each result using WebSearch and update records/ files. "
-$p5 = "3. Screen today and tomorrow games (NRL/NHL/NBA/SuperRugby/UFL/Tennis) using rules in core/rules_*.json. "
-$p6 = "4. If GO candidate found, add to records/. "
-$p7 = "5. Update dashboard.html: set last-updated-time to '" + $nowStr + "', next-update-time to '" + $nextRun + "', update KPI/active/history/analysis-log sections. "
-$p8 = "6. Update stats/cumulative.json. "
-$p9 = "7. Update BACKLOG.md completed items to [x]."
-$prompt = $p1 + $p2 + $p3 + $p4 + $p5 + $p6 + $p7 + $p8 + $p9
+$prompt = "Read BACKLOG.md and stats/cumulative.json. Check pending results (hit:null) via WebSearch. Update records/ files and dashboard.html (set last-updated-time to '" + $nowStr + "' and next-update-time to '" + $nextRun + "'). Update stats/cumulative.json and BACKLOG.md. Reply only in Japanese. Keep it concise."
 
 Write-Log "Running Claude..."
-try {
-    & $ClaudeExe -p $prompt
-    Write-Log "Claude done"
-} catch {
-    Write-Log ("ERROR: Claude failed - " + $_)
+
+$job = Start-Process -FilePath $ClaudeExe `
+    -ArgumentList "-p", "--permission-mode", "bypassPermissions", "--max-budget-usd", "1.00", $prompt `
+    -WorkingDirectory $ProjectDir `
+    -NoNewWindow -PassThru
+
+$timeout = 600
+if (-not $job.WaitForExit($timeout * 1000)) {
+    $job.Kill()
+    Write-Log "ERROR: Timeout after $timeout seconds - killed"
     exit 1
 }
+
+Write-Log "Claude done (exit code: $($job.ExitCode))"
 
 Write-Log "Pushing to GitHub Pages..."
 try {
