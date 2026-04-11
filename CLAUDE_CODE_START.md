@@ -12,6 +12,21 @@
    - `[~]` 作業中の項目があれば「前回途中になっています」と報告する
    - `[ ]` 未着手の項目があれば一覧を表示する
 
+**【毎回必須】抜け漏れチェック（②の要件）：**
+以下を確認して「現状チェック」として報告する：
+- hit:null の未確認試合が records/ にないか
+- BACKLOG.md の [ ] 未着手項目で対応できるものはないか
+- 前回の分析ログ（daily_reports/）と今回の状況に乖離がないか
+- 今日・明日に試合がある種目でスクリーニングが必要なものはないか
+
+**【会話終了時】セッション終了手順（③の要件）：**
+ユーザーが「会話を終了する」「終わり」「終了」などと言ったら：
+1. このセッションで行った作業を `session_logs/YYYY-MM-DD_HH.md` に保存する
+2. BACKLOG.md の完了項目を [x] に更新する
+3. 次回への申し送り事項を BACKLOG.md の「未完了」欄に追記する
+4. `git add -A && git commit -m "Session end YYYY-MM-DD" && git push origin main` を実行する
+5. 「セッション終了。次回は〇〇から再開します。」と報告する
+
 **テニス（ATP）の作業をするとき：**
 1. `C:\Users\ohwada\Desktop\claude_sport\core\rules_tennis.json` を読み込む
 2. `C:\Users\ohwada\Desktop\claude_sport\records\tennis\2026-MC.json` を読み込む

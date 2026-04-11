@@ -198,6 +198,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
   <div class="tab" id="tab-analysislog" onclick="showTab('analysislog')">🔍 分析ログ</div>
   <div class="tab" id="tab-timeline" onclick="showTab('timeline')">📈 成長分析</div>
   <div class="tab" id="tab-upset"    onclick="showTab('upset')">🎯 アップセット分析</div>
+  <div class="tab" id="tab-dailyreport" onclick="showTab('dailyreport')">📋 日報</div>
   <div class="tab" id="tab-rules"    onclick="showTab('rules')">⚙️ ルール変更履歴</div>
   <div class="tab" id="tab-excluded" onclick="showTab('excluded')">🚫 除外リーグ</div>
 </div>
@@ -1441,6 +1442,50 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
         </tbody>
       </table>
     </div>
+  </div>
+
+</div>
+
+<!-- ===== 日報 ===== -->
+<div class="tab-content" id="content-dailyreport">
+  <div class="section-title">日報 — 自動実行ログ</div>
+  <p style="font-size:12px;color:var(--text2);margin-bottom:16px;line-height:1.8;">
+    タスクスケジューラによる自動実行（8:30 / 20:30）の結果レポートです。<br>
+    各レポートは <code>daily_reports/YYYY-MM-DD.md</code> に保存されます。<br>
+    <span style="color:#d29922;">⚠ 自動実行が未発生の場合はレポートがありません。手動で
+    <code>scripts/auto_update.ps1</code> を実行するとレポートが生成されます。</span>
+  </p>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin-bottom:24px;">
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 16px;">
+      <div style="font-size:10px;text-transform:uppercase;color:var(--text2);margin-bottom:6px;">自動実行スケジュール</div>
+      <div style="font-size:13px;">毎日 <b style="color:#3fb950;">08:30</b> と <b style="color:#3fb950;">20:30</b></div>
+      <div style="font-size:11px;color:var(--text2);margin-top:4px;">Windows タスクスケジューラ</div>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 16px;">
+      <div style="font-size:10px;text-transform:uppercase;color:var(--text2);margin-bottom:6px;">自動実行の内容</div>
+      <div style="font-size:11px;line-height:1.8;color:var(--text2);">
+        ① 未確認試合の結果を検索<br>
+        ② 外れ分析・upset_patterns更新<br>
+        ③ 新規試合スクリーニング<br>
+        ④ ダッシュボード・累積統計更新<br>
+        ⑤ GitHub Pages へ push
+      </div>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 16px;">
+      <div style="font-size:10px;text-transform:uppercase;color:var(--text2);margin-bottom:6px;">ログファイル場所</div>
+      <div style="font-size:11px;color:var(--text2);line-height:1.8;">
+        実行ログ: <code>scripts/auto_update.log</code><br>
+        日報: <code>daily_reports/YYYY-MM-DD.md</code><br>
+        セッション履歴: <code>session_logs/YYYY-MM-DD.md</code>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title" style="margin-top:8px;">最新レポート</div>
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:20px;font-size:12px;color:var(--text2);line-height:1.8;" id="latest-report-content">
+    レポートはまだありません。自動実行後にここに表示されます。<br>
+    手動確認: PowerShell で <code>Get-Content daily_reports\(最新日付).md</code>
   </div>
 
 </div>
