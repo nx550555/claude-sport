@@ -1,0 +1,120 @@
+{
+  "_description": "試合結果の取得先を種目別に定義。result_policyに従い必ずprimary_urlのみで勝敗を確定すること。",
+  "_version": "1.0",
+  "_updated": "2026-04-12",
+
+  "result_policy": {
+    "rule": "勝ち負けはprimary_urlのみで確定する。見つからない場合はhit=nullのまま保留。絶対に推測・補完・他ソースからの類推をしてはならない。",
+    "fallback_rule": "primary_urlで結果が取得できなかった場合のみfallback_urlを使用。fallbackでも取れない場合はstatus=pendingを維持。",
+    "context_rule": "スコア詳細・怪我情報・試合内容はcontext_sourcesから取得してよい。ただし勝敗の上書きには使用しない。"
+  },
+
+  "sports": {
+    "tennis_atp": {
+      "primary_url": "atptour.com/en/scores",
+      "primary_note": "ATP公式スコアページ。試合終了後30分以内に確定スコアを掲載。",
+      "fallback_url": "flashscore.com",
+      "search_query_template": "site:atptour.com {player1} {player2} {tournament} {year} result",
+      "context_sources": [
+        "tennismajors.com",
+        "tennisabstract.com",
+        "tennisnerd.net",
+        "perfect-tennis.com"
+      ]
+    },
+    "tennis_wta": {
+      "primary_url": "wtatennis.com/scores",
+      "primary_note": "WTA公式スコアページ。",
+      "fallback_url": "flashscore.com",
+      "search_query_template": "site:wtatennis.com {player1} {player2} {tournament} {year} result",
+      "context_sources": [
+        "tennismajors.com",
+        "tennisabstract.com",
+        "tennisnerd.net"
+      ]
+    },
+    "nhl": {
+      "primary_url": "nhl.com/scores",
+      "primary_note": "NHL公式スコアページ。試合終了直後に確定。",
+      "fallback_url": "espn.com/nhl/scoreboard",
+      "search_query_template": "{team1} {team2} NHL {date} final score result",
+      "search_allowed_domains": ["nhl.com", "espn.com"],
+      "context_sources": [
+        "moneypuck.com",
+        "naturalstattrick.com",
+        "nhltraderumors.com"
+      ]
+    },
+    "nba": {
+      "primary_url": "nba.com/scores",
+      "primary_note": "NBA公式スコアページ。",
+      "fallback_url": "espn.com/nba/scoreboard",
+      "search_query_template": "{team1} {team2} NBA {date} final score result",
+      "search_allowed_domains": ["nba.com", "espn.com"],
+      "context_sources": [
+        "statmuse.com",
+        "basketball-reference.com",
+        "rotowire.com"
+      ]
+    },
+    "nrl": {
+      "primary_url": "nrl.com/draw",
+      "primary_note": "NRL公式ドロー・スコアページ。",
+      "fallback_url": "flashscore.com.au",
+      "search_query_template": "{team1} {team2} NRL {year} round {round} result score",
+      "search_allowed_domains": ["nrl.com", "flashscore.com.au"],
+      "context_sources": [
+        "zerotackle.com",
+        "leagueunlimited.com",
+        "theroar.com.au"
+      ]
+    },
+    "superrugby": {
+      "primary_url": "super.rugby/results",
+      "primary_note": "Super Rugby Pacific公式スコアページ。",
+      "fallback_url": "espn.com/rugby",
+      "search_query_template": "{team1} {team2} Super Rugby {year} round {round} result score",
+      "search_allowed_domains": ["super.rugby", "espn.com"],
+      "context_sources": [
+        "rugbypass.com",
+        "theroar.com.au",
+        "rugby.com.au"
+      ]
+    },
+    "ufl": {
+      "primary_url": "theufl.com/scores",
+      "primary_note": "UFL公式スコアページ。試合終了後即時更新。",
+      "fallback_url": "foxsports.com/ufl/scores",
+      "search_query_template": "{team1} {team2} UFL week {week} {year} final score result",
+      "search_allowed_domains": ["theufl.com", "foxsports.com"],
+      "context_sources": [
+        "foxsports.com/stories/ufl",
+        "si.com/nfl/ufl",
+        "uflnewshub.com"
+      ]
+    },
+    "nfl": {
+      "primary_url": "nfl.com/scores",
+      "primary_note": "NFL公式スコアページ。",
+      "fallback_url": "espn.com/nfl/scoreboard",
+      "search_query_template": "{team1} {team2} NFL week {week} {year} final score result",
+      "search_allowed_domains": ["nfl.com", "espn.com"],
+      "context_sources": [
+        "footballoutsiders.com",
+        "pbpstats.com",
+        "nextgenstats.nfl.com"
+      ]
+    },
+    "cfl": {
+      "primary_url": "cfl.ca/scores",
+      "primary_note": "CFL公式スコアページ。",
+      "fallback_url": "flashscore.com",
+      "search_query_template": "{team1} {team2} CFL week {week} {year} final score result",
+      "search_allowed_domains": ["cfl.ca"],
+      "context_sources": [
+        "3downnation.com",
+        "cfl.ca/news"
+      ]
+    }
+  }
+}

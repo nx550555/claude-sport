@@ -1,6 +1,7 @@
 $ProjectDir = "C:\Users\ohwada\Desktop\claude_sport"
 $ClaudeExe  = "C:\Users\ohwada\.local\bin\claude.exe"
 $LogFile    = "$ProjectDir\scripts\auto_update.log"
+$DashFile   = "$ProjectDir\dashboard\index.html"   # FIX: was dashboard.html (wrong path)
 Set-Location $ProjectDir
 
 $now     = Get-Date
@@ -17,21 +18,52 @@ function Write-Log($msg) {
 
 Write-Log "=== Auto update start: $nowStr ==="
 
+# ---------------------------------------------------------------
 # Prompt: English only to avoid encoding issues
-# Claude will respond and write files in Japanese
+# STEP2 now enforces trusted-source-only result verification
+# ---------------------------------------------------------------
 $p = "AUTOMATED ANALYSIS MODE. " +
      "Current time: $nowStr. Next run: $nextRun. " +
      "Project: C:\Users\ohwada\Desktop\claude_sport " +
      "Execute these steps in order. After EACH step write one line: [STEP N DONE: brief result]. " +
-     "STEP1: Read BACKLOG.md and records/ files. List all games where hit=null or status=pending. " +
-     "STEP2: For each pending game, search WebSearch for the result. Max 8 searches. " +
-     "STEP3: Update the records/ JSON files and stats/cumulative.json with confirmed results. " +
-     "STEP4: For any new miss (hit=false), check upset_patterns.json and add entry if needed. Check if any rule in core/rules_*.json needs updating. " +
-     "STEP5: Search for games in next 24 hours for active sports (NRL, NHL, NBA, SuperRugby, UFL). Max 5 searches. " +
-     "STEP6: Apply L1 screening rules from core/rules_*.json. If GO candidate exists (confidence>=75 and EV>5%), add to records/. " +
-     "STEP7: Update dashboard.html - set last-updated-time to '$nowStr', next-update-time to '$nextRun', update all KPI numbers, active recommendations, and history. " +
+
+     "STEP1: Read BACKLOG.md and records/ files. Also read core/trusted_sources.json. " +
+     "List all games where hit=null or status=pending. " +
+
+     "STEP2-A [RESULT VERIFICATION - STRICT]: " +
+     "For each pending game, determine the sport type and look up the primary_url from core/trusted_sources.json. " +
+     "Search WebSearch using ONLY that primary URL as the source (use allowed_domains or site: query). " +
+     "Example: for NHL use 'site:nhl.com {team1} {team2} result', for ATP use 'site:atptour.com {player1} {player2} result'. " +
+     "If the primary_url returns no confirmed result, try fallback_url once. " +
+     "If NEITHER source confirms the result, set hit=null and status=pending. DO NOT guess, infer, or use blog/news sites for win/loss. " +
+     "Max 6 searches for result verification. " +
+
+     "STEP2-B [CONTEXT GATHERING]: " +
+     "For confirmed results (and separately for new GO candidates), search context_sources from trusted_sources.json. " +
+     "Gather: injury updates, lineup changes, notable plays. Max 4 searches. " +
+
+     "STEP3: Update the records/ JSON files and stats/cumulative.json with confirmed results only. " +
+     "For any result still unconfirmed after STEP2-A, leave hit=null. " +
+
+     "STEP4: For any new miss (hit=false), check upset_patterns.json and add entry if needed. " +
+     "Check if any rule in core/rules_*.json needs updating. " +
+
+     "STEP5: Search for games in next 24 hours for active sports. " +
+     "Use only official league sites or sports-reference sites. Max 5 searches. " +
+
+     "STEP6: Apply L1 screening rules from core/rules_*.json. " +
+     "If GO candidate exists (confidence>=75 and EV>5%), add to records/. " +
+
+     "STEP7: Update dashboard/index.html (NOT dashboard.html - the file is at dashboard/index.html). " +
+     "Set <span id='last-updated-time'> to '$nowStr' and <span id='next-update-time'> to '$nextRun'. " +
+     "Update all KPI numbers (hit rate, EV, GO count, pending count), active recommendation cards, and history table. " +
+     "Update the notice div with today's most important pending predictions and results. " +
+
      "STEP8: Update BACKLOG.md - mark completed items [x], add new pending items [ ]. " +
-     "STEP9: Write a Japanese daily report to file $reportFile with sections: results confirmed today, new GO candidates, misses and analysis, rule changes, summary. " +
+
+     "STEP9: Write a Japanese daily report to $reportFile with sections: " +
+     "results confirmed today (with source URL noted), new GO candidates, misses and analysis, rule changes, summary stats. " +
+
      "After all steps: output one line: AUTO_COMPLETE"
 
 Write-Log "Starting Claude analysis (budget: USD2.00, auto-permissions)..."
@@ -57,12 +89,16 @@ if (-not (Test-Path $reportFile)) {
     $header + ($output -join "`n") | Out-File -FilePath $reportFile -Encoding UTF8
 }
 
-# Timestamp update (fallback in case Claude missed it)
-$html = [System.IO.File]::ReadAllText("$ProjectDir\dashboard.html", [System.Text.Encoding]::UTF8)
-$html = $html -replace '(<span id="last-updated-time">)[^<]*(</span>)', ('${1}' + $nowStr + '${2}')
-$html = $html -replace '(<span id="next-update-time">)[^<]*(</span>)', ('${1}' + $nextRun + '${2}')
-[System.IO.File]::WriteAllText("$ProjectDir\dashboard.html", $html, [System.Text.Encoding]::UTF8)
-Write-Log "Timestamp updated (fallback)"
+# Timestamp update fallback (in case Claude missed the span tags)
+if (Test-Path $DashFile) {
+    $html = [System.IO.File]::ReadAllText($DashFile, [System.Text.Encoding]::UTF8)
+    $html = $html -replace '(<span id="last-updated-time">)[^<]*(</span>)', ('${1}' + $nowStr + '${2}')
+    $html = $html -replace '(<span id="next-update-time">)[^<]*(</span>)', ('${1}' + $nextRun + '${2}')
+    [System.IO.File]::WriteAllText($DashFile, $html, [System.Text.Encoding]::UTF8)
+    Write-Log "Timestamp updated in dashboard/index.html"
+} else {
+    Write-Log "ERROR: dashboard/index.html not found at $DashFile"
+}
 
 # Push to GitHub Pages
 Write-Log "Pushing to GitHub Pages..."
