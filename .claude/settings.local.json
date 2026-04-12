@@ -27,7 +27,12 @@
       "WebFetch(domain:moneypuck.com)",
       "WebFetch(domain:www.naturalstattrick.com)",
       "WebFetch(domain:www.quanthockey.com)",
-      "WebFetch(domain:www.rnz.co.nz)"
+      "WebFetch(domain:www.rnz.co.nz)",
+      "WebFetch(domain:www.foxsports.com)",
+      "WebFetch(domain:www.nhl.com)",
+      "WebFetch(domain:www.theufl.com)",
+      "WebFetch(domain:www.cbssports.com)",
+      "WebFetch(domain:sports.yahoo.com)"
     ]
   }
 }

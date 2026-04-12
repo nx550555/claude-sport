@@ -150,20 +150,65 @@
 
   "gamble_bet_candidates": {
     "description": "通常GOの基準外。アンダードッグに有利条件が重なる場合の別枠追跡。別stake（通常の1/3以下推奨）",
+    "framework_note": "Phase2→Phase3の橋渡し枠。正しく勝者を予測することを目標とする。GOが強い側への信頼、GAMBLE_BETは弱い側に根拠があると判断した場合のアンダードッグ予測。",
     "trigger_conditions_common": [
-      "強さ指標差がボーダーゾーン（UF03該当）",
-      "upset_factorsが2つ以上重なる",
-      "市場オッズが各種目の閾値以上（アンダードッグへの過大評価がある）"
+      "① 強さ指標差がボーダーゾーン（各種目の下限〜中間ゾーン）",
+      "② upset_factorsが2つ以上重なる（UF分類から選択）",
+      "③ アンダードッグのオッズ≥2.50（各種目によって調整）",
+      "④ 推定アンダードッグ勝率≥35%（ロングショットすぎない）",
+      "⑤ 市場impliedとの乖離≥10ptpp（真の市場ミスプライスがある）",
+      "⑥ EV≥+25%（通常GO閾値+5%より高基準を設定）"
     ],
     "trigger_conditions_by_sport": {
-      "tennis_atp": "cElo差50〜130pt ＋ UF2つ以上 ＋ オッズ≥2.50",
-      "tennis_wta": "cElo差50〜130pt ＋ UF2つ以上 ＋ オッズ≥2.50",
-      "nhl":        "xGF%差<5pt ＋ UFH01 or UFH02 ＋ オッズ≥3.00",
-      "nrl":        "PD差<10 ＋ UFN01 or UFN02 ＋ オッズ≥3.00",
-      "superrugby": "PD差<12 ＋ UFR01 or UFR02 ＋ オッズ≥3.00",
-      "ufl":        "PD差<15 ＋ UFU01 ＋ オッズ≥3.00"
+      "tennis_atp": "cElo差50〜150pt ＋ UF2つ以上 ＋ オッズ≥2.50 ＋ 推定勝率≥35% ＋ EV≥+25%",
+      "tennis_wta": "cElo差50〜150pt ＋ UF2つ以上 ＋ オッズ≥2.50 ＋ 推定勝率≥35% ＋ EV≥+25%",
+      "nhl":        "xGF%差3〜8pt ＋ UFH01/UFH02/UFH04から2つ以上 ＋ オッズ≥2.50 ＋ EV≥+25%",
+      "nrl":        "PD差5〜15 ＋ UFN01/UFN02/UF06から2つ以上 ＋ オッズ≥2.80 ＋ EV≥+25%",
+      "superrugby": "PD差5〜15 ＋ UFR01/UFR02から2つ以上 ＋ オッズ≥2.80 ＋ EV≥+25%",
+      "ufl":        "PD差10〜25 ＋ UFU01/UF02から2つ以上 ＋ オッズ≥3.00 ＋ EV≥+25%"
     },
-    "records": []
+    "stake_rule": {
+      "go_standard": "1.0u",
+      "gamble_bet": "0.25〜0.33u（1/3〜1/4）",
+      "rationale": "不確実性が高いため少額。期待値は高いが的中率は低い。複数回の外れでも破綻しないサイズ感。"
+    },
+    "records": [
+      {
+        "id": "GB001",
+        "date": "2026-04-13",
+        "sport": "tennis_wta",
+        "tournament": "Porsche Tennis Grand Prix Stuttgart 2026",
+        "round": "R1",
+        "favorite": "Andreeva M.(6) cElo 1918.4",
+        "underdog": "Ostapenko J. cElo 1811.7",
+        "celo_diff": 106.7,
+        "underdog_odds": 3.73,
+        "market_implied_pct": 26.8,
+        "estimated_win_pct": 41.0,
+        "market_gap_pp": 14.2,
+        "ev": 53.3,
+        "stake_recommended": 0.25,
+        "upset_factors": ["UF01", "UFT01"],
+        "factor_notes": {
+          "UF01": "Stuttgart = indoor clay（速め・低バウンド）。Ostapenko のフラット・攻撃的スタイルはindoor clay で特に有効。Andreeva のヘビートップスピンは低バウンドでエラー率が上がる。",
+          "UFT01": "Ostapenko 2025 Stuttgart defending champion。大会の雰囲気・コート感覚・審判との関係性（tournament familiarity）は過小評価されがちな優位。"
+        },
+        "trigger_check": {
+          "celo_diff_in_range": true,
+          "uf_count_2plus": true,
+          "odds_above_2_50": true,
+          "estimated_win_above_35": true,
+          "market_gap_above_10pp": true,
+          "ev_above_25": true
+        },
+        "prediction": "Ostapenko（GAMBLE_BET）",
+        "result": null,
+        "score": null,
+        "hit": null,
+        "actual_ev": null,
+        "note": "通常フロー: Andreeva EV -26.4%でSKIP。GAMBLE_BET枠: Ostapenko側に全条件クリア。W009発動。stake 0.25u。"
+      }
+    ]
   },
 
   "pattern_summary": {

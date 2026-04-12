@@ -30,33 +30,34 @@ nav::-webkit-scrollbar{display:none}
 .card.nrl  {border-left:4px solid #1B5E20}
 .card.srp  {border-left:4px solid #7B1FA2}
 .card.warn {border-left:4px solid #e8b84a}
+.card.gb   {border-left:4px solid #F97316}
 
 .top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:6px}
 .mn{font-size:13px;font-weight:700;flex:1;line-height:1.4}
 .sub{font-size:11px;color:#777;margin-top:2px}
 .badge{font-size:10px;font-weight:700;padding:3px 9px;border-radius:5px;white-space:nowrap}
-.bh {background:#d4f0e4;color:#0a6640}  /* HIT */
-.bm {background:#fde0e0;color:#8b1a1a}  /* MISS */
-.bp {background:#fff3d4;color:#7a4400}  /* PENDING */
-.bs {background:#f0f0f0;color:#555}     /* SKIP */
-.bl {background:#e8d9f5;color:#5b2d8e} /* GO */
-.bi {background:#dbeafe;color:#1e40af} /* INFO */
-.bpre{background:#e0f2fe;color:#0369a1} /* PRESEASON */
+.bh {background:#d4f0e4;color:#0a6640}
+.bm {background:#fde0e0;color:#8b1a1a}
+.bp {background:#fff3d4;color:#7a4400}
+.bs {background:#f0f0f0;color:#555}
+.bl {background:#e8d9f5;color:#5b2d8e}
+.bi {background:#dbeafe;color:#1e40af}
+.bpre{background:#e0f2fe;color:#0369a1}
+.bgb{background:#ffedd5;color:#9a3412}
 
 .body{font-size:11px;color:#555;line-height:1.7}
 .ev-go{font-size:10px;padding:5px 8px;background:#d4f0e4;border-radius:6px;margin-top:6px;color:#0a6640;font-weight:600}
 .ev-ng{font-size:10px;padding:5px 8px;background:#fde0e0;border-radius:6px;margin-top:6px;color:#8b1a1a}
 .ev-box{font-size:10px;color:#888;padding:5px 8px;background:#f7f6f3;border-radius:6px;margin-top:6px}
+.ev-gb{font-size:10px;padding:5px 8px;background:#ffedd5;border-radius:6px;margin-top:6px;color:#9a3412;font-weight:600}
 
-/* KPI grid */
 .krow{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-bottom:14px}
 @media(max-width:400px){.krow{grid-template-columns:repeat(2,1fr)}}
 .k{background:#fff;border-radius:10px;padding:10px 7px;text-align:center;border:1px solid #e8e8e8}
 .kn{font-size:22px;font-weight:800;margin-bottom:2px;line-height:1}
 .kl{font-size:9px;color:#999}
-.g{color:#1D9E75}.r{color:#cc2222}.o{color:#c07000}.b{color:#378ADD}
+.g{color:#1D9E75}.r{color:#cc2222}.o{color:#c07000}.b{color:#378ADD}.org{color:#F97316}
 
-/* Sport summary grid */
 .srow{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin-bottom:14px}
 @media(max-width:400px){.srow{grid-template-columns:1fr}}
 .sk{background:#fff;border-radius:10px;padding:11px 12px;border:1px solid #e8e8e8;border-left:4px solid #ddd}
@@ -71,6 +72,7 @@ nav::-webkit-scrollbar{display:none}
 .active{background:#d4f0e4;color:#0a6640}
 .pending{background:#fff3d4;color:#7a4400}
 .preseason{background:#e0f2fe;color:#0369a1}
+.gb-status{background:#ffedd5;color:#9a3412}
 
 table{width:100%;border-collapse:collapse;font-size:11px}
 th{padding:6px 8px;background:#f7f6f3;border-bottom:1px solid #e8e8e8;font-weight:600;font-size:10px;color:#666;text-align:left}
@@ -93,19 +95,24 @@ details[open] summary{color:#333}
 .flag.red{background:#fde0e0;color:#8b1a1a}
 .flag.green{background:#d4f0e4;color:#0a6640}
 .flag.blue{background:#dbeafe;color:#1e40af}
+.flag.orange{background:#ffedd5;color:#9a3412}
+
+.cond-row{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:11px;margin:6px 0}
+.cond-ok{color:#1D9E75;font-weight:700}
+.cond-ng{color:#cc2222;font-weight:700}
 </style>
 </head>
 <body>
 <div class="wrap">
 <h1>ベッティング分析ダッシュボード</h1>
-<p class="meta">更新: 2026-04-12 | 4種目 8リーグ対応 | ATP管理: 大会横断オッズ起点方式</p>
+<p class="meta">更新: 2026-04-12 | 4種目 8リーグ対応 | GAMBLE_BET枠(Phase2→3)導入</p>
 
 <div class="notice">
-  <strong>4/13–14 状況：</strong><br>
-  🎾 ATP W16 Barcelona/Munich スクリーニング完了 → <strong>全14試合SKIP</strong>（L1通過7件、全てオッズ短すぎEVマイナス）<br>
-  🏈 UFL Week3 Dallas vs Columbus（4/13 正午ET）→ <strong>Dallas GO</strong> EV+8.2% 信頼度82%<br>
-  🎾 WTA Stuttgart R1（4/13〜）→ Shnaider / Andreeva等 cElo確認後GO判断<br>
-  🎾 MC2026 F Alcaraz vs Sinner（4/13）→ SKIP（cElo差~20pt・観戦のみ）
+  <strong>4/12 本日実施済み：</strong><br>
+  🎾 WTA Stuttgart R1 スクリーニング完了 → <strong>全4試合SKIP（GO 0件）</strong>。ただし Ostapenko vs Andreeva に <strong>GAMBLE_BET(GB001) 発動 0.25u</strong><br>
+  🏈 UFL Week3 Dallas vs Columbus（4/12 4PM ET）→ 結果待ち<br>
+  🏒 NHL プレーオフ4/18〜開幕（RS終了4/16）。暫定8ブラケット確認済み<br>
+  🎾 ATP Barcelona/Munich R1（4/13〜）・MC Final（4/13）→ 次セッションで結果確認
 </div>
 
 <nav>
@@ -115,6 +122,7 @@ details[open] summary{color:#333}
   <button class="nt" onclick="sw('h',this)">アイスホッケー</button>
   <button class="nt" onclick="sw('a',this)">アメフト</button>
   <button class="nt" onclick="sw('r',this)">ラグビー</button>
+  <button class="nt" onclick="sw('g',this)">🎯 アップセット</button>
   <button class="nt" onclick="sw('b',this)">BACKLOG</button>
 </nav>
 
@@ -122,9 +130,9 @@ details[open] summary{color:#333}
 <div id="s" class="pn on">
   <div class="krow">
     <div class="k"><div class="kn g">11/15</div><div class="kl">的中率（GO）</div></div>
-    <div class="k"><div class="kn g">+2.13u</div><div class="kl">累積EV</div></div>
+    <div class="k"><div class="kn g">+2.13u</div><div class="kl">累積EV（GO）</div></div>
     <div class="k"><div class="kn">15</div><div class="kl">GO予測数</div></div>
-    <div class="k"><div class="kn bp" style="font-size:14px;padding:4px 0">1件</div><div class="kl">結果待ち</div></div>
+    <div class="k"><div class="kn org">GB001</div><div class="kl">GAMBLE_BET中</div></div>
   </div>
 
   <div class="sec">種目別成績</div>
@@ -138,19 +146,19 @@ details[open] summary{color:#333}
     <div class="sk wta">
       <div class="sk-name">WTA テニス</div>
       <div class="sk-stat" style="color:#888">0<span style="font-size:13px;font-weight:400;color:#888">/0</span></div>
-      <div class="sk-ev">Stuttgart R1開幕（4/13〜）</div>
-      <div><span class="sk-status active">cElo確認後GO判断</span></div>
+      <div class="sk-ev">Stuttgart R1スクリーニング完了（全SKIP）</div>
+      <div><span class="sk-status gb-status">GB001 Ostapenko 0.25u</span></div>
     </div>
     <div class="sk nhl">
       <div class="sk-name">NHL</div>
       <div class="sk-stat g">2<span style="font-size:13px;font-weight:400;color:#888">/2</span></div>
       <div class="sk-ev">EV +1.863u（プレーオフ4/18〜）</div>
-      <div><span class="sk-status active">プレーイン4/14〜</span></div>
+      <div><span class="sk-status pending">PO R1 スクリーニング4/16〜</span></div>
     </div>
     <div class="sk ufl">
       <div class="sk-name">UFL</div>
       <div class="sk-stat" style="color:#888">0<span style="font-size:13px;font-weight:400;color:#888">/0</span></div>
-      <div class="sk-ev">Dallas GO(EV+8.2%) → 4/13結果待ち</div>
+      <div class="sk-ev">Dallas GO(EV+8.2%) → 4/12結果待ち</div>
       <div><span class="sk-status pending">Week3</span></div>
     </div>
     <div class="sk nrl">
@@ -186,27 +194,28 @@ details[open] summary{color:#333}
     <tr><td>R16</td><td>2</td><td>1</td><td class="o">50%</td><td class="r">-0.43u</td></tr>
     <tr><td>QF</td><td>3</td><td>3</td><td class="g">100%</td><td class="g">+1.18u</td></tr>
     <tr><td>SF</td><td>2</td><td>2</td><td class="g">100%</td><td class="g">+1.15u</td></tr>
-    <tr><td>F</td><td>0</td><td>—</td><td>—</td><td>SKIP（cElo差~20pt L1未達）</td></tr>
+    <tr><td>F</td><td>0</td><td>—</td><td>—</td><td>SKIP（L1未達）</td></tr>
     <tr style="font-weight:700"><td>MC合計</td><td>10</td><td>7</td><td class="g">70%</td><td class="g">+0.53u</td></tr>
   </table>
 
-  <div class="sec">ATP W16 スクリーニングサマリ（4/12実施）</div>
+  <div class="sec">WTA Stuttgart R1 スクリーニング（4/12実施）</div>
   <table>
-    <tr><th>大会</th><th>スクリーニング数</th><th>L1通過</th><th>GO</th><th>SKIP理由</th></tr>
-    <tr><td>Barcelona Open (ATP500)</td><td>8</td><td>4</td><td class="r">0</td><td>EV全マイナス or R010</td></tr>
-    <tr><td>BMW Open Munich (ATP500)</td><td>6</td><td>3</td><td class="r">0</td><td>EV全マイナス or R010</td></tr>
-    <tr style="font-weight:700"><td>W16合計</td><td>14</td><td>7</td><td class="r">0</td><td>全SKIP</td></tr>
+    <tr><th>試合</th><th>cElo差</th><th>推定勝率</th><th>オッズ</th><th>EV</th><th>判定</th></tr>
+    <tr><td>Shnaider vs Korpatsch WC</td><td>215.9</td><td>75.6%</td><td>1.19</td><td class="r">-10.0%</td><td>SKIP</td></tr>
+    <tr><td><strong>Andreeva(6) vs Ostapenko</strong></td><td>106.7</td><td style="color:#F97316">41%*</td><td><strong>3.73</strong></td><td class="org"><strong>+53.3%</strong></td><td><span class="badge bgb" style="font-size:9px">GB001</span></td></tr>
+    <tr><td>Fernandez Q vs Eala</td><td>100.7</td><td>64.1%</td><td>1.66</td><td class="g">+6.4%</td><td>SKIP(信頼度不足)</td></tr>
+    <tr><td>Lys WC vs Badosa</td><td>—</td><td>—</td><td>—</td><td>—</td><td>SKIP(L1未達)</td></tr>
   </table>
-  <p class="disc">全SKIP要因: 市場が実力差を正確に織り込み済み。最大候補Zverev(差315)でもオッズ1.158→EV-6.2%。Musetti棄権(差418の最大候補)。R2以降で好条件が生まれる可能性あり。</p>
+  <p class="disc">*Ostapenko側の推定勝率。通常GOフロー(Andreeva側)はEV-26.4%でSKIP。W009 GAMBLE_BET発動: UF01(indoor clay速め)+UFT01(defending champ) → 2因子クリア。</p>
 </div>
 
 <!-- ===== 進行中 ===== -->
 <div id="p" class="pn">
-  <div class="sec">結果待ち予測</div>
+  <div class="sec">結果待ち（GO）</div>
 
   <div class="card ufl">
     <div class="top"><div class="mn">🏈 Dallas Renegades vs Columbus Aviators</div><span class="badge bl">GO</span></div>
-    <div class="sub">UFL Week 3 — 2026-04-13 正午ET</div>
+    <div class="sub">UFL Week 3 — 2026-04-12 4PM ET | 結果待ち</div>
     <div class="body" style="margin-top:6px">
       推奨: <strong>Dallas Renegades</strong> (オッズ 1.32 / EV +8.2% / 信頼度82%)<br>
       DAL 2-0 / PD +17.5/試合 vs COL 0-2 / PD -12.5/試合。Austin Reed QB確認済。
@@ -214,47 +223,47 @@ details[open] summary{color:#333}
     <div class="ev-go">★ EV +8.2% | 信頼度82% | Week3閾値80%通過</div>
   </div>
 
+  <div class="sec">結果待ち（GAMBLE_BET）</div>
+
+  <div class="card gb">
+    <div class="top"><div class="mn">🎾 Ostapenko J. vs Andreeva M.(6)</div><span class="badge bgb">GAMBLE_BET GB001</span></div>
+    <div class="sub">WTA Stuttgart R1 — 2026-04-13 | 室内クレー | stake 0.25u</div>
+    <div class="body" style="margin-top:6px">
+      推奨: <strong>Ostapenko</strong>（アンダードッグ）| オッズ 3.73<br>
+      cElo: Andreeva 1918.4 → Ostapenko 1811.7（差106.7pt）<br>
+      推定Ostapenko勝率 41% vs 市場implied 26.8%（乖離 +14.2pp）
+    </div>
+    <div class="ev-gb">⚡ EV +53.3% | W009発動 | UF01(indoor clay速め) + UFT01(defending champion) | stake 0.25u</div>
+    <div class="flag-row">
+      <span class="flag orange">⚠ 信頼度41%（アンダードッグ推奨の正常範囲）</span>
+      <span class="flag orange">通常のGO基準(75%)は不適用</span>
+      <span class="flag blue">EV≥25%・乖離≥10pp・2因子 全条件クリア</span>
+    </div>
+  </div>
+
+  <div class="sec">観戦のみ（SKIP確認）</div>
+
   <div class="card atp" style="border-left-color:#888">
     <div class="top"><div class="mn">🎾 Alcaraz C.(1) vs Sinner J.(2) — MC決勝</div><span class="badge bs">SKIP</span></div>
     <div class="sub">MC2026 F — 2026-04-13</div>
     <div class="body" style="margin-top:6px">
-      cElo差 ~20pt → R001不通過（閾値100pt未達）。実質50/50。観戦のみ。<br>
-      Alcaraz: ディフェンディングチャンピオン。Sinner: 4連続Masters1000決勝。
+      cElo差 ~20pt → L1未達（閾値100pt）。実質50/50。観戦のみ。
     </div>
     <div class="ev-box">SKIP — エッジなし。結果確認のみ。</div>
   </div>
 
-  <div class="sec">ATP W16 スクリーニング済（4/13〜 Barcelona / 4/14〜 Munich）</div>
+  <div class="sec">スクリーニング済（結果待ち）</div>
 
   <div class="card atp">
-    <div class="top"><div class="mn">🎾 ATP W16 R1 — Barcelona + Munich 全試合</div><span class="badge bs">全SKIP</span></div>
-    <div class="sub">スクリーニング実施: 2026-04-12 | 対象14試合</div>
+    <div class="top"><div class="mn">🎾 ATP W16 R1 — Barcelona(4/13〜) + Munich(4/14〜)</div><span class="badge bs">全14試合SKIP</span></div>
+    <div class="sub">スクリーニング実施: 2026-04-12 | L1通過7件、全てEVマイナス</div>
     <div class="body" style="margin-top:6px">
-      <strong>L1通過7件（全てオッズ短すぎEVマイナス）:</strong><br>
-      ・Zverev vs Kecmanovic: 差315 / オッズ1.158 → EV<strong>-6.2%</strong><br>
-      ・Norrie vs Wawrinka: 差193 / オッズ1.27 → EV<strong>-3.5%</strong><br>
-      ・Fils vs Nakashima: 差178 / オッズ1.29 → EV<strong>-1.7%</strong><br>
-      ・Cerundolo vs Struff WC: 差181 / 信頼度71%→ <strong>R010除外</strong><br>
-      ・Vacherot vs Atmane: 差106 / 信頼度65%→ <strong>R010除外</strong><br>
-      ・Borges vs Mannarino: 差172 / オッズ1.19 → EV<strong>-10.7%</strong><br>
-      ・Shelton vs qualifier: 差~188 / オッズ~1.10 → EV<strong>極端にマイナス</strong><br>
-      <strong>L1未達7件:</strong> Khachanov/Carabelli(差82)、Rublev/Navone(差70)、Etcheverry/Draper(差25)、Fonseca/Tabilo(差17)、Cobolli/Fucsovics(差85)、Griekspoor/Shapovalov(差45)、Machac/Baez(差13)<br>
-      <strong>棄権:</strong> Musetti（腕の怪我）→ Barcelona最大候補（差418）が消滅
+      主要試合: Zverev vs Kecmanovic（差315→EV-6.2%）、Musetti棄権（最大差418が消滅）<br>
+      R2以降でAlcaraz(cElo2216)・Tsitsipas(cElo1903)・Etcheverry(H2H 2-0 Draper)に注目
     </div>
     <div class="flag-row">
-      <span class="flag red">⚠ Kecmanovic今季Acapulco勝利</span>
-      <span class="flag">Tsitsipas(cElo1903)無シード注目</span>
-      <span class="flag">Etcheverry H2H 2-0 Draper</span>
+      <span class="flag red">⚠ Kecmanovic 今季Acapulco勝利</span>
       <span class="flag blue">R2以降で好条件を待つ</span>
-    </div>
-  </div>
-
-  <div class="card wta">
-    <div class="top"><div class="mn">🎾 WTA Stuttgart — Porsche Grand Prix</div><span class="badge bp">4/13開幕</span></div>
-    <div class="sub">WTA 500 — 室内クレー | Sabalenka欠場（怪我）</div>
-    <div class="body" style="margin-top:6px">
-      出場: Rybakina(1)・Swiatek(2)・Gauff(3)・Paolini(4) ほかTop10多数<br>
-      ドロー公開後にrules_wta.jsonを適用してスクリーニング予定。
     </div>
   </div>
 </div>
@@ -262,7 +271,38 @@ details[open] summary{color:#333}
 <!-- ===== テニス ===== -->
 <div id="t" class="pn">
 
-  <div class="sec">ATP W16 スクリーニングログ（2026-04-12実施）</div>
+  <div class="sec">WTA Stuttgart R1 — スクリーニング結果（2026-04-12実施）</div>
+
+  <div class="card gb">
+    <div class="top"><div class="mn">Ostapenko J. vs Andreeva M.(6)</div><span class="badge bgb">GAMBLE_BET GB001</span></div>
+    <div class="sub">2026-04-13 | 室内クレー | cElo差106.7pt</div>
+    <div class="body" style="margin-top:6px">
+      <div class="cond-row">
+        <span class="cond-ok">✓</span><span>cElo差107pt（50〜150pt範囲）</span>
+        <span class="cond-ok">✓</span><span>UF01: indoor clay速め → Ostapenko フラット系有利</span>
+        <span class="cond-ok">✓</span><span>UFT01: defending champion（tournament familiarity）</span>
+        <span class="cond-ok">✓</span><span>オッズ3.73 ≥ 2.50</span>
+        <span class="cond-ok">✓</span><span>推定勝率41% ≥ 35%</span>
+        <span class="cond-ok">✓</span><span>市場乖離+14.2pp ≥ 10pp</span>
+        <span class="cond-ok">✓</span><span>EV +53.3% ≥ 25%</span>
+      </div>
+    </div>
+    <div class="ev-gb">⚡ EV +53.3% | stake 0.25u | W009 GAMBLE_BET全条件クリア</div>
+  </div>
+
+  <div class="card wta">
+    <div class="top"><div class="mn">その他3試合</div><span class="badge bs">全SKIP</span></div>
+    <div class="body" style="margin-top:6px">
+      <table>
+        <tr><th>試合</th><th>cElo差</th><th>判定</th><th>理由</th></tr>
+        <tr><td>Shnaider vs Korpatsch WC</td><td>215.9pt</td><td>SKIP</td><td>EV -10.0%（1.19短すぎ）</td></tr>
+        <tr><td>Fernandez Q vs Eala</td><td>100.7pt</td><td>SKIP</td><td>信頼度64.1% &lt; 75%（W006）</td></tr>
+        <tr><td>Lys WC vs Badosa</td><td>—</td><td>SKIP</td><td>L1未達（Badosa怪我）</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="sec">ATP W16 スクリーニングログ（4/12実施）</div>
 
   <div class="card atp">
     <div class="top"><div class="mn">Barcelona Open (ATP500) — R1 スクリーニング</div><span class="badge bs">8試合 全SKIP</span></div>
@@ -286,7 +326,7 @@ details[open] summary{color:#333}
 
   <div class="card atp">
     <div class="top"><div class="mn">BMW Open Munich (ATP500) — R1 スクリーニング</div><span class="badge bs">6試合 全SKIP</span></div>
-    <div class="sub">2026-04-14〜 | MTTC Iphitos Munich | Clay outdoor | Fritz棄権</div>
+    <div class="sub">2026-04-14〜 | MTTC Iphitos Munich | Clay outdoor</div>
     <div class="body" style="margin-top:6px">
       <table>
         <tr><th>対戦</th><th>cElo差</th><th>L1</th><th>信頼度</th><th>オッズ</th><th>EV</th><th>判定</th></tr>
@@ -301,120 +341,76 @@ details[open] summary{color:#333}
     <div class="flag-row">
       <span class="flag red">⚠ Kecmanovic 今季Acapulco(HC)でZverev撃破 6-3 6-7 7-6</span>
       <span class="flag">Tsitsipas(cElo1903)無シード→R2候補</span>
-      <span class="flag blue">Cerundolo/Struff: R009(Struff地元WC)で信頼度-3%</span>
     </div>
-  </div>
-
-  <div class="sec">MC2026 F — 決勝（4/13・SKIP）</div>
-
-  <div class="card atp" style="border-left-color:#888">
-    <div class="top"><div class="mn">Alcaraz C.(1) vs Sinner J.(2)</div><span class="badge bs">SKIP</span></div>
-    <div class="sub">MC2026 F — 2026-04-13</div>
-    <div class="body" style="margin-top:6px">
-      L1: cElo差 ~20pt → R001不通過（閾値100pt未達）。実質50/50。エッジなし。<br>
-      Alcaraz: ディフェンディングチャンピオン / Sinner: 4連続Masters1000決勝・今大会無失セット
-    </div>
-    <div class="ev-box">SKIP — cElo差~20pt でL1未達。観戦のみ。</div>
   </div>
 
   <div class="sec">MC2026 SF 結果（4/11 — 2/2 HIT）</div>
 
   <div class="card atp">
     <div class="top"><div class="mn">Alcaraz C.(1) vs de Minaur A.(5)</div><span class="badge bh">的中</span></div>
-    <div class="body">推奨: Alcaraz ✅ | EV実績: +0.50u<br>
-    cElo差~280。QF圧勝の勢いそのままにSF制覇。ディフェンディングチャンピオンの貫禄。</div>
-    <div class="ev-go">EV +0.50u | R001・R002機能</div>
+    <div class="body">推奨: Alcaraz ✅ | EV実績: +0.50u</div>
+    <div class="ev-go">EV +0.50u</div>
   </div>
 
   <div class="card atp">
     <div class="top"><div class="mn">Sinner J.(2) vs Zverev A.(3)</div><span class="badge bh">的中</span></div>
-    <div class="body">推奨: Sinner ✅ | スコア: 6-1 6-4 | EV実績: +0.65u<br>
-    消耗していたZverevに対して1時間22分で圧勝。（4/12に旧セッション誤記録を修正）</div>
-    <div class="ev-go">EV +0.65u | R001・R005機能</div>
+    <div class="body">推奨: Sinner ✅ | スコア: 6-1 6-4 | EV実績: +0.65u（4/12修正）</div>
+    <div class="ev-go">EV +0.65u</div>
   </div>
 
-  <div class="sec">MC2026 QF 結果（4/10 — 3/3 HIT）</div>
-
-  <div class="card atp">
-    <div class="top"><div class="mn">Sinner J.(2) vs Auger-Aliassime F.(6)</div><span class="badge bh">的中</span></div>
-    <div class="body">推奨: Sinner ✅ | スコア: 6-3 6-4 | EV実績: +0.38u<br>
-    条件（FAA R16勝利）成立確認後にGO。Sinnerの支配力を発揮。</div>
-    <div class="ev-go">EV +0.38u | L1・R007（FAA初クレー）機能</div>
-  </div>
-
-  <div class="card atp">
-    <div class="top"><div class="mn">Zverev A.(3) vs Fonseca J.</div><span class="badge bh">的中</span></div>
-    <div class="body">推奨: Zverev ✅ | スコア: 4-6 6-4 7-5 | EV実績: +0.55u<br>
-    3セットの接戦。R011（若手攻撃型）の変数が出たが最終的にZverev地力勝ち。</div>
-    <div class="ev-go">EV +0.55u</div>
-  </div>
-
-  <div class="card atp">
-    <div class="top"><div class="mn">Alcaraz C.(1) vs Bublik A.(8)</div><span class="badge bh">的中</span></div>
-    <div class="body">推奨: Alcaraz ✅ | スコア: 6-1 6-3 | EV実績: +0.25u<br>
-    ディフェンディングチャンピオンの貫禄。SFへ省エネで進出。</div>
-    <div class="ev-go">EV +0.25u | QF 3/3 全的中</div>
-  </div>
-
-  <div class="card atp" style="border-left-color:#ccc">
-    <div class="top"><div class="mn">de Minaur A.(5) vs Vacherot V.(WC)</div><span class="badge bs">スキップ</span></div>
-    <div class="body">信頼度70% → R010により推奨除外。結果記録対象外。</div>
-  </div>
-
-  <div class="sec">MC2026 R16 結果</div>
-  <div class="card atp">
-    <div class="top"><div class="mn">Vacherot V.(WC) vs Hurkacz H.(PR)</div><span class="badge bh">的中</span></div>
-    <div class="body">推奨: Vacherot ✅ | 6-7(4) 6-3 6-4 | EV: +0.57u<br>モナコ人として初のMC QF進出（Open Era）。R009ホームコート機能。</div>
-    <div class="ev-go">EV +0.57u | R009機能</div>
-  </div>
-  <div class="card atp">
-    <div class="top"><div class="mn">Berrettini M.(WC) vs Fonseca J.</div><span class="badge bm">外れ</span></div>
-    <div class="body">推奨: Berrettini ✗ | 6-3 6-2 (Fonseca) | EV: -1.0u<br>Fonsecaのサービス・アグレッシブプレーがホームコートアドバンテージを上回った。</div>
-    <div class="ev-ng">EV -1.0u | L4ミス</div>
-  </div>
-
-  <div class="sec">MC2026 R32 結果</div>
+  <div class="sec">MC2026 QF/R16/R32 結果</div>
   <table>
     <tr><th>試合</th><th>推奨</th><th>結果</th><th>EV</th></tr>
-    <tr><td>Auger-Aliassime vs Cilic</td><td>FAA</td><td><span class="hit-dot hd-g"></span>的中 7-6 7-6 6-3</td><td class="g">+0.63u</td></tr>
-    <tr><td>Medvedev vs Berrettini</td><td>Medvedev</td><td><span class="hit-dot hd-r"></span>外れ 0-6 0-6</td><td class="r">-1.0u</td></tr>
-    <tr><td>Cerundolo vs Machac</td><td>Cerundolo</td><td><span class="hit-dot hd-r"></span>外れ 6-7 2-6</td><td class="r">-1.0u</td></tr>
-    <tr><td>Rinderknech vs Fonseca ⚠caution</td><td>Rinderknech</td><td><span class="hit-dot hd-r"></span>外れ</td><td class="r">-1.0u</td></tr>
-    <tr><td>Marozsan vs Hurkacz ⚠caution</td><td>Marozsan</td><td><span class="hit-dot hd-r"></span>外れ</td><td class="r">-1.0u</td></tr>
+    <tr><td>QF: Sinner vs FAA</td><td>Sinner</td><td><span class="hit-dot hd-g"></span>HIT 6-3 6-4</td><td class="g">+0.38u</td></tr>
+    <tr><td>QF: Zverev vs Fonseca</td><td>Zverev</td><td><span class="hit-dot hd-g"></span>HIT 4-6 6-4 7-5</td><td class="g">+0.55u</td></tr>
+    <tr><td>QF: Alcaraz vs Bublik</td><td>Alcaraz</td><td><span class="hit-dot hd-g"></span>HIT 6-1 6-3</td><td class="g">+0.25u</td></tr>
+    <tr><td>R16: Vacherot vs Hurkacz</td><td>Vacherot</td><td><span class="hit-dot hd-g"></span>HIT 6-7 6-3 6-4</td><td class="g">+0.57u</td></tr>
+    <tr><td>R16: Berrettini vs Fonseca</td><td>Berrettini</td><td><span class="hit-dot hd-r"></span>MISS 3-6 2-6</td><td class="r">-1.0u</td></tr>
+    <tr><td>R32: FAA vs Cilic</td><td>FAA</td><td><span class="hit-dot hd-g"></span>HIT</td><td class="g">+0.63u</td></tr>
+    <tr><td>R32: Medvedev vs Berrettini</td><td>Medvedev</td><td><span class="hit-dot hd-r"></span>MISS 0-6 0-6</td><td class="r">-1.0u</td></tr>
+    <tr><td>R32: Cerundolo vs Machac</td><td>Cerundolo</td><td><span class="hit-dot hd-r"></span>MISS 6-7 2-6</td><td class="r">-1.0u</td></tr>
   </table>
-
-  <div class="sec">WTA Stuttgart — 初回スクリーニング待ち</div>
-  <div class="card wta">
-    <div class="top"><div class="mn">Porsche Tennis Grand Prix 2026</div><span class="badge bp">4/13開幕</span></div>
-    <div class="body">
-      WTA 500 / 室内クレー / Stuttgart, Germany<br>
-      主要シード: Rybakina(1)・Swiatek(2)・Gauff(3)・Paolini(4)<br>
-      ※Sabalenka(通常1位)は怪我で欠場<br>
-      ドロー公開後にrules_wta.jsonを適用してスクリーニング予定。
-    </div>
-  </div>
 </div>
 
 <!-- ===== アイスホッケー ===== -->
 <div id="h" class="pn">
+  <div class="sec">NHL プレーオフ 2026 — 暫定ブラケット（RS終了4/16・PO開始4/18）</div>
+
+  <div class="card nhl">
+    <div class="top"><div class="mn">NHL プレーオフ 第1ラウンド — 暫定ブラケット</div><span class="badge bi">スクリーニング待ち</span></div>
+    <div class="sub">RS終了: 4/16 | PO開始: 4/18 | プレーインなし（全16チーム直接出場）</div>
+    <div class="body" style="margin-top:6px">
+      <strong>東カンファレンス:</strong><br>
+      大西洋: Buffalo(106pt) vs Boston(96pt) / Montreal(104pt) vs Tampa Bay(104pt)<br>
+      大都市: Carolina(110pt) vs Ottawa(96pt) / Pittsburgh(98pt) vs Philadelphia(92pt)<br><br>
+      <strong>西カンファレンス:</strong><br>
+      中央: Colorado(114pt) vs LAKings(87pt) / Dallas(108pt) vs Minnesota(102pt)<br>
+      太平洋: Edmonton(90pt) vs Utah(90pt) / Vegas(89pt) vs Anaheim(89pt)
+    </div>
+    <div class="flag-row">
+      <span class="flag blue">⚠ 4/12-16残り試合でシーディング変動あり。4/16確定後にMoneyPuck xGF%起点でスクリーニング</span>
+      <span class="flag green">注目: Colorado vs LAKings（点差最大）/ Carolina vs Ottawa（xGF%差大か）</span>
+    </div>
+  </div>
+
   <div class="sec">NHL 2025-26 — 稼働記録</div>
 
   <div class="card nhl">
     <div class="top"><div class="mn">Colorado Avalanche vs Calgary Flames</div><span class="badge bh">的中</span></div>
     <div class="sub">2026-04-09 | COL ホーム</div>
     <div class="body">推奨: Colorado ✅ | スコア: 3-1 | EV: +0.333u<br>
-    xGF%差10.0pt。MacKinnon 2G+2A。Presidents' Trophy確定。xGF%主導が機能。</div>
-    <div class="ev-go">EV +0.333u | xGF%差10pt → 地力差が直結</div>
+    xGF%差10.0pt。MacKinnon 2G+2A。Presidents' Trophy確定。</div>
+    <div class="ev-go">EV +0.333u</div>
   </div>
 
   <div class="card nhl">
     <div class="top"><div class="mn">Ottawa Senators @ NY Islanders</div><span class="badge bh">的中</span></div>
     <div class="sub">2026-04-11 | UBS Arena</div>
     <div class="body">
-      推奨: Ottawa Senators ✅ | オッズ 2.53 | スコア: 3-2（Tkachuk残り13秒決勝点）<br>
-      OTT xGF% 55.93% (3位) vs NYI xGF% 47.41% (26位)
+      推奨: Ottawa ✅ | オッズ 2.53 | スコア: 3-2（Tkachuk残り13秒決勝点）<br>
+      OTT xGF% 55.93% (3位) vs NYI xGF% 47.41% (26位) → 差5.52pt
     </div>
-    <div class="ev-go">EV +1.53u | xGF%差5.52pt機能 | 2/2 100%</div>
+    <div class="ev-go">EV +1.53u | xGF%乖離機能 | 2/2 100%</div>
   </div>
 
   <div class="sec">L1指標（NHL）</div>
@@ -422,7 +418,7 @@ details[open] summary{color:#333}
     <tr><th>優先順位</th><th>指標</th><th>ソース</th><th>閾値</th></tr>
     <tr><td>① 最優先</td><td>xGF%</td><td>moneypuck.com</td><td>差5pt以上</td></tr>
     <tr><td>② 代替</td><td>SAT%(Corsi)</td><td>nhl.com 高度統計</td><td>差5pt以上</td></tr>
-    <tr><td>③ 最終手段</td><td>GF%</td><td>hockey-reference</td><td>差5pt以上</td></tr>
+    <tr><td>③ 最終手段</td><td>GF%</td><td>hockey-reference</td><td>差5pt以上＋-5%ペナルティ</td></tr>
   </table>
 </div>
 
@@ -432,7 +428,7 @@ details[open] summary{color:#333}
 
   <div class="card ufl">
     <div class="top"><div class="mn">Dallas Renegades vs Columbus Aviators</div><span class="badge bl">GO</span></div>
-    <div class="sub">2026-04-13 | Week 3 | 結果待ち</div>
+    <div class="sub">2026-04-12 4PM ET | Week 3 | 結果待ち</div>
     <div class="body">
       推奨: <strong>Dallas Renegades</strong> | オッズ 1.32<br>
       DAL 2-0 / PD +17.5/試合 vs COL 0-2 / PD -12.5/試合 → 差30pt<br>
@@ -446,29 +442,17 @@ details[open] summary{color:#333}
     <tr><th>試合</th><th>スキップ理由</th></tr>
     <tr><td>Louisville vs Orlando (4/11)</td><td>Week3閾値80%に対し信頼度75%</td></tr>
     <tr><td>DC vs Houston (4/12)</td><td>EV+6.4%のみ → Week3保守判断でSKIP</td></tr>
-    <tr><td>St.Louis vs Birmingham (4/13)</td><td>L1差弱 + 市場逆行</td></tr>
+    <tr><td>St.Louis vs Birmingham (4/12)</td><td>L1差弱 + 市場逆行</td></tr>
   </table>
 
-  <div class="sec">NFL 2026-27 — プレシーズン</div>
+  <div class="sec">NFL / CFL — プレシーズン</div>
   <div class="card nfl">
     <div class="top"><div class="mn">NFL 2026-27シーズン</div><span class="badge bpre">プレシーズン</span></div>
-    <div class="body">
-      開幕予定: 2026年9月<br>
-      ルールファイル準備完了: rules_nfl.json v1.0<br>
-      L1指標: DVOA (Football Outsiders) — 業界最高精度<br>
-      開幕後はWeek1をスキップ、Week2〜から本格稼働。
-    </div>
+    <div class="body">開幕: 2026年9月。L1指標: DVOA (Football Outsiders)。Week1スキップ、Week2〜稼働。</div>
   </div>
-
-  <div class="sec">CFL 2026 — プレシーズン</div>
   <div class="card cfl">
     <div class="top"><div class="mn">CFL 2026シーズン</div><span class="badge bpre">プレシーズン</span></div>
-    <div class="body">
-      開幕予定: 2026年6月<br>
-      ルールファイル準備完了: rules_cfl.json v1.0<br>
-      L1指標: 得失点差/試合（差5点以上）<br>
-      9チーム制（East 4 / West 5）。3ダウン制。
-    </div>
+    <div class="body">開幕: 2026年6月。L1指標: 得失点差/試合（差5点以上）。9チーム制・3ダウン制。</div>
   </div>
 </div>
 
@@ -478,13 +462,13 @@ details[open] summary{color:#333}
 
   <div class="card nrl">
     <div class="top"><div class="mn">South Sydney Rabbitohs vs Canberra Raiders</div><span class="badge bm">外れ</span></div>
-    <div class="sub">2026-04-11 | Optus Stadium, Perth (中立地)</div>
+    <div class="sub">2026-04-11 | Optus Stadium, Perth（中立地）</div>
     <div class="body">
-      推奨: South Sydney Rabbitohs ✗ | 結果: Raiders 30-22 | EV: -1.0u<br>
-      Rabbitohs 3-1 / PD +3.5/試合 vs Raiders 1-4 / PD -13.8/試合（分析時点）<br>
-      Raiders のアップセット。L1差は正しかったが不確定要因が発生。
+      推奨: Rabbitohs ✗ | 結果: Raiders 30-22 | EV: -1.0u<br>
+      Raiders 1-4 崖っぷち（desperate team effect）+ 小サンプルPD歪み → アップセット<br>
+      → U005記録。R011（崖っぷちチーム-5%）・R012（小サンプル上限70%）をrules_nrl.jsonに追加済
     </div>
-    <div class="ev-ng">EV -1.0u | MISS。Round7分析予定。</div>
+    <div class="ev-ng">EV -1.0u | MISS | 教訓: R3〜R8は信頼度上限70%</div>
   </div>
 
   <div class="sec">Super Rugby Pacific 2026 — Round 9 結果</div>
@@ -494,10 +478,9 @@ details[open] summary{color:#333}
     <div class="sub">2026-04-11 | Suncorp Stadium, Brisbane</div>
     <div class="body">
       推奨: Crusaders ✅ | 結果: Crusaders 32-12 | EV: +0.54u<br>
-      L1差: 12.9pt/試合（Crusaders +7.0 vs Reds -5.9）<br>
-      Crusadersがブリスベンでも圧勝。ホームセミファイナル確定。
+      L1差: 12.9pt/試合。ブリスベンでも圧勝。ホームセミファイナル確定。
     </div>
-    <div class="ev-go">EV +0.54u | L1差が直結。1/1 HIT。</div>
+    <div class="ev-go">EV +0.54u | 1/1 HIT</div>
   </div>
 
   <div class="sec">Super Rugby Pacific — 順位表（Round 9後）</div>
@@ -505,8 +488,8 @@ details[open] summary{color:#333}
     <tr><th>順位</th><th>チーム</th><th>W</th><th>L</th><th>PD/試合</th></tr>
     <tr><td>1</td><td>🌪️ Hurricanes</td><td>5</td><td>1</td><td class="g">+27.7</td></tr>
     <tr><td>2</td><td>🔵 Blues</td><td>5</td><td>2</td><td class="g">+13.6</td></tr>
-    <tr><td>3</td><td>🟡 Brumbies</td><td>5</td><td>3</td><td class="g">+7.7</td></tr>
-    <tr><td>4</td><td>⚫ Chiefs</td><td>5</td><td>2</td><td class="g">+8.4</td></tr>
+    <tr><td>3</td><td>⚫ Chiefs</td><td>5</td><td>2</td><td class="g">+8.4</td></tr>
+    <tr><td>4</td><td>🟡 Brumbies</td><td>5</td><td>3</td><td class="g">+7.7</td></tr>
     <tr><td>5</td><td>🔴 Crusaders</td><td>5</td><td>3</td><td class="g">+7.0</td></tr>
     <tr><td>6</td><td>🟥 Reds</td><td>4</td><td>4</td><td class="r">-5.9</td></tr>
     <tr><td>7</td><td>Highlanders</td><td>3</td><td>5</td><td class="r">-6.9</td></tr>
@@ -517,37 +500,106 @@ details[open] summary{color:#333}
   </table>
 </div>
 
-<!-- ===== BACKLOG ===== -->
-<div id="b" class="pn">
-  <div class="sec">作業中 [~]</div>
-  <div class="card warn">
-    <div class="bl-item"><span class="bl-sta sta-wip">[~]</span><span>WTA Stuttgart ドロー確認・cEloスクリーニング（4/13開幕後に実施）</span></div>
+<!-- ===== アップセット分析 ===== -->
+<div id="g" class="pn">
+
+  <div class="sec">3段階フレームワーク</div>
+  <div class="card">
+    <div class="body">
+      <strong>Phase 1</strong>（現在）: 強い側が確実に勝つことを読み取る精度向上 → GO/SKIP判断<br>
+      <strong>Phase 2</strong>（構築中）: アンダードッグが逆転する条件パターンの特定 → GAMBLE_BET判断<br>
+      <strong>Phase 3</strong>（目標）: どちらが勝つかを正しく予測する → Phase1+2の統合
+    </div>
   </div>
 
+  <div class="sec">GAMBLE_BET 発動条件（W009 / 共通基準）</div>
+  <div class="card gb">
+    <div class="body">
+      <div class="cond-row">
+        <span>①</span><span>強さ指標差がボーダーゾーン（WTA/ATP: cElo 50〜150pt）</span>
+        <span>②</span><span>upset_factorsが<strong>2つ以上</strong>重なる（UF分類から選択）</span>
+        <span>③</span><span>アンダードッグのオッズ <strong>≥ 2.50</strong></span>
+        <span>④</span><span>推定アンダードッグ勝率 <strong>≥ 35%</strong>（ロングショットすぎない）</span>
+        <span>⑤</span><span>市場impliedとの乖離 <strong>≥ 10pp</strong>（真の市場ミスプライス）</span>
+        <span>⑥</span><span>EV <strong>≥ +25%</strong>（通常GO閾値+5%より高基準）</span>
+      </div>
+    </div>
+    <div class="ev-gb">stake: 通常GO(1u) の 1/3〜1/4（0.25〜0.33u）</div>
+  </div>
+
+  <div class="sec">GAMBLE_BET 記録</div>
+
+  <div class="card gb">
+    <div class="top"><div class="mn">GB001 — Ostapenko vs Andreeva(6)</div><span class="badge bgb">進行中</span></div>
+    <div class="sub">WTA Stuttgart R1 — 2026-04-13 | 0.25u</div>
+    <div class="body" style="margin-top:6px">
+      アンダードッグ: Ostapenko（cElo 1811.7）<br>
+      オッズ: 3.73 | 推定勝率: 41% | 市場implied: 26.8%<br>
+      UF01（indoor clay速め → フラット有利）+ UFT01（defending champion大会相性）
+    </div>
+    <div class="ev-gb">EV +53.3% | 結果待ち（4/13）</div>
+  </div>
+
+  <div class="sec">アップセット要因カテゴリ（UF分類）</div>
+  <div class="card">
+    <div class="body">
+      <strong>共通 UF</strong><br>
+      UF01: 表面・環境適性の逆転 | UF02: ホットストリーク若手 | UF03: 実力差ボーダー<br>
+      UF04: 本命疲弊 | UF05: スタイルミスマッチ | UF06: モチベーション低下<br>
+      UF07: ホームコート過小評価 | UF08: 怪我未把握 | UF09: 市場の名声バイアス<br><br>
+      <strong>テニス固有 UFT</strong><br>
+      UFT01: H2H/大会相性の極端な偏り | UFT02: 第1セット後崩壊 | UFT03: WC地元応援
+    </div>
+  </div>
+
+  <div class="sec">確認済みアップセット（U001〜U005）</div>
+  <table>
+    <tr><th>ID</th><th>試合</th><th>UF要因</th><th>結果</th><th>学習</th></tr>
+    <tr><td>U001</td><td>Medvedev vs Berrettini WC</td><td>UF01・UF09</td><td class="r">MISS</td><td>クレー嫌い補正→R008</td></tr>
+    <tr><td>U002</td><td>Cerundolo vs Machac</td><td>UF03・UF05</td><td class="r">MISS</td><td>攻撃型サーブ注意→R011</td></tr>
+    <tr><td>U003</td><td>Berrettini vs Fonseca</td><td>UF02・UF03</td><td class="r">MISS</td><td>若手ホットストリーク注意</td></tr>
+    <tr><td>U005</td><td>Rabbitohs vs Raiders</td><td>UF06・小サンプル</td><td class="r">MISS</td><td>小サンプル上限70%→R012</td></tr>
+  </table>
+
+  <div class="sec">ルール改善候補</div>
+  <table>
+    <tr><th>種目</th><th>現行ルール</th><th>改善案</th><th>優先度</th></tr>
+    <tr><td>ATP</td><td>R001: cElo差≥80でL1通過</td><td>差&lt;130はCAUTION、差&lt;80はSKIP推奨</td><td class="o">高</td></tr>
+    <tr><td>ATP</td><td>なし</td><td>UF02チェック: 25歳以下が今大会上位連破中→CAUTION</td><td class="o">中</td></tr>
+    <tr><td>NRL</td><td>PD差≥6pt</td><td>R3〜R8は閾値12ptへ引上げ（実装済: R012）</td><td class="g">完了</td></tr>
+    <tr><td>WTA</td><td>W006: 信頼度&lt;75%は除外</td><td>W009: GAMBLE_BET枠を設け、35〜59%の逆張りを別評価（実装済）</td><td class="g">完了</td></tr>
+  </table>
+</div>
+
+<!-- ===== BACKLOG ===== -->
+<div id="b" class="pn">
   <div class="sec">結果待ち [ ]</div>
   <div class="card">
-    <div class="bl-item"><span class="bl-sta sta-todo">[ ]</span><span><strong>UFL Week3 Dallas vs Columbus 結果確認・記録（4/13 正午ET後）← Dallas GO 最優先</strong></span></div>
-    <div class="bl-item"><span class="bl-sta sta-todo">[ ]</span><span>ATP W16 Barcelona/Munich R1結果確認 → R2スクリーニング（4/14以降）</span></div>
+    <div class="bl-item"><span class="bl-sta sta-todo">[ ]</span><span><strong>UFL Week3 Dallas vs Columbus 結果確認・記録（4/12 4PM ET後）← Dallas GO 最優先</strong></span></div>
     <div class="bl-item"><span class="bl-sta sta-todo">[ ]</span><span>MC2026 F Alcaraz vs Sinner 結果確認（4/13・SKIP観戦のみ）</span></div>
-    <div class="bl-item"><span class="bl-sta sta-todo">[ ]</span><span>NHL プレーイン（4/14〜）スクリーニング</span></div>
+    <div class="bl-item"><span class="bl-sta sta-todo">[ ]</span><span>ATP Barcelona/Munich R1結果確認 → R2スクリーニング（4/14以降）</span></div>
+    <div class="bl-item"><span class="bl-sta sta-todo">[ ]</span><span><strong>WTA Stuttgart R1結果確認（4/13）→ GB001 Ostapenko 結果記録</strong></span></div>
+    <div class="bl-item"><span class="bl-sta sta-todo">[ ]</span><span>WTA Stuttgart R2 スクリーニング（4/14〜）← R1結果後</span></div>
+    <div class="bl-item"><span class="bl-sta sta-todo">[ ]</span><span>NHL プレーオフ R1 スクリーニング（4/16〜17）← RS終了後・MoneyPuck xGF%起点</span></div>
     <div class="bl-item"><span class="bl-sta sta-todo">[ ]</span><span>NRL Round7 分析</span></div>
     <div class="bl-item"><span class="bl-sta sta-todo">[ ]</span><span>Super Rugby R10 分析</span></div>
+  </div>
+
+  <div class="sec">直近完了 [x]（4/12 本日）</div>
+  <div class="card">
+    <div class="bl-item"><span class="bl-sta sta-done">[x]</span><span>WTA Stuttgart R1 全4試合スクリーニング完了（cElo実数確認済み）</span></div>
+    <div class="bl-item"><span class="bl-sta sta-done">[x]</span><span><strong>GAMBLE_BET枠(W009)設計・実装 + GB001 Ostapenko発動（0.25u）</strong></span></div>
+    <div class="bl-item"><span class="bl-sta sta-done">[x]</span><span>NHL プレーオフ暫定ブラケット8試合取得（RS終了4/16・PO開始4/18確認）</span></div>
+    <div class="bl-item"><span class="bl-sta sta-done">[x]</span><span>ATP W16 R1 Barcelona/Munich 全14試合スクリーニング（全SKIP）</span></div>
+    <div class="bl-item"><span class="bl-sta sta-done">[x]</span><span>MC2026 SF誤記録修正: Sinner HIT（+1.65u delta）</span></div>
+    <div class="bl-item"><span class="bl-sta sta-done">[x]</span><span>cumulative.json更新（通算73.3% 11/15 / EV+2.133u）</span></div>
+    <div class="bl-item"><span class="bl-sta sta-done">[x]</span><span>3段階フレームワーク定義・upset_patterns.json整備</span></div>
   </div>
 
   <div class="sec">今後の予定</div>
   <div class="card">
     <div class="bl-item"><span class="bl-sta sta-todo">[ ]</span><span>CFL 2026シーズン開幕対応（2026年6月）</span></div>
     <div class="bl-item"><span class="bl-sta sta-todo">[ ]</span><span>NFL 2026-27シーズン開幕対応（2026年9月）</span></div>
-  </div>
-
-  <div class="sec">直近完了 [x]（4/12）</div>
-  <div class="card">
-    <div class="bl-item"><span class="bl-sta sta-done">[x]</span><span>ATP records 再設計: 大会横断オッズ起点方式へ変更（2026-ATP.json）</span></div>
-    <div class="bl-item"><span class="bl-sta sta-done">[x]</span><span>ATP W16 R1 Barcelona/Munich 全14試合スクリーニング（全SKIP）</span></div>
-    <div class="bl-item"><span class="bl-sta sta-done">[x]</span><span>MC2026 SF誤記録修正: Sinner HIT 6-1 6-4（MISS→HIT, +1.65u delta）</span></div>
-    <div class="bl-item"><span class="bl-sta sta-done">[x]</span><span>cumulative.json更新（通算73.3% 11/15、累積EV+2.133u）</span></div>
-    <div class="bl-item"><span class="bl-sta sta-done">[x]</span><span>upset_patterns.json 新設（U001〜U003・U005、U004は誤記録のため削除）</span></div>
-    <div class="bl-item"><span class="bl-sta sta-done">[x]</span><span>3段階フレームワーク定義（Phase1→2→3）・メモリ保存</span></div>
   </div>
 </div>
 

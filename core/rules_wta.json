@@ -68,6 +68,14 @@
     {
       "id": "W008", "type": "initial", "title": "ランキング外選手（WC/LL）の評価",
       "body": "WCでも地元大会の場合は+2%（ATPのR009と同様）。ただしWTAのWCは力量差が大きい場合があるため、cElo確認を必須とする。LLは棄権枠のため体調リスクを-2%加算。"
+    },
+    {
+      "id": "W009", "type": "gamble_bet", "title": "GAMBLE_BET枠（アンダードッグ予測）",
+      "body": "通常のGO/SKIP判断とは独立したアンダードッグ推奨枠。以下の全条件を満たす場合のみ発動。【発動条件】① cElo差が50〜150ptの範囲（完全格差ではなく競争可能ゾーン）。② 以下のUF因子が2つ以上重なる: UF01(表面適性逆転)・UF09(市場バイアス)・UFT01(H2Hの相性)・UFT03(ホームコートWC)・UF02(ホットストリーク)・UF06(本命側のメンタル低下)。③ アンダードッグのオッズ≥2.50。④ 推定アンダードッグ勝率≥35%（実力的に「勝てる」範囲）。⑤ 市場impliedとの乖離≥10ptpp（例: 市場26%→推定41%=乖離15pt）。⑥ EV≥+25%（通常GO閾値+5%より高基準）。【Stake】通常GO推奨の1/3以下（0.25〜0.33u）。【注意】信頼度は35〜59%の範囲で正常。75%を求めない。W006は本枠に適用しない。【追跡】upset_patterns.json の gamble_bet_candidates.records に記録。",
+      "ev_formula": "(推定アンダードッグ勝率 × アンダードッグオッズ) - 1",
+      "confidence_range": "35%〜59%（アンダードッグとして）",
+      "stake_rule": "通常GO=1u に対して GAMBLE_BET=0.25〜0.33u",
+      "example": "Ostapenko vs Andreeva (Stuttgart 2026-04-13): Ostapenko cElo1811 vs Andreeva cElo1918 → 差107pt。UF01(室内クレー速いサーフェス=Ostapenko有利) + UFT01(defending champion・大会相性) → 2因子。オッズ3.73。推定41% vs 市場26.8% → 乖離14.2pt。EV+53.3%。→ GAMBLE_BET発動（0.25u）"
     }
   ]
 }

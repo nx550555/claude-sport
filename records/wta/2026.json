@@ -48,19 +48,25 @@
           "date": "2026-04-13",
           "match": "Andreeva M.(6) vs Ostapenko J.",
           "celo_andreeva": 1918.4, "celo_ostapenko": 1811.7, "l1_diff": 106.7, "l1_pass": true,
-          "tier": "skip", "rec": null,
-          "odds_andreeva": 1.25, "odds_ostapenko": 3.73,
-          "est_win_pct_andreeva": 58.9,
-          "ev_est_andreeva": -26.4,
-          "ev_est_ostapenko": 53.3,
-          "skip_reason": "Andreeva EV -26.4%（オッズ1.25短すぎ）。Ostapenko逆張りはEV+53.3%だが信頼度41% < 75%閾値（W006除外）。",
+          "tier": "gamble_bet",
+          "rec": "Ostapenko",
+          "rec_odds": 3.73,
+          "odds_andreeva": 1.25,
+          "est_win_pct_ostapenko": 41.0,
+          "market_implied_pct_ostapenko": 26.8,
+          "market_gap_pp": 14.2,
+          "ev_est": 53.3,
+          "stake": 0.25,
+          "gamble_bet_id": "GB001",
+          "skip_reason_normal_flow": "Andreeva EV -26.4%（1.25短すぎ）。通常GOフロー: SKIP。",
+          "gamble_bet_trigger": "W009発動: cElo差107pt(範囲内) ＋ UF01(indoor clay速め→Ostapenko有利) ＋ UFT01(defending champion tournament familiarity) → 2因子。EV+53.3% ＋ 市場乖離14.2pp。全条件クリア。",
           "adjustments": {
-            "ostapenko_defending_champ": "-3%（ディフェンディング王者の精神的優位）",
-            "indoor_clay_ostapenko": "-3%（フラット系・速いサーフェス→Ostapenko有利）"
+            "indoor_clay_ostapenko": "+6%（フラット攻撃型→速いサーフェスで有利）",
+            "defending_champion_familiarity": "+なし（精神的優位は既にcEloに反映の可能性あり）"
           },
-          "note": "Ostapenko defending champion + 室内クレー適性で合計-6%補正。cEloベース64.9%→補正後58.9%。GAMBLE_BET未達（Andreeva信頼度不足）。",
+          "note": "通常フロー: SKIP（Andreeva EV-26.4%）。GAMBLE_BET枠: Ostapenko側。41% vs 市場26.8%（gap +14.2pp）。EV+53.3%。0.25u推奨。",
           "result": null, "score": null, "hit": null, "actual_ev": null,
-          "rules_applied": ["W001", "W004", "W006"]
+          "rules_applied": ["W001", "W004", "W009"]
         },
         {
           "tournament": "Porsche Tennis Grand Prix Stuttgart",
