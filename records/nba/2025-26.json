@@ -5,10 +5,11 @@
   "rule_version": "v1.0",
   "started": "2026-04-11",
   "summary": {
-    "total": 0,
-    "hit": 0,
-    "hit_rate": null,
-    "ev_total": 0
+    "total": 1,
+    "hit": 1,
+    "hit_rate": 1.0,
+    "ev_total": 0.20,
+    "note": "NBA-001 Rockets HIT(+0.20) / NBA-002 Cavaliers SKIP（オッズ確認不可）"
   },
   "net_rating_snapshot": {
     "as_of": "2026-04-11",
@@ -94,7 +95,12 @@
         "b008_required": "当日11am-1pm EST のNBA公式傷病リストでRockets主力（Sengun等）ACTIVE最終確認要"
       },
       "verdict": "CONDITIONAL_GO",
-      "verdict_note": "B008最終確認（当日11am EST）でRockets主力ACTIVE確認後GO。Grizzlies 8選手activeという稀有状況がL1差を押し上げており、オッズ-500(1.20)でEV+5.6%は閾値クリア。"
+      "verdict_note": "B008最終確認（当日11am EST）でRockets主力ACTIVE確認後GO。Grizzlies 8選手activeという稀有状況がL1差を押し上げており、オッズ-500(1.20)でEV+5.6%は閾値クリア。",
+      "result": "Rockets",
+      "score": "124-109",
+      "hit": true,
+      "actual_ev": 0.20,
+      "status": "confirmed"
     },
     {
       "id": "NBA-002",
@@ -132,8 +138,10 @@
         "ev_calc": "オッズ取得後に計算",
         "b008_required": "当日11am-1pm ESTのNBA公式傷病リストでMitchell/Allen出場可否確認要"
       },
-      "verdict": "PENDING_ODDS",
-      "verdict_note": "L1差15.2は最大級だが、オッズが-700以上（American）の可能性が高くEV+5%クリアが困難。Mitchell ACTIVE + オッズ-500以内（1.20以上）の場合のみGO。現時点は判断保留。"
+      "verdict": "SKIP",
+      "verdict_note": "オッズ確認不可のためSKIP確定。Cavaliers 130-126勝利（Mitchell 48pts ACTIVE）。ただし当日オッズが-700以上だった場合EV+5%未達のため不採用。予測未実行につき統計ノーカウント。",
+      "result_note": "Cavaliers win 130-126 Mitchell 48pts（参考記録・ベット未実行）",
+      "status": "skip"
     }
   ],
   "screening_log": [

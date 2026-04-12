@@ -18,18 +18,28 @@
 
 ## 未完了・作業中（次回セッション最優先）
 
-- [x] MC2026 F予測・実施（4/12 Alcaraz vs Zverev）← Alcaraz go 信頼度82% EV+18.9% 記録済
-- [ ] MC2026 F 結果確認・記録（4/12試合後）
+- [x] MC2026 F予測・実施 ← 対戦修正: Alcaraz vs Sinner（4/13）。SKIP（cElo差~20pt L1未達）
+- [x] MC2026 SF Sinner vs Zverev 誤記録修正 ← Sinner 6-1 6-4 HIT（旧セッション誤記録→4/12修正）
 - [x] NRL Round 6 Rabbitohs vs Raiders 結果確認・記録 ← Raiders 30-22勝利 → MISS（cumulative更新済）
 - [x] Super Rugby R9 Reds vs Crusaders 再評価 ← ラインナップ確認→GO（Crusaders 1.54 EV+17%）記録済
 - [x] Super Rugby R9 結果確認・記録（Crusaders 32-12 Reds HIT / Hurricanes 52-14 Blues 予測なし）
 - [x] NHL OTT @ NYI 結果確認・記録（Ottawa Senators 3-2 NYI HIT +1.53）
-- [ ] UFL Week3 Dallas vs Columbus 結果確認・記録（4/13試合後）
-- [x] NBA 4/12最終日 分析完了 ← Rockets CONDITIONAL GO（-500/1.20 EV+5.6%）B008確認後確定。Cavaliers PENDING_ODDS（オッズ-500以内+Mitchell ACTIVEでGO候補）
-- [ ] MC2026 F 結果確認・記録（4/12試合後）
-- [~] WTA Stuttgart ドロー確認・分析（開幕4/13）← ドロー4/11公開。cElo差80pt以上のマッチアップ抽出要
+- [x] NBA 4/12最終日 結果確認 ← Rockets 124-109 HIT(+0.20u) / Cavaliers 130-126 SKIP（オッズ未確認）
+- [ ] UFL Week3 Dallas vs Columbus 結果確認・記録（4/13 正午ET試合後）← Dallas GO EV+8.2% 信頼度82%
+- [ ] MC2026 F Alcaraz vs Sinner 結果確認（4/13試合後）← SKIP（ベットなし・観戦のみ）
+- [~] WTA Stuttgart 初回分析（開幕4/13）← Shnaider vs Korpatsch・Andreeva vs Ostapenko を tennisabstract cElo確認後GO判断
 
 ---
+
+## 直近完了（4/12 手動自動分析代替）
+
+- [x] MC2026 SF誤記録修正: Sinner vs Zverev → Sinner HIT 6-1 6-4（MISS→HIT, +1.65u delta）
+- [x] MC2026 F対戦更新: Alcaraz vs Sinner（4/13）SKIP（cElo差~20pt L1未達）
+- [x] NBA 4/12: Rockets 124-109 HIT(+0.20u) / Cavaliers 130-126 SKIP
+- [x] upset_patterns.json U004削除（誤記録: SFはSinner HIT、upset未発生）
+- [x] cumulative.json更新（通算73.3% 11/15、累積EV+2.133u）
+- [x] WTA Stuttgart スクリーニング記録（Shnaider/Andreeva等 cElo確認要）
+- [x] dashboard.html全数値更新
 
 ## 直近完了（4/11 夜間自動分析）
 

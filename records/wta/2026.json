@@ -17,8 +17,8 @@
       "tier": "WTA500",
       "surface": "Clay (indoor)",
       "dates": "2026-04-13 to 2026-04-19",
-      "status": "upcoming",
-      "note": "クレーシーズン初戦（indoor clay）。開幕時にドロー・オッズ・cElo確認後に分析開始",
+      "status": "in_progress",
+      "note": "4/13開幕。R1試合開始。Top4シード（Rybakina/Gauff/Swiatek/Paolini?）はBYE。4/12ドロー確認済。",
       "checklist": [
         "tennisabstract.comでWTA cElo（Clay）上位選手を確認",
         "ドローを確認してR1/R2で差80以上のマッチアップを抽出",
@@ -29,5 +29,43 @@
       "predictions": []
     }
   ],
-  "screening_log": []
+  "screening_log": [
+    {
+      "date": "2026-04-13",
+      "tournament": "Stuttgart R1",
+      "note": "4/12自動スクリーニング（PC停止のため手動実施）。Top4シードBYE。tennisabstract cElo確認要。",
+      "total_games": 4,
+      "go_recommendations": 0,
+      "matchups_screened": [
+        {
+          "match": "Shnaider D. vs Korpatsch T.(WC)",
+          "l1_est": "Shnaider ~1820 vs Korpatsch ~1620 → 差~200pt → L1通過",
+          "l1_ok": true,
+          "verdict": "PENDING_CELO",
+          "reason": "tennisabstract実数確認後にGO判断。Shnaider勝利確率est.80%以上。室内クレーでKorpatschhはGerman WCホーム有利だが実力差大。要オッズ確認。"
+        },
+        {
+          "match": "Andreeva M.(6) vs Ostapenko J.",
+          "l1_est": "Andreeva ~1840 vs Ostapenko ~1700 → 差~140pt → L1通過",
+          "l1_ok": true,
+          "verdict": "CAUTION",
+          "reason": "Ostapenko is defending champion。室内クレーはOstapenko得意（フラット系有効）。Andreeva clay経験2シーズンのみ。逆転条件あり→CAUTION。"
+        },
+        {
+          "match": "Fernandez L. vs Eala A.",
+          "l1_est": "Fernandez ~1740 vs Eala ~1650 → 差~90pt → L1ボーダー",
+          "l1_ok": true,
+          "verdict": "SKIP",
+          "reason": "両者southpaw、スタイルマッチアップ不確実。差90ptはボーダー。信頼度75%未達の可能性大。"
+        },
+        {
+          "match": "Lys E.(WC) vs Badosa P.",
+          "l1_est": "Badosa injury→ranked~102。Lys ranked~80 WC。差不明",
+          "l1_ok": false,
+          "verdict": "SKIP",
+          "reason": "Badosa injury（No.102に降格）。実力差不明確。L1スクリーニング不通過。"
+        }
+      ]
+    }
+  ]
 }

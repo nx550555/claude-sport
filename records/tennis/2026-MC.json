@@ -156,32 +156,32 @@
             "L3_stats": "Sinnerのバックハンドとベースライン一貫性がクレーで最高水準。Zverevはフォアに頼る",
             "L4_external": "Sinner10連勝中。Zverev QFで消耗。H2H近年Sinner優勢（クレー）"
           },
-          "note": "L1差110がボーダー判定の難しさを示した。ZverevがQF消耗を跳ね返し逆転勝利。Miss_layer: L1（cElo差不足・過信）",
-          "result": "Zverev", "score": "4-6 6-4 7-5", "hit": false, "actual_ev": -1.00,
-          "miss_layer": "L1", "miss_note": "cElo差110はボーダー（通常≥150推奨）。Sinner優勢と判定したが消耗度・Zverevの底力を過小評価"
+          "note": "Sinnerが6-1 6-4で圧倒。消耗していたZverevに対してサービスゲームを完璧にキープし1時間22分で勝利。予測どおりHIT。",
+          "result": "Sinner", "score": "6-1 6-4", "hit": true, "actual_ev": 0.65
         }
       ],
-      "summary": { "confirmed_go": 2, "hit": 1, "miss": 1, "hit_rate": 0.50, "ev_total": -0.50 }
+      "summary": { "confirmed_go": 2, "hit": 2, "miss": 0, "hit_rate": 1.0, "ev_total": 1.15 }
     },
     "F": {
       "status": "scheduled",
-      "date": "2026-04-12",
+      "date": "2026-04-13",
+      "note": "決勝対戦カード更新: SF結果修正により Alcaraz vs Sinner の対戦に変更（旧予測「Alcaraz vs Zverev」は誤記録）",
       "predictions": [
         {
-          "match": "Alcaraz C.(1) vs Zverev A.(3)",
-          "tier": "go",
-          "rec": "Alcaraz",
-          "rec_odds_est": 1.45,
-          "ev_est": 18.9,
-          "confidence": 82,
-          "rules_applied": ["R001", "R002", "R004", "R005"],
+          "match": "Alcaraz C.(1) vs Sinner J.(2)",
+          "tier": "skip",
+          "rec": "なし（L1未達: cElo差~20pt）",
+          "rec_odds_est": null,
+          "ev_est": null,
+          "confidence": 50,
+          "rules_applied": ["R001"],
           "analysis": {
-            "L1_cElo": "Alcaraz クレーcElo ~2080 vs Zverev ~1950, 差 ~130 → R001通過。ベース勝率67%",
-            "L2_quality": "Alcaraz QF 6-1 6-3（圧倒・省エネ）+ SF勝利。Zverev 2試合連続3セット（QF 4-6 6-4 7-5 / SF 4-6 6-4 7-5）→ Alcaraz +7%",
-            "L3_stats": "Alcarazのクレー: フォア/スライド/ディフェンス世界最高水準。Zverevのサーブは有効だが疲労で精度低下リスク → +2%",
-            "L4_external": "DC（ディフェンディングチャンピオン）+2% / H2Hクレー優勢+2% / Zverev累積疲労（連続フルセット）+2% → +6%"
+            "L1_cElo": "Alcaraz クレーcElo ~2080 vs Sinner ~2060, 差 ~20pt → R001不通過（閾値100pt必要）。実質50/50",
+            "L2_quality": "両者ともSFを支配的に勝利。Alcaraz: de Minaur戦6-?。Sinner: Zverev戦6-1 6-4（圧倒）",
+            "L3_stats": "クレー世界最高水準の2選手。ベースライン・フォア・サーブともに互角レベル",
+            "L4_external": "Alcaraz: ディフェンディングチャンピオン・ホームアドバンテージ / Sinner: 4連続Masters1000決勝・今大会無失セット / H2H Alcaraz優勢だがSinnerも勝利あり"
           },
-          "note": "Alcarazが体力・実力・経験すべてで優位。Zverevの爆発的サーブと底力（SF逆転劇）は警戒要だがオッズ≥1.35でgo維持",
+          "note": "cElo差~20ptでL1基準未達。edge判定不可。双方に有利要因があり、ルール上SKIPが正しい判断。",
           "result": null,
           "score": null,
           "hit": null,

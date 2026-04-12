@@ -123,27 +123,6 @@
       "rule_candidate": "cElo差<80ptの場合、若手上昇中ならGO見送り"
     },
     {
-      "id": "U004",
-      "date": "2026-04-11",
-      "sport": "tennis_atp",
-      "tournament": "MC2026",
-      "round": "SF",
-      "favorite": "Sinner J.(2)",
-      "underdog": "Zverev A.(3)",
-      "strength_diff_metric": "cElo差110pt",
-      "market_odds_underdog": 2.30,
-      "result_score": "4-6 6-4 7-5",
-      "upset_factors": ["UF03", "UF04"],
-      "factor_notes": {
-        "UF03": "cElo差110ptはボーダー。R001通過させたが実力差は小さかった",
-        "UF04": "ZverevはQFで3セット消耗→疲労予測したが逆に覚醒トリガーになった可能性"
-      },
-      "our_prediction": "Sinner（GO）",
-      "miss_layer": "L1",
-      "learning": "差110ptのボーダーケースでGO通過は過信。QF消耗がアンダードッグの覚醒になる場合がある",
-      "rule_candidate": "cElo差<130ptはGO→CAUTION格下げ、またはGAMBLE_BET候補（逆側）として別追跡"
-    },
-    {
       "id": "U005",
       "date": "2026-04-11",
       "sport": "nrl",
@@ -188,20 +167,20 @@
   },
 
   "pattern_summary": {
-    "total_upsets_tracked": 5,
+    "total_upsets_tracked": 4,
+    "correction_note": "4/12: U004（SF Sinner vs Zverev）を削除。実際はSinner HIT（upset未発生）。旧セッションの誤記録。",
     "sports_covered": ["tennis_atp", "nrl"],
     "sports_pending_data": ["tennis_wta","nhl","superrugby","ufl","nfl","cfl"],
     "upset_factor_frequency": {
       "UF01": 1,
       "UF02": 2,
-      "UF03": 3,
-      "UF04": 1,
+      "UF03": 2,
       "UF05": 1,
       "UF09": 1,
       "UF03_variant(NRL小サンプル)": 1,
       "UF06_variant(desperate team)": 1
     },
-    "most_common_factor": "UF03（実力差ボーダーライン）— 5件中3件に出現（NRL小サンプル起因含む）",
+    "most_common_factor": "UF03（実力差ボーダーライン）— 4件中2件に出現（NRL小サンプル起因含む）",
     "key_insight_current": "実力指標差がボーダーラインの試合、またはサンプル不足で指標が信頼できない試合では他要因が結果を左右しやすい。シーズン序盤は信頼度上限のキャップが必要。"
   },
 
@@ -211,7 +190,7 @@
       "priority": "高",
       "current_rule": "R001: cElo差≥80ptでL1通過",
       "proposed": "cElo差<130ptはCAUTION、差<80ptはSKIP推奨",
-      "evidence": ["U002(130pt→MISS)", "U004(110pt→MISS)", "U003(40pt→MISS)"]
+      "evidence": ["U002(130pt→MISS)", "U003(40pt→MISS)", "※U004は誤記録のため削除（Sinner HIT）"]
     },
     {
       "sport": "tennis_atp",
