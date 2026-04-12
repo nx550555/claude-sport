@@ -29,7 +29,10 @@
 
 **テニス（ATP）の作業をするとき：**
 1. `C:\Users\ohwada\Desktop\claude_sport\core\rules_tennis.json` を読み込む
-2. `C:\Users\ohwada\Desktop\claude_sport\records\tennis\2026-MC.json` を読み込む
+2. `C:\Users\ohwada\Desktop\claude_sport\records\tennis\2026-ATP.json` を読み込む
+3. OddsPortalで「今週オッズが付いているATP試合」を確認してからスクリーニングを開始する
+   - 大会名ではなくオッズが立っている試合を起点にすること
+   - 新規試合は predictions 配列に tournament フィールド付きで追記する
 
 **テニス（WTA）の作業をするとき：**
 1. `C:\Users\ohwada\Desktop\claude_sport\core\rules_wta.json` を読み込む
@@ -102,7 +105,7 @@ C:\Users\ohwada\Desktop\claude_sport\
 │   └── framework.json          ← 共通設定
 ├── records/
 │   ├── tennis/
-│   │   └── 2026-MC.json        ← ATP MC2026の全予測・結果
+│   │   └── 2026-ATP.json       ← ATP 2026シーズン全予測・結果（大会横断）
 │   ├── wta/
 │   │   └── 2026.json           ← WTA 2026の全予測・結果
 │   ├── nhl/

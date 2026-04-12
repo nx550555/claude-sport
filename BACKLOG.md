@@ -19,9 +19,12 @@
 ## 未完了・作業中（次回セッション最優先）
 
 - [ ] UFL Week3 Dallas vs Columbus 結果確認・記録（4/13 正午ET試合後）← Dallas GO EV+8.2% 信頼度82%
+- [ ] ATP 今週（W16）オッズ付き試合スクリーニング（Barcelona 500 / Munich 250 ← OddsPortal確認起点）
 - [ ] MC2026 F Alcaraz vs Sinner 結果確認（4/13試合後）← SKIP（ベットなし・観戦のみ）
+- [x] ATP W16 R1 Barcelona/Munich スクリーニング完了（全14試合SKIP・4/12実施）
+- [ ] ATP W16 R1結果確認 → R2スクリーニング（4/14〜、オッズ確認起点）
 - [~] WTA Stuttgart 初回分析（開幕4/13）← Shnaider vs Korpatsch・Andreeva vs Ostapenko を tennisabstract cElo確認後GO判断
-- [ ] NHL 4/12-4/13 ゲーム確認・スクリーニング（プレーオフ準備期間の可能性）
+- [ ] NHL プレーイン（4/14〜）スクリーニング
 
 ---
 
@@ -73,6 +76,9 @@
 ---
 
 ## 設計方針メモ（次回Claude Codeへ）
+
+- **ATPスクリーニングはオッズ起点**: 大会名・大会開幕日を起点にしない。OddsPortalで「今週オッズが付いているATP試合」を確認してからcEloスクリーニングを開始する。
+- **ATPレコードは年間1ファイル**: `records/tennis/2026-ATP.json` に全大会の予測を tournament フィールド付きで追記。大会単位でファイルを分割しない。
 
 - **3段階フレームワーク**: Phase1（強い側確認）→ Phase2（逆転条件特定）→ Phase3（勝者予測）
 - **MISSが出たら必ず** `stats/upset_patterns.json` にU00x IDで追記（UF分類）
