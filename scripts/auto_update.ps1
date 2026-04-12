@@ -1,7 +1,7 @@
 $ProjectDir = "C:\Users\ohwada\Desktop\claude_sport"
 $ClaudeExe  = "C:\Users\ohwada\.local\bin\claude.exe"
 $LogFile    = "$ProjectDir\scripts\auto_update.log"
-$DashFile   = "$ProjectDir\dashboard\index.html"   # FIX: was dashboard.html (wrong path)
+$DashFile   = "$ProjectDir\dashboard.html"
 Set-Location $ProjectDir
 
 $now     = Get-Date
@@ -54,7 +54,7 @@ $p = "AUTOMATED ANALYSIS MODE. " +
      "STEP6: Apply L1 screening rules from core/rules_*.json. " +
      "If GO candidate exists (confidence>=75 and EV>5%), add to records/. " +
 
-     "STEP7: Update dashboard/index.html (NOT dashboard.html - the file is at dashboard/index.html). " +
+     "STEP7: Update dashboard.html (at project root, NOT dashboard/index.html). " +
      "Set <span id='last-updated-time'> to '$nowStr' and <span id='next-update-time'> to '$nextRun'. " +
      "Update all KPI numbers (hit rate, EV, GO count, pending count), active recommendation cards, and history table. " +
      "Update the notice div with today's most important pending predictions and results. " +
