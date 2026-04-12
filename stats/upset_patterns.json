@@ -173,7 +173,7 @@
     "sports_pending_data": ["tennis_wta","nhl","superrugby","ufl","nfl","cfl"],
     "upset_factor_frequency": {
       "UF01": 1,
-      "UF02": 2,
+      "UF02": 1,
       "UF03": 2,
       "UF05": 1,
       "UF09": 1,
