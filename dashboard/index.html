@@ -123,6 +123,7 @@ details[open] summary{color:#333}
   <button class="nt" onclick="sw('a',this)">アメフト</button>
   <button class="nt" onclick="sw('r',this)">ラグビー</button>
   <button class="nt" onclick="sw('g',this)">🎯 アップセット</button>
+  <button class="nt" onclick="sw('l',this)">📋 分析ログ</button>
   <button class="nt" onclick="sw('b',this)">BACKLOG</button>
 </nav>
 
@@ -568,6 +569,168 @@ details[open] summary{color:#333}
     <tr><td>ATP</td><td>なし</td><td>UF02チェック: 25歳以下が今大会上位連破中→CAUTION</td><td class="o">中</td></tr>
     <tr><td>NRL</td><td>PD差≥6pt</td><td>R3〜R8は閾値12ptへ引上げ（実装済: R012）</td><td class="g">完了</td></tr>
     <tr><td>WTA</td><td>W006: 信頼度&lt;75%は除外</td><td>W009: GAMBLE_BET枠を設け、35〜59%の逆張りを別評価（実装済）</td><td class="g">完了</td></tr>
+  </table>
+</div>
+
+<!-- ===== 分析ログ ===== -->
+<div id="l" class="pn">
+  <p class="disc" style="margin-bottom:10px">全種目・全ラウンドのスクリーニング実施記録。新しい順。各JSONの screening_log を集約。</p>
+
+  <div class="sec">2026-04-12（本日）</div>
+
+  <div class="card wta">
+    <div class="top"><div class="mn">WTA Stuttgart R1 — Porsche Tennis Grand Prix</div><span class="badge bgb">0 GO / 1 GAMBLE_BET</span></div>
+    <div class="sub">実施: 2026-04-12 | 試合日: 2026-04-13 | 室内クレー</div>
+    <div class="body" style="margin-top:6px">
+      <table>
+        <tr><th>試合</th><th>cElo差</th><th>L1</th><th>EV</th><th>判定</th></tr>
+        <tr><td>Shnaider vs Korpatsch WC</td><td>215.9</td><td class="g">✓</td><td class="r">-10.0%</td><td>SKIP（EV負）</td></tr>
+        <tr><td><strong>Andreeva(6) vs Ostapenko</strong></td><td>106.7</td><td class="g">✓</td><td class="org"><strong>+53.3%*</strong></td><td><span class="badge bgb" style="font-size:9px">GB001 0.25u</span></td></tr>
+        <tr><td>Fernandez Q vs Eala</td><td>100.7</td><td class="g">✓</td><td class="g">+6.4%</td><td>SKIP（信頼度64%）</td></tr>
+        <tr><td>Lys WC vs Badosa</td><td>—</td><td class="r">✗</td><td>—</td><td>SKIP（L1未達）</td></tr>
+      </table>
+      <p style="font-size:10px;color:#888;margin-top:4px">*Ostapenko側のEV（GAMBLE_BET枠）。通常フロー(Andreeva側)はEV-26.4%でSKIP。</p>
+    </div>
+  </div>
+
+  <div class="card atp">
+    <div class="top"><div class="mn">ATP W16 R1 — Barcelona(8試合) + Munich(6試合)</div><span class="badge bs">0 GO / 14 SKIP</span></div>
+    <div class="sub">実施: 2026-04-12 | L1通過7件、全てEVマイナス</div>
+    <div class="body" style="margin-top:6px">
+      L1通過(7): Fils差178(-1.7%)・Norrie差193(-3.5%)・Zverev差315(-6.2%)・Cerundolo差181(信頼度71%)・Vacherot差106(信頼度65%)・Borges差172(-10.7%)・Shelton差~188(EV極端マイナス)<br>
+      L1未達(7): Khachanov(82)・Rublev(70)・Etcheverry(25)・Machac(13)・Cobolli(85)・Griekspoor(45)・Fonseca(17)<br>
+      棄権: Musetti（差418の最大候補）
+    </div>
+    <div class="ev-box">全SKIP要因: 市場が実力差を完全に織り込み済み。Musetti棄権で最大候補消滅。</div>
+  </div>
+
+  <div class="sec">2026-04-11</div>
+
+  <div class="card atp">
+    <div class="top"><div class="mn">ATP W15 SF — Monte-Carlo Masters</div><span class="badge bh">2 GO / 2 HIT</span></div>
+    <div class="sub">実施: 2026-04-11 | 2/2 的中</div>
+    <div class="body" style="margin-top:6px">
+      <table>
+        <tr><th>試合</th><th>推奨</th><th>オッズ</th><th>EV</th><th>結果</th></tr>
+        <tr><td>Alcaraz vs de Minaur(5)</td><td>Alcaraz</td><td>1.50</td><td>24.5%</td><td><span class="hit-dot hd-g"></span>HIT +0.50u</td></tr>
+        <tr><td>Sinner vs Zverev(3)</td><td>Sinner</td><td>1.65</td><td>27.1%</td><td><span class="hit-dot hd-g"></span>HIT 6-1 6-4 +0.65u</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card nrl">
+    <div class="top"><div class="mn">NRL Round 6 — South Sydney vs Canberra</div><span class="badge bm">1 GO / 0 HIT</span></div>
+    <div class="sub">実施: 2026-04-11 | PD差17.3pt</div>
+    <div class="body" style="margin-top:6px">
+      推奨: Rabbitohs(1.55) EV+20.9% → MISS（Raiders 30-22）<br>
+      UF: desperate team効果 + 小サンプルPD歪み → R011・R012追加
+    </div>
+    <div class="ev-ng">EV -1.0u | MISS → U005記録</div>
+  </div>
+
+  <div class="card srp">
+    <div class="top"><div class="mn">Super Rugby R9 — Queensland Reds vs Crusaders</div><span class="badge bh">1 GO / 1 HIT</span></div>
+    <div class="sub">実施: 2026-04-11 | PD差12.9pt</div>
+    <div class="body" style="margin-top:6px">
+      推奨: Crusaders → HIT 32-12 +0.54u
+    </div>
+    <div class="ev-go">EV +0.54u | HIT</div>
+  </div>
+
+  <div class="sec">2026-04-10</div>
+
+  <div class="card atp">
+    <div class="top"><div class="mn">ATP W15 QF — Monte-Carlo Masters</div><span class="badge bh">3 GO / 3 HIT</span></div>
+    <div class="sub">実施: 2026-04-10 | 4試合スクリーニング</div>
+    <div class="body" style="margin-top:6px">
+      <table>
+        <tr><th>試合</th><th>推奨</th><th>EV</th><th>結果</th></tr>
+        <tr><td>Sinner vs FAA(6)</td><td>Sinner</td><td>17.4%</td><td><span class="hit-dot hd-g"></span>HIT 6-3 6-4 +0.38u</td></tr>
+        <tr><td>Zverev(3) vs Fonseca</td><td>Zverev</td><td>19.4%</td><td><span class="hit-dot hd-g"></span>HIT 4-6 6-4 7-5 +0.55u</td></tr>
+        <tr><td>Alcaraz(1) vs Bublik(8)</td><td>Alcaraz</td><td>11.3%</td><td><span class="hit-dot hd-g"></span>HIT 6-1 6-3 +0.25u</td></tr>
+        <tr><td>de Minaur(5) vs Vacherot WC</td><td>—</td><td>—</td><td>SKIP（信頼度70%）</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card ufl">
+    <div class="top"><div class="mn">UFL Week3 スクリーニング</div><span class="badge bl">1 GO</span></div>
+    <div class="sub">実施: 2026-04-10 | 4試合</div>
+    <div class="body" style="margin-top:6px">
+      GO: Dallas vs Columbus（Dallas EV+8.2% 信頼度82%）<br>
+      SKIP: Louisville vs Orlando(信頼度75%)・DC vs Houston(EV+6.4%のみ)・St.Louis vs Birmingham(L1差弱)
+    </div>
+  </div>
+
+  <div class="card nhl">
+    <div class="top"><div class="mn">NHL レギュラーシーズン終盤 — 14試合スクリーニング</div><span class="badge bh">1 GO / 1 HIT</span></div>
+    <div class="sub">実施: 2026-04-09 | L1通過4件</div>
+    <div class="body" style="margin-top:6px">
+      GO: Colorado vs Calgary（xGF%差10.0pt EV+6.6%）→ HIT 3-1 +0.333u<br>
+      SKIP: CAR@CHI(B2B→64%)・VGK@SEA(B2B→58%)・VAN@LA(EV+3.3%のみ)
+    </div>
+    <div class="ev-go">EV +0.333u | HIT</div>
+  </div>
+
+  <div class="sec">2026-04-09</div>
+
+  <div class="card nhl">
+    <div class="top"><div class="mn">NHL — Ottawa @ NY Islanders スクリーニング</div><span class="badge bh">1 GO / 1 HIT</span></div>
+    <div class="sub">実施: 2026-04-11 試合 | xGF%差5.52pt</div>
+    <div class="body" style="margin-top:6px">
+      GO: Ottawa(xGF%55.93%) vs NYI(47.41%) EV+33.1% 信頼度52.6%（市場乖離13.1pp）<br>
+      → HIT 3-2 Tkachuk残り13秒決勝点 +1.53u
+    </div>
+    <div class="ev-go">EV +1.53u | HIT | 市場乖離機能</div>
+  </div>
+
+  <div class="sec">2026-04-07</div>
+
+  <div class="card atp">
+    <div class="top"><div class="mn">ATP W15 R16 — Monte-Carlo Masters</div><span class="badge bh">2 GO / 1 HIT 1 MISS</span></div>
+    <div class="sub">実施: 2026-04-07 | 2試合</div>
+    <div class="body" style="margin-top:6px">
+      <table>
+        <tr><th>試合</th><th>推奨</th><th>EV</th><th>結果</th></tr>
+        <tr><td>Vacherot WC vs Hurkacz(PR)</td><td>Vacherot</td><td>11.2%</td><td><span class="hit-dot hd-g"></span>HIT 6-7 6-3 6-4 +0.57u</td></tr>
+        <tr><td>Berrettini WC vs Fonseca</td><td>Berrettini</td><td>8.4%</td><td><span class="hit-dot hd-r"></span>MISS 3-6 2-6 -1.0u</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="sec">2026-04-05</div>
+
+  <div class="card atp">
+    <div class="top"><div class="mn">ATP W15 R32 — Monte-Carlo Masters</div><span class="badge bm">3 GO / 1 HIT 2 MISS（+2 CAUTION）</span></div>
+    <div class="sub">実施: 2026-04-05 | 5試合（GO3・CAUTION2）</div>
+    <div class="body" style="margin-top:6px">
+      <table>
+        <tr><th>試合</th><th>推奨</th><th>EV</th><th>結果</th></tr>
+        <tr><td>FAA(6) vs Cilic</td><td>FAA</td><td>7.6%</td><td><span class="hit-dot hd-g"></span>HIT +0.63u</td></tr>
+        <tr><td>Medvedev(7) vs Berrettini WC</td><td>Medvedev</td><td>15.0%</td><td><span class="hit-dot hd-r"></span>MISS 0-6 0-6 → U001(UF01クレー嫌い)</td></tr>
+        <tr><td>Cerundolo(16) vs Machac</td><td>Cerundolo</td><td>14.8%</td><td><span class="hit-dot hd-r"></span>MISS 6-7 2-6 → U002(UF05スタイル)</td></tr>
+        <tr><td>Rinderknech vs Fonseca ⚠caution</td><td>Rinderknech</td><td>43.5%</td><td><span class="hit-dot hd-r"></span>MISS</td></tr>
+        <tr><td>Marozsan vs Hurkacz ⚠caution</td><td>Marozsan</td><td>2.1%</td><td><span class="hit-dot hd-r"></span>MISS</td></tr>
+      </table>
+    </div>
+    <div class="ev-ng">EV -3.37u（初回）| CAUTION2件はルール改善後除外対象</div>
+  </div>
+
+  <div class="sec">スクリーニング集計（全種目）</div>
+  <table>
+    <tr><th>日付</th><th>種目</th><th>試合数</th><th>GO</th><th>GB</th><th>HIT</th><th>EV計</th></tr>
+    <tr><td>04/12</td><td class="wta">WTA Stuttgart R1</td><td>4</td><td class="r">0</td><td class="org">1</td><td>—</td><td class="o">待ち</td></tr>
+    <tr><td>04/12</td><td class="atp">ATP W16 R1</td><td>14</td><td class="r">0</td><td>0</td><td>—</td><td>—</td></tr>
+    <tr><td>04/11</td><td class="atp">ATP W15 SF</td><td>2</td><td class="g">2</td><td>0</td><td class="g">2</td><td class="g">+1.15u</td></tr>
+    <tr><td>04/11</td><td class="nrl">NRL R6</td><td>1</td><td>1</td><td>0</td><td class="r">0</td><td class="r">-1.00u</td></tr>
+    <tr><td>04/11</td><td class="srp">Super Rugby R9</td><td>1</td><td class="g">1</td><td>0</td><td class="g">1</td><td class="g">+0.54u</td></tr>
+    <tr><td>04/10</td><td class="atp">ATP W15 QF</td><td>4</td><td class="g">3</td><td>0</td><td class="g">3</td><td class="g">+1.18u</td></tr>
+    <tr><td>04/10</td><td class="ufl">UFL W3</td><td>4</td><td class="g">1</td><td>0</td><td>—</td><td class="o">待ち</td></tr>
+    <tr><td>04/09</td><td class="nhl">NHL</td><td>14</td><td class="g">1</td><td>0</td><td class="g">1</td><td class="g">+0.333u</td></tr>
+    <tr><td>04/11</td><td class="nhl">NHL OTT@NYI</td><td>1</td><td class="g">1</td><td>0</td><td class="g">1</td><td class="g">+1.53u</td></tr>
+    <tr><td>04/07</td><td class="atp">ATP W15 R16</td><td>2</td><td>2</td><td>0</td><td class="o">1/2</td><td class="r">-0.43u</td></tr>
+    <tr><td>04/05</td><td class="atp">ATP W15 R32</td><td>5</td><td>3+2c</td><td>0</td><td class="r">1/5</td><td class="r">-3.37u</td></tr>
+    <tr style="font-weight:700;background:#f7f6f3"><td colspan="2">合計（GO確定分のみ）</td><td>—</td><td>15</td><td class="org">1</td><td class="g">11/15</td><td class="g">+2.13u</td></tr>
   </table>
 </div>
 
