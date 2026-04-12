@@ -23,10 +23,18 @@
 - [ ] MC2026 F Alcaraz vs Sinner 結果確認（4/13試合後）← SKIP（ベットなし・観戦のみ）
 - [x] ATP W16 R1 Barcelona/Munich スクリーニング完了（全14試合SKIP・4/12実施）
 - [ ] ATP W16 R1結果確認 → R2スクリーニング（4/14〜、オッズ確認起点）
-- [~] WTA Stuttgart 初回分析（開幕4/13）← Shnaider vs Korpatsch・Andreeva vs Ostapenko を tennisabstract cElo確認後GO判断
-- [ ] NHL プレーイン（4/14〜）スクリーニング
+- [x] WTA Stuttgart R1 初回分析完了（4/12実施）← 全4試合SKIP。GO推奨なし。cElo実数確認済み。
+- [ ] NHL プレーオフ R1 スクリーニング（4/16〜17実施予定）← ※プレーインなし。RS終了4/16→ブラケット確定後にMoneyPuck xGF%確認起点でスクリーニング。暫定ブラケット取得済み。
 
 ---
+
+## 直近完了（4/12 手動セッション）
+
+- [x] WTA Stuttgart R1 スクリーニング（tennisabstract cElo確認・全4試合SKIP）
+- [-] UFL Dallas vs Columbus 結果確認 ← 4/12 4PM ET試合中。翌JST早朝に終了予定。次セッションで確認。
+- [-] MC Final Alcaraz vs Sinner ← 4/13試合。現時点未進行。次セッションで確認。
+- [-] ATP Barcelona/Munich R1結果 ← 4/13〜開幕。現時点未進行。次セッションで確認。
+- [x] NHL プレーオフ暫定ブラケット取得（RS終了4/16・PO開始4/18。プレーインなし。）
 
 ## 直近完了（4/12 自動分析 10:36 JST実行）
 
@@ -67,9 +75,15 @@
 
 ## 今後の予定（時期が決まっているもの）
 
-- [ ] WTA Stuttgart 開幕（2026-04-13）
-- [ ] UFL Week3 結果（2026-04-13以降）
-- [ ] NHL プレーオフ開始後の分析継続
+- [x] WTA Stuttgart 開幕（2026-04-13）← R1スクリーニング完了
+- [ ] UFL Week3 結果（2026-04-12 4PM ET / JST 4/13早朝）
+- [ ] MC Final 結果（Alcaraz vs Sinner 2026-04-13）← SKIP観戦のみ
+- [ ] ATP Barcelona/Munich R1〜 結果確認・R2スクリーニング（2026-04-13〜）
+- [ ] WTA Stuttgart R2 スクリーニング（2026-04-14〜）← R1結果確認後
+- [ ] NHL プレーオフ R1 スクリーニング（2026-04-16〜17）← RS終了後・xGF%確認起点
+  - 暫定ブラケット（東）: Buffalo-Boston / Montreal-Tampa / Carolina-Ottawa / Pittsburgh-Philadelphia
+  - 暫定ブラケット（西）: Colorado-LAKings / Dallas-Minnesota / Edmonton-Utah / Vegas-Anaheim
+  - ⚠️ 4/12-16残り試合でシーディング変動あり。4/16終了後に確定。
 - [ ] CFL 2026シーズン開幕対応（2026年6月）
 - [ ] NFL 2026-27シーズン開幕対応（2026年9月）
 

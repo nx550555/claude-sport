@@ -26,44 +26,107 @@
         "信頼度≥75% AND EV>+5%の試合のみ推奨（go）"
       ],
       "indoor_clay_note": "Stuttgartはindoor clay（屋内クレー）。屋外クレーより速い可能性あり。サーブ力のある選手を過小評価しないよう注意。W007の表面特化補正を緩めに適用",
-      "predictions": []
+      "predictions": [
+        {
+          "tournament": "Porsche Tennis Grand Prix Stuttgart",
+          "round": "R1",
+          "date": "2026-04-13",
+          "match": "Shnaider D. vs Korpatsch T.(WC)",
+          "celo_shnaider": 1817.9, "celo_korpatsch": 1602.0, "l1_diff": 215.9, "l1_pass": true,
+          "tier": "skip", "rec": null,
+          "odds_shnaider": 1.19, "odds_korpatsch": 4.19,
+          "est_win_pct": 75.6,
+          "ev_est": -10.0,
+          "skip_reason": "EV -10.0%（オッズ1.19短すぎ）。市場が実力差を完全に織り込み済み。",
+          "adjustments": { "W008_korpatsch_wc_home": "-2% (Korpatsch WCドイツ地元補正)" },
+          "result": null, "score": null, "hit": null, "actual_ev": null,
+          "rules_applied": ["W001", "W008"]
+        },
+        {
+          "tournament": "Porsche Tennis Grand Prix Stuttgart",
+          "round": "R1",
+          "date": "2026-04-13",
+          "match": "Andreeva M.(6) vs Ostapenko J.",
+          "celo_andreeva": 1918.4, "celo_ostapenko": 1811.7, "l1_diff": 106.7, "l1_pass": true,
+          "tier": "skip", "rec": null,
+          "odds_andreeva": 1.25, "odds_ostapenko": 3.73,
+          "est_win_pct_andreeva": 58.9,
+          "ev_est_andreeva": -26.4,
+          "ev_est_ostapenko": 53.3,
+          "skip_reason": "Andreeva EV -26.4%（オッズ1.25短すぎ）。Ostapenko逆張りはEV+53.3%だが信頼度41% < 75%閾値（W006除外）。",
+          "adjustments": {
+            "ostapenko_defending_champ": "-3%（ディフェンディング王者の精神的優位）",
+            "indoor_clay_ostapenko": "-3%（フラット系・速いサーフェス→Ostapenko有利）"
+          },
+          "note": "Ostapenko defending champion + 室内クレー適性で合計-6%補正。cEloベース64.9%→補正後58.9%。GAMBLE_BET未達（Andreeva信頼度不足）。",
+          "result": null, "score": null, "hit": null, "actual_ev": null,
+          "rules_applied": ["W001", "W004", "W006"]
+        },
+        {
+          "tournament": "Porsche Tennis Grand Prix Stuttgart",
+          "round": "R1",
+          "date": "2026-04-13",
+          "match": "Fernandez L.(Q) vs Eala A.",
+          "celo_fernandez": 1697.2, "celo_eala": 1596.5, "l1_diff": 100.7, "l1_pass": true,
+          "tier": "skip", "rec": null,
+          "odds_fernandez": 1.66, "odds_eala": 2.17,
+          "est_win_pct": 64.1,
+          "ev_est": 6.4,
+          "skip_reason": "信頼度64.1% < 75%閾値（W006除外）。EVは+6.4%あるがW005未達。",
+          "note": "両者southpaw。Fernandez Q（クオリファイ疲労リスクあり）。市場implied 60.2% vs 推定64.1%で差が小さい。",
+          "result": null, "score": null, "hit": null, "actual_ev": null,
+          "rules_applied": ["W001", "W005", "W006"]
+        },
+        {
+          "tournament": "Porsche Tennis Grand Prix Stuttgart",
+          "round": "R1",
+          "date": "2026-04-13",
+          "match": "Lys E.(WC) vs Badosa P.",
+          "l1_diff": null, "l1_pass": false,
+          "tier": "skip", "rec": null,
+          "skip_reason": "Badosa怪我（No.102に降格）。実力差不明確。L1未達。",
+          "result": null, "score": null, "hit": null, "actual_ev": null,
+          "rules_applied": []
+        }
+      ]
     }
   ],
   "screening_log": [
     {
-      "date": "2026-04-13",
-      "tournament": "Stuttgart R1",
-      "note": "4/12自動スクリーニング（PC停止のため手動実施）。Top4シードBYE。tennisabstract cElo確認要。",
+      "date": "2026-04-12",
+      "tournament": "Stuttgart R1 (4/13試合・事前スクリーニング)",
+      "note": "tennisabstract実数cElo確認完了。全4試合SKIP。Top4シードBYE。",
       "total_games": 4,
       "go_recommendations": 0,
+      "l1_passed": 3,
+      "l1_failed": 1,
+      "ev_positive": 1,
+      "key_findings": [
+        "Shnaider(1817.9) vs Korpatsch(1602.0): cElo差215.9→L1通過。オッズ1.19でEV-10.0%。SKIP",
+        "Andreeva(1918.4) vs Ostapenko(1811.7): cElo差106.7→L1通過。Ostapenko逆張りEV+53.3%あるが信頼度41%でW006除外",
+        "Fernandez(1697.2) vs Eala(1596.5): cElo差100.7→L1通過。信頼度64.1%でW006除外（EV+6.4%も閾値未達）",
+        "Lys vs Badosa: L1未達（Badosa怪我でcElo確認不可）"
+      ],
       "matchups_screened": [
         {
           "match": "Shnaider D. vs Korpatsch T.(WC)",
-          "l1_est": "Shnaider ~1820 vs Korpatsch ~1620 → 差~200pt → L1通過",
-          "l1_ok": true,
-          "verdict": "PENDING_CELO",
-          "reason": "tennisabstract実数確認後にGO判断。Shnaider勝利確率est.80%以上。室内クレーでKorpatschhはGerman WCホーム有利だが実力差大。要オッズ確認。"
+          "l1_diff": 215.9, "l1_ok": true,
+          "verdict": "SKIP", "reason": "EV -10.0%（オッズ1.19短すぎ）"
         },
         {
           "match": "Andreeva M.(6) vs Ostapenko J.",
-          "l1_est": "Andreeva ~1840 vs Ostapenko ~1700 → 差~140pt → L1通過",
-          "l1_ok": true,
-          "verdict": "CAUTION",
-          "reason": "Ostapenko is defending champion。室内クレーはOstapenko得意（フラット系有効）。Andreeva clay経験2シーズンのみ。逆転条件あり→CAUTION。"
+          "l1_diff": 106.7, "l1_ok": true,
+          "verdict": "SKIP", "reason": "Andreeva EV-26.4%。Ostapenko信頼度41% < 75%"
         },
         {
-          "match": "Fernandez L. vs Eala A.",
-          "l1_est": "Fernandez ~1740 vs Eala ~1650 → 差~90pt → L1ボーダー",
-          "l1_ok": true,
-          "verdict": "SKIP",
-          "reason": "両者southpaw、スタイルマッチアップ不確実。差90ptはボーダー。信頼度75%未達の可能性大。"
+          "match": "Fernandez L.(Q) vs Eala A.",
+          "l1_diff": 100.7, "l1_ok": true,
+          "verdict": "SKIP", "reason": "信頼度64.1% < 75%（W006）"
         },
         {
           "match": "Lys E.(WC) vs Badosa P.",
-          "l1_est": "Badosa injury→ranked~102。Lys ranked~80 WC。差不明",
-          "l1_ok": false,
-          "verdict": "SKIP",
-          "reason": "Badosa injury（No.102に降格）。実力差不明確。L1スクリーニング不通過。"
+          "l1_diff": null, "l1_ok": false,
+          "verdict": "SKIP", "reason": "L1未達（Badosa怪我）"
         }
       ]
     }
