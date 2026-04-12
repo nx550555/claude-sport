@@ -18,18 +18,21 @@
 
 ## 未完了・作業中（次回セッション最優先）
 
-- [x] MC2026 F予測・実施 ← 対戦修正: Alcaraz vs Sinner（4/13）。SKIP（cElo差~20pt L1未達）
-- [x] MC2026 SF Sinner vs Zverev 誤記録修正 ← Sinner 6-1 6-4 HIT（旧セッション誤記録→4/12修正）
-- [x] NRL Round 6 Rabbitohs vs Raiders 結果確認・記録 ← Raiders 30-22勝利 → MISS（cumulative更新済）
-- [x] Super Rugby R9 Reds vs Crusaders 再評価 ← ラインナップ確認→GO（Crusaders 1.54 EV+17%）記録済
-- [x] Super Rugby R9 結果確認・記録（Crusaders 32-12 Reds HIT / Hurricanes 52-14 Blues 予測なし）
-- [x] NHL OTT @ NYI 結果確認・記録（Ottawa Senators 3-2 NYI HIT +1.53）
-- [x] NBA 4/12最終日 結果確認 ← Rockets 124-109 HIT(+0.20u) / Cavaliers 130-126 SKIP（オッズ未確認）
 - [ ] UFL Week3 Dallas vs Columbus 結果確認・記録（4/13 正午ET試合後）← Dallas GO EV+8.2% 信頼度82%
 - [ ] MC2026 F Alcaraz vs Sinner 結果確認（4/13試合後）← SKIP（ベットなし・観戦のみ）
 - [~] WTA Stuttgart 初回分析（開幕4/13）← Shnaider vs Korpatsch・Andreeva vs Ostapenko を tennisabstract cElo確認後GO判断
+- [ ] NHL 4/12-4/13 ゲーム確認・スクリーニング（プレーオフ準備期間の可能性）
 
 ---
+
+## 直近完了（4/12 自動分析 10:36 JST実行）
+
+- [x] STEP1: BACKLOG読込・pending ゲーム特定（UFL Dallas, MC F SKIP, WTA Stuttgart）
+- [x] STEP2-A: 結果検証（4/13前なので pending のまま）
+- [x] STEP5: 次24時間ゲーム検索（NHL/UFL/WTA確認済）
+- [x] STEP6: L1スクリーニング（4/13朝実施予定）
+- [x] STEP7: ダッシュボード時刻更新（10:36 JST / 次回 22:36 JST）
+- [x] STEP8: BACKLOG更新
 
 ## 直近完了（4/12 手動自動分析代替）
 

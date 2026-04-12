@@ -69,7 +69,7 @@ $p = "AUTOMATED ANALYSIS MODE. " +
 Write-Log "Starting Claude analysis (budget: USD2.00, auto-permissions)..."
 Write-Host "--- Claude output below ---"
 
-$output = & $ClaudeExe -p "--permission-mode" "bypassPermissions" "--max-budget-usd" "2.00" $p 2>&1
+$output = & $ClaudeExe -p "--permission-mode" "bypassPermissions" "--model" "claude-haiku-4-5-20251001" "--max-budget-usd" "2.00" $p 2>&1
 
 Write-Host "--- Claude output end ---"
 Write-Log ("Claude finished. Lines: " + ($output | Measure-Object -Line).Lines)
