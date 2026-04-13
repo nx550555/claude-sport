@@ -19,14 +19,27 @@
 ## 未完了・作業中（次回セッション最優先）
 
 - [ ] UFL Week3 Dallas vs Columbus 結果確認・記録（4/13 正午ET試合後）← Dallas GO EV+8.2% 信頼度82%
-- [ ] ATP 今週（W16）オッズ付き試合スクリーニング（Barcelona 500 / Munich 250 ← OddsPortal確認起点）
 - [ ] MC2026 F Alcaraz vs Sinner 結果確認（4/13試合後）← SKIP（ベットなし・観戦のみ）
-- [x] ATP W16 R1 Barcelona/Munich スクリーニング完了（全14試合SKIP・4/12実施）
-- [ ] ATP W16 R1結果確認 → R2スクリーニング（4/14〜、オッズ確認起点）
-- [x] WTA Stuttgart R1 初回分析完了（4/12実施）← 全4試合SKIP。GO推奨なし。cElo実数確認済み。
+- [ ] ATP W16 R1 今夜の結果確認（Nava/Shelton 21:10・Blockx/Hanfmann 22:20・Norrie/Wawrinka 23:00・Borges/Mannarino 23:00 全SKIP）→ 明日R2スクリーニング（casino data起点）
+- [ ] ATP Barcelona/Munich R1 4/14分スクリーニング（25試合超・casino data起点） ← 優先度高
+- [x] WTA Stuttgart R1 全12試合完了（4/12〜4/13実施）← **GB001 Ostapenko HIT(+0.538u)。UPSET 5/12。**
+- [ ] WTA Stuttgart R2 スクリーニング（R1結果確認後・casino dataまたはOddsPortal起点）
+- [ ] WTA Rouen R1 4/14分スクリーニング（14試合未スクリーニング ← casino data起点）
 - [ ] NHL プレーオフ R1 スクリーニング（4/16〜17実施予定）← ※プレーインなし。RS終了4/16→ブラケット確定後にMoneyPuck xGF%確認起点でスクリーニング。暫定ブラケット取得済み。
 
 ---
+
+## 直近完了（4/13 手動セッション）
+
+- [x] 手動試合データ共有システム確立（`手動試合データ/tennis_2026-04-13.json`起点）
+- [x] WTA Stuttgart R1 全12試合結果記録・GB001 Ostapenko HIT(+0.538u)確認
+- [x] Stuttgart indoor clay UPSET分析（5/12=41.7%、W007補正強化候補）
+- [x] upset_patterns.json GB001 HIT更新 + pattern_summary更新
+- [x] cumulative.json tennis_wta統計更新（1/1 100%、+0.538u）
+- [x] dashboard.html更新（75.0% 12/16・+2.671u・WTAカード・GB001行・タイムライン）
+- [x] 今夜のATP/WTA全6試合スクリーニング（全SKIP）← cElo取得・EV計算済み
+- [x] records/wta/2026.json更新（R1全結果+Rouen追加）
+- [x] records/tennis/2026-ATP.json更新（Nagal upset記録・今夜2試合追加）
 
 ## 直近完了（4/12 手動セッション）
 
