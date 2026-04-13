@@ -185,15 +185,17 @@
       "category": "ATP500",
       "surface": "Clay (outdoor)",
       "round": "R1",
-      "date": "2026-04-13",
-      "match": "Fils A. vs Nakashima B.",
-      "l1_diff": 178.7, "l1_pass": true,
+      "date": "2026-04-14",
+      "match": "Nakashima B. vs Cerundolo J.M.",
+      "draw_change": "当初Fils vs Nakashimaだったがドロー変更。Nakashima → Cerundolo J.M.戦。Fils → Atmane戦へ移動。",
+      "l1_diff": null, "l1_pass": null,
       "tier": "skip", "rec": null,
-      "rec_odds": 1.29, "ev_est": -1.7, "confidence": 76,
-      "skip_reason": "EV -1.7%（閾値+5%未達）。オッズ短すぎ。",
+      "rec_odds_nakashima": 1.83, "rec_odds_cerundolo_jm": 1.94,
+      "ev_est": null, "confidence": null,
+      "skip_reason": "cElo未確認（ドロー変更後の新対戦）。市場ほぼ互角（1.83 vs 1.94）。",
       "result": null, "score": null, "hit": null, "actual_ev": null,
-      "rules_applied": ["R001", "R010"],
-      "note": "Fils cElo1894 vs Nakashima cElo1715。信頼度76%でR010未達。R007（Nakashima初クレー）で+2%調整済。"
+      "rules_applied": [],
+      "note": "Nakashima cElo1715。Cerundolo J.M.（フランシスコの弟、アルゼンチン）cElo未取得。市場互角→スクリーニング除外。"
     },
     {
       "tournament": "Barcelona Open Banc Sabadell",
@@ -215,15 +217,16 @@
       "category": "ATP500",
       "surface": "Clay (outdoor)",
       "round": "R1",
-      "date": "2026-04-13",
-      "match": "Vacherot V.(6) vs Atmane T.",
-      "l1_diff": 106.3, "l1_pass": true,
+      "date": "2026-04-14",
+      "match": "Fils A. vs Atmane T.",
+      "draw_change": "当初Vacherot vs Atmaneだったがドロー変更。Fils → Atmane戦。",
+      "l1_diff": 276.0, "l1_pass": true,
       "tier": "skip", "rec": null,
-      "rec_odds": 1.43, "ev_est": null, "confidence": 65,
-      "skip_reason": "信頼度65%→R010により除外（閾値75%）",
+      "rec_odds_fils": 1.20, "rec_odds_atmane": 4.30, "ev_est": -0.4, "confidence": 83.0,
+      "skip_reason": "EV -0.4%（閾値+5%未達）。市場implied 83.3%≒cElo推定83.0%で乖離なし。",
       "result": null, "score": null, "hit": null, "actual_ev": null,
-      "rules_applied": ["R001", "R010"],
-      "note": "Vacherot cElo1724 vs Atmane cElo1618。差106でL1通過だが信頼度不足。"
+      "rules_applied": ["R001"],
+      "note": "Fils cElo1894 vs Atmane cElo1618。差276でL1通過。ただしEV極薄（市場が完全に織り込み済み）。"
     },
     {
       "tournament": "Barcelona Open Banc Sabadell",
@@ -303,21 +306,27 @@
       "category": "ATP500",
       "surface": "Clay (outdoor)",
       "round": "R1",
-      "date": "2026-04-13",
+      "date": "2026-04-14",
+      "start_time": "19:15",
       "match": "Musetti L.(2) vs Landaluce M.",
-      "l1_diff": 418.4, "l1_pass": true,
-      "tier": "skip", "rec": null, "rec_odds": null, "ev_est": null, "confidence": null,
-      "skip_reason": "Musetti棄権（腕の怪我）→ 試合成立せず",
+      "draw_note": "当初棄権報告があったが4/13 casino dataで4/14開催として掲載→GO推奨",
+      "l1_diff": 369.5, "l1_pass": true,
+      "tier": "go", "rec": "Musetti",
+      "rec_odds": 1.27, "ev_est": 9.7, "confidence": 86.4,
+      "adjustments": {
+        "landaluce_home_barcelona": "-3%（スペイン人・地元バルセロナ開催）"
+      },
+      "skip_reason": null,
       "result": null, "score": null, "hit": null, "actual_ev": null,
-      "rules_applied": [],
-      "note": "スクリーニング対象外。差418で最大候補だったが棄権。Lucky Loserが補填。"
+      "rules_applied": ["R001", "R002"],
+      "note": "Musetti cElo~2017 vs Landaluce cElo~1648。差369.5でL1大幅通過。Landaluce地元-3%調整後86.4%。EV+9.7%。GO推奨。"
     },
     {
       "tournament": "Barcelona Open Banc Sabadell",
       "category": "ATP500",
       "surface": "Clay (outdoor)",
       "round": "R1",
-      "date": "2026-04-13",
+      "date": "2026-04-14",
       "match": "Munar J. vs Jodar R.(WC)",
       "l1_diff": 77.6, "l1_pass": false,
       "tier": "skip", "rec": null, "rec_odds": null, "ev_est": null, "confidence": null,
@@ -355,7 +364,49 @@
       "note": "Trungelliti cElo1682(LL) vs Medjedovic cElo1743(Q)。Medjedovic有利。差61でL1未達。"
     },
     {
-      "_note": "Barcelona R1: 残り約3試合はドロー完全取得できず未記録（4/13スクリーニング時点）"},
+      "tournament": "Barcelona Open Banc Sabadell",
+      "category": "ATP500",
+      "surface": "Clay (outdoor)",
+      "round": "R1",
+      "date": "2026-04-14",
+      "match": "de Minaur A.(5) vs Ofner S.",
+      "l1_diff": 140.0, "l1_pass": true,
+      "tier": "skip", "rec": null,
+      "rec_odds_deminaur": 1.23, "rec_odds_ofner": 4.00, "ev_est": -14.5, "confidence": 69.1,
+      "skip_reason": "EV -14.5%（極端にマイナス）。市場implied 81.3% >> cElo推定69.1%。市場がde Minaur大幅過大評価か、またはcElo未調整。",
+      "result": null, "score": null, "hit": null, "actual_ev": null,
+      "rules_applied": ["R001", "R010"],
+      "note": "de Minaur cElo~1770 vs Ofner cElo~1630（差140推定）。市場1.23は短すぎ。EV大幅マイナス。"
+    },
+    {
+      "tournament": "Barcelona Open Banc Sabadell",
+      "category": "ATP500",
+      "surface": "Clay (outdoor)",
+      "round": "R1",
+      "date": "2026-04-14",
+      "match": "Alcaraz C.(1) vs Virtanen O.",
+      "l1_diff": 650.0, "l1_pass": true,
+      "tier": "skip", "rec": null,
+      "rec_odds_alcaraz": 1.02, "rec_odds_virtanen": 12.00, "ev_est": -1.0, "confidence": 99.0,
+      "skip_reason": "オッズ1.02→EV≈-1%。過剰ブックマーク。ベット価値ゼロ。",
+      "result": null, "score": null, "hit": null, "actual_ev": null,
+      "rules_applied": ["R001"],
+      "note": "Alcaraz cElo~2200 vs Virtanen O.（フィンランド）cElo~1550。差650。オッズ1.02は市場が100%押し。EV皆無。"
+    },
+    {
+      "tournament": "Barcelona Open Banc Sabadell",
+      "category": "ATP500",
+      "surface": "Clay (outdoor)",
+      "round": "R1",
+      "date": "2026-04-14",
+      "match": "Martinez P. vs Sonego L.",
+      "l1_diff": 60.0, "l1_pass": false,
+      "tier": "skip", "rec": null, "rec_odds": null, "ev_est": null, "confidence": null,
+      "skip_reason": "L1未達推定（差~60 < 閾値100）",
+      "result": null, "score": null, "hit": null, "actual_ev": null,
+      "rules_applied": [],
+      "note": "Martinez P. cElo~1680（スペイン clay specialist）vs Sonego L. cElo~1620（イタリア）。差60推定。オッズ: Martinez 1.57, Sonego 2.37。L1未達。"
+    },
 
     {
       "tournament": "BMW Open Munich",
@@ -412,13 +463,15 @@
       "surface": "Clay (outdoor)",
       "round": "R1",
       "date": "2026-04-14",
-      "match": "Cobolli F.(4) vs Fucsovics M.",
-      "l1_diff": 85.6, "l1_pass": false,
-      "tier": "skip", "rec": null, "rec_odds": null, "ev_est": null, "confidence": null,
-      "skip_reason": "L1未達（差85 < 閾値100）",
+      "match": "Cobolli F.(4) vs Dedura-Palmero D.",
+      "draw_change": "当初Fucsovicsだったがドロー変更。Dedura-Palmero D.（差377.6）に変更→GO推奨",
+      "l1_diff": 377.6, "l1_pass": true,
+      "tier": "go", "rec": "Cobolli",
+      "rec_odds": 1.21, "ev_est": 8.7, "confidence": 89.8,
+      "skip_reason": null,
       "result": null, "score": null, "hit": null, "actual_ev": null,
-      "rules_applied": [],
-      "note": "Cobolli cElo1810 vs Fucsovics cElo1724。"
+      "rules_applied": ["R001", "R002"],
+      "note": "Cobolli cElo1807 vs Dedura-Palmero cElo~1429（差377.6）。win% 89.8%。EV+8.7%。GO推奨。"
     },
     {
       "tournament": "BMW Open Munich",
@@ -583,7 +636,77 @@
       "result": null, "score": null, "hit": null, "actual_ev": null,
       "rules_applied": ["R001", "R010"]
     },
-    {"_note": "Munich R1 4/13: casino data確認時点。Nava/Shelton・Blockx/Hanfmann今夜開催。Bublik/Hurkacz等残試合は結果未取得。VdZandschulp/Huesler・Rinderknech/Michelsen は試合中データのみ取得（勝敗未確定）。"}
+    {
+      "tournament": "BMW Open Munich",
+      "category": "ATP500",
+      "surface": "Clay (outdoor)",
+      "round": "R1",
+      "date": "2026-04-14",
+      "match": "Molcan A. vs Bublik A.(3)",
+      "l1_diff": 135.0, "l1_pass": true,
+      "tier": "caution", "rec": null,
+      "odds_molcan": 3.20, "odds_bublik": 1.34,
+      "confidence_bublik_raw": 68.5, "confidence_bublik_adjusted": 65.5,
+      "ev_bublik_adjusted": -12.4,
+      "skip_reason": "Bublik conf 65.5%（MC QF疲労-3%補正後）→R010除外。EV -12.4%。",
+      "adjustments": {
+        "bublik_mc_fatigue": "-3%（MC QF 4試合消耗。2日前）"
+      },
+      "result": null, "score": null, "hit": null, "actual_ev": null,
+      "rules_applied": ["R001", "R010"],
+      "note": "Bublik cElo1900 vs Molcan cElo~1765（差135）。MCでAlcarazに1-6 3-6で大敗後Munich参戦。疲労補正で信頼度65.5%→SKIP。CAUTION: Molcan upset候補（Djokovic撃破歴あり）。"
+    },
+    {
+      "tournament": "BMW Open Munich",
+      "category": "ATP500",
+      "surface": "Clay (outdoor)",
+      "round": "R1",
+      "date": "2026-04-14",
+      "match": "Zhang Z. vs Darderi L.",
+      "l1_diff": 120.0, "l1_pass": true,
+      "tier": "skip", "rec": null,
+      "odds_zhang": 3.30, "odds_darderi": 1.32,
+      "confidence_darderi": 66.6, "ev_darderi": -12.1,
+      "skip_reason": "信頼度66.6%→R010除外（閾値75%）。市場implied 75.8% >> cElo66.6%。",
+      "result": null, "score": null, "hit": null, "actual_ev": null,
+      "rules_applied": ["R001", "R010"],
+      "note": "Zhang Z. cElo~1540（中国、主にハードコート）vs Darderi L. cElo~1660（アルゼンチン系イタリア、クレー専門）。差~120でL1通過だが信頼度不足。"
+    },
+    {
+      "tournament": "BMW Open Munich",
+      "category": "ATP500",
+      "surface": "Clay (outdoor)",
+      "round": "R1",
+      "date": "2026-04-14",
+      "match": "Bergs Z. vs Topo M.",
+      "l1_diff": 270.0, "l1_pass": true,
+      "tier": "skip", "rec": null,
+      "odds_bergs": 1.26, "odds_topo": 3.75,
+      "confidence_bergs": 82.6, "ev_bergs": 4.1,
+      "skip_reason": "EV +4.1%（閾値5%未達）。Topo M.のcElo未確認（qualifier/WC想定）。",
+      "result": null, "score": null, "hit": null, "actual_ev": null,
+      "rules_applied": ["R001"],
+      "note": "Bergs cElo~1720（ベルギー、クレー専門）vs Topo M. cElo未取得（~1450推定）。差270推定でL1通過。EV+4.1%はわずかに閾値未達。"
+    },
+    {
+      "tournament": "BMW Open Munich",
+      "category": "ATP500",
+      "surface": "Clay (outdoor)",
+      "round": "R1",
+      "date": "2026-04-14",
+      "match": "Engel J.(WC) vs Kopriva V.",
+      "l1_diff": 310.6, "l1_pass": true,
+      "tier": "go", "rec": "Kopriva",
+      "rec_odds": 1.36, "ev_est": 9.8, "confidence": 80.7,
+      "adjustments": {
+        "engel_home_munich": "-5%（ドイツ人WC・地元ミュンヘン開催）"
+      },
+      "skip_reason": null,
+      "result": null, "score": null, "hit": null, "actual_ev": null,
+      "rules_applied": ["R001", "R002"],
+      "note": "Kopriva cElo~1700 vs Engel J. cElo~1389（ドイツWC）。差310.6でL1通過。Engel地元WC-5%補正後conf 80.7%。EV+9.8%。GO推奨。"
+    },
+    {"_note": "Munich/Barcelona R1 4/13-14: casino data(tennis_2026-04-13.json)起点。全試合スクリーニング完了。GO3件: Musetti(Barcelona 4/14)/Cobolli(Munich 4/14)/Kopriva(Munich 4/14)。CAUTION1件: Molcan/Bublik。"}
   ],
   "screening_log": [
     {
@@ -649,22 +772,30 @@
     {
       "week": "2026-W16",
       "date_screened": "2026-04-13",
+      "screening_session": "full_casino_data",
       "tournaments_active": ["Barcelona Open Banc Sabadell (ATP500)", "BMW Open Munich (ATP500)"],
       "surface": "Clay (outdoor)",
-      "total_screened": 11,
-      "total_known": 28,
-      "total_actual": 32,
-      "remaining_unknown": 4,
-      "go_count": 0,
-      "skip_count": 11,
-      "note": "4/13追加スクリーニング。Barcelona新規4試合+Munich新規7試合=11試合を追加。全SKIP。残り4試合はドロー完全取得不可（ATPサイトアクセス拒否・JS動的サイト）。",
-      "key_flags": [
-        "Tsitsipas: MC2026 R1でCerundoloに初敗退（過去22-4）→ Munich vsMarozsan 信頼度68%→SKIP",
-        "Diallo: 2026クレー0-2 → Sachko(Q)戦 信頼度72%→SKIP",
-        "Bublik vs Hurkacz: L1通過(差157)だが試合中でベット不可",
-        "VdZandschulp vs Huesler(Q): L1通過(差227)だが試合中でベット不可",
-        "Cerundolo(5): MCでTsitsipas撃破で好調。Munich vs Struff(WC)はSKIP(71%)だが要注目"
-      ]
+      "total_screened_barcelona": 16,
+      "total_screened_munich": 16,
+      "total_screened": 32,
+      "go_count": 3,
+      "caution_count": 1,
+      "skip_count": 28,
+      "go_list": [
+        "Musetti vs Landaluce (Barcelona 4/14, rec_odds 1.27, EV+9.7%)",
+        "Cobolli vs Dedura-Palmero (Munich 4/14, rec_odds 1.21, EV+8.7%)",
+        "Kopriva vs Engel (Munich 4/14, rec_odds 1.36, EV+9.8%)"
+      ],
+      "caution_list": [
+        "Molcan vs Bublik (Munich 4/14, Bublik MC疲労リスク)"
+      ],
+      "draw_changes": [
+        "Fils vs Nakashima → Nakashima vs Cerundolo J.M. (ドロー変更)",
+        "Vacherot vs Atmane → Fils vs Atmane (ドロー変更)",
+        "Cobolli vs Fucsovics → Cobolli vs Dedura-Palmero (ドロー変更→GO昇格)",
+        "Cerundolo F.(5) vs Struff → vs Nagal(LL) (4/13判明済み)"
+      ],
+      "note": "casino_data(tennis_2026-04-13.json)起点の全試合スクリーニング。Barcelona16試合+Munich16試合完了。GO3件（全4/14開催）。ドロー変更4件確認。"
     }
   ]
 }

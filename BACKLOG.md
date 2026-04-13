@@ -21,10 +21,10 @@
 - [ ] UFL Week3 Dallas vs Columbus 結果確認・記録（4/13 正午ET試合後）← Dallas GO EV+8.2% 信頼度82%
 - [ ] MC2026 F Alcaraz vs Sinner 結果確認（4/13試合後）← SKIP（ベットなし・観戦のみ）
 - [ ] ATP W16 R1 今夜の結果確認（Nava/Shelton 21:10・Blockx/Hanfmann 22:20・Norrie/Wawrinka 23:00・Borges/Mannarino 23:00 全SKIP）→ 明日R2スクリーニング（casino data起点）
-- [ ] ATP Barcelona/Munich R1 4/14分スクリーニング（25試合超・casino data起点） ← 優先度高
+- [x] ATP Barcelona/Munich R1 全試合スクリーニング完了（casino data起点）← **GO3件: Musetti@1.27(EV+9.7%), Cobolli@1.21(EV+8.7%), Kopriva@1.36(EV+9.8%) ← 全4/14開催**
 - [x] WTA Stuttgart R1 全12試合完了（4/12〜4/13実施）← **GB001 Ostapenko HIT(+0.538u)。UPSET 5/12。**
+- [x] WTA Rouen R1 全16試合スクリーニング完了（casino data起点）← 全SKIP。CAUTION: Timofeyeva/Boulter(cElo要確認)
 - [ ] WTA Stuttgart R2 スクリーニング（R1結果確認後・casino dataまたはOddsPortal起点）
-- [ ] WTA Rouen R1 4/14分スクリーニング（14試合未スクリーニング ← casino data起点）
 - [ ] NHL プレーオフ R1 スクリーニング（4/16〜17実施予定）← ※プレーインなし。RS終了4/16→ブラケット確定後にMoneyPuck xGF%確認起点でスクリーニング。暫定ブラケット取得済み。
 
 ---
@@ -38,6 +38,11 @@
 - [x] cumulative.json tennis_wta統計更新（1/1 100%、+0.538u）
 - [x] dashboard.html更新（75.0% 12/16・+2.671u・WTAカード・GB001行・タイムライン）
 - [x] 今夜のATP/WTA全6試合スクリーニング（全SKIP）← cElo取得・EV計算済み
+- [x] ATP Barcelona R1 全16試合スクリーニング（GO: Musetti@1.27 EV+9.7%）← 4/14開催
+- [x] ATP Munich R1 全16試合スクリーニング（GO: Cobolli@1.21 EV+8.7%, Kopriva@1.36 EV+9.8%）← 4/14開催
+- [x] WTA Rouen R1 全16試合スクリーニング（全SKIP・CAUTION: Boulter要確認）
+- [x] records/tennis/2026-ATP.json 全更新（50試合・GO13件）
+- [x] dashboard.html GO推奨3件更新（Musetti/Cobolli/Kopriva行追加）
 - [x] records/wta/2026.json更新（R1全結果+Rouen追加）
 - [x] records/tennis/2026-ATP.json更新（Nagal upset記録・今夜2試合追加）
 
