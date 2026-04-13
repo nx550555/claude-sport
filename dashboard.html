@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -181,7 +181,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 <div class="hdr">
   <h1>⚡ Sports Betting Dashboard</h1>
   <div class="hdr-right">
-    <span>GO 16件 / 確定 15件 / 待機 1件</span>
+    <span>GO 19件 / 確定 15件 / 待機 4件</span>
     <span style="background:#21262d;border:1px solid #30363d;border-radius:6px;padding:3px 8px;font-size:11px;">
       最終更新: <span id="last-updated-time">2026/04/13 手動更新 JST</span>
     </span>
@@ -210,7 +210,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
     <div class="overview-top">
       <div class="big-stat">
         <div class="bs-label">総GO回数</div>
-        <div class="bs-val">16</div>
+        <div class="bs-val">19</div>
         <div class="bs-sub">結果確定: 15件</div>
       </div>
       <div class="big-stat">
@@ -225,8 +225,8 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
       </div>
       <div class="big-stat">
         <div class="bs-label">待機中</div>
-        <div class="bs-val" style="color:#d29922;">1</div>
-        <div class="bs-sub">UFL Dallas（4/13）</div>
+        <div class="bs-val" style="color:#d29922;">4</div>
+        <div class="bs-sub">UFL Dallas + ATP 4/14 x3</div>
       </div>
     </div>
 
@@ -235,12 +235,12 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
       <div class="sport-card">
         <div class="sport-card-header" style="color:#79c0ff;">🎾 ATP Tennis <span class="rule-ver">v2.0</span></div>
         <div class="sport-metrics">
-          <div class="sm"><div class="sm-label">GO回数</div><div class="sm-val">10</div></div>
+          <div class="sm"><div class="sm-label">GO回数</div><div class="sm-val">13</div></div>
           <div class="sm"><div class="sm-label">結果済</div><div class="sm-val">10</div></div>
           <div class="sm"><div class="sm-label">的中</div><div class="sm-val">7</div></div>
           <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#3fb950;">70.0%</div></div>
           <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#3fb950;">+0.530</div></div>
-          <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#8b949e;">0(F=SKIP)</div></div>
+          <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#e3b341;">3(4/14)</div></div>
         </div>
       </div>
       <div class="sport-card">
@@ -379,6 +379,49 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
       <div class="ac-date">📅 2026-04-12 — 統計ノーカウント</div>
     </div>
 
+
+    <div class="active-card" style="border-color:#23863640;background:linear-gradient(135deg,#23863610,transparent);">
+      <div class="ac-sport">🎾 ATP — Barcelona R1 2026</div>
+      <div class="ac-match">Musetti L.(2) vs Landaluce M. <span class="badge badge-go">GO</span></div>
+      <div class="ac-rec">推奨: <strong style="color:#3fb950;">Musetti</strong></div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">1.27</div></div>
+        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">+9.7%</div></div>
+        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">86.4%</div></div>
+        <div class="acm"><div class="acm-l">cElo差</div><div class="acm-v rule">+370pt</div></div>
+      </div>
+      <div class="ac-note">cElo Musetti 1841 / Landaluce 1471 (diff +370). Landaluce地元補正-3%考慮済。conf 86.4% / EV+9.7%</div>
+      <div class="ac-date">📅 2026-04-14 Barcelona Clay R1</div>
+    </div>
+
+    <div class="active-card" style="border-color:#23863640;background:linear-gradient(135deg,#23863610,transparent);">
+      <div class="ac-sport">🎾 ATP — Munich R1 2026</div>
+      <div class="ac-match">Cobolli F.(4) vs Dedura-Palmero D. <span class="badge badge-go">GO</span></div>
+      <div class="ac-rec">推奨: <strong style="color:#3fb950;">Cobolli</strong></div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">1.21</div></div>
+        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">+8.7%</div></div>
+        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">89.8%</div></div>
+        <div class="acm"><div class="acm-l">cElo差</div><div class="acm-v rule">+378pt</div></div>
+      </div>
+      <div class="ac-note">cElo Cobolli 1929 / Dedura-Palmero 1551 (diff +378). ドロー変更(Fucsovics→Dedura-Palmero)でGO昇格。conf 89.8% / EV+8.7%</div>
+      <div class="ac-date">📅 2026-04-14 Munich Clay R1</div>
+    </div>
+
+    <div class="active-card" style="border-color:#23863640;background:linear-gradient(135deg,#23863610,transparent);">
+      <div class="ac-sport">🎾 ATP — Munich R1 2026</div>
+      <div class="ac-match">Engel J.(WC) vs Kopriva V. <span class="badge badge-go">GO</span></div>
+      <div class="ac-rec">推奨: <strong style="color:#3fb950;">Kopriva</strong></div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">1.36</div></div>
+        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">+9.8%</div></div>
+        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">80.7%</div></div>
+        <div class="acm"><div class="acm-l">cElo差</div><div class="acm-v rule">+311pt</div></div>
+      </div>
+      <div class="ac-note">cElo Kopriva 1699 / Engel 1388 (diff +311). Engel地元WC補正-5%考慮済。conf 80.7% / EV+9.8%</div>
+      <div class="ac-date">📅 2026-04-14 Munich Clay R1</div>
+    </div>
+
   </div></div>
 </div>
 
@@ -396,6 +439,48 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
           </tr>
         </thead>
         <tbody>
+        <tr style="background:rgba(46,160,67,.06);">
+          <td>2026-04-14</td>
+          <td><span class="sport-tag" style="color:#79c0ff;">🎾 ATP</span></td>
+          <td style="font-size:12px;">Barcelona R1 2026</td>
+          <td class="match-cell">Musetti L.(2) vs Landaluce M.</td>
+          <td><span class="badge badge-go">GO</span></td>
+          <td style="color:#3fb950;font-weight:600;">Musetti</td>
+          <td style="color:#e3b341;">1.27</td>
+          <td class="ev-pos">+9.7%</td>
+          <td>86.4%</td>
+          <td><span class="badge badge-pending">PENDING</span></td>
+          <td style="color:#8b949e;">—</td>
+          <td style="color:#8b949e;">—</td>
+        </tr>
+        <tr style="background:rgba(46,160,67,.06);">
+          <td>2026-04-14</td>
+          <td><span class="sport-tag" style="color:#79c0ff;">🎾 ATP</span></td>
+          <td style="font-size:12px;">Munich R1 2026</td>
+          <td class="match-cell">Cobolli F.(4) vs Dedura-Palmero D.</td>
+          <td><span class="badge badge-go">GO</span></td>
+          <td style="color:#3fb950;font-weight:600;">Cobolli</td>
+          <td style="color:#e3b341;">1.21</td>
+          <td class="ev-pos">+8.7%</td>
+          <td>89.8%</td>
+          <td><span class="badge badge-pending">PENDING</span></td>
+          <td style="color:#8b949e;">—</td>
+          <td style="color:#8b949e;">—</td>
+        </tr>
+        <tr style="background:rgba(46,160,67,.06);">
+          <td>2026-04-14</td>
+          <td><span class="sport-tag" style="color:#79c0ff;">🎾 ATP</span></td>
+          <td style="font-size:12px;">Munich R1 2026</td>
+          <td class="match-cell">Engel J.(WC) vs Kopriva V.</td>
+          <td><span class="badge badge-go">GO</span></td>
+          <td style="color:#3fb950;font-weight:600;">Kopriva</td>
+          <td style="color:#e3b341;">1.36</td>
+          <td class="ev-pos">+9.8%</td>
+          <td>80.7%</td>
+          <td><span class="badge badge-pending">PENDING</span></td>
+          <td style="color:#8b949e;">—</td>
+          <td style="color:#8b949e;">—</td>
+        </tr>
         <tr style="background:rgba(48,54,61,.3);">
           <td>2026-04-13</td>
           <td><span class="sport-tag" style="color:#79c0ff;">🎾 Tennis</span></td>
