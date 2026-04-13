@@ -1,12 +1,12 @@
 {
-  "updated": "2026-04-12",
+  "updated": "2026-04-13",
   "tennis_atp": {
-    "total_predictions": 11,
+    "total_predictions": 13,
     "confirmed": 10,
     "hits": 7,
     "hit_rate": 0.700,
     "ev_total": 0.53,
-    "pending": 1,
+    "pending": 3,
     "note_hit_rate": "hit_rate = hits / confirmed (pending除外)。GO tierのみ集計（CAUTION除外）",
     "correction_note": "4/12: SF Sinner vs Zverev の結果を修正（MISS→HIT: Sinner 6-1 6-4）。旧セッションで誤記録。delta +1.65",
     "tournaments": [
@@ -59,13 +59,14 @@
     "note": "Week3 Dallas vs Columbus（4/13）PENDING。Dallas GO（1.32 EV+8.2% 信頼度82%）。"
   },
   "nrl": {
-    "total_predictions": 1,
+    "total_predictions": 3,
+    "confirmed": 1,
     "hits": 0,
     "hit_rate": 0.0,
     "ev_total": -1.0,
-    "pending": 0,
+    "pending": 2,
     "status": "in_progress",
-    "note": "R6 Rabbitohs vs Raiders → MISS（Raiders 30-22勝利）"
+    "note": "R6 Rabbitohs vs Raiders → MISS（Raiders 30-22勝利）。R7: GO x2(Broncos EV+27.9%, Warriors EV+10.7%), CAUTION x2(Panthers 1.14, Rabbitohs 1.18) PENDING 4/17〜18。"
   },
   "superrugby": {
     "total_predictions": 1,

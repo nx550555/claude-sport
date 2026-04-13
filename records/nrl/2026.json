@@ -5,10 +5,12 @@
   "rule_version": "v1.0",
   "started": "2026-04-10",
   "summary": {
-    "total": 1,
+    "total": 3,
+    "confirmed": 1,
     "hit": 0,
     "hit_rate": 0.0,
-    "ev_total": -1.0
+    "ev_total": -1.0,
+    "pending": 2
   },
   "games": [
     {
@@ -54,7 +56,74 @@
       "note": "Rabbitohs 3-1好調。Raiders 1-4で最下位争い、PD -13.8/試合。主力Savage欠場でさらに弱体。Rabbitohs側はBrandon Smith(hooker)復帰がプラス。中立地Perth開催でHAなし。【結果】Raiders逆転勝利 30-22。MISS。"
     }
   ],
+  "pending_games": [
+    {
+      "date": "2026-04-18",
+      "match": "Wests Tigers vs Brisbane Broncos",
+      "round": 7,
+      "tier": "go",
+      "rec": "Brisbane Broncos",
+      "rec_odds": 1.46,
+      "ev": 27.9,
+      "confidence": 87.6,
+      "l1_data": { "BRI_PD_per_game": 10.0, "WST_PD_per_game": -4.1, "diff": 14.1, "threshold": 12, "rule": "R012_early_season" },
+      "status": "pending"
+    },
+    {
+      "date": "2026-04-18",
+      "match": "NZ Warriors vs Gold Coast Titans",
+      "round": 7,
+      "tier": "go",
+      "rec": "NZ Warriors",
+      "rec_odds": 1.22,
+      "ev": 10.7,
+      "confidence": 90.7,
+      "l1_data": { "NZW_PD_per_game": 8.7, "GCT_PD_per_game": -8.0, "diff": 16.7, "threshold": 12, "rule": "R012_early_season" },
+      "status": "pending"
+    },
+    {
+      "date": "2026-04-17",
+      "match": "Penrith Panthers vs Dolphins",
+      "round": 7,
+      "tier": "caution",
+      "rec": "Penrith Panthers",
+      "rec_odds": 1.14,
+      "ev": 9.2,
+      "confidence": 95.8,
+      "l1_data": { "PEN_PD_per_game": 16.0, "DOL_PD_per_game": -8.0, "diff": 24.0, "threshold": 12, "rule": "R012_early_season" },
+      "caution_reason": "odds_too_short — 1.14でリターンが薄い",
+      "status": "pending"
+    },
+    {
+      "date": "2026-04-18",
+      "match": "South Sydney Rabbitohs vs St George Illawarra Dragons",
+      "round": 7,
+      "tier": "caution",
+      "rec": "South Sydney Rabbitohs",
+      "rec_odds": 1.18,
+      "ev": 6.8,
+      "confidence": 88.3,
+      "l1_data": { "SOU_PD_per_game": 7.0, "SGD_PD_per_game": -6.5, "diff": 13.5, "threshold": 12, "rule": "R012_early_season" },
+      "caution_reason": "odds_short — 1.18でEV+6.8%は閾値ギリギリ",
+      "status": "pending"
+    }
+  ],
   "screening_log": [
+    {
+      "date": "2026-04-13",
+      "round": 7,
+      "total_games": 8,
+      "l1_passed": 4,
+      "go_recommendations": 2,
+      "caution_recommendations": 2,
+      "skipped": [
+        { "match": "Melbourne Storm vs Canberra Raiders", "reason": "L1差<12pt早期閾値未達" },
+        { "match": "Sydney Roosters vs Manly Sea Eagles", "reason": "L1差<12pt早期閾値未達" },
+        { "match": "Canterbury Bulldogs vs Newcastle Knights", "reason": "L1差<12pt早期閾値未達" },
+        { "match": "North Queensland Cowboys vs Parramatta Eels", "reason": "L1差<12pt早期閾値未達" }
+      ],
+      "notable": "NRL R7 4/13スクリーニング。早期閾値(R3-R8)=12pt適用。Broncos大型オッズ(1.46)でEV+27.9%が最高値。"
+    },
     {
       "date": "2026-04-10",
       "round": 6,
