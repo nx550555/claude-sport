@@ -1,10 +1,24 @@
 {
   "system": "マルチスポーツベッティング分析システム",
-  "version": "2.0",
-  "updated": "2026-04-10",
+  "version": "3.0",
+  "updated": "2026-04-14",
+
+  "core_philosophy": {
+    "primary_goal": "市場（オッズ・大衆予想）とは独立して、根拠を持って正しい勝者を予測できるシステムを育てること",
+    "learning_engine": "多くの予測を行い、外れた予測の原因を深く検証することで予測精度を向上させ続ける",
+    "prediction_vs_bet": {
+      "prediction": "全試合を対象に、根拠を持って勝者を予測する。外れても問題ない。外れた理由が検証の源泉になる",
+      "bet": "予測の中で 信頼度≥75% AND EV>+5% を満たした試合のみ推奨する。EVはシステムの予測が市場とどれだけ乖離しているかを測る指標",
+      "key_distinction": "EV閾値はベットするかどうかの判断基準であり、予測するかどうかの判断基準ではない"
+    },
+    "miss_value": "MISSは損失ではなく、なぜ実際の勝者がモデル予測を上回ったかを解明する機会。蓄積されたMISS分析がupset_patternsとrules更新に変換され、予測精度の向上につながる",
+    "long_term_target": "均衡した試合でも根拠を持って勝者を導き出せるようになること。現在のL1閾値（大きな実力差のみ対象）は学習初期の安全設計であり、精度向上とともに対象試合を広げていく"
+  },
+
   "sports_active": ["tennis_atp", "tennis_wta", "nhl", "ufl", "nrl", "superrugby", "nba"],
   "sports_preseason": ["nfl", "cfl"],
   "sports_excluded": ["ahl"],
+
   "sports_active_note": {
     "tennis_atp": "クレーシーズン進行中（MC2026 F待ち）",
     "tennis_wta": "クレーシーズン進行中（Stuttgart 4/13開幕）",
@@ -41,6 +55,7 @@
       "detail_ref": "core/rules_nhl.json → N015"
     }
   },
+
   "sport_categories": {
     "tennis": ["tennis_atp", "tennis_wta"],
     "rugby": ["nrl", "superrugby"],
@@ -48,17 +63,71 @@
     "american_football": ["ufl", "nfl", "cfl"],
     "basketball": ["nba"]
   },
+
   "common_layers": {
     "L1": "地力評価（スポーツ固有のEloレーティングまたは得失点差指標）",
     "L2": "直近フォーム品質スコア（対戦相手の強さを実測）",
     "L3": "スタッツ補正（数値指標）±5〜8%",
     "L4": "外部要因補正（怪我・体調・モチベーション・ホーム）±10〜15%"
   },
+
   "common_thresholds": {
-    "recommend": "信頼度≥75% AND EV>+5%",
-    "skip": "上記以外すべて"
+    "predict": "全試合対象。閾値なし。必ず predicted_winner を記録する",
+    "recommend_bet": "信頼度≥75% AND EV>+5%",
+    "skip_bet": "上記以外（予測はするが、ベットは推奨しない）"
   },
+
   "ev_formula": "(推定勝率 × オッズ) - 1",
+
+  "record_schema": {
+    "_description": "v3.0以降の標準レコード構造。全試合にprediction fieldsを記録する",
+    "prediction_fields": {
+      "_note": "全試合必須。ベット推奨の有無に関わらず記録する",
+      "predicted_winner": "予測勝者チーム名（必須）",
+      "prediction_confidence": "予測信頼度%（L1〜L4適用後の推定勝率）",
+      "prediction_basis": "予測根拠の要約（L1指標値・主要調整項目）",
+      "prediction_hit": "boolean or null — 予測が正しかったか（結果確認後に記入）"
+    },
+    "analysis_fields": {
+      "_note": "L1〜L4の分析内容",
+      "tier": "go / caution / skip",
+      "l1_metric": "使用したL1指標名",
+      "l1_data": "L1指標の実測値",
+      "adjustments": "L2〜L4の補正内容",
+      "rules_applied": "適用したルールID一覧"
+    },
+    "bet_fields": {
+      "_note": "tier=go または caution の場合のみ記録。skipは全てnull",
+      "rec": "ベット推奨チーム名（null if skip）",
+      "rec_odds": "推奨オッズ（null if skip）",
+      "ev": "期待値%（null if skip）"
+    },
+    "result_fields": {
+      "_note": "試合後に記入",
+      "result": "実際の勝者チーム名",
+      "score": "最終スコア",
+      "prediction_hit": "true/false — predicted_winner が正しかったか",
+      "hit": "true/false/null — ベットが当たったか（GOのみ。skipはnull）",
+      "actual_ev": "実際のEV（GOのみ。hitならrec_odds-1、missなら-1）",
+      "miss_layer": "外れた場合の原因レイヤー（L1/L2/L3/L4/外部要因）",
+      "miss_analysis": "なぜ予測が外れたかの検証内容"
+    }
+  },
+
+  "accuracy_tracking": {
+    "_description": "予測精度トラッキング（v3.0以降。予測とベットを分けて管理）",
+    "prediction_accuracy": {
+      "metric": "prediction_hit の割合（全試合対象）",
+      "purpose": "システムの予測精度向上を測定する",
+      "note": "ベット推奨していない試合も含む。精度向上がシステムの主目標"
+    },
+    "bet_performance": {
+      "metric": "hit の割合 AND ev_total（GOのみ対象）",
+      "purpose": "ベット推奨の収益性を管理する",
+      "note": "予測精度が上がると自然にbet_performanceも向上する関係"
+    }
+  },
+
   "rules_files": {
     "tennis_atp":  "core/rules_tennis.json",
     "tennis_wta":  "core/rules_wta.json",
@@ -70,8 +139,9 @@
     "cfl":         "core/rules_cfl.json",
     "nba":         "core/rules_nba.json"
   },
+
   "records_files": {
-    "tennis_atp":  "records/tennis/2026-MC.json",
+    "tennis_atp":  "records/tennis/2026-ATP.json",
     "tennis_wta":  "records/wta/2026.json",
     "nhl":         "records/nhl/2025-26.json",
     "ufl":         "records/ufl/2026.json",
@@ -81,10 +151,11 @@
     "cfl":         "records/cfl/2026.json",
     "nba":         "records/nba/2025-26.json"
   },
+
   "workflow": {
-    "before_analysis": "対象スポーツのrules_{sport}.json + records/{sport}/を読み込んでから分析依頼",
-    "after_result": "records/{sport}/{year}.jsonに結果を追記",
-    "rule_update": "rules_{sport}.jsonを上書き保存",
-    "stats_update": "stats/cumulative.jsonを更新"
+    "screening": "全試合にpredicted_winner・prediction_confidence・prediction_basisを記録してからtier(go/caution/skip)を判定する",
+    "after_result": "result・prediction_hit・hit（GOのみ）・miss_analysisをrecords/{sport}/{year}.jsonに記入する",
+    "rule_update": "miss_analysisから導いた新パターンをrules_{sport}.jsonに追記する",
+    "stats_update": "stats/cumulative.jsonのprediction_accuracy・bet_performanceを両方更新する"
   }
 }
