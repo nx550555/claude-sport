@@ -1,0 +1,41 @@
+{
+  "description": "全スポーツ共通ルール — データ整合性・プロセス品質",
+  "version": "v1.0",
+  "created": "2026-04-14",
+  "rules": [
+    {
+      "id": "GEN001",
+      "name": "チーム↔オッズ整合性チェック（Team-Odds Alignment）",
+      "version": "v1.0",
+      "added": "2026-04-14",
+      "trigger": "NRL R7 Wests Tigers vs Brisbane Broncos — Tigers(1.47) / Broncos(2.50) のデータに対し、Broncos GOと判定した後でTigersのオッズ(1.47)をBroncosに誤って紐づけた",
+      "rule": "推奨チームのオッズ記録時、必ずソースデータの対応フィールドと一致しているかを確認する",
+      "mandatory_steps": [
+        "STEP1: 試合をフォーマット化 → 『team1 (odds1) vs team2 (odds2)』 を明示",
+        "STEP2: 推奨チームを選定 → 『推奨: teamX』",
+        "STEP3: オッズを対応付け → 『rec_odds = oddsX (team1ならodds1 / team2ならodds2)』",
+        "STEP4: 最終確認 → 『team1(odds1) vs team2(odds2) 推奨: teamX @ oddsX』を声に出す形でチェック"
+      ],
+      "red_flag": "推奨チームのオッズが1.80未満なのに市場が相手チームを明確なファボリット(odds<1.80)としている場合は必ずGEN002を適用",
+      "example_error": "team1=Tigers(1.47) team2=Broncos(2.50) → 推奨Broncos → rec_odds=1.47(Tigersのオッズ) → NG",
+      "example_correct": "team1=Tigers(1.47) team2=Broncos(2.50) → 推奨Broncos → rec_odds=2.50(Broncosのオッズ) → OK"
+    },
+    {
+      "id": "GEN002",
+      "name": "市場乖離アラート（Market Divergence Alert）",
+      "version": "v1.0",
+      "added": "2026-04-14",
+      "rule": "モデル推定勝率と市場インプライド確率の乖離が15pp以上ある場合、GO確定前に原因を明記する",
+      "threshold": "乖離 ≥ 15pp → 警告 / 乖離 ≥ 30pp → 必須調査",
+      "calculation": "market_implied = 1 / odds; divergence = |model_win_prob - market_implied|",
+      "example": "モデル87.6% vs 市場40%(1/2.50) → 乖離47.6pp → 必須調査",
+      "required_action": "乖離原因を3つ以上列挙し、データ帰属エラーの可能性を明示的に除外してからGOを確定",
+      "possible_causes": [
+        "L1データのチーム帰属ミス（最頻原因）",
+        "最新の負傷情報がPD/Gに未反映",
+        "ホームアドバンテージの過小/過大評価",
+        "モデル未対応の要因（懸賞、地域性等）"
+      ]
+    }
+  ]
+}

@@ -2,6 +2,20 @@
   "description": "ルール変更履歴 / スポーツ別正答率への影響を追跡",
   "log": [
     {
+      "date": "2026-04-14",
+      "sport": "general",
+      "version_from": null,
+      "version_to": "v1.0",
+      "trigger": "NRL R7 Wests Tigers vs Broncos — Tigersのオッズ(1.47)をBroncosの推奨オッズとして誤記録。ソースデータはTigers 1.47 / Broncos 2.50と正しく記載されていたが、チームとオッズの対応付けを誤った",
+      "changes": [
+        "GEN001追加: チーム↔オッズ整合性チェック — 推奨記録時に team1(odds1) vs team2(odds2) を明示し、推奨チームのオッズフィールドと一致確認",
+        "GEN002追加: 市場乖離アラート — モデル勝率と市場インプライド確率の乖離≥15ppで警告、≥30ppで原因調査必須"
+      ],
+      "result_before": "チーム↔オッズの対応確認なし",
+      "result_after": "全スポーツのGO記録時にSTEP1-4チェック必須",
+      "note": "ソースデータは正確だった。エラーはClaude側の対応付けミス。同ミス再発防止のためGEN001/GEN002を全スポーツ横断ルールとして制定"
+    },
+    {
       "date": "2026-04-05",
       "sport": "tennis",
       "version_from": "v1.0",
