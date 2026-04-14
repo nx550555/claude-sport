@@ -204,7 +204,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 <div class="hdr">
   <h1>⚡ Sports Betting Dashboard</h1>
   <div class="hdr-right">
-    <span>GO 24件 / 確定 15件 / 待機 9件</span>
+    <span>GO 24件 / 確定 15件 / 待機 8件</span>
     <span style="background:#21262d;border:1px solid #30363d;border-radius:6px;padding:3px 8px;font-size:11px;">
       最終更新: <span id="last-updated-time">2026/04/14 手動更新 JST</span>
     </span>
@@ -218,7 +218,8 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
   <div class="tab active" id="tab-overview" onclick="showTab('overview')">📊 概要</div>
   <div class="tab" id="tab-active"   onclick="showTab('active')">✅ アクティブ推奨</div>
   <div class="tab" id="tab-history"  onclick="showTab('history')">📋 全履歴</div>
-  <div class="tab" id="tab-analysislog" onclick="showTab('analysislog')">🔍 分析ログ</div>
+  <div class="tab" id="tab-analysislog" onclick="showTab('analysislog')">&#x1F50D; &#x5206;&#x6790;&#x30ED;&#x30B0;</div>
+  <div class="tab" id="tab-funnel" onclick="showTab('funnel')">&#x1F52C; &#x30D5;&#x30A1;&#x30CD;&#x30EB;&#x5206;&#x6790;</div>
   <div class="tab" id="tab-timeline" onclick="showTab('timeline')">📈 成長分析</div>
   <div class="tab" id="tab-accuracy"  onclick="showTab('accuracy')">📊 予測精度</div>
   <div class="tab" id="tab-upset"    onclick="showTab('upset')">🎯 アップセット分析</div>
@@ -249,8 +250,8 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
       </div>
       <div class="big-stat">
         <div class="bs-label">待機中</div>
-        <div class="bs-val" style="color:#d29922;">5</div>
-        <div class="bs-sub">ATP W16 x3 + NRL R7 x2</div>
+        <div class="bs-val" style="color:#d29922;">8</div>
+        <div class="bs-sub">ATP x3 + WTA x1 + NRL x2 + SL x2</div>
       </div>
     </div>
 
@@ -358,205 +359,205 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 
 <!-- ===== アクティブ推奨 ===== -->
 <div class="tab-content" id="content-active">
-  <div class="section-title">アクティブ GO 推奨 — 結果待ち</div>
+  <div class="section-title">アクティブ GO 推奨 — 結果待ち（日付・リーグ順）</div>
   <div class="section"><div class="active-grid">
-
-    <div class="active-card" style="border-color:#30363d;background:linear-gradient(135deg,#30363d10,transparent);opacity:.7;">
-      <div class="ac-sport">🎾 ATP — MC2026 決勝 <span class="badge badge-skip">SKIP（観戦）</span></div>
-      <div class="ac-match">Alcaraz C.(1) vs Sinner J.(2)</div>
-      <div class="ac-rec" style="color:#3fb950;">結果: Sinner 7-6(5) 6-3 — 予測なし（SKIP）</div>
-      <div class="ac-metrics">
-        <div class="acm"><div class="acm-l">cElo差</div><div class="acm-v rule">~20pt</div></div>
-        <div class="acm"><div class="acm-l">L1判定</div><div class="acm-v" style="color:#f85149;">不通過</div></div>
-        <div class="acm"><div class="acm-l">予測</div><div class="acm-v" style="color:#8b949e;">50/50</div></div>
-        <div class="acm"><div class="acm-l">bet</div><div class="acm-v rule">なし</div></div>
-      </div>
-      <div class="ac-note">SKIP正解（差なしで当てても運）。Sinnerが7-6(5) 6-3で優勝。MC2026完了。</div>
-      <div class="ac-date">📅 2026-04-13 ✓完了</div>
-    </div>
-
-    <div class="active-card" style="border-color:#23863640;background:linear-gradient(135deg,#23863610,transparent);opacity:.8;">
-      <div class="ac-sport">🏈 UFL Week 3 — Columbus @ Dallas <span class="badge badge-hit">HIT ✓</span></div>
-      <div class="ac-match">2026-04-12 / Cotton Bowl, Dallas</div>
-      <div class="ac-rec" style="color:#3fb950;">Dallas Renegades 28 — 23 Columbus Aviators</div>
-      <div class="ac-metrics">
-        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">1.32</div></div>
-        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">+8.2%</div></div>
-        <div class="acm"><div class="acm-l">実績EV</div><div class="acm-v ev">+0.32u</div></div>
-        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">82%</div></div>
-      </div>
-      <div class="ac-note">PD差30pt（Dallas +17.5/試合 vs Columbus -12.5/試合）が通り通しの地力差通り。</div>
-      <div class="ac-date">📅 2026-04-12</div>
-    </div>
-
-    <div class="active-card" style="border-color:#23863640;background:linear-gradient(135deg,#23863610,transparent);opacity:.8;">
-      <div class="ac-sport">🏀 NBA — Grizzlies @ Rockets <span class="badge badge-hit">HIT ✓</span></div>
-      <div class="ac-match">2026-04-12 / Toyota Center, Houston</div>
-      <div class="ac-rec" style="color:#3fb950;">Rockets 124 — 109 Grizzlies</div>
-      <div class="ac-metrics">
-        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">1.20</div></div>
-        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">+5.6%</div></div>
-        <div class="acm"><div class="acm-l">実績EV</div><div class="acm-v ev">+0.20u</div></div>
-        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">88%</div></div>
-      </div>
-      <div class="ac-date">📅 2026-04-12 確定済</div>
-    </div>
-    <div class="active-card" style="border-color:#30363d;background:linear-gradient(135deg,#30363d08,transparent);opacity:.7;">
-      <div class="ac-sport">🏀 NBA — Wizards @ Cavaliers <span class="badge badge-skip">SKIP</span></div>
-      <div class="ac-match">2026-04-12 / Cavs 130-126（参考記録）</div>
-      <div class="ac-rec" style="color:#8b949e;">オッズ未確認のためベット未実行</div>
-      <div class="ac-metrics">
-        <div class="acm"><div class="acm-l">結果</div><div class="acm-v" style="color:#3fb950;">Cavs勝</div></div>
-        <div class="acm"><div class="acm-l">Mitchell</div><div class="acm-v ev">48pts</div></div>
-        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v warn">未取得</div></div>
-        <div class="acm"><div class="acm-l">EV</div><div class="acm-v rule">カウント外</div></div>
-      </div>
-      <div class="ac-date">📅 2026-04-12 — 統計ノーカウント</div>
-    </div>
-
-
-    <div class="active-card" style="border-color:#23863640;background:linear-gradient(135deg,#23863610,transparent);">
-      <div class="ac-sport">🎾 ATP — Barcelona R1 2026</div>
-      <div class="ac-match">Musetti L.(2) vs Landaluce M. <span class="badge badge-go">GO</span></div>
-      <div class="ac-rec">推奨: <strong style="color:#3fb950;">Musetti</strong></div>
-      <div class="ac-metrics">
-        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">1.27</div></div>
-        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">+9.7%</div></div>
-        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">86.4%</div></div>
-        <div class="acm"><div class="acm-l">cElo差</div><div class="acm-v rule">+370pt</div></div>
-      </div>
-      <div class="ac-note">cElo Musetti 1841 / Landaluce 1471 (diff +370). Landaluce地元補正-3%考慮済。conf 86.4% / EV+9.7%</div>
-      <div class="ac-date">📅 2026-04-14 Barcelona Clay R1</div>
-    </div>
-
-    <div class="active-card" style="border-color:#23863640;background:linear-gradient(135deg,#23863610,transparent);">
-      <div class="ac-sport">🎾 ATP — Munich R1 2026</div>
-      <div class="ac-match">Cobolli F.(4) vs Dedura-Palmero D. <span class="badge badge-go">GO</span></div>
-      <div class="ac-rec">推奨: <strong style="color:#3fb950;">Cobolli</strong></div>
-      <div class="ac-metrics">
-        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">1.21</div></div>
-        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">+8.7%</div></div>
-        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">89.8%</div></div>
-        <div class="acm"><div class="acm-l">cElo差</div><div class="acm-v rule">+378pt</div></div>
-      </div>
-      <div class="ac-note">cElo Cobolli 1929 / Dedura-Palmero 1551 (diff +378). ドロー変更(Fucsovics→Dedura-Palmero)でGO昇格。conf 89.8% / EV+8.7%</div>
-      <div class="ac-date">📅 2026-04-14 Munich Clay R1</div>
-    </div>
-
-    <div class="active-card" style="border-color:#23863640;background:linear-gradient(135deg,#23863610,transparent);">
-      <div class="ac-sport">🎾 ATP — Munich R1 2026</div>
-      <div class="ac-match">Engel J.(WC) vs Kopriva V. <span class="badge badge-go">GO</span></div>
-      <div class="ac-rec">推奨: <strong style="color:#3fb950;">Kopriva</strong></div>
-      <div class="ac-metrics">
-        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">1.36</div></div>
-        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">+9.8%</div></div>
-        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">80.7%</div></div>
-        <div class="acm"><div class="acm-l">cElo差</div><div class="acm-v rule">+311pt</div></div>
-      </div>
-      <div class="ac-note">cElo Kopriva 1699 / Engel 1388 (diff +311). Engel地元WC補正-5%考慮済。conf 80.7% / EV+9.8%</div>
-      <div class="ac-date">📅 2026-04-14 Munich Clay R1</div>
-    </div>
-
-
-    <div class="active-card" style="border-color:#23863640;background:linear-gradient(135deg,#23863610,transparent);">
-      <div class="ac-sport">&#x1F3C9; NRL &#x2014; Round 7 2026</div>
-      <div class="ac-match">Wests Tigers vs Brisbane Broncos <span class="badge badge-go">GO</span></div>
-      <div class="ac-rec">&#x63A8;&#x5968;: <strong style="color:#3fb950;">Brisbane Broncos</strong></div>
-      <div class="ac-metrics">
-        <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.47</div></div>
-        <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+27.9%</div></div>
-        <div class="acm"><div class="acm-l">&#x78BA;&#x4FE1;&#x5EA6;</div><div class="acm-v">87.6%</div></div>
-        <div class="acm"><div class="acm-l">PD/G&#x5DEE;</div><div class="acm-v rule">+14.1pt</div></div>
-      </div>
-      <div class="ac-note">Broncos PD/G +10.0 / Tigers PD/G -4.1 &#x2192; diff +14.1pt&#x3002;R7&#x65E9;&#x671F;&#x9583;&#x5024;12pt&#x8D85;&#x3002;conf 87.6% / EV+27.9%</div>
-      <div class="ac-date">&#x1F4C5; 2026-04-18 NRL R7</div>
-    </div>
-
-    <div class="active-card" style="border-color:#23863640;background:linear-gradient(135deg,#23863610,transparent);">
-      <div class="ac-sport">&#x1F3C9; NRL &#x2014; Round 7 2026</div>
-      <div class="ac-match">NZ Warriors vs Gold Coast Titans <span class="badge badge-go">GO</span></div>
-      <div class="ac-rec">&#x63A8;&#x5968;: <strong style="color:#3fb950;">NZ Warriors</strong></div>
-      <div class="ac-metrics">
-        <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.25</div></div>
-        <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+13.4%</div></div>
-        <div class="acm"><div class="acm-l">&#x78BA;&#x4FE1;&#x5EA6;</div><div class="acm-v">90.7%</div></div>
-        <div class="acm"><div class="acm-l">PD/G&#x5DEE;</div><div class="acm-v rule">+16.7pt</div></div>
-      </div>
-      <div class="ac-note">Warriors PD/G +8.7 / Titans PD/G -8.0 &#x2192; diff +16.7pt&#x3002;&#x9583;&#x5024;12pt&#x8D85;&#x3002;conf 90.7% / EV+10.7%</div>
-      <div class="ac-date">&#x1F4C5; 2026-04-18 NRL R7</div>
-    </div>
-
-    <div class="active-card" style="border-color:#d2992230;background:linear-gradient(135deg,#d2992208,transparent);">
-      <div class="ac-sport">&#x1F3C9; NRL &#x2014; Round 7 2026</div>
-      <div class="ac-match">Penrith Panthers vs Dolphins <span class="badge badge-caution">CAUTION</span></div>
-      <div class="ac-rec">&#x63A8;&#x5968;: <strong style="color:#d29922;">Penrith Panthers</strong></div>
-      <div class="ac-metrics">
-        <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.14</div></div>
-        <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+9.2%</div></div>
-        <div class="acm"><div class="acm-l">&#x78BA;&#x4FE1;&#x5EA6;</div><div class="acm-v">95.8%</div></div>
-        <div class="acm"><div class="acm-l">PD/G&#x5DEE;</div><div class="acm-v rule">+24.0pt</div></div>
-      </div>
-      <div class="ac-note">Panthers&#x5727;&#x5012;&#x7684;&#x512A;&#x4F4D;(PD/G +16.0 vs Dolphins -8.0 &#x2192; diff +24.0pt)&#x3002;&#x30AA;&#x30C3;&#x30BA;&#x77ED;&#x3059;&#x304E;(1.14)&#x3067;&#x30EA;&#x30BF;&#x30FC;&#x30F3;&#x8584;&#x3002;CAUTION&#x63A8;&#x5968;&#x3002;</div>
-      <div class="ac-date">&#x1F4C5; 2026-04-17 NRL R7</div>
-    </div>
-
-    <div class="active-card" style="border-color:#d2992230;background:linear-gradient(135deg,#d2992208,transparent);">
-      <div class="ac-sport">&#x1F3C9; NRL &#x2014; Round 7 2026</div>
-      <div class="ac-match">South Sydney Rabbitohs vs St George Illawarra Dragons <span class="badge badge-caution">CAUTION</span></div>
-      <div class="ac-rec">&#x63A8;&#x5968;: <strong style="color:#d29922;">South Sydney Rabbitohs</strong></div>
-      <div class="ac-metrics">
-        <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.18</div></div>
-        <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+6.8%</div></div>
-        <div class="acm"><div class="acm-l">&#x78BA;&#x4FE1;&#x5EA6;</div><div class="acm-v">88.3%</div></div>
-        <div class="acm"><div class="acm-l">PD/G&#x5DEE;</div><div class="acm-v rule">+13.5pt</div></div>
-      </div>
-      <div class="ac-note">Rabbitohs PD/G +7.0 / Dragons PD/G -6.5 &#x2192; diff +13.5pt&#x3002;&#x9583;&#x5024;12pt&#x8D85;&#x3002;&#x30AA;&#x30C3;&#x30BA;1.18&#x3067;EV+6.8%&#x3002;CAUTION&#x63A8;&#x5968;&#x3002;</div>
-      <div class="ac-date">&#x1F4C5; 2026-04-18 NRL R7</div>
-    </div>
 
     <div class="active-card" style="border-color:#f9a8d460;background:linear-gradient(135deg,#f9a8d408,transparent);">
       <div class="ac-sport">🎾 WTA — Stuttgart R1 2026</div>
-      <div class="ac-match">Sonmez Z. vs Paolini J.(4) <span class="badge badge-go">GO</span></div>
-      <div class="ac-rec">推奨: <strong style="color:#3fb950;">Paolini</strong></div>
+      <div class="ac-match">ソンメズ Z. vs パオリーニ J.(4) <span class="badge badge-go">GO</span></div>
+      <div class="ac-rec">推奨: <strong style="color:#3fb950;">パオリーニ・ジャスミン</strong></div>
       <div class="ac-metrics">
         <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">1.24</div></div>
         <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">+5.4%</div></div>
         <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">85.0%</div></div>
         <div class="acm"><div class="acm-l">cElo差</div><div class="acm-v rule">+300pt</div></div>
       </div>
-      <div class="ac-note">cElo Paolini 1916 / Sonmez 1616 (diff +300). Stuttgart indoor clay (W007適用)。conf 85% / EV+5.4%。R001適用外(WTA)</div>
-      <div class="ac-date">📅 2026-04-15 Stuttgart Clay(indoor) R1</div>
+      <div class="ac-note">cElo パオリーニ 1916 / ソンメズ 1616 (差+300). Stuttgart indoor clay (W007適用)。conf 85% / EV+5.4%</div>
+      <div class="ac-date">📅 2026-04-15 21:30 JST — Stuttgart Clay(indoor) R1</div>
+    </div>
+
+    <div class="active-card" style="border-color:#23863640;background:linear-gradient(135deg,#23863610,transparent);">
+      <div class="ac-sport">🎾 ATP — Barcelona R1 2026</div>
+      <div class="ac-match">ムセッティ L.(2) vs ランダルーサ M. <span class="badge badge-go">GO</span></div>
+      <div class="ac-rec">推奨: <strong style="color:#3fb950;">ムセッティ・ロレンツォ</strong></div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">1.27</div></div>
+        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">+9.7%</div></div>
+        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">86.4%</div></div>
+        <div class="acm"><div class="acm-l">cElo差</div><div class="acm-v rule">+370pt</div></div>
+      </div>
+      <div class="ac-note">cElo ムセッティ 1841 / ランダルーサ 1471 (差+370). ランダルーサ地元補正-3%考慮済。conf 86.4% / EV+9.7%</div>
+      <div class="ac-date">📅 2026-04-14 19:15 JST — Barcelona Clay R1</div>
+    </div>
+
+    <div class="active-card" style="border-color:#23863640;background:linear-gradient(135deg,#23863610,transparent);">
+      <div class="ac-sport">🎾 ATP — Munich R1 2026</div>
+      <div class="ac-match">コボッリ F.(4) vs デドゥラ=パルメロ D. <span class="badge badge-go">GO</span></div>
+      <div class="ac-rec">推奨: <strong style="color:#3fb950;">コボッリ・フラビオ</strong></div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">1.21</div></div>
+        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">+8.7%</div></div>
+        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">89.8%</div></div>
+        <div class="acm"><div class="acm-l">cElo差</div><div class="acm-v rule">+378pt</div></div>
+      </div>
+      <div class="ac-note">cElo コボッリ 1929 / デドゥラ=パルメロ 1551 (差+378). ドロー変更でGO昇格。conf 89.8% / EV+8.7%</div>
+      <div class="ac-date">📅 2026-04-14 JST — Munich Clay R1</div>
+    </div>
+
+    <div class="active-card" style="border-color:#23863640;background:linear-gradient(135deg,#23863610,transparent);">
+      <div class="ac-sport">🎾 ATP — Munich R1 2026</div>
+      <div class="ac-match">エンゲル J.(WC) vs コプジバ V. <span class="badge badge-go">GO</span></div>
+      <div class="ac-rec">推奨: <strong style="color:#3fb950;">コプジバ・ヴィート</strong></div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">1.36</div></div>
+        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">+9.8%</div></div>
+        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">80.7%</div></div>
+        <div class="acm"><div class="acm-l">cElo差</div><div class="acm-v rule">+311pt</div></div>
+      </div>
+      <div class="ac-note">cElo コプジバ 1699 / エンゲル 1388 (差+311). エンゲル地元WC補正-5%考慮済。conf 80.7% / EV+9.8%</div>
+      <div class="ac-date">📅 2026-04-14 JST — Munich Clay R1</div>
+    </div>
+
+    <div class="active-card" style="border-color:#d2992230;background:linear-gradient(135deg,#d2992208,transparent);">
+      <div class="ac-sport">&#x1F3C9; NRL &#x2014; Round 7 2026</div>
+      <div class="ac-match">&#x30DA;&#x30F3;&#x30EA;&#x30B9;&#x30FB;&#x30D1;&#x30F3;&#x30B5;&#x30FC;&#x30BA; vs &#x30C9;&#x30EB;&#x30D5;&#x30A3;&#x30F3;&#x30BA; <span class="badge badge-warn">CAUTION</span></div>
+      <div class="ac-rec">&#x63A8;&#x5968;: <strong style="color:#d29922;">&#x30DA;&#x30F3;&#x30EA;&#x30B9;&#x30FB;&#x30D1;&#x30F3;&#x30B5;&#x30FC;&#x30BA;</strong></div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.14</div></div>
+        <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+9.2%</div></div>
+        <div class="acm"><div class="acm-l">&#x78BA;&#x4FE1;&#x5EA6;</div><div class="acm-v">95.8%</div></div>
+        <div class="acm"><div class="acm-l">PD/G&#x5DEE;</div><div class="acm-v rule">+24.0pt</div></div>
+      </div>
+      <div class="ac-note">&#x30D1;&#x30F3;&#x30B5;&#x30FC;&#x30BA;&#x5727;&#x5012;&#x7684;&#x512A;&#x4F4D;(PD/G +16.0 vs &#x30C9;&#x30EB;&#x30D5;&#x30A3;&#x30F3;&#x30BA; -8.0 &#x2192; &#x5DEE;+24.0pt)&#x3002;&#x30AA;&#x30C3;&#x30BA;&#x77ED;&#x3059;&#x304E;(1.14)&#x3067;&#x30EA;&#x30BF;&#x30FC;&#x30F3;&#x8584;&#x3002;CAUTION&#x63A8;&#x5968;&#x3002;</div>
+      <div class="ac-date">&#x1F4C5; 2026-04-17 JST &#x2014; NRL R7</div>
+    </div>
+
+    <div class="active-card" style="border-color:#23863640;background:linear-gradient(135deg,#23863610,transparent);">
+      <div class="ac-sport">&#x1F3C9; NRL &#x2014; Round 7 2026</div>
+      <div class="ac-match">&#x30A6;&#x30A7;&#x30B9;&#x30C8;&#x30FB;&#x30BF;&#x30A4;&#x30AC;&#x30FC;&#x30B9; vs &#x30D6;&#x30EA;&#x30B9;&#x30D9;&#x30F3;&#x30FB;&#x30D6;&#x30ED;&#x30F3;&#x30B3;&#x30B9; <span class="badge badge-go">GO</span></div>
+      <div class="ac-rec">&#x63A8;&#x5968;: <strong style="color:#3fb950;">&#x30D6;&#x30EA;&#x30B9;&#x30D9;&#x30F3;&#x30FB;&#x30D6;&#x30ED;&#x30F3;&#x30B3;&#x30B9;</strong></div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.47</div></div>
+        <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+27.9%</div></div>
+        <div class="acm"><div class="acm-l">&#x78BA;&#x4FE1;&#x5EA6;</div><div class="acm-v">87.6%</div></div>
+        <div class="acm"><div class="acm-l">PD/G&#x5DEE;</div><div class="acm-v rule">+14.1pt</div></div>
+      </div>
+      <div class="ac-note">&#x30D6;&#x30ED;&#x30F3;&#x30B3;&#x30B9; PD/G +10.0 / &#x30BF;&#x30A4;&#x30AC;&#x30FC;&#x30B9; PD/G -4.1 &#x2192; &#x5DEE;+14.1pt&#x3002;R7&#x65E9;&#x671F;&#x9583;&#x5024;12pt&#x8D85;&#x3002;conf 87.6% / EV+27.9%</div>
+      <div class="ac-date">&#x1F4C5; 2026-04-18 JST &#x2014; NRL R7</div>
+    </div>
+
+    <div class="active-card" style="border-color:#23863640;background:linear-gradient(135deg,#23863610,transparent);">
+      <div class="ac-sport">&#x1F3C9; NRL &#x2014; Round 7 2026</div>
+      <div class="ac-match">NZ&#x30A6;&#x30A9;&#x30EA;&#x30A2;&#x30FC;&#x30BA; vs &#x30B4;&#x30FC;&#x30EB;&#x30C9;&#x30B3;&#x30FC;&#x30B9;&#x30C8;&#x30FB;&#x30BF;&#x30A4;&#x30BF;&#x30F3;&#x30BA; <span class="badge badge-go">GO</span></div>
+      <div class="ac-rec">&#x63A8;&#x5968;: <strong style="color:#3fb950;">NZ&#x30A6;&#x30A9;&#x30EA;&#x30A2;&#x30FC;&#x30BA;</strong></div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.25</div></div>
+        <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+13.4%</div></div>
+        <div class="acm"><div class="acm-l">&#x78BA;&#x4FE1;&#x5EA6;</div><div class="acm-v">90.7%</div></div>
+        <div class="acm"><div class="acm-l">PD/G&#x5DEE;</div><div class="acm-v rule">+16.7pt</div></div>
+      </div>
+      <div class="ac-note">&#x30A6;&#x30A9;&#x30EA;&#x30A2;&#x30FC;&#x30BA; PD/G +8.7 / &#x30BF;&#x30A4;&#x30BF;&#x30F3;&#x30BA; PD/G -8.0 &#x2192; &#x5DEE;+16.7pt&#x3002;&#x9583;&#x5024;12pt&#x8D85;&#x3002;conf 90.7% / EV+13.4%</div>
+      <div class="ac-date">&#x1F4C5; 2026-04-18 JST &#x2014; NRL R7</div>
+    </div>
+
+    <div class="active-card" style="border-color:#d2992230;background:linear-gradient(135deg,#d2992208,transparent);">
+      <div class="ac-sport">&#x1F3C9; NRL &#x2014; Round 7 2026</div>
+      <div class="ac-match">&#x30B5;&#x30A6;&#x30B9;&#x30FB;&#x30B7;&#x30C9;&#x30CB;&#x30FC;&#x30FB;&#x30E9;&#x30D3;&#x30C8;&#x30FC;&#x30BA; vs &#x30BB;&#x30F3;&#x30C8;&#x30FB;&#x30B8;&#x30E7;&#x30FC;&#x30B8;&#x30FB;&#x30A4;&#x30E9;&#x30EF;&#x30E9;&#x30FB;&#x30C9;&#x30E9;&#x30B4;&#x30F3;&#x30BA; <span class="badge badge-warn">CAUTION</span></div>
+      <div class="ac-rec">&#x63A8;&#x5968;: <strong style="color:#d29922;">&#x30B5;&#x30A6;&#x30B9;&#x30FB;&#x30B7;&#x30C9;&#x30CB;&#x30FC;&#x30FB;&#x30E9;&#x30D3;&#x30C8;&#x30FC;&#x30BA;</strong></div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.18</div></div>
+        <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+6.8%</div></div>
+        <div class="acm"><div class="acm-l">&#x78BA;&#x4FE1;&#x5EA6;</div><div class="acm-v">88.3%</div></div>
+        <div class="acm"><div class="acm-l">PD/G&#x5DEE;</div><div class="acm-v rule">+13.5pt</div></div>
+      </div>
+      <div class="ac-note">&#x30E9;&#x30D3;&#x30C8;&#x30FC;&#x30BA; PD/G +7.0 / &#x30C9;&#x30E9;&#x30B4;&#x30F3;&#x30BA; PD/G -6.5 &#x2192; &#x5DEE;+13.5pt&#x3002;&#x9583;&#x5024;12pt&#x8D85;&#x3002;&#x30AA;&#x30C3;&#x30BA;1.18&#x3067;EV+6.8%&#x3002;CAUTION&#x63A8;&#x5968;&#x3002;</div>
+      <div class="ac-date">&#x1F4C5; 2026-04-18 JST &#x2014; NRL R7</div>
     </div>
 
     <div class="active-card" style="border-color:#bfdbfe60;background:linear-gradient(135deg,#bfdbfe08,transparent);">
-      <div class="ac-sport">🏉 Super League — Round 8 2026</div>
-      <div class="ac-match">Huddersfield Giants vs Leeds Rhinos <span class="badge badge-go">GO</span></div>
-      <div class="ac-rec">推奨: <strong style="color:#3fb950;">Leeds Rhinos</strong></div>
+      <div class="ac-sport">&#x1F3C9; Super League &#x2014; Round 8 2026</div>
+      <div class="ac-match">&#x30CF;&#x30C0;&#x30FC;&#x30BA;&#x30D5;&#x30A3;&#x30FC;&#x30EB;&#x30C9;&#x30FB;&#x30B8;&#x30E3;&#x30A4;&#x30A2;&#x30F3;&#x30C4; vs &#x30EA;&#x30FC;&#x30BA;&#x30FB;&#x30E9;&#x30A4;&#x30CE;&#x30BA; <span class="badge badge-go">GO</span></div>
+      <div class="ac-rec">&#x63A8;&#x5968;: <strong style="color:#3fb950;">&#x30EA;&#x30FC;&#x30BA;&#x30FB;&#x30E9;&#x30A4;&#x30CE;&#x30BA;</strong></div>
       <div class="ac-metrics">
-        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">1.32</div></div>
-        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">+14.8%</div></div>
-        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">87%</div></div>
-        <div class="acm"><div class="acm-l">PD/G差</div><div class="acm-v rule">+20.3pt</div></div>
+        <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.32</div></div>
+        <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+14.8%</div></div>
+        <div class="acm"><div class="acm-l">&#x78BA;&#x4FE1;&#x5EA6;</div><div class="acm-v">87%</div></div>
+        <div class="acm"><div class="acm-l">PD/G&#x5DEE;</div><div class="acm-v rule">+20.3pt</div></div>
       </div>
-      <div class="ac-note">Leeds PD/G +14.00(2位) / Huddersfield -6.29(11位) → diff +20.3pt。早期閾値12pt超。conf 87% / EV+14.8%</div>
-      <div class="ac-date">📅 2026-04-18 Super League R8</div>
+      <div class="ac-note">&#x30EA;&#x30FC;&#x30BA; PD/G +14.00(2&#x4F4D;) / &#x30CF;&#x30C0;&#x30FC;&#x30BA;&#x30D5;&#x30A3;&#x30FC;&#x30EB;&#x30C9; -6.29(11&#x4F4D;) &#x2192; &#x5DEE;+20.3pt&#x3002;&#x65E9;&#x671F;&#x9583;&#x5024;12pt&#x8D85;&#x3002;conf 87% / EV+14.8%</div>
+      <div class="ac-date">&#x1F4C5; 2026-04-18 JST &#x2014; Super League R8</div>
     </div>
 
     <div class="active-card" style="border-color:#bfdbfe60;background:linear-gradient(135deg,#bfdbfe08,transparent);">
-      <div class="ac-sport">🏉 Super League — Round 8 2026</div>
-      <div class="ac-match">Catalans Dragons vs Warrington Wolves <span class="badge badge-go">GO</span></div>
-      <div class="ac-rec">推奨: <strong style="color:#3fb950;">Warrington Wolves</strong></div>
+      <div class="ac-sport">&#x1F3C9; Super League &#x2014; Round 8 2026</div>
+      <div class="ac-match">&#x30AB;&#x30BF;&#x30EB;&#x30FC;&#x30CB;&#x30E3;&#x30FB;&#x30C9;&#x30E9;&#x30B4;&#x30F3;&#x30BA; vs &#x30A6;&#x30A9;&#x30EA;&#x30F3;&#x30C8;&#x30F3;&#x30FB;&#x30A6;&#x30EB;&#x30D6;&#x30BA; <span class="badge badge-go">GO</span></div>
+      <div class="ac-rec">&#x63A8;&#x5968;: <strong style="color:#3fb950;">&#x30A6;&#x30A9;&#x30EA;&#x30F3;&#x30C8;&#x30F3;&#x30FB;&#x30A6;&#x30EB;&#x30D6;&#x30BA;</strong></div>
       <div class="ac-metrics">
-        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">1.65</div></div>
-        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">+40.3%</div></div>
-        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">85%</div></div>
-        <div class="acm"><div class="acm-l">PD/G差</div><div class="acm-v rule">+23.9pt</div></div>
+        <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.65</div></div>
+        <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+40.3%</div></div>
+        <div class="acm"><div class="acm-l">&#x78BA;&#x4FE1;&#x5EA6;</div><div class="acm-v">85%</div></div>
+        <div class="acm"><div class="acm-l">PD/G&#x5DEE;</div><div class="acm-v rule">+23.9pt</div></div>
       </div>
-      <div class="ac-note">Warrington PD/G +21.17(1位) / Catalans -2.71(6位) → diff +23.9pt。Catalans仏国ホーム-5%考慮済。conf 85% / EV+40.3%</div>
-      <div class="ac-date">📅 2026-04-19 Super League R8 (Perpignan, France)</div>
+      <div class="ac-note">&#x30A6;&#x30A9;&#x30EA;&#x30F3;&#x30C8;&#x30F3; PD/G +21.17(1&#x4F4D;) / &#x30AB;&#x30BF;&#x30EB;&#x30FC;&#x30CB;&#x30E3; -2.71(6&#x4F4D;) &#x2192; &#x5DEE;+23.9pt&#x3002;&#x30AB;&#x30BF;&#x30EB;&#x30FC;&#x30CB;&#x30E3;&#x4ECF;&#x56FD;&#x30DB;&#x30FC;&#x30E0;-5%&#x8003;&#x616E;&#x6E08;&#x3002;conf 85% / EV+40.3%</div>
+      <div class="ac-date">&#x1F4C5; 2026-04-19 JST &#x2014; Super League R8 (Perpignan, France)</div>
+    </div>
+
+    <div class="active-card" style="border-color:#30363d;background:linear-gradient(135deg,#30363d10,transparent);opacity:.7;">
+      <div class="ac-sport">&#x1F3BE; ATP &#x2014; MC2026 &#x6C7A;&#x52DD; <span class="badge badge-skip">SKIP&#xFF08;&#x89B3;&#x6226;&#xFF09;</span></div>
+      <div class="ac-match">&#x30A2;&#x30EB;&#x30AB;&#x30E9;&#x30B9; C.(1) vs &#x30B7;&#x30CA;&#x30FC; J.(2)</div>
+      <div class="ac-rec" style="color:#3fb950;">&#x7D50;&#x679C;: &#x30B7;&#x30CA;&#x30FC; 7-6(5) 6-3 &#x2014; &#x4E88;&#x6E2C;&#x306A;&#x3057;&#xFF08;SKIP&#xFF09;</div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">cElo&#x5DEE;</div><div class="acm-v rule">~20pt</div></div>
+        <div class="acm"><div class="acm-l">L1&#x5224;&#x5B9A;</div><div class="acm-v" style="color:#f85149;">&#x4E0D;&#x901A;&#x904E;</div></div>
+        <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;</div><div class="acm-v" style="color:#8b949e;">50/50</div></div>
+        <div class="acm"><div class="acm-l">bet</div><div class="acm-v rule">&#x306A;&#x3057;</div></div>
+      </div>
+      <div class="ac-note">SKIP&#x6B63;&#x89E3;&#xFF08;&#x5DEE;&#x306A;&#x3057;&#x3067;&#x5F53;&#x3066;&#x3066;&#x3082;&#x904B;&#xFF09;&#x3002;&#x30B7;&#x30CA;&#x30FC;&#x304C;7-6(5) 6-3&#x3067;&#x512A;&#x52DD;&#x3002;MC2026&#x5B8C;&#x4E86;&#x3002;</div>
+      <div class="ac-date">&#x1F4C5; 2026-04-13 JST &#x2713;&#x5B8C;&#x4E86;</div>
+    </div>
+
+    <div class="active-card" style="border-color:#23863640;background:linear-gradient(135deg,#23863610,transparent);opacity:.8;">
+      <div class="ac-sport">&#x1F3C8; UFL Week 3 &#x2014; &#x30B3;&#x30ED;&#x30F3;&#x30D0;&#x30B9; @ &#x30C0;&#x30E9;&#x30B9; <span class="badge badge-hit">HIT &#x2713;</span></div>
+      <div class="ac-match">2026-04-12 JST / Cotton Bowl, Dallas</div>
+      <div class="ac-rec" style="color:#3fb950;">&#x30C0;&#x30E9;&#x30B9;&#x30FB;&#x30EC;&#x30CD;&#x30B2;&#x30FC;&#x30BA; 28 &#x2014; 23 &#x30B3;&#x30ED;&#x30F3;&#x30D0;&#x30B9;&#x30FB;&#x30A2;&#x30D3;&#x30A8;&#x30A4;&#x30BF;&#x30FC;&#x30BA;</div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.32</div></div>
+        <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+8.2%</div></div>
+        <div class="acm"><div class="acm-l">&#x5B9F;&#x7E3E;EV</div><div class="acm-v ev">+0.32u</div></div>
+        <div class="acm"><div class="acm-l">&#x78BA;&#x4FE1;&#x5EA6;</div><div class="acm-v">82%</div></div>
+      </div>
+      <div class="ac-note">PD&#x5DEE;30pt&#xFF08;&#x30C0;&#x30E9;&#x30B9; +17.5/&#x8A66;&#x5408; vs &#x30B3;&#x30ED;&#x30F3;&#x30D0;&#x30B9; -12.5/&#x8A66;&#x5408;&#xFF09;&#x304C;&#x5730;&#x529B;&#x5DEE;&#x901A;&#x308A;&#x3002;</div>
+      <div class="ac-date">&#x1F4C5; 2026-04-12 JST &#x2713;&#x78BA;&#x5B9A;</div>
+    </div>
+
+    <div class="active-card" style="border-color:#23863640;background:linear-gradient(135deg,#23863610,transparent);opacity:.8;">
+      <div class="ac-sport">&#x1F3C0; NBA &#x2014; &#x30B0;&#x30EA;&#x30BA;&#x30EA;&#x30FC;&#x30BA; @ &#x30ED;&#x30B1;&#x30C3;&#x30C4; <span class="badge badge-hit">HIT &#x2713;</span></div>
+      <div class="ac-match">2026-04-12 JST / Toyota Center, Houston</div>
+      <div class="ac-rec" style="color:#3fb950;">&#x30D2;&#x30E5;&#x30FC;&#x30B9;&#x30C8;&#x30F3;&#x30FB;&#x30ED;&#x30B1;&#x30C3;&#x30C4;&#x30B9; 124 &#x2014; 109 &#x30E1;&#x30F3;&#x30D5;&#x30A3;&#x30B9;&#x30FB;&#x30B0;&#x30EA;&#x30BA;&#x30EA;&#x30FC;&#x30BA;</div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.20</div></div>
+        <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+5.6%</div></div>
+        <div class="acm"><div class="acm-l">&#x5B9F;&#x7E3E;EV</div><div class="acm-v ev">+0.20u</div></div>
+        <div class="acm"><div class="acm-l">&#x78BA;&#x4FE1;&#x5EA6;</div><div class="acm-v">88%</div></div>
+      </div>
+      <div class="ac-date">&#x1F4C5; 2026-04-12 JST &#x2713;&#x78BA;&#x5B9A;&#x6E08;</div>
+    </div>
+
+    <div class="active-card" style="border-color:#30363d;background:linear-gradient(135deg,#30363d08,transparent);opacity:.7;">
+      <div class="ac-sport">&#x1F3C0; NBA &#x2014; &#x30A6;&#x30A3;&#x30B6;&#x30FC;&#x30BA; @ &#x30AD;&#x30E3;&#x30D0;&#x30EA;&#x30A2;&#x30FC;&#x30BA; <span class="badge badge-skip">SKIP</span></div>
+      <div class="ac-match">2026-04-12 JST / Cavs 130-126&#xFF08;&#x53C2;&#x8003;&#x8A18;&#x9332;&#xFF09;</div>
+      <div class="ac-rec" style="color:#8b949e;">&#x30AA;&#x30C3;&#x30BA;&#x672A;&#x78BA;&#x8A8D;&#x306E;&#x305F;&#x3081;&#x30D9;&#x30C3;&#x30C8;&#x672A;&#x5B9F;&#x884C;</div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">&#x7D50;&#x679C;</div><div class="acm-v" style="color:#3fb950;">Cavs&#x52DD;</div></div>
+        <div class="acm"><div class="acm-l">&#x30DF;&#x30C3;&#x30C1;&#x30A7;&#x30EB;</div><div class="acm-v ev">48pts</div></div>
+        <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v warn">&#x672A;&#x53D6;&#x5F97;</div></div>
+        <div class="acm"><div class="acm-l">EV</div><div class="acm-v rule">&#x30AB;&#x30A6;&#x30F3;&#x30C8;&#x5916;</div></div>
+      </div>
+      <div class="ac-date">&#x1F4C5; 2026-04-12 JST &#x2014; &#x7D71;&#x8A08;&#x30CE;&#x30FC;&#x30AB;&#x30A6;&#x30F3;&#x30C8;</div>
     </div>
   </div></div>
 </div>
+
 
 <!-- ===== 全履歴 ===== -->
 <div class="tab-content" id="content-history">
@@ -1601,6 +1602,242 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
   </div>
 </div>
 
+<!-- ===== ファネル分析 ===== -->
+<div class="tab-content" id="content-funnel">
+  <div class="section-title">&#x30B9;&#x30AF;&#x30EA;&#x30FC;&#x30CB;&#x30F3;&#x30B0;&#x30D5;&#x30A1;&#x30CD;&#x30EB; &#x2014; &#x53D7;&#x4FE1;&#x2192;L1&#x2192;GO/CAUTION/SKIP&#x2192;&#x7D50;&#x679C;</div>
+  <p style="font-size:12px;color:var(--text2);margin-bottom:16px;line-height:1.7;">
+    &#x30C7;&#x30FC;&#x30BF;&#x3092;&#x53D7;&#x3051;&#x53D6;&#x3063;&#x305F;&#x8A66;&#x5408;&#x6570;&#x304B;&#x3089;&#x3001;&#x5404;&#x30B9;&#x30C6;&#x30C3;&#x30D7;&#x3067;&#x4F55;&#x4EF6;&#x6B8B;&#x3063;&#x305F;&#x304B;&#x3092;&#x8868;&#x793A;&#x3057;&#x307E;&#x3059;&#x3002;
+  </p>
+
+  <!-- 総計 -->
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin-bottom:20px;">
+    <div style="font-size:11px;font-weight:600;text-transform:uppercase;color:var(--text2);margin-bottom:12px;letter-spacing:.05em;">&#x5168;&#x30BB;&#x30C3;&#x30B7;&#x30E7;&#x30F3;&#x7D2F;&#x7A4D;</div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;">
+      <div style="text-align:center;background:var(--surface2);border-radius:8px;padding:10px 16px;min-width:90px;">
+        <div style="font-size:10px;color:var(--text2);text-transform:uppercase;margin-bottom:4px;">&#x53D7;&#x4FE1;</div>
+        <div style="font-size:24px;font-weight:700;">~101</div>
+        <div style="font-size:10px;color:var(--text2);">&#x8A66;&#x5408;</div>
+      </div>
+      <div style="align-self:center;color:var(--text2);font-size:18px;">&#x2192;</div>
+      <div style="text-align:center;background:var(--surface2);border-radius:8px;padding:10px 16px;min-width:90px;">
+        <div style="font-size:10px;color:var(--text2);text-transform:uppercase;margin-bottom:4px;">L1&#x901A;&#x904E;</div>
+        <div style="font-size:24px;font-weight:700;color:#58a6ff;">~41</div>
+        <div style="font-size:10px;color:var(--text2);">&#x8A66;&#x5408;</div>
+      </div>
+      <div style="align-self:center;color:var(--text2);font-size:18px;">&#x2192;</div>
+      <div style="text-align:center;background:var(--go-bg);border:1px solid #23863640;border-radius:8px;padding:10px 16px;min-width:90px;">
+        <div style="font-size:10px;color:#3fb950;text-transform:uppercase;margin-bottom:4px;">GO</div>
+        <div style="font-size:24px;font-weight:700;color:#3fb950;">27</div>
+        <div style="font-size:10px;color:var(--text2);">&#x8A66;&#x5408;</div>
+      </div>
+      <div style="text-align:center;background:var(--warn-bg);border:1px solid #d2992240;border-radius:8px;padding:10px 16px;min-width:90px;">
+        <div style="font-size:10px;color:#d29922;text-transform:uppercase;margin-bottom:4px;">CAUTION</div>
+        <div style="font-size:24px;font-weight:700;color:#d29922;">4</div>
+        <div style="font-size:10px;color:var(--text2);">&#x8A66;&#x5408;</div>
+      </div>
+      <div style="align-self:center;color:var(--text2);font-size:18px;">&#x2192;</div>
+      <div style="text-align:center;background:#0f2c1a;border:1px solid #23863640;border-radius:8px;padding:10px 16px;min-width:90px;">
+        <div style="font-size:10px;color:#3fb950;text-transform:uppercase;margin-bottom:4px;">&#x78BA;&#x5B9A;HIT</div>
+        <div style="font-size:24px;font-weight:700;color:#3fb950;">13</div>
+        <div style="font-size:10px;color:var(--text2);">/ 17&#x78BA;&#x5B9A;</div>
+      </div>
+      <div style="text-align:center;background:#2d1014;border:1px solid #f8514940;border-radius:8px;padding:10px 16px;min-width:90px;">
+        <div style="font-size:10px;color:#f85149;text-transform:uppercase;margin-bottom:4px;">MISS</div>
+        <div style="font-size:24px;font-weight:700;color:#f85149;">4</div>
+        <div style="font-size:10px;color:var(--text2);">/ 17&#x78BA;&#x5B9A;</div>
+      </div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--text2);">&#x6B63;&#x7B54;&#x7387; 76.5% (13/17) &#x30FB; GO&#x5C65;&#x884C;&#x7387; 26.7% (27/101) &#x30FB; L1&#x901A;&#x904E;&#x7387; 40.6% (41/101)</div>
+  </div>
+
+  <!-- スポーツ別ファネル -->
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>&#x30B9;&#x30DD;&#x30FC;&#x30C4;/&#x30BB;&#x30C3;&#x30B7;&#x30E7;&#x30F3;</th>
+          <th style="text-align:right;">&#x53D7;&#x4FE1;</th>
+          <th style="text-align:right;">L1&#x901A;&#x904E;</th>
+          <th style="text-align:right;color:#3fb950;">GO</th>
+          <th style="text-align:right;color:#d29922;">CAUTION</th>
+          <th style="text-align:right;color:#8b949e;">SKIP</th>
+          <th style="text-align:right;">&#x78BA;&#x5B9A;</th>
+          <th style="text-align:right;color:#3fb950;">HIT</th>
+          <th style="text-align:right;color:#f85149;">MISS</th>
+          <th style="text-align:right;">&#x5F85;&#x6C7A;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:rgba(121,192,255,.04);">
+          <td><span class="sport-tag" style="color:#79c0ff;">&#x1F3BE; ATP MC2026</span></td>
+          <td style="text-align:right;color:var(--text2);">&#x2014;</td>
+          <td style="text-align:right;">13</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">13</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:var(--text2);">&#x2014;</td>
+          <td style="text-align:right;">10</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">7</td>
+          <td style="text-align:right;color:#f85149;font-weight:600;">3</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+        </tr>
+        <tr>
+          <td><span class="sport-tag" style="color:#79c0ff;">&#x1F3BE; ATP W16 R1 (4/12&#x5B9F;&#x65BD;)</span></td>
+          <td style="text-align:right;">14</td>
+          <td style="text-align:right;">8</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">3</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:var(--text2);">5</td>
+          <td style="text-align:right;">0</td>
+          <td style="text-align:right;color:var(--text2);">&#x2014;</td>
+          <td style="text-align:right;color:var(--text2);">&#x2014;</td>
+          <td style="text-align:right;color:#d29922;">3</td>
+        </tr>
+        <tr style="background:rgba(249,168,212,.04);">
+          <td><span class="sport-tag" style="color:#f9a8d4;">&#x1F3BE; WTA Stuttgart R1</span></td>
+          <td style="text-align:right;">12</td>
+          <td style="text-align:right;">4</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">1+1<span style="font-size:10px;color:#f97316;"> GB</span></td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:var(--text2);">10</td>
+          <td style="text-align:right;">1</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">1</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:#d29922;">1</td>
+        </tr>
+        <tr>
+          <td><span class="sport-tag" style="color:#a5f3fc;">&#x1F3D2; NHL 4/09&#x301C;11</span></td>
+          <td style="text-align:right;">16</td>
+          <td style="text-align:right;">~4</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">2</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:var(--text2);">12</td>
+          <td style="text-align:right;">2</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">2</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+        </tr>
+        <tr>
+          <td><span class="sport-tag" style="color:#a5f3fc;">&#x1F3D2; NHL 4/13&#x30B9;&#x30AF;&#x30EA;&#x30FC;&#x30CB;&#x30F3;&#x30B0;</span></td>
+          <td style="text-align:right;">9</td>
+          <td style="text-align:right;">~2</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">0</td>
+          <td style="text-align:right;color:#d29922;font-weight:600;">2</td>
+          <td style="text-align:right;color:var(--text2);">7</td>
+          <td style="text-align:right;">0</td>
+          <td style="text-align:right;color:var(--text2);">&#x2014;</td>
+          <td style="text-align:right;color:var(--text2);">&#x2014;</td>
+          <td style="text-align:right;color:#d29922;">2</td>
+        </tr>
+        <tr style="background:rgba(252,165,165,.04);">
+          <td><span class="sport-tag" style="color:#fca5a5;">&#x1F3C0; NBA 4/12&#x6700;&#x7D42;&#x65E5;</span></td>
+          <td style="text-align:right;">15</td>
+          <td style="text-align:right;">4</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">1</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:var(--text2);">10</td>
+          <td style="text-align:right;">1</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">1</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+        </tr>
+        <tr>
+          <td><span class="sport-tag" style="color:#fca5a5;">&#x1F3C0; NBA Play-in 4/14</span></td>
+          <td style="text-align:right;">4</td>
+          <td style="text-align:right;">0</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">0</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:var(--text2);">4</td>
+          <td style="text-align:right;">0</td>
+          <td style="text-align:right;color:var(--text2);">&#x2014;</td>
+          <td style="text-align:right;color:var(--text2);">&#x2014;</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+        </tr>
+        <tr style="background:rgba(134,239,172,.04);">
+          <td><span class="sport-tag" style="color:#86efac;">&#x1F3C9; NRL R6 4/10</span></td>
+          <td style="text-align:right;">7</td>
+          <td style="text-align:right;">1</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">1</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:var(--text2);">6</td>
+          <td style="text-align:right;">1</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:#f85149;font-weight:600;">1</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+        </tr>
+        <tr style="background:rgba(134,239,172,.04);">
+          <td><span class="sport-tag" style="color:#86efac;">&#x1F3C9; NRL R7 4/13&#x30B9;&#x30AF;&#x30EA;&#x30FC;&#x30CB;&#x30F3;&#x30B0;</span></td>
+          <td style="text-align:right;">8</td>
+          <td style="text-align:right;">6</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">2</td>
+          <td style="text-align:right;color:#d29922;font-weight:600;">2</td>
+          <td style="text-align:right;color:var(--text2);">2</td>
+          <td style="text-align:right;">0</td>
+          <td style="text-align:right;color:var(--text2);">&#x2014;</td>
+          <td style="text-align:right;color:var(--text2);">&#x2014;</td>
+          <td style="text-align:right;color:#d29922;">4</td>
+        </tr>
+        <tr>
+          <td><span class="sport-tag" style="color:#c4b5fd;">&#x1F3C9; Super Rugby R9 4/10</span></td>
+          <td style="text-align:right;">5</td>
+          <td style="text-align:right;">1</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">1</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:var(--text2);">4</td>
+          <td style="text-align:right;">1</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">1</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+        </tr>
+        <tr>
+          <td><span class="sport-tag" style="color:#fca5a5;">&#x1F3C8; UFL W3 4/10</span></td>
+          <td style="text-align:right;">4</td>
+          <td style="text-align:right;">1</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">1</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:var(--text2);">3</td>
+          <td style="text-align:right;">1</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">1</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+        </tr>
+        <tr style="background:rgba(191,219,254,.04);">
+          <td><span class="sport-tag" style="color:#bfdbfe;">&#x1F3C9; Super League R8 4/14</span></td>
+          <td style="text-align:right;">7</td>
+          <td style="text-align:right;">2</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">2</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:var(--text2);">5</td>
+          <td style="text-align:right;">0</td>
+          <td style="text-align:right;color:var(--text2);">&#x2014;</td>
+          <td style="text-align:right;color:var(--text2);">&#x2014;</td>
+          <td style="text-align:right;color:#d29922;">2</td>
+        </tr>
+        <tr style="background:var(--surface2);font-weight:600;">
+          <td>&#x5408;&#x8A08;</td>
+          <td style="text-align:right;">~101</td>
+          <td style="text-align:right;color:#58a6ff;">~41</td>
+          <td style="text-align:right;color:#3fb950;">27</td>
+          <td style="text-align:right;color:#d29922;">4</td>
+          <td style="text-align:right;color:var(--text2);">~70</td>
+          <td style="text-align:right;">17</td>
+          <td style="text-align:right;color:#3fb950;">13</td>
+          <td style="text-align:right;color:#f85149;">4</td>
+          <td style="text-align:right;color:#d29922;">12</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div style="margin-top:16px;font-size:11px;color:var(--text2);line-height:1.8;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;">
+    <strong style="color:var(--text);">&#x6CE8;&#x8A18;:</strong>
+    GB = GAMBLE_BET&#xFF08;&#x9ad8;&#x30AA;&#x30C3;&#x30BA;&#x30A2;&#x30F3;&#x30C0;&#x30FC;&#x30C9;&#x30C3;&#x30B0;&#x8CED;&#x3051;&#xFF09;&#x3002;
+    ATP MC2026&#x306F;GO&#x306E;&#x307F;&#x8A18;&#x9332;&#xFF08;SKIP&#x8FFD;&#x8DE1;&#x672A;&#x5B9F;&#x65BD;&#xFF09;&#x3002;
+    NRL R7&#x30FB;SL R8&#x30FB;ATP W16 R1&#x30FB;WTA Paolini&#x306F;&#x7D50;&#x679C;&#x5F85;&#x6A5F;&#x4E2D;&#x3002;
+    NHL 4/13 CAUTION 2&#x4EF6;&#x306F;&#x30B4;&#x30FC;&#x30EB;&#x30AD;&#x30FC;&#x30D1;&#x30FC;&#x78BA;&#x8A8D;&#x5F85;&#x3061;&#x3002;
+  </div>
+</div>
+
+
 <!-- ===== 成長分析 ===== -->
 <div class="tab-content" id="content-timeline">
 
@@ -1964,47 +2201,85 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 
 <!-- ===== 日報 ===== -->
 <div class="tab-content" id="content-dailyreport">
-  <div class="section-title">日報 — 自動実行ログ</div>
+  <div class="section-title">&#x65E5;&#x5831; &#x2014; &#x30BB;&#x30C3;&#x30B7;&#x30E7;&#x30F3;&#x5225;&#x5909;&#x5316;&#x8A18;&#x9332;</div>
   <p style="font-size:12px;color:var(--text2);margin-bottom:16px;line-height:1.8;">
-    タスクスケジューラによる自動実行（8:30 / 20:30）の結果レポートです。<br>
-    各レポートは <code>daily_reports/YYYY-MM-DD.md</code> に保存されます。<br>
-    <span style="color:#d29922;">⚠ 自動実行が未発生の場合はレポートがありません。手動で
-    <code>scripts/auto_update.ps1</code> を実行するとレポートが生成されます。</span>
+    &#x30BB;&#x30C3;&#x30B7;&#x30E7;&#x30F3;&#x3054;&#x3068;&#x306E;&#x5206;&#x6790;&#x30FB;&#x5224;&#x65AD;&#x30FB;&#x30C0;&#x30C3;&#x30B7;&#x30E5;&#x30DC;&#x30FC;&#x30C9;&#x5909;&#x66F4;&#x306E;&#x8A18;&#x9332;&#x3067;&#x3059;&#x3002;<br>
+    &#x8A73;&#x7D30;&#x306F; <code>session_logs/YYYY-MM-DD_NN.md</code> &#x3092;&#x53C2;&#x7167;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;
   </p>
 
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin-bottom:24px;">
-    <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 16px;">
-      <div style="font-size:10px;text-transform:uppercase;color:var(--text2);margin-bottom:6px;">自動実行スケジュール</div>
-      <div style="font-size:13px;">毎日 <b style="color:#3fb950;">08:30</b> と <b style="color:#3fb950;">20:30</b></div>
-      <div style="font-size:11px;color:var(--text2);margin-top:4px;">Windows タスクスケジューラ</div>
-    </div>
-    <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 16px;">
-      <div style="font-size:10px;text-transform:uppercase;color:var(--text2);margin-bottom:6px;">自動実行の内容</div>
-      <div style="font-size:11px;line-height:1.8;color:var(--text2);">
-        ① 未確認試合の結果を検索<br>
-        ② 外れ分析・upset_patterns更新<br>
-        ③ 新規試合スクリーニング<br>
-        ④ ダッシュボード・累積統計更新<br>
-        ⑤ GitHub Pages へ push
+  <div style="display:flex;flex-direction:column;gap:14px;">
+
+    <div style="background:var(--surface);border:1px solid #bfdbfe40;border-left:3px solid #bfdbfe;border-radius:8px;padding:16px 18px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+        <div style="font-size:13px;font-weight:700;">2026-04-14 _25 &#x2014; Super League &#x521D;&#x56DE;&#x30B9;&#x30AF;&#x30EA;&#x30FC;&#x30CB;&#x30F3;&#x30B0;</div>
+        <div style="font-size:11px;color:var(--text2);">&#x5BFE;&#x8C61;&#x30EA;&#x30FC;&#x30B0;: Super League R8</div>
+      </div>
+      <div style="font-size:12px;color:var(--text2);line-height:1.8;">
+        &#x30FB; Super League&#xFF08;&#x82F1;&#x56FD;&#x30E9;&#x30B0;&#x30D3;&#x30FC;&#x30EA;&#x30FC;&#x30B0;&#xFF09;&#x3092;&#x65B0;&#x898F;&#x5BFE;&#x8C61;&#x30EA;&#x30FC;&#x30B0;&#x306B;&#x8FFD;&#x52A0;&#x3002;NRL&#x6E96;&#x62E0; PD/G&#x5206;&#x6790;&#x3092;&#x9069;&#x7528;&#x3002;<br>
+        &#x30FB; rules_superleague.json v1.0&#x4F5C;&#x6210;&#xFF08;SL001&#xFF5E;SL006&#xFF09;&#x3002;&#x30C1;&#x30FC;&#x30E0;&#x7FFB;&#x8A33;&#x30DE;&#x30C3;&#x30D4;&#x30F3;&#x30B0;&#x78BA;&#x7ACB;&#x3002;<br>
+        &#x30FB; <span style="color:#3fb950;font-weight:600;">GO x2:</span> &#x30EA;&#x30FC;&#x30BA; @1.32 (EV+14.8%) / &#x30A6;&#x30A9;&#x30EA;&#x30F3;&#x30C8;&#x30F3; @1.65 (EV+40.3%)<br>
+        &#x30FB; records/superleague/2026.json &#x65B0;&#x898F;&#x4F5C;&#x6210;&#x3002;&#x30C0;&#x30C3;&#x30B7;&#x30E5;&#x30DC;&#x30FC;&#x30C9; Super League&#x30AB;&#x30FC;&#x30C9;&#x8FFD;&#x52A0;&#x3002;
+      </div>
+      <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;">
+        <span style="font-size:10px;background:#bfdbfe20;border:1px solid #bfdbfe40;border-radius:4px;padding:2px 8px;color:#bfdbfe;">&#x30B9;&#x30AF;&#x30EA;&#x30FC;&#x30CB;&#x30F3;&#x30B0; 7&#x8A66;&#x5408;</span>
+        <span style="font-size:10px;background:#0f2c1a;border:1px solid #238636;border-radius:4px;padding:2px 8px;color:#3fb950;">GO 2</span>
+        <span style="font-size:10px;background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:2px 8px;color:var(--text2);">SKIP 5</span>
       </div>
     </div>
-    <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 16px;">
-      <div style="font-size:10px;text-transform:uppercase;color:var(--text2);margin-bottom:6px;">ログファイル場所</div>
-      <div style="font-size:11px;color:var(--text2);line-height:1.8;">
-        実行ログ: <code>scripts/auto_update.log</code><br>
-        日報: <code>daily_reports/YYYY-MM-DD.md</code><br>
-        セッション履歴: <code>session_logs/YYYY-MM-DD.md</code>
+
+    <div style="background:var(--surface);border:1px solid #79c0ff40;border-left:3px solid #79c0ff;border-radius:8px;padding:16px 18px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+        <div style="font-size:13px;font-weight:700;">2026-04-14 _24 &#x2014; 4/14 JSON &#x5168;&#x30B9;&#x30AF;&#x30EA;&#x30FC;&#x30CB;&#x30F3;&#x30B0;</div>
+        <div style="font-size:11px;color:var(--text2);">ATP / WTA / NHL / NBA / NRL</div>
+      </div>
+      <div style="font-size:12px;color:var(--text2);line-height:1.8;">
+        &#x30FB; ATP Barcelona R1: <span style="color:#3fb950;">&#x30E0;&#x30BB;&#x30C3;&#x30C6;&#x30A3; GO @1.27</span> (EV+9.7%)<br>
+        &#x30FB; ATP Munich R1: <span style="color:#3fb950;">&#x30B3;&#x30DC;&#x30C3;&#x30EA; GO @1.21</span> (EV+8.7%) / <span style="color:#3fb950;">&#x30B3;&#x30D7;&#x30B8;&#x30D0; GO @1.36</span> (EV+9.8%)<br>
+        &#x30FB; WTA Stuttgart: <span style="color:#3fb950;">&#x30D1;&#x30AA;&#x30EA;&#x30FC;&#x30CB; GO @1.24</span> (EV+5.4%&#x3001;&#x30AA;&#x30C3;&#x30BA;1.23&#x2192;1.24&#x3067;&#x9592;&#x5024;&#x8D85;&#x3048;GO&#x306B;&#x6607;&#x683C;)<br>
+        &#x30FB; NHL CAR@NYI / COL@CGY: <span style="color:#d29922;">CAUTION</span>&#xFF08;&#x30B4;&#x30FC;&#x30EB;&#x30AD;&#x30FC;&#x30D1;&#x30FC;&#x672A;&#x78BA;&#x8A8D; / N016 COL rest&#x30EA;&#x30B9;&#x30AF;&#xFF09;<br>
+        &#x30FB; NBA Play-in 4&#x8A66;&#x5408;: <span style="color:#8b949e;">&#x5168;SKIP</span> (NRtg&#x5DEE;&lt;5pt&#x3001;play-in&#x30E2;&#x30C1;&#x30D9;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x8981;&#x56E0;)<br>
+        &#x30FB; NRL R7: 4&#x8A66;&#x5408;&#x78BA;&#x8A8D;&#xFF08;GO x2&#x3001;CAUTION x2&#xFF09;
+      </div>
+      <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;">
+        <span style="font-size:10px;background:#0f2c1a;border:1px solid #238636;border-radius:4px;padding:2px 8px;color:#3fb950;">ATP GO 3</span>
+        <span style="font-size:10px;background:#0f2c1a;border:1px solid #238636;border-radius:4px;padding:2px 8px;color:#3fb950;">WTA GO 1</span>
+        <span style="font-size:10px;background:#2d2100;border:1px solid #d29922;border-radius:4px;padding:2px 8px;color:#d29922;">NHL CAUTION 2</span>
+        <span style="font-size:10px;background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:2px 8px;color:var(--text2);">NBA SKIP 4</span>
       </div>
     </div>
-  </div>
 
-  <div class="section-title" style="margin-top:8px;">最新レポート</div>
-  <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:20px;font-size:12px;color:var(--text2);line-height:1.8;" id="latest-report-content">
-    レポートはまだありません。自動実行後にここに表示されます。<br>
-    手動確認: PowerShell で <code>Get-Content daily_reports\(最新日付).md</code>
-  </div>
+    <div style="background:var(--surface);border:1px solid #a5f3fc40;border-left:3px solid #a5f3fc;border-radius:8px;padding:16px 18px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+        <div style="font-size:13px;font-weight:700;">2026-04-14 _23 &#x2014; &#x9065;&#x53CA;&#x5206;&#x6790; + &#x30EB;&#x30FC;&#x30EB;&#x30D1;&#x30A4;&#x30D7;&#x30E9;&#x30A4;&#x30F3;&#x69CB;&#x7BC9;</div>
+        <div style="font-size:11px;color:var(--text2);">&#x30EB;&#x30FC;&#x30EB;&#x5909;&#x66F4;: N016 / W007 / R001</div>
+      </div>
+      <div style="font-size:12px;color:var(--text2);line-height:1.8;">
+        &#x30FB; NHL PHI@CAR&#xFF08;4/13&#xFF09;&#x9065;&#x53CA;&#x5206;&#x6790;: Carolina 6&#x540D;&#x610F;&#x56F3;&#x7684;rest &#x2192; N016&#xFF08;&#x30B7;&#x30FC;&#x30C7;&#x30A3;&#x30F3;&#x30B0;&#x78BA;&#x5B9A;&#x30C1;&#x30FC;&#x30E0;&#x7D42;&#x76E4;rest&#x78BA;&#x8A8D;&#xFF09;&#x65B0;&#x8A2D;<br>
+        &#x30FB; WTA Stuttgart UPSET&#x5206;&#x6790;: W007 indoor_clay&#x6CE8;&#x91C8;&#x8FFD;&#x52A0;&#xFF08;&#x30B9;&#x30D4;&#x30FC;&#x30C9;&#x29B6;&#x30A2;&#x30A6;&#x30C8;&#x30C9;&#x30A2;&#x30AF;&#x30EC;&#x30FC; &#x2192; &#x30D5;&#x30E9;&#x30C3;&#x30C8;&#x578B;&#x6709;&#x5229;&#xFF09;<br>
+        &#x30FB; ATP R001 CAUTION&#x30BE;&#x30FC;&#x30F3;&#x8FFD;&#x52A0;: 100&#x301C;129pt &#x2192; CAUTION&#x8A18;&#x9332;&#x306E;&#x307F;&#xFF08;GO&#x3057;&#x306A;&#x3044;&#xFF09;<br>
+        &#x30FB; rule_pipeline.json &#x4F5C;&#x6210;&#xFF08;UPSET&#x691C;&#x77E5;&#x2192;&#x5C55;&#x9593;&#x2192;&#x4EEE;&#x8AAC;&#x5F62;&#x6210;&#x2192;&#x691C;&#x8A3C;&#x2192;&#x30EB;&#x30FC;&#x30EB;&#x5316;&#x306E;5&#x30B9;&#x30C6;&#x30C3;&#x30D7;&#xFF09;
+      </div>
+      <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;">
+        <span style="font-size:10px;background:#2d2100;border:1px solid #d29922;border-radius:4px;padding:2px 8px;color:#d29922;">&#x30EB;&#x30FC;&#x30EB;&#x6539;&#x8A02; x3</span>
+        <span style="font-size:10px;background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:2px 8px;color:var(--text2);">session_logs/2026-04-14_23.md</span>
+      </div>
+    </div>
 
+    <div style="background:var(--surface);border:1px solid #30363d;border-left:3px solid #58a6ff;border-radius:8px;padding:16px 18px;opacity:.8;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+        <div style="font-size:13px;font-weight:700;">2026-04-14 _22 &#x2014; &#x30B3;&#x30F3;&#x30C6;&#x30AD;&#x30B9;&#x30C8;&#x30EA;&#x30BB;&#x30C3;&#x30C8; / BACKLOG&#x5BE9;&#x67FB;</div>
+        <div style="font-size:11px;color:var(--text2);">&#x30BB;&#x30C3;&#x30B7;&#x30E7;&#x30F3;&#x5F15;&#x304D;&#x7D99;&#x304E;</div>
+      </div>
+      <div style="font-size:12px;color:var(--text2);line-height:1.8;">
+        &#x30FB; &#x524D;&#x30BB;&#x30C3;&#x30B7;&#x30E7;&#x30F3;&#x304B;&#x3089;&#x306E;&#x30B3;&#x30F3;&#x30C6;&#x30AD;&#x30B9;&#x30C8;&#x30EA;&#x30BB;&#x30C3;&#x30C8;&#x5F8C;&#x3001;BACKLOG&#x306E;&#x672A;&#x5B8C;&#x4E86;&#x30BF;&#x30B9;&#x30AF;&#x3092;&#x6574;&#x7406;<br>
+        &#x30FB; &#x76F4;&#x8FD1;5&#x30BB;&#x30C3;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x30C0;&#x30C3;&#x30B7;&#x30E5;&#x30DC;&#x30FC;&#x30C9;&#x6B20;&#x843D;&#x78BA;&#x8A8D;&#x5B8C;&#x4E86;<br>
+        &#x30FB; &#x30B3;&#x30F3;&#x30C6;&#x30AD;&#x30B9;&#x30C8;&#x30EA;&#x30BB;&#x30C3;&#x30C8;&#x30D7;&#x30ED;&#x30C8;&#x30B3;&#x30EB; CLAUDE_CODE_START.md &#x8FFD;&#x8A18;
+      </div>
+    </div>
+
+  </div>
 </div>
+
 
 <!-- ===== ルール変更履歴 ===== -->
 <div class="tab-content" id="content-rules">
