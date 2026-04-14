@@ -30,6 +30,24 @@
 
 ---
 
+## 直近完了（4/14 遡り調査セッション）
+
+- [x] 全14試合 MISS/upset 遡り調査完了（WebSearch多ソース）
+- [x] PHI@CAR NHL miss_analysis更新: CAR 6名主力意図的rest判明（L4_External）
+- [x] MIN@STL NHL score修正4-3→6-3 + miss_analysis更新（5連続失点詳細）
+- [x] NRL Raiders vs Rabbitohs スコア修正30-22→36-34（2点差接戦・前半24-4から後半猛追）
+- [x] ATP MC Machac vs Cerundolo スコア修正7-6 6-2→6-2 7-6(3)
+- [x] ATP MC Marozsan vs Hurkacz スコア修正未確認→6-2 6-3
+- [x] WTA Stuttgart Samsonova vs Ruzic: Samsonova勝利が正しい（Ruzic勝利は誤記録）
+- [x] WTA Stuttgart: Zhang/Noskova + Sonmez/Paolini をペンディングにリセット（4/15未試合）
+- [x] WTA Stuttgart upsets_by_odds修正: 5→2確認済（Korpatsch+Eala、4/14）
+- [x] upset_patterns.json: U002/U005スコア修正、Stuttgart集計修正
+- [x] 5ファイル commit & push（bcb9850）
+- [ ] ATP GO3件（Musetti/Cobolli/Kopriva）結果確認 ← 4/14試合進行中（本日夜〜深夜に結果出る）
+- [ ] WTA Stuttgart R1残り（Zhang/Noskova・Sonmez/Paolini）結果確認 ← 4/15開催
+
+---
+
 ## 直近完了（4/13 手動セッション）
 
 - [x] 手動試合データ共有システム確立（`手動試合データ/tennis_2026-04-13.json`起点）
