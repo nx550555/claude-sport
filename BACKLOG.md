@@ -43,6 +43,11 @@
 - [x] WTA Stuttgart upsets_by_odds修正: 5→2確認済（Korpatsch+Eala、4/14）
 - [x] upset_patterns.json: U002/U005スコア修正、Stuttgart集計修正
 - [x] 5ファイル commit & push（bcb9850）
+- [x] ルール追加トリガー作成（core/rule_pipeline.json 新設）← P001〜P005の5候補を登録
+- [x] N016新設（シーディング確定チーム終盤rest確認）+ N014チェックリスト強化
+- [x] W007 indoor clay補足追加（Stuttgart速いサーフェス・フラット攻撃型有利）
+- [x] R001修正（GOは差130pt以上、100-129ptはCAUTIONのみ）
+- [x] 4ファイル commit & push（2f15699）
 - [ ] ATP GO3件（Musetti/Cobolli/Kopriva）結果確認 ← 4/14試合進行中（本日夜〜深夜に結果出る）
 - [ ] WTA Stuttgart R1残り（Zhang/Noskova・Sonmez/Paolini）結果確認 ← 4/15開催
 
