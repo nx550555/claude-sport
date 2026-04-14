@@ -25,6 +25,7 @@
 - [x] WTA Stuttgart R1 全12試合完了（4/12〜4/13実施）← **GB001 Ostapenko HIT(+0.538u)。UPSET 5/12。**
 - [x] WTA Rouen R1 全16試合スクリーニング完了（casino data起点）← 全SKIP。CAUTION: Timofeyeva/Boulter(cElo要確認)
 - [ ] WTA Stuttgart R2 スクリーニング（R1結果確認後・casino dataまたはOddsPortal起点）
+- [~] NHL RS最終盤 4/15 CAUTION2件 → N006（先発G）確認待ち（22〜24時JST）← CAR@NYI(CAR 1.90 EV+42.5%) / COL@CGY(COL 1.60 EV+24.8%)
 - [ ] NHL プレーオフ R1 スクリーニング（4/16〜17実施予定）← ※プレーインなし。RS終了4/16→ブラケット確定後にMoneyPuck xGF%確認起点でスクリーニング。暫定ブラケット取得済み。
 
 ---

@@ -11,6 +11,10 @@
 1. `C:\Users\ohwada\Desktop\claude_sport\BACKLOG.md` を読み込む
    - `[~]` 作業中の項目があれば「前回途中になっています」と報告する
    - `[ ]` 未着手の項目があれば一覧を表示する
+2. `C:\Users\ohwada\Desktop\claude_sport\monitoring\user_feedback_log.md` を読み込む
+   - `OPEN` の項目があれば「未解決の指摘があります」と報告する
+3. `C:\Users\ohwada\Desktop\claude_sport\monitoring\pending_actions.md` を読み込む
+   - `PENDING` / `WAITING` / `IN_PROGRESS` の項目を一覧で報告する
 
 **【毎回必須】抜け漏れチェック（②の要件）：**
 以下を確認して「現状チェック」として報告する：
@@ -18,6 +22,28 @@
 - BACKLOG.md の [ ] 未着手項目で対応できるものはないか
 - 前回の分析ログ（daily_reports/）と今回の状況に乖離がないか
 - 今日・明日に試合がある種目でスクリーニングが必要なものはないか
+
+**【タスク完了後・毎回必須】残タスク確認プロトコル（機能③）：**
+一つの指示・タスクを完了したら、必ず以下を実行する：
+1. `monitoring/pending_actions.md` を確認する
+2. PENDING / WAITING / IN_PROGRESS のアクションを列挙して報告する
+3. 「まだ X 件残っています。不要なものがあれば教えてください」と確認を求める
+4. ユーザーが「不要」「スキップ」と明示するまでPENDINGを削除しない
+5. 新しいタスクが発生したら即座に pending_actions.md に追記する
+
+**【指摘・意見・質問を受けたとき・毎回必須】フィードバック記録（機能①）：**
+ユーザーから指摘・意見・質問があったら：
+1. 即座に `monitoring/user_feedback_log.md` に追記する（FB001, FB002...）
+2. ステータスは OPEN でスタート
+3. 対応完了後もユーザーが確認するまで RESOLVED にしない
+4. `monitoring/check_protocol.md` のCHECK-3を参照して精度を保つ
+
+**【応答送信前・毎回必須】自己チェック（機能②）：**
+`monitoring/check_protocol.md` の4つのチェックを通過させる：
+- CHECK-1: 基本方針チェック（オッズ起点・統計自取得・全試合対象・ファイル書込）
+- CHECK-2: 情報精度チェック（ハルシネーション・数値・チーム名・EV計算）
+- CHECK-3: フィードバック解決チェック（OPEN項目・新規追記）
+- CHECK-4: アクション確認チェック（残PENDING報告）
 
 **【会話終了時】セッション終了手順（③の要件）：**
 ユーザーが「会話を終了する」「終わり」「終了」などと言ったら：

@@ -94,7 +94,95 @@
       "note": "市場が50/50評価(2.52/2.53)だが、OTTはリーグ3位xGF%でNYI(26位)に対し実質5.52ptの優位。両チーム非B2B。Ullmark vs Sorokin両エース互角。市場乖離13.1ptが根拠。【結果】OTT 3-2 NYI。Brady Tkachuk残り13秒決勝点。ReimER先発（Ullmarkではなく）でも予測通りOTT勝利。市場乖離が機能。HIT (+1.53)。"
     }
   ],
+  "pending_games": [
+    {
+      "date": "2026-04-15",
+      "match": "Carolina Hurricanes @ New York Islanders",
+      "home": "New York Islanders",
+      "away": "Carolina Hurricanes",
+      "round": "RS最終盤（4/15 JST）",
+      "tier": "caution",
+      "rec": "Carolina Hurricanes",
+      "rec_odds": 1.90,
+      "ev_est": 42.5,
+      "confidence_pending": "75-78%（N006確認待ち）",
+      "l1_metric": "xGF% (MoneyPuck 2026-04-14取得)",
+      "l1_data": {
+        "CAR_xGF": 56.0,
+        "NYI_xGF": 48.0,
+        "diff": 8.0
+      },
+      "adjustments": {
+        "CAR_away": "-5%（N004）",
+        "NYI_eliminated": "+5%（N008: NYI PO圏外・消化試合）"
+      },
+      "caution_reason": "N006（先発G確認必須）。Andersen/Kochetkov確認後に最終判断。",
+      "playoff_note": "CAR vs OTT（PO R1予定）。CARはシード維持のため主力出場の可能性が高い。",
+      "nyi_status": "プレーオフ圏外確定（PO bracket外）",
+      "rules_applied": ["N001", "N004", "N006", "N008"],
+      "odds": { "CAR": 1.90, "NYI": 1.95 },
+      "status": "pending_goalie_confirmation",
+      "result": null,
+      "score": null,
+      "hit": null,
+      "actual_ev": null
+    },
+    {
+      "date": "2026-04-15",
+      "match": "Calgary Flames @ Colorado Avalanche",
+      "home": "Colorado Avalanche",
+      "away": "Calgary Flames",
+      "round": "RS最終盤（4/15 JST）",
+      "tier": "caution",
+      "rec": "Colorado Avalanche",
+      "rec_odds": 1.60,
+      "ev_est": 24.8,
+      "confidence_pending": "78-80%（N006確認待ち）",
+      "l1_metric": "xGF% (MoneyPuck 2026-04-14取得)",
+      "l1_data": {
+        "COL_xGF": 56.0,
+        "CGY_xGF": 47.0,
+        "diff": 9.0
+      },
+      "adjustments": {
+        "COL_home": "+5%（N004）",
+        "CGY_eliminated": "+3%（N008: CGY消化試合確定）",
+        "COL_po_rest_risk": "⚠️ PO開始4/18まで3日。主力温存リスクあり（特にGeorgiev）"
+      },
+      "caution_reason": "N006（Georgiev先発確認必須）＋PO直前温存リスク。両方確認後に最終判断。",
+      "playoff_note": "COL vs LAK（PO R1予定）。4/9の同カード（COL 3-1 HIT）と同条件に近い。",
+      "rules_applied": ["N001", "N004", "N006", "N008"],
+      "odds": { "COL": 1.60, "CGY": 2.40 },
+      "status": "pending_goalie_confirmation",
+      "result": null,
+      "score": null,
+      "hit": null,
+      "actual_ev": null
+    }
+  ],
   "screening_log": [
+    {
+      "date": "2026-04-14",
+      "note": "4/15 JST試合（RS最終盤）スクリーニング。データ起点：手動試合データ/2026-04-14.json",
+      "total_games": 9,
+      "l1_passed": 3,
+      "l1_metric_used": "xGF%（MoneyPuck CSV 2026-04-14取得）",
+      "l1_failed": 6,
+      "caution_recommendations": 2,
+      "skip_after_l1": 1,
+      "l1_failed_detail": [
+        { "match": "BOS vs NJD", "xgf_diff": 4.0, "reason": "diff 4pt < 5pt閾値" },
+        { "match": "PHI vs MTL", "xgf_diff": 2.0, "reason": "diff 2pt < 5pt閾値" },
+        { "match": "CBJ vs WSH", "xgf_diff": 1.0, "reason": "diff 1pt < 5pt閾値" },
+        { "match": "MIN vs ANA", "xgf_diff": 3.0, "reason": "diff 3pt < 5pt閾値" },
+        { "match": "UTA vs WPG", "xgf_diff": 2.0, "reason": "diff 2pt < 5pt閾値" },
+        { "match": "STL vs PIT", "xgf_diff": 4.0, "reason": "diff 4pt < 5pt閾値" }
+      ],
+      "skip_after_l1_detail": [
+        { "match": "VAN vs LAK", "xgf_diff": 6.0, "reason": "L1通過もEV計算でマイナス（LAK 65% × 1.52 - 1 = -1.2%）。市場がxGF%をほぼ正しく織り込み済み" }
+      ],
+      "notable": "RS最終盤のためN006（ゴーリー温存リスク）が全CAUTION案件に適用。CAR/COLは22〜24時JST頃の朝練習後に先発G確認→最終判断予定。"
+    },
     {
       "date": "2026-04-09",
       "total_games": 14,
