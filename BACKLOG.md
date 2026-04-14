@@ -48,6 +48,8 @@
 - [x] W007 indoor clay補足追加（Stuttgart速いサーフェス・フラット攻撃型有利）
 - [x] R001修正（GOは差130pt以上、100-129ptはCAUTIONのみ）
 - [x] 4ファイル commit & push（2f15699）
+- [x] セッションログ保存（session_logs/2026-04-14_23.md）
+- [x] CLAUDE_CODE_START.md 自発的コンテキストリセットプロトコル追加（T1〜T4トリガー）+ rule_pipeline.json毎回読み込み追加
 - [ ] ATP GO3件（Musetti/Cobolli/Kopriva）結果確認 ← 4/14試合進行中（本日夜〜深夜に結果出る）
 - [ ] WTA Stuttgart R1残り（Zhang/Noskova・Sonmez/Paolini）結果確認 ← 4/15開催
 
