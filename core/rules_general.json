@@ -37,5 +37,30 @@
         "モデル未対応の要因（懸賞、地域性等）"
       ]
     }
+    ,{
+      "id": "GEN003",
+      "name": "セッション開始時アクティブ推奨再確認（Pre-Session Pending Check）",
+      "version": "v1.0",
+      "added": "2026-04-14",
+      "trigger": "ユーザー要望: ベット推奨中の試合について、セッション開始時に必ず最新情報（怪我・出場変更等）を確認して欲しい",
+      "rule": "セッション開始時、pending状態のGO/CAUTION推奨が存在する場合、WebSearchで最新情報を確認してから他の作業に入る",
+      "mandatory": true,
+      "skip_condition": "pending GO/CAUTION が0件の場合のみスキップ可",
+      "search_targets": [
+        "先発・スターティングラインナップ変更",
+        "怪我・出場停止・DNP（Did Not Play）情報",
+        "ゴールキーパー/QBなどポジション別先発確認（NHL/NFL/UFL等）",
+        "コーチ・戦術の突発変更",
+        "会場・日程変更",
+        "その他当初分析を覆す重大ファクター"
+      ],
+      "search_sources": ["公式チームSNS(X/Twitter)", "ESPN", "BBC Sport", "公式リーグサイト", "地元スポーツ記者Xアカウント"],
+      "decision_tree": {
+        "重大情報あり（先発変更・主力怪我）": "元推奨を見直し → GO→CAUTION or CAUTION→SKIP or 推奨チーム変更",
+        "軽微な情報あり（控え選手の欠場等）": "影響度を評価してconfidence調整 → 必要ならCAUTION格下げ",
+        "情報なし": "推奨維持 → 一行で報告"
+      },
+      "output_format": "【推奨再確認】\n- 〇〇 vs △△: [最新情報なし / 変更: 内容] → [推奨維持 / 変更後推奨]"
+    }
   ]
 }

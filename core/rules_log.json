@@ -16,6 +16,20 @@
       "note": "ソースデータは正確だった。エラーはClaude側の対応付けミス。同ミス再発防止のためGEN001/GEN002を全スポーツ横断ルールとして制定"
     },
     {
+      "date": "2026-04-14",
+      "sport": "general",
+      "version_from": "GEN v1.0",
+      "version_to": "GEN v1.1",
+      "trigger": "ユーザー要望: セッション開始時にpending GO/CAUTION推奨の最新情報（怪我・先発変更等）を必ず再確認して欲しい",
+      "changes": [
+        "GEN003追加: セッション開始時アクティブ推奨再確認 — pending GO/CAUTION全件についてWebSearchで最新情報確認を必須化",
+        "CLAUDE_CODE_START.md に【毎回必須】項目として追記"
+      ],
+      "result_before": "セッション開始時の推奨再確認なし（当初分析時の情報のまま進行）",
+      "result_after": "セッション開始時に必ずpending推奨を再確認してから他の作業に入る",
+      "note": "先発・怪我・ラインナップ変更など当初予測を揺るがす情報を毎セッション冒頭で捕捉する"
+    },
+    {
       "date": "2026-04-05",
       "sport": "tennis",
       "version_from": "v1.0",
