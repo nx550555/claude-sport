@@ -56,7 +56,7 @@
 **テニス（ATP）の作業をするとき：**
 1. `C:\Users\ohwada\Desktop\claude_sport\core\rules_tennis.json` を読み込む
 2. `C:\Users\ohwada\Desktop\claude_sport\records\tennis\2026-ATP.json` を読み込む
-3. OddsPortalで「今週オッズが付いているATP試合」を確認してからスクリーニングを開始する
+3. **ユーザーが提供するJSONデータを起点にスクリーニングを開始する**（自分でオッズを調べない）
    - 大会名ではなくオッズが立っている試合を起点にすること
    - 新規試合は predictions 配列に tournament フィールド付きで追記する
 
@@ -174,61 +174,31 @@ C:\Users\ohwada\Desktop\claude_sport\
 │       └── 2025-26.json        ← NBA 2025-26の全予測・結果
 ├── stats/
 │   └── cumulative.json         ← 累積統計（全種目）
-└── dashboard/
-    └── index.html              ← 閲覧用ダッシュボード
+└── dashboard.html              ← 閲覧用ダッシュボード（ルート直下・単一ファイル）
 ```
 
 ---
 
-## 現在の状況（2026-04-10時点）
+## 現在の状況
 
-### ATP テニス（MC2026）
-- R32：完了（1/5的中、EV -3.37u）
-- R16：完了（1/2的中、EV -0.43u）
-- QF：**本日進行中**（Zverev的中確定、Alcaraz・Sinner結果待ち）
-- SF：4/11 / F：4/12
-
-### WTA テニス
-- 稼働開始（Stuttgart Porsche Tennis Grand Prix 4月下旬〜）
-- 次にやること：Stuttgart開幕時にオッズ・cElo確認→分析
-
-### NHL
-- レギュラーシーズン終盤。プレーオフ直前。
-- 記録：COL勝利確定（1/1）、OTT@NYI（4/11）結果待ち
-- 次にやること：OTT@NYI結果確認＋プレーオフ開始後に分析継続
-
-### UFL（Week3）
-- Dallas vs Columbus（4/13）結果待ち
-- Louisville vs Orlando（4/11）スキップ済み
-- 次にやること：4/13結果確認→Week4分析
-
-### NFL
-- オフシーズン（2026年9月開幕予定）
-- ドラフト・トレードのニュースは記録不要。開幕前にDepth Chartを確認。
-
-### CFL
-- オフシーズン（2026年6月開幕予定）
-- 開幕1〜2週前にrules_cfl.jsonを読み込み分析開始
-
-### NRL（Round6）
-- South Sydney vs Canberra（4/11）結果待ち（推奨：Rabbitohs 1.55）
-- 次にやること：4/11結果確認→Round7分析
-
-### Super Rugby Pacific
-- 稼働開始（2026-04-10）
-- 次にやること：今週のラウンドのオッズ・得失点差確認→初回分析
+**→ `monitoring/pending_actions.md` を参照すること（毎セッション自動読み込み済み）**
+このファイルには「現在の状況」を書かない。pending_actions.md・cumulative.json が常に最新状態を持つ。
 
 ---
 
 ## 分析フロー（種目共通）
 
 ```
-① OddsPortalで本日の試合一覧を取得
+① ユーザーが提供するJSONデータ（試合一覧・オッズ）を起点にスクリーニング開始
+   ※ 自分でOddsPortal等を調べない。データはユーザーから受け取る。
 ② 対象スポーツのL1指標でスクリーニング
 ③ 候補のみL2〜L4を深掘り
-④ 信頼度≥75% AND EV>+5% → 推奨として出力
-⑤ 結果確認後 → records/{sport}/{year}.json を更新
-⑥ 新しい外れがあれば rules_{sport}.json にルール追加して上書き保存
+④ 全試合に predicted_winner / prediction_confidence / prediction_basis を記録する（v3.0）
+   ※ tier=skip であっても予測勝者は必ず記入する（EV閾値はベット判断のみに使う）
+⑤ 信頼度≥75% AND EV>+5% → GO推奨として出力（ベット推奨トラック）
+⑥ 結果確認後 → records/{sport}/{year}.json を更新（prediction_hit も更新する）
+⑦ MISSがあれば miss_analysis に要因分類（L1/L2/L3/L4/External）を記録する
+⑧ MISSの知見を rules_{sport}.json に追記して上書き保存
 ```
 
 ---
