@@ -63,11 +63,13 @@
       "round": 7,
       "tier": "go",
       "rec": "Brisbane Broncos",
-      "rec_odds": 1.46,
-      "ev": 27.9,
+      "rec_odds": 2.50,
+      "ev": 119.0,
       "confidence": 87.6,
       "l1_data": { "BRI_PD_per_game": 10.0, "WST_PD_per_game": -4.1, "diff": 14.1, "threshold": 12, "rule": "R012_early_season" },
-      "status": "pending"
+      "status": "pending",
+      "data_warning": "GEN002_ALERT: model 87.6% vs market 40%(1/2.50) → 乖離47.6pp。PD/Gデータ帰属ミスの可能性あり。結果後に検証必須。",
+      "odds_correction": "2026-04-14: rec_odds 1.46(誤:Tigersのオッズ)→2.50(正:Broncosのオッズ)に修正。EV+27.9%→+119.0%に再計算。"
     },
     {
       "date": "2026-04-18",
