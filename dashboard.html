@@ -204,7 +204,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 <div class="hdr">
   <h1>⚡ Sports Betting Dashboard</h1>
   <div class="hdr-right">
-    <span>GO 22件 / 確定 15件 / 待機 7件</span>
+    <span>GO 24件 / 確定 15件 / 待機 9件</span>
     <span style="background:#21262d;border:1px solid #30363d;border-radius:6px;padding:3px 8px;font-size:11px;">
       最終更新: <span id="last-updated-time">2026/04/14 手動更新 JST</span>
     </span>
@@ -234,7 +234,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
     <div class="overview-top">
       <div class="big-stat">
         <div class="bs-label">総GO回数</div>
-        <div class="bs-val">22</div>
+        <div class="bs-val">24</div>
         <div class="bs-sub">結果確定: 17件</div>
       </div>
       <div class="big-stat">
@@ -331,6 +331,17 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
           <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#3fb950;">100.0%</div></div>
           <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#3fb950;">+0.200</div></div>
           <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#8b949e;">0</div></div>
+        </div>
+      </div>
+      <div class="sport-card">
+        <div class="sport-card-header" style="color:#bfdbfe;">🏉 Super League <span class="rule-ver">v1.0</span></div>
+        <div class="sport-metrics">
+          <div class="sm"><div class="sm-label">GO回数</div><div class="sm-val">2</div></div>
+          <div class="sm"><div class="sm-label">結果済</div><div class="sm-val">0</div></div>
+          <div class="sm"><div class="sm-label">的中</div><div class="sm-val" style="color:#8b949e;">—</div></div>
+          <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#8b949e;">—</div></div>
+          <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#8b949e;">0</div></div>
+          <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#e3b341;">2</div></div>
         </div>
       </div>
       <div class="preseason-card">
@@ -515,6 +526,34 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
       </div>
       <div class="ac-note">cElo Paolini 1916 / Sonmez 1616 (diff +300). Stuttgart indoor clay (W007適用)。conf 85% / EV+5.4%。R001適用外(WTA)</div>
       <div class="ac-date">📅 2026-04-15 Stuttgart Clay(indoor) R1</div>
+    </div>
+
+    <div class="active-card" style="border-color:#bfdbfe60;background:linear-gradient(135deg,#bfdbfe08,transparent);">
+      <div class="ac-sport">🏉 Super League — Round 8 2026</div>
+      <div class="ac-match">Huddersfield Giants vs Leeds Rhinos <span class="badge badge-go">GO</span></div>
+      <div class="ac-rec">推奨: <strong style="color:#3fb950;">Leeds Rhinos</strong></div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">1.32</div></div>
+        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">+14.8%</div></div>
+        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">87%</div></div>
+        <div class="acm"><div class="acm-l">PD/G差</div><div class="acm-v rule">+20.3pt</div></div>
+      </div>
+      <div class="ac-note">Leeds PD/G +14.00(2位) / Huddersfield -6.29(11位) → diff +20.3pt。早期閾値12pt超。conf 87% / EV+14.8%</div>
+      <div class="ac-date">📅 2026-04-18 Super League R8</div>
+    </div>
+
+    <div class="active-card" style="border-color:#bfdbfe60;background:linear-gradient(135deg,#bfdbfe08,transparent);">
+      <div class="ac-sport">🏉 Super League — Round 8 2026</div>
+      <div class="ac-match">Catalans Dragons vs Warrington Wolves <span class="badge badge-go">GO</span></div>
+      <div class="ac-rec">推奨: <strong style="color:#3fb950;">Warrington Wolves</strong></div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">1.65</div></div>
+        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">+40.3%</div></div>
+        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">85%</div></div>
+        <div class="acm"><div class="acm-l">PD/G差</div><div class="acm-v rule">+23.9pt</div></div>
+      </div>
+      <div class="ac-note">Warrington PD/G +21.17(1位) / Catalans -2.71(6位) → diff +23.9pt。Catalans仏国ホーム-5%考慮済。conf 85% / EV+40.3%</div>
+      <div class="ac-date">📅 2026-04-19 Super League R8 (Perpignan, France)</div>
     </div>
   </div></div>
 </div>
@@ -1097,6 +1136,29 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
           <td style="font-size:11px;color:#6b7280;">Kings NRtg未取得。Trail Blazers W9 play-in motivated。</td>
         </tr>
 
+        <!-- ══ Super League 2026-04-14初回スクリーニング ══ -->
+        <tr style="background:#161b22;border-left:3px solid #bfdbfe;">
+          <td colspan="6" style="font-size:11px;font-weight:600;padding:7px 10px;color:#bfdbfe;">
+            📅 Super League R8 2026-04-18/19 &nbsp;—&nbsp; 🏉 英国ラグビーリーグ 初回スクリーニング
+            <span style="float:right;font-weight:400;color:#8b949e;"><span style="color:#3fb950;">GO 2(Leeds@1.32 / Warrington@1.65)</span> | SKIP 5</span>
+          </td>
+        </tr>
+        <tr>
+          <td>04/18</td>
+          <td><span class="sport-tag" style="color:#bfdbfe;">🏉 SL</span></td>
+          <td class="match-cell"><strong>Huddersfield vs Leeds Rhinos</strong></td>
+          <td style="text-align:right;color:#3fb950;">PD/G+20.3</td>
+          <td><span class="badge badge-go">GO</span></td>
+          <td style="font-size:11px;color:var(--text2);">Leeds PD/G+14.00(2位) vs Huddersfield -6.29(11位)。差20.3pt > 早期閾値12pt。conf 87% / EV+14.8% @1.32。<strong style="color:#e3b341;">⏳ PENDING 4/18</strong></td>
+        </tr>
+        <tr>
+          <td>04/19</td>
+          <td><span class="sport-tag" style="color:#bfdbfe;">🏉 SL</span></td>
+          <td class="match-cell"><strong>Catalans Dragons vs Warrington Wolves</strong></td>
+          <td style="text-align:right;color:#3fb950;">PD/G+23.9</td>
+          <td><span class="badge badge-go">GO</span></td>
+          <td style="font-size:11px;color:var(--text2);">Warrington PD/G+21.17(1位) vs Catalans -2.71(6位)。差23.9pt。Catalans仏国ホーム-5%考慮。conf 85% / EV+40.3% @1.65。<strong style="color:#e3b341;">⏳ PENDING 4/19</strong></td>
+        </tr>
         <!-- ══ WTA Stuttgart 2026-04-12実施 ══ -->
         <tr style="background:#161b22;border-left:3px solid #f9a8d4;">
           <td colspan="6" style="font-size:11px;font-weight:600;padding:7px 10px;color:#f9a8d4;">
@@ -2499,7 +2561,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
     <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;opacity:.7;">
       <div style="font-size:13px;font-weight:700;margin-bottom:8px;color:var(--text2);">未評価リーグ（除外理由未調査）</div>
       <div style="font-size:12px;color:var(--text2);line-height:1.8;">
-        NBA・MLB・欧州サッカー・ラグビーリーグ（イングランドSuper League等）・その他マイナーリーグ等は<br>
+        NBA・MLB・欧州サッカー・その他マイナーリーグ等は<br>
         現時点では調査・評価を行っていない。除外が確定しているわけではなく、単に未着手。<br>
         追加検討時は同様の4層分析フレームワーク適用可能性（L1指標・ゴーリー確認相当・ラインナップ安定性）を調査すること。
       </div>

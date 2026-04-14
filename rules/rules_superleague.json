@@ -1,0 +1,89 @@
+{
+  "sport": "super_league",
+  "version": "v1.0",
+  "created": "2026-04-14",
+  "note": "英国ラグビーリーグ Super League。NRLと同一競技規則のためNRL rules_nrl.json v1.0をベースに欧州仕様を追加。",
+  "framework": "NRL準拠 4層フィルタリング",
+
+  "L1": {
+    "metric": "Points Differential per Game (PD/G)",
+    "source": "superleague.co.uk / Wikipedia 2026 Super League table",
+    "threshold_base": 6,
+    "threshold_early_season": 12,
+    "early_season_rounds": "R3-R8",
+    "note": "NRL同一閾値を適用。早期シーズン（R3-R8）は12pt以上必要。データは公式サイトで週次更新。"
+  },
+
+  "rules": {
+    "SL001": {
+      "name": "PD/G L1スクリーニング",
+      "desc": "ホーム・アウェイ合算PD/Gを使用。早期シーズン(R3-R8)は閾値12pt。シーズン後半は6pt。",
+      "source": "superleague.co.uk league table"
+    },
+    "SL002": {
+      "name": "早期シーズン補正",
+      "desc": "R3-R8は小サンプルリスク。閾値12pt（NRL R012準拠）。信頼度推定にも-3%ペナルティ。"
+    },
+    "SL003": {
+      "name": "ホームアドバンテージ補正",
+      "desc": "ホームチーム +2-3%。Catalans Dragonsのフランス（ペルピニャン）ホームは特に強い（長距離移動の相手チームに-5%）。"
+    },
+    "SL004": {
+      "name": "天候補正",
+      "desc": "英国屋外スタジアム。強風・雨天時は大差がつきにくい（トライ数減少）。Windspeed >35km/h: -3%。Heavy rain: -2%。Weather forecast必須。"
+    },
+    "SL005": {
+      "name": "17人スクワッド確認",
+      "desc": "NHLゴーリー確認相当。通常試合前日（木〜金）に17人スクワッド発表。公式サイト/X(Twitter)で確認。主力欠場時は補正適用（N012準拠）。"
+    },
+    "SL006": {
+      "name": "翻訳エラー警戒",
+      "desc": "JSONの日本語チーム名に誤訳リスクあり。特にWarrington Wolves→ウェリントンウルフス（Wellington）誤訳事例あり。オッズと順位で照合して特定すること。"
+    },
+    "SL007": {
+      "name": "信頼度閾値",
+      "desc": "NRL準拠: 75%未満はSKIP。早期シーズン補正後の推定値で判定。"
+    }
+  },
+
+  "team_name_mapping": {
+    "ウォリントン・ウルブズ": "Warrington Wolves",
+    "ウェリントンウルフス": "Warrington Wolves (誤訳注意)",
+    "リーズ・リノズ": "Leeds Rhinos",
+    "ウィガンウォリアーズ": "Wigan Warriors",
+    "セントへレンズ": "St Helens",
+    "ハルFC": "Hull FC",
+    "ハルKR": "Hull Kingston Rovers",
+    "バルサドラゴンズ": "Catalans Dragons (誤訳注意)",
+    "カタルーニャ・ドラゴンズ": "Catalans Dragons",
+    "ハダースフィールドジャイアンツ": "Huddersfield Giants",
+    "リー・レパーズ": "Leigh Leopards",
+    "レイ・セントゥリオンズ": "Leigh Leopards (旧称Leigh Centurions)",
+    "トゥールーズ・オリンピケ XIII": "Toulouse Olympique",
+    "ヨークシティナイツ": "York Knights",
+    "ワケフィエルド・トリニティ": "Wakefield Trinity",
+    "ブラッドフォードブルズ": "Bradford Bulls",
+    "キャッスルフォードタイガーズ": "Castleford Tigers"
+  },
+
+  "standings_snapshot": {
+    "as_of": "2026-04-05",
+    "source": "Wikipedia 2026 Super League regular season table",
+    "teams": [
+      {"rank": 1, "team": "Warrington Wolves",  "played": 6, "pf": 225, "pa": 98,  "pd": 127, "pd_per_game": 21.17},
+      {"rank": 2, "team": "Leeds Rhinos",        "played": 7, "pf": 206, "pa": 108, "pd": 98,  "pd_per_game": 14.00},
+      {"rank": 3, "team": "Wigan Warriors",      "played": 7, "pf": 213, "pa": 128, "pd": 85,  "pd_per_game": 12.14},
+      {"rank": 4, "team": "Wakefield Trinity",   "played": 7, "pf": 142, "pa": 99,  "pd": 43,  "pd_per_game": 6.14},
+      {"rank": 5, "team": "St Helens",           "played": 7, "pf": 170, "pa": 160, "pd": 10,  "pd_per_game": 1.43},
+      {"rank": 6, "team": "Catalans Dragons",    "played": 7, "pf": 141, "pa": 160, "pd": -19, "pd_per_game": -2.71},
+      {"rank": 7, "team": "Hull KR",             "played": 6, "pf": 152, "pa": 125, "pd": 27,  "pd_per_game": 4.50},
+      {"rank": 8, "team": "Bradford Bulls",      "played": 7, "pf": 154, "pa": 147, "pd": 7,   "pd_per_game": 1.00},
+      {"rank": 9, "team": "Hull FC",             "played": 7, "pf": 113, "pa": 145, "pd": -32, "pd_per_game": -4.57},
+      {"rank": 10,"team": "Toulouse Olympique",  "played": 7, "pf": 126, "pa": 166, "pd": -40, "pd_per_game": -5.71},
+      {"rank": 11,"team": "Huddersfield Giants", "played": 7, "pf": 122, "pa": 166, "pd": -44, "pd_per_game": -6.29},
+      {"rank": 12,"team": "York Knights",        "played": 7, "pf": 130, "pa": 201, "pd": -71, "pd_per_game": -10.14},
+      {"rank": 13,"team": "Leigh Leopards",      "played": 7, "pf": 101, "pa": 190, "pd": -89, "pd_per_game": -12.71},
+      {"rank": 14,"team": "Castleford Tigers",   "played": 7, "pf": 112, "pa": 214, "pd": -102,"pd_per_game": -14.57}
+    ]
+  }
+}
