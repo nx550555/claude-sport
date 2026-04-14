@@ -15,6 +15,8 @@
    - `OPEN` の項目があれば「未解決の指摘があります」と報告する
 3. `C:\Users\ohwada\Desktop\claude_sport\monitoring\pending_actions.md` を読み込む
    - `PENDING` / `WAITING` / `IN_PROGRESS` の項目を一覧で報告する
+4. `C:\Users\ohwada\Desktop\claude_sport\core\rule_pipeline.json` を読み込む
+   - `current_count >= trigger_threshold` の候補があれば「ルール追加トリガー発動：〇〇を実装します」と報告してそのまま実装する
 
 **【毎回必須】抜け漏れチェック（②の要件）：**
 以下を確認して「現状チェック」として報告する：
@@ -46,12 +48,41 @@
 - CHECK-4: アクション確認チェック（残PENDING報告）
 
 **【会話終了時】セッション終了手順（③の要件）：**
-ユーザーが「会話を終了する」「終わり」「終了」などと言ったら：
+ユーザーが「会話を終了する」「終わり」「終了」「記録して」などと言ったら：
 1. このセッションで行った作業を `session_logs/YYYY-MM-DD_HH.md` に保存する
 2. BACKLOG.md の完了項目を [x] に更新する
 3. 次回への申し送り事項を BACKLOG.md の「未完了」欄に追記する
 4. `git add -A && git commit -m "Session end YYYY-MM-DD" && git push origin main` を実行する
 5. 「セッション終了。次回は〇〇から再開します。」と報告する
+
+**【自発的セッション保存+リセット提案】コンテキスト管理プロトコル：**
+
+以下のいずれかの条件を満たした場合、ユーザーへの確認なしにセッションログを自動保存し、会話のリセットを提案する。
+
+**トリガー条件（どれか1つでも該当したら実行）：**
+- T1: システムリマインダーに「was read before the last conversation was summarized」が複数含まれている（コンテキスト圧縮が発生済みの確実なサイン）
+- T2: 大きなフェーズが完了し、次に別の大きなフェーズが始まる直前（例：遡り調査完了→ルール実装開始 / スクリーニング完了→結果確認フェーズ移行）
+- T3: WebSearch / WebFetch / 複数ファイル書き込みを含む主要タスクが3件以上完了し、かつ次のタスクが明確に残っている状態
+- T4: ユーザーが「記録して」「セッション保存して」「ログ残して」と言った（明示的な保存要求）
+
+**実行手順：**
+1. `session_logs/YYYY-MM-DD_HH.md` にこのセッションの作業サマリを保存する
+2. `BACKLOG.md` の完了項目を [x] に更新し、未完了を残す
+3. `git add -A && git commit && git push` を実行する
+4. 以下のメッセージをユーザーに送る：
+
+```
+セッションログを保存しました（session_logs/YYYY-MM-DD_HH.md）。
+コンテキストが大きくなってきたため、ここで会話をリセットすることをお勧めします。
+新しい会話を開始して「CLAUDE_CODE_START.md を読んで」と伝えると、
+ここから続きを再開できます。
+次のタスク: [残っている最優先タスクを1〜3件列挙]
+```
+
+**注意：**
+- T1（圧縮発生済み）の場合は強く推奨（精度が落ちている可能性が高い）
+- T2・T3はフェーズの切れ目に提案するため、作業の途中で割り込まない
+- 保存後もユーザーが「続けて」と言えばそのまま作業を継続する
 
 **テニス（ATP）の作業をするとき：**
 1. `C:\Users\ohwada\Desktop\claude_sport\core\rules_tennis.json` を読み込む
@@ -152,6 +183,7 @@ C:\Users\ohwada\Desktop\claude_sport\
 │   ├── rules_nrl.json          ← NRLルール v1.0（ラグビーリーグ）
 │   ├── rules_superrugby.json   ← Super Rugby Pacificルール v1.0（ラグビーユニオン）
 │   ├── rules_nba.json          ← NBAルール v1.0（バスケットボール）
+│   ├── rule_pipeline.json      ← ルール追加トリガー管理（候補追跡・閾値到達で自動実装）
 │   └── framework.json          ← 共通設定
 ├── records/
 │   ├── tennis/
