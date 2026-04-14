@@ -174,6 +174,29 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 .tg-desc{font-size:12px;color:var(--text2);line-height:1.6;margin-bottom:6px;}
 .tg-metrics{display:flex;gap:6px;flex-wrap:wrap;}
 .tg-metric{font-size:11px;background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:2px 8px;}
+
+/* ===== Prediction Accuracy Section ===== */
+.pred-compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px;}
+.pred-panel{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px;}
+.pred-panel-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--text2);margin-bottom:14px;padding-top:8px;border-top:3px solid transparent;}
+.pred-panel.bet-only .pred-panel-title{border-top-color:#3fb950;}
+.pred-panel.all-games .pred-panel-title{border-top-color:#58a6ff;}
+.pred-main-stat{text-align:center;margin-bottom:16px;}
+.pred-pct{font-size:42px;font-weight:700;line-height:1;}
+.pred-count{font-size:12px;color:var(--text2);margin-top:4px;}
+.pred-rows{display:flex;flex-direction:column;gap:6px;}
+.pred-row{display:flex;justify-content:space-between;align-items:center;font-size:12px;padding:6px 10px;background:var(--surface2);border-radius:6px;}
+.pred-row-label{color:var(--text2);}
+.pred-row-val{font-weight:600;}
+.learn-loop{display:flex;align-items:center;gap:0;padding:4px 0 12px;overflow-x:auto;}
+.ll-step{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;min-width:130px;text-align:center;flex-shrink:0;}
+.ll-arrow{color:var(--text2);font-size:20px;padding:0 8px;flex-shrink:0;line-height:1;}
+.ll-icon{font-size:22px;margin-bottom:4px;}
+.ll-label{font-size:12px;font-weight:700;}
+.ll-desc{font-size:10px;color:var(--text2);margin-top:3px;line-height:1.5;}
+.rule-impact-table .before{color:#f85149;font-weight:600;}
+.rule-impact-table .after{color:#3fb950;font-weight:600;}
+@media(max-width:768px){.pred-compare{grid-template-columns:1fr;}.learn-loop{flex-wrap:wrap;gap:8px;}.ll-arrow{display:none;}}
 </style>
 </head>
 <body>
@@ -197,6 +220,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
   <div class="tab" id="tab-history"  onclick="showTab('history')">📋 全履歴</div>
   <div class="tab" id="tab-analysislog" onclick="showTab('analysislog')">🔍 分析ログ</div>
   <div class="tab" id="tab-timeline" onclick="showTab('timeline')">📈 成長分析</div>
+  <div class="tab" id="tab-accuracy"  onclick="showTab('accuracy')">📊 予測精度</div>
   <div class="tab" id="tab-upset"    onclick="showTab('upset')">🎯 アップセット分析</div>
   <div class="tab" id="tab-dailyreport" onclick="showTab('dailyreport')">📋 日報</div>
   <div class="tab" id="tab-rules"    onclick="showTab('rules')">⚙️ ルール変更履歴</div>
@@ -211,22 +235,22 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
       <div class="big-stat">
         <div class="bs-label">総GO回数</div>
         <div class="bs-val">21</div>
-        <div class="bs-sub">結果確定: 15件</div>
+        <div class="bs-sub">結果確定: 17件</div>
       </div>
       <div class="big-stat">
         <div class="bs-label">通算正答率</div>
-        <div class="bs-val" style="color:#3fb950;">75.0%</div>
-        <div class="bs-sub">12HIT / 16試合</div>
+        <div class="bs-val" style="color:#3fb950;">76.5%</div>
+        <div class="bs-sub">13HIT / 17試合</div>
       </div>
       <div class="big-stat">
         <div class="bs-label">累積EV合計</div>
-        <div class="bs-val" style="color:#3fb950;">+2.671</div>
+        <div class="bs-val" style="color:#3fb950;">+2.991</div>
         <div class="bs-sub">単位: 賭け金1あたり</div>
       </div>
       <div class="big-stat">
         <div class="bs-label">待機中</div>
-        <div class="bs-val" style="color:#d29922;">6</div>
-        <div class="bs-sub">UFL+ATP 4/14 x3 + NRL 4/18 x2</div>
+        <div class="bs-val" style="color:#d29922;">5</div>
+        <div class="bs-sub">ATP W16 x3 + NRL R7 x2</div>
       </div>
     </div>
 
@@ -269,11 +293,11 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
         <div class="sport-card-header" style="color:#fca5a5;">🏈 UFL <span class="rule-ver">v1.0</span></div>
         <div class="sport-metrics">
           <div class="sm"><div class="sm-label">GO回数</div><div class="sm-val">1</div></div>
-          <div class="sm"><div class="sm-label">結果済</div><div class="sm-val">0</div></div>
-          <div class="sm"><div class="sm-label">的中</div><div class="sm-val">—</div></div>
-          <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#8b949e;">—</div></div>
-          <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#8b949e;">—</div></div>
-          <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#e3b341;">1</div></div>
+          <div class="sm"><div class="sm-label">結果済</div><div class="sm-val">1</div></div>
+          <div class="sm"><div class="sm-label">的中</div><div class="sm-val">1</div></div>
+          <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#3fb950;">100%</div></div>
+          <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#3fb950;">+0.320</div></div>
+          <div class="sm"><div class="sm-label">待機中</div><div class="sm-val">0</div></div>
         </div>
       </div>
       <div class="sport-card">
@@ -327,31 +351,31 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
   <div class="section"><div class="active-grid">
 
     <div class="active-card" style="border-color:#30363d;background:linear-gradient(135deg,#30363d10,transparent);opacity:.7;">
-      <div class="ac-sport">🎾 ATP — MC2026 決勝</div>
-      <div class="ac-match">Alcaraz C.(1) vs Sinner J.(2) <span class="badge badge-skip">SKIP</span></div>
-      <div class="ac-rec" style="color:#8b949e;">ベットなし — 観戦のみ</div>
+      <div class="ac-sport">🎾 ATP — MC2026 決勝 <span class="badge badge-skip">SKIP（観戦）</span></div>
+      <div class="ac-match">Alcaraz C.(1) vs Sinner J.(2)</div>
+      <div class="ac-rec" style="color:#3fb950;">結果: Sinner 7-6(5) 6-3 — 予測なし（SKIP）</div>
       <div class="ac-metrics">
         <div class="acm"><div class="acm-l">cElo差</div><div class="acm-v rule">~20pt</div></div>
         <div class="acm"><div class="acm-l">L1判定</div><div class="acm-v" style="color:#f85149;">不通過</div></div>
-        <div class="acm"><div class="acm-l">閾値</div><div class="acm-v rule">100pt要</div></div>
-        <div class="acm"><div class="acm-l">edge</div><div class="acm-v rule">なし</div></div>
+        <div class="acm"><div class="acm-l">予測</div><div class="acm-v" style="color:#8b949e;">50/50</div></div>
+        <div class="acm"><div class="acm-l">bet</div><div class="acm-v rule">なし</div></div>
       </div>
-      <div class="ac-note">実質50/50。Alcarazはディフェンディングチャンピオン、Sinnerは4連続Masters1000決勝。両者ともSFを支配的に勝利。cElo差が小さすぎてエッジ判定不可。</div>
-      <div class="ac-date">📅 2026-04-13</div>
+      <div class="ac-note">SKIP正解（差なしで当てても運）。Sinnerが7-6(5) 6-3で優勝。MC2026完了。</div>
+      <div class="ac-date">📅 2026-04-13 ✓完了</div>
     </div>
 
-    <div class="active-card" style="border-color:#fca5a530;background:linear-gradient(135deg,#fca5a508,transparent);">
-      <div class="ac-sport">🏈 UFL Week 3</div>
-      <div class="ac-match">Columbus Aviators @ Dallas Renegades</div>
-      <div class="ac-rec">推奨: <strong style="color:#e3b341;">Dallas Renegades</strong></div>
+    <div class="active-card" style="border-color:#23863640;background:linear-gradient(135deg,#23863610,transparent);opacity:.8;">
+      <div class="ac-sport">🏈 UFL Week 3 — Columbus @ Dallas <span class="badge badge-hit">HIT ✓</span></div>
+      <div class="ac-match">2026-04-12 / Cotton Bowl, Dallas</div>
+      <div class="ac-rec" style="color:#3fb950;">Dallas Renegades 28 — 23 Columbus Aviators</div>
       <div class="ac-metrics">
         <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">1.32</div></div>
         <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">+8.2%</div></div>
-        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">82.0%</div></div>
-        <div class="acm"><div class="acm-l">ルール</div><div class="acm-v rule">v1.0</div></div>
+        <div class="acm"><div class="acm-l">実績EV</div><div class="acm-v ev">+0.32u</div></div>
+        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">82%</div></div>
       </div>
-      <div class="ac-note">Dallas 2-0、PD +17.5/試合。Columbus 0-2、PD -12.5/試合。Austin Reed QB確認済(7TD/2試合)。</div>
-      <div class="ac-date">📅 2026-04-13</div>
+      <div class="ac-note">PD差30pt（Dallas +17.5/試合 vs Columbus -12.5/試合）が通り通しの地力差通り。</div>
+      <div class="ac-date">📅 2026-04-12</div>
     </div>
 
     <div class="active-card" style="border-color:#23863640;background:linear-gradient(135deg,#23863610,transparent);opacity:.8;">
@@ -603,7 +627,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
           <td style="color:#8b949e;">—</td>
           <td style="color:#8b949e;">—</td>
           <td><span class="badge badge-skip">cElo差~20pt</span></td>
-          <td style="color:#8b949e;">—</td>
+          <td style="color:#8b949e;">Sinner 7-6(5) 6-3</td>
           <td style="color:#8b949e;">—</td>
         </tr>
         <tr style="background:rgba(46,160,67,.06);">
@@ -649,7 +673,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
           <td class="ev-pos">+0.200</td>
         </tr>
         <tr>
-          <td>2026-04-13</td>
+          <td>2026-04-12</td>
           <td><span class="sport-tag" style="color:#fca5a5;">🏈 UFL</span></td>
           <td style="font-size:12px;">UFL 2026 Week 3</td>
           <td class="match-cell">Columbus Aviators @ Dallas Renegades</td>
@@ -658,9 +682,9 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
           <td style="color:#e3b341;">1.32</td>
           <td class="ev-pos">+8.2%</td>
           <td>82%</td>
-          <td><span class="badge badge-pending">⏳ 待機中</span></td>
-          <td style="color:#8b949e;">—</td>
-          <td class="ev-neg">—</td>
+          <td><span class="badge badge-hit">✓ HIT</span></td>
+          <td style="color:#8b949e;">28-23</td>
+          <td class="ev-pos">+0.320</td>
         </tr>
         <tr>
           <td>2026-04-11</td>
@@ -1556,25 +1580,24 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
     </div>
     <div class="chart-wrap chart-narrow">
       <div class="chart-title">累積EV推移</div>
-      <svg viewBox="0 0 210 195" style="width:100%;display:block;">
+      <svg viewBox="0 0 225 195" style="width:100%;display:block;">
         <!-- スケール: +3.0〜-2.5, y=100-ev*26 (0線=y100, 26px/unit) -->
-        <line x1="44" y1="100" x2="198" y2="100" stroke="#3fb950" stroke-dasharray="4,3" stroke-width="1.2" opacity="0.7"/>
-        <text x="200" y="104" fill="#3fb950" font-size="8">0</text>
-        <line x1="44" y1="48"  x2="198" y2="48"  stroke="#21262d"/>
-        <line x1="44" y1="74"  x2="198" y2="74"  stroke="#21262d"/>
-        <line x1="44" y1="126" x2="198" y2="126" stroke="#21262d"/>
-        <line x1="44" y1="152" x2="198" y2="152" stroke="#21262d"/>
+        <line x1="44" y1="100" x2="218" y2="100" stroke="#3fb950" stroke-dasharray="4,3" stroke-width="1.2" opacity="0.7"/>
+        <text x="220" y="104" fill="#3fb950" font-size="8">0</text>
+        <line x1="44" y1="48"  x2="218" y2="48"  stroke="#21262d"/>
+        <line x1="44" y1="74"  x2="218" y2="74"  stroke="#21262d"/>
+        <line x1="44" y1="126" x2="218" y2="126" stroke="#21262d"/>
+        <line x1="44" y1="152" x2="218" y2="152" stroke="#21262d"/>
         <text x="38" y="104" text-anchor="end" fill="#3fb950" font-size="8">0</text>
         <text x="38" y="52"  text-anchor="end" fill="#3fb950" font-size="8">+2</text>
         <text x="38" y="78"  text-anchor="end" fill="#8b949e" font-size="8">+1</text>
         <text x="38" y="130" text-anchor="end" fill="#8b949e" font-size="8">-1</text>
         <text x="38" y="156" text-anchor="end" fill="#8b949e" font-size="8">-2</text>
-        <!-- x: 44,55,66,77,88,99,110,121,132,143,154,165,176,187,198 (15点) -->
-        <!-- cumEV: -1.0,-2.0,-1.37,-2.37,-1.8,-1.267,-0.817,-0.437,-0.187,+0.213,+0.863,+2.393,+2.933,+1.933,+2.133,+2.671 -->
-        <!-- y=100-ev*26: 126,152,136,162,147,133,121,111,105,95,78,38,24,50,45,31 -->
-        <polygon points="44,126 55,152 66,136 77,162 88,147 99,133 110,121 121,111 132,105 143,95 154,78 165,38 176,24 187,50 198,45 207,31 207,100 44,100" fill="#3fb950" opacity="0.05"/>
-        <polyline points="44,126 55,152 66,136 77,162 88,147 99,133 110,121 121,111 132,105 143,95 154,78 165,38 176,24 187,50 198,45 207,31" fill="none" stroke="#3fb950" stroke-width="1.8" stroke-linejoin="round" opacity="0.9"/>
-        <circle cx="207" cy="31" r="3" fill="#f97316" stroke="#0d1117" stroke-width="1.5"/>
+        <!-- x: 44,55,66,77,88,99,110,121,132,143,154,165,176,187,198,207,218 (17点) -->
+        <!-- cumEV: -1.0,-2.0,-1.37,-2.37,-1.8,-1.267,-0.817,-0.437,-0.187,+0.213,+0.863,+2.393,+2.933,+1.933,+2.133,+2.671,+2.991 -->
+        <!-- y=100-ev*26: 126,152,136,162,147,133,121,111,105,95,78,38,24,50,45,31,22 -->
+        <polygon points="44,126 55,152 66,136 77,162 88,147 99,133 110,121 121,111 132,105 143,95 154,78 165,38 176,24 187,50 198,45 207,31 218,22 218,100 44,100" fill="#3fb950" opacity="0.05"/>
+        <polyline points="44,126 55,152 66,136 77,162 88,147 99,133 110,121 121,111 132,105 143,95 154,78 165,38 176,24 187,50 198,45 207,31 218,22" fill="none" stroke="#3fb950" stroke-width="1.8" stroke-linejoin="round" opacity="0.9"/>
         <circle cx="44"  cy="126" r="2.5" fill="#f85149" opacity="0.9"/>
         <circle cx="55"  cy="152" r="2.5" fill="#f85149" opacity="0.9"/>
         <circle cx="66"  cy="136" r="2.5" fill="#e3b341" opacity="0.9"/>
@@ -1589,11 +1612,13 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
         <circle cx="165" cy="38"  r="2.5" fill="#3fb950" opacity="0.9"/>
         <circle cx="176" cy="24"  r="3"   fill="#3fb950" stroke="#0d1117" stroke-width="1.5"/>
         <circle cx="187" cy="50"  r="2.5" fill="#e3b341" opacity="0.9"/>
-        <circle cx="198" cy="45"  r="4"   fill="#3fb950" stroke="#0d1117" stroke-width="1.5"/>
+        <circle cx="198" cy="45"  r="2.5" fill="#3fb950" opacity="0.9"/>
+        <circle cx="207" cy="31"  r="2.5" fill="#3fb950" opacity="0.9"/>
+        <circle cx="218" cy="22"  r="4"   fill="#3fb950" stroke="#0d1117" stroke-width="1.5"/>
         <rect x="134" y="12" width="54" height="16" rx="3" fill="#0f2c1a" stroke="#3fb950" stroke-width="1"/>
         <text x="161" y="23" text-anchor="middle" fill="#3fb950" font-size="9" font-weight="700">最高+2.933</text>
-        <rect x="148" y="31" width="54" height="16" rx="3" fill="#0f2c1a" stroke="#3fb950" stroke-width="1"/>
-        <text x="175" y="42" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="700">+2.671</text>
+        <rect x="155" y="10" width="54" height="16" rx="3" fill="#0f2c1a" stroke="#3fb950" stroke-width="1"/>
+        <text x="182" y="21" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="700">+2.991</text>
       </svg>
     </div>
   </div>
@@ -1789,9 +1814,20 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
           <div class="tg-title">🎾 WTA Stuttgart R1 — GB001 Ostapenko HIT！GAMBLE_BET初回的中</div>
           <div class="tg-desc">Stuttgart indoor clay R1全12試合完了。UPSET多発（5/12=41.7%）。GB001: Ostapenko def. Andreeva(6) @3.15 HIT +0.538u（stake 0.25u）。UF01（indoor clay速め）+UFT01（defending champion）の2因子が的中に貢献。今週の全ATP/WTA試合SKIP（信頼度・EV閾値未達）。累積EV+2.671。</div>
           <div class="tg-metrics">
-            <span class="tg-metric" style="color:#3fb950;">通算: 12/16 (75.0%)</span>
-            <span class="tg-metric" style="color:#3fb950;">累積EV +2.671u</span>
+            <span class="tg-metric" style="color:#3fb950;">通算: 12/16 (75.0%) → UFL確定後 13/17 (76.5%)</span>
+            <span class="tg-metric" style="color:#3fb950;">累積EV +2.991u</span>
             <span class="tg-metric" style="color:#f97316;">GAMBLE_BET W009初回HIT</span>
+          </div>
+        </div>
+        <div class="tg-item">
+          <div class="tg-dot" style="background:#58a6ff;box-shadow:0 0 0 3px rgba(88,166,255,.3);"></div>
+          <div class="tg-date">2026-04-14 &nbsp;|&nbsp; v3.0導入</div>
+          <div class="tg-title">📊 v3.0フレームワーク — 全試合predicted_winner記録開始</div>
+          <div class="tg-desc">ベット推奨（GO/CAUTION）だけでなく全試合の勝者予測を記録。2トラック精度管理: ①ベット推奨の的中率（収益性指標）+ ②全試合予測精度（モデル品質指標）。NHL 4/13で初回適用 → L1通過4試合中2試合的中（50%）。L4要因（RS終盤モチベーション）の影響を定量化開始。</div>
+          <div class="tg-metrics">
+            <span class="tg-metric" style="color:#58a6ff;">全試合予測: 4/6 (66.7%)</span>
+            <span class="tg-metric">L1通過: 2/4 (50%)</span>
+            <span class="tg-metric" style="color:#f0a519;">L1閾値 再検討中</span>
           </div>
         </div>
         <div class="timeline-entry">
@@ -1834,6 +1870,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
         <tr style="background:rgba(248,81,73,.04);"><td>#14</td><td>2026-04-11</td><td><span class="sport-tag" style="color:#86efac;">🏉 NRL</span></td><td style="font-size:12px;">Rabbitohs vs Raiders (R6)</td><td style="color:#f85149;font-weight:700;">✗ MISS</td><td class="ev-neg">-1.000</td><td class="ev-pos">+1.933</td><td style="color:#e3b341;">71.4%</td></tr>
         <tr style="background:rgba(46,160,67,.06);"><td>#15</td><td>2026-04-12</td><td><span class="sport-tag" style="color:#fca5a5;">🏀 NBA</span></td><td style="font-size:12px;">Houston Rockets vs Memphis Grizzlies</td><td style="color:#3fb950;font-weight:700;">✓ HIT</td><td class="ev-pos">+0.200</td><td class="ev-pos">+2.133</td><td style="color:#3fb950;">73.3%</td></tr>
         <tr style="background:rgba(249,115,22,.10);border-left:3px solid #f97316;"><td>#16</td><td>2026-04-13</td><td><span class="sport-tag" style="color:#f9a8d4;">🎾 WTA</span></td><td style="font-size:12px;"><strong>Ostapenko J. vs Andreeva M.(6) 🆕 GAMBLE_BET</strong><br><span style="font-size:10px;color:#f97316;">Stuttgart R1 / GB001 / 0.25u / odds 3.15</span></td><td style="color:#3fb950;font-weight:700;">✓ HIT</td><td class="ev-pos">+0.538</td><td class="ev-pos">+2.671</td><td style="color:#3fb950;">75.0%</td></tr>
+        <tr style="background:rgba(46,160,67,.06);"><td>#17</td><td>2026-04-12</td><td><span class="sport-tag" style="color:#fca5a5;">🏈 UFL</span></td><td style="font-size:12px;">Columbus Aviators @ Dallas Renegades</td><td style="color:#3fb950;font-weight:700;">✓ HIT</td><td class="ev-pos">+0.320</td><td class="ev-pos">+2.991</td><td style="color:#3fb950;">76.5%</td></tr>
         </tbody>
       </table>
     </div>
@@ -2390,6 +2427,143 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
       </div>
     </div>
   </div>
+</div>
+
+<!-- ===== 予測精度 ===== -->
+<div class="tab-content" id="content-accuracy">
+
+  <!-- 2トラック比較 -->
+  <div class="section-title">予測精度トラッキング（2トラック）</div>
+  <div class="section pred-compare">
+    <div class="pred-panel bet-only">
+      <div class="pred-panel-title">🟢 ベット推奨のみ（GO / CAUTION）</div>
+      <div class="pred-main-stat"><span class="pred-pct" style="color:#3fb950;">76.5%</span><span class="pred-count">13 / 17 確定</span></div>
+      <div class="pred-rows">
+        <div class="pred-row"><span>ATP</span><span>7 / 10</span><span style="color:#3fb950;">70.0%</span></div>
+        <div class="pred-row"><span>WTA</span><span>1 / 1</span><span style="color:#3fb950;">100%</span></div>
+        <div class="pred-row"><span>NHL</span><span>2 / 2</span><span style="color:#3fb950;">100%</span></div>
+        <div class="pred-row"><span>UFL</span><span>1 / 1</span><span style="color:#3fb950;">100%</span></div>
+        <div class="pred-row"><span>NRL</span><span>0 / 1</span><span style="color:#f85149;">0%</span></div>
+        <div class="pred-row"><span>NBA</span><span>1 / 1</span><span style="color:#3fb950;">100%</span></div>
+        <div class="pred-row"><span>Super Rugby</span><span>1 / 1</span><span style="color:#3fb950;">100%</span></div>
+      </div>
+      <div style="font-size:11px;color:var(--text2);margin-top:10px;padding-top:8px;border-top:1px solid var(--border);">
+        ※ EV閾値を超えた推奨のみ。収益性を直接反映するトラック。
+      </div>
+    </div>
+    <div class="pred-panel all-games">
+      <div class="pred-panel-title">🔵 全試合予測（v3.0〜 2026-04-13〜）</div>
+      <div class="pred-main-stat"><span class="pred-pct" style="color:#58a6ff;">66.7%</span><span class="pred-count">4 / 6 確定（v3.0開始後）</span></div>
+      <div class="pred-rows">
+        <div class="pred-row"><span>NHL 4/13（L1通過）</span><span>2 / 4</span><span style="color:#f0a519;">50.0%</span></div>
+        <div class="pred-row"><span>NHL 4/13（L1非通過）</span><span>2 / 2</span><span style="color:#3fb950;">100%</span></div>
+        <div class="pred-row"><span style="color:var(--text2);">ATP/WTA/UFL/NRL</span><span style="color:var(--text2);">記録開始前</span><span style="color:var(--text2);">—</span></div>
+      </div>
+      <div style="font-size:11px;color:var(--text2);margin-top:10px;padding-top:8px;border-top:1px solid var(--border);">
+        ※ ベット有無問わず全試合の勝者予測精度。モデル品質を測定するトラック。<br>
+        ※ L1通過ゲームの精度向上が課題（現状50% → 目標65%以上）。
+      </div>
+    </div>
+  </div>
+
+  <!-- 学習ループ可視化 -->
+  <div class="section-title" style="margin-top:20px;">学習ループ</div>
+  <div class="section">
+    <div class="learn-loop">
+      <div class="ll-step">
+        <div class="ll-icon">🔍</div>
+        <div class="ll-label">スクリーニング</div>
+        <div class="ll-desc">L1〜L4フィルタ<br>EV計算</div>
+      </div>
+      <div class="ll-arrow">→</div>
+      <div class="ll-step">
+        <div class="ll-icon">🏆</div>
+        <div class="ll-label">試合結果</div>
+        <div class="ll-desc">HIT / MISS<br>スコア記録</div>
+      </div>
+      <div class="ll-arrow">→</div>
+      <div class="ll-step" style="border-color:#f85149;">
+        <div class="ll-icon">🔎</div>
+        <div class="ll-label">MISS分析</div>
+        <div class="ll-desc">L1/L2/L3/L4/<br>External分類</div>
+      </div>
+      <div class="ll-arrow">→</div>
+      <div class="ll-step" style="border-color:#f0a519;">
+        <div class="ll-icon">⚙️</div>
+        <div class="ll-label">ルール更新</div>
+        <div class="ll-desc">rules_*.json<br>閾値調整</div>
+      </div>
+      <div class="ll-arrow">→</div>
+      <div class="ll-step" style="border-color:#3fb950;">
+        <div class="ll-icon">📈</div>
+        <div class="ll-label">精度向上</div>
+        <div class="ll-desc">次回スクリーニング<br>に反映</div>
+      </div>
+    </div>
+    <div style="margin-top:12px;font-size:12px;color:var(--text2);line-height:1.7;padding:10px 14px;background:var(--surface2);border-radius:6px;">
+      <strong>MISS分類：</strong>
+      L1 = L1指標の誤判断（xGF%・cElo差の過剰評価）&nbsp;|&nbsp;
+      L2 = L2補正の失敗（ゴーリー・HtH・サーフ）&nbsp;|&nbsp;
+      L3 = EV計算の誤差&nbsp;|&nbsp;
+      L4 = 外部要因（モチベーション・疲労・天候）&nbsp;|&nbsp;
+      External = 不可抗力（負傷退場・判定等）
+    </div>
+  </div>
+
+  <!-- ルール変更影響テーブル -->
+  <div class="section-title" style="margin-top:20px;">ルール変更インパクト</div>
+  <div class="section">
+    <table class="rule-impact-table" style="width:100%;border-collapse:collapse;font-size:12px;">
+      <thead>
+        <tr style="border-bottom:2px solid var(--border);">
+          <th style="text-align:left;padding:8px 10px;color:var(--text2);">日付</th>
+          <th style="text-align:left;padding:8px 10px;color:var(--text2);">種目</th>
+          <th style="text-align:left;padding:8px 10px;color:var(--text2);">変更内容</th>
+          <th style="text-align:left;padding:8px 10px;color:var(--text2);">きっかけ（MISS）</th>
+          <th style="text-align:right;padding:8px 10px;color:var(--text2);">変更前</th>
+          <th style="text-align:right;padding:8px 10px;color:var(--text2);">変更後</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid var(--border);">
+          <td style="padding:8px 10px;color:var(--text2);">2026-04-12</td>
+          <td style="padding:8px 10px;">ATP</td>
+          <td style="padding:8px 10px;">Sinner SF結果修正（MISS→HIT記録誤り）</td>
+          <td style="padding:8px 10px;color:var(--text2);">旧セッション誤記録</td>
+          <td style="padding:8px 10px;text-align:right;color:#f85149;">6/10 60%</td>
+          <td style="padding:8px 10px;text-align:right;color:#3fb950;">7/10 70%</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--border);">
+          <td style="padding:8px 10px;color:var(--text2);">2026-04-14</td>
+          <td style="padding:8px 10px;">NHL</td>
+          <td style="padding:8px 10px;">v3.0導入：全試合predicted_winner記録開始</td>
+          <td style="padding:8px 10px;color:var(--text2);">モデル品質の定量化ニーズ</td>
+          <td style="padding:8px 10px;text-align:right;color:var(--text2);">bet推奨のみ</td>
+          <td style="padding:8px 10px;text-align:right;color:#58a6ff;">全試合記録</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--border);">
+          <td style="padding:8px 10px;color:var(--text2);">2026-04-14</td>
+          <td style="padding:8px 10px;">NHL</td>
+          <td style="padding:8px 10px;">L1通過ゲーム精度50%（2/4）→ 閾値再検討中</td>
+          <td style="padding:8px 10px;color:var(--text2);">PHI@CAR SO (L4)・STL@MIN upset (L4)</td>
+          <td style="padding:8px 10px;text-align:right;color:var(--text2);">xGF%≥5pt</td>
+          <td style="padding:8px 10px;text-align:right;color:#f0a519;">要データ蓄積</td>
+        </tr>
+        <tr>
+          <td style="padding:8px 10px;color:var(--text2);">2026-04-13</td>
+          <td style="padding:8px 10px;">WTA</td>
+          <td style="padding:8px 10px;">GAMBLE_BET枠（GB001）新設：高EV upset狙い</td>
+          <td style="padding:8px 10px;color:var(--text2);">Stuttgart indoor clay upset多発（5/12）</td>
+          <td style="padding:8px 10px;text-align:right;color:var(--text2);">通常枠のみ</td>
+          <td style="padding:8px 10px;text-align:right;color:#3fb950;">GB枠追加 HIT</td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="font-size:11px;color:var(--text2);margin-top:8px;">
+      ※ ルール変更の詳細は「ルール変更履歴」タブ参照。このテーブルは精度への影響にフォーカス。
+    </div>
+  </div>
+
 </div>
 
 <div class="footer">

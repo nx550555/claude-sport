@@ -159,9 +159,13 @@
       "date": "2026-04-13",
       "match": "Alcaraz C.(1) vs Sinner J.(2)",
       "tier": "skip", "rec": null, "rec_odds": null, "ev": null, "confidence": 50,
-      "result": null, "score": null, "hit": null, "actual_ev": null,
+      "predicted_winner": "Sinner J.",
+      "prediction_confidence": 50,
+      "prediction_basis": "cElo差~20ptでL1基準未達。推定互角（50%）。",
+      "prediction_hit": true,
+      "result": "Sinner J.", "score": "7-6(5) 6-3", "hit": null, "actual_ev": null,
       "rules_applied": ["R001"],
-      "note": "cElo差~20ptでL1基準未達（閾値100pt）。観戦のみ"
+      "note": "cElo差~20ptでL1基準未達（閾値100pt）。観戦のみ。【結果】Sinner 7-6(5) 6-3でAlcarazを下し世界1位奪還。"
     },
 
     {"_comment": "=== W16: Barcelona Open (ATP500) + BMW Open Munich (ATP500) ==="},

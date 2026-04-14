@@ -5,19 +5,23 @@
   "rule_version": "v1.0",
   "started": "2026-04-10",
   "summary": {
-    "total": 0,
-    "hit": 0,
-    "hit_rate": null,
-    "ev_total": 0
+    "total": 1,
+    "hit": 1,
+    "hit_rate": 1.0,
+    "ev_total": 0.32
   },
   "games": [
     {
-      "date": "2026-04-13",
+      "date": "2026-04-12",
       "match": "Columbus Aviators @ Dallas Renegades",
       "home": "Dallas Renegades",
       "away": "Columbus Aviators",
       "week": 3,
       "tier": "go",
+      "predicted_winner": "Dallas Renegades",
+      "prediction_confidence": 82,
+      "prediction_basis": "PD差30pt (DAL +17.5 vs COL -12.5)。Austin Reed 2-0・7TD/2G。COL 0-2・前週44-26大敗。",
+      "prediction_hit": true,
       "rec": "Dallas Renegades",
       "rec_odds": 1.32,
       "ev": 8.2,
@@ -43,12 +47,12 @@
       },
       "rules_applied": ["U001", "U002", "U004", "U008"],
       "checklist_done": true,
-      "result": null,
-      "score": null,
-      "hit": null,
-      "actual_ev": null,
+      "result": "Dallas Renegades",
+      "score": "28-23",
+      "hit": true,
+      "actual_ev": 0.32,
       "miss_layer": null,
-      "note": "Dallas 2-0リーグ最高得点力。Columbus 0-2で先週44-26大敗。Austin Reed QB確認済。Week3閾値80%を82%で通過。"
+      "note": "Dallas 28-23 Columbus。HIT (+0.32u)。PD差30ptの地力差が結果に直結。Austin Reed先発・アウェイのCOLに対してホーム優位も発揮。※date修正: 実際の試合日は4/12（当初4/13と記録）"
     }
   ],
   "screening_log": [

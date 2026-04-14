@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-13",
+  "updated": "2026-04-14",
   "tennis_atp": {
     "total_predictions": 13,
     "confirmed": 10,
@@ -50,13 +50,13 @@
   },
   "ufl": {
     "total_predictions": 1,
-    "confirmed": 0,
-    "hits": 0,
-    "hit_rate": null,
-    "ev_total": 0,
-    "pending": 1,
+    "confirmed": 1,
+    "hits": 1,
+    "hit_rate": 1.0,
+    "ev_total": 0.32,
+    "pending": 0,
     "status": "in_progress",
-    "note": "Week3 Dallas vs Columbus（4/13）PENDING。Dallas GO（1.32 EV+8.2% 信頼度82%）。"
+    "note": "Week3 Dallas 28-23 Columbus（4/12）HIT(+0.32u)。Dallas GO（1.32 EV+8.2% 信頼度82%）。PD差30ptの地力差通り。"
   },
   "nrl": {
     "total_predictions": 3,

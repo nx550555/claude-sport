@@ -21,7 +21,7 @@
 
 | ID | 種目 | 内容 | ステータス | 優先度 | 期日 |
 |---|---|---|---|---|---|
-| PA001 | UFL | Week3 Dallas vs Columbus 結果確認・記録（GO Dallas EV+8.2% 信頼度82%） | WAITING | 高 | 4/13 ET試合後 |
+| PA001 | UFL | Week3 Dallas vs Columbus 結果確認・記録（GO Dallas EV+8.2% 信頼度82%） | DONE | 高 | 完了 4/14 |
 | PA002 | ATP | W16 R2 スクリーニング（R1結果確認後・casino data起点） | PENDING | 高 | 4/14〜 |
 | PA003 | ATP | Barcelona/Munich GO3件の結果確認（Musetti@1.27/Cobolli@1.21/Kopriva@1.36 4/14開催） | WAITING | 高 | 4/14試合後 |
 | PA004 | WTA | Stuttgart R2 スクリーニング（R1結果確認後） | PENDING | 高 | 4/14〜 |
@@ -30,7 +30,7 @@
 | PA007 | NRL | R7 Broncos@Tigers オッズ確認（記録rec_odds 1.46 vs データ 2.50 の不一致を解消） | PENDING | 中 | 試合前 4/18まで |
 | PA008 | NRL | R7 GO2件（Warriors 4/18/Broncos 4/18）・CAUTION2件の結果確認 | WAITING | 中 | 4/18〜19試合後 |
 | PA009 | NBA | Play-in（4/15-16）・PO R1（4/19〜）全SKIP確認済み。結果モニタリングのみ | WAITING | 低 | 継続 |
-| PA010 | MC2026 | F Alcaraz vs Sinner 結果確認（SKIP・観戦のみ） | WAITING | 低 | 4/13試合後 |
+| PA010 | MC2026 | F Alcaraz vs Sinner 結果確認（SKIP・観戦のみ） | DONE | 低 | 完了 4/14 Sinner 7-6(5) 6-3 |
 
 ---
 
