@@ -22,13 +22,29 @@
 - [x] MC2026 F Alcaraz vs Sinner 結果確認（4/13試合後）← SKIP（ベットなし・観戦のみ）
 - [ ] ATP W16 R1 今夜の結果確認（Nava/Shelton 21:10・Blockx/Hanfmann 22:20・Norrie/Wawrinka 23:00・Borges/Mannarino 23:00 全SKIP）→ 明日R2スクリーニング（casino data起点）
 - [x] ATP Barcelona/Munich R1 全試合スクリーニング完了（casino data起点）← **GO3件: Musetti@1.27(EV+9.7%), Cobolli@1.21(EV+8.7%), Kopriva@1.36(EV+9.8%) ← 全4/14開催**
-- [x] WTA Stuttgart R1 全12試合完了（4/12〜4/13実施）← **GB001 Ostapenko HIT(+0.538u)。UPSET 5/12。**
+- [x] WTA Stuttgart R1 全12試合完了（4/12〜4/13実施）← **GB001 Ostapenko HIT(+0.538u)。UPSET 2/10。**
 - [x] WTA Rouen R1 全16試合スクリーニング完了（casino data起点）← 全SKIP。CAUTION: Timofeyeva/Boulter(cElo要確認)
 - [ ] WTA Stuttgart R2 スクリーニング（R1結果確認後・casino dataまたはOddsPortal起点）
 - [~] NHL RS最終盤 4/15 CAUTION2件 → N006（先発G）確認待ち（22〜24時JST）← CAR@NYI(CAR 1.90 EV+42.5%) / COL@CGY(COL 1.60 EV+24.8%)
 - [ ] NHL プレーオフ R1 スクリーニング（4/16〜17実施予定）← ※プレーインなし。RS終了4/16→ブラケット確定後にMoneyPuck xGF%確認起点でスクリーニング。暫定ブラケット取得済み。
 
 ---
+
+## 直近完了（4/14 スクリーニング最終セッション）
+
+- [x] 2026-04-14 JSON全試合スクリーニング完了（NHL/ATP/WTA/NRL/NBA）
+- [x] WTA Stuttgart Paolini vs Sonmez GO確定（@1.24 EV+5.4% cElo差300pt / 4/15 21:30開催）
+- [x] records/wta/2026.json 更新（Paoliniエントリー tier:skip->go, odds 1.23->1.24）
+- [x] NBA play-in 4/15 SKIP確認: Charlotte/Miami(NRtg差2.9pt) + Phoenix/Portland(差1.5pt) L1未達
+- [x] NRL R7 既分析済み確認: GO x2（Tigers/Broncos @1.47, Warriors/Titans @1.25）Warriors EV 10.7%->13.4%
+- [x] NHL COL@CGY: N016適用（Presidents' Trophy確定→主力rest要確認）→ CAUTION継続
+- [x] NHL CAR@NYI: goalie両チーム未確定 → CAUTION継続
+- [x] ダッシュボード反映完了（NRL 36-34 / Stuttgart 2/10試合完了 / GB001 HIT / R001実装済 / ルール履歴3件）
+- [ ] WTA Stuttgart Paolini vs Sonmez 結果確認・記録（4/15開催 GO @1.24）
+- [ ] WTA Stuttgart Zhang vs Noskova 結果確認（4/15開催 SKIP @1.14）
+- [ ] ATP Munich GO3件 結果確認（Musetti/Cobolli/Kopriva 4/14開催）
+- [ ] NHL CAR@NYI / COL@CGY: goalie確定後 GO/SKIP 最終判断（N016 COL rest risk）
+- [ ] NRL R7 全結果確認・記録（4/16-19: Tigers/Broncos GO・Warriors/Titans GO）
 
 ## 直近完了（4/14 遡り調査セッション）
 

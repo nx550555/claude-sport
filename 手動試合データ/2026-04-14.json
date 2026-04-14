@@ -1,0 +1,1266 @@
+{
+  "date": "2026-04-14",
+  "updated_at": "2026-04-14T10:56:43.005Z",
+  "tournaments": [
+    {
+      "tournament": "ナショナルホッケーリーグ",
+      "category": "ナショナルホッケーリーグ",
+      "sport": "ice_hockey",
+      "date": "2024-04-15",
+      "matches": {
+        "live": [],
+        "completed": [],
+        "upcoming": [
+          {
+            "date": "2024-04-15",
+            "start_time": "08:00",
+            "team1": "ボストン・ブルインズ",
+            "team2": "ニュージャージーデビルス",
+            "odds": {
+              "team1": 1.73,
+              "team2": 2
+            },
+            "markets": {
+              "winner_with_ot_penalties": {
+                "team1": 1.73,
+                "team2": 2
+              }
+            }
+          },
+          {
+            "date": "2024-04-15",
+            "start_time": "08:00",
+            "team1": "ニューヨークアイランダース",
+            "team2": "カリフォルニアハリケーンズ",
+            "odds": {
+              "team1": 1.77,
+              "team2": 1.94
+            },
+            "markets": {
+              "winner_with_ot_penalties": {
+                "team1": 1.77,
+                "team2": 1.94
+              }
+            }
+          },
+          {
+            "date": "2024-04-15",
+            "start_time": "08:00",
+            "team1": "フィラデルフィア・フライヤーズ",
+            "team2": "モントリオール・カナディアンズ",
+            "odds": {
+              "team1": 2.2,
+              "team2": 1.6
+            },
+            "markets": {
+              "winner_with_ot_penalties": {
+                "team1": 2.2,
+                "team2": 1.6
+              }
+            }
+          },
+          {
+            "date": "2024-04-15",
+            "start_time": "08:00",
+            "team1": "コロンブス・ブルージャケッツ",
+            "team2": "ワシントンキャピタルズ",
+            "odds": {
+              "team1": 1.81,
+              "team2": 1.9
+            },
+            "markets": {
+              "winner_with_ot_penalties": {
+                "team1": 1.81,
+                "team2": 1.9
+              }
+            }
+          },
+          {
+            "date": "2024-04-15",
+            "start_time": "09:00",
+            "team1": "ミネソタワイルド",
+            "team2": "アナハイム・ダックス",
+            "odds": {
+              "team1": 1.9,
+              "team2": 1.81
+            },
+            "markets": {
+              "winner_with_ot_penalties": {
+                "team1": 1.9,
+                "team2": 1.81
+              }
+            }
+          },
+          {
+            "date": "2024-04-15",
+            "start_time": "10:00",
+            "team1": "Utah Hockey Club",
+            "team2": "ウィニペグ・ジェッツ",
+            "odds": {
+              "team1": 1.56,
+              "team2": 2.28
+            },
+            "markets": {
+              "winner_with_ot_penalties": {
+                "team1": 1.56,
+                "team2": 2.28
+              }
+            }
+          },
+          {
+            "date": "2024-04-15",
+            "start_time": "10:00",
+            "team1": "カルガリー・フレームズ",
+            "team2": "コロラド・アバランチ",
+            "odds": {
+              "team1": 2.21,
+              "team2": 1.6
+            },
+            "markets": {
+              "winner_with_ot_penalties": {
+                "team1": 2.21,
+                "team2": 1.6
+              }
+            }
+          },
+          {
+            "date": "2024-04-15",
+            "start_time": "10:30",
+            "team1": "セントルイスブルース",
+            "team2": "ピッツバーグ・ペンギンズ",
+            "odds": {
+              "team1": 1.72,
+              "team2": 2
+            },
+            "markets": {
+              "winner_with_ot_penalties": {
+                "team1": 1.72,
+                "team2": 2
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tournament": "ATP バルセロナ",
+      "category": "スペイン男子シングルス",
+      "sport": "tennis",
+      "date": "2024-04-14",
+      "matches": {
+        "live": [
+          {
+            "player1": "ド・ミナー・アレックス",
+            "player2": "オフナー・セバスチャン",
+            "current_set": "第2セット",
+            "score": {
+              "sets": {
+                "player1": 1,
+                "player2": 0
+              },
+              "games": {
+                "player1": 5,
+                "player2": 4
+              },
+              "points": {
+                "player1": 15,
+                "player2": 30
+              }
+            },
+            "odds": {
+              "player1": 1.02,
+              "player2": 11.75
+            },
+            "markets": "+27"
+          },
+          {
+            "player1": "マルティネス・ペドロ",
+            "player2": "ソネゴ・ロレンツォ",
+            "current_set": "第3セット",
+            "score": {
+              "sets": {
+                "player1": 1,
+                "player2": 1
+              },
+              "games": {
+                "player1": 0,
+                "player2": 0
+              },
+              "points": {
+                "player1": 0,
+                "player2": 0
+              }
+            },
+            "odds": {
+              "player1": 1.45,
+              "player2": 2.65
+            },
+            "markets": "+21"
+          }
+        ],
+        "completed": [
+          {
+            "player1": "カラベッリ・ウーゴ / カミロ",
+            "player2": "ハチャノフ・カレン",
+            "winner": null,
+            "odds_at_start": {
+              "player1": 2.5,
+              "player2": 1.51
+            },
+            "minutes_ago": "7m",
+            "markets": "+18"
+          },
+          {
+            "player1": "ランダルセ・マルティン",
+            "player2": "ムセッティ・ロレンツォ",
+            "winner": null,
+            "odds_at_start": {
+              "player1": 4.1,
+              "player2": 1.22
+            },
+            "minutes_ago": "7m",
+            "markets": "+18"
+          }
+        ],
+        "upcoming": [
+          {
+            "date": "2024-04-14",
+            "start_time": "21:10",
+            "player1": "マハッチ・トマス",
+            "player2": "バエス・セバスチャン",
+            "odds": {
+              "player1": 1.68,
+              "player2": 2.15
+            },
+            "markets": "+18"
+          },
+          {
+            "date": "2024-04-14",
+            "start_time": "23:00",
+            "player1": "ナカシマ・ブランドン",
+            "player2": "セルンドロ・フアン・マヌエル",
+            "odds": {
+              "player1": 1.98,
+              "player2": 1.81
+            },
+            "markets": "+18"
+          },
+          {
+            "date": "2024-04-14",
+            "start_time": "23:00",
+            "player1": "アルカラス・カルロス",
+            "player2": "ヴィルタネン・オットー",
+            "odds": {
+              "player1": 1.02,
+              "player2": 13
+            },
+            "markets": "+18"
+          },
+          {
+            "date": "2024-04-15",
+            "start_time": "00:10",
+            "player1": "ナボーネ・マリアーノ",
+            "player2": "ルブレフ・アンドレイ",
+            "odds": {
+              "player1": 2.33,
+              "player2": 1.58
+            },
+            "markets": "+18"
+          },
+          {
+            "date": "2024-04-15",
+            "start_time": "00:10",
+            "player1": "フィル アートゥ",
+            "player2": "アトマン・テレンス",
+            "odds": {
+              "player1": 1.2,
+              "player2": 4.5
+            },
+            "markets": "+18"
+          },
+          {
+            "date": "2024-04-15",
+            "start_time": "18:00",
+            "player1": "ボルジェス・ヌーノ",
+            "player2": "エチェベリ・トマス・マルティン",
+            "odds": {
+              "player1": 2.75,
+              "player2": 1.44
+            },
+            "markets": "+18"
+          },
+          {
+            "date": "2024-04-15",
+            "start_time": "18:00",
+            "player1": "ノリー・キャメロン",
+            "player2": "クイン・イーサン",
+            "odds": {
+              "player1": 1.52,
+              "player2": 2.5
+            },
+            "markets": "+18"
+          }
+        ]
+      }
+    },
+    {
+      "tournament": "ATP ミュンヘン",
+      "category": "男子シングルス",
+      "sport": "tennis",
+      "date": "2026-04-14",
+      "matches": {
+        "live": [
+          {
+            "player1": "グリークスプール・タロン",
+            "player2": "シャポバロフ・デニス",
+            "current_set": 3,
+            "score": {
+              "sets": {
+                "player1": 1,
+                "player2": 1
+              },
+              "games": {
+                "player1": 1,
+                "player2": 3
+              },
+              "points": {
+                "player1": "0",
+                "player2": "0"
+              }
+            },
+            "odds": {
+              "player1": 4.25,
+              "player2": 1.2
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "player1": "ツァン・ツィツェン",
+            "player2": "ダルデリ・ルチアーノ",
+            "current_set": 3,
+            "score": {
+              "sets": {
+                "player1": 1,
+                "player2": 1
+              },
+              "games": {
+                "player1": 0,
+                "player2": 1
+              },
+              "points": {
+                "player1": "40",
+                "player2": "40"
+              }
+            },
+            "odds": {
+              "player1": 2.9,
+              "player2": 1.35
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "player1": "ツベレフ・アレクサンダー",
+            "player2": "ケッマノビッチ・ミオミル",
+            "current_set": null,
+            "score": {
+              "sets": null,
+              "games": null,
+              "points": null
+            },
+            "odds": {
+              "player1": 1.14,
+              "player2": 5.25
+            },
+            "markets": [
+              "勝者"
+            ]
+          }
+        ],
+        "completed": [
+          {
+            "player1": "コボッリ・フラビオ",
+            "player2": "デドゥラ-パルメロ ディエゴ",
+            "winner": null,
+            "odds_at_start": {
+              "player1": 1.22,
+              "player2": 4.1
+            },
+            "minutes_ago": 16,
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "player1": "エンゲル・ジャスティン",
+            "player2": "コプジバ・ヴィト",
+            "winner": null,
+            "odds_at_start": {
+              "player1": 3.05,
+              "player2": 1.37
+            },
+            "minutes_ago": 16,
+            "markets": [
+              "勝者"
+            ]
+          }
+        ],
+        "upcoming": [
+          {
+            "date": "2026-04-14",
+            "start_time": "21:00",
+            "player1": "モルチャン・アレックス",
+            "player2": "ブブリク・アレクサンドル",
+            "odds": {
+              "player1": 3.25,
+              "player2": 1.33
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2026-04-14",
+            "start_time": "21:20",
+            "player1": "チリッチ・マリン",
+            "player2": "アルトマイアー・ダニエル",
+            "odds": {
+              "player1": 1.63,
+              "player2": 2.24
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2026-04-14",
+            "start_time": "21:20",
+            "player1": "ベルグス・ジズー",
+            "player2": "トポ マルコ",
+            "odds": {
+              "player1": 1.23,
+              "player2": 4.1
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2026-04-14",
+            "start_time": "22:10",
+            "player1": "マロジャン・ファビアン",
+            "player2": "ツィツィパス・ステファノス",
+            "odds": {
+              "player1": 2.29,
+              "player2": 1.6
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2026-04-15",
+            "start_time": "18:00",
+            "player1": "ブロックス・アレクサンダー",
+            "player2": "シェルトン・ベン",
+            "odds": {
+              "player1": 2.7,
+              "player2": 1.45
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2026-04-15",
+            "start_time": "18:00",
+            "player1": "ファン・デ・ザンドシュルプ・ボティック",
+            "player2": "セルンドロ・フランシスコ",
+            "odds": {
+              "player1": 3.15,
+              "player2": 1.35
+            },
+            "markets": [
+              "勝者"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tournament": "WTA シュトゥットガルト",
+      "category": "女子シングルス",
+      "sport": "tennis",
+      "date": "2024-04-14",
+      "matches": {
+        "live": [
+          {
+            "player1": "ムホバ・カロリナ",
+            "player2": "サスノビッチ・アリアクサンドラ",
+            "current_set": "第１セット",
+            "score": {
+              "sets": {
+                "player1": 0,
+                "player2": 0
+              },
+              "games": {
+                "player1": 2,
+                "player2": 0
+              },
+              "points": {
+                "player1": "40",
+                "player2": "40"
+              }
+            },
+            "odds": {
+              "player1": 1.08,
+              "player2": 6.75
+            },
+            "markets": {
+              "勝者": "main"
+            }
+          }
+        ],
+        "completed": [
+          {
+            "player1": "メルテンス・エリーズ",
+            "player2": "ザイデル・エラ",
+            "winner": "メルテンス・エリーズ",
+            "odds_at_start": {
+              "player1": 1.14,
+              "player2": 5.2
+            },
+            "minutes_ago": 45,
+            "markets": {
+              "勝者": "main"
+            }
+          }
+        ],
+        "upcoming": [
+          {
+            "date": "2024-04-15",
+            "start_time": "00:00",
+            "player1": "アレクサンドロワ・エカテリーナ",
+            "player2": "ナットソン・ガブリエラ・アンドレア",
+            "odds": {
+              "player1": 1.11,
+              "player2": 6
+            },
+            "markets": {
+              "勝者": "main"
+            }
+          },
+          {
+            "date": "2024-04-15",
+            "start_time": "01:30",
+            "player1": "エアラ・アレクサンドラ",
+            "player2": "フェルナンデス・レイラ",
+            "odds": {
+              "player1": 2.39,
+              "player2": 1.54
+            },
+            "markets": {
+              "勝者": "main"
+            }
+          },
+          {
+            "date": "2024-04-15",
+            "start_time": "02:40",
+            "player1": "リス・エヴァ",
+            "player2": "バドサ・パウラ",
+            "odds": {
+              "player1": 3.2,
+              "player2": 1.32
+            },
+            "markets": {
+              "勝者": "main"
+            }
+          },
+          {
+            "date": "2024-04-15",
+            "start_time": "19:30",
+            "player1": "コルパッチ・タマラ",
+            "player2": "シュナイダー・ディアナ",
+            "odds": {
+              "player1": 4.3,
+              "player2": 1.19
+            },
+            "markets": {
+              "勝者": "main"
+            }
+          },
+          {
+            "date": "2024-04-15",
+            "start_time": "19:30",
+            "player1": "サムソノワ・リュドミラ",
+            "player2": "ゴーフ・ココ",
+            "odds": {
+              "player1": 5.4,
+              "player2": 1.13
+            },
+            "markets": {
+              "勝者": "main"
+            }
+          },
+          {
+            "date": "2024-04-15",
+            "start_time": "21:30",
+            "player1": "シフィアテク・イガ",
+            "player2": "ジーゲムント・ラウラ",
+            "odds": {
+              "player1": 1.03,
+              "player2": 10
+            },
+            "markets": {
+              "勝者": "main"
+            }
+          },
+          {
+            "date": "2024-04-15",
+            "start_time": "21:30",
+            "player1": "ザン・シュアイ",
+            "player2": "ノスコバ・リンダ",
+            "odds": {
+              "player1": 5.2,
+              "player2": 1.14
+            },
+            "markets": {
+              "勝者": "main"
+            }
+          },
+          {
+            "date": "2024-04-15",
+            "start_time": "21:30",
+            "player1": "パークス・アリシア",
+            "player2": "ノハ・アクゲ ノマ",
+            "odds": {
+              "player1": 1.49,
+              "player2": 2.5
+            },
+            "markets": {
+              "勝者": "main"
+            }
+          },
+          {
+            "date": "2024-04-15",
+            "start_time": "21:30",
+            "player1": "オスタペンコ・イェレーナ",
+            "player2": "アンドレーバ・ミッラ",
+            "odds": {
+              "player1": 3.05,
+              "player2": 1.35
+            },
+            "markets": {
+              "勝者": "main"
+            }
+          },
+          {
+            "date": "2024-04-15",
+            "start_time": "21:30",
+            "player1": "ソンメズ・ゼイネップ",
+            "player2": "パオリーニ・ジャスミン",
+            "odds": {
+              "player1": 3.8,
+              "player2": 1.24
+            },
+            "markets": {
+              "勝者": "main"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tournament": "WTA Rouen, France Women Singles",
+      "category": "WTA",
+      "sport": "tennis",
+      "date": "2026-04-14",
+      "matches": {
+        "live": [
+          {
+            "player1": "シマノビッチ・イリーナ",
+            "player2": "フルフヴィルトヴァ・リンダ",
+            "current_set": "第2セット",
+            "score": {
+              "sets": {
+                "player1": 1,
+                "player2": 0
+              },
+              "games": {
+                "player1": 5,
+                "player2": 3
+              },
+              "points": {
+                "player1": "15",
+                "player2": "0"
+              }
+            },
+            "odds": {
+              "player1": 1.01,
+              "player2": 11.75
+            },
+            "markets": [
+              {
+                "type": "勝者",
+                "odds": {
+                  "player1": 1.01,
+                  "player2": 11.75
+                }
+              }
+            ]
+          }
+        ],
+        "completed": [
+          {
+            "player1": "コスチューク・マルタ",
+            "player2": "パリー・ダイアン",
+            "winner": "コスチューク・マルタ",
+            "odds_at_start": {
+              "player1": 1.18,
+              "player2": 4.4
+            },
+            "minutes_ago": "15m",
+            "markets": [
+              {
+                "type": "勝者",
+                "odds": {
+                  "player1": 1.18,
+                  "player2": 4.4
+                }
+              }
+            ]
+          },
+          {
+            "player1": "マクナリー・ケイティ",
+            "player2": "ボリネッツ・ケイティ",
+            "winner": null,
+            "odds_at_start": {
+              "player1": 1.98,
+              "player2": 1.74
+            },
+            "markets": [
+              {
+                "type": "勝者",
+                "odds": {
+                  "player1": 1.98,
+                  "player2": 1.74
+                }
+              }
+            ]
+          }
+        ],
+        "upcoming": [
+          {
+            "date": "2026-04-14",
+            "start_time": "21:10",
+            "player1": "パケ・クロエ",
+            "player2": "ワン・シンユー",
+            "odds": {
+              "player1": 2.9,
+              "player2": 1.36
+            },
+            "markets": [
+              {
+                "type": "勝者",
+                "odds": {
+                  "player1": 2.9,
+                  "player2": 1.36
+                }
+              }
+            ]
+          },
+          {
+            "date": "2026-04-14",
+            "start_time": "22:00",
+            "player1": "コッチャレット・エリザベッタ",
+            "player2": "チャラエワ・アリーナ",
+            "odds": {
+              "player1": 1.23,
+              "player2": 3.8
+            },
+            "markets": [
+              {
+                "type": "勝者",
+                "odds": {
+                  "player1": 1.23,
+                  "player2": 3.8
+                }
+              }
+            ]
+          },
+          {
+            "date": "2026-04-15",
+            "start_time": "00:30",
+            "player1": "ラコトマンガ・ティアントソア・サラ",
+            "player2": "クリスティアン・ジャクリーン",
+            "odds": {
+              "player1": 4.8,
+              "player2": 1.15
+            },
+            "markets": [
+              {
+                "type": "勝者",
+                "odds": {
+                  "player1": 4.8,
+                  "player2": 1.15
+                }
+              }
+            ]
+          },
+          {
+            "date": "2026-04-15",
+            "start_time": "02:30",
+            "player1": "バプティスト・ヘイリー",
+            "player2": "ポンシェ・ジェシカ",
+            "odds": {
+              "player1": 1.14,
+              "player2": 4.9
+            },
+            "markets": [
+              {
+                "type": "勝者",
+                "odds": {
+                  "player1": 1.14,
+                  "player2": 4.9
+                }
+              }
+            ]
+          },
+          {
+            "date": "2026-04-15",
+            "start_time": "18:00",
+            "player1": "マリア・タチャナ",
+            "player2": "ジャックモ・エルサ",
+            "odds": {
+              "player1": 2.6,
+              "player2": 1.43
+            },
+            "markets": [
+              {
+                "type": "勝者",
+                "odds": {
+                  "player1": 2.6,
+                  "player2": 1.43
+                }
+              }
+            ]
+          },
+          {
+            "date": "2026-04-15",
+            "start_time": "18:00",
+            "player1": "フェロ・フィオナ",
+            "player2": "チルステア・ソラナ",
+            "odds": {
+              "player1": 5.4,
+              "player2": 1.12
+            },
+            "markets": [
+              {
+                "type": "勝者",
+                "odds": {
+                  "player1": 5.4,
+                  "player2": 1.12
+                }
+              }
+            ]
+          },
+          {
+            "date": "2026-04-15",
+            "start_time": "18:00",
+            "player1": "オリイニコワ・オレクサンドラ",
+            "player2": "タッガー・リリ",
+            "odds": {
+              "player1": 2.03,
+              "player2": 1.7
+            },
+            "markets": [
+              {
+                "type": "勝者",
+                "odds": {
+                  "player1": 2.03,
+                  "player2": 1.7
+                }
+              }
+            ]
+          },
+          {
+            "date": "2026-04-15",
+            "start_time": "18:00",
+            "player1": "テン・ジャニス",
+            "player2": "ボンダル・アンナ",
+            "odds": {
+              "player1": 2.8,
+              "player2": 1.39
+            },
+            "markets": [
+              {
+                "type": "勝者",
+                "odds": {
+                  "player1": 2.8,
+                  "player2": 1.39
+                }
+              }
+            ]
+          },
+          {
+            "date": "2026-04-15",
+            "start_time": "18:30",
+            "player1": "ラキモワ・カミラ",
+            "player2": "リー・アン",
+            "odds": {
+              "player1": 2.44,
+              "player2": 1.49
+            },
+            "markets": [
+              {
+                "type": "勝者",
+                "odds": {
+                  "player1": 2.44,
+                  "player2": 1.49
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tournament": "NBA",
+      "category": "NBA",
+      "sport": "basketball",
+      "date": "2024-04-15",
+      "matches": {
+        "live": [],
+        "completed": [],
+        "upcoming": [
+          {
+            "date": "2024-04-15",
+            "start_time": "08:30",
+            "team1": "シャーロット・ホーネッツ",
+            "team2": "マイアミ ヒート",
+            "odds": {
+              "team1": 1.44,
+              "team2": 2.75
+            },
+            "markets": [
+              "勝者（延長戦含む）"
+            ]
+          },
+          {
+            "date": "2024-04-15",
+            "start_time": "11:00",
+            "team1": "フェニックス サンズ",
+            "team2": "ポートランドトレイルブレーザーズ",
+            "odds": {
+              "team1": 1.63,
+              "team2": 2.25
+            },
+            "markets": [
+              "勝者（延長戦含む）"
+            ]
+          },
+          {
+            "date": "2024-04-16",
+            "start_time": "08:30",
+            "team1": "フィラデルフィア・セブンティーシクサーズ",
+            "team2": "オーランド マジック",
+            "odds": {
+              "team1": 1.77,
+              "team2": 2.02
+            },
+            "markets": [
+              "勝者（延長戦含む）"
+            ]
+          },
+          {
+            "date": "2024-04-16",
+            "start_time": "11:00",
+            "team1": "ロサンゼルス クリッパーズ",
+            "team2": "ゴールデン ステート ウォリアーズ",
+            "odds": {
+              "team1": 1.48,
+              "team2": 2.6
+            },
+            "markets": [
+              "勝者（延長戦含む）"
+            ]
+          },
+          {
+            "date": "2024-04-19",
+            "start_time": "02:00",
+            "team1": "クリーブランド・キャバリアーズ",
+            "team2": "トロント ラプターズ",
+            "odds": {
+              "team1": 1.33,
+              "team2": 3.25
+            },
+            "markets": [
+              "勝者（延長戦含む）"
+            ]
+          },
+          {
+            "date": "2024-04-19",
+            "start_time": "04:30",
+            "team1": "デンバー ナゲッツ",
+            "team2": "ミネソタ・ティンバーウルヴス",
+            "odds": {
+              "team1": 1.36,
+              "team2": 3.1
+            },
+            "markets": [
+              "勝者（延長戦含む）"
+            ]
+          },
+          {
+            "date": "2024-04-19",
+            "start_time": "07:00",
+            "team1": "ニューヨーク ニックス",
+            "team2": "アトランタ・ホークス",
+            "odds": {
+              "team1": 1.48,
+              "team2": 2.6
+            },
+            "markets": [
+              "勝者（延長戦含む）"
+            ]
+          },
+          {
+            "date": "2024-04-19",
+            "start_time": "09:30",
+            "team1": "ロサンゼルス レイカーズ",
+            "team2": "ヒューストン ロケッツ",
+            "odds": {
+              "team1": 2.65,
+              "team2": 1.47
+            },
+            "markets": [
+              "勝者（延長戦含む）"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tournament": "NRL",
+      "category": "NRL",
+      "sport": "rugby",
+      "date": "2025-04-16",
+      "matches": {
+        "live": [],
+        "completed": [],
+        "upcoming": [
+          {
+            "date": "2025-04-16",
+            "start_time": "18:50",
+            "team1": "ノースクイーンズランド・カウボーイズ",
+            "team2": "マンリー・シ―イーグルス",
+            "odds": {
+              "team1": 1.5,
+              "team2": 2.42
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2025-04-17",
+            "start_time": "17:00",
+            "team1": "キャンベラ・ライダース",
+            "team2": "メルボルン・ストーム",
+            "odds": {
+              "team1": 2.07,
+              "team2": 1.67
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2025-04-17",
+            "start_time": "19:00",
+            "team1": "Dolphins (Nrl)",
+            "team2": "ペンリス・パンサーズ",
+            "odds": {
+              "team1": 4.9,
+              "team2": 1.14
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2025-04-18",
+            "start_time": "14:00",
+            "team1": "ニュージランド・ウォリアーズ",
+            "team2": "ゴールドコースト・タイタンズ",
+            "odds": {
+              "team1": 1.25,
+              "team2": 3.55
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2025-04-18",
+            "start_time": "16:30",
+            "team1": "サウス・シドニー・ラビトス",
+            "team2": "セントジョージイラワラ",
+            "odds": {
+              "team1": 1.18,
+              "team2": 4.3
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2025-04-18",
+            "start_time": "18:35",
+            "team1": "ウェスト・タイガース",
+            "team2": "ブリスベン・ブロンコス",
+            "odds": {
+              "team1": 1.47,
+              "team2": 2.5
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2025-04-19",
+            "start_time": "13:00",
+            "team1": "シドニー・ルースターズ",
+            "team2": "ニューキャッスル・ナイツ",
+            "odds": {
+              "team1": 1.22,
+              "team2": 3.8
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2025-04-19",
+            "start_time": "15:05",
+            "team1": "パラマッタ・イールズ",
+            "team2": "カンタベリー・ブルドックス",
+            "odds": {
+              "team1": 3.65,
+              "team2": 1.24
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tournament": "スーパーリーグ",
+      "category": "rugby",
+      "sport": "rugby",
+      "date": "2026-04-17",
+      "matches": {
+        "live": [],
+        "completed": [],
+        "upcoming": [
+          {
+            "date": "2026-04-17",
+            "start_time": "04:00",
+            "team1": "ハルFC",
+            "team2": "セントへレンズ",
+            "odds": {
+              "team1": 3.05,
+              "team2": 1.33
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2026-04-18",
+            "start_time": "02:00",
+            "team1": "トゥールーズ・オリンピケ XIII",
+            "team2": "ハルKR",
+            "odds": {
+              "team1": 8,
+              "team2": 1.05
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2026-04-18",
+            "start_time": "04:00",
+            "team1": "ヨークシティナイツ",
+            "team2": "レイ・セントゥリオンズ",
+            "odds": {
+              "team1": 4.1,
+              "team2": 1.19
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2026-04-18",
+            "start_time": "04:00",
+            "team1": "ハダースフィールドジャイアンツ",
+            "team2": "リーズ・リノズ",
+            "odds": {
+              "team1": 3.1,
+              "team2": 1.32
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2026-04-18",
+            "start_time": "23:00",
+            "team1": "ワケフィエルド・トリニティ",
+            "team2": "ブラッドフォードブルズ",
+            "odds": {
+              "team1": 1.15,
+              "team2": 4.8
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2026-04-19",
+            "start_time": "02:00",
+            "team1": "バルサドラゴンズ",
+            "team2": "ウェリントンウルフス",
+            "odds": {
+              "team1": 2.11,
+              "team2": 1.65
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2026-04-19",
+            "start_time": "23:00",
+            "team1": "ウィガンウォリアーズ",
+            "team2": "キャッスルフォードタイガーズ",
+            "odds": {
+              "team1": 1.06,
+              "team2": 7.2
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
