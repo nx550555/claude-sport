@@ -1,4 +1,4 @@
-{
+﻿{
   "sport": "tennis",
   "tour": "ATP",
   "season": "2026",
@@ -23,7 +23,7 @@
       "date": "2026-04-05",
       "match": "Cerundolo F.(16) vs Machac T.",
       "tier": "go", "rec": "Cerundolo", "rec_odds": 1.53, "ev": 14.8, "confidence": 93,
-      "result": "Machac", "score": "7-6 6-2", "hit": false, "actual_ev": -1.0,
+      "result": "Machac", "score": "6-2 7-6(3)", "hit": false, "actual_ev": -1.0,
       "miss_layer": "L2", "rules_triggered": ["R011"]
     },
     {
@@ -56,7 +56,7 @@
       "date": "2026-04-05",
       "match": "Marozsan F. vs Hurkacz H.(PR)",
       "tier": "caution", "rec": "Marozsan", "rec_odds": 1.73, "ev": 2.1, "confidence": 90,
-      "result": "Hurkacz", "score": "未確認", "hit": false, "actual_ev": -1.0,
+      "result": "Hurkacz", "score": "6-2 6-3", "hit": false, "actual_ev": -1.0,
       "miss_layer": "L1", "rules_triggered": ["R013"]
     },
     {
@@ -803,3 +803,5 @@
     }
   ]
 }
+
+

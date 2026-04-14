@@ -1,4 +1,4 @@
-{
+﻿{
   "sport": "tennis_wta",
   "season": "2026",
   "bet_type": "Moneyline (ML)",
@@ -29,15 +29,12 @@
       "indoor_clay_note": "Stuttgartはindoor clay（屋内クレー）。屋外クレーより速い可能性あり。サーブ力のある選手を過小評価しないよう注意。W007の表面特化補正を緩めに適用",
       "r1_upset_analysis": {
         "total_r1_matches": 12,
-        "upsets_by_odds": 5,
+        "upsets_by_odds": 2,
         "upset_list": [
           "Korpatsch d. Shnaider (Korpatsch 4.70→勝利)",
-          "Zhang d. Noskova (Zhang 5.20→勝利)",
-          "Sönmez d. Paolini (Sönmez 3.85→勝利)",
-          "Ruzic d. Samsonova (Ruzic 2.95→勝利)",
           "Eala d. Fernandez (Eala 2.39→勝利)"
         ],
-        "key_insight": "R1で5/12がアップセット。indoor clay（低バウンド）で攻撃型・フラット系が軒並み優位に立った。UF01の影響が予想以上に強い。GB001のOstapenko予測はUF01+UFT01で的中。",
+        "key_insight": "R1で4/12がアップセット。indoor clay（低バウンド）で攻撃型・フラット系が軒並み優位に立った。UF01の影響が予想以上に強い。GB001のOstapenko予測はUF01+UFT01で的中。",
         "rule_candidate": "Stuttgart indoor clayではW007補正を強化検討。cElo差200pt以上でもフラット攻撃型アンダードッグは過小評価しない。"
       },
       "predictions": [
@@ -138,12 +135,12 @@
           "est_win_pct": 74.1,
           "skip_reason": "信頼度74.1% < 75%閾値（W006）。L4補正後も閾値未達。",
           "adjustments": { "zhang_age36_form": "+2%（36歳・直近フォーム低下）" },
-          "result": "Zhang d. Noskova",
+          "result": null,
           "score": null,
           "hit": null,
           "actual_ev": null,
           "actual_odds_at_start": { "zhang": 5.20, "noskova": 1.14 },
-          "outcome_note": "MAJOR UPSET。Zhang 5.20→勝利。indoor clay UF01効果か。市場implied 14.8%→的中。",
+          "outcome_note": "4/15開催予定（未試合）。WebSearch確認: April 15 12:30 UTC予定。",
           "rules_applied": ["W001", "W006"],
           "note": "Noskova cElo1753 vs Zhang cElo1588。差165でL1通過。Zhang 36歳補正後74.1%もW006閾値75%に届かず。4/14開催。"
         },
@@ -157,12 +154,12 @@
           "est_win_pct": 67.5,
           "skip_reason": "信頼度67.5% < 75%閾値（W006）。室内クレー補正後も閾値未達。",
           "adjustments": {},
-          "result": "Ruzic d. Samsonova",
-          "score": null,
+          "result": "Samsonova d. Ruzic",
+          "score": "6-0 6-4",
           "hit": null,
           "actual_ev": null,
           "actual_odds_at_start": { "ruzic": 2.95, "samsonova": 1.37 },
-          "outcome_note": "UPSET。Ruzic 2.95（クロアチア・クレー専門）→勝利。UF01+UF05（クレー適性）。",
+          "outcome_note": "予測通り（Samsonova勝利）。Samsonova 6-0 6-4で圧勝。6連敗後の復活勝利。SKIP正解（EV閾値未達）。",
           "rules_applied": ["W001", "W006"],
           "note": "Samsonova cElo1760 vs Ruzic cElo1633。差127でL1通過。Ruzicはクロアチア（クレー国）。67.5%でW006除外。4/14開催。"
         },
@@ -275,12 +272,12 @@
           "ev_est_paolini": 4.4,
           "skip_reason": "EV +4.4% < 5%閾値（W005）。信頼度84.9%はW006通過もEV未達。",
           "note": "cElo差300pt → Paolini圧倒的有利も market implied 81.3%でEV+4.4%止まり。SKIP正解。",
-          "result": "Sonmez d. Paolini",
+          "result": null,
           "score": null,
           "hit": null,
           "actual_ev": null,
           "actual_odds_at_start": { "sonmez": 3.85, "paolini": 1.23 },
-          "outcome_note": "MAJOR UPSET。Sönmez 3.85→勝利（第4シードPaolini撃破）。indoor clay UF01 + Sönmezのフラットサーブ効果。upset_patterns U006として記録。",
+          "outcome_note": "4/15開催予定（未試合）。WebSearch確認: April 15 12:30 UTC予定。",
           "rules_applied": ["W001", "W005"]
         }
       ]
@@ -577,7 +574,7 @@
     {
       "date": "2026-04-13",
       "tournament": "Stuttgart R1 結果記録 + 追加4試合（casino data確認）",
-      "note": "手動試合データから全12試合判明。R1全試合完了確認。UPSET多発（5/12）。GB001 Ostapenko HIT(+0.5375u)確認。4試合が未スクリーニングだったため後追いスクリーニング実施。",
+      "note": "手動試合データから全12試合判明。R1全試合完了確認。UPSET多発（4/12）。GB001 Ostapenko HIT(+0.5375u)確認。4試合が未スクリーニングだったため後追いスクリーニング実施。",
       "total_games": 12,
       "go_recommendations": 0,
       "gamble_bet": 1,
@@ -698,3 +695,16 @@
     }
   ]
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

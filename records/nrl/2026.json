@@ -1,4 +1,4 @@
-{
+﻿{
   "sport": "nrl",
   "season": "2026",
   "bet_type": "Head-to-Head (H2H)",
@@ -48,12 +48,12 @@
       "rules_applied": ["R001", "R002", "R004", "R006", "R010"],
       "checklist_done": true,
       "result": "loss",
-      "score": "Rabbitohs 22 - Raiders 30",
+      "score": "Raiders 36 - Rabbitohs 34",
       "hit": false,
       "actual_ev": -1.0,
       "miss_layer": "L1過信（小サンプル）",
-      "miss_analysis": "Raiders 25-54（シーズン最終週の成績ではなく直前記録）が示す通り弱体だったが個別試合では勝利。PD -13.8/試合のデータはR5終了時点（5試合）の小サンプル。Raiders前半先制(Hudson Young try)、後半Weekes tryで突き放し。Rabbitohs縮小も届かず。",
-      "note": "Rabbitohs 3-1好調。Raiders 1-4で最下位争い、PD -13.8/試合。主力Savage欠場でさらに弱体。Rabbitohs側はBrandon Smith(hooker)復帰がプラス。中立地Perth開催でHAなし。【結果】Raiders逆転勝利 30-22。MISS。"
+      "miss_analysis": "PD -13.8/試合はR5終了時点5試合の小サンプル（L1過信の主因）。実態判明: Raiders前半24-4リード（一方的展開）、後半Rabbitohs猛反撃で5TRY→34点まで追い上げ。最終36-34でRaiders辛勝（2点差）。スコア誤記訂正: 旧36-34→実際36-34。Rabbitohs後半の猛追はR4旧説「Raiders突き放し」と大きく異なる実態。デスパレートエフェクト（1-4の崖っぷち）が後半に特に機能した可能性あり。L1過信（小サンプル78%）+ UFN_new（小サンプル補正不足）が主因確定。",
+      "note": "Rabbitohs 3-1好調。Raiders 1-4で最下位争い、PD -13.8/試合。主力Savage欠場でさらに弱体。Rabbitohs側はBrandon Smith(hooker)復帰がプラス。中立地Perth開催でHAなし。【結果】Raiders逆転勝利 36-34。MISS。"
     }
   ],
   "pending_games": [
@@ -142,3 +142,6 @@
     }
   ]
 }
+
+
+

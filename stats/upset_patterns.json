@@ -1,4 +1,4 @@
-{
+﻿{
   "description": "全8種目のアンダードッグ勝利・予測外れの要因分析。第一段階の精度向上と第二段階（逆転予測）への橋渡しデータ。",
   "phase": 1,
   "updated": "2026-04-11",
@@ -89,7 +89,7 @@
       "underdog": "Machac T.",
       "strength_diff_metric": "cElo差130pt",
       "market_odds_underdog": 2.60,
-      "result_score": "7-6 6-2",
+      "result_score": "6-2 7-6(3)",
       "upset_factors": ["UF03", "UF05"],
       "factor_notes": {
         "UF03": "cElo差130ptはボーダーライン。実力差が小さかった",
@@ -132,7 +132,7 @@
       "underdog": "Canberra Raiders",
       "strength_diff_metric": "PD差 17.3pt/試合（Rabbitohs +3.5 / Raiders -13.8）",
       "market_odds_underdog": 2.50,
-      "result_score": "Rabbitohs 22 - Raiders 30（Raiders 8点差勝利）",
+      "result_score": "Raiders 36 - Rabbitohs 34（Raiders 8点差勝利）",
       "upset_factors": ["UF03_variant", "UF06_variant", "UFN_new"],
       "factor_notes": {
         "UF03_variant": "L1差17.3ptは大きく見えるが、サンプル5試合のPDは脆弱。Raiders総失点-69点のうち、単一試合での大量失点（アウトライヤー）が平均を-13.8まで引き下げた可能性が高い。真の実力差は5〜10pt程度かもしれない",
@@ -232,18 +232,17 @@
       "UF06_variant(desperate team)": 1
     },
     "most_common_factor": "UF01（コート表面適性）とUF03（実力差ボーダーライン）が各2件でタイ",
-    "key_insight_current": "Stuttgart indoor clay R1（4/13-14）で5/12がアップセット。UF01（表面適性逆転）の影響が想定以上に強い。Ostapenko GB001はこのパターンで的中。W007補正を強化検討中。",
+    "key_insight_current": "Stuttgart indoor clay R1（4/13-14）で4/12がアップセット。UF01（表面適性逆転）の影響が想定以上に強い。Ostapenko GB001はこのパターンで的中。W007補正を強化検討中。",
     "stuttgart_r1_pattern_note": {
       "date": "2026-04-14",
       "surface": "Indoor Clay（Stuttgart）",
-      "upsets_observed": 5,
+      "upsets_observed": 2,
       "total_matches": 12,
-      "upset_rate": "41.7%",
+      "upset_rate": "2/12 confirmed (2 pending Apr-15)",
       "notable_upsets": [
         "Korpatsch(4.70) d. Shnaider(1.16): UF01+UFT03",
         "Zhang(5.20) d. Noskova(1.14): UF01（フラット系有利）",
         "Sönmez(3.85) d. Paolini(4)(1.23): UF01（cElo差300ptも逆転）",
-        "Ruzic(2.95) d. Samsonova(1.37): UF01+UF05（クレー専門国）",
         "Eala(2.39) d. Fernandez Q(1.54): UF01+UF04（Fernandez疲弊）"
       ],
       "learning": "indoor clay（Stuttgart）はcElo予測を最大300pt差でも覆す。攻撃型・フラット系が表面補正を大きく受ける。W007を強化検討。"
@@ -282,3 +281,10 @@
     }
   ]
 }
+
+
+
+
+
+
+

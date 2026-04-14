@@ -128,7 +128,7 @@
       "hit": null,
       "actual_ev": null,
       "miss_layer": "L4",
-      "miss_analysis": "PHI 3-2 SO（CAR予測外れ）。SOは基本的に50/50コインフリップ。規定時間内は同点。L1差5ptの小差でSO決着はL4要因（PHI PO確定・モチベ）が影響した可能性。",
+      "miss_analysis": "PHI 3-2 SO（CAR予測外れ）。重要判明事実: CARはAho/Svechnikov/Jarvis/Staal/Slavin/Gostisbehere計6名の主力を意図的欠場（東地区1位確定・PO前休養）。実質2軍で出場。L4 External（ラインナップrest）が主因。SOコインフリップではなく戦力の意図的削減が本質。ルール候補: シーディング確定チームの終盤戦はラインナップ確認必須（N_NEW: lineup_rest_check）。miss_layer修正: L4→L4_External。",
       "note": "retroactive prediction。ベット推奨なし。SO負けは統計的に学習価値小だが記録。"
     },
     {
@@ -209,11 +209,11 @@
       "l1_metric": "xGF% (MoneyPuck 2026-04-14)",
       "l1_data": { "MIN_xGF": 53.0, "STL_xGF": 47.0, "diff": 6.0 },
       "result": "St. Louis Blues",
-      "score": "4-3",
+      "score": "6-3",
       "hit": null,
       "actual_ev": null,
       "miss_layer": "L4",
-      "miss_analysis": "STL 4-3 MIN（MIN予測外れ）。STLホームゲーム・シーズン終盤のモチベ差がL4要因か。xGF%差6ptで予測したが逆転。L4補正（ホームの奮起・RS終盤心理）をより重視すべきケース。",
+      "miss_analysis": "STL 6-3 MIN（MIN予測外れ・スコア訂正: 旧4-3→実際6-3）。実態: MINが2-0リードから5連続失点（Stenberg/Buchnevich/Lindstein/Neighbours/Snuggerud）で逆転。STLはPO圏外・消化試合だが最終ホームゲームのプライドが機能。MINはリード後にロードチーム特有のリラックスで崩壊。L4要因: ホーム最終戦モチベ + road team early relaxation effect。ルール候補: PO確定ロードチームの消化試合敵地はxGF%差6ptでもCAUTION格下げ（UFH04変種）。",
       "note": "retroactive prediction。MISS。upset_patternsに追加検討: RS終盤ロードチーム（PO圏内）vs ホーム（消化試合）でxGF%差6ptが逆転。"
     },
     {
@@ -452,4 +452,7 @@
     }
   ]
 }
+
+
+
 
