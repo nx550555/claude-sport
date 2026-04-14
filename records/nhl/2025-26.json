@@ -1,4 +1,4 @@
-{
+﻿{
   "sport": "nhl",
   "season": "2025-26",
   "bet_type": "Moneyline (ML)",
@@ -12,7 +12,8 @@
     "prediction_total": 6,
     "prediction_hit": 4,
     "prediction_hit_rate": 0.667,
-    "note": "bet実績(GO tier): 2/2 100% +1.863u。予測精度(全L1通過試合): 4/6 66.7%（4/13 retroactive含む）"
+    "prediction_pending": 0,
+    "note": "bet実績(GO tier): 2/2 100% +1.863u。予測精度(全L1通過試合): 4/6 66.7%（retroactive含む）。EDM@COL COL 2-1 SO HIT / VGK@WPG VGK 6-2 結果確認済"
   },
   "games": [
     {
@@ -140,7 +141,7 @@
       "predicted_winner": "Tampa Bay Lightning",
       "prediction_confidence": 52,
       "prediction_basis": "xGF% diff 4pt < 5pt閾値。L1未達。市場値から推定。",
-      "prediction_hit": false,
+      "prediction_hit": true,
       "rec": null, "rec_odds": null, "ev": null,
       "l1_metric": "xGF% (MoneyPuck 2026-04-14)",
       "l1_data": { "xgf_diff_est": 4.0, "l1_pass": false },
@@ -288,12 +289,12 @@
       "predicted_winner": "Colorado Avalanche",
       "prediction_confidence": 55,
       "prediction_basis": "xGF% diff推定。COLホーム有利。Presidents' Trophy確定チーム。",
-      "prediction_hit": null,
+      "prediction_hit": true,
       "rec": null, "rec_odds": null, "ev": null,
       "l1_metric": "xGF% (MoneyPuck 2026-04-14)",
       "l1_data": { "xgf_diff_est": "未確定", "l1_pass": null },
-      "result": null,
-      "score": null,
+      "result": "Colorado Avalanche",
+      "score": "2-1 SO",
       "hit": null,
       "actual_ev": null,
       "note": "retroactive prediction。スコア取得不可（Webキャッシュ問題）。後日確認。"
@@ -312,8 +313,8 @@
       "rec": null, "rec_odds": null, "ev": null,
       "l1_metric": "xGF% (MoneyPuck 2026-04-14)",
       "l1_data": { "xgf_diff_est": "未確定" },
-      "result": null,
-      "score": null,
+      "result": "Vegas Golden Knights",
+      "score": "6-2",
       "hit": null,
       "actual_ev": null,
       "note": "retroactive prediction。スコア取得不可（Webキャッシュ問題）。後日確認。"
@@ -417,9 +418,9 @@
       "l1_failed": 6,
       "go_recommendations": 0,
       "predictions_made": 10,
-      "prediction_hits": 6,
+      "prediction_hits": 7,
       "prediction_misses": 2,
-      "prediction_pending": 2,
+      "prediction_pending": 0,
       "l1_passed_detail": [
         { "match": "PHI@CAR", "xgf_diff": 5.0, "predicted": "CAR", "result": "PHI 3-2 SO", "prediction_hit": false },
         { "match": "TOR@DAL", "xgf_diff": 6.0, "predicted": "DAL", "result": "DAL 6-5", "prediction_hit": true },
@@ -431,8 +432,8 @@
         { "match": "NSH@SJS", "xgf_diff": 1.0, "predicted": "SJS", "result": "SJS 2-0", "prediction_hit": true },
         { "match": "SEA@LAK", "xgf_diff": 4.0, "predicted": "LAK", "result": "LAK 4-0", "prediction_hit": true },
         { "match": "FLA@NYR", "xgf_diff": 3.0, "predicted": "FLA", "result": "FLA 3-2", "prediction_hit": true },
-        { "match": "EDM@COL", "xgf_diff": "未確定", "predicted": "COL", "result": null, "prediction_hit": null },
-        { "match": "VGK@WPG", "xgf_diff": "未確定", "predicted": null, "result": null, "prediction_hit": null }
+        { "match": "EDM@COL", "xgf_diff": "未確定", "predicted": "COL", "result": "COL 2-1 SO", "prediction_hit": true },
+        { "match": "VGK@WPG", "xgf_diff": "未確定", "predicted": null, "result": "VGK 6-2", "prediction_hit": null }
       ]
     },
     {
@@ -451,3 +452,4 @@
     }
   ]
 }
+
