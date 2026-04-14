@@ -1,7 +1,7 @@
 {
   "sport": "tennis",
-  "version": "2.0",
-  "updated": "2026-04-09",
+  "version": "2.1",
+  "updated": "2026-04-14",
   "surface_note": "現在はクレーシーズン。サーフェス変更時はcEloソースを切り替える",
   "screening": {
     "L1_source": "Tennis Abstract cElo (tennisabstract.com)",
@@ -20,8 +20,11 @@
     "L4": "怪我・体調・H2H・モチベーション・ホームコート（±10%）"
   },
   "rules": [
-    { "id": "R001", "type": "initial", "title": "cEloスクリーニング",
-      "body": "Tennis AbstractのcElo（クレー専用）を一次指標。差100以上の試合のみ候補として深掘りする。" },
+    { "id": "R001", "type": "modified", "title": "cEloスクリーニング（改訂: 130pt CAUTION閾値追加）",
+      "body": "Tennis AbstractのcElo（クレー専用）を一次指標。【差130以上】GOスクリーニング候補として深掘りする。【差100〜129pt】CAUTIONゾーン: GO判断ではなくCAUTION記録のみ（ベット推奨しない）。このレンジはU002(Machac)・U003(Nagal vs Nishikori)の2件のアップセット根拠があり、GOとして推奨するには不十分。【差100未満】SKIP（コインフリップ相当）。",
+      "evidence": "U002: Machac(差153不利) vs Cerundolo → Machac勝利（R011新設根拠）。U003: Nagal(差99不利) vs Nishikori → Nagal勝利。130pt未満GOは2件で両方MISS扱いリスクが高いため閾値引き上げ。",
+      "modified": "2026-04-14",
+      "previous_threshold": 100 },
     { "id": "R002", "type": "initial", "title": "L2品質スコア",
       "body": "勝利した対戦相手の当時のcEloを実測確認してL2スコアを計算。強い相手への勝利を高評価。" },
     { "id": "R003", "type": "initial", "title": "L3スタッツ補正",

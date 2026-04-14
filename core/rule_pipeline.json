@@ -1,0 +1,120 @@
+{
+  "description": "ルール追加トリガー管理ファイル。証拠が十分に積まれた候補ルールを自動的にルールファイルへ昇格させる仕組み。",
+  "version": "1.0",
+  "created": "2026-04-14",
+  "instructions_for_claude": [
+    "セッション開始時にこのファイルを読み、current_count >= trigger_threshold を満たした候補がないか確認する",
+    "閾値に達した候補は即時ルールファイルへ追加し、このファイルのstatusをimplementedに更新する",
+    "新しいアップセット・MISS事例が追加されたら、該当する候補のevidenceとcurrent_countを更新する",
+    "実装済みルールはimplemented_rulesセクションへ移動し、candidatesからは削除しない（履歴として残す）"
+  ],
+  "trigger_check_protocol": {
+    "when": "upset_patterns.jsonにU00x IDで新規エントリ追加時 / BACKLOG.md更新時",
+    "action": "下記candidatesのtag_matchesリストと照合し、一致する候補のcurrent_countを+1する",
+    "auto_implement": "current_count >= trigger_threshold の場合、次のセッション開始時に自動実装する"
+  },
+  "candidates": [
+    {
+      "candidate_id": "P001",
+      "status": "watching",
+      "target_rule_file": "core/rules_tennis.json",
+      "proposed_rule_id": "R001_sub",
+      "title": "ATP cElo 100〜129ptゾーンの詳細分類（CAUTION細分化）",
+      "description": "R001のCAUTIONゾーン（100〜129pt）内で、特定のUF因子が重なる場合のみGO許可するサブルール化。現状は全部CAUTIONだが、条件絞り込みで精度向上の可能性あり。",
+      "trigger_threshold": 4,
+      "current_count": 2,
+      "evidence": [
+        { "id": "U002", "match": "Machac vs Cerundolo (MC2026-R32)", "diff": 153, "result": "MISS", "tag": "atp_celo_130_below" },
+        { "id": "U003", "match": "Nagal vs Nishikori (Barcelona 2026)", "diff": 99, "result": "MISS", "tag": "atp_celo_130_below" }
+      ],
+      "tag_matches": ["atp_celo_130_below"],
+      "note": "4件揃ったら 100〜129ptの具体的なサブ条件（UF重複数、オッズ等）を統計化してR001に追記する"
+    },
+    {
+      "candidate_id": "P002",
+      "status": "watching",
+      "target_rule_file": "core/rules_nhl.json",
+      "proposed_rule_id": "N017",
+      "title": "NHL リビルドチームvs消化試合チームのモチベ差詳細（UFH04拡張）",
+      "description": "現在UFH04（強豪チームの消化試合モチベ低下）は定性的記述のみ。MIN@STL（Blues 2点差ビハインドから5連続失点）のような逆転パターンの数値補正ルール化。",
+      "trigger_threshold": 3,
+      "current_count": 1,
+      "evidence": [
+        { "id": "U005_analysis", "match": "MIN@STL 2026-04-13", "pattern": "本命消化試合 + 格下リビルドチーム奮起", "score_reversed": "0-2 -> 6-3", "tag": "nhl_motivated_underdog" }
+      ],
+      "tag_matches": ["nhl_motivated_underdog", "nhl_blowup_reversal"],
+      "note": "3件揃ったら補正値（現行N008 -5%を強化するか、別ルールとして追加するか）を決定する"
+    },
+    {
+      "candidate_id": "P003",
+      "status": "watching",
+      "target_rule_file": "core/rules_wta.json",
+      "proposed_rule_id": "W007_indoor_clay_threshold",
+      "title": "WTA Indoor Clayアップセット率の数値閾値確定",
+      "description": "W007にindoor_clay_noteを追記済みだが、Stuttgart 2026の結果が全部揃ったらupset率と閾値（cElo差・オッズ）を数値化する。",
+      "trigger_threshold": 1,
+      "current_count": 0,
+      "evidence": [],
+      "tag_matches": ["wta_stuttgart_r1_complete"],
+      "note": "Stuttgart R1全試合完了後（4/15以降）にupset_rate・avg_upset_elo_diff・min_upset_oddsを集計し、W007本文の具体数値として追記する。1件（結果確定）で即実装可。"
+    },
+    {
+      "candidate_id": "P004",
+      "status": "watching",
+      "target_rule_file": "core/rules_nhl.json",
+      "proposed_rule_id": "N018",
+      "title": "NHL プレーオフ R1 ホームアイス補正の実績ベース検証",
+      "description": "N004でPOホームシードに+7%を付けているが、実際のPO R1での勝率データで検証・修正する。",
+      "trigger_threshold": 8,
+      "current_count": 0,
+      "evidence": [],
+      "tag_matches": ["nhl_po_r1_result"],
+      "note": "PO R1 8件（2シリーズ以上）揃ったら+7%の妥当性を検証する"
+    },
+    {
+      "candidate_id": "P005",
+      "status": "watching",
+      "target_rule_file": "core/rules_wta.json",
+      "proposed_rule_id": "W010",
+      "title": "WTA B2B（連続試合）補正強化",
+      "description": "NHLのN005と同様にWTAの連日試合における疲労補正を定量化する。現在W004に『3日連続-4%』があるが2日連続は未定義。",
+      "trigger_threshold": 3,
+      "current_count": 0,
+      "evidence": [],
+      "tag_matches": ["wta_b2b_fatigue"],
+      "note": "3件揃ったら2日連続試合の補正値（-2%〜-4%）を確定してW010として追加する"
+    }
+  ],
+  "implemented_rules": [
+    {
+      "candidate_id": "IMPL001",
+      "implemented_date": "2026-04-14",
+      "target_rule_file": "core/rules_nhl.json",
+      "rule_id": "N016",
+      "title": "シーディング確定チーム終盤ラインナップrest確認",
+      "trigger_event": "PHI@CAR 2026-04-13: CAR 6名意図的restで MISS（L4_External）",
+      "evidence_count": 1,
+      "note": "1件でも影響度が大きく（-8〜SKIP相当）即実装を判断"
+    },
+    {
+      "candidate_id": "IMPL002",
+      "implemented_date": "2026-04-14",
+      "target_rule_file": "core/rules_wta.json",
+      "rule_id": "W007",
+      "title": "Indoor Clay補足note追加",
+      "trigger_event": "Stuttgart 2026 R1: Korpatsch + Eala upset（2/12=16.7%、indoor clay速いサーフェス）",
+      "evidence_count": 2,
+      "note": "数値閾値はP003で継続追跡。今回は定性的補足のみ追記"
+    },
+    {
+      "candidate_id": "IMPL003",
+      "implemented_date": "2026-04-14",
+      "target_rule_file": "core/rules_tennis.json",
+      "rule_id": "R001",
+      "title": "cEloスクリーニング 130pt CAUTION閾値導入",
+      "trigger_event": "U002(Machac差153MISS) + U003(Nagal差99MISS) 2件でGO閾値100ptが過小と判定",
+      "evidence_count": 2,
+      "note": "CAUTIONゾーン詳細化はP001で継続追跡（4件で再判断）"
+    }
+  ]
+}

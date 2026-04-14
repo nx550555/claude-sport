@@ -1,7 +1,7 @@
 {
   "sport": "tennis_wta",
-  "version": "1.0",
-  "updated": "2026-04-10",
+  "version": "1.1",
+  "updated": "2026-04-14",
   "surface_note": "現在はクレーシーズン。WTAはATPより表面特化が顕著なためサーフェス別cEloを必ず使用",
   "screening": {
     "L1_source": "Tennis Abstract WTA cElo (tennisabstract.com → Women's tab)",
@@ -63,7 +63,8 @@
     },
     {
       "id": "W007", "type": "initial", "title": "表面特化補正（WTA専用）",
-      "body": "WTAはATPより表面特化が顕著。クレー専門家（WTA Top30のクレーcEloがハードより150以上高い選手）が初ハードに出る場合は-8%。逆にハード専門家の初クレーは-8%。ATPのR008より強めの補正。"
+      "body": "WTAはATPより表面特化が顕著。クレー専門家（WTA Top30のクレーcEloがハードより150以上高い選手）が初ハードに出る場合は-8%。逆にハード専門家の初クレーは-8%。ATPのR008より強めの補正。",
+      "indoor_clay_note": "【Indoor Clay追記 2026-04-14】Stuttgart等の屋内クレーコートはアウトドアクレーより球足が速く低バウンド。フラット攻撃型・サービス+1速攻型選手（Ostapenko/Korpatsch スタイル）はアウトドアクレーより有利に働く。cElo差が215pt以上の格下（アンダードッグ）でも逆転が発生しやすい（Korpatsch+Eala、Stuttgart 2026-04-14根拠：5/12試合中2件upset）。通常の-8%補正に加え、表面適性が逆転する場合（outdoor clay有利選手 vs indoor clay有利選手）はさらに-5%追加補正を検討。W009 GAMBLE_BET発動基準の参照にも使用する。"
     },
     {
       "id": "W008", "type": "initial", "title": "ランキング外選手（WC/LL）の評価",

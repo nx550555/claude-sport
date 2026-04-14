@@ -1,7 +1,7 @@
 {
   "sport": "nhl",
-  "version": "1.2",
-  "updated": "2026-04-09",
+  "version": "1.3",
+  "updated": "2026-04-14",
   "bet_type": "Moneyline (ML) のみ",
   "target": "レギュラーシーズン・プレーオフ問わずオッズが付いている試合すべて",
   "screening": {
@@ -179,8 +179,16 @@
     },
     {
       "id": "N014", "type": "initial", "title": "ラインナップ確認チェックリスト",
-      "body": "分析前に必ず以下を確認する。① 第1ゴーリー先発確認（dailyfaceoff.com / 当日9〜11時EST）。② 第1ラインFW 3人の出場可否（nhl.com/injuries）。③ エースDF（氷上時間トップ2）の出場可否。④ 怪我人リスト全体確認。確認できない項目がある場合は推奨に『条件付き』フラグを立て、確認後に最終判断する。全項目確認済みでなければGO判断は出さない。",
-      "checklist": ["先発G確認", "第1FW全員確認", "エースDF確認", "怪我リスト確認"]
+      "body": "分析前に必ず以下を確認する。① 第1ゴーリー先発確認（dailyfaceoff.com / 当日9〜11時EST）。② 第1ラインFW 3人の出場可否（nhl.com/injuries）。③ エースDF（氷上時間トップ2）の出場可否。④ 怪我人リスト全体確認。⑤ シーディング確定チームの場合はN016を適用する（意図的rest確認）。確認できない項目がある場合は推奨に『条件付き』フラグを立て、確認後に最終判断する。全項目確認済みでなければGO判断は出さない。",
+      "checklist": ["先発G確認", "第1FW全員確認", "エースDF確認", "怪我リスト確認", "シーディング確定チーム→N016適用"]
+    },
+    {
+      "id": "N016", "type": "learned", "source": "PHI@CAR 2026-04-13",
+      "title": "シーディング確定チーム終盤ラインナップrest確認",
+      "body": "プレーオフ進出・シーディングが確定したチームのレギュラーシーズン最終5試合以内では、主力選手の意図的欠場（rest）が発生しやすい。【確認手順】① 試合前日〜当日朝に対象チームの公式X・地元ビートライターのTwitterを確認。② nhl.com/injuries に載らない『健康上の理由以外の欠場』を探す。③ 第1ラインFW・エースDF・スタータGの欠場が判明した場合は下記補正を適用。【補正】主力1〜2名rest: -5%。3〜4名rest: -10%〜SKIP。5名以上rest（大規模ローテーション）: SKIP（PHI@CAR根拠: AhoSvechnikov/Jarvis/Staal/Slavin/Gostisbehere 6名欠場）。【注意】restは怪我リスト（N014）に載らないため通常の怪我チェックでは検出不可。N014チェックリストの⑤として必ず実施する。",
+      "evidence": "2026-04-13 PHI@CAR: Carolina がプレーオフシーディング確定済みで Aho/Svechnikov/Jarvis/Staal/Slavin/Gostisbehere の6名を意図的rest。結果 PHI 4-0勝利（CAR MISS）。miss_analysis では L4_External ラインナップrest として記録。",
+      "trigger_conditions": ["RS最終5試合以内", "PO進出確定済み", "またはシーディング確定済み"],
+      "added": "2026-04-14"
     }
   ]
 }
