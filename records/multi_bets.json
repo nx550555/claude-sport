@@ -25,48 +25,209 @@
       "output_a": [
         {
           "rank": 1,
-          "match": "Columbus Aviators @ Arlington Renegades",
-          "sport": "UFL",
-          "tournament": "UFL Week 4",
-          "recommendation": "Arlington Renegades",
-          "win_prob": 0.85,
-          "odds": 1.36,
-          "ev": 0.156,
-          "reason": "Renegades 3-0 vs Aviators 0-3. DIFF/G差. Austin Reed QB confirmed. Home edge. Week4 threshold 80% exceeded.",
+          "match": "Swiatek I. vs Siegemund L.",
+          "sport": "WTA",
+          "tournament": "Porsche Tennis Grand Prix Stuttgart R2",
+          "date": "2026-04-16",
+          "recommendation": "Swiatek I.",
+          "win_prob": 0.92,
+          "odds": 1.02,
+          "ev": -0.062,
+          "reason": "WTA #1 vs Qualifier. cElo差400pt超。Clay最強格。推定勝率92%。EVはマイナスだが予測確実性は最高位。",
           "result": "pending"
         },
         {
           "rank": 2,
+          "match": "Alcaraz C. vs Machac T.",
+          "sport": "ATP",
+          "tournament": "Barcelona Open R2",
+          "date": "2026-04-16",
+          "recommendation": "Alcaraz C.",
+          "win_prob": 0.88,
+          "odds": 1.11,
+          "ev": -0.023,
+          "reason": "ATP #3 Clay specialist vs 世界66位。cElo差300pt超。Barcelona地元。推定勝率88%。",
+          "result": "pending"
+        },
+        {
+          "rank": 3,
+          "match": "Columbus Aviators @ Arlington Renegades",
+          "sport": "UFL",
+          "tournament": "UFL Week 4",
+          "date": "2026-04-18",
+          "recommendation": "Arlington Renegades",
+          "win_prob": 0.85,
+          "odds": 1.36,
+          "ev": 0.156,
+          "reason": "Renegades 3-0 vs Aviators 0-3。DIFF/G差。Austin Reed QB確認済。ホーム優位+4%。Week4閾値80%超。",
+          "result": "pending"
+        },
+        {
+          "rank": 4,
+          "match": "Houston Gamblers vs Louisville Kings",
+          "sport": "UFL",
+          "tournament": "UFL Week 4",
+          "date": "2026-04-17",
+          "recommendation": "Louisville Kings",
+          "win_prob": 0.82,
+          "odds": 1.65,
+          "ev": 0.353,
+          "reason": "Louisville 3-0 vs Gamblers 0-3。DIFF/G差8点超。OLine格差。Week4閾値80%超。EV+35.3%。",
+          "result": "pending"
+        },
+        {
+          "rank": 5,
+          "match": "Moutet C. vs Musetti L.",
+          "sport": "ATP",
+          "tournament": "Barcelona Open R2",
+          "date": "2026-04-16",
+          "recommendation": "Musetti L.",
+          "win_prob": 0.82,
+          "odds": 1.37,
+          "ev": 0.123,
+          "reason": "cElo差200pt超。Musetti Clay巧者。推定勝率82%。EV+12.3%。両閾値クリア。",
+          "result": "pending"
+        },
+        {
+          "rank": 6,
+          "match": "Samsonova L. vs Gauff C.",
+          "sport": "WTA",
+          "tournament": "Porsche Tennis Grand Prix Stuttgart R2",
+          "date": "2026-04-16",
+          "recommendation": "Gauff C.",
+          "win_prob": 0.81,
+          "odds": 1.15,
+          "ev": -0.067,
+          "reason": "WTA #3 vs 世界10位前後。Gauff Clay成績良好。推定勝率81%。EVマイナスだが予測確実性高い。",
+          "result": "pending"
+        },
+        {
+          "rank": 7,
           "match": "Sonmez Z. vs Paolini J.",
           "sport": "WTA",
           "tournament": "Porsche Tennis Grand Prix Stuttgart R2",
+          "date": "2026-04-15",
           "recommendation": "Paolini J.",
           "win_prob": 0.78,
           "odds": 1.24,
           "ev": 0.054,
-          "reason": "cElo差300pt (Paolini 1916 vs Sonmez 1616). 推定勝率78% > 75%閾値. EV+5.4% > 5%閾値. 両閾値クリア.",
+          "reason": "cElo差300pt（Paolini 1916 vs Sonmez 1616）。推定勝率78%。EV+5.4%。両閾値クリア。",
           "result": "pending"
         }
       ],
       "output_b": [
         {
           "rank": 1,
+          "label": "Louisville x Renegades x Musetti",
           "matches": [
+            "Louisville Kings",
             "Arlington Renegades",
+            "Musetti L."
+          ],
+          "match_details": [
+            "Houston Gamblers vs Louisville Kings (UFL W4)",
+            "Columbus Aviators @ Arlington Renegades (UFL W4)",
+            "Moutet C. vs Musetti L. (Barcelona R2)"
+          ],
+          "count": 3,
+          "total_win_prob": 0.5715,
+          "multi_odds": 3.0743,
+          "multi_ev": 0.7571,
+          "calc_note": "0.82x0.85x0.82=0.5715 | 1.65x1.36x1.37=3.0743 | EV=0.5715x3.0743-1=+75.8%",
+          "result": "pending"
+        },
+        {
+          "rank": 2,
+          "label": "Louisville x Renegades x Musetti x Alcaraz",
+          "matches": [
+            "Louisville Kings",
+            "Arlington Renegades",
+            "Musetti L.",
+            "Alcaraz C."
+          ],
+          "match_details": [
+            "Houston Gamblers vs Louisville Kings (UFL W4)",
+            "Columbus Aviators @ Arlington Renegades (UFL W4)",
+            "Moutet C. vs Musetti L. (Barcelona R2)",
+            "Alcaraz C. vs Machac T. (Barcelona R2)"
+          ],
+          "count": 4,
+          "total_win_prob": 0.503,
+          "multi_odds": 3.4125,
+          "multi_ev": 0.7163,
+          "calc_note": "prob=0.5030 | odds=3.4124 | EV=0.5030x3.4124-1=+71.6%",
+          "result": "pending"
+        },
+        {
+          "rank": 3,
+          "label": "Louisville x Renegades x Musetti x Paolini",
+          "matches": [
+            "Louisville Kings",
+            "Arlington Renegades",
+            "Musetti L.",
             "Paolini J."
           ],
           "match_details": [
-            "Columbus Aviators @ Arlington Renegades",
-            "Sonmez Z. vs Paolini J."
+            "Houston Gamblers vs Louisville Kings (UFL W4)",
+            "Columbus Aviators @ Arlington Renegades (UFL W4)",
+            "Moutet C. vs Musetti L. (Barcelona R2)",
+            "Sonmez Z. vs Paolini J. (WTA Stuttgart R2)"
           ],
-          "count": 2,
-          "multi_odds": 1.6864,
-          "total_win_prob": 0.663,
-          "multi_ev": 0.1181,
+          "count": 4,
+          "total_win_prob": 0.4458,
+          "multi_odds": 3.8121,
+          "multi_ev": 0.6994,
+          "calc_note": "prob=0.4458 | odds=3.8121 | EV=0.4458x3.8121-1=+70.0%",
+          "result": "pending"
+        },
+        {
+          "rank": 4,
+          "label": "Louisville x Renegades x Musetti x Alcaraz x Paolini",
+          "matches": [
+            "Louisville Kings",
+            "Arlington Renegades",
+            "Musetti L.",
+            "Alcaraz C.",
+            "Paolini J."
+          ],
+          "match_details": [
+            "Houston Gamblers vs Louisville Kings (UFL W4)",
+            "Columbus Aviators @ Arlington Renegades (UFL W4)",
+            "Moutet C. vs Musetti L. (Barcelona R2)",
+            "Alcaraz C. vs Machac T. (Barcelona R2)",
+            "Sonmez Z. vs Paolini J. (WTA Stuttgart R2)"
+          ],
+          "count": 5,
+          "total_win_prob": 0.3923,
+          "multi_odds": 4.2314,
+          "multi_ev": 0.66,
+          "calc_note": "prob=0.3923 | odds=4.2311 | EV=0.3923x4.2311-1=+66.0%",
+          "result": "pending"
+        },
+        {
+          "rank": 5,
+          "label": "Louisville x Renegades x Musetti x Swiatek",
+          "matches": [
+            "Louisville Kings",
+            "Arlington Renegades",
+            "Musetti L.",
+            "Swiatek I."
+          ],
+          "match_details": [
+            "Houston Gamblers vs Louisville Kings (UFL W4)",
+            "Columbus Aviators @ Arlington Renegades (UFL W4)",
+            "Moutet C. vs Musetti L. (Barcelona R2)",
+            "Swiatek I. vs Siegemund L. (WTA Stuttgart R2)"
+          ],
+          "count": 4,
+          "total_win_prob": 0.5258,
+          "multi_odds": 3.1358,
+          "multi_ev": 0.6488,
+          "calc_note": "prob=0.5258 | odds=3.1358 | EV=0.5258x3.1358-1=+64.9%",
           "result": "pending"
         }
       ],
-      "output_b_calc_note": "multi_odds = 1.36 x 1.24 = 1.6864 / total_win_prob = 0.85 x 0.78 = 0.663 / multi_ev = 0.663 x 1.6864 - 1 = +0.1181 (+11.8%)"
+      "output_b_calc_note": "EV+試合: Louisville(0.82x1.65=1.353) / Renegades(0.85x1.36=1.156) / Musetti(0.82x1.37=1.123). EV-試合: Alcaraz(0.88x1.11=0.977) / Paolini(0.78x1.24=0.967) / Swiatek(0.92x1.02=0.938) / Gauff(0.81x1.15=0.932). EV+3試合コア(+75.8%)が最高。以下は追加EV-試合でEV漸減。"
     }
   ]
 }

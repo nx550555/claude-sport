@@ -43,9 +43,9 @@
 - [x] NHL 4/15 CAUTION2件記録（CAR@NYI / COL@CGY - pending_games）
 - [x] records/ufl/2026.json 更新（Renegades GO・Defenders CAUTION・Stallions SKIP追記）
 - [x] records/wta/2026.json 更新（Paolini round R1->R2修正・R2/Rouen R2 screening log追加）
-- [x] dashboard.html 高確率予想タブ・マルチベットタブを実データで更新
-- [x] 出力A: 1位 Renegades(85%/@1.36) / 2位 Paolini(78%/@1.24)
-- [x] 出力B: Renegades×Paolini (全体66.3%・マルチOdds1.686・EV+11.8%)
+- [x] dashboard.html 高確率予想タブ・マルチベットタブを実データで更新（最終版: 出力A 7行・出力B 5コンボ）
+- [x] 出力A: 7件 Swiatek(92%)・Alcaraz(88%)・Renegades(85%)・Louisville(82%)・Musetti(82%)・Gauff(81%)・Paolini(78%) ← 設計バグ修正後に再スクリーニング済み
+- [x] 出力B: top5コンボ / 1位: Louisville×Renegades×Musetti (全体57.2%・マルチOdds3.0743・EV+75.8%) ← EV+3試合コアが最高
 - [ ] UFL W4 全結果確認・記録（4/18-19開催: Renegades GO / Louisville Kings GO）
 - [ ] WTA Stuttgart Paolini vs Sonmez 結果確認（試合途中中断→再開後結果確認）
 - [ ] NHL CAR@NYI / COL@CGY 結果確認・multi_bets.json hit/miss更新
