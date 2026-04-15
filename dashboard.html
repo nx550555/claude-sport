@@ -48,6 +48,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 
 .active-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;}
 .active-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;}
+.active-league-hdr{grid-column:1/-1;display:flex;align-items:center;gap:10px;border-bottom:2px solid var(--border);padding:10px 4px 6px;margin-top:6px;font-size:13px;font-weight:700;color:var(--text);letter-spacing:.02em;}.active-league-hdr:first-child{margin-top:0;}.alh-count{font-size:11px;font-weight:400;color:var(--text2);background:var(--surface2);border-radius:10px;padding:1px 8px;margin-left:auto;}
 .ac-sport{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--text2);margin-bottom:6px;}
 .ac-match{font-size:13px;color:var(--text2);margin-bottom:4px;}
 .ac-rec{font-size:15px;font-weight:600;margin-bottom:10px;}
@@ -197,9 +198,23 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 .rule-impact-table .before{color:#f85149;font-weight:600;}
 .rule-impact-table .after{color:#3fb950;font-weight:600;}
 @media(max-width:768px){.pred-compare{grid-template-columns:1fr;}.learn-loop{flex-wrap:wrap;gap:8px;}.ll-arrow{display:none;}}
+
+/* ── lang toggle ── */
+.name-en { display: none; }
+body.lang-en .name-ja { display: none; }
+body.lang-en .name-en { display: inline; }
+#lang-toggle {
+  position: fixed; top: 10px; right: 14px; z-index: 1000;
+  background: var(--surface2); border: 1px solid var(--border);
+  color: var(--text2); border-radius: 6px; padding: 3px 10px;
+  font-size: 11px; font-weight: 700; cursor: pointer; letter-spacing: .04em;
+}
+#lang-toggle:hover { color: var(--text); border-color: var(--text2); }
 </style>
 </head>
 <body>
+<button id="lang-toggle" onclick="toggleLang()" title="Switch player/team name language">EN</button>
+
 
 <div class="hdr">
   <h1>⚡ Sports Betting Dashboard</h1>
@@ -267,7 +282,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
           <div class="sm"><div class="sm-label">的中</div><div class="sm-val">10</div></div>
           <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#3fb950;">76.9%</div></div>
           <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#3fb950;">+1.370</div></div>
-          <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#8b949e;">0</div></div>
+          <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#d29922;">1</div></div>
         </div>
       </div>
       <div class="sport-card">
@@ -311,7 +326,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
           <div class="sm"><div class="sm-label">的中</div><div class="sm-val">0</div></div>
           <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#f85149;">0.0%</div></div>
           <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#f85149;">-1.000</div></div>
-          <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#e3b341;">2</div></div>
+          <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#d29922;">1</div></div>
         </div>
       </div>
       <div class="sport-card">
@@ -361,29 +376,20 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 
 <!-- ===== 繧｢繧ｯ繝・ぅ繝匁耳螂ｨ ===== -->
 <div class="tab-content" id="content-active">
-  <div class="section-title">繧｢繧ｯ繝・ぅ繝・GO 謗ｨ螂ｨ 窶・邨先棡蠕・■・域律莉倥・繝ｪ繝ｼ繧ｰ鬆・ｼ・/div>
+  <div class="section-title">アクティブ GO 推奨 — PENDING のみ（結果確定後は全履歴タブへ移動）</div>
   <div class="section"><div class="active-grid">
 
-    <!-- WTA Rouen: Bondar vs Tan (4/15) NEW -->
-    <div class="active-card" style="border-color:#f9a8d460;background:linear-gradient(135deg,#f9a8d408,transparent);">
-      <div class="ac-sport">&#x1F3BE; WTA &mdash; Rouen R1 2026 <span class="badge badge-go">GO</span></div>
-      <div class="ac-match">&#x30BF;&#x30F3; H. vs &#x30DC;&#x30F3;&#x30C0;&#x30EB; A.</div>
-      <div class="ac-rec">&#x63A8;&#x5968;: <strong style="color:#3fb950;">&#x30DC;&#x30F3;&#x30C0;&#x30EB;&#x30FB;&#x30A2;&#x30F3;&#x30CA;</strong></div>
-      <div class="ac-metrics">
-        <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.21</div></div>
-        <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+6.5%</div></div>
-        <div class="acm"><div class="acm-l">&#x78BA;&#x4FE1;&#x5EA6;</div><div class="acm-v">88%</div></div>
-        <div class="acm"><div class="acm-l">&#x5E02;&#x5834;implied</div><div class="acm-v rule">82.6%</div></div>
-      </div>
-      <div class="ac-note">WTA Rouen Hard(indoor). &#x30CF;&#x30FC;&#x30C9;cElo&#x4E00;&#x6B21;&#x30BD;&#x30FC;&#x30B9;&#x5236;&#x9650;&#x3002;&#x5E02;&#x5834;+&#x30D5;&#x30A9;&#x30FC;&#x30E0;&#x5206;&#x6790;&#x3067;&#x63A8;&#x5B9A;88%&#x3002;EV+6.5% @1.21&#x3002;&#x5168;&#x30BD;&#x30FC;&#x30B9;&#x78BA;&#x8A8D;&#x6E08;&#x3002;</div>
-      <div class="ac-date">&#x1F4C5; 2026-04-15 18:30 JST &mdash; WTA Rouen R1</div>
+    <!-- ===== 🎾 テニス ===== -->
+    <div class="active-league-hdr">
+      <span>&#x1F3BE; テニス <span style="color:var(--text2);font-weight:400;font-size:11px;">ATP / WTA</span></span>
+      <span class="alh-count">3件</span>
     </div>
 
-    <!-- ATP Barcelona R2: Musetti vs Moutet (4/16) NEW -->
+    <!-- ATP Barcelona R2: Musetti vs Moutet (4/16) -->
     <div class="active-card" style="border-color:#79c0ff60;background:linear-gradient(135deg,#79c0ff08,transparent);">
-      <div class="ac-sport">&#x1F3BE; ATP &mdash; Barcelona R2 2026 <span class="badge badge-go">GO</span></div>
-      <div class="ac-match">&#x30E0;&#x30C6; C. vs &#x30E0;&#x30BB;&#x30C3;&#x30C6;&#x30A3; L.(2)</div>
-      <div class="ac-rec">&#x63A8;&#x5968;: <strong style="color:#3fb950;">&#x30E0;&#x30BB;&#x30C3;&#x30C6;&#x30A3;&#x30FB;&#x30ED;&#x30EC;&#x30F3;&#x30C4;&#x30A9;</strong></div>
+      <div class="ac-sport">&#x1F3BE; ATP &mdash; バルセロナ R2 2026 <span class="badge badge-go">GO</span></div>
+      <div class="ac-match"><span class="name-ja">&#x30E0;&#x30C6; C. vs &#x30E0;&#x30BB;&#x30C3;&#x30C6;&#x30A3; L.(2)</span><span class="name-en">Moutet C. vs Musetti L.(2)</span></div>
+      <div class="ac-rec">&#x63A8;&#x5968;: <strong style="color:#3fb950;"><span class="name-ja">&#x30E0;&#x30BB;&#x30C3;&#x30C6;&#x30A3;&#x30FB;&#x30ED;&#x30EC;&#x30F3;&#x30C4;&#x30A9;</span><span class="name-en">Musetti Lorenzo</span></strong></div>
       <div class="ac-metrics">
         <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.37</div></div>
         <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+6.9%</div></div>
@@ -392,14 +398,86 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
       </div>
       <div class="ac-cond">&#x26A0; PR&#x88DC;&#x6B63; -5%: AO2026 adductor + Miami2026 arm &#x8907;&#x6570;&#x8CA0;&#x50B7; (R013&#x9069;&#x7528;: &#x904E;&#x5927;&#x88DC;&#x6B63;&#x56DE;&#x907F;)</div>
       <div class="ac-note">&#x30E0;&#x30BB;&#x30C3;&#x30C6;&#x30A3; cElo~2017 / &#x30E0;&#x30C6; ~1746&#x3002;&#x5DEE;271pt &gt; 130pt GO&#x9583;&#x5024;&#x3002;&#x57FA;&#x672C;84% &rarr; PR&#x88DC;&#x6B63; -5% &rarr; conf 78%&#x3002;&#x5168;&#x30BD;&#x30FC;&#x30B9;&#x78BA;&#x8A8D;&#x6E08;&#x3002;</div>
-      <div class="ac-date">&#x1F4C5; 2026-04-16 18:00 JST &mdash; Barcelona Clay(outdoor) R2</div>
+      <div class="ac-date">&#x1F4C5; 2026-04-16 18:00 JST &mdash; バルセロナ Clay R2</div>
     </div>
 
-    <!-- NRL Warriors (4/18) existing GO -->
+    <!-- WTA Rouen: Bondar vs Tan (4/15) -->
+    <div class="active-card" style="border-color:#f9a8d460;background:linear-gradient(135deg,#f9a8d408,transparent);">
+      <div class="ac-sport">&#x1F3BE; WTA &mdash; ルーアン R1 2026 <span class="badge badge-go">GO</span></div>
+      <div class="ac-match"><span class="name-ja">&#x30BF;&#x30F3; H. vs &#x30DC;&#x30F3;&#x30C0;&#x30EB; A.</span><span class="name-en">Tan H. vs Bondar A.</span></div>
+      <div class="ac-rec">&#x63A8;&#x5968;: <strong style="color:#3fb950;"><span class="name-ja">&#x30DC;&#x30F3;&#x30C0;&#x30EB;&#x30FB;&#x30A2;&#x30F3;&#x30CA;</span><span class="name-en">Bondar Anna</span></strong></div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.21</div></div>
+        <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+6.5%</div></div>
+        <div class="acm"><div class="acm-l">&#x78BA;&#x4FE1;&#x5EA6;</div><div class="acm-v">88%</div></div>
+        <div class="acm"><div class="acm-l">&#x5E02;&#x5834;implied</div><div class="acm-v rule">82.6%</div></div>
+      </div>
+      <div class="ac-note">WTA ルーアン ハード(室内)&#x3002;&#x30CF;&#x30FC;&#x30C9;cElo&#x4E00;&#x6B21;&#x30BD;&#x30FC;&#x30B9;&#x5236;&#x9650;&#x3002;&#x5E02;&#x5834;+&#x30D5;&#x30A9;&#x30FC;&#x30E0;&#x5206;&#x6790;&#x3067;&#x63A8;&#x5B9A;88%&#x3002;EV+6.5% @1.21&#x3002;&#x5168;&#x30BD;&#x30FC;&#x30B9;&#x78BA;&#x8A8D;&#x6E08;&#x3002;</div>
+      <div class="ac-date">&#x1F4C5; 2026-04-15 18:30 JST &mdash; WTA ルーアン R1</div>
+    </div>
+
+    <!-- WTA Stuttgart Paolini PENDING (result suspended, 2026-04-15) -->
+    <div class="active-card" style="border-color:#f9a8d460;background:linear-gradient(135deg,#f9a8d408,transparent);opacity:.85;">
+      <div class="ac-sport">&#x1F3BE; WTA &mdash; シュトゥットガルト R2 2026 <span class="badge badge-go">GO</span></div>
+      <div class="ac-match"><span class="name-ja">&#x30BD;&#x30F3;&#x30E1;&#x30BA; Z. vs &#x30D1;&#x30AA;&#x30EA;&#x30FC;&#x30CB; J.(4)</span><span class="name-en">Sonmez Z. vs Paolini J.(4)</span></div>
+      <div class="ac-rec">&#x63A8;&#x5968;: <strong style="color:#3fb950;"><span class="name-ja">&#x30D1;&#x30AA;&#x30EA;&#x30FC;&#x30CB;&#x30FB;&#x30B8;&#x30E3;&#x30B9;&#x30DF;&#x30F3;</span><span class="name-en">Paolini Jasmine</span></strong></div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.24</div></div>
+        <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+5.4%</div></div>
+        <div class="acm"><div class="acm-l">&#x78BA;&#x4FE1;&#x5EA6;</div><div class="acm-v">78%</div></div>
+        <div class="acm"><div class="acm-l">cElo&#x5DEE;</div><div class="acm-v rule">+300pt</div></div>
+      </div>
+      <div class="ac-note">&#x26A0;&#xFE0F; 4/15 1st Set&#x4E2D;&#x65AD;&#x4E2D;&#xFF08;&#x305F;&#x3060;&#x3057;&#x7D50;&#x679C;&#x672A;&#x78BA;&#x8A8D;&#xFF09;&#x3002;&#x30B7;&#x30E5;&#x30C8;&#x30A5;&#x30C3;&#x30C8;&#x30AC;&#x30EB;&#x30C8; indoor clay&#x3002;cElo&#x5DEE;300pt&#x3002;&#x7D50;&#x679C;&#x5F85;&#x6A5F;&#x3002;</div>
+      <div class="ac-date">&#x1F4C5; 2026-04-15 JST &mdash; シュトゥットガルト R2 &#x23F3; PENDING</div>
+    </div>
+
+    <!-- ===== 🏈 アメフト ===== -->
+    <div class="active-league-hdr">
+      <span>&#x1F3C8; アメリカンフットボール <span style="color:var(--text2);font-weight:400;font-size:11px;">UFL</span></span>
+      <span class="alh-count">2件</span>
+    </div>
+
+    <!-- UFL W4 Louisville (4/17) -->
+    <div class="active-card" style="border-color:#fca5a560;background:linear-gradient(135deg,#fca5a508,transparent);">
+      <div class="ac-sport">&#x1F3C8; UFL &mdash; Week 4 2026 <span class="badge badge-go">GO</span></div>
+      <div class="ac-match"><span class="name-ja">&#x30D2;&#x30E5;&#x30FC;&#x30B9;&#x30C8;&#x30F3;&#x30FB;&#x30AE;&#x30E3;&#x30F3;&#x30D6;&#x30E9;&#x30FC;&#x30BA; vs &#x30EB;&#x30A4;&#x30D3;&#x30EB;&#x30FB;&#x30AD;&#x30F3;&#x30B0;&#x30B9;</span><span class="name-en">Houston Gamblers vs Louisville Kings</span></div>
+      <div class="ac-rec">&#x63A8;&#x5968;: <strong style="color:#3fb950;"><span class="name-ja">&#x30EB;&#x30A4;&#x30D3;&#x30EB;&#x30FB;&#x30AD;&#x30F3;&#x30B0;&#x30B9;</span><span class="name-en">Louisville Kings</span></strong></div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.65</div></div>
+        <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+35.3%</div></div>
+        <div class="acm"><div class="acm-l">&#x78BA;&#x4FE1;&#x5EA6;</div><div class="acm-v">82%</div></div>
+        <div class="acm"><div class="acm-l">Week4&#x9583;&#x5024;</div><div class="acm-v warn">80%&#x4EE5;&#x4E0A;</div></div>
+      </div>
+      <div class="ac-note">&#x30D2;&#x30E5;&#x30FC;&#x30B9;&#x30C8;&#x30F3; QB: Dekkers(&#x80A9;W1&#x8CA0;&#x50B7;)&rarr;Tagovailoa&#x5148;&#x767A;(W3 21/40 171yd 7-45&#x5927;&#x6557;)&#x3002;&#x30EB;&#x30A4;&#x30D3;&#x30EB; QB Bean&#x7D76;&#x597D;&#x8ABF;(W3 352yd 3TD)&#x3002;conf 82% &gt; Week4&#x9583;&#x5024;80%&#x3002;</div>
+      <div class="ac-date">&#x1F4C5; 2026-04-17 09:00 JST &mdash; UFL Week 4</div>
+    </div>
+
+    <!-- UFL W4 Renegades (4/18) -->
+    <div class="active-card" style="border-color:#fca5a560;background:linear-gradient(135deg,#fca5a508,transparent);">
+      <div class="ac-sport">&#x1F3C8; UFL &mdash; Week 4 2026 <span class="badge badge-go">GO</span></div>
+      <div class="ac-match"><span class="name-ja">&#x30B3;&#x30ED;&#x30F3;&#x30D0;&#x30B9;&#x30FB;&#x30A2;&#x30D3;&#x30A8;&#x30A4;&#x30BF;&#x30FC;&#x30BA; @ &#x30A2;&#x30FC;&#x30EA;&#x30F3;&#x30C8;&#x30F3;&#x30FB;&#x30EC;&#x30CD;&#x30B2;&#x30FC;&#x30BA;</span><span class="name-en">Columbus Aviators @ Arlington Renegades</span></div>
+      <div class="ac-rec">&#x63A8;&#x5968;: <strong style="color:#3fb950;"><span class="name-ja">&#x30A2;&#x30FC;&#x30EA;&#x30F3;&#x30C8;&#x30F3;&#x30FB;&#x30EC;&#x30CD;&#x30B2;&#x30FC;&#x30BA;</span><span class="name-en">Arlington Renegades</span></strong></div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.36</div></div>
+        <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+15.6%</div></div>
+        <div class="acm"><div class="acm-l">&#x78BA;&#x4FE1;&#x5EA6;</div><div class="acm-v">85%</div></div>
+        <div class="acm"><div class="acm-l">Week4&#x9583;&#x5024;</div><div class="acm-v warn">80%&#x4EE5;&#x4E0A;</div></div>
+      </div>
+      <div class="ac-note">&#x30EC;&#x30CD;&#x30B2;&#x30FC;&#x30BA; 3-0 vs &#x30A2;&#x30D3;&#x30A8;&#x30A4;&#x30BF;&#x30FC;&#x30BA; 0-3&#x3002;QB Austin Reed&#x78BA;&#x8A8D;&#x6E08;&#x3002;DIFF/G&#x5DEE;+8&#x70B9;&#x8D85;&#x3002;&#x30DB;&#x30FC;&#x30E0;+4%&#x8003;&#x616E;&#x6E08;&#x3002;conf 85% &gt; Week4&#x9583;&#x5024;80%&#x3002;</div>
+      <div class="ac-date">&#x1F4C5; 2026-04-18 09:00 JST &mdash; UFL Week 4</div>
+    </div>
+
+    <!-- ===== 🏉 ラグビー ===== -->
+    <div class="active-league-hdr">
+      <span>&#x1F3C9; ラグビー <span style="color:var(--text2);font-weight:400;font-size:11px;">NRL / Super League</span></span>
+      <span class="alh-count">3件</span>
+    </div>
+
+    <!-- NRL Warriors (4/18) -->
     <div class="active-card" style="border-color:#23863640;background:linear-gradient(135deg,#23863610,transparent);">
       <div class="ac-sport">&#x1F3C9; NRL &mdash; Round 7 2026</div>
-      <div class="ac-match">NZ&#x30A6;&#x30A9;&#x30EA;&#x30A2;&#x30FC;&#x30BA; vs &#x30B4;&#x30FC;&#x30EB;&#x30C9;&#x30B3;&#x30FC;&#x30B9;&#x30C8;&#x30FB;&#x30BF;&#x30A4;&#x30BF;&#x30F3;&#x30BA; <span class="badge badge-go">GO</span></div>
-      <div class="ac-rec">&#x63A8;&#x5968;: <strong style="color:#3fb950;">NZ&#x30A6;&#x30A9;&#x30EA;&#x30A2;&#x30FC;&#x30BA;</strong></div>
+      <div class="ac-match"><span class="name-ja">NZ&#x30A6;&#x30A9;&#x30EA;&#x30A2;&#x30FC;&#x30BA; vs &#x30B4;&#x30FC;&#x30EB;&#x30C9;&#x30B3;&#x30FC;&#x30B9;&#x30C8;&#x30FB;&#x30BF;&#x30A4;&#x30BF;&#x30F3;&#x30BA;</span><span class="name-en">NZ Warriors vs Gold Coast Titans</span> <span class="badge badge-go">GO</span></div>
+      <div class="ac-rec">&#x63A8;&#x5968;: <strong style="color:#3fb950;"><span class="name-ja">NZ&#x30A6;&#x30A9;&#x30EA;&#x30A2;&#x30FC;&#x30BA;</span><span class="name-en">NZ Warriors</span></strong></div>
       <div class="ac-metrics">
         <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.22</div></div>
         <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+10.7%</div></div>
@@ -410,11 +488,11 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
       <div class="ac-date">&#x1F4C5; 2026-04-18 JST &mdash; NRL R7</div>
     </div>
 
-    <!-- SL Leeds (4/18) existing GO -->
+    <!-- SL Leeds (4/18) -->
     <div class="active-card" style="border-color:#bfdbfe60;background:linear-gradient(135deg,#bfdbfe08,transparent);">
       <div class="ac-sport">&#x1F3C9; Super League &mdash; Round 8 2026</div>
-      <div class="ac-match">&#x30CF;&#x30C0;&#x30FC;&#x30BA;&#x30D5;&#x30A3;&#x30FC;&#x30EB;&#x30C9;&#x30FB;&#x30B8;&#x30E3;&#x30A4;&#x30A2;&#x30F3;&#x30C4; vs &#x30EA;&#x30FC;&#x30BA;&#x30FB;&#x30E9;&#x30A4;&#x30CE;&#x30BA; <span class="badge badge-go">GO</span></div>
-      <div class="ac-rec">&#x63A8;&#x5968;: <strong style="color:#3fb950;">&#x30EA;&#x30FC;&#x30BA;&#x30FB;&#x30E9;&#x30A4;&#x30CE;&#x30BA;</strong></div>
+      <div class="ac-match"><span class="name-ja">&#x30CF;&#x30C0;&#x30FC;&#x30BA;&#x30D5;&#x30A3;&#x30FC;&#x30EB;&#x30C9;&#x30FB;&#x30B8;&#x30E3;&#x30A4;&#x30A2;&#x30F3;&#x30C4; vs &#x30EA;&#x30FC;&#x30BA;&#x30FB;&#x30E9;&#x30A4;&#x30CE;&#x30BA;</span><span class="name-en">Huddersfield Giants vs Leeds Rhinos</span> <span class="badge badge-go">GO</span></div>
+      <div class="ac-rec">&#x63A8;&#x5968;: <strong style="color:#3fb950;"><span class="name-ja">&#x30EA;&#x30FC;&#x30BA;&#x30FB;&#x30E9;&#x30A4;&#x30CE;&#x30BA;</span><span class="name-en">Leeds Rhinos</span></strong></div>
       <div class="ac-metrics">
         <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.32</div></div>
         <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+14.8%</div></div>
@@ -425,41 +503,11 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
       <div class="ac-date">&#x1F4C5; 2026-04-18 JST &mdash; Super League R8</div>
     </div>
 
-    <!-- UFL W4 Louisville (4/17) NEW GO -->
-    <div class="active-card" style="border-color:#fca5a560;background:linear-gradient(135deg,#fca5a508,transparent);">
-      <div class="ac-sport">&#x1F3C8; UFL &mdash; Week 4 2026 <span class="badge badge-go">GO</span></div>
-      <div class="ac-match">Houston Gamblers vs Louisville Kings</div>
-      <div class="ac-rec">&#x63A8;&#x5968;: <strong style="color:#3fb950;">Louisville Kings</strong></div>
-      <div class="ac-metrics">
-        <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.65</div></div>
-        <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+35.3%</div></div>
-        <div class="acm"><div class="acm-l">&#x78BA;&#x4FE1;&#x5EA6;</div><div class="acm-v">82%</div></div>
-        <div class="acm"><div class="acm-l">Week4&#x9583;&#x5024;</div><div class="acm-v warn">80%&#x4EE5;&#x4E0A;</div></div>
-      </div>
-      <div class="ac-note">Houston QB: Dekkers(&#x80A9;W1&#x8CA0;&#x50B7;)&rarr;Tagovailoa&#x5148;&#x767A;(W3 21/40 171yd 7-45&#x5927;&#x6557;)&#x3002;Louisville QB Bean&#x7D76;&#x597D;&#x8ABF;(W3 352yd 3TD)&#x3002;conf 82% &gt; Week4&#x9583;&#x5024;80%&#x3002;</div>
-      <div class="ac-date">&#x1F4C5; 2026-04-17 09:00 JST &mdash; UFL Week 4</div>
-    </div>
-
-    <!-- UFL W4 Renegades (4/18) GO -->
-    <div class="active-card" style="border-color:#fca5a560;background:linear-gradient(135deg,#fca5a508,transparent);">
-      <div class="ac-sport">&#x1F3C8; UFL &mdash; Week 4 2026 <span class="badge badge-go">GO</span></div>
-      <div class="ac-match">Columbus Aviators @ Arlington Renegades</div>
-      <div class="ac-rec">&#x63A8;&#x5968;: <strong style="color:#3fb950;">Arlington Renegades</strong></div>
-      <div class="ac-metrics">
-        <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.36</div></div>
-        <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+15.6%</div></div>
-        <div class="acm"><div class="acm-l">&#x78BA;&#x4FE1;&#x5EA6;</div><div class="acm-v">85%</div></div>
-        <div class="acm"><div class="acm-l">Week4&#x9583;&#x5024;</div><div class="acm-v warn">80%&#x4EE5;&#x4E0A;</div></div>
-      </div>
-      <div class="ac-note">Renegades 3-0 vs Aviators 0-3&#x3002;QB Austin Reed&#x78BA;&#x8A8D;&#x6E08;&#x3002;DIFF/G&#x5DEE;+8&#x70B9;&#x8D85;&#x3002;&#x30DB;&#x30FC;&#x30E0;+4%&#x8003;&#x616E;&#x6E08;&#x3002;conf 85% &gt; Week4&#x9583;&#x5024;80%&#x3002;</div>
-      <div class="ac-date">&#x1F4C5; 2026-04-18 09:00 JST &mdash; UFL Week 4</div>
-    </div>
-
-    <!-- SL Warrington (4/19) UPDATED EV+32% conf80% -->
+    <!-- SL Warrington (4/19) -->
     <div class="active-card" style="border-color:#bfdbfe60;background:linear-gradient(135deg,#bfdbfe08,transparent);">
       <div class="ac-sport">&#x1F3C9; Super League &mdash; Round 8 2026</div>
-      <div class="ac-match">&#x30AB;&#x30BF;&#x30EB;&#x30FC;&#x30CB;&#x30E3;&#x30FB;&#x30C9;&#x30E9;&#x30B4;&#x30F3;&#x30BA; vs &#x30A6;&#x30A9;&#x30EA;&#x30F3;&#x30C8;&#x30F3;&#x30FB;&#x30A6;&#x30EB;&#x30D6;&#x30BA; <span class="badge badge-go">GO</span></div>
-      <div class="ac-rec">&#x63A8;&#x5968;: <strong style="color:#3fb950;">&#x30A6;&#x30A9;&#x30EA;&#x30F3;&#x30C8;&#x30F3;&#x30FB;&#x30A6;&#x30EB;&#x30D6;&#x30BA;</strong></div>
+      <div class="ac-match"><span class="name-ja">&#x30AB;&#x30BF;&#x30EB;&#x30FC;&#x30CB;&#x30E3;&#x30FB;&#x30C9;&#x30E9;&#x30B4;&#x30F3;&#x30BA; vs &#x30A6;&#x30A9;&#x30EA;&#x30F3;&#x30C8;&#x30F3;&#x30FB;&#x30A6;&#x30EB;&#x30D6;&#x30BA;</span><span class="name-en">Catalans Dragons vs Warrington Wolves</span> <span class="badge badge-go">GO</span></div>
+      <div class="ac-rec">&#x63A8;&#x5968;: <strong style="color:#3fb950;"><span class="name-ja">&#x30A6;&#x30A9;&#x30EA;&#x30F3;&#x30C8;&#x30F3;&#x30FB;&#x30A6;&#x30EB;&#x30D6;&#x30BA;</span><span class="name-en">Warrington Wolves</span></strong></div>
       <div class="ac-metrics">
         <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.65</div></div>
         <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+32.0%</div></div>
@@ -471,122 +519,6 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
       <div class="ac-date">&#x1F4C5; 2026-04-19 JST &mdash; Super League R8 (Perpignan, France)</div>
     </div>
 
-    <!-- ATP Barcelona R1 HIT -->
-    <div class="active-card" style="border-color:#23863640;background:linear-gradient(135deg,#23863610,transparent);opacity:.8;">
-      <div class="ac-sport">&#x1F3BE; ATP &mdash; Barcelona R1 2026 <span class="badge badge-hit">HIT &#x2713;</span></div>
-      <div class="ac-match">2026-04-14 JST / Barcelona Clay R1</div>
-      <div class="ac-rec" style="color:#3fb950;">&#x30E0;&#x30BB;&#x30C3;&#x30C6;&#x30A3; 7-5 6-2</div>
-      <div class="ac-metrics">
-        <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.27</div></div>
-        <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+9.7%</div></div>
-        <div class="acm"><div class="acm-l">&#x5B9F;&#x7E3E;EV</div><div class="acm-v ev">+0.27u</div></div>
-        <div class="acm"><div class="acm-l">&#x78BA;&#x4FE1;&#x5EA6;</div><div class="acm-v">86.4%</div></div>
-      </div>
-      <div class="ac-note">cElo &#x30E0;&#x30BB;&#x30C3;&#x30C6;&#x30A3; ~2017 / &#x30E9;&#x30F3;&#x30C0;&#x30EB;&#x30FC;&#x30B5; ~1648. conf 86.4% / EV+9.7%</div>
-      <div class="ac-date">&#x1F4C5; 2026-04-14 JST &#x2713;&#x78BA;&#x5B9A;</div>
-    </div>
-
-    <!-- ATP Munich R1 Cobolli HIT -->
-    <div class="active-card" style="border-color:#23863640;background:linear-gradient(135deg,#23863610,transparent);opacity:.8;">
-      <div class="ac-sport">&#x1F3BE; ATP &mdash; Munich R1 2026 <span class="badge badge-hit">HIT &#x2713;</span></div>
-      <div class="ac-match">2026-04-14 JST / Munich Clay R1</div>
-      <div class="ac-rec" style="color:#3fb950;">&#x30B3;&#x30DC;&#x30C3;&#x30EA; 6-4 7-5</div>
-      <div class="ac-metrics">
-        <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.21</div></div>
-        <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+8.7%</div></div>
-        <div class="acm"><div class="acm-l">&#x5B9F;&#x7E3E;EV</div><div class="acm-v ev">+0.21u</div></div>
-        <div class="acm"><div class="acm-l">&#x78BA;&#x4FE1;&#x5EA6;</div><div class="acm-v">89.8%</div></div>
-      </div>
-      <div class="ac-note">cElo &#x30B3;&#x30DC;&#x30C3;&#x30EA; 1929 / &#x30C7;&#x30C9;&#x30A5;&#x30E9;=&#x30D1;&#x30EB;&#x30E1;&#x30ED; 1551. conf 89.8% / EV+8.7%</div>
-      <div class="ac-date">&#x1F4C5; 2026-04-14 JST &#x2713;&#x78BA;&#x5B9A;</div>
-    </div>
-
-    <!-- ATP Munich R1 Kopriva HIT -->
-    <div class="active-card" style="border-color:#23863640;background:linear-gradient(135deg,#23863610,transparent);opacity:.8;">
-      <div class="ac-sport">&#x1F3BE; ATP &mdash; Munich R1 2026 <span class="badge badge-hit">HIT &#x2713;</span></div>
-      <div class="ac-match">2026-04-14 JST / Munich Clay R1</div>
-      <div class="ac-rec" style="color:#3fb950;">&#x30B3;&#x30D7;&#x30B8;&#x30D0; 6-3 5-7 6-2</div>
-      <div class="ac-metrics">
-        <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.36</div></div>
-        <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+9.8%</div></div>
-        <div class="acm"><div class="acm-l">&#x5B9F;&#x7E3E;EV</div><div class="acm-v ev">+0.36u</div></div>
-        <div class="acm"><div class="acm-l">&#x78BA;&#x4FE1;&#x5EA6;</div><div class="acm-v">80.7%</div></div>
-      </div>
-      <div class="ac-note">cElo &#x30B3;&#x30D7;&#x30B8;&#x30D0; 1699 / &#x30A8;&#x30F3;&#x30B2;&#x30EB; 1388. conf 80.7% / EV+9.8%</div>
-      <div class="ac-date">&#x1F4C5; 2026-04-14 JST &#x2713;&#x78BA;&#x5B9A;</div>
-    </div>
-
-        <!-- WTA Stuttgart Paolini PENDING (result suspended, 2026-04-15) -->
-    <div class="active-card" style="border-color:#f9a8d460;background:linear-gradient(135deg,#f9a8d408,transparent);opacity:.85;">
-      <div class="ac-sport">&#x1F3BE; WTA &mdash; Stuttgart R2 2026 <span class="badge badge-go">GO</span></div>
-      <div class="ac-match">&#x30BD;&#x30F3;&#x30E1;&#x30BA; Z. vs &#x30D1;&#x30AA;&#x30EA;&#x30FC;&#x30CB; J.(4)</div>
-      <div class="ac-rec">&#x63A8;&#x5968;: <strong style="color:#3fb950;">&#x30D1;&#x30AA;&#x30EA;&#x30FC;&#x30CB;&#x30FB;&#x30B8;&#x30A1;&#x30B9;&#x30DF;&#x30F3;</strong></div>
-      <div class="ac-metrics">
-        <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.24</div></div>
-        <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+5.4%</div></div>
-        <div class="acm"><div class="acm-l">&#x78BA;&#x4FE1;&#x5EA6;</div><div class="acm-v">78%</div></div>
-        <div class="acm"><div class="acm-l">cElo&#x5DEE;</div><div class="acm-v rule">+300pt</div></div>
-      </div>
-      <div class="ac-note">&#x26A0;&#xFE0F; 4/15 1st Set&#x4E2D;&#x65AD;&#x4E2D;&#xFF08;&#x305F;&#x3060;&#x3057;&#x7D50;&#x679C;&#x672A;&#x78BA;&#x8A8D;&#xFF09;&#x3002;Stuttgart indoor clay&#x3002;cElo&#x5DEE;300pt&#x3002;&#x7D50;&#x679C;&#x5F85;&#x6A5F;&#x3002;</div>
-      <div class="ac-date">&#x1F4C5; 2026-04-15 JST &mdash; Stuttgart R2 &#x23F3; PENDING</div>
-    </div>
-<!-- ATP MC Final SKIP -->
-    <div class="active-card" style="border-color:#30363d;background:linear-gradient(135deg,#30363d10,transparent);opacity:.7;">
-      <div class="ac-sport">&#x1F3BE; ATP &mdash; MC2026 &#x6C7A;&#x52DD; <span class="badge badge-skip">SKIP&#xFF08;&#x89B3;&#x6226;&#xFF09;</span></div>
-      <div class="ac-match">&#x30A2;&#x30EB;&#x30AB;&#x30E9;&#x30B9; C.(1) vs &#x30B7;&#x30CA;&#x30FC; J.(2)</div>
-      <div class="ac-rec" style="color:#3fb950;">&#x7D50;&#x679C;: &#x30B7;&#x30CA;&#x30FC; 7-6(5) 6-3 &mdash; &#x4E88;&#x6E2C;&#x306A;&#x3057;&#xFF08;SKIP&#xFF09;</div>
-      <div class="ac-metrics">
-        <div class="acm"><div class="acm-l">cElo&#x5DEE;</div><div class="acm-v rule">~20pt</div></div>
-        <div class="acm"><div class="acm-l">L1&#x5224;&#x5B9A;</div><div class="acm-v" style="color:#f85149;">&#x4E0D;&#x901A;&#x904E;</div></div>
-        <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;</div><div class="acm-v" style="color:#8b949e;">50/50</div></div>
-        <div class="acm"><div class="acm-l">bet</div><div class="acm-v rule">&#x306A;&#x3057;</div></div>
-      </div>
-      <div class="ac-note">SKIP&#x6B63;&#x89E3;&#xFF08;&#x5DEE;&#x306A;&#x3057;&#x3067;&#x5F53;&#x3066;&#x3066;&#x3082;&#x904B;&#xFF09;&#x3002;&#x30B7;&#x30CA;&#x30FC;&#x304C;7-6(5) 6-3&#x3067;&#x512A;&#x52DD;&#x3002;</div>
-      <div class="ac-date">&#x1F4C5; 2026-04-13 JST &#x2713;&#x5B8C;&#x4E86;</div>
-    </div>
-
-    <!-- UFL Week 3 Dallas HIT -->
-    <div class="active-card" style="border-color:#23863640;background:linear-gradient(135deg,#23863610,transparent);opacity:.8;">
-      <div class="ac-sport">&#x1F3C8; UFL Week 3 &mdash; &#x30B3;&#x30ED;&#x30F3;&#x30D0;&#x30B9; @ &#x30C0;&#x30E9;&#x30B9; <span class="badge badge-hit">HIT &#x2713;</span></div>
-      <div class="ac-match">2026-04-12 JST / Cotton Bowl, Dallas</div>
-      <div class="ac-rec" style="color:#3fb950;">&#x30C0;&#x30E9;&#x30B9;&#x30FB;&#x30EC;&#x30CD;&#x30B2;&#x30FC;&#x30BA; 28 &mdash; 23 &#x30B3;&#x30ED;&#x30F3;&#x30D0;&#x30B9;&#x30FB;&#x30A2;&#x30D3;&#x30A8;&#x30A4;&#x30BF;&#x30FC;&#x30BA;</div>
-      <div class="ac-metrics">
-        <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.32</div></div>
-        <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+8.2%</div></div>
-        <div class="acm"><div class="acm-l">&#x5B9F;&#x7E3E;EV</div><div class="acm-v ev">+0.32u</div></div>
-        <div class="acm"><div class="acm-l">&#x78BA;&#x4FE1;&#x5EA6;</div><div class="acm-v">82%</div></div>
-      </div>
-      <div class="ac-note">PD&#x5DEE;30pt&#xFF08;&#x30C0;&#x30E9;&#x30B9; +17.5/&#x8A66;&#x5408; vs &#x30B3;&#x30ED;&#x30F3;&#x30D0;&#x30B9; -12.5/&#x8A66;&#x5408;&#xFF09;&#x304C;&#x5730;&#x529B;&#x5DEE;&#x901A;&#x308A;&#x3002;</div>
-      <div class="ac-date">&#x1F4C5; 2026-04-12 JST &#x2713;&#x78BA;&#x5B9A;</div>
-    </div>
-
-    <!-- NBA Rockets HIT -->
-    <div class="active-card" style="border-color:#23863640;background:linear-gradient(135deg,#23863610,transparent);opacity:.8;">
-      <div class="ac-sport">&#x1F3C0; NBA &mdash; &#x30B0;&#x30EA;&#x30BA;&#x30EA;&#x30FC;&#x30BA; @ &#x30ED;&#x30B1;&#x30C3;&#x30C8; <span class="badge badge-hit">HIT &#x2713;</span></div>
-      <div class="ac-match">2026-04-12 JST / Toyota Center, Houston</div>
-      <div class="ac-rec" style="color:#3fb950;">&#x30D2;&#x30E5;&#x30FC;&#x30B9;&#x30C8;&#x30F3;&#x30FB;&#x30ED;&#x30B1;&#x30C3;&#x30C4;&#x30B9; 124 &mdash; 109 &#x30E1;&#x30F3;&#x30D5;&#x30A3;&#x30B9;&#x30FB;&#x30B0;&#x30EA;&#x30BA;&#x30EA;&#x30FC;&#x30BA;</div>
-      <div class="ac-metrics">
-        <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.20</div></div>
-        <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+5.6%</div></div>
-        <div class="acm"><div class="acm-l">&#x5B9F;&#x7E3E;EV</div><div class="acm-v ev">+0.20u</div></div>
-        <div class="acm"><div class="acm-l">&#x78BA;&#x4FE1;&#x5EA6;</div><div class="acm-v">88%</div></div>
-      </div>
-      <div class="ac-date">&#x1F4C5; 2026-04-12 JST &#x2713;&#x78BA;&#x5B9A;&#x6E08;</div>
-    </div>
-
-    <!-- NBA Wizards SKIP -->
-    <div class="active-card" style="border-color:#30363d;background:linear-gradient(135deg,#30363d08,transparent);opacity:.7;">
-      <div class="ac-sport">&#x1F3C0; NBA &mdash; &#x30A6;&#x30A3;&#x30B6;&#x30FC;&#x30BA; @ &#x30AD;&#x30E3;&#x30D0;&#x30EA;&#x30A2;&#x30FC;&#x30BA; <span class="badge badge-skip">SKIP</span></div>
-      <div class="ac-match">2026-04-12 JST / Cavs 130-126&#xFF08;&#x53C2;&#x8003;&#x8A18;&#x9332;&#xFF09;</div>
-      <div class="ac-rec" style="color:#8b949e;">&#x30AA;&#x30C3;&#x30BA;&#x672A;&#x78BA;&#x8A8D;&#x306E;&#x305F;&#x3081;&#x30D9;&#x30C3;&#x30C8;&#x672A;&#x5B9F;&#x884C;</div>
-      <div class="ac-metrics">
-        <div class="acm"><div class="acm-l">&#x7D50;&#x679C;</div><div class="acm-v" style="color:#3fb950;">Cavs&#x52DD;</div></div>
-        <div class="acm"><div class="acm-l">&#x30DF;&#x30C3;&#x30C1;&#x30A7;&#x30EB;</div><div class="acm-v ev">48pts</div></div>
-        <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v warn">&#x672A;&#x53D6;&#x5F97;</div></div>
-        <div class="acm"><div class="acm-l">EV</div><div class="acm-v rule">&#x30AB;&#x30A6;&#x30F3;&#x30C8;&#x5916;</div></div>
-      </div>
-      <div class="ac-date">&#x1F4C5; 2026-04-12 JST &mdash; &#x7D71;&#x8A08;&#x30CE;&#x30FC;&#x30AB;&#x30A6;&#x30F3;&#x30C8;</div>
-    </div>
   </div></div>
 </div>
 <!-- ===== 全履歴 ===== -->
@@ -3186,9 +3118,9 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
         <tbody id="highprob-rows">
           <tr>
             <td style="text-align:center;font-weight:700;color:var(--text);">1</td>
-            <td style="font-weight:600;">Swiatek I. vs<br><strong>Siegemund L.</strong></td>
+            <td style="font-weight:600;"><span class="name-ja">シフィアテク I.</span><span class="name-en">Swiatek I.</span> vs<br><strong><span class="name-ja">ジーゲムント L.</span><span class="name-en">Siegemund L.</span></strong></td>
             <td>WTA Stuttgart R2<br><span style="font-size:10px;color:var(--text2);">2026-04-16</span></td>
-            <td><span class="badge badge-go">Swiatek</span><br><span style="font-size:9px;color:var(--text2);">予測のみ</span></td>
+            <td><span class="badge badge-go"><span class="name-ja">シフィアテク</span><span class="name-en">Swiatek</span></span><br><span style="font-size:9px;color:var(--text2);">予測のみ</span></td>
             <td style="text-align:center;font-weight:700;color:#4ade80;">92%</td>
             <td style="text-align:center;">@1.02</td>
             <td style="font-size:11px;color:var(--text2);">WTA #1 vs Qualifier。cElo差400pt超。Clay最強格。予測確実性最高位。</td>
@@ -3196,49 +3128,49 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
           </tr>
           <tr>
             <td style="text-align:center;font-weight:700;color:var(--text);">2</td>
-            <td style="font-weight:600;">Alcaraz C. vs<br><strong>Machac T.</strong></td>
+            <td style="font-weight:600;"><span class="name-ja">アルカラス C.</span><span class="name-en">Alcaraz C.</span> vs<br><strong><span class="name-ja">マハッチ T.</span><span class="name-en">Machac T.</span></strong></td>
             <td>ATP Barcelona R2<br><span style="font-size:10px;color:var(--text2);">2026-04-16</span></td>
-            <td><span class="badge badge-go">Alcaraz</span><br><span style="font-size:9px;color:var(--text2);">予測のみ</span></td>
+            <td><span class="badge badge-go"><span class="name-ja">アルカラス</span><span class="name-en">Alcaraz</span></span><br><span style="font-size:9px;color:var(--text2);">予測のみ</span></td>
             <td style="text-align:center;font-weight:700;color:#4ade80;">88%</td>
             <td style="text-align:center;">@1.11</td>
-            <td style="font-size:11px;color:var(--text2);">ATP #3 Clay specialist vs 世界66位。cElo差300pt超。Barcelona地元。</td>
+            <td style="font-size:11px;color:var(--text2);">ATP #3 クレー専門家 vs 世界66位。cElo差300pt超。バルセロナ地元。</td>
             <td><span class="badge badge-pending">PENDING</span></td>
           </tr>
           <tr style="background:rgba(46,160,67,.06);">
             <td style="text-align:center;font-weight:700;color:var(--text);">3</td>
-            <td style="font-weight:600;">Columbus Aviators @<br><strong>Arlington Renegades</strong></td>
+            <td style="font-weight:600;"><span class="name-ja">コロンバス・アビエイターズ</span><span class="name-en">Columbus Aviators</span> @<br><strong><span class="name-ja">アーリントン・レネゲーズ</span><span class="name-en">Arlington Renegades</span></strong></td>
             <td>UFL W4<br><span style="font-size:10px;color:var(--text2);">2026-04-18</span></td>
-            <td><span class="badge badge-go">Renegades</span><br><span style="font-size:9px;color:#3fb950;font-weight:600;">&#x2714; GO推奨重複</span></td>
+            <td><span class="badge badge-go"><span class="name-ja">レネゲーズ</span><span class="name-en">Renegades</span></span><br><span style="font-size:9px;color:#3fb950;font-weight:600;">&#x2714; GO推奨重複</span></td>
             <td style="text-align:center;font-weight:700;color:#4ade80;">85%</td>
             <td style="text-align:center;">@1.36</td>
-            <td style="font-size:11px;color:var(--text2);">Renegades 3-0 vs Aviators 0-3。DIFF/G差。Austin Reed QB確認済。ホーム優位+4%。EV+15.6%。</td>
+            <td style="font-size:11px;color:var(--text2);">レネゲーズ 3-0 vs アビエイターズ 0-3。DIFF/G差。Austin Reed QB確認済。ホーム優位+4%。EV+15.6%。</td>
             <td><span class="badge badge-pending">PENDING</span></td>
           </tr>
           <tr style="background:rgba(46,160,67,.06);">
             <td style="text-align:center;font-weight:700;color:var(--text);">4</td>
-            <td style="font-weight:600;">Houston Gamblers vs<br><strong>Louisville Kings</strong></td>
+            <td style="font-weight:600;"><span class="name-ja">ヒューストン・ギャンブラーズ</span><span class="name-en">Houston Gamblers</span> vs<br><strong><span class="name-ja">ルイビル・キングス</span><span class="name-en">Louisville Kings</span></strong></td>
             <td>UFL W4<br><span style="font-size:10px;color:var(--text2);">2026-04-17</span></td>
-            <td><span class="badge badge-go">Louisville</span><br><span style="font-size:9px;color:#3fb950;font-weight:600;">&#x2714; GO推奨重複</span></td>
+            <td><span class="badge badge-go"><span class="name-ja">ルイビル</span><span class="name-en">Louisville</span></span><br><span style="font-size:9px;color:#3fb950;font-weight:600;">&#x2714; GO推奨重複</span></td>
             <td style="text-align:center;font-weight:700;color:#4ade80;">82%</td>
             <td style="text-align:center;">@1.65</td>
-            <td style="font-size:11px;color:var(--text2);">Louisville 3-0 vs Gamblers 0-3。DIFF/G差8点超。OLine格差。EV+35.3%。</td>
+            <td style="font-size:11px;color:var(--text2);">ルイビル 3-0 vs ギャンブラーズ 0-3。DIFF/G差8点超。OLine格差。EV+35.3%。</td>
             <td><span class="badge badge-pending">PENDING</span></td>
           </tr>
           <tr>
             <td style="text-align:center;font-weight:700;color:var(--text);">5</td>
-            <td style="font-weight:600;">Samsonova L. vs<br><strong>Gauff C.</strong></td>
+            <td style="font-weight:600;"><span class="name-ja">サムソノワ L.</span><span class="name-en">Samsonova L.</span> vs<br><strong><span class="name-ja">ゴーフ C.</span><span class="name-en">Gauff C.</span></strong></td>
             <td>WTA Stuttgart R2<br><span style="font-size:10px;color:var(--text2);">2026-04-16</span></td>
-            <td><span class="badge badge-go">Gauff</span><br><span style="font-size:9px;color:var(--text2);">予測のみ</span></td>
+            <td><span class="badge badge-go"><span class="name-ja">ゴーフ</span><span class="name-en">Gauff</span></span><br><span style="font-size:9px;color:var(--text2);">予測のみ</span></td>
             <td style="text-align:center;font-weight:700;color:#4ade80;">81%</td>
             <td style="text-align:center;">@1.15</td>
-            <td style="font-size:11px;color:var(--text2);">WTA #3 vs 世界10位前後。Gauff Clay成績良好。推定勝率81%。EV-6.7%のため予測のみ。</td>
+            <td style="font-size:11px;color:var(--text2);">WTA #3 vs 世界10位前後。ゴーフ クレー成績良好。推定勝率81%。EV-6.7%のため予測のみ。</td>
             <td><span class="badge badge-pending">PENDING</span></td>
           </tr>
           <tr style="background:rgba(46,160,67,.06);">
             <td style="text-align:center;font-weight:700;color:var(--text);">6</td>
-            <td style="font-weight:600;">Moutet C. vs<br><strong>Musetti L.</strong></td>
+            <td style="font-weight:600;"><span class="name-ja">ムテ C.</span><span class="name-en">Moutet C.</span> vs<br><strong><span class="name-ja">ムセッティ L.</span><span class="name-en">Musetti L.</span></strong></td>
             <td>ATP Barcelona R2<br><span style="font-size:10px;color:var(--text2);">2026-04-16</span></td>
-            <td><span class="badge badge-go">Musetti</span><br><span style="font-size:9px;color:#3fb950;font-weight:600;">&#x2714; GO推奨重複</span></td>
+            <td><span class="badge badge-go"><span class="name-ja">ムセッティ</span><span class="name-en">Musetti</span></span><br><span style="font-size:9px;color:#3fb950;font-weight:600;">&#x2714; GO推奨重複</span></td>
             <td style="text-align:center;font-weight:700;color:#4ade80;">78%</td>
             <td style="text-align:center;">@1.37</td>
             <td style="font-size:11px;color:var(--text2);">cElo差271pt。傷病歴補正-5%適用（R013）→conf 78%。EV+6.9%。</td>
@@ -3246,12 +3178,12 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
           </tr>
           <tr style="background:rgba(46,160,67,.06);">
             <td style="text-align:center;font-weight:700;color:var(--text);">7</td>
-            <td style="font-weight:600;">Sonmez Z. vs<br><strong>Paolini J.(4)</strong></td>
+            <td style="font-weight:600;"><span class="name-ja">ソンメズ Z.</span><span class="name-en">Sonmez Z.</span> vs<br><strong><span class="name-ja">パオリーニ J.(4)</span><span class="name-en">Paolini J.(4)</span></strong></td>
             <td>WTA Stuttgart R2<br><span style="font-size:10px;color:var(--text2);">2026-04-15</span></td>
-            <td><span class="badge badge-go">Paolini</span><br><span style="font-size:9px;color:#3fb950;font-weight:600;">&#x2714; GO推奨重複</span></td>
+            <td><span class="badge badge-go"><span class="name-ja">パオリーニ</span><span class="name-en">Paolini</span></span><br><span style="font-size:9px;color:#3fb950;font-weight:600;">&#x2714; GO推奨重複</span></td>
             <td style="text-align:center;font-weight:700;color:#4ade80;">78%</td>
             <td style="text-align:center;">@1.24</td>
-            <td style="font-size:11px;color:var(--text2);">cElo差300pt（Paolini 1916 vs Sonmez 1616）。推定勝率78%。EV+5.4%。</td>
+            <td style="font-size:11px;color:var(--text2);">cElo差300pt（パオリーニ 1916 vs ソンメズ 1616）。推定勝率78%。EV+5.4%。</td>
             <td><span class="badge badge-pending">PENDING</span></td>
           </tr>
         </tbody>
@@ -3271,11 +3203,11 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px;">
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
           <span style="font-weight:700;font-size:15px;color:var(--text);">&#x1F947; 1位</span>
-          <span style="font-size:13px;color:var(--text2);">Louisville &times; Renegades &times; Musetti（3試合）</span>
+          <span style="font-size:13px;color:var(--text2);"><span class="name-ja">ルイビル × レネゲーズ × ムセッティ</span><span class="name-en">Louisville × Renegades × Musetti</span>（3試合）</span>
           <span class="badge badge-pending" style="margin-left:auto;">PENDING</span>
         </div>
         <div style="font-size:12px;color:var(--text2);margin-bottom:8px;">
-          Houston vs <strong>Louisville Kings</strong> (UFL W4) &times; Aviators @ <strong>Renegades</strong> (UFL W4) &times; Moutet vs <strong>Musetti</strong> (Barcelona R2)
+          <span class="name-ja">ヒューストン</span><span class="name-en">Houston Gamblers</span> vs <strong><span class="name-ja">ルイビル・キングス</span><span class="name-en">Louisville Kings</span></strong> (UFL W4) &times; <span class="name-ja">アビエイターズ @</span><span class="name-en">Aviators @</span> <strong><span class="name-ja">レネゲーズ</span><span class="name-en">Renegades</span></strong> (UFL W4) &times; <span class="name-ja">ムテ</span><span class="name-en">Moutet</span> vs <strong><span class="name-ja">ムセッティ</span><span class="name-en">Musetti</span></strong> (バルセロナ R2)
         </div>
         <div style="display:flex;gap:16px;flex-wrap:wrap;font-size:12px;">
           <span>全体推定勝率: <strong style="color:#4ade80;">54.4%</strong></span>
@@ -3289,11 +3221,11 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px;">
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
           <span style="font-weight:700;font-size:15px;color:var(--text);">&#x1F948; 2位</span>
-          <span style="font-size:13px;color:var(--text2);">Louisville &times; Renegades &times; Musetti &times; Alcaraz（4試合）</span>
+          <span style="font-size:13px;color:var(--text2);"><span class="name-ja">ルイビル × レネゲーズ × ムセッティ × アルカラス</span><span class="name-en">Louisville × Renegades × Musetti × Alcaraz</span>（4試合）</span>
           <span class="badge badge-pending" style="margin-left:auto;">PENDING</span>
         </div>
         <div style="font-size:12px;color:var(--text2);margin-bottom:8px;">
-          +<strong>Alcaraz</strong> (Barcelona R2) 追加
+          +<strong><span class="name-ja">アルカラス</span><span class="name-en">Alcaraz</span></strong> (バルセロナ R2) 追加
         </div>
         <div style="display:flex;gap:16px;flex-wrap:wrap;font-size:12px;">
           <span>全体推定勝率: <strong style="color:#4ade80;">47.8%</strong></span>
@@ -3307,11 +3239,11 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px;">
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
           <span style="font-weight:700;font-size:15px;color:var(--text);">&#x1F949; 3位</span>
-          <span style="font-size:13px;color:var(--text2);">Louisville &times; Renegades &times; Musetti &times; Paolini（4試合）</span>
+          <span style="font-size:13px;color:var(--text2);"><span class="name-ja">ルイビル × レネゲーズ × ムセッティ × パオリーニ</span><span class="name-en">Louisville × Renegades × Musetti × Paolini</span>（4試合）</span>
           <span class="badge badge-pending" style="margin-left:auto;">PENDING</span>
         </div>
         <div style="font-size:12px;color:var(--text2);margin-bottom:8px;">
-          +<strong>Paolini</strong> (WTA Stuttgart R2) 追加
+          +<strong><span class="name-ja">パオリーニ</span><span class="name-en">Paolini</span></strong> (WTA シュトゥットガルト R2) 追加
         </div>
         <div style="display:flex;gap:16px;flex-wrap:wrap;font-size:12px;">
           <span>全体推定勝率: <strong style="color:#4ade80;">42.4%</strong></span>
@@ -3325,11 +3257,11 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px;">
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
           <span style="font-weight:700;font-size:15px;color:var(--text);">4位</span>
-          <span style="font-size:13px;color:var(--text2);">Louisville &times; Renegades &times; Musetti &times; Alcaraz &times; Paolini（5試合）</span>
+          <span style="font-size:13px;color:var(--text2);"><span class="name-ja">ルイビル × レネゲーズ × ムセッティ × アルカラス × パオリーニ</span><span class="name-en">Louisville × Renegades × Musetti × Alcaraz × Paolini</span>（5試合）</span>
           <span class="badge badge-pending" style="margin-left:auto;">PENDING</span>
         </div>
         <div style="font-size:12px;color:var(--text2);margin-bottom:8px;">
-          +<strong>Alcaraz</strong> &amp; <strong>Paolini</strong> 追加（5連複）
+          +<strong><span class="name-ja">アルカラス</span><span class="name-en">Alcaraz</span></strong> &amp; <strong><span class="name-ja">パオリーニ</span><span class="name-en">Paolini</span></strong> 追加（5連複）
         </div>
         <div style="display:flex;gap:16px;flex-wrap:wrap;font-size:12px;">
           <span>全体推定勝率: <strong style="color:#4ade80;">37.3%</strong></span>
@@ -3343,11 +3275,11 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px;">
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
           <span style="font-weight:700;font-size:15px;color:var(--text);">5位</span>
-          <span style="font-size:13px;color:var(--text2);">Louisville &times; Renegades &times; Musetti &times; Swiatek（4試合）</span>
+          <span style="font-size:13px;color:var(--text2);"><span class="name-ja">ルイビル × レネゲーズ × ムセッティ × シフィアテク</span><span class="name-en">Louisville × Renegades × Musetti × Swiatek</span>（4試合）</span>
           <span class="badge badge-pending" style="margin-left:auto;">PENDING</span>
         </div>
         <div style="font-size:12px;color:var(--text2);margin-bottom:8px;">
-          +<strong>Swiatek</strong> (WTA Stuttgart R2) 追加
+          +<strong><span class="name-ja">シフィアテク</span><span class="name-en">Swiatek</span></strong> (WTA シュトゥットガルト R2) 追加
         </div>
         <div style="display:flex;gap:16px;flex-wrap:wrap;font-size:12px;">
           <span>全体推定勝率: <strong style="color:#4ade80;">50.0%</strong></span>
@@ -3378,6 +3310,12 @@ function showTab(id) {
   document.getElementById('tab-' + id).classList.add('active');
   document.getElementById('content-' + id).classList.add('active');
 }
+
+function toggleLang() {
+  const en = document.body.classList.toggle('lang-en');
+  document.getElementById('lang-toggle').textContent = en ? 'JA' : 'EN';
+}
+
 </script>
 </body>
 </html>
