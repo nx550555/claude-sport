@@ -77,7 +77,14 @@
       "description": "W007にindoor_clay_noteを追記済みだが、Stuttgart 2026の結果が全部揃ったらupset率と閾値（cElo差・オッズ）を数値化する。",
       "trigger_threshold": 1,
       "current_count": 0,
-      "evidence": [],
+      "evidence": [
+        {
+          "id": "U007",
+          "match": "Sonmez (Q) vs Paolini (4) Stuttgart 2026",
+          "pattern": "cElo差200pt+のqualifier upset。indoor clay型フラット攻撃系。6-2 6-2完勝。",
+          "tag": "wta_stuttgart_r1_upset"
+        }
+      ],
       "tag_matches": [
         "wta_stuttgart_r1_complete"
       ],
@@ -134,6 +141,29 @@
         "atp_b2b_inter_tournament"
       ],
       "note": "3件揃ったら補正値(-6%〜-10%)と適用条件（何ラウンド以上+何日以内）を数値化してR014として実装。"
+    },
+    {
+      "candidate_id": "P007",
+      "status": "watching",
+      "target_rule_file": "core/rules_wta.json (and rules_tennis.json)",
+      "proposed_rule_id": "W011 / R013",
+      "title": "シーズンフォームスランプ補正（cElo過大評価防止）",
+      "description": "cEloは過去累積勝率を表すため、当季のフォームスランプを2-4週遅延でしか反映しない。特に前年クレー主要タイトル保持者（ローマ/全仏優勝等）が翌年同大会に出場する場合、cEloは高値を保つが実際の競技力は大幅低下していることがある。当季勝率60%未満かつランキング上位選手 → 信頼度-10%補正。",
+      "trigger_threshold": 3,
+      "current_count": 1,
+      "evidence": [
+        {
+          "id": "U007",
+          "match": "Sonmez vs Paolini (Stuttgart 2026 R1)",
+          "pattern": "Paolini 2026: 8-7(53%)、20位圏外に6敗。cEloは2025年ローマ優勝・全仏準優勝を反映→過大評価。2ndサーブPts 37.5%、BP変換33.3%→実力より大幅低下。",
+          "tag": "wta_form_slump_top_player"
+        }
+      ],
+      "tag_matches": [
+        "wta_form_slump_top_player",
+        "atp_form_slump_top_player"
+      ],
+      "note": "3件揃ったら「当季勝率チェック」をL3必須確認項目として追加する。適用基準案: 当季勝率<60% AND ランキング上位10位以内 → 信頼度-10%。ATP版はR013、WTA版はW011として追加予定。特に前年タイトル保持者の翌年ディフェンス試合は要注意フラグを立てる。"
     }
   ],
   "implemented_rules": [

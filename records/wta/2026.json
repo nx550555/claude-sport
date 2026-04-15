@@ -403,7 +403,20 @@
           "status": "completed",
           "match_duration": "1h15m",
           "miss_layer": "L2_SurfaceUpset",
-          "miss_analysis": "【要追加調査】Sonmez vs Paolini Stuttgart 2026 R1。スコア6-2 6-2(1h15m)。Sonmez 58.2%総ポイント獲得。indoor clay速サーフェス + Sonmezのフラット攻撃系ゲームがcElo差(推定200pt+)を超えた可能性。miss_analysis深掘りは次セッションで実施予定。"
+          "miss_analysis": "【スコア】Sonmez 6-2 6-2 (1h15m)。Paolini GO @1.24 → MISS。【確認済みスタッツ（WTA公式）】Sonmez: 1stサーブ率72.2%、2ndサーブポイント獲得率73.3%(11/15)、総獲得ポイント64/110(58.2%)。Paolini: 1stサーブ率57.1%(2ndサーブが多発)、2ndサーブポイント獲得率37.5%(9/24)、BP12本中4本のみ決定(33.3%)、総獲得ポイント46/110(41.8%)。【敗因3層分析】(1) L3_FormSlump（主因）: Paolini 2026年成績8勝7敗(53%)、世界20位圏外に6敗。cEloは2025年ピーク（ローマ優勝・全仏準優勝）を反映するが、2026年は別人。2025年クレー獲得ポイントの防衛プレッシャーが精神的重圧となっている可能性。cEloは当年フォームを反映するのに2-4週遅延がある（Fonsecaと同じ問題の逆）。(2) L2_ServeReturn（副因）: Paoliniの2ndサーブポイント獲得率37.5%は深刻。1stサーブ率57.1%→2ndサーブが24本と多発→Sonmezが全て積極的に攻撃。SonmezはPaoliniの2ndサーブに対して一貫してアグレッシブリターンを実行。BP12本創出したのにたった4本しか決められない(33.3%)のは精神的・技術的崩壊のシグナル。(3) UF01_SurfaceSpecific（寄与因子）: Stuttgart indoor clay（速い表面）はSonmezのフラット/アグレッシブゲームに有利。Sonmez自身の2ndサーブ獲得率も73.3%と高く、Paoliniのヘビートップスピンがindoor clay速バウンドで機能しなかった可能性。【モデルが失敗した根本理由】cElo差で圧倒的優位とされていた選手(Paolini)が2026年に「別の選手」になっていた。フォームスランプをcEloは捉えられない。特に前年大活躍選手がポイント防衛圧力で不調に陥るパターン。【ルール調整候補】当季勝率60%未満かつランキング上位選手 → 信頼度-10%補正。Stuttgart indoor clay: 攻撃型クオリファイアーに追加+補正が必要。",
+          "match_stats": {
+            "sonmez_1st_serve_pct": 72.2,
+            "sonmez_1st_serve_pts_won": "64.1% (25/39)",
+            "sonmez_2nd_serve_pts_won": "73.3% (11/15)",
+            "sonmez_total_pts": "64/110 (58.2%)",
+            "paolini_1st_serve_pct": 57.1,
+            "paolini_1st_serve_pts_won": "59.4% (19/32)",
+            "paolini_2nd_serve_pts_won": "37.5% (9/24)",
+            "paolini_bp_converted": "4/12 (33.3%)",
+            "paolini_total_pts": "46/110 (41.8%)",
+            "duration": "1h15m",
+            "source": "WTA Official stats centre"
+          }
         }
       ]
     },

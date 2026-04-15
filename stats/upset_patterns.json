@@ -187,6 +187,45 @@
       "learning": "Masters→次週500/250直行選手の疲弊補正は-3%では不足。主要大会でQF以降まで勝ち残った選手（3-4試合消化）の翌週は-6%〜-10%が妥当。MolcanのようなフレッシュなベースライナーがBublik型トリック選手に勝てる条件が揃っていた。",
       "rule_created": null,
       "rule_candidate": "P006: Masters→翌週大会 B2B疲弊補正強化（QF以降まで勝ち残り→翌週-6~-10%）"
+    },
+    {
+      "id": "U007",
+      "date": "2026-04-15",
+      "sport": "tennis_wta",
+      "tournament": "Porsche Tennis Grand Prix Stuttgart 2026",
+      "round": "R1 (Round of 32)",
+      "favorite": "Paolini J.(4) - WTA7位・2025年ローマ優勝・全仏準優勝",
+      "underdog": "Sonmez Z. (Qualifier)",
+      "strength_diff_metric": "cElo差: 推定200pt+(Paolini clay cElo高値 vs Sonmez qualifier水準)",
+      "market_odds_underdog": null,
+      "result_score": "6-2 6-2 (Sonmez, 1h15m)",
+      "match_stats": {
+        "sonmez_1st_serve_pct": "72.2% (39/54)",
+        "sonmez_2nd_serve_pts_won": "73.3% (11/15)",
+        "sonmez_total_pts": "64/110 (58.2%)",
+        "paolini_1st_serve_pct": "57.1% (32/56)",
+        "paolini_2nd_serve_pts_won": "37.5% (9/24)",
+        "paolini_bp_converted": "4/12 (33.3%)",
+        "paolini_total_pts": "46/110 (41.8%)",
+        "source": "WTA Official stats centre"
+      },
+      "upset_factors": [
+        "L3_FormSlump",
+        "L2_ServeReturn",
+        "UF01"
+      ],
+      "factor_notes": {
+        "L3_FormSlump": "Paolini 2026年成績: 8勝7敗(53%)、世界20位圏外に6敗。「completely out of form in singles in 2026」(tennisnerd.net評)。cEloは2025年ピーク（ローマ優勝・全仏準優勝）を反映しており2026年現在の実力より過大評価。2025年クレー獲得ポイントの防衛プレッシャー（ランキングポイント3,907→減少中）が影響か。cEloの形式スランプ反映ラグが今回のモデル失敗の最大原因。",
+        "L2_ServeReturn": "Paolini 2ndサーブポイント獲得率37.5%(9/24)という壊滅的数字。1stサーブ率57.1%(ATPより低いWTA水準でも低め)→2ndサーブが24本多発。SonmezはPaoliniの2ndサーブを徹底的に攻撃。BP12本創出しながら4本しか決めない(33.3%)は精神的崩壊のシグナル。対照的にSonmezは自身の2ndサーブも73.3%獲得—Paoliniのリターン攻撃を封じた。",
+        "UF01": "Stuttgart indoor clay（速い表面）でSonmezのアグレッシブフラット攻撃が機能。第2セットでSonmez 1stサーブ率83.3%(20/24)→完全支配。Paoliniのヘビートップスピンはindoor clay速バウンドで効果が半減。W007 indoor clay効果が再度確認された（Ostapenko,Korpatsch,Eala,Sonmezで4例目）。"
+      },
+      "our_prediction": "GO (Paolini @1.24, EV+5.4%, conf推定77%)",
+      "our_decision": "MISS (bet -1.0u)",
+      "analysis_note": "最大の学習: cEloは前年度の大活躍を反映するため「ディフェンディングチャンピオン型スランプ」を捉えられない。Paoliniのように前年クレーで大活躍した選手が翌年同大会に来るとき、ポイント防衛プレッシャー+フォーム低下のダブル効果でcElo過大評価になりやすい。当季勝率が53%の選手をcEloだけで「77%信頼度GO」にしたことが根本的ミス。L3にシーズンフォームスランプ検出項目が必要（P007候補として追加）。",
+      "miss_layer": "L3_FormSlump",
+      "learning": "WTA GOで高信頼度候補をスクリーニングする際、当該選手の今季勝率も必ずチェックする。60%未満の場合は-10%補正適用。特に前年クレー主要タイトル保持者は翌年同大会で「ポイント防衛プレッシャー」型スランプに注意。",
+      "rule_created": null,
+      "rule_candidate": "P007: シーズンフォームスランプ補正（当季勝率<60%のランキング上位選手に-10%）"
     }
   ],
   "gamble_bet_candidates": {
@@ -259,7 +298,7 @@
     ]
   },
   "pattern_summary": {
-    "total_upsets_tracked": 5,
+    "total_upsets_tracked": 6,
     "gamble_bet_results": {
       "total": 1,
       "hits": 1,
