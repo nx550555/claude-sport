@@ -1,4 +1,4 @@
-﻿{
+{
   "sport": "nba",
   "season": "2025-26",
   "bet_type": "Moneyline (ML)",
@@ -8,43 +8,197 @@
     "total": 1,
     "hit": 1,
     "hit_rate": 1.0,
-    "ev_total": 0.20,
+    "ev_total": 0.2,
     "note": "NBA-001 Rockets HIT(+0.20) / NBA-002 Cavaliers SKIP（オッズ確認不可）"
   },
   "net_rating_snapshot": {
     "as_of": "2026-04-11",
     "source": "StatMuse (statmuse.com/nba/ask/team-net-rating-rankings-year-2026)",
     "rankings": [
-      { "rank": 1,  "team": "Thunder",       "nrtg": 11.7, "playoff_seed": "W1 (clinched)" },
-      { "rank": 2,  "team": "Spurs",          "nrtg": 8.5,  "playoff_seed": "W2 (clinched)" },
-      { "rank": 3,  "team": "Celtics",        "nrtg": 8.1,  "playoff_seed": "E2 (clinched)" },
-      { "rank": 4,  "team": "Pistons",        "nrtg": 8.1,  "playoff_seed": "E1 (clinched)" },
-      { "rank": 5,  "team": "Knicks",         "nrtg": 6.8,  "playoff_seed": "E3 (clinched)" },
-      { "rank": 6,  "team": "Nuggets",        "nrtg": 5.1,  "playoff_seed": "W3 (clinched)" },
-      { "rank": 7,  "team": "Rockets",        "nrtg": 5.0,  "playoff_seed": "W4 (clinched)" },
-      { "rank": 8,  "team": "Hornets",        "nrtg": 4.9,  "playoff_seed": "E9 (play-in)" },
-      { "rank": 9,  "team": "Cavaliers",      "nrtg": 4.0,  "playoff_seed": "E4 (clinched)" },
-      { "rank": 10, "team": "Timberwolves",   "nrtg": 3.3,  "playoff_seed": "W6 (clinched)" },
-      { "rank": 11, "team": "Hawks",          "nrtg": 2.7,  "playoff_seed": "E6 (clinched)" },
-      { "rank": 12, "team": "Raptors",        "nrtg": 2.5,  "playoff_seed": "E5 (clinched)" },
-      { "rank": 13, "team": "Heat",           "nrtg": 2.0,  "playoff_seed": "E10 (play-in)" },
-      { "rank": 14, "team": "Lakers",         "nrtg": 1.5,  "playoff_seed": "W5 (clinched)" },
-      { "rank": 15, "team": "Clippers",       "nrtg": 1.1,  "playoff_seed": "W8 (play-in)" },
-      { "rank": 16, "team": "Suns",           "nrtg": 1.1,  "playoff_seed": "W7 (play-in)" },
-      { "rank": 17, "team": "Magic",          "nrtg": 0.7,  "playoff_seed": "E7 (play-in)" },
-      { "rank": 18, "team": "76ers",          "nrtg": -0.4, "playoff_seed": "E8 (play-in)" },
-      { "rank": 19, "team": "Trail Blazers",  "nrtg": -0.4, "playoff_seed": "W9 (play-in)" },
-      { "rank": 20, "team": "Warriors",       "nrtg": -0.5, "playoff_seed": "W10 (play-in)" },
-      { "rank": 21, "team": "Pelicans",       "nrtg": -4.4, "playoff_seed": "eliminated" },
-      { "rank": 22, "team": "Bulls",          "nrtg": -4.9, "playoff_seed": "eliminated" },
-      { "rank": 23, "team": "Grizzlies",      "nrtg": -5.6, "playoff_seed": "eliminated", "record": "25-54", "note": "13 players on IR, only 8 active players" },
-      { "rank": 24, "team": "Mavericks",      "nrtg": -5.7, "playoff_seed": "eliminated" },
-      { "rank": 25, "team": "Bucks",          "nrtg": -6.2, "playoff_seed": "eliminated" },
-      { "rank": "?", "team": "Jazz",          "nrtg": null, "note": "未取得" },
-      { "rank": "?", "team": "Nets",          "nrtg": null, "note": "未取得" },
-      { "rank": "?", "team": "Pacers",        "nrtg": null, "note": "未取得" },
-      { "rank": "?", "team": "Kings",         "nrtg": null, "note": "未取得" },
-      { "rank": "?", "team": "Wizards",       "nrtg": -11.2, "playoff_seed": "eliminated", "record": "17-57", "note": "最下位（30位/30）" }
+      {
+        "rank": 1,
+        "team": "Thunder",
+        "nrtg": 11.7,
+        "playoff_seed": "W1 (clinched)"
+      },
+      {
+        "rank": 2,
+        "team": "Spurs",
+        "nrtg": 8.5,
+        "playoff_seed": "W2 (clinched)"
+      },
+      {
+        "rank": 3,
+        "team": "Celtics",
+        "nrtg": 8.1,
+        "playoff_seed": "E2 (clinched)"
+      },
+      {
+        "rank": 4,
+        "team": "Pistons",
+        "nrtg": 8.1,
+        "playoff_seed": "E1 (clinched)"
+      },
+      {
+        "rank": 5,
+        "team": "Knicks",
+        "nrtg": 6.8,
+        "playoff_seed": "E3 (clinched)"
+      },
+      {
+        "rank": 6,
+        "team": "Nuggets",
+        "nrtg": 5.1,
+        "playoff_seed": "W3 (clinched)"
+      },
+      {
+        "rank": 7,
+        "team": "Rockets",
+        "nrtg": 5.0,
+        "playoff_seed": "W4 (clinched)"
+      },
+      {
+        "rank": 8,
+        "team": "Hornets",
+        "nrtg": 4.9,
+        "playoff_seed": "E9 (play-in)"
+      },
+      {
+        "rank": 9,
+        "team": "Cavaliers",
+        "nrtg": 4.0,
+        "playoff_seed": "E4 (clinched)"
+      },
+      {
+        "rank": 10,
+        "team": "Timberwolves",
+        "nrtg": 3.3,
+        "playoff_seed": "W6 (clinched)"
+      },
+      {
+        "rank": 11,
+        "team": "Hawks",
+        "nrtg": 2.7,
+        "playoff_seed": "E6 (clinched)"
+      },
+      {
+        "rank": 12,
+        "team": "Raptors",
+        "nrtg": 2.5,
+        "playoff_seed": "E5 (clinched)"
+      },
+      {
+        "rank": 13,
+        "team": "Heat",
+        "nrtg": 2.0,
+        "playoff_seed": "E10 (play-in)"
+      },
+      {
+        "rank": 14,
+        "team": "Lakers",
+        "nrtg": 1.5,
+        "playoff_seed": "W5 (clinched)"
+      },
+      {
+        "rank": 15,
+        "team": "Clippers",
+        "nrtg": 1.1,
+        "playoff_seed": "W8 (play-in)"
+      },
+      {
+        "rank": 16,
+        "team": "Suns",
+        "nrtg": 1.1,
+        "playoff_seed": "W7 (play-in)"
+      },
+      {
+        "rank": 17,
+        "team": "Magic",
+        "nrtg": 0.7,
+        "playoff_seed": "E7 (play-in)"
+      },
+      {
+        "rank": 18,
+        "team": "76ers",
+        "nrtg": -0.4,
+        "playoff_seed": "E8 (play-in)"
+      },
+      {
+        "rank": 19,
+        "team": "Trail Blazers",
+        "nrtg": -0.4,
+        "playoff_seed": "W9 (play-in)"
+      },
+      {
+        "rank": 20,
+        "team": "Warriors",
+        "nrtg": -0.5,
+        "playoff_seed": "W10 (play-in)"
+      },
+      {
+        "rank": 21,
+        "team": "Pelicans",
+        "nrtg": -4.4,
+        "playoff_seed": "eliminated"
+      },
+      {
+        "rank": 22,
+        "team": "Bulls",
+        "nrtg": -4.9,
+        "playoff_seed": "eliminated"
+      },
+      {
+        "rank": 23,
+        "team": "Grizzlies",
+        "nrtg": -5.6,
+        "playoff_seed": "eliminated",
+        "record": "25-54",
+        "note": "13 players on IR, only 8 active players"
+      },
+      {
+        "rank": 24,
+        "team": "Mavericks",
+        "nrtg": -5.7,
+        "playoff_seed": "eliminated"
+      },
+      {
+        "rank": 25,
+        "team": "Bucks",
+        "nrtg": -6.2,
+        "playoff_seed": "eliminated"
+      },
+      {
+        "rank": "?",
+        "team": "Jazz",
+        "nrtg": null,
+        "note": "未取得"
+      },
+      {
+        "rank": "?",
+        "team": "Nets",
+        "nrtg": null,
+        "note": "未取得"
+      },
+      {
+        "rank": "?",
+        "team": "Pacers",
+        "nrtg": null,
+        "note": "未取得"
+      },
+      {
+        "rank": "?",
+        "team": "Kings",
+        "nrtg": null,
+        "note": "未取得"
+      },
+      {
+        "rank": "?",
+        "team": "Wizards",
+        "nrtg": -11.2,
+        "playoff_seed": "eliminated",
+        "record": "17-57",
+        "note": "最下位（30位/30）"
+      }
     ]
   },
   "playoffs_context": {
@@ -52,10 +206,34 @@
     "regular_season_end": "2026-04-12",
     "playin_start": "2026-04-14",
     "playoffs_start": "2026-04-18",
-    "west_direct": ["Thunder W1", "Spurs W2", "Nuggets W3", "Rockets W4", "Lakers W5", "Timberwolves W6"],
-    "west_playin": ["Suns W7", "Clippers W8", "Trail Blazers W9", "Warriors W10"],
-    "east_direct": ["Pistons E1", "Celtics E2", "Knicks E3", "Cavaliers E4", "Raptors E5", "Hawks E6"],
-    "east_playin": ["Magic E7", "76ers E8 (Embiid OUT appendicitis)", "Hornets E9", "Heat E10"],
+    "west_direct": [
+      "Thunder W1",
+      "Spurs W2",
+      "Nuggets W3",
+      "Rockets W4",
+      "Lakers W5",
+      "Timberwolves W6"
+    ],
+    "west_playin": [
+      "Suns W7",
+      "Clippers W8",
+      "Trail Blazers W9",
+      "Warriors W10"
+    ],
+    "east_direct": [
+      "Pistons E1",
+      "Celtics E2",
+      "Knicks E3",
+      "Cavaliers E4",
+      "Raptors E5",
+      "Hawks E6"
+    ],
+    "east_playin": [
+      "Magic E7",
+      "76ers E8 (Embiid OUT appendicitis)",
+      "Hornets E9",
+      "Heat E10"
+    ],
     "key_injuries": {
       "Joel_Embiid": "OUT - appendicitis",
       "Fred_VanVleet": "OUT - right knee ACL recovery (Rockets)",
@@ -69,11 +247,11 @@
       "match": "Grizzlies @ Rockets",
       "venue": "Toyota Center, Houston (HOME: Rockets)",
       "rec": "Rockets",
-      "rec_odds": 1.20,
+      "rec_odds": 1.2,
       "rec_odds_american": -500,
       "ev": 5.6,
       "confidence": 88,
-      "status": "pending",
+      "status": "confirmed",
       "analysis": {
         "L1": {
           "metric": "Net Rating差",
@@ -99,8 +277,8 @@
       "result": "Rockets",
       "score": "124-109",
       "hit": true,
-      "actual_ev": 0.20,
-      "status": "confirmed"
+      "actual_ev": 0.2,
+      "tier": "go"
     },
     {
       "id": "NBA-002",
@@ -111,7 +289,7 @@
       "rec_odds": "未取得",
       "ev": null,
       "confidence": null,
-      "status": "pending_odds",
+      "status": "skip",
       "analysis": {
         "L1": {
           "metric": "Net Rating差",
@@ -140,8 +318,7 @@
       },
       "verdict": "SKIP",
       "verdict_note": "オッズ確認不可のためSKIP確定。Cavaliers 130-126勝利（Mitchell 48pts ACTIVE）。ただし当日オッズが-700以上だった場合EV+5%未達のため不採用。予測未実行につき統計ノーカウント。",
-      "result_note": "Cavaliers win 130-126 Mitchell 48pts（参考記録・ベット未実行）",
-      "status": "skip"
+      "result_note": "Cavaliers win 130-126 Mitchell 48pts（参考記録・ベット未実行）"
     }
   ],
   "screening_log": [
@@ -163,15 +340,25 @@
       "games_screened": [
         {
           "match": "Magic @ Celtics",
-          "l1_diff": 7.4, "l1_ok": true, "favored": "Celtics",
-          "market_odds": { "Magic": 1.60, "Celtics": 2.40 },
+          "l1_diff": 7.4,
+          "l1_ok": true,
+          "favored": "Celtics",
+          "market_odds": {
+            "Magic": 1.6,
+            "Celtics": 2.4
+          },
           "verdict": "SKIP",
           "reason": "市場がCeltics休養を織り込み済み（Magic -166 favorites）。Magic win estimate ~62% ≈ 市場implied 62.5%。エッジなし。B007確認済み。"
         },
         {
           "match": "Wizards @ Cavaliers",
-          "l1_diff": 15.2, "l1_ok": true, "favored": "Cavaliers",
-          "l1_data": { "CAV_nrtg": 4.0, "WAS_nrtg": -11.2 },
+          "l1_diff": 15.2,
+          "l1_ok": true,
+          "favored": "Cavaliers",
+          "l1_data": {
+            "CAV_nrtg": 4.0,
+            "WAS_nrtg": -11.2
+          },
           "market_odds": "未取得（4/12分のオッズ未掲載）",
           "verdict": "PENDING_ODDS",
           "reason": "L1差15.2（最大級）✓。Mitchell 4/12復帰予定。Wizards 17-57（NRtg最下位-11.2）。オッズ確認次第GO判断。予想信頼度90-93%→EV計算はオッズ次第。"
@@ -184,19 +371,23 @@
         },
         {
           "match": "Hawks @ Heat",
-          "l1_diff": 0.7, "l1_ok": false,
+          "l1_diff": 0.7,
+          "l1_ok": false,
           "verdict": "SKIP",
           "reason": "L1差0.7 < 5pt閾値未達。"
         },
         {
           "match": "Hornets @ Knicks",
-          "l1_diff": 1.9, "l1_ok": false,
+          "l1_diff": 1.9,
+          "l1_ok": false,
           "verdict": "SKIP",
           "reason": "L1差1.9 < 5pt閾値未達。市場もKnicks休養を織り込み（Hornets -290）。"
         },
         {
           "match": "Bucks @ 76ers",
-          "l1_diff": 5.8, "l1_ok": true, "favored": "76ers",
+          "l1_diff": 5.8,
+          "l1_ok": true,
+          "favored": "76ers",
           "verdict": "SKIP",
           "reason": "76ersはEmbiid OUT（appendicitis）で実効NRtg大幅低下。Bucks eliminated・tanking。76ers実力大幅下方修正でL1差が事実上消滅。"
         },
@@ -208,34 +399,48 @@
         },
         {
           "match": "Bulls @ Mavericks",
-          "l1_diff": 0.8, "l1_ok": false,
+          "l1_diff": 0.8,
+          "l1_ok": false,
           "verdict": "SKIP",
           "reason": "L1差0.8 < 5pt閾値未達。"
         },
         {
           "match": "Grizzlies @ Rockets",
-          "l1_diff": 10.6, "l1_ok": true, "favored": "Rockets",
-          "l1_data": { "HOU_nrtg": 5.0, "MEM_nrtg": -5.6 },
+          "l1_diff": 10.6,
+          "l1_ok": true,
+          "favored": "Rockets",
+          "l1_data": {
+            "HOU_nrtg": 5.0,
+            "MEM_nrtg": -5.6
+          },
           "market_odds": "未取得（4/12分のオッズ未掲載）",
           "verdict": "PENDING_ODDS",
           "reason": "L1差10.6 ✓。Rockets: W4シード確定・seeding race可能性あり（W3確保なら）・全力出場。Grizzlies: 25-54・eliminated・13名負傷リスト・8選手のみactive（実質Gリーグ品質）。オッズ確認後GO判断。予想信頼度82-85%。"
         },
         {
           "match": "Pelicans @ Timberwolves",
-          "l1_diff": 7.7, "l1_ok": true, "favored": "Timberwolves",
+          "l1_diff": 7.7,
+          "l1_ok": true,
+          "favored": "Timberwolves",
           "verdict": "SKIP",
           "reason": "Timberwolves W6シード確定 → 休養リスク高（B011）。Pelicans eliminated。両チームとも試合への意欲が低い可能性。SKIP。"
         },
         {
           "match": "Suns @ Thunder",
-          "l1_diff": 10.6, "l1_ok": true, "favored": "Thunder",
-          "market_odds": { "Thunder": 1.42, "Suns": 2.95 },
+          "l1_diff": 10.6,
+          "l1_ok": true,
+          "favored": "Thunder",
+          "market_odds": {
+            "Thunder": 1.42,
+            "Suns": 2.95
+          },
           "verdict": "SKIP",
           "reason": "Thunder W1（66-16）→ 主力確実に休養。市場はThunder -238と依然優位（depth効果）だが休養リスクを考慮しSKIP。"
         },
         {
           "match": "Nuggets @ Spurs",
-          "l1_diff": 3.4, "l1_ok": false,
+          "l1_diff": 3.4,
+          "l1_ok": false,
           "verdict": "SKIP",
           "reason": "L1差3.4 < 5pt閾値未達。"
         },
@@ -247,7 +452,8 @@
         },
         {
           "match": "Warriors @ Clippers",
-          "l1_diff": 1.6, "l1_ok": false,
+          "l1_diff": 1.6,
+          "l1_ok": false,
           "verdict": "SKIP",
           "reason": "L1差1.6 < 5pt閾値未達。"
         },
@@ -280,32 +486,60 @@
         {
           "match": "Hornets (E9) @ Heat (E10)",
           "date": "2026-04-15",
-          "odds": { "Hornets": 1.44, "Heat": 2.75 },
-          "l1_data": { "CHA_nrtg": 4.9, "MIA_nrtg": 2.0, "diff": 2.9 },
+          "odds": {
+            "Hornets": 1.44,
+            "Heat": 2.75
+          },
+          "l1_data": {
+            "CHA_nrtg": 4.9,
+            "MIA_nrtg": 2.0,
+            "diff": 2.9
+          },
           "verdict": "SKIP",
           "reason": "NRtg差2.9pt < 5pt閾値未達。プレーイン高モチベーション両チーム。市場Charlotte 69.4%はNRtg差からの推定55-58%より大幅に高く、逆にCharlotteが過剰評価の可能性。"
         },
         {
           "match": "Suns (W7) @ Trail Blazers (W9)",
           "date": "2026-04-15",
-          "odds": { "Suns": 1.63, "Blazers": 2.25 },
-          "l1_data": { "PHX_nrtg": 1.1, "POR_nrtg": -0.4, "diff": 1.5 },
+          "odds": {
+            "Suns": 1.63,
+            "Blazers": 2.25
+          },
+          "l1_data": {
+            "PHX_nrtg": 1.1,
+            "POR_nrtg": -0.4,
+            "diff": 1.5
+          },
           "verdict": "SKIP",
           "reason": "NRtg差1.5pt < 5pt閾値未達。両チームともプレーイン（W7/W9）で高モチベーション。差1.5ptはほぼ互角。"
         },
         {
           "match": "76ers (E8) @ Magic (E7)",
           "date": "2026-04-16",
-          "odds": { "Sixers": 1.77, "Magic": 2.02 },
-          "l1_data": { "PHI_nrtg": -0.4, "ORL_nrtg": 0.7, "diff": 1.1 },
+          "odds": {
+            "Sixers": 1.77,
+            "Magic": 2.02
+          },
+          "l1_data": {
+            "PHI_nrtg": -0.4,
+            "ORL_nrtg": 0.7,
+            "diff": 1.1
+          },
           "verdict": "SKIP",
           "reason": "NRtg差1.1pt未達。Embiid OUT(appendicitis)で76ers実効NRtgはさらに低下。実質Magic有利か。市場76ers 56.5%は実態と乖離。"
         },
         {
           "match": "Clippers (W8) @ Warriors (W10)",
           "date": "2026-04-16",
-          "odds": { "Clippers": 1.48, "Warriors": 2.60 },
-          "l1_data": { "LAC_nrtg": 1.1, "GSW_nrtg": -0.5, "diff": 1.6 },
+          "odds": {
+            "Clippers": 1.48,
+            "Warriors": 2.6
+          },
+          "l1_data": {
+            "LAC_nrtg": 1.1,
+            "GSW_nrtg": -0.5,
+            "diff": 1.6
+          },
           "verdict": "SKIP",
           "reason": "NRtg差1.6pt未達。両チームとも現シーズン低調（W8/W10）。ホームはClippers。差1.6ptでエッジなし。"
         }

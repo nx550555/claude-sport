@@ -8,15 +8,15 @@
       "confirmed_count": 13,
       "hit_count": 10,
       "hit_rate": 0.769,
-      "ev_total": 1.567,
+      "pnl": 7.0,
       "pending_count": 1
     },
     "wta": {
-      "go_count": 1,
-      "confirmed_count": 0,
-      "hit_count": 0,
-      "hit_rate": null,
-      "ev_total": 0.0,
+      "go_count": 2,
+      "confirmed_count": 1,
+      "hit_count": 1,
+      "hit_rate": 1.0,
+      "pnl": 1.0,
       "pending_count": 1
     },
     "nhl": {
@@ -24,7 +24,7 @@
       "confirmed_count": 2,
       "hit_count": 2,
       "hit_rate": 1.0,
-      "ev_total": 0.397,
+      "pnl": 2.0,
       "pending_count": 0
     },
     "ufl": {
@@ -32,7 +32,7 @@
       "confirmed_count": 1,
       "hit_count": 1,
       "hit_rate": 1.0,
-      "ev_total": 0.082,
+      "pnl": 1.0,
       "pending_count": 2
     },
     "nrl": {
@@ -40,7 +40,7 @@
       "confirmed_count": 1,
       "hit_count": 0,
       "hit_rate": 0.0,
-      "ev_total": 0.209,
+      "pnl": -1.0,
       "pending_count": 1
     },
     "superrugby": {
@@ -48,15 +48,15 @@
       "confirmed_count": 1,
       "hit_count": 1,
       "hit_rate": 1.0,
-      "ev_total": 0.17,
+      "pnl": 1.0,
       "pending_count": 0
     },
     "nba": {
-      "go_count": 0,
-      "confirmed_count": 0,
-      "hit_count": 0,
-      "hit_rate": null,
-      "ev_total": 0.0,
+      "go_count": 1,
+      "confirmed_count": 1,
+      "hit_count": 1,
+      "hit_rate": 1.0,
+      "pnl": 1.0,
       "pending_count": 0
     },
     "superleague": {
@@ -64,16 +64,16 @@
       "confirmed_count": 0,
       "hit_count": 0,
       "hit_rate": null,
-      "ev_total": 0.0,
+      "pnl": 0.0,
       "pending_count": 2
     }
   },
   "overview": {
-    "total_go": 25,
-    "total_confirmed": 18,
-    "total_hits": 14,
-    "hit_rate": 0.778,
-    "total_ev": 2.425,
+    "total_go": 27,
+    "total_confirmed": 20,
+    "total_hits": 16,
+    "hit_rate": 0.8,
+    "total_pnl": 12.0,
     "total_pending": 7,
     "pending_breakdown": "ATP x1 + WTA x1 + UFL x2 + NRL x1 + SL x2"
   }
