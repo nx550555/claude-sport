@@ -1,0 +1,14 @@
+
+    <div class="active-card" style="border-color:#f9a8d460;background:linear-gradient(135deg,#f9a8d408,transparent);">
+      <div class="ac-sport">🎾 WTA — Stuttgart R1 2026</div>
+      <div class="ac-match">Sonmez Z. vs Paolini J.(4) <span class="badge badge-go">GO</span></div>
+      <div class="ac-rec">推奨: <strong style="color:#3fb950;">Paolini</strong></div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">1.24</div></div>
+        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">+5.4%</div></div>
+        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">85.0%</div></div>
+        <div class="acm"><div class="acm-l">cElo差</div><div class="acm-v rule">+300pt</div></div>
+      </div>
+      <div class="ac-note">cElo Paolini 1916 / Sonmez 1616 (diff +300). Stuttgart indoor clay (W007適用)。conf 85% / EV+5.4%。R001適用外(WTA)</div>
+      <div class="ac-date">📅 2026-04-15 Stuttgart Clay(indoor) R1</div>
+    </div>

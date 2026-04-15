@@ -1,0 +1,16 @@
+## 直近完了（4/14 スクリーニング最終セッション）
+
+- [x] 2026-04-14 JSON全試合スクリーニング完了（NHL/ATP/WTA/NRL/NBA）
+- [x] WTA Stuttgart Paolini vs Sonmez GO確定（@1.24 EV+5.4% cElo差300pt / 4/15 21:30開催）
+- [x] records/wta/2026.json 更新（Paoliniエントリー tier:skip->go, odds 1.23->1.24）
+- [x] NBA play-in 4/15 SKIP確認: Charlotte/Miami(NRtg差2.9pt) + Phoenix/Portland(差1.5pt) L1未達
+- [x] NRL R7 既分析済み確認: GO x2（Tigers/Broncos @1.47, Warriors/Titans @1.25）Warriors EV 10.7%->13.4%
+- [x] NHL COL@CGY: N016適用（Presidents' Trophy確定→主力rest要確認）→ CAUTION継続
+- [x] NHL CAR@NYI: goalie両チーム未確定 → CAUTION継続
+- [x] ダッシュボード反映完了（NRL 36-34 / Stuttgart 2/10試合完了 / GB001 HIT / R001実装済 / ルール履歴3件）
+- [ ] WTA Stuttgart Paolini vs Sonmez 結果確認・記録（4/15開催 GO @1.24）
+- [ ] WTA Stuttgart Zhang vs Noskova 結果確認（4/15開催 SKIP @1.14）
+- [ ] ATP Munich GO3件 結果確認（Musetti/Cobolli/Kopriva 4/14開催）
+- [ ] NHL CAR@NYI / COL@CGY: goalie確定後 GO/SKIP 最終判断（N016 COL rest risk）
+- [ ] NRL R7 全結果確認・記録（4/16-19: Tigers/Broncos GO・Warriors/Titans GO）
+

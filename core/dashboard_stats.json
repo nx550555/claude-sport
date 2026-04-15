@@ -1,7 +1,7 @@
 {
   "_comment": "Sport card の唯一の真実ソース。記録更新後は必ずここを更新してから sync_sport_cards.py を実行すること",
   "last_updated": "2026-04-15",
-  "session": "_29b",
+  "session": "_30",
   "sports": {
     "atp": {
       "go_count": 14,

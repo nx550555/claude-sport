@@ -1,0 +1,28 @@
+
+    <div class="active-card" style="border-color:#bfdbfe60;background:linear-gradient(135deg,#bfdbfe08,transparent);">
+      <div class="ac-sport">🏉 Super League — Round 8 2026</div>
+      <div class="ac-match">Huddersfield Giants vs Leeds Rhinos <span class="badge badge-go">GO</span></div>
+      <div class="ac-rec">推奨: <strong style="color:#3fb950;">Leeds Rhinos</strong></div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">1.32</div></div>
+        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">+14.8%</div></div>
+        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">87%</div></div>
+        <div class="acm"><div class="acm-l">PD/G差</div><div class="acm-v rule">+20.3pt</div></div>
+      </div>
+      <div class="ac-note">Leeds PD/G +14.00(2位) / Huddersfield -6.29(11位) → diff +20.3pt。早期閾値12pt超。conf 87% / EV+14.8%</div>
+      <div class="ac-date">📅 2026-04-18 Super League R8</div>
+    </div>
+
+    <div class="active-card" style="border-color:#bfdbfe60;background:linear-gradient(135deg,#bfdbfe08,transparent);">
+      <div class="ac-sport">🏉 Super League — Round 8 2026</div>
+      <div class="ac-match">Catalans Dragons vs Warrington Wolves <span class="badge badge-go">GO</span></div>
+      <div class="ac-rec">推奨: <strong style="color:#3fb950;">Warrington Wolves</strong></div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">1.65</div></div>
+        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">+40.3%</div></div>
+        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">85%</div></div>
+        <div class="acm"><div class="acm-l">PD/G差</div><div class="acm-v rule">+23.9pt</div></div>
+      </div>
+      <div class="ac-note">Warrington PD/G +21.17(1位) / Catalans -2.71(6位) → diff +23.9pt。Catalans仏国ホーム-5%考慮済。conf 85% / EV+40.3%</div>
+      <div class="ac-date">📅 2026-04-19 Super League R8 (Perpignan, France)</div>
+    </div>

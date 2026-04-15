@@ -1,0 +1,41 @@
+,
+    {
+      "date": "2026-04-14",
+      "note": "プレーイントーナメント開始（4/14〜4/16）。全試合が高モチベーション・シーズン存続がかかる試合。NRtg差が小さくL1通過困難。",
+      "total_games": 4,
+      "go_recommendations": 0,
+      "games_screened": [
+        {
+          "match": "Hornets (E9) @ Heat (E10)",
+          "date": "2026-04-15",
+          "odds": { "Hornets": 1.44, "Heat": 2.75 },
+          "l1_data": { "CHA_nrtg": 4.9, "MIA_nrtg": 2.0, "diff": 2.9 },
+          "verdict": "SKIP",
+          "reason": "NRtg差2.9pt < 5pt閾値未達。プレーイン高モチベーション両チーム。市場Charlotte 69.4%はNRtg差からの推定55-58%より大幅に高く、逆にCharlotteが過剰評価の可能性。"
+        },
+        {
+          "match": "Suns (W7) @ Trail Blazers (W9)",
+          "date": "2026-04-15",
+          "odds": { "Suns": 1.63, "Blazers": 2.25 },
+          "l1_data": { "PHX_nrtg": 1.1, "POR_nrtg": -0.4, "diff": 1.5 },
+          "verdict": "SKIP",
+          "reason": "NRtg差1.5pt < 5pt閾値未達。両チームともプレーイン（W7/W9）で高モチベーション。差1.5ptはほぼ互角。"
+        },
+        {
+          "match": "76ers (E8) @ Magic (E7)",
+          "date": "2026-04-16",
+          "odds": { "Sixers": 1.77, "Magic": 2.02 },
+          "l1_data": { "PHI_nrtg": -0.4, "ORL_nrtg": 0.7, "diff": 1.1 },
+          "verdict": "SKIP",
+          "reason": "NRtg差1.1pt未達。Embiid OUT(appendicitis)で76ers実効NRtgはさらに低下。実質Magic有利か。市場76ers 56.5%は実態と乖離。"
+        },
+        {
+          "match": "Clippers (W8) @ Warriors (W10)",
+          "date": "2026-04-16",
+          "odds": { "Clippers": 1.48, "Warriors": 2.60 },
+          "l1_data": { "LAC_nrtg": 1.1, "GSW_nrtg": -0.5, "diff": 1.6 },
+          "verdict": "SKIP",
+          "reason": "NRtg差1.6pt未達。両チームとも現シーズン低調（W8/W10）。ホームはClippers。差1.6ptでエッジなし。"
+        }
+      ]
+    }

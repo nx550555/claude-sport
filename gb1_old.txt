@@ -1,0 +1,2 @@
+<div style="font-size:11px;font-weight:700;color:#58a6ff;margin-bottom:4px;">📋 GAMBLE_BET枠（未発動）</div>
+        <div style="font-size:12px;line-height:1.7;">条件：実力差ボーダー＋UF2つ以上＋高オッズ。現在記録0件。第二段階で本格稼働予定。</div>

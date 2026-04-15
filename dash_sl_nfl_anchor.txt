@@ -1,0 +1,2 @@
+      <div class="preseason-card">
+        <div class="sport-card-header" style="color:#6b7280;">🏈 NFL <span class="ps-badge">プレシーズン</span></div>

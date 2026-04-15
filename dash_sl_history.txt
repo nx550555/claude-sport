@@ -1,0 +1,23 @@
+        <!-- ══ Super League 2026-04-14初回スクリーニング ══ -->
+        <tr style="background:#161b22;border-left:3px solid #bfdbfe;">
+          <td colspan="6" style="font-size:11px;font-weight:600;padding:7px 10px;color:#bfdbfe;">
+            📅 Super League R8 2026-04-18/19 &nbsp;—&nbsp; 🏉 英国ラグビーリーグ 初回スクリーニング
+            <span style="float:right;font-weight:400;color:#8b949e;"><span style="color:#3fb950;">GO 2(Leeds@1.32 / Warrington@1.65)</span> | SKIP 5</span>
+          </td>
+        </tr>
+        <tr>
+          <td>04/18</td>
+          <td><span class="sport-tag" style="color:#bfdbfe;">🏉 SL</span></td>
+          <td class="match-cell"><strong>Huddersfield vs Leeds Rhinos</strong></td>
+          <td style="text-align:right;color:#3fb950;">PD/G+20.3</td>
+          <td><span class="badge badge-go">GO</span></td>
+          <td style="font-size:11px;color:var(--text2);">Leeds PD/G+14.00(2位) vs Huddersfield -6.29(11位)。差20.3pt > 早期閾値12pt。conf 87% / EV+14.8% @1.32。<strong style="color:#e3b341;">⏳ PENDING 4/18</strong></td>
+        </tr>
+        <tr>
+          <td>04/19</td>
+          <td><span class="sport-tag" style="color:#bfdbfe;">🏉 SL</span></td>
+          <td class="match-cell"><strong>Catalans Dragons vs Warrington Wolves</strong></td>
+          <td style="text-align:right;color:#3fb950;">PD/G+23.9</td>
+          <td><span class="badge badge-go">GO</span></td>
+          <td style="font-size:11px;color:var(--text2);">Warrington PD/G+21.17(1位) vs Catalans -2.71(6位)。差23.9pt。Catalans仏国ホーム-5%考慮。conf 85% / EV+40.3% @1.65。<strong style="color:#e3b341;">⏳ PENDING 4/19</strong></td>
+        </tr>

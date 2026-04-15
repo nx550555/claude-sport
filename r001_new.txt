@@ -1,0 +1,4 @@
+            <span style="font-size:10px;background:#0f2c1a;color:#3fb950;border:1px solid #23863640;border-radius:3px;padding:1px 6px;">✓ 実装済 v2.1</span>
+            <span style="font-size:12px;font-weight:700;">🎾 R001 閾値強化</span>
+          </div>
+          <div style="font-size:11px;color:var(--text2);line-height:1.7;">実装済(2026-04-14): <strong style="color:#3fb950;">差≥130pt → GO / 100-129pt → CAUTIONのみ / ＜100pt → SKIP</strong><br>根拠: U002(Machac 153pt)・U003(Nagal 99pt) 2件MISS → 130pt前後のゾーン不安定を確認</div>

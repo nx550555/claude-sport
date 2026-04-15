@@ -100,7 +100,7 @@
 - [x] PHI@CAR NHL miss_analysis更新: CAR 6名主力意図的rest判明（L4_External）
 - [x] MIN@STL NHL score修正4-3→6-3 + miss_analysis更新（5連続失点詳細）
 - [x] NRL Raiders vs Rabbitohs スコア修正30-22→36-34（2点差接戦・前半24-4から後半猛追）
-- [x] ATP MC Machac vs Cerundolo スコア修正7-6 6-2→6-2 7-6(3)
+- [x] ATP MC Machac vs Cerundolo スコア修正7-6 6-2→6-2 7-6(3) ← ⚠️さらに誤り。Session_30で再修正: 正スコア「7-6(2) 6-3」（CE001）
 - [x] ATP MC Marozsan vs Hurkacz スコア修正未確認→6-2 6-3
 - [x] WTA Stuttgart Samsonova vs Ruzic: Samsonova勝利が正しい（Ruzic勝利は誤記録）
 - [x] WTA Stuttgart: Zhang/Noskova + Sonmez/Paolini をペンディングにリセット（4/15未試合）

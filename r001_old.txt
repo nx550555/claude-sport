@@ -1,0 +1,4 @@
+            <span style="font-size:10px;background:#2d1014;color:#f85149;border:1px solid #f8514950;border-radius:3px;padding:1px 6px;">優先度：高</span>
+            <span style="font-size:12px;font-weight:700;">🎾 R001 閾値強化</span>
+          </div>
+          <div style="font-size:11px;color:var(--text2);line-height:1.7;">現行: cElo差≥80ptでL1通過<br>→ 提案: <strong style="color:var(--text);">差＜130pt → CAUTION / 差＜80pt → SKIP</strong><br>根拠: U002(130pt)・U004(110pt)・U003(40pt) 3件MISS</div>

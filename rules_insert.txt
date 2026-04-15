@@ -1,0 +1,56 @@
+
+    <!-- 2026-04-14 追加ルール -->
+    <div class="rule-entry" style="border-color:#a5f3fc60;">
+      <div class="rule-header">
+        <span style="color:#a5f3fc;">🏒 NHL アイスホッケー</span>
+        <span class="rule-ver-badge">v1.2 → <strong>v1.3</strong>（N016新設）</span>
+        <span class="rule-date">2026-04-14</span>
+      </div>
+      <div class="rule-trigger">📌 トリガー: PHI@CAR 2026-04-13 — Carolina がプレーオフシーディング確定済みで Aho/Svechnikov/Jarvis/Staal/Slavin/Gostisbehere の6名を意図的rest → Philadelphia 4-0勝利（MISS）</div>
+      <ul class="rule-changes">
+        <li><strong>N016新設: シーディング確定チーム終盤rest確認</strong></li>
+        <li>RS最終5試合以内 ＋ POシーディング確定済みの場合、主力の意図的rest発生リスクを必ずチェック</li>
+        <li>rest人数補正: 1〜2名 -5% / 3〜4名 -10%〜SKIP / 5名以上 SKIP（PHI@CAR根拠: 6名→SKIP相当）</li>
+        <li>確認手段: 対象チームの公式SNS・ハリバートン/ESPN記事。傷病リストに載らない「ヘルシースクラッチ」に注意</li>
+        <li>N014チェックリスト⑤追加: 「シーディング確定→N016適用（意図的rest確認）」</li>
+      </ul>
+      <div class="rule-result">🎯 <strong>impact:</strong> RS終盤のシーディング確定チーム戦は傷病リストだけでは検知できないrest見落としを防止</div>
+      <div class="rule-note">💡 PHI@CARのCAR 6名restは通常の傷病リスト確認（N014）では検知不可能だった。SNS・記者Twitterでの追加確認が必須。</div>
+    </div>
+
+    <div class="rule-entry" style="border-color:#f9a8d460;">
+      <div class="rule-header">
+        <span style="color:#f9a8d4;">🎾 WTA Tennis</span>
+        <span class="rule-ver-badge">v1.0 → <strong>v1.1</strong>（W007 indoor clay補足）</span>
+        <span class="rule-date">2026-04-14</span>
+      </div>
+      <div class="rule-trigger">📌 トリガー: Stuttgart R1 2026-04-14 — Korpatsch(WC) def. Shnaider(cElo差-215.9pt) / Eala upset発生。indoor clay特有のパターン確認</div>
+      <ul class="rule-changes">
+        <li><strong>W007 indoor_clay_note追加:</strong></li>
+        <li>Stuttgart等のindoor clayはアウトドアクレーより速いバウンド → フラット・サービス攻撃型選手が有利</li>
+        <li>cElo差215pt以上の格下（アンダードッグ）でも逆転が起きやすい（Korpatsch+Eala実例）</li>
+        <li>outdoor clay特化型 vs indoor clay特化型の対戦では通常W007補正に追加 -5%</li>
+        <li>W009 GAMBLE_BET判断時の参考基準として活用（UF01発動要件に追加）</li>
+      </ul>
+      <div class="rule-result">🎯 <strong>impact:</strong> Stuttgart / Linz / Prague 等のindoor clay大会でのアンダードッグ補正が精緻化</div>
+      <div class="rule-note">💡 Stuttgart R1 2/10 upset確認（20.0%）。アウトドアクレーより格下の逆転率が高い傾向。W009 GB001（Ostapenko）的中もこの知見が裏付け。</div>
+    </div>
+
+    <div class="rule-entry" style="border-color:#79c0ff60;">
+      <div class="rule-header">
+        <span style="color:#79c0ff;">🎾 ATP Tennis</span>
+        <span class="rule-ver-badge">v2.0 → <strong>v2.1</strong>（R001 CAUTION閾値追加）</span>
+        <span class="rule-date">2026-04-14</span>
+      </div>
+      <div class="rule-trigger">📌 トリガー: U002 Machac vs Cerundolo（cElo差153pt → Machac upset）+ U003 Nagal vs Nishikori（差99pt → Nagal upset） — cElo差130pt前後のGO判断が2件連続MISS</div>
+      <ul class="rule-changes">
+        <li><strong>R001修正: cEloスクリーニング閾値に130pt CAUTIONゾーン追加</strong></li>
+        <li>差≥130pt: 引き続きGOスクリーニング対象（変更なし）</li>
+        <li>差100〜129pt: <strong>CAUTIONゾーン</strong> — GO判断はせずCAUTION記録のみ（ベット推奨なし）</li>
+        <li>差＜100pt: SKIP（コインフリップ基準、変更なし）</li>
+        <li>根拠: 130pt前後の2件MISSがいずれも接戦。このゾーンはEVがボーダーラインで割に合わない。</li>
+      </ul>
+      <div class="rule-result">変更前: <span style="color:#f85149;">差≥80pt → GO対象</span> → 変更後: <span style="color:#3fb950;">差≥130pt → GO対象 / 100-129pt → CAUTION記録のみ</span></div>
+      <div class="rule-note">💡 U002(Machac 153pt差)・U003(Nagal 99pt差)の2件MISSから学習。100-129ptゾーンは実力差の見た目より試合展開のばらつきが大きい。</div>
+    </div>
+

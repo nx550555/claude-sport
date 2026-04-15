@@ -1,0 +1,80 @@
+<!-- ===== 日報 ===== -->
+<div class="tab-content" id="content-dailyreport">
+  <div class="section-title">&#x65E5;&#x5831; &#x2014; &#x30BB;&#x30C3;&#x30B7;&#x30E7;&#x30F3;&#x5225;&#x5909;&#x5316;&#x8A18;&#x9332;</div>
+  <p style="font-size:12px;color:var(--text2);margin-bottom:16px;line-height:1.8;">
+    &#x30BB;&#x30C3;&#x30B7;&#x30E7;&#x30F3;&#x3054;&#x3068;&#x306E;&#x5206;&#x6790;&#x30FB;&#x5224;&#x65AD;&#x30FB;&#x30C0;&#x30C3;&#x30B7;&#x30E5;&#x30DC;&#x30FC;&#x30C9;&#x5909;&#x66F4;&#x306E;&#x8A18;&#x9332;&#x3067;&#x3059;&#x3002;<br>
+    &#x8A73;&#x7D30;&#x306F; <code>session_logs/YYYY-MM-DD_NN.md</code> &#x3092;&#x53C2;&#x7167;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;
+  </p>
+
+  <div style="display:flex;flex-direction:column;gap:14px;">
+
+    <div style="background:var(--surface);border:1px solid #bfdbfe40;border-left:3px solid #bfdbfe;border-radius:8px;padding:16px 18px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+        <div style="font-size:13px;font-weight:700;">2026-04-14 _25 &#x2014; Super League &#x521D;&#x56DE;&#x30B9;&#x30AF;&#x30EA;&#x30FC;&#x30CB;&#x30F3;&#x30B0;</div>
+        <div style="font-size:11px;color:var(--text2);">&#x5BFE;&#x8C61;&#x30EA;&#x30FC;&#x30B0;: Super League R8</div>
+      </div>
+      <div style="font-size:12px;color:var(--text2);line-height:1.8;">
+        &#x30FB; Super League&#xFF08;&#x82F1;&#x56FD;&#x30E9;&#x30B0;&#x30D3;&#x30FC;&#x30EA;&#x30FC;&#x30B0;&#xFF09;&#x3092;&#x65B0;&#x898F;&#x5BFE;&#x8C61;&#x30EA;&#x30FC;&#x30B0;&#x306B;&#x8FFD;&#x52A0;&#x3002;NRL&#x6E96;&#x62E0; PD/G&#x5206;&#x6790;&#x3092;&#x9069;&#x7528;&#x3002;<br>
+        &#x30FB; rules_superleague.json v1.0&#x4F5C;&#x6210;&#xFF08;SL001&#xFF5E;SL006&#xFF09;&#x3002;&#x30C1;&#x30FC;&#x30E0;&#x7FFB;&#x8A33;&#x30DE;&#x30C3;&#x30D4;&#x30F3;&#x30B0;&#x78BA;&#x7ACB;&#x3002;<br>
+        &#x30FB; <span style="color:#3fb950;font-weight:600;">GO x2:</span> &#x30EA;&#x30FC;&#x30BA; @1.32 (EV+14.8%) / &#x30A6;&#x30A9;&#x30EA;&#x30F3;&#x30C8;&#x30F3; @1.65 (EV+40.3%)<br>
+        &#x30FB; records/superleague/2026.json &#x65B0;&#x898F;&#x4F5C;&#x6210;&#x3002;&#x30C0;&#x30C3;&#x30B7;&#x30E5;&#x30DC;&#x30FC;&#x30C9; Super League&#x30AB;&#x30FC;&#x30C9;&#x8FFD;&#x52A0;&#x3002;
+      </div>
+      <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;">
+        <span style="font-size:10px;background:#bfdbfe20;border:1px solid #bfdbfe40;border-radius:4px;padding:2px 8px;color:#bfdbfe;">&#x30B9;&#x30AF;&#x30EA;&#x30FC;&#x30CB;&#x30F3;&#x30B0; 7&#x8A66;&#x5408;</span>
+        <span style="font-size:10px;background:#0f2c1a;border:1px solid #238636;border-radius:4px;padding:2px 8px;color:#3fb950;">GO 2</span>
+        <span style="font-size:10px;background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:2px 8px;color:var(--text2);">SKIP 5</span>
+      </div>
+    </div>
+
+    <div style="background:var(--surface);border:1px solid #79c0ff40;border-left:3px solid #79c0ff;border-radius:8px;padding:16px 18px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+        <div style="font-size:13px;font-weight:700;">2026-04-14 _24 &#x2014; 4/14 JSON &#x5168;&#x30B9;&#x30AF;&#x30EA;&#x30FC;&#x30CB;&#x30F3;&#x30B0;</div>
+        <div style="font-size:11px;color:var(--text2);">ATP / WTA / NHL / NBA / NRL</div>
+      </div>
+      <div style="font-size:12px;color:var(--text2);line-height:1.8;">
+        &#x30FB; ATP Barcelona R1: <span style="color:#3fb950;">&#x30E0;&#x30BB;&#x30C3;&#x30C6;&#x30A3; GO @1.27</span> (EV+9.7%)<br>
+        &#x30FB; ATP Munich R1: <span style="color:#3fb950;">&#x30B3;&#x30DC;&#x30C3;&#x30EA; GO @1.21</span> (EV+8.7%) / <span style="color:#3fb950;">&#x30B3;&#x30D7;&#x30B8;&#x30D0; GO @1.36</span> (EV+9.8%)<br>
+        &#x30FB; WTA Stuttgart: <span style="color:#3fb950;">&#x30D1;&#x30AA;&#x30EA;&#x30FC;&#x30CB; GO @1.24</span> (EV+5.4%&#x3001;&#x30AA;&#x30C3;&#x30BA;1.23&#x2192;1.24&#x3067;&#x9592;&#x5024;&#x8D85;&#x3048;GO&#x306B;&#x6607;&#x683C;)<br>
+        &#x30FB; NHL CAR@NYI / COL@CGY: <span style="color:#d29922;">CAUTION</span>&#xFF08;&#x30B4;&#x30FC;&#x30EB;&#x30AD;&#x30FC;&#x30D1;&#x30FC;&#x672A;&#x78BA;&#x8A8D; / N016 COL rest&#x30EA;&#x30B9;&#x30AF;&#xFF09;<br>
+        &#x30FB; NBA Play-in 4&#x8A66;&#x5408;: <span style="color:#8b949e;">&#x5168;SKIP</span> (NRtg&#x5DEE;&lt;5pt&#x3001;play-in&#x30E2;&#x30C1;&#x30D9;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x8981;&#x56E0;)<br>
+        &#x30FB; NRL R7: 4&#x8A66;&#x5408;&#x78BA;&#x8A8D;&#xFF08;GO x2&#x3001;CAUTION x2&#xFF09;
+      </div>
+      <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;">
+        <span style="font-size:10px;background:#0f2c1a;border:1px solid #238636;border-radius:4px;padding:2px 8px;color:#3fb950;">ATP GO 3</span>
+        <span style="font-size:10px;background:#0f2c1a;border:1px solid #238636;border-radius:4px;padding:2px 8px;color:#3fb950;">WTA GO 1</span>
+        <span style="font-size:10px;background:#2d2100;border:1px solid #d29922;border-radius:4px;padding:2px 8px;color:#d29922;">NHL CAUTION 2</span>
+        <span style="font-size:10px;background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:2px 8px;color:var(--text2);">NBA SKIP 4</span>
+      </div>
+    </div>
+
+    <div style="background:var(--surface);border:1px solid #a5f3fc40;border-left:3px solid #a5f3fc;border-radius:8px;padding:16px 18px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+        <div style="font-size:13px;font-weight:700;">2026-04-14 _23 &#x2014; &#x9065;&#x53CA;&#x5206;&#x6790; + &#x30EB;&#x30FC;&#x30EB;&#x30D1;&#x30A4;&#x30D7;&#x30E9;&#x30A4;&#x30F3;&#x69CB;&#x7BC9;</div>
+        <div style="font-size:11px;color:var(--text2);">&#x30EB;&#x30FC;&#x30EB;&#x5909;&#x66F4;: N016 / W007 / R001</div>
+      </div>
+      <div style="font-size:12px;color:var(--text2);line-height:1.8;">
+        &#x30FB; NHL PHI@CAR&#xFF08;4/13&#xFF09;&#x9065;&#x53CA;&#x5206;&#x6790;: Carolina 6&#x540D;&#x610F;&#x56F3;&#x7684;rest &#x2192; N016&#xFF08;&#x30B7;&#x30FC;&#x30C7;&#x30A3;&#x30F3;&#x30B0;&#x78BA;&#x5B9A;&#x30C1;&#x30FC;&#x30E0;&#x7D42;&#x76E4;rest&#x78BA;&#x8A8D;&#xFF09;&#x65B0;&#x8A2D;<br>
+        &#x30FB; WTA Stuttgart UPSET&#x5206;&#x6790;: W007 indoor_clay&#x6CE8;&#x91C8;&#x8FFD;&#x52A0;&#xFF08;&#x30B9;&#x30D4;&#x30FC;&#x30C9;&#x29B6;&#x30A2;&#x30A6;&#x30C8;&#x30C9;&#x30A2;&#x30AF;&#x30EC;&#x30FC; &#x2192; &#x30D5;&#x30E9;&#x30C3;&#x30C8;&#x578B;&#x6709;&#x5229;&#xFF09;<br>
+        &#x30FB; ATP R001 CAUTION&#x30BE;&#x30FC;&#x30F3;&#x8FFD;&#x52A0;: 100&#x301C;129pt &#x2192; CAUTION&#x8A18;&#x9332;&#x306E;&#x307F;&#xFF08;GO&#x3057;&#x306A;&#x3044;&#xFF09;<br>
+        &#x30FB; rule_pipeline.json &#x4F5C;&#x6210;&#xFF08;UPSET&#x691C;&#x77E5;&#x2192;&#x5C55;&#x9593;&#x2192;&#x4EEE;&#x8AAC;&#x5F62;&#x6210;&#x2192;&#x691C;&#x8A3C;&#x2192;&#x30EB;&#x30FC;&#x30EB;&#x5316;&#x306E;5&#x30B9;&#x30C6;&#x30C3;&#x30D7;&#xFF09;
+      </div>
+      <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;">
+        <span style="font-size:10px;background:#2d2100;border:1px solid #d29922;border-radius:4px;padding:2px 8px;color:#d29922;">&#x30EB;&#x30FC;&#x30EB;&#x6539;&#x8A02; x3</span>
+        <span style="font-size:10px;background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:2px 8px;color:var(--text2);">session_logs/2026-04-14_23.md</span>
+      </div>
+    </div>
+
+    <div style="background:var(--surface);border:1px solid #30363d;border-left:3px solid #58a6ff;border-radius:8px;padding:16px 18px;opacity:.8;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+        <div style="font-size:13px;font-weight:700;">2026-04-14 _22 &#x2014; &#x30B3;&#x30F3;&#x30C6;&#x30AD;&#x30B9;&#x30C8;&#x30EA;&#x30BB;&#x30C3;&#x30C8; / BACKLOG&#x5BE9;&#x67FB;</div>
+        <div style="font-size:11px;color:var(--text2);">&#x30BB;&#x30C3;&#x30B7;&#x30E7;&#x30F3;&#x5F15;&#x304D;&#x7D99;&#x304E;</div>
+      </div>
+      <div style="font-size:12px;color:var(--text2);line-height:1.8;">
+        &#x30FB; &#x524D;&#x30BB;&#x30C3;&#x30B7;&#x30E7;&#x30F3;&#x304B;&#x3089;&#x306E;&#x30B3;&#x30F3;&#x30C6;&#x30AD;&#x30B9;&#x30C8;&#x30EA;&#x30BB;&#x30C3;&#x30C8;&#x5F8C;&#x3001;BACKLOG&#x306E;&#x672A;&#x5B8C;&#x4E86;&#x30BF;&#x30B9;&#x30AF;&#x3092;&#x6574;&#x7406;<br>
+        &#x30FB; &#x76F4;&#x8FD1;5&#x30BB;&#x30C3;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x30C0;&#x30C3;&#x30B7;&#x30E5;&#x30DC;&#x30FC;&#x30C9;&#x6B20;&#x843D;&#x78BA;&#x8A8D;&#x5B8C;&#x4E86;<br>
+        &#x30FB; &#x30B3;&#x30F3;&#x30C6;&#x30AD;&#x30B9;&#x30C8;&#x30EA;&#x30BB;&#x30C3;&#x30C8;&#x30D7;&#x30ED;&#x30C8;&#x30B3;&#x30EB; CLAUDE_CODE_START.md &#x8FFD;&#x8A18;
+      </div>
+    </div>
+
+  </div>
+</div>

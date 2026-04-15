@@ -1,0 +1,2 @@
+        <div style="color:var(--text2);font-size:10px;text-transform:uppercase;margin-bottom:4px;">WTA Stuttgart R1 全12試合完了</div>
+        <div>分析 <b>12</b> 試合 &nbsp;|&nbsp; <span style="color:#f97316;font-weight:700;">GAMBLE_BET 1(GB001 ✓HIT +0.538u)</span> &nbsp;|&nbsp; <span style="color:#8b949e;">SKIP 11</span> &nbsp;|&nbsp; <span style="color:#f85149;">UPSET 5/12</span></div>

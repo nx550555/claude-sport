@@ -1,0 +1,1 @@
+    <div class="rule-entry" style="border-color:#86efac60;">

@@ -1,0 +1,235 @@
+<!-- ===== ファネル分析 ===== -->
+<div class="tab-content" id="content-funnel">
+  <div class="section-title">&#x30B9;&#x30AF;&#x30EA;&#x30FC;&#x30CB;&#x30F3;&#x30B0;&#x30D5;&#x30A1;&#x30CD;&#x30EB; &#x2014; &#x53D7;&#x4FE1;&#x2192;L1&#x2192;GO/CAUTION/SKIP&#x2192;&#x7D50;&#x679C;</div>
+  <p style="font-size:12px;color:var(--text2);margin-bottom:16px;line-height:1.7;">
+    &#x30C7;&#x30FC;&#x30BF;&#x3092;&#x53D7;&#x3051;&#x53D6;&#x3063;&#x305F;&#x8A66;&#x5408;&#x6570;&#x304B;&#x3089;&#x3001;&#x5404;&#x30B9;&#x30C6;&#x30C3;&#x30D7;&#x3067;&#x4F55;&#x4EF6;&#x6B8B;&#x3063;&#x305F;&#x304B;&#x3092;&#x8868;&#x793A;&#x3057;&#x307E;&#x3059;&#x3002;
+  </p>
+
+  <!-- 総計 -->
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin-bottom:20px;">
+    <div style="font-size:11px;font-weight:600;text-transform:uppercase;color:var(--text2);margin-bottom:12px;letter-spacing:.05em;">&#x5168;&#x30BB;&#x30C3;&#x30B7;&#x30E7;&#x30F3;&#x7D2F;&#x7A4D;</div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;">
+      <div style="text-align:center;background:var(--surface2);border-radius:8px;padding:10px 16px;min-width:90px;">
+        <div style="font-size:10px;color:var(--text2);text-transform:uppercase;margin-bottom:4px;">&#x53D7;&#x4FE1;</div>
+        <div style="font-size:24px;font-weight:700;">~101</div>
+        <div style="font-size:10px;color:var(--text2);">&#x8A66;&#x5408;</div>
+      </div>
+      <div style="align-self:center;color:var(--text2);font-size:18px;">&#x2192;</div>
+      <div style="text-align:center;background:var(--surface2);border-radius:8px;padding:10px 16px;min-width:90px;">
+        <div style="font-size:10px;color:var(--text2);text-transform:uppercase;margin-bottom:4px;">L1&#x901A;&#x904E;</div>
+        <div style="font-size:24px;font-weight:700;color:#58a6ff;">~41</div>
+        <div style="font-size:10px;color:var(--text2);">&#x8A66;&#x5408;</div>
+      </div>
+      <div style="align-self:center;color:var(--text2);font-size:18px;">&#x2192;</div>
+      <div style="text-align:center;background:var(--go-bg);border:1px solid #23863640;border-radius:8px;padding:10px 16px;min-width:90px;">
+        <div style="font-size:10px;color:#3fb950;text-transform:uppercase;margin-bottom:4px;">GO</div>
+        <div style="font-size:24px;font-weight:700;color:#3fb950;">27</div>
+        <div style="font-size:10px;color:var(--text2);">&#x8A66;&#x5408;</div>
+      </div>
+      <div style="text-align:center;background:var(--warn-bg);border:1px solid #d2992240;border-radius:8px;padding:10px 16px;min-width:90px;">
+        <div style="font-size:10px;color:#d29922;text-transform:uppercase;margin-bottom:4px;">CAUTION</div>
+        <div style="font-size:24px;font-weight:700;color:#d29922;">4</div>
+        <div style="font-size:10px;color:var(--text2);">&#x8A66;&#x5408;</div>
+      </div>
+      <div style="align-self:center;color:var(--text2);font-size:18px;">&#x2192;</div>
+      <div style="text-align:center;background:#0f2c1a;border:1px solid #23863640;border-radius:8px;padding:10px 16px;min-width:90px;">
+        <div style="font-size:10px;color:#3fb950;text-transform:uppercase;margin-bottom:4px;">&#x78BA;&#x5B9A;HIT</div>
+        <div style="font-size:24px;font-weight:700;color:#3fb950;">13</div>
+        <div style="font-size:10px;color:var(--text2);">/ 17&#x78BA;&#x5B9A;</div>
+      </div>
+      <div style="text-align:center;background:#2d1014;border:1px solid #f8514940;border-radius:8px;padding:10px 16px;min-width:90px;">
+        <div style="font-size:10px;color:#f85149;text-transform:uppercase;margin-bottom:4px;">MISS</div>
+        <div style="font-size:24px;font-weight:700;color:#f85149;">4</div>
+        <div style="font-size:10px;color:var(--text2);">/ 17&#x78BA;&#x5B9A;</div>
+      </div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--text2);">&#x6B63;&#x7B54;&#x7387; 76.5% (13/17) &#x30FB; GO&#x5C65;&#x884C;&#x7387; 26.7% (27/101) &#x30FB; L1&#x901A;&#x904E;&#x7387; 40.6% (41/101)</div>
+  </div>
+
+  <!-- スポーツ別ファネル -->
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>&#x30B9;&#x30DD;&#x30FC;&#x30C4;/&#x30BB;&#x30C3;&#x30B7;&#x30E7;&#x30F3;</th>
+          <th style="text-align:right;">&#x53D7;&#x4FE1;</th>
+          <th style="text-align:right;">L1&#x901A;&#x904E;</th>
+          <th style="text-align:right;color:#3fb950;">GO</th>
+          <th style="text-align:right;color:#d29922;">CAUTION</th>
+          <th style="text-align:right;color:#8b949e;">SKIP</th>
+          <th style="text-align:right;">&#x78BA;&#x5B9A;</th>
+          <th style="text-align:right;color:#3fb950;">HIT</th>
+          <th style="text-align:right;color:#f85149;">MISS</th>
+          <th style="text-align:right;">&#x5F85;&#x6C7A;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:rgba(121,192,255,.04);">
+          <td><span class="sport-tag" style="color:#79c0ff;">&#x1F3BE; ATP MC2026</span></td>
+          <td style="text-align:right;color:var(--text2);">&#x2014;</td>
+          <td style="text-align:right;">13</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">13</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:var(--text2);">&#x2014;</td>
+          <td style="text-align:right;">10</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">7</td>
+          <td style="text-align:right;color:#f85149;font-weight:600;">3</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+        </tr>
+        <tr>
+          <td><span class="sport-tag" style="color:#79c0ff;">&#x1F3BE; ATP W16 R1 (4/12&#x5B9F;&#x65BD;)</span></td>
+          <td style="text-align:right;">14</td>
+          <td style="text-align:right;">8</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">3</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:var(--text2);">5</td>
+          <td style="text-align:right;">0</td>
+          <td style="text-align:right;color:var(--text2);">&#x2014;</td>
+          <td style="text-align:right;color:var(--text2);">&#x2014;</td>
+          <td style="text-align:right;color:#d29922;">3</td>
+        </tr>
+        <tr style="background:rgba(249,168,212,.04);">
+          <td><span class="sport-tag" style="color:#f9a8d4;">&#x1F3BE; WTA Stuttgart R1</span></td>
+          <td style="text-align:right;">12</td>
+          <td style="text-align:right;">4</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">1+1<span style="font-size:10px;color:#f97316;"> GB</span></td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:var(--text2);">10</td>
+          <td style="text-align:right;">1</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">1</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:#d29922;">1</td>
+        </tr>
+        <tr>
+          <td><span class="sport-tag" style="color:#a5f3fc;">&#x1F3D2; NHL 4/09&#x301C;11</span></td>
+          <td style="text-align:right;">16</td>
+          <td style="text-align:right;">~4</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">2</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:var(--text2);">12</td>
+          <td style="text-align:right;">2</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">2</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+        </tr>
+        <tr>
+          <td><span class="sport-tag" style="color:#a5f3fc;">&#x1F3D2; NHL 4/13&#x30B9;&#x30AF;&#x30EA;&#x30FC;&#x30CB;&#x30F3;&#x30B0;</span></td>
+          <td style="text-align:right;">9</td>
+          <td style="text-align:right;">~2</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">0</td>
+          <td style="text-align:right;color:#d29922;font-weight:600;">2</td>
+          <td style="text-align:right;color:var(--text2);">7</td>
+          <td style="text-align:right;">0</td>
+          <td style="text-align:right;color:var(--text2);">&#x2014;</td>
+          <td style="text-align:right;color:var(--text2);">&#x2014;</td>
+          <td style="text-align:right;color:#d29922;">2</td>
+        </tr>
+        <tr style="background:rgba(252,165,165,.04);">
+          <td><span class="sport-tag" style="color:#fca5a5;">&#x1F3C0; NBA 4/12&#x6700;&#x7D42;&#x65E5;</span></td>
+          <td style="text-align:right;">15</td>
+          <td style="text-align:right;">4</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">1</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:var(--text2);">10</td>
+          <td style="text-align:right;">1</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">1</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+        </tr>
+        <tr>
+          <td><span class="sport-tag" style="color:#fca5a5;">&#x1F3C0; NBA Play-in 4/14</span></td>
+          <td style="text-align:right;">4</td>
+          <td style="text-align:right;">0</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">0</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:var(--text2);">4</td>
+          <td style="text-align:right;">0</td>
+          <td style="text-align:right;color:var(--text2);">&#x2014;</td>
+          <td style="text-align:right;color:var(--text2);">&#x2014;</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+        </tr>
+        <tr style="background:rgba(134,239,172,.04);">
+          <td><span class="sport-tag" style="color:#86efac;">&#x1F3C9; NRL R6 4/10</span></td>
+          <td style="text-align:right;">7</td>
+          <td style="text-align:right;">1</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">1</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:var(--text2);">6</td>
+          <td style="text-align:right;">1</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:#f85149;font-weight:600;">1</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+        </tr>
+        <tr style="background:rgba(134,239,172,.04);">
+          <td><span class="sport-tag" style="color:#86efac;">&#x1F3C9; NRL R7 4/13&#x30B9;&#x30AF;&#x30EA;&#x30FC;&#x30CB;&#x30F3;&#x30B0;</span></td>
+          <td style="text-align:right;">8</td>
+          <td style="text-align:right;">6</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">2</td>
+          <td style="text-align:right;color:#d29922;font-weight:600;">2</td>
+          <td style="text-align:right;color:var(--text2);">2</td>
+          <td style="text-align:right;">0</td>
+          <td style="text-align:right;color:var(--text2);">&#x2014;</td>
+          <td style="text-align:right;color:var(--text2);">&#x2014;</td>
+          <td style="text-align:right;color:#d29922;">4</td>
+        </tr>
+        <tr>
+          <td><span class="sport-tag" style="color:#c4b5fd;">&#x1F3C9; Super Rugby R9 4/10</span></td>
+          <td style="text-align:right;">5</td>
+          <td style="text-align:right;">1</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">1</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:var(--text2);">4</td>
+          <td style="text-align:right;">1</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">1</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+        </tr>
+        <tr>
+          <td><span class="sport-tag" style="color:#fca5a5;">&#x1F3C8; UFL W3 4/10</span></td>
+          <td style="text-align:right;">4</td>
+          <td style="text-align:right;">1</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">1</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:var(--text2);">3</td>
+          <td style="text-align:right;">1</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">1</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+        </tr>
+        <tr style="background:rgba(191,219,254,.04);">
+          <td><span class="sport-tag" style="color:#bfdbfe;">&#x1F3C9; Super League R8 4/14</span></td>
+          <td style="text-align:right;">7</td>
+          <td style="text-align:right;">2</td>
+          <td style="text-align:right;color:#3fb950;font-weight:600;">2</td>
+          <td style="text-align:right;color:var(--text2);">0</td>
+          <td style="text-align:right;color:var(--text2);">5</td>
+          <td style="text-align:right;">0</td>
+          <td style="text-align:right;color:var(--text2);">&#x2014;</td>
+          <td style="text-align:right;color:var(--text2);">&#x2014;</td>
+          <td style="text-align:right;color:#d29922;">2</td>
+        </tr>
+        <tr style="background:var(--surface2);font-weight:600;">
+          <td>&#x5408;&#x8A08;</td>
+          <td style="text-align:right;">~101</td>
+          <td style="text-align:right;color:#58a6ff;">~41</td>
+          <td style="text-align:right;color:#3fb950;">27</td>
+          <td style="text-align:right;color:#d29922;">4</td>
+          <td style="text-align:right;color:var(--text2);">~70</td>
+          <td style="text-align:right;">17</td>
+          <td style="text-align:right;color:#3fb950;">13</td>
+          <td style="text-align:right;color:#f85149;">4</td>
+          <td style="text-align:right;color:#d29922;">12</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div style="margin-top:16px;font-size:11px;color:var(--text2);line-height:1.8;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 16px;">
+    <strong style="color:var(--text);">&#x6CE8;&#x8A18;:</strong>
+    GB = GAMBLE_BET&#xFF08;&#x9ad8;&#x30AA;&#x30C3;&#x30BA;&#x30A2;&#x30F3;&#x30C0;&#x30FC;&#x30C9;&#x30C3;&#x30B0;&#x8CED;&#x3051;&#xFF09;&#x3002;
+    ATP MC2026&#x306F;GO&#x306E;&#x307F;&#x8A18;&#x9332;&#xFF08;SKIP&#x8FFD;&#x8DE1;&#x672A;&#x5B9F;&#x65BD;&#xFF09;&#x3002;
+    NRL R7&#x30FB;SL R8&#x30FB;ATP W16 R1&#x30FB;WTA Paolini&#x306F;&#x7D50;&#x679C;&#x5F85;&#x6A5F;&#x4E2D;&#x3002;
+    NHL 4/13 CAUTION 2&#x4EF6;&#x306F;&#x30B4;&#x30FC;&#x30EB;&#x30AD;&#x30FC;&#x30D1;&#x30FC;&#x78BA;&#x8A8D;&#x5F85;&#x3061;&#x3002;
+  </div>
+</div>
+

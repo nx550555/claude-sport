@@ -1,0 +1,9 @@
+&#x30A6;&#x30A7;&#x30B9;&#x30C8;&#x30FB;&#x30BF;&#x30A4;&#x30AC;&#x30FC;&#x30B9; vs &#x30D6;&#x30EA;&#x30B9;&#x30D9;&#x30F3;&#x30FB;&#x30D6;&#x30ED;&#x30F3;&#x30B3;&#x30B9; <span class="badge badge-go">GO</span></div>
+      <div class="ac-rec">&#x63A8;&#x5968;: <strong style="color:#3fb950;">&#x30D6;&#x30EA;&#x30B9;&#x30D9;&#x30F3;&#x30FB;&#x30D6;&#x30ED;&#x30F3;&#x30B3;&#x30B9;</strong></div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">&#x30AA;&#x30C3;&#x30BA;</div><div class="acm-v odds">1.47</div></div>
+        <div class="acm"><div class="acm-l">&#x4E88;&#x6E2C;EV</div><div class="acm-v ev">+27.9%</div></div>
+        <div class="acm"><div class="acm-l">&#x78BA;&#x4FE1;&#x5EA6;</div><div class="acm-v">87.6%</div></div>
+        <div class="acm"><div class="acm-l">PD/G&#x5DEE;</div><div class="acm-v rule">+14.1pt</div></div>
+      </div>
+      <div class="ac-note">&#x30D6;&#x30ED;&#x30F3;&#x30B3;&#x30B9; PD/G +10.0 / &#x30BF;&#x30A4;&#x30AC;&#x30FC;&#x30B9; PD/G -4.1 &#x2192; &#x5DEE;+14.1pt&#x3002;R7&#x65E9;&#x671F;&#x9583;&#x5024;12pt&#x8D85;&#x3002;conf 87.6% / EV+27.9%</div>

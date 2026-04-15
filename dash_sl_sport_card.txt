@@ -1,0 +1,11 @@
+      <div class="sport-card">
+        <div class="sport-card-header" style="color:#bfdbfe;">🏉 Super League <span class="rule-ver">v1.0</span></div>
+        <div class="sport-metrics">
+          <div class="sm"><div class="sm-label">GO回数</div><div class="sm-val">2</div></div>
+          <div class="sm"><div class="sm-label">結果済</div><div class="sm-val">0</div></div>
+          <div class="sm"><div class="sm-label">的中</div><div class="sm-val" style="color:#8b949e;">—</div></div>
+          <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#8b949e;">—</div></div>
+          <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#8b949e;">0</div></div>
+          <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#e3b341;">2</div></div>
+        </div>
+      </div>

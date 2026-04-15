@@ -1,0 +1,8 @@
+        <tr>
+          <td>04/15</td>
+          <td><span class="sport-tag" style="color:#f9a8d4;">🎾 WTA</span></td>
+          <td class="match-cell"><strong>Paolini J.(4) vs Sonmez Z.</strong></td>
+          <td style="text-align:right;color:#3fb950;">cElo+300</td>
+          <td><span class="badge badge-go">GO</span></td>
+          <td style="font-size:11px;color:var(--text2);">cElo Paolini 1916 / Sonmez 1616。差300でL1通過。推定勝率85.0%→EV<b>+5.4%</b> @1.24。W007 indoor clay適用（差300ptでupset懸念なし）。<strong style="color:#e3b341;">⏳ PENDING 4/15 21:30 JST</strong></td>
+        </tr>
