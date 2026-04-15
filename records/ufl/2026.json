@@ -1,72 +1,114 @@
-{
-  "sport": "ufl",
-  "season": "2026",
-  "bet_type": "Moneyline (ML)",
-  "rule_version": "v1.0",
-  "started": "2026-04-10",
-  "summary": {
-    "total": 1,
-    "hit": 1,
-    "hit_rate": 1.0,
-    "ev_total": 0.32
-  },
-  "games": [
-    {
-      "date": "2026-04-12",
-      "match": "Columbus Aviators @ Dallas Renegades",
-      "home": "Dallas Renegades",
-      "away": "Columbus Aviators",
-      "week": 3,
-      "tier": "go",
-      "predicted_winner": "Dallas Renegades",
-      "prediction_confidence": 82,
-      "prediction_basis": "PD差30pt (DAL +17.5 vs COL -12.5)。Austin Reed 2-0・7TD/2G。COL 0-2・前週44-26大敗。",
-      "prediction_hit": true,
-      "rec": "Dallas Renegades",
-      "rec_odds": 1.32,
-      "ev": 8.2,
-      "confidence": 82,
-      "l1_metric": "Points Differential/Game",
-      "l1_data": {
-        "DAL_PD_per_game": 17.5,
-        "COL_PD_per_game": -12.5,
-        "diff": 30.0
-      },
-      "adjustments": {
-        "DAL_home": "+4% (U004)",
-        "week3_threshold": "80%閾値適用(U008) → 82%で通過"
-      },
-      "estimated_win_pct": 82,
-      "standings": {
-        "DAL": "2-0, PF=67, PA=32",
-        "COL": "0-2, PF=42, PA=67"
-      },
-      "qb_status": {
-        "DAL": "Austin Reed 先発確認済 (7TD/2試合, 616yd)",
-        "COL": "未確認"
-      },
-      "rules_applied": ["U001", "U002", "U004", "U008"],
-      "checklist_done": true,
-      "result": "Dallas Renegades",
-      "score": "28-23",
-      "hit": true,
-      "actual_ev": 0.32,
-      "miss_layer": null,
-      "note": "Dallas 28-23 Columbus。HIT (+0.32u)。PD差30ptの地力差が結果に直結。Austin Reed先発・アウェイのCOLに対してホーム優位も発揮。※date修正: 実際の試合日は4/12（当初4/13と記録）"
-    }
-  ],
-  "screening_log": [
-    {
-      "date": "2026-04-10",
-      "week": 3,
-      "total_games": 4,
-      "l1_passed": 3,
-      "go_recommendations": 1,
-      "skipped_after_l1": [
-        { "match": "Louisville vs Orlando", "reason": "Week3閾値80%に対し推定信頼度75% → U008でSKIP" },
-        { "match": "DC vs Houston", "reason": "DC 1.33オッズ、80%時EV+6.4%のみ → Week3保守判断SKIP" },
-        { "match": "St.Louis vs Birmingham", "reason": "L1差5pt弱シグナル + 市場はBirmingham優勢 → SKIP" }
-      ]
-    }
-  ]
+﻿{
+    "sport":  "ufl",
+    "season":  "2026",
+    "bet_type":  "Moneyline (ML)",
+    "rule_version":  "v1.0",
+    "started":  "2026-04-10",
+    "summary":  {
+                    "total":  1,
+                    "hit":  1,
+                    "hit_rate":  1.0,
+                    "ev_total":  0.32
+                },
+    "games":  [
+                  {
+                      "date":  "2026-04-12",
+                      "match":  "Columbus Aviators @ Dallas Renegades",
+                      "home":  "Dallas Renegades",
+                      "away":  "Columbus Aviators",
+                      "week":  3,
+                      "tier":  "go",
+                      "predicted_winner":  "Dallas Renegades",
+                      "prediction_confidence":  82,
+                      "prediction_basis":  "PD差30pt (DAL +17.5 vs COL -12.5)。Austin Reed 2-0・7TD/2G。COL 0-2・前週44-26大敗。",
+                      "prediction_hit":  true,
+                      "rec":  "Dallas Renegades",
+                      "rec_odds":  1.32,
+                      "ev":  8.2,
+                      "confidence":  82,
+                      "l1_metric":  "Points Differential/Game",
+                      "l1_data":  {
+                                      "DAL_PD_per_game":  17.5,
+                                      "COL_PD_per_game":  -12.5,
+                                      "diff":  30.0
+                                  },
+                      "adjustments":  {
+                                          "DAL_home":  "+4% (U004)",
+                                          "week3_threshold":  "80%閾値適用(U008) → 82%で通過"
+                                      },
+                      "estimated_win_pct":  82,
+                      "standings":  {
+                                        "DAL":  "2-0, PF=67, PA=32",
+                                        "COL":  "0-2, PF=42, PA=67"
+                                    },
+                      "qb_status":  {
+                                        "DAL":  "Austin Reed 先発確認済 (7TD/2試合, 616yd)",
+                                        "COL":  "未確認"
+                                    },
+                      "rules_applied":  [
+                                            "U001",
+                                            "U002",
+                                            "U004",
+                                            "U008"
+                                        ],
+                      "checklist_done":  true,
+                      "result":  "Dallas Renegades",
+                      "score":  "28-23",
+                      "hit":  true,
+                      "actual_ev":  0.32,
+                      "miss_layer":  null,
+                      "note":  "Dallas 28-23 Columbus。HIT (+0.32u)。PD差30ptの地力差が結果に直結。Austin Reed先発・アウェイのCOLに対してホーム優位も発揮。※date修正: 実際の試合日は4/12（当初4/13と記録）"
+                  },
+                  {
+                      "week":  4,
+                      "date":  "2026-04-17",
+                      "start_time":  "TBD",
+                      "match":  "Houston Gamblers vs Louisville Kings",
+                      "venue":  "TBD",
+                      "tier":  "go",
+                      "rec":  "Louisville Kings",
+                      "rec_odds":  1.65,
+                      "ev_est":  35.3,
+                      "confidence":  82,
+                      "ev_calc":  "(0.82 x 1.65) - 1 = +35.3%",
+                      "adjustments":  {
+                                          "qb_edge":  "Bean (Louisville) W3 352yd 3TD vs Tagovailoa W3 21/40 171yd (7-45 blowout loss)",
+                                          "houston_qb_note":  "Dekkers shoulder W1 injury -\u003e Tagovailoa started W3, poor performance",
+                                          "threshold":  "Week4 GO threshold: conf \u003e= 80%"
+                                      },
+                      "status":  "pending",
+                      "result":  null,
+                      "score":  null,
+                      "hit":  null,
+                      "actual_ev":  null,
+                      "rules_applied":  [
+                                            "GEN001",
+                                            "UFL_v1.0"
+                                        ],
+                      "note":  "Houston QB situation unstable (Dekkers W1 shoulder injury, Tagovailoa fill-in W3 171yd 7-45 loss). Louisville QB Bean excellent W3 (352yd 3TD). Home/away TBD. GO per all-source check 2026-04-15. conf 82% \u003e W4 threshold 80%."
+                  }
+              ],
+    "screening_log":  [
+                          {
+                              "date":  "2026-04-10",
+                              "week":  3,
+                              "total_games":  4,
+                              "l1_passed":  3,
+                              "go_recommendations":  1,
+                              "skipped_after_l1":  [
+                                                       {
+                                                           "match":  "Louisville vs Orlando",
+                                                           "reason":  "Week3閾値80%に対し推定信頼度75% → U008でSKIP"
+                                                       },
+                                                       {
+                                                           "match":  "DC vs Houston",
+                                                           "reason":  "DC 1.33オッズ、80%時EV+6.4%のみ → Week3保守判断SKIP"
+                                                       },
+                                                       {
+                                                           "match":  "St.Louis vs Birmingham",
+                                                           "reason":  "L1差5pt弱シグナル + 市場はBirmingham優勢 → SKIP"
+                                                       }
+                                                   ]
+                          }
+                      ]
 }
