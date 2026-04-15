@@ -226,6 +226,8 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
   <div class="tab" id="tab-dailyreport" onclick="showTab('dailyreport')">📋 日報</div>
   <div class="tab" id="tab-rules"    onclick="showTab('rules')">⚙️ ルール変更履歴</div>
   <div class="tab" id="tab-excluded" onclick="showTab('excluded')">🚫 除外リーグ</div>
+  <div class="tab" id="tab-highprob" onclick="showTab('highprob')">&#x1F3AF; 高確率予想</div>
+  <div class="tab" id="tab-multi" onclick="showTab('multi')">&#x1F517; マルチベット</div>
 </div>
 
 <!-- ===== 概要 ===== -->
@@ -3139,6 +3141,55 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
     </div>
   </div>
 
+</div>
+
+
+<!-- ===== 高確率予想 (Output A) ===== -->
+<div class="tab-content" id="content-highprob">
+  <div class="section">
+    <div class="section-title">高確率予想リスト（出力A）</div>
+    <p style="color:var(--text2);font-size:12px;margin-bottom:16px;line-height:1.7;">
+      L1〜L4の4層評価で<strong style="color:var(--text);">確実視できる</strong>と判断した試合のみ掲載。少しでも迷いがある試合は含めない。確実性が高い順に並ぶ。
+    </p>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>試合名</th>
+            <th>種目</th>
+            <th>推奨</th>
+            <th>推定勝率</th>
+            <th>オッズ</th>
+            <th>確実と判断した理由</th>
+            <th>結果</th>
+          </tr>
+        </thead>
+        <tbody id="highprob-rows">
+          <tr>
+            <td colspan="8" style="text-align:center;color:var(--text2);padding:40px;font-size:13px;">
+              次回の分析セッションから記録開始
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ===== マルチベット (Output B) ===== -->
+<div class="tab-content" id="content-multi">
+  <div class="section">
+    <div class="section-title">高確率マルチベット（出力B）</div>
+    <p style="color:var(--text2);font-size:12px;margin-bottom:16px;line-height:1.7;">
+      出力Aの試合のみ使用。マルチEV = (全体推定勝率 &times; マルチオッズ) &minus; 1。EV+の組み合わせをマルチEV高い順に上位5パターン表示。
+    </p>
+    <div id="multi-rows" style="display:flex;flex-direction:column;gap:12px;">
+      <div style="text-align:center;color:var(--text2);padding:40px;font-size:13px;background:var(--surface);border:1px solid var(--border);border-radius:8px;">
+        次回の分析セッションから記録開始。出力Aが2件以上の場合に表示。
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="footer">

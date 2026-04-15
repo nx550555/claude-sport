@@ -1,0 +1,13 @@
+{
+  "description": "高確率予想（出力A）・マルチベット（出力B）記録",
+  "version": "1.0",
+  "created": "2026-04-15",
+  "instructions_for_claude": [
+    "スクリーニング完了後に 出力A → 出力B → このJSONに記録 → dashboard.html更新 の順で実行",
+    "出力A: L1~L4で確実視できる試合のみ。少しでも迷いがある場合は含めない",
+    "出力B: 出力Aが2件以上の場合のみ。全組み合わせのうちEV+のものを上位5パターン出力",
+    "結果確定後は各エントリの result を hit/miss に更新する",
+    "multi_odds = 各オッズの積 / total_win_prob = 各勝率の積 / multi_ev = (total_win_prob × multi_odds) - 1"
+  ],
+  "sessions": []
+}
