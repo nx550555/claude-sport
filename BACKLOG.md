@@ -30,6 +30,16 @@
 
 ---
 
+## 直近完了（4/15 Session _29b: betslip形式 + 整合性保証 + div崩れ修正）
+
+- [x] マルチベット betslip形式刷新（fix_multi_betslip2.py）- 各コンボのleg単位表示
+- [x] core/dashboard_stats.json 新設（stats唯一の真実ソース）
+- [x] sync_sport_cards.py 新設（自動同期スクリプト）
+- [x] SCアンカー8スポーツ全配置（fix_sc_final.py）
+- [x] CLAUDE.md更新（同期プロトコル必須化 + 出力AアップセットMISS分析フロー）
+- [x] content-active タブの余分な </div> 修正（全履歴コメント直後のdiv崩れ解消）
+- [x] セッションログ保存（session_logs/2026-04-15_29b.md）
+
 ## 直近完了（4/15 Session _29: マルチベット機能追加 + スクリーニング完了）
 
 - [x] add_multi_bet.md 実装完了: 「高確率予想（出力A）」「高確率マルチベット（出力B）」タブをdashboard.htmlに追加
