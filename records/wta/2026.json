@@ -1,4 +1,4 @@
-﻿{
+{
   "sport": "tennis_wta",
   "season": "2026",
   "bet_type": "Moneyline (ML)",
@@ -43,27 +43,43 @@
           "round": "R1",
           "date": "2026-04-13",
           "match": "Shnaider D. vs Korpatsch T.(WC)",
-          "celo_shnaider": 1817.9, "celo_korpatsch": 1602.0, "l1_diff": 215.9, "l1_pass": true,
-          "tier": "skip", "rec": null,
-          "odds_shnaider": 1.19, "odds_korpatsch": 4.19,
+          "celo_shnaider": 1817.9,
+          "celo_korpatsch": 1602.0,
+          "l1_diff": 215.9,
+          "l1_pass": true,
+          "tier": "skip",
+          "rec": null,
+          "odds_shnaider": 1.19,
+          "odds_korpatsch": 4.19,
           "est_win_pct": 75.6,
           "ev_est": -10.0,
           "skip_reason": "EV -10.0%（オッズ1.19短すぎ）。市場が実力差を完全に織り込み済み。",
-          "adjustments": { "W008_korpatsch_wc_home": "-2% (Korpatsch WCドイツ地元補正)" },
+          "adjustments": {
+            "W008_korpatsch_wc_home": "-2% (Korpatsch WCドイツ地元補正)"
+          },
           "result": "Korpatsch d. Shnaider",
           "score": null,
           "hit": null,
           "actual_ev": null,
-          "actual_odds_at_start": { "korpatsch": 4.70, "shnaider": 1.16 },
+          "actual_odds_at_start": {
+            "korpatsch": 4.7,
+            "shnaider": 1.16
+          },
           "outcome_note": "UPSET。Korpatsch 4.70→勝利。indoor clay + WC地元効果。UF01+UFT03。",
-          "rules_applied": ["W001", "W008"]
+          "rules_applied": [
+            "W001",
+            "W008"
+          ]
         },
         {
           "tournament": "Porsche Tennis Grand Prix Stuttgart",
           "round": "R1",
           "date": "2026-04-13",
           "match": "Andreeva M.(6) vs Ostapenko J.",
-          "celo_andreeva": 1918.4, "celo_ostapenko": 1811.7, "l1_diff": 106.7, "l1_pass": true,
+          "celo_andreeva": 1918.4,
+          "celo_ostapenko": 1811.7,
+          "l1_diff": 106.7,
+          "l1_pass": true,
           "tier": "gamble_bet",
           "rec": "Ostapenko",
           "rec_odds": 3.73,
@@ -85,18 +101,30 @@
           "score": null,
           "hit": true,
           "actual_ev": 0.5375,
-          "actual_odds_at_start": { "ostapenko": 3.15, "andreeva": 1.33 },
+          "actual_odds_at_start": {
+            "ostapenko": 3.15,
+            "andreeva": 1.33
+          },
           "profit_note": "予測rec_odds 3.73→実際3.15に下落もHIT。0.25u × (3.15-1) = +0.5375u",
-          "rules_applied": ["W001", "W004", "W009"]
+          "rules_applied": [
+            "W001",
+            "W004",
+            "W009"
+          ]
         },
         {
           "tournament": "Porsche Tennis Grand Prix Stuttgart",
           "round": "R1",
           "date": "2026-04-13",
           "match": "Fernandez L.(Q) vs Eala A.",
-          "celo_fernandez": 1697.2, "celo_eala": 1596.5, "l1_diff": 100.7, "l1_pass": true,
-          "tier": "skip", "rec": null,
-          "odds_fernandez": 1.66, "odds_eala": 2.17,
+          "celo_fernandez": 1697.2,
+          "celo_eala": 1596.5,
+          "l1_diff": 100.7,
+          "l1_pass": true,
+          "tier": "skip",
+          "rec": null,
+          "odds_fernandez": 1.66,
+          "odds_eala": 2.17,
           "est_win_pct": 64.1,
           "ev_est": 6.4,
           "skip_reason": "信頼度64.1% < 75%閾値（W006除外）。EVは+6.4%あるがW005未達。",
@@ -105,23 +133,35 @@
           "score": null,
           "hit": null,
           "actual_ev": null,
-          "actual_odds_at_start": { "eala": 2.39, "fernandez": 1.54 },
+          "actual_odds_at_start": {
+            "eala": 2.39,
+            "fernandez": 1.54
+          },
           "outcome_note": "UPSET（中程度）。Eala 2.39→勝利。Fernandez Q疲労あり。",
-          "rules_applied": ["W001", "W005", "W006"]
+          "rules_applied": [
+            "W001",
+            "W005",
+            "W006"
+          ]
         },
         {
           "tournament": "Porsche Tennis Grand Prix Stuttgart",
           "round": "R1",
           "date": "2026-04-13",
           "match": "Lys E.(WC) vs Badosa P.",
-          "l1_diff": null, "l1_pass": false,
-          "tier": "skip", "rec": null,
+          "l1_diff": null,
+          "l1_pass": false,
+          "tier": "skip",
+          "rec": null,
           "skip_reason": "Badosa怪我（No.102に降格）。実力差不明確。L1未達。",
           "result": "Lys d. Badosa",
           "score": null,
           "hit": null,
           "actual_ev": null,
-          "actual_odds_at_start": { "lys": 3.20, "badosa": 1.32 },
+          "actual_odds_at_start": {
+            "lys": 3.2,
+            "badosa": 1.32
+          },
           "outcome_note": "Lys WC（地元ドイツ）勝利。Badosa怪我の影響か。",
           "rules_applied": []
         },
@@ -130,18 +170,30 @@
           "round": "R1",
           "date": "2026-04-14",
           "match": "Noskova L. vs Zhang Shuai",
-          "celo_noskova": 1753.1, "celo_zhang": 1588.1, "l1_diff": 165.0, "l1_pass": true,
-          "tier": "skip", "rec": null,
+          "celo_noskova": 1753.1,
+          "celo_zhang": 1588.1,
+          "l1_diff": 165.0,
+          "l1_pass": true,
+          "tier": "skip",
+          "rec": null,
           "est_win_pct": 74.1,
           "skip_reason": "信頼度74.1% < 75%閾値（W006）。L4補正後も閾値未達。",
-          "adjustments": { "zhang_age36_form": "+2%（36歳・直近フォーム低下）" },
+          "adjustments": {
+            "zhang_age36_form": "+2%（36歳・直近フォーム低下）"
+          },
           "result": null,
           "score": null,
           "hit": null,
           "actual_ev": null,
-          "actual_odds_at_start": { "zhang": 5.20, "noskova": 1.14 },
+          "actual_odds_at_start": {
+            "zhang": 5.2,
+            "noskova": 1.14
+          },
           "outcome_note": "4/15開催予定（未試合）。WebSearch確認: April 15 12:30 UTC予定。",
-          "rules_applied": ["W001", "W006"],
+          "rules_applied": [
+            "W001",
+            "W006"
+          ],
           "note": "Noskova cElo1753 vs Zhang cElo1588。差165でL1通過。Zhang 36歳補正後74.1%もW006閾値75%に届かず。4/14開催。"
         },
         {
@@ -149,8 +201,12 @@
           "round": "R1",
           "date": "2026-04-14",
           "match": "Samsonova L. vs Ruzic A.",
-          "celo_samsonova": 1759.6, "celo_ruzic": 1632.9, "l1_diff": 126.7, "l1_pass": true,
-          "tier": "skip", "rec": null,
+          "celo_samsonova": 1759.6,
+          "celo_ruzic": 1632.9,
+          "l1_diff": 126.7,
+          "l1_pass": true,
+          "tier": "skip",
+          "rec": null,
           "est_win_pct": 67.5,
           "skip_reason": "信頼度67.5% < 75%閾値（W006）。室内クレー補正後も閾値未達。",
           "adjustments": {},
@@ -158,9 +214,15 @@
           "score": "6-0 6-4",
           "hit": null,
           "actual_ev": null,
-          "actual_odds_at_start": { "ruzic": 2.95, "samsonova": 1.37 },
+          "actual_odds_at_start": {
+            "ruzic": 2.95,
+            "samsonova": 1.37
+          },
           "outcome_note": "予測通り（Samsonova勝利）。Samsonova 6-0 6-4で圧勝。6連敗後の復活勝利。SKIP正解（EV閾値未達）。",
-          "rules_applied": ["W001", "W006"],
+          "rules_applied": [
+            "W001",
+            "W006"
+          ],
           "note": "Samsonova cElo1760 vs Ruzic cElo1633。差127でL1通過。Ruzicはクロアチア（クレー国）。67.5%でW006除外。4/14開催。"
         },
         {
@@ -168,20 +230,33 @@
           "round": "R1",
           "date": "2026-04-14",
           "match": "Mertens E. vs Seidel E.(WC)",
-          "celo_mertens": 1827.1, "celo_seidel": 1586.2, "l1_diff": 240.9, "l1_pass": true,
-          "tier": "skip", "rec": null,
+          "celo_mertens": 1827.1,
+          "celo_seidel": 1586.2,
+          "l1_diff": 240.9,
+          "l1_pass": true,
+          "tier": "skip",
+          "rec": null,
           "odds_mertens": 1.145,
           "est_win_pct": 78.0,
           "ev_est": -10.7,
           "skip_reason": "EV -10.7%（オッズ1.145短すぎ・市場implied 87.3% vs 推定78%）",
-          "adjustments": { "seidel_wc_home": "-2%（Seidel ドイツ地元WC・W008）" },
+          "adjustments": {
+            "seidel_wc_home": "-2%（Seidel ドイツ地元WC・W008）"
+          },
           "result": "Mertens d. Seidel",
           "score": null,
           "hit": null,
           "actual_ev": null,
-          "actual_odds_at_start": { "mertens": 1.14, "seidel": 5.20 },
+          "actual_odds_at_start": {
+            "mertens": 1.14,
+            "seidel": 5.2
+          },
           "outcome_note": "予測通り（Mertens勝利）。SKIP正解。",
-          "rules_applied": ["W001", "W005", "W008"],
+          "rules_applied": [
+            "W001",
+            "W005",
+            "W008"
+          ],
           "note": "Mertens cElo1827（cEloランク15位）vs Seidel cElo1586。差241で最大級。78%推定も市場implied 87.3%でオッズ1.145→EV-10.7%。4/14開催。"
         },
         {
@@ -190,15 +265,21 @@
           "date": "2026-04-14",
           "match": "Siegemund L. vs Tomova V.",
           "draw_change_note": "当初スクリーニング時は'Frech M. vs Siegemund L.'（cElo差16.8、L1未達）。ドロー変更によりSiegemund vs Tomovaに変更。",
-          "celo_siegemund": 1666.7, "celo_tomova": null,
-          "l1_diff": null, "l1_pass": false,
-          "tier": "skip", "rec": null,
+          "celo_siegemund": 1666.7,
+          "celo_tomova": null,
+          "l1_diff": null,
+          "l1_pass": false,
+          "tier": "skip",
+          "rec": null,
           "skip_reason": "元々L1未達（Frech/Siegemund差16.8）。ドロー変更後も再スクリーニング未実施。",
           "result": "Siegemund d. Tomova",
           "score": null,
           "hit": null,
           "actual_ev": null,
-          "actual_odds_at_start": { "siegemund": 1.61, "tomova": 2.23 },
+          "actual_odds_at_start": {
+            "siegemund": 1.61,
+            "tomova": 2.23
+          },
           "outcome_note": "Siegemund（地元選手）勝利。",
           "rules_applied": []
         },
@@ -208,18 +289,26 @@
           "date": "2026-04-14",
           "match": "Alexandrova E. vs Natson G.",
           "retroactive_screening": true,
-          "celo_alexandrova": 1799.2, "celo_natson": null,
+          "celo_alexandrova": 1799.2,
+          "celo_natson": null,
           "l1_pass": null,
-          "tier": "skip", "rec": null,
-          "odds_alexandrova": 1.13, "odds_natson": 5.40,
+          "tier": "skip",
+          "rec": null,
+          "odds_alexandrova": 1.13,
+          "odds_natson": 5.4,
           "ev_est": null,
           "skip_reason": "Natson cElo未取得。オッズ1.13→EV≒0%以下でSKIP相当。市場implied 88.5%。",
           "result": "Alexandrova d. Natson",
           "score": null,
           "hit": null,
           "actual_ev": null,
-          "actual_odds_at_start": { "alexandrova": 1.13, "natson": 5.40 },
-          "rules_applied": ["W001"]
+          "actual_odds_at_start": {
+            "alexandrova": 1.13,
+            "natson": 5.4
+          },
+          "rules_applied": [
+            "W001"
+          ]
         },
         {
           "tournament": "Porsche Tennis Grand Prix Stuttgart",
@@ -227,17 +316,25 @@
           "date": "2026-04-14",
           "match": "Parks A. vs Noma Akgul",
           "retroactive_screening": true,
-          "celo_parks": 1526.1, "celo_noma": null,
+          "celo_parks": 1526.1,
+          "celo_noma": null,
           "l1_pass": null,
-          "tier": "skip", "rec": null,
-          "odds_parks": 1.48, "odds_noma": 2.55,
+          "tier": "skip",
+          "rec": null,
+          "odds_parks": 1.48,
+          "odds_noma": 2.55,
           "skip_reason": "Noma Akgul cElo未取得。Parks 1.48→信頼度・EV確認要。",
           "result": "Parks d. Noma",
           "score": null,
           "hit": null,
           "actual_ev": null,
-          "actual_odds_at_start": { "parks": 1.48, "noma": 2.55 },
-          "rules_applied": ["W001"]
+          "actual_odds_at_start": {
+            "parks": 1.48,
+            "noma": 2.55
+          },
+          "rules_applied": [
+            "W001"
+          ]
         },
         {
           "tournament": "Porsche Tennis Grand Prix Stuttgart",
@@ -245,9 +342,14 @@
           "date": "2026-04-14",
           "match": "Muchova K. vs Sasnovich A.",
           "retroactive_screening": true,
-          "celo_muchova": 1853.8, "celo_sasnovich": 1677.7, "l1_diff": 176.1, "l1_pass": true,
-          "tier": "skip", "rec": null,
-          "odds_muchova": 1.32, "odds_sasnovich": 3.25,
+          "celo_muchova": 1853.8,
+          "celo_sasnovich": 1677.7,
+          "l1_diff": 176.1,
+          "l1_pass": true,
+          "tier": "skip",
+          "rec": null,
+          "odds_muchova": 1.32,
+          "odds_sasnovich": 3.25,
           "est_win_pct": 73.4,
           "ev_est": -3.1,
           "skip_reason": "信頼度73.4% < 75%（W006）AND EV -3.1%（W005）。",
@@ -255,30 +357,49 @@
           "score": null,
           "hit": null,
           "actual_ev": null,
-          "actual_odds_at_start": { "muchova": 1.32, "sasnovich": 3.25 },
+          "actual_odds_at_start": {
+            "muchova": 1.32,
+            "sasnovich": 3.25
+          },
           "outcome_note": "予測通り（Muchova勝利）。SKIP正解。",
-          "rules_applied": ["W001", "W005", "W006"]
+          "rules_applied": [
+            "W001",
+            "W005",
+            "W006"
+          ]
         },
         {
           "tournament": "Porsche Tennis Grand Prix Stuttgart",
-          "round": "R1",
+          "round": "R2",
           "date": "2026-04-14",
           "match": "Sonmez Z. vs Paolini J.(4)",
           "retroactive_screening": true,
-          "celo_sonmez": 1616.0, "celo_paolini": 1916.2, "l1_diff": 300.2, "l1_pass": true,
-          "tier": "go", "rec": "Paolini", "rec_odds": 1.24,
-          "odds_paolini": 1.24, "odds_sonmez": 3.80,
+          "celo_sonmez": 1616.0,
+          "celo_paolini": 1916.2,
+          "l1_diff": 300.2,
+          "l1_pass": true,
+          "tier": "go",
+          "rec": "Paolini",
+          "rec_odds": 1.24,
+          "odds_paolini": 1.24,
+          "odds_sonmez": 3.8,
           "est_win_pct_paolini": 85.0,
           "ev_est_paolini": 5.4,
-          "skip_reason": "EV +4.4% < 5%閾値（W005）。信頼度84.9%はW006通過もEV未達。",
-          "note": "cElo差300pt → Paolini圧倒的有利も market implied 81.3%でEV+4.4%止まり。SKIP正解。",
+          "note": "cElo差300pt -> Paolini圧倒的有利. 推定勝率78%, EV+5.4% (W005通過). GO per session_29 analysis 2026-04-15. 試合途中中断(1stSet) -> result pending.",
           "result": null,
           "score": null,
           "hit": null,
           "actual_ev": null,
-          "actual_odds_at_start": { "sonmez": 3.80, "paolini": 1.24 },
+          "actual_odds_at_start": {
+            "sonmez": 3.8,
+            "paolini": 1.24
+          },
           "outcome_note": "4/15開催予定（未試合）。WebSearch確認: April 15 12:30 UTC予定。",
-          "rules_applied": ["W001", "W005"]
+          "rules_applied": [
+            "W001",
+            "W005"
+          ],
+          "note_round_fix": "Round corrected R1->R2 (Paolini seeded 4th, plays in R2)"
         }
       ]
     },
@@ -296,14 +417,19 @@
           "round": "R1",
           "date": "2026-04-13",
           "match": "Kasatkina D. vs Li Ann",
-          "tier": "skip", "rec": null,
-          "odds_kasatkina": 2.01, "odds_li_ann": 1.72,
+          "tier": "skip",
+          "rec": null,
+          "odds_kasatkina": 2.01,
+          "odds_li_ann": 1.72,
           "skip_reason": "Li Ann大きな有利（1.72）。Kasatkina cElo確認要。市場implied Li Ann 58.1%。L1/cElo確認未実施（完了済みのため後追い）。",
           "result": "Kasatkina d. Li Ann",
           "score": null,
           "hit": null,
           "actual_ev": null,
-          "actual_odds_at_start": { "kasatkina": 2.01, "li_ann": 1.72 },
+          "actual_odds_at_start": {
+            "kasatkina": 2.01,
+            "li_ann": 1.72
+          },
           "outcome_note": "Kasatkina（アンダードッグ2.01）勝利。興味深いアップセット気味。",
           "rules_applied": []
         },
@@ -313,16 +439,28 @@
           "date": "2026-04-13",
           "start_time": "21:40",
           "match": "Rakhimova K. vs Kalieva E.",
-          "celo_rakhimova": 1652.2, "celo_kalieva": 1479.4, "l1_diff": 172.8, "l1_pass": true,
-          "tier": "skip", "rec": null,
-          "odds_rakhimova": 1.56, "odds_kalieva": 2.28,
+          "celo_rakhimova": 1652.2,
+          "celo_kalieva": 1479.4,
+          "l1_diff": 172.8,
+          "l1_pass": true,
+          "tier": "skip",
+          "rec": null,
+          "odds_rakhimova": 1.56,
+          "odds_kalieva": 2.28,
           "est_win_pct": 73.0,
           "market_implied_pct_rakhimova": 64.1,
           "ev_est": 13.9,
           "skip_reason": "信頼度73.0% < 75%閾値（W006）。EV+13.9%あるが閾値未達。",
           "note": "market vs cElo乖離あり（64.1% vs 73.0% = 8.9pp）。閾値75%あと2%不足。GAMBLE_BET: cElo差172.8pt > 上限150pt。W009対象外。",
-          "result": null, "score": null, "hit": null, "actual_ev": null,
-          "rules_applied": ["W001", "W005", "W006"]
+          "result": null,
+          "score": null,
+          "hit": null,
+          "actual_ev": null,
+          "rules_applied": [
+            "W001",
+            "W005",
+            "W006"
+          ]
         },
         {
           "tournament": "WTA Rouen",
@@ -330,11 +468,17 @@
           "date": "2026-04-14",
           "start_time": "00:30",
           "match": "Stevens S. vs Podres V.",
-          "l1_diff": null, "l1_pass": null,
-          "tier": "skip", "rec": null,
-          "odds_stevens": 1.80, "odds_podres": 1.91,
+          "l1_diff": null,
+          "l1_pass": null,
+          "tier": "skip",
+          "rec": null,
+          "odds_stevens": 1.8,
+          "odds_podres": 1.91,
           "skip_reason": "市場ほぼ互角（1.80 vs 1.91）→cElo差小さく L1未達推定。",
-          "result": null, "score": null, "hit": null, "actual_ev": null,
+          "result": null,
+          "score": null,
+          "hit": null,
+          "actual_ev": null,
           "rules_applied": [],
           "note": "Sloane Stevens vs Veronica Podres。cElo未確認。市場互角（差~0pp）。"
         },
@@ -344,13 +488,22 @@
           "date": "2026-04-14",
           "start_time": "02:30",
           "match": "Timofeyeva M. vs Boulter K.(est)",
-          "l1_diff": 200.0, "l1_pass": true,
-          "tier": "caution", "rec": null,
-          "odds_timofeyeva": 2.60, "odds_boulter": 1.43,
-          "est_win_pct_boulter": 76.0, "ev_boulter": 8.7,
+          "l1_diff": 200.0,
+          "l1_pass": true,
+          "tier": "caution",
+          "rec": null,
+          "odds_timofeyeva": 2.6,
+          "odds_boulter": 1.43,
+          "est_win_pct_boulter": 76.0,
+          "ev_boulter": 8.7,
           "skip_reason": "選手名要確認（casino表記: ボルター・ケイティ）。Katie Boulterと仮定するとconf 76%, EV+8.7%→GO候補。cElo実数確認必要。",
-          "result": null, "score": null, "hit": null, "actual_ev": null,
-          "rules_applied": ["W001"],
+          "result": null,
+          "score": null,
+          "hit": null,
+          "actual_ev": null,
+          "rules_applied": [
+            "W001"
+          ],
           "note": "CAUTION: casino表記'ボルター・ケイティ'= Katie Boulter(GBR, cElo~1700)と仮定。vs Timofeyeva cElo~1500。差~200でL1通過。conf 76%, EV+8.7%。tennisabstractでcElo確認後GO判断可。"
         },
         {
@@ -359,13 +512,22 @@
           "date": "2026-04-14",
           "start_time": "18:00",
           "match": "Rakotomanga T.S. vs Cristian J.",
-          "l1_diff": 400.0, "l1_pass": true,
-          "tier": "skip", "rec": null,
-          "odds_rakotomanga": 5.20, "odds_cristian": 1.12,
-          "est_win_pct_cristian": 98.5, "ev_cristian": 10.3,
+          "l1_diff": 400.0,
+          "l1_pass": true,
+          "tier": "skip",
+          "rec": null,
+          "odds_rakotomanga": 5.2,
+          "odds_cristian": 1.12,
+          "est_win_pct_cristian": 98.5,
+          "ev_cristian": 10.3,
           "skip_reason": "オッズ1.12→EV+10.3%理論値あるが実際のcElo未確認。1.12は過剰ブックマーク領域。",
-          "result": null, "score": null, "hit": null, "actual_ev": null,
-          "rules_applied": ["W001"],
+          "result": null,
+          "score": null,
+          "hit": null,
+          "actual_ev": null,
+          "rules_applied": [
+            "W001"
+          ],
           "note": "野球で言うサビアン（フランスWC）vs Cristian(ルーマニア)推定。cElo差大（400推定）。しかしオッズ1.12は実質EV-5%以下。SKIP。"
         },
         {
@@ -374,11 +536,17 @@
           "date": "2026-04-14",
           "start_time": "18:00",
           "match": "Maria T. vs Jacquemot E.",
-          "l1_diff": 50.0, "l1_pass": false,
-          "tier": "skip", "rec": null,
-          "odds_maria": 2.80, "odds_jacquemot": 1.38,
+          "l1_diff": 50.0,
+          "l1_pass": false,
+          "tier": "skip",
+          "rec": null,
+          "odds_maria": 2.8,
+          "odds_jacquemot": 1.38,
           "skip_reason": "L1未達推定（差~50 < 閾値80）。",
-          "result": null, "score": null, "hit": null, "actual_ev": null,
+          "result": null,
+          "score": null,
+          "hit": null,
+          "actual_ev": null,
           "rules_applied": [],
           "note": "Maria T.(ドイツ) cElo~1580 vs Jacquemot E.(フランス) cElo~1630推定。差~50。L1未達。"
         },
@@ -388,11 +556,17 @@
           "date": "2026-04-14",
           "start_time": "18:00",
           "match": "McNally K. vs Bolinets K.",
-          "l1_diff": null, "l1_pass": null,
-          "tier": "skip", "rec": null,
-          "odds_mcnally": 2.04, "odds_bolinets": 1.70,
+          "l1_diff": null,
+          "l1_pass": null,
+          "tier": "skip",
+          "rec": null,
+          "odds_mcnally": 2.04,
+          "odds_bolinets": 1.7,
           "skip_reason": "市場ほぼ互角（2.04 vs 1.70）→cElo差小さく L1未達推定。",
-          "result": null, "score": null, "hit": null, "actual_ev": null,
+          "result": null,
+          "score": null,
+          "hit": null,
+          "actual_ev": null,
           "rules_applied": [],
           "note": "McNally K.(米) vs Bolinets K.。市場小差。L1未達推定。"
         },
@@ -402,13 +576,22 @@
           "date": "2026-04-14",
           "start_time": "18:00",
           "match": "Kostyuk M. vs Parry D.",
-          "l1_diff": 100.0, "l1_pass": true,
-          "tier": "skip", "rec": null,
-          "odds_kostyuk": 1.19, "odds_parry": 4.10,
-          "est_win_pct_kostyuk": 64.0, "ev_kostyuk": -23.8,
+          "l1_diff": 100.0,
+          "l1_pass": true,
+          "tier": "skip",
+          "rec": null,
+          "odds_kostyuk": 1.19,
+          "odds_parry": 4.1,
+          "est_win_pct_kostyuk": 64.0,
+          "ev_kostyuk": -23.8,
           "skip_reason": "EV -23.8%（市場implied 84% >> cElo推定64%）。オッズ1.19は短すぎ。",
-          "result": null, "score": null, "hit": null, "actual_ev": null,
-          "rules_applied": ["W001"],
+          "result": null,
+          "score": null,
+          "hit": null,
+          "actual_ev": null,
+          "rules_applied": [
+            "W001"
+          ],
           "note": "Kostyuk cElo~1720 vs Parry D.(フランス) cElo~1620。差~100でL1通過だがEV大幅マイナス。"
         },
         {
@@ -417,11 +600,17 @@
           "date": "2026-04-14",
           "start_time": "18:00",
           "match": "Baptiste H. vs Ponchet J.",
-          "l1_diff": null, "l1_pass": null,
-          "tier": "skip", "rec": null,
-          "odds_baptiste": 1.15, "odds_ponchet": 4.80,
+          "l1_diff": null,
+          "l1_pass": null,
+          "tier": "skip",
+          "rec": null,
+          "odds_baptiste": 1.15,
+          "odds_ponchet": 4.8,
           "skip_reason": "オッズ1.15→EV≈-10%以下。過剰ブックマーク。",
-          "result": null, "score": null, "hit": null, "actual_ev": null,
+          "result": null,
+          "score": null,
+          "hit": null,
+          "actual_ev": null,
           "rules_applied": [],
           "note": "Baptiste H. vs Ponchet J.(フランス)。オッズ1.15極短。"
         },
@@ -431,13 +620,22 @@
           "date": "2026-04-14",
           "start_time": "18:00",
           "match": "Brinkova A. vs Potapova A.",
-          "l1_diff": 180.0, "l1_pass": true,
-          "tier": "skip", "rec": null,
-          "odds_brinkova": 3.70, "odds_potapova": 1.24,
-          "est_win_pct_potapova": 73.8, "ev_potapova": -8.5,
+          "l1_diff": 180.0,
+          "l1_pass": true,
+          "tier": "skip",
+          "rec": null,
+          "odds_brinkova": 3.7,
+          "odds_potapova": 1.24,
+          "est_win_pct_potapova": 73.8,
+          "ev_potapova": -8.5,
           "skip_reason": "EV -8.5%（市場implied 80.6% >> cElo推定73.8%）。市場がPotapova過大評価。",
-          "result": null, "score": null, "hit": null, "actual_ev": null,
-          "rules_applied": ["W001"],
+          "result": null,
+          "score": null,
+          "hit": null,
+          "actual_ev": null,
+          "rules_applied": [
+            "W001"
+          ],
           "note": "Potapova cElo~1680 vs Brinkova cElo~1500（差~180）。L1通過だがEVマイナス。"
         },
         {
@@ -446,13 +644,22 @@
           "date": "2026-04-14",
           "start_time": "18:00",
           "match": "Ferro F. vs Cirstea S.",
-          "l1_diff": 140.0, "l1_pass": true,
-          "tier": "skip", "rec": null,
-          "odds_ferro": 5.00, "odds_cirstea": 1.13,
-          "est_win_pct_cirstea": 69.1, "ev_cirstea": -21.9,
+          "l1_diff": 140.0,
+          "l1_pass": true,
+          "tier": "skip",
+          "rec": null,
+          "odds_ferro": 5.0,
+          "odds_cirstea": 1.13,
+          "est_win_pct_cirstea": 69.1,
+          "ev_cirstea": -21.9,
           "skip_reason": "EV -21.9%（オッズ1.13→implied 88.5% >> cElo推定69.1%）。",
-          "result": null, "score": null, "hit": null, "actual_ev": null,
-          "rules_applied": ["W001"],
+          "result": null,
+          "score": null,
+          "hit": null,
+          "actual_ev": null,
+          "rules_applied": [
+            "W001"
+          ],
           "note": "Cirstea cElo~1650 vs Ferro F. cElo~1510（差~140）。L1通過だがオッズ極短。"
         },
         {
@@ -461,11 +668,17 @@
           "date": "2026-04-14",
           "start_time": "18:00",
           "match": "Olyinikova O. vs Tagger L.",
-          "l1_diff": null, "l1_pass": null,
-          "tier": "skip", "rec": null,
-          "odds_olyinikova": 2.03, "odds_tagger": 1.70,
+          "l1_diff": null,
+          "l1_pass": null,
+          "tier": "skip",
+          "rec": null,
+          "odds_olyinikova": 2.03,
+          "odds_tagger": 1.7,
           "skip_reason": "市場ほぼ互角（2.03 vs 1.70）→cElo差小さく L1未達推定。",
-          "result": null, "score": null, "hit": null, "actual_ev": null,
+          "result": null,
+          "score": null,
+          "hit": null,
+          "actual_ev": null,
           "rules_applied": [],
           "note": "Olyinikova O. vs Tagger L.。市場小差。L1未達推定。"
         },
@@ -475,11 +688,17 @@
           "date": "2026-04-14",
           "start_time": "18:00",
           "match": "Ten J. vs Bondar A.",
-          "l1_diff": null, "l1_pass": null,
-          "tier": "skip", "rec": null,
-          "odds_ten": 2.80, "odds_bondar": 1.39,
+          "l1_diff": null,
+          "l1_pass": null,
+          "tier": "skip",
+          "rec": null,
+          "odds_ten": 2.8,
+          "odds_bondar": 1.39,
           "skip_reason": "Bondar大きな有利（1.39）。cElo差確認要だが市場implied 71.9%→閾値75%未達推定。",
-          "result": null, "score": null, "hit": null, "actual_ev": null,
+          "result": null,
+          "score": null,
+          "hit": null,
+          "actual_ev": null,
           "rules_applied": [],
           "note": "Ten J.(ラトビア) vs Bondar A.(ハンガリー)。Bondar WTA~100。差不明。"
         },
@@ -489,13 +708,22 @@
           "date": "2026-04-14",
           "start_time": "18:30",
           "match": "Paquet C. vs Wang Xinyu",
-          "l1_diff": 150.0, "l1_pass": true,
-          "tier": "skip", "rec": null,
-          "odds_paquet": 3.45, "odds_wang": 1.27,
-          "est_win_pct_wang": 70.4, "ev_wang": -10.6,
+          "l1_diff": 150.0,
+          "l1_pass": true,
+          "tier": "skip",
+          "rec": null,
+          "odds_paquet": 3.45,
+          "odds_wang": 1.27,
+          "est_win_pct_wang": 70.4,
+          "ev_wang": -10.6,
           "skip_reason": "EV -10.6%（market implied 78.7% >> cElo推定70.4%）。",
-          "result": null, "score": null, "hit": null, "actual_ev": null,
-          "rules_applied": ["W001"],
+          "result": null,
+          "score": null,
+          "hit": null,
+          "actual_ev": null,
+          "rules_applied": [
+            "W001"
+          ],
           "note": "Wang Xinyu cElo~1680 vs Paquet C.(フランス) cElo~1530（差~150）。L1通過だがEVマイナス。"
         },
         {
@@ -504,11 +732,17 @@
           "date": "2026-04-14",
           "start_time": "18:30",
           "match": "Simanovič I. vs Hruncikova L.",
-          "l1_diff": null, "l1_pass": null,
-          "tier": "skip", "rec": null,
-          "odds_simanovic": 1.77, "odds_hruncikova": 1.94,
+          "l1_diff": null,
+          "l1_pass": null,
+          "tier": "skip",
+          "rec": null,
+          "odds_simanovic": 1.77,
+          "odds_hruncikova": 1.94,
           "skip_reason": "市場ほぼ互角（1.77 vs 1.94）→cElo差小さく L1未達推定。",
-          "result": null, "score": null, "hit": null, "actual_ev": null,
+          "result": null,
+          "score": null,
+          "hit": null,
+          "actual_ev": null,
           "rules_applied": [],
           "note": "Simanovič I. vs Hruncikova L.。市場互角。L1未達推定。"
         },
@@ -518,13 +752,22 @@
           "date": "2026-04-14",
           "start_time": "18:30",
           "match": "Cocciaretto E. vs Charalambous A.",
-          "l1_diff": 150.0, "l1_pass": true,
-          "tier": "skip", "rec": null,
-          "odds_cocciaretto": 1.22, "odds_charalambous": 3.80,
-          "est_win_pct_cocciaretto": 70.4, "ev_cocciaretto": -14.1,
+          "l1_diff": 150.0,
+          "l1_pass": true,
+          "tier": "skip",
+          "rec": null,
+          "odds_cocciaretto": 1.22,
+          "odds_charalambous": 3.8,
+          "est_win_pct_cocciaretto": 70.4,
+          "ev_cocciaretto": -14.1,
           "skip_reason": "EV -14.1%（market implied 82% >> cElo推定70.4%）。オッズ1.22過短。",
-          "result": null, "score": null, "hit": null, "actual_ev": null,
-          "rules_applied": ["W001"],
+          "result": null,
+          "score": null,
+          "hit": null,
+          "actual_ev": null,
+          "rules_applied": [
+            "W001"
+          ],
           "note": "Cocciaretto E. cElo~1645 vs Charalambous A. cElo~1495推定（差~150）。L1通過だがEV大幅マイナス。"
         }
       ]
@@ -548,10 +791,34 @@
         "Lys vs Badosa: L1未達（Badosa怪我でcElo確認不可）"
       ],
       "matchups_screened": [
-        { "match": "Shnaider D. vs Korpatsch T.(WC)", "l1_diff": 215.9, "l1_ok": true, "verdict": "SKIP", "reason": "EV -10.0%（オッズ1.19短すぎ）" },
-        { "match": "Andreeva M.(6) vs Ostapenko J.", "l1_diff": 106.7, "l1_ok": true, "verdict": "GAMBLE_BET", "reason": "W009発動。EV+53.3%。0.25u" },
-        { "match": "Fernandez L.(Q) vs Eala A.", "l1_diff": 100.7, "l1_ok": true, "verdict": "SKIP", "reason": "信頼度64.1% < 75%（W006）" },
-        { "match": "Lys E.(WC) vs Badosa P.", "l1_diff": null, "l1_ok": false, "verdict": "SKIP", "reason": "L1未達（Badosa怪我）" }
+        {
+          "match": "Shnaider D. vs Korpatsch T.(WC)",
+          "l1_diff": 215.9,
+          "l1_ok": true,
+          "verdict": "SKIP",
+          "reason": "EV -10.0%（オッズ1.19短すぎ）"
+        },
+        {
+          "match": "Andreeva M.(6) vs Ostapenko J.",
+          "l1_diff": 106.7,
+          "l1_ok": true,
+          "verdict": "GAMBLE_BET",
+          "reason": "W009発動。EV+53.3%。0.25u"
+        },
+        {
+          "match": "Fernandez L.(Q) vs Eala A.",
+          "l1_diff": 100.7,
+          "l1_ok": true,
+          "verdict": "SKIP",
+          "reason": "信頼度64.1% < 75%（W006）"
+        },
+        {
+          "match": "Lys E.(WC) vs Badosa P.",
+          "l1_diff": null,
+          "l1_ok": false,
+          "verdict": "SKIP",
+          "reason": "L1未達（Badosa怪我）"
+        }
       ]
     },
     {
@@ -565,10 +832,34 @@
       "ev_positive": 0,
       "missed_reason": "前回セッションが4/13開催分のみ確認し4/14開催分を見落とした。WTA500 R1は2日にわたって開催。",
       "matchups_screened": [
-        { "match": "Noskova L. vs Zhang Shuai", "l1_diff": 165.0, "l1_ok": true, "verdict": "SKIP", "reason": "信頼度74.1%（W006 75%未達）" },
-        { "match": "Samsonova L. vs Ruzic A.", "l1_diff": 126.7, "l1_ok": true, "verdict": "SKIP", "reason": "信頼度67.5%（W006 75%未達）" },
-        { "match": "Mertens E. vs Seidel E.(WC)", "l1_diff": 240.9, "l1_ok": true, "verdict": "SKIP", "reason": "信頼度78%はW006通過もEV-10.7%（オッズ1.145短すぎ）" },
-        { "match": "Frech M. vs Siegemund L.", "l1_diff": 16.8, "l1_ok": false, "verdict": "SKIP", "reason": "L1未達（差16.8 < 閾値80）" }
+        {
+          "match": "Noskova L. vs Zhang Shuai",
+          "l1_diff": 165.0,
+          "l1_ok": true,
+          "verdict": "SKIP",
+          "reason": "信頼度74.1%（W006 75%未達）"
+        },
+        {
+          "match": "Samsonova L. vs Ruzic A.",
+          "l1_diff": 126.7,
+          "l1_ok": true,
+          "verdict": "SKIP",
+          "reason": "信頼度67.5%（W006 75%未達）"
+        },
+        {
+          "match": "Mertens E. vs Seidel E.(WC)",
+          "l1_diff": 240.9,
+          "l1_ok": true,
+          "verdict": "SKIP",
+          "reason": "信頼度78%はW006通過もEV-10.7%（オッズ1.145短すぎ）"
+        },
+        {
+          "match": "Frech M. vs Siegemund L.",
+          "l1_diff": 16.8,
+          "l1_ok": false,
+          "verdict": "SKIP",
+          "reason": "L1未達（差16.8 < 閾値80）"
+        }
       ]
     },
     {
@@ -583,18 +874,78 @@
       "l1_failed": 2,
       "l1_unverified": 3,
       "results_recorded": [
-        { "match": "Shnaider vs Korpatsch", "verdict_was": "SKIP", "result": "Korpatsch WIN(UPSET 4.70)", "no_bet": true },
-        { "match": "Andreeva vs Ostapenko", "verdict_was": "GAMBLE_BET", "result": "Ostapenko WIN(HIT 3.15)", "profit": "+0.5375u" },
-        { "match": "Fernandez vs Eala", "verdict_was": "SKIP", "result": "Eala WIN(UPSET 2.39)", "no_bet": true },
-        { "match": "Lys vs Badosa", "verdict_was": "SKIP", "result": "Lys WIN(UPSET 3.20)", "no_bet": true },
-        { "match": "Noskova vs Zhang", "verdict_was": "SKIP", "result": "Zhang WIN(UPSET 5.20)", "no_bet": true },
-        { "match": "Samsonova vs Ruzic", "verdict_was": "SKIP", "result": "Ruzic WIN(UPSET 2.95)", "no_bet": true },
-        { "match": "Mertens vs Seidel", "verdict_was": "SKIP", "result": "Mertens WIN", "no_bet": true },
-        { "match": "Siegemund vs Tomova", "verdict_was": "SKIP(draw changed)", "result": "Siegemund WIN", "no_bet": true },
-        { "match": "Alexandrova vs Natson", "retroactive": true, "result": "Alexandrova WIN", "no_bet": true },
-        { "match": "Parks vs Noma", "retroactive": true, "result": "Parks WIN", "no_bet": true },
-        { "match": "Muchova vs Sasnovich", "retroactive": true, "result": "Muchova WIN(EV-3.1% SKIP正解)", "no_bet": true },
-        { "match": "Sonmez vs Paolini", "retroactive": true, "result": "Sonmez WIN(UPSET 3.85, EV+4.4% SKIP)", "no_bet": true }
+        {
+          "match": "Shnaider vs Korpatsch",
+          "verdict_was": "SKIP",
+          "result": "Korpatsch WIN(UPSET 4.70)",
+          "no_bet": true
+        },
+        {
+          "match": "Andreeva vs Ostapenko",
+          "verdict_was": "GAMBLE_BET",
+          "result": "Ostapenko WIN(HIT 3.15)",
+          "profit": "+0.5375u"
+        },
+        {
+          "match": "Fernandez vs Eala",
+          "verdict_was": "SKIP",
+          "result": "Eala WIN(UPSET 2.39)",
+          "no_bet": true
+        },
+        {
+          "match": "Lys vs Badosa",
+          "verdict_was": "SKIP",
+          "result": "Lys WIN(UPSET 3.20)",
+          "no_bet": true
+        },
+        {
+          "match": "Noskova vs Zhang",
+          "verdict_was": "SKIP",
+          "result": "Zhang WIN(UPSET 5.20)",
+          "no_bet": true
+        },
+        {
+          "match": "Samsonova vs Ruzic",
+          "verdict_was": "SKIP",
+          "result": "Ruzic WIN(UPSET 2.95)",
+          "no_bet": true
+        },
+        {
+          "match": "Mertens vs Seidel",
+          "verdict_was": "SKIP",
+          "result": "Mertens WIN",
+          "no_bet": true
+        },
+        {
+          "match": "Siegemund vs Tomova",
+          "verdict_was": "SKIP(draw changed)",
+          "result": "Siegemund WIN",
+          "no_bet": true
+        },
+        {
+          "match": "Alexandrova vs Natson",
+          "retroactive": true,
+          "result": "Alexandrova WIN",
+          "no_bet": true
+        },
+        {
+          "match": "Parks vs Noma",
+          "retroactive": true,
+          "result": "Parks WIN",
+          "no_bet": true
+        },
+        {
+          "match": "Muchova vs Sasnovich",
+          "retroactive": true,
+          "result": "Muchova WIN(EV-3.1% SKIP正解)",
+          "no_bet": true
+        },
+        {
+          "match": "Sonmez vs Paolini",
+          "retroactive": true,
+          "result": "Sonmez WIN(UPSET 3.85, EV+4.4% SKIP)",
+          "no_bet": true
+        }
       ]
     },
     {
@@ -607,8 +958,14 @@
         {
           "match": "Nava E. vs Shelton B.",
           "sport": "tennis_atp",
-          "celo_nava": 1621.8, "celo_shelton": 1838.5, "l1_diff": 216.7, "l1_ok": true,
-          "odds": { "nava": 3.35, "shelton": 1.32 },
+          "celo_nava": 1621.8,
+          "celo_shelton": 1838.5,
+          "l1_diff": 216.7,
+          "l1_ok": true,
+          "odds": {
+            "nava": 3.35,
+            "shelton": 1.32
+          },
           "est_win_pct_shelton": 77.7,
           "ev_shelton": 2.6,
           "verdict": "SKIP",
@@ -617,8 +974,14 @@
         {
           "match": "Blockx A. vs Hanfmann Y.",
           "sport": "tennis_atp",
-          "celo_blockx": 1654.3, "celo_hanfmann": 1761.1, "l1_diff": 106.8, "l1_ok": true,
-          "odds": { "blockx": 1.80, "hanfmann": 1.98 },
+          "celo_blockx": 1654.3,
+          "celo_hanfmann": 1761.1,
+          "l1_diff": 106.8,
+          "l1_ok": true,
+          "odds": {
+            "blockx": 1.8,
+            "hanfmann": 1.98
+          },
           "est_win_pct_hanfmann": 64.9,
           "ev_hanfmann": 28.5,
           "verdict": "SKIP",
@@ -636,14 +999,23 @@
       "matchups_screened": [
         {
           "match": "Trungelliti M. vs Medjedovic H.",
-          "celo_trungelliti": 1682.1, "celo_medjedovic": 1743.5, "l1_diff": 61.4, "l1_ok": false,
+          "celo_trungelliti": 1682.1,
+          "celo_medjedovic": 1743.5,
+          "l1_diff": 61.4,
+          "l1_ok": false,
           "verdict": "SKIP",
           "reason": "L1未達（差61.4 < 閾値100）"
         },
         {
           "match": "Norrie C. vs Wawrinka S.",
-          "celo_norrie": 1828.5, "celo_wawrinka": 1631.9, "l1_diff": 196.6, "l1_ok": true,
-          "odds": { "norrie": 1.25, "wawrinka": 3.80 },
+          "celo_norrie": 1828.5,
+          "celo_wawrinka": 1631.9,
+          "l1_diff": 196.6,
+          "l1_ok": true,
+          "odds": {
+            "norrie": 1.25,
+            "wawrinka": 3.8
+          },
           "est_win_pct_norrie": 75.6,
           "ev_norrie": -5.5,
           "verdict": "SKIP",
@@ -651,8 +1023,14 @@
         },
         {
           "match": "Borges N. vs Mannarino A.",
-          "celo_borges": 1680.9, "celo_mannarino": 1509.2, "l1_diff": 171.7, "l1_ok": true,
-          "odds": { "borges": 1.22, "mannarino": 4.20 },
+          "celo_borges": 1680.9,
+          "celo_mannarino": 1509.2,
+          "l1_diff": 171.7,
+          "l1_ok": true,
+          "odds": {
+            "borges": 1.22,
+            "mannarino": 4.2
+          },
           "est_win_pct_borges": 72.9,
           "ev_borges": -11.1,
           "verdict": "SKIP",
@@ -669,8 +1047,14 @@
       "matchups_screened": [
         {
           "match": "Rakhimova K. vs Kalieva E.",
-          "celo_rakhimova": 1652.2, "celo_kalieva": 1479.4, "l1_diff": 172.8, "l1_ok": true,
-          "odds": { "rakhimova": 1.56, "kalieva": 2.28 },
+          "celo_rakhimova": 1652.2,
+          "celo_kalieva": 1479.4,
+          "l1_diff": 172.8,
+          "l1_ok": true,
+          "odds": {
+            "rakhimova": 1.56,
+            "kalieva": 2.28
+          },
           "est_win_pct_rakhimova": 73.0,
           "ev_rakhimova": 13.9,
           "verdict": "SKIP",
@@ -685,26 +1069,61 @@
       "total_games": 16,
       "go_recommendations": 0,
       "caution_count": 1,
-      "caution_list": ["Timofeyeva vs Boulter K.(est): conf 76%, EV+8.7%→tennisabstractでcElo確認後GO判断可"],
+      "caution_list": [
+        "Timofeyeva vs Boulter K.(est): conf 76%, EV+8.7%→tennisabstractでcElo確認後GO判断可"
+      ],
       "skip_count": 15,
       "key_findings": [
         "全体的に市場が適正価格→EV正のケースが少ない",
         "Timofeyeva/Boulter: Boulter(GBR)なら差200推定→conf76%, EV+8.7%。選手名要確認",
         "Kostyuk/Parry: L1通過だがオッズ1.19でEV-23.8%"
       ]
+    },
+    {
+      "date": "2026-04-15",
+      "tournament": "Stuttgart R2 (4/15-16試合) スクリーニング",
+      "note": "WTA Stuttgart R2 全試合スクリーニング。データ起点：手動試合データ/2026-04-15.json。Paoliniは既存エントリ確認（GO確定）。他はcElo未確認またはEV閾値未達のためSKIP。",
+      "total_games": 5,
+      "go_recommendations": 1,
+      "skip_count": 4,
+      "key_findings": [
+        "Sonmez vs Paolini (4/15): GO @1.24, 推定勝率78%, EV+5.4% (W005通過). cElo差300pt.",
+        "Other R2 games (4/15-16): cElo未確認またはEV計算後SKIP",
+        "Noskova vs Zhang/Samsonova next round: seeds/draws uncertain",
+        "Mertens/Siegemund/Parks/Muchova R2 draws: to be confirmed after R1 completion"
+      ],
+      "matchups_screened": [
+        {
+          "match": "Sonmez Z. vs Paolini J.(4)",
+          "odds": {
+            "sonmez": 3.8,
+            "paolini": 1.24
+          },
+          "verdict": "GO",
+          "reason": "cElo差300pt. conf 78%. EV+5.4% (W005通過).",
+          "est_win_pct": 78.0,
+          "ev": 5.4
+        },
+        {
+          "match": "Other R2 matches (4/15-16)",
+          "odds_range": "1.02-3.05",
+          "verdict": "SKIP",
+          "reason": "cElo未取得またはEV<5%. 全SKIP."
+        }
+      ]
+    },
+    {
+      "date": "2026-04-15",
+      "tournament": "WTA Rouen R2 (4/15試合) スクリーニング",
+      "note": "WTA Rouen R2 スクリーニング。データ起点：手動試合データ/2026-04-15.json。全試合SKIP（cElo未確認/EV閾値未達）。",
+      "total_games": 5,
+      "go_recommendations": 0,
+      "skip_count": 5,
+      "key_findings": [
+        "R2はR1勝者のドロー確定後のため、cElo確認が間に合わない",
+        "市場オッズから推定: 全て信頼度75%未達またはEV<5%",
+        "R2全試合SKIP"
+      ]
     }
   ]
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

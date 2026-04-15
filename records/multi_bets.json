@@ -9,5 +9,64 @@
     "結果確定後は各エントリの result を hit/miss に更新する",
     "multi_odds = 各オッズの積 / total_win_prob = 各勝率の積 / multi_ev = (total_win_prob × multi_odds) - 1"
   ],
-  "sessions": []
+  "sessions": [
+    {
+      "date": "2026-04-15",
+      "session_id": "_29",
+      "sports_screened": [
+        "NBA",
+        "NHL",
+        "UFL",
+        "ATP",
+        "WTA_Stuttgart",
+        "WTA_Rouen"
+      ],
+      "total_matches_screened": 44,
+      "output_a": [
+        {
+          "rank": 1,
+          "match": "Columbus Aviators @ Arlington Renegades",
+          "sport": "UFL",
+          "tournament": "UFL Week 4",
+          "recommendation": "Arlington Renegades",
+          "win_prob": 0.85,
+          "odds": 1.36,
+          "ev": 0.156,
+          "reason": "Renegades 3-0 vs Aviators 0-3. DIFF/G差. Austin Reed QB confirmed. Home edge. Week4 threshold 80% exceeded.",
+          "result": "pending"
+        },
+        {
+          "rank": 2,
+          "match": "Sonmez Z. vs Paolini J.",
+          "sport": "WTA",
+          "tournament": "Porsche Tennis Grand Prix Stuttgart R2",
+          "recommendation": "Paolini J.",
+          "win_prob": 0.78,
+          "odds": 1.24,
+          "ev": 0.054,
+          "reason": "cElo差300pt (Paolini 1916 vs Sonmez 1616). 推定勝率78% > 75%閾値. EV+5.4% > 5%閾値. 両閾値クリア.",
+          "result": "pending"
+        }
+      ],
+      "output_b": [
+        {
+          "rank": 1,
+          "matches": [
+            "Arlington Renegades",
+            "Paolini J."
+          ],
+          "match_details": [
+            "Columbus Aviators @ Arlington Renegades",
+            "Sonmez Z. vs Paolini J."
+          ],
+          "count": 2,
+          "multi_odds": 1.6864,
+          "total_win_prob": 0.663,
+          "multi_ev": 0.1181,
+          "result": "pending"
+        }
+      ],
+      "output_b_calc_note": "multi_odds = 1.36 x 1.24 = 1.6864 / total_win_prob = 0.85 x 0.78 = 0.663 / multi_ev = 0.663 x 1.6864 - 1 = +0.1181 (+11.8%)"
+    }
+  ]
 }

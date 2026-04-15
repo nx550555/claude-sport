@@ -1,114 +1,241 @@
-﻿{
-    "sport":  "ufl",
-    "season":  "2026",
-    "bet_type":  "Moneyline (ML)",
-    "rule_version":  "v1.0",
-    "started":  "2026-04-10",
-    "summary":  {
-                    "total":  1,
-                    "hit":  1,
-                    "hit_rate":  1.0,
-                    "ev_total":  0.32
-                },
-    "games":  [
-                  {
-                      "date":  "2026-04-12",
-                      "match":  "Columbus Aviators @ Dallas Renegades",
-                      "home":  "Dallas Renegades",
-                      "away":  "Columbus Aviators",
-                      "week":  3,
-                      "tier":  "go",
-                      "predicted_winner":  "Dallas Renegades",
-                      "prediction_confidence":  82,
-                      "prediction_basis":  "PD差30pt (DAL +17.5 vs COL -12.5)。Austin Reed 2-0・7TD/2G。COL 0-2・前週44-26大敗。",
-                      "prediction_hit":  true,
-                      "rec":  "Dallas Renegades",
-                      "rec_odds":  1.32,
-                      "ev":  8.2,
-                      "confidence":  82,
-                      "l1_metric":  "Points Differential/Game",
-                      "l1_data":  {
-                                      "DAL_PD_per_game":  17.5,
-                                      "COL_PD_per_game":  -12.5,
-                                      "diff":  30.0
-                                  },
-                      "adjustments":  {
-                                          "DAL_home":  "+4% (U004)",
-                                          "week3_threshold":  "80%閾値適用(U008) → 82%で通過"
-                                      },
-                      "estimated_win_pct":  82,
-                      "standings":  {
-                                        "DAL":  "2-0, PF=67, PA=32",
-                                        "COL":  "0-2, PF=42, PA=67"
-                                    },
-                      "qb_status":  {
-                                        "DAL":  "Austin Reed 先発確認済 (7TD/2試合, 616yd)",
-                                        "COL":  "未確認"
-                                    },
-                      "rules_applied":  [
-                                            "U001",
-                                            "U002",
-                                            "U004",
-                                            "U008"
-                                        ],
-                      "checklist_done":  true,
-                      "result":  "Dallas Renegades",
-                      "score":  "28-23",
-                      "hit":  true,
-                      "actual_ev":  0.32,
-                      "miss_layer":  null,
-                      "note":  "Dallas 28-23 Columbus。HIT (+0.32u)。PD差30ptの地力差が結果に直結。Austin Reed先発・アウェイのCOLに対してホーム優位も発揮。※date修正: 実際の試合日は4/12（当初4/13と記録）"
-                  },
-                  {
-                      "week":  4,
-                      "date":  "2026-04-17",
-                      "start_time":  "TBD",
-                      "match":  "Houston Gamblers vs Louisville Kings",
-                      "venue":  "TBD",
-                      "tier":  "go",
-                      "rec":  "Louisville Kings",
-                      "rec_odds":  1.65,
-                      "ev_est":  35.3,
-                      "confidence":  82,
-                      "ev_calc":  "(0.82 x 1.65) - 1 = +35.3%",
-                      "adjustments":  {
-                                          "qb_edge":  "Bean (Louisville) W3 352yd 3TD vs Tagovailoa W3 21/40 171yd (7-45 blowout loss)",
-                                          "houston_qb_note":  "Dekkers shoulder W1 injury -\u003e Tagovailoa started W3, poor performance",
-                                          "threshold":  "Week4 GO threshold: conf \u003e= 80%"
-                                      },
-                      "status":  "pending",
-                      "result":  null,
-                      "score":  null,
-                      "hit":  null,
-                      "actual_ev":  null,
-                      "rules_applied":  [
-                                            "GEN001",
-                                            "UFL_v1.0"
-                                        ],
-                      "note":  "Houston QB situation unstable (Dekkers W1 shoulder injury, Tagovailoa fill-in W3 171yd 7-45 loss). Louisville QB Bean excellent W3 (352yd 3TD). Home/away TBD. GO per all-source check 2026-04-15. conf 82% \u003e W4 threshold 80%."
-                  }
-              ],
-    "screening_log":  [
-                          {
-                              "date":  "2026-04-10",
-                              "week":  3,
-                              "total_games":  4,
-                              "l1_passed":  3,
-                              "go_recommendations":  1,
-                              "skipped_after_l1":  [
-                                                       {
-                                                           "match":  "Louisville vs Orlando",
-                                                           "reason":  "Week3閾値80%に対し推定信頼度75% → U008でSKIP"
-                                                       },
-                                                       {
-                                                           "match":  "DC vs Houston",
-                                                           "reason":  "DC 1.33オッズ、80%時EV+6.4%のみ → Week3保守判断SKIP"
-                                                       },
-                                                       {
-                                                           "match":  "St.Louis vs Birmingham",
-                                                           "reason":  "L1差5pt弱シグナル + 市場はBirmingham優勢 → SKIP"
-                                                       }
-                                                   ]
-                          }
-                      ]
+{
+  "sport": "ufl",
+  "season": "2026",
+  "bet_type": "Moneyline (ML)",
+  "rule_version": "v1.0",
+  "started": "2026-04-10",
+  "summary": {
+    "total": 1,
+    "hit": 1,
+    "hit_rate": 1.0,
+    "ev_total": 0.32
+  },
+  "games": [
+    {
+      "date": "2026-04-12",
+      "match": "Columbus Aviators @ Dallas Renegades",
+      "home": "Dallas Renegades",
+      "away": "Columbus Aviators",
+      "week": 3,
+      "tier": "go",
+      "predicted_winner": "Dallas Renegades",
+      "prediction_confidence": 82,
+      "prediction_basis": "PD差30pt (DAL +17.5 vs COL -12.5)。Austin Reed 2-0・7TD/2G。COL 0-2・前週44-26大敗。",
+      "prediction_hit": true,
+      "rec": "Dallas Renegades",
+      "rec_odds": 1.32,
+      "ev": 8.2,
+      "confidence": 82,
+      "l1_metric": "Points Differential/Game",
+      "l1_data": {
+        "DAL_PD_per_game": 17.5,
+        "COL_PD_per_game": -12.5,
+        "diff": 30.0
+      },
+      "adjustments": {
+        "DAL_home": "+4% (U004)",
+        "week3_threshold": "80%閾値適用(U008) → 82%で通過"
+      },
+      "estimated_win_pct": 82,
+      "standings": {
+        "DAL": "2-0, PF=67, PA=32",
+        "COL": "0-2, PF=42, PA=67"
+      },
+      "qb_status": {
+        "DAL": "Austin Reed 先発確認済 (7TD/2試合, 616yd)",
+        "COL": "未確認"
+      },
+      "rules_applied": [
+        "U001",
+        "U002",
+        "U004",
+        "U008"
+      ],
+      "checklist_done": true,
+      "result": "Dallas Renegades",
+      "score": "28-23",
+      "hit": true,
+      "actual_ev": 0.32,
+      "miss_layer": null,
+      "note": "Dallas 28-23 Columbus。HIT (+0.32u)。PD差30ptの地力差が結果に直結。Austin Reed先発・アウェイのCOLに対してホーム優位も発揮。※date修正: 実際の試合日は4/12（当初4/13と記録）"
+    },
+    {
+      "week": 4,
+      "date": "2026-04-17",
+      "start_time": "TBD",
+      "match": "Houston Gamblers vs Louisville Kings",
+      "venue": "TBD",
+      "tier": "go",
+      "rec": "Louisville Kings",
+      "rec_odds": 1.65,
+      "ev_est": 35.3,
+      "confidence": 82,
+      "ev_calc": "(0.82 x 1.65) - 1 = +35.3%",
+      "adjustments": {
+        "qb_edge": "Bean (Louisville) W3 352yd 3TD vs Tagovailoa W3 21/40 171yd (7-45 blowout loss)",
+        "houston_qb_note": "Dekkers shoulder W1 injury -> Tagovailoa started W3, poor performance",
+        "threshold": "Week4 GO threshold: conf >= 80%"
+      },
+      "status": "pending",
+      "result": null,
+      "score": null,
+      "hit": null,
+      "actual_ev": null,
+      "rules_applied": [
+        "GEN001",
+        "UFL_v1.0"
+      ],
+      "note": "Houston QB situation unstable (Dekkers W1 shoulder injury, Tagovailoa fill-in W3 171yd 7-45 loss). Louisville QB Bean excellent W3 (352yd 3TD). Home/away TBD. GO per all-source check 2026-04-15. conf 82% > W4 threshold 80%."
+    },
+    {
+      "week": 4,
+      "date": "2026-04-18",
+      "match": "Columbus Aviators @ Arlington Renegades",
+      "home": "Arlington Renegades",
+      "away": "Columbus Aviators",
+      "tier": "go",
+      "rec": "Arlington Renegades",
+      "rec_odds": 1.36,
+      "ev_est": 15.6,
+      "confidence": 85,
+      "ev_calc": "(0.85 x 1.36) - 1 = +15.6%",
+      "adjustments": {
+        "renegades_home": "+4% (U004)",
+        "week4_threshold": "Week4 GO threshold: conf >= 80%"
+      },
+      "status": "pending",
+      "result": null,
+      "score": null,
+      "hit": null,
+      "actual_ev": null,
+      "rules_applied": [
+        "GEN001",
+        "U001",
+        "U002",
+        "U004",
+        "U008"
+      ],
+      "note": "Renegades 3-0 (W3: 28-23 vs DAL confirmed) vs Aviators 0-3. Home odds 1.36 (market implied 73.5% -> cElo/form adjusted to 85%). Austin Reed QB confirmed. DIFF/G superiority. GO per all-source check 2026-04-15. conf 85% > W4 threshold 80%."
+    },
+    {
+      "week": 4,
+      "date": "2026-04-19",
+      "match": "DC Defenders @ St. Louis Battlehawks",
+      "home": "St. Louis Battlehawks",
+      "away": "DC Defenders",
+      "tier": "caution",
+      "rec": null,
+      "rec_odds": null,
+      "odds_dc": 1.44,
+      "odds_stl": 2.75,
+      "ev_est": null,
+      "confidence": null,
+      "caution_reason": "DC QB not confirmed for W4. Market implied DC 69.4% (1.44). Need to verify DC starting QB before GO decision (U001).",
+      "status": "caution",
+      "result": null,
+      "score": null,
+      "hit": null,
+      "actual_ev": null,
+      "rules_applied": [
+        "GEN001",
+        "U001",
+        "U008"
+      ],
+      "note": "CAUTION: DC QB status unconfirmed as of 2026-04-15. Market DC 1.44 vs STL 2.75. GEN001 requires verified QB info. Monitor DC QB announcement."
+    },
+    {
+      "week": 4,
+      "date": "2026-04-19",
+      "match": "Birmingham Stallions @ Orlando Storm",
+      "home": "Orlando Storm",
+      "away": "Birmingham Stallions",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "odds_bir": 1.74,
+      "odds_orl": 2.06,
+      "confidence": 58,
+      "skip_reason": "conf 58% < W4 threshold 80% (U008). Market implied Stallions 57.5% (1.74). Insufficient edge for Week 4 elevated threshold.",
+      "status": "skip",
+      "result": null,
+      "score": null,
+      "hit": null,
+      "actual_ev": null,
+      "rules_applied": [
+        "GEN001",
+        "U008"
+      ],
+      "note": "SKIP: Stallions (away) vs Orlando Storm (home). Market near-even (1.74/2.06). U008 Week4 threshold 80% not met. conf 58%."
+    }
+  ],
+  "screening_log": [
+    {
+      "date": "2026-04-15",
+      "week": 4,
+      "note": "UFL Week 4 full screening. Data: 手動試合データ/2026-04-15.json. 4試合スクリーニング。GO 1件（Renegades）+ Louisville Kings GO（前回追加）+ CAUTION 1件（Defenders）+ SKIP 1件（Stallions）。",
+      "total_games": 4,
+      "go_recommendations": 2,
+      "caution_count": 1,
+      "skip_count": 1,
+      "games_detail": [
+        {
+          "match": "Columbus Aviators @ Arlington Renegades",
+          "odds": {
+            "Aviators": 3.05,
+            "Renegades": 1.36
+          },
+          "verdict": "GO",
+          "reason": "Renegades 3-0 vs Aviators 0-3. Home edge. Austin Reed confirmed. conf 85% > 80%."
+        },
+        {
+          "match": "Houston Gamblers vs Louisville Kings",
+          "odds": {
+            "Gamblers": 2.21,
+            "Kings": 1.65
+          },
+          "verdict": "GO",
+          "reason": "Louisville QB Bean excellent (352yd 3TD W3). Houston QB unstable. conf 82% > 80%."
+        },
+        {
+          "match": "DC Defenders @ St. Louis Battlehawks",
+          "odds": {
+            "DC": 1.44,
+            "STL": 2.75
+          },
+          "verdict": "CAUTION",
+          "reason": "DC QB unconfirmed. Pending verification."
+        },
+        {
+          "match": "Birmingham Stallions @ Orlando Storm",
+          "odds": {
+            "Stallions": 1.74,
+            "Storm": 2.06
+          },
+          "verdict": "SKIP",
+          "reason": "conf 58% < W4 threshold 80%."
+        }
+      ]
+    },
+    {
+      "date": "2026-04-10",
+      "week": 3,
+      "total_games": 4,
+      "l1_passed": 3,
+      "go_recommendations": 1,
+      "skipped_after_l1": [
+        {
+          "match": "Louisville vs Orlando",
+          "reason": "Week3閾値80%に対し推定信頼度75% → U008でSKIP"
+        },
+        {
+          "match": "DC vs Houston",
+          "reason": "DC 1.33オッズ、80%時EV+6.4%のみ → Week3保守判断SKIP"
+        },
+        {
+          "match": "St.Louis vs Birmingham",
+          "reason": "L1差5pt弱シグナル + 市場はBirmingham優勢 → SKIP"
+        }
+      ]
+    }
+  ]
 }
