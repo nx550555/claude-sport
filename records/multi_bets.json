@@ -77,19 +77,6 @@
         },
         {
           "rank": 5,
-          "match": "Moutet C. vs Musetti L.",
-          "sport": "ATP",
-          "tournament": "Barcelona Open R2",
-          "date": "2026-04-16",
-          "recommendation": "Musetti L.",
-          "win_prob": 0.82,
-          "odds": 1.37,
-          "ev": 0.123,
-          "reason": "cElo差200pt超。Musetti Clay巧者。推定勝率82%。EV+12.3%。両閾値クリア。",
-          "result": "pending"
-        },
-        {
-          "rank": 6,
           "match": "Samsonova L. vs Gauff C.",
           "sport": "WTA",
           "tournament": "Porsche Tennis Grand Prix Stuttgart R2",
@@ -99,6 +86,19 @@
           "odds": 1.15,
           "ev": -0.067,
           "reason": "WTA #3 vs 世界10位前後。Gauff Clay成績良好。推定勝率81%。EVマイナスだが予測確実性高い。",
+          "result": "pending"
+        },
+        {
+          "rank": 6,
+          "match": "Moutet C. vs Musetti L.",
+          "sport": "ATP",
+          "tournament": "Barcelona Open R2",
+          "date": "2026-04-16",
+          "recommendation": "Musetti L.",
+          "win_prob": 0.78,
+          "odds": 1.37,
+          "ev": 0.0686,
+          "reason": "cElo差271pt（Musetti ~2017 vs Moutet ~1746）。基礎確率84%→傷病歴補正-5%(AO adductor+Miami arm, R013)→conf 78%。EV+6.9%。両閾値クリア。",
           "result": "pending"
         },
         {
@@ -130,10 +130,10 @@
             "Moutet C. vs Musetti L. (Barcelona R2)"
           ],
           "count": 3,
-          "total_win_prob": 0.5715,
+          "total_win_prob": 0.5437,
           "multi_odds": 3.0743,
-          "multi_ev": 0.7571,
-          "calc_note": "0.82x0.85x0.82=0.5715 | 1.65x1.36x1.37=3.0743 | EV=0.5715x3.0743-1=+75.8%",
+          "multi_ev": 0.6715,
+          "calc_note": "prob=0.5437 | odds=3.0743 | EV=+67.1%",
           "result": "pending"
         },
         {
@@ -152,10 +152,10 @@
             "Alcaraz C. vs Machac T. (Barcelona R2)"
           ],
           "count": 4,
-          "total_win_prob": 0.503,
+          "total_win_prob": 0.4784,
           "multi_odds": 3.4125,
-          "multi_ev": 0.7163,
-          "calc_note": "prob=0.5030 | odds=3.4124 | EV=0.5030x3.4124-1=+71.6%",
+          "multi_ev": 0.6325,
+          "calc_note": "prob=0.4784 | odds=3.4125 | EV=+63.3%",
           "result": "pending"
         },
         {
@@ -174,10 +174,10 @@
             "Sonmez Z. vs Paolini J. (WTA Stuttgart R2)"
           ],
           "count": 4,
-          "total_win_prob": 0.4458,
+          "total_win_prob": 0.4241,
           "multi_odds": 3.8121,
-          "multi_ev": 0.6994,
-          "calc_note": "prob=0.4458 | odds=3.8121 | EV=0.4458x3.8121-1=+70.0%",
+          "multi_ev": 0.6167,
+          "calc_note": "prob=0.4241 | odds=3.8121 | EV=+61.7%",
           "result": "pending"
         },
         {
@@ -198,10 +198,10 @@
             "Sonmez Z. vs Paolini J. (WTA Stuttgart R2)"
           ],
           "count": 5,
-          "total_win_prob": 0.3923,
+          "total_win_prob": 0.3732,
           "multi_odds": 4.2314,
-          "multi_ev": 0.66,
-          "calc_note": "prob=0.3923 | odds=4.2311 | EV=0.3923x4.2311-1=+66.0%",
+          "multi_ev": 0.5792,
+          "calc_note": "prob=0.3732 | odds=4.2314 | EV=+57.9%",
           "result": "pending"
         },
         {
@@ -220,14 +220,14 @@
             "Swiatek I. vs Siegemund L. (WTA Stuttgart R2)"
           ],
           "count": 4,
-          "total_win_prob": 0.5258,
+          "total_win_prob": 0.5002,
           "multi_odds": 3.1358,
-          "multi_ev": 0.6488,
-          "calc_note": "prob=0.5258 | odds=3.1358 | EV=0.5258x3.1358-1=+64.9%",
+          "multi_ev": 0.5685,
+          "calc_note": "prob=0.5002 | odds=3.1358 | EV=+56.9%",
           "result": "pending"
         }
       ],
-      "output_b_calc_note": "EV+試合: Louisville(0.82x1.65=1.353) / Renegades(0.85x1.36=1.156) / Musetti(0.82x1.37=1.123). EV-試合: Alcaraz(0.88x1.11=0.977) / Paolini(0.78x1.24=0.967) / Swiatek(0.92x1.02=0.938) / Gauff(0.81x1.15=0.932). EV+3試合コア(+75.8%)が最高。以下は追加EV-試合でEV漸減。"
+      "output_b_calc_note": "EV+試合: Louisville(0.82x1.65=1.353) / Renegades(0.85x1.36=1.156) / Musetti(0.78x1.37=1.069). EV-試合: Alcaraz(0.88x1.11=0.977) / Paolini(0.78x1.24=0.967) / Swiatek(0.92x1.02=0.938) / Gauff(0.81x1.15=0.932). [Musetti conf 82%->78% 修正済み: R013傷病歴補正-5%を正確に反映]"
     }
   ]
 }
