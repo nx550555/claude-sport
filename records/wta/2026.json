@@ -5,11 +5,11 @@
   "rule_version": "v1.0",
   "started": "2026-04-10",
   "summary": {
-    "total": 1,
+    "total": 2,
     "hit": 1,
-    "hit_rate": 1.0,
-    "ev_total": 0.5375,
-    "note": "GOまたはGAMBLE_BET tier推奨のみカウント。SKIP tierは統計除外。GB001 Ostapenko HIT(+0.5375u)。"
+    "hit_rate": 0.5,
+    "ev_total": -0.4625,
+    "note": "GOまたはGAMBLE_BET tier推奨のみカウント。GB001 Ostapenko HIT(+0.5375u)。Paolini Stuttgart R1 MISS(-1.0u)。通算: 1/2 50% -0.4625u"
   },
   "tournaments": [
     {
@@ -385,11 +385,11 @@
           "odds_sonmez": 3.8,
           "est_win_pct_paolini": 85.0,
           "ev_est_paolini": 5.4,
-          "note": "cElo差300pt -> Paolini圧倒的有利. 推定勝率78%, EV+5.4% (W005通過). GO per session_29 analysis 2026-04-15. 試合途中中断(1stSet) -> result pending.",
-          "result": null,
-          "score": null,
-          "hit": null,
-          "actual_ev": null,
+          "note": "Sonmez 6-2 6-2 完勝(1h15m)。Paolini GO @1.24 → MISS。Sonmez 64/110pts(58.2%) vs Paolini 46/110pts(41.8%)。Stuttgart indoor clay(速いサーフェス)でSonmezのアグレッシブなプレーがcElo差を超えた。第1セット中断後に再開→第2セットもSonmezが支配。P003 Stuttgart upsets集計対象。",
+          "result": "Sonmez Z.",
+          "score": "6-2 6-2",
+          "hit": false,
+          "actual_ev": -1.0,
           "actual_odds_at_start": {
             "sonmez": 3.8,
             "paolini": 1.24
@@ -399,7 +399,11 @@
             "W001",
             "W005"
           ],
-          "note_round_fix": "Round corrected R1->R2 (Paolini seeded 4th, plays in R2)"
+          "note_round_fix": "Round corrected R1->R2 (Paolini seeded 4th, plays in R2)",
+          "status": "completed",
+          "match_duration": "1h15m",
+          "miss_layer": "L2_SurfaceUpset",
+          "miss_analysis": "【要追加調査】Sonmez vs Paolini Stuttgart 2026 R1。スコア6-2 6-2(1h15m)。Sonmez 58.2%総ポイント獲得。indoor clay速サーフェス + Sonmezのフラット攻撃系ゲームがcElo差(推定200pt+)を超えた可能性。miss_analysis深掘りは次セッションで実施予定。"
         }
       ]
     },
