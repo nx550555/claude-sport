@@ -134,29 +134,8 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
   .sport-bar-val{font-size:10px;}
   .data-table{font-size:11px;}
   .data-table td,.data-table th{padding:6px 6px;}
-  /* 高確率予想テーブル: モバイルで4列（試合名・推奨・推定勝率・結果）のみ表示 */
-  #content-highprob .table-wrap{overflow-x:visible;}
-  #content-highprob .data-table{table-layout:fixed;width:100%;}
-  #content-highprob .data-table th:nth-child(1),
-  #content-highprob .data-table td:nth-child(1){display:none;} /* No. */
-  #content-highprob .data-table th:nth-child(3),
-  #content-highprob .data-table td:nth-child(3){display:none;} /* 種目 */
-  #content-highprob .data-table th:nth-child(6),
-  #content-highprob .data-table td:nth-child(6){display:none;} /* オッズ */
-  #content-highprob .data-table th:nth-child(7),
-  #content-highprob .data-table td:nth-child(7){display:none;} /* 理由 */
-  /* 試合名(2): 幅40%, カタカナ強制折り返し */
-  #content-highprob .data-table th:nth-child(2),
-  #content-highprob .data-table td:nth-child(2){width:40%;word-break:break-all;font-size:10px;}
-  /* 推奨(4): 幅28% */
-  #content-highprob .data-table th:nth-child(4),
-  #content-highprob .data-table td:nth-child(4){width:28%;font-size:10px;}
-  /* 推定勝率(5): 幅18% */
-  #content-highprob .data-table th:nth-child(5),
-  #content-highprob .data-table td:nth-child(5){width:18%;}
-  /* 結果(8): 幅14% */
-  #content-highprob .data-table th:nth-child(8),
-  #content-highprob .data-table td:nth-child(8){width:14%;}
+  /* 高確率予想テーブル: 日本語カタカナの折り返し強制（列数は変えない） */
+  #content-highprob .data-table td{word-break:break-all;overflow-wrap:anywhere;}
   .match-cell{max-width:120px;}
   .rule-entry{padding:12px;}
   .tg-title{font-size:12px;}
@@ -407,13 +386,12 @@ body.lang-en .name-en { display: inline; }
       </div>
     </div>
     <div class="preseason-card">
-        <div class="sport-card-header" style="color:#6b7280;">🏈 NFL <span class="ps-badge">プレシーズン</span>
-        <div style="font-size:12px;color:#6b7280;">2026年9月開幕予定 | rules_nfl.json v1.0 準備済 | L1: DVOA (Football Outsiders)</div>
-      </div>
-      <div class="preseason-card">
-        <div class="sport-card-header" style="color:#6b7280;">🏈 CFL <span class="ps-badge">プレシーズン</span></div>
-        <div style="font-size:12px;color:#6b7280;">2026年6月開幕予定 | rules_cfl.json v1.0 準備済 | L1: 得失点差/試合（差5点以上）</div>
-      </div>
+      <div class="sport-card-header" style="color:#6b7280;">🏈 NFL <span class="ps-badge">プレシーズン</span></div>
+      <div style="font-size:12px;color:#6b7280;">2026年9月開幕予定 | rules_nfl.json v1.0 準備済 | L1: DVOA (Football Outsiders)</div>
+    </div>
+    <div class="preseason-card">
+      <div class="sport-card-header" style="color:#6b7280;">🏈 CFL <span class="ps-badge">プレシーズン</span></div>
+      <div style="font-size:12px;color:#6b7280;">2026年6月開幕予定 | rules_cfl.json v1.0 準備済 | L1: 得失点差/試合（差5点以上）</div>
     </div>
   </div>
 </div>
