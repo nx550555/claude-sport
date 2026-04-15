@@ -1,114 +1,141 @@
-{
-  "sport": "super_league",
-  "season": "2026",
-  "bet_type": "Head-to-Head (H2H)",
-  "rule_version": "v1.0",
-  "started": "2026-04-14",
-  "note": "Super League (英国ラグビーリーグ) 2026シーズン。NRL rules準拠。PD/G L1指標。",
-  "summary": {
-    "total": 2,
-    "confirmed": 0,
-    "hit": 0,
-    "hit_rate": null,
-    "ev_total": 0,
-    "pending": 2
-  },
-  "games": [
-    {
-      "id": "SL-001",
-      "date": "2026-04-18",
-      "match": "Huddersfield Giants vs Leeds Rhinos",
-      "home": "Huddersfield Giants",
-      "away": "Leeds Rhinos",
-      "round": "R8 (推定)",
-      "tier": "go",
-      "rec": "Leeds Rhinos",
-      "rec_odds": 1.32,
-      "ev": 14.8,
-      "confidence": 87,
-      "l1_metric": "Points Differential/Game",
-      "l1_data": {
-        "LEE_pd_per_game": 14.00,
-        "HUD_pd_per_game": -6.29,
-        "diff": 20.29,
-        "threshold": 12,
-        "rule": "SL002_early_season"
-      },
-      "adjustments": {
-        "early_season": "-3% (R3-R8小サンプル補正)",
-        "home_advantage": "-2% (Huddersfield ホーム補正)"
-      },
-      "estimated_win_pct": 87,
-      "standings": {
-        "LEE": "2位 7試合 PD+98 (+14.00/G)",
-        "HUD": "11位 7試合 PD-44 (-6.29/G)"
-      },
-      "ev_calc": "(0.87 × 1.32) - 1 = +14.8%",
-      "rules_applied": ["SL001", "SL002", "SL003", "SL007"],
-      "note": "Leeds Rhinos 2位と強豪。Huddersfield 11位で低迷。PD/G差20.3ptは早期閾値12pt大幅超過。John Smith's Stadium (Huddersfield) でのアウェイ戦だがLeeds優勢。lineup未確認 → 試合前に公式スクワッド要確認。",
-      "result": null,
-      "score": null,
-      "hit": null,
-      "actual_ev": null,
-      "status": "pending"
-    },
-    {
-      "id": "SL-002",
-      "date": "2026-04-19",
-      "match": "Catalans Dragons vs Warrington Wolves",
-      "home": "Catalans Dragons",
-      "away": "Warrington Wolves",
-      "venue": "Stade Gilbert Brutus, Perpignan, France",
-      "round": "R8 (推定)",
-      "tier": "go",
-      "rec": "Warrington Wolves",
-      "rec_odds": 1.65,
-      "ev": 40.3,
-      "confidence": 85,
-      "l1_metric": "Points Differential/Game",
-      "l1_data": {
-        "WAR_pd_per_game": 21.17,
-        "CAT_pd_per_game": -2.71,
-        "diff": 23.88,
-        "threshold": 12,
-        "rule": "SL002_early_season"
-      },
-      "adjustments": {
-        "early_season": "-3% (R3-R8小サンプル補正)",
-        "catalans_france_home": "-5% (ペルピニャン・フランス開催: 長距離移動の相手チーム不利)"
-      },
-      "estimated_win_pct": 85,
-      "standings": {
-        "WAR": "1位 6試合 PD+127 (+21.17/G)",
-        "CAT": "6位 7試合 PD-19 (-2.71/G)"
-      },
-      "ev_calc": "(0.85 × 1.65) - 1 = +40.3%",
-      "rules_applied": ["SL001", "SL002", "SL003", "SL006"],
-      "translation_note": "JSON上は「バルサドラゴンズ vs ウェリントンウルフス」。バルサドラゴンズ=Catalans Dragons、ウェリントンウルフス=Warrington Wolves（Wellington誤訳）と特定。",
-      "note": "Warrington Wolves リーグ1位（PD/G +21.17）。Catalans Dragons 6位でPDマイナス。差23.9ptで圧倒的。Catalans仏国ホームは-5%考慮済み。それでもEV+40.3%は非常に高い。lineup未確認 → 試合前スクワッド要確認。",
-      "result": null,
-      "score": null,
-      "hit": null,
-      "actual_ev": null,
-      "status": "pending"
-    }
-  ],
-  "screening_log": [
-    {
-      "date": "2026-04-14",
-      "round": "R8 (推定)",
-      "total_games": 7,
-      "l1_passed": 3,
-      "go_recommendations": 2,
-      "caution_recommendations": 0,
-      "skipped": [
-        {"match": "Hull FC vs St Helens",         "reason": "L1差6.0pt < 12pt早期閾値"},
-        {"match": "Toulouse vs Hull KR",           "reason": "L1差10.2pt < 12pt + Hull KR @1.05短すぎ"},
-        {"match": "York Knights vs Leigh Leopards","reason": "L1差2.6pt < 12pt"},
-        {"match": "Wakefield Trinity vs Bradford", "reason": "L1差5.1pt < 12pt"},
-        {"match": "Wigan Warriors vs Castleford",  "reason": "L1差26.7pt通過も @1.06 EV計算不可（確信度98%でEV+3.9%止まり）"}
-      ],
-      "notable": "Super League初回スクリーニング。Warrington Wolves (PD/G +21.17) とLeeds Rhinos (+14.00) が突出。GO2件: Leeds @1.32 (EV+14.8%) / Warrington @1.65 (EV+40.3%)。"
-    }
-  ]
+﻿{
+    "sport":  "super_league",
+    "season":  "2026",
+    "bet_type":  "Head-to-Head (H2H)",
+    "rule_version":  "v1.0",
+    "started":  "2026-04-14",
+    "note":  "Super League (英国ラグビーリーグ) 2026シーズン。NRL rules準拠。PD/G L1指標。",
+    "summary":  {
+                    "total":  2,
+                    "confirmed":  0,
+                    "hit":  0,
+                    "hit_rate":  null,
+                    "ev_total":  0,
+                    "pending":  2
+                },
+    "games":  [
+                  {
+                      "id":  "SL-001",
+                      "date":  "2026-04-18",
+                      "match":  "Huddersfield Giants vs Leeds Rhinos",
+                      "home":  "Huddersfield Giants",
+                      "away":  "Leeds Rhinos",
+                      "round":  "R8 (推定)",
+                      "tier":  "go",
+                      "rec":  "Leeds Rhinos",
+                      "rec_odds":  1.32,
+                      "ev":  14.8,
+                      "confidence":  87,
+                      "l1_metric":  "Points Differential/Game",
+                      "l1_data":  {
+                                      "LEE_pd_per_game":  14.00,
+                                      "HUD_pd_per_game":  -6.29,
+                                      "diff":  20.29,
+                                      "threshold":  12,
+                                      "rule":  "SL002_early_season"
+                                  },
+                      "adjustments":  {
+                                          "early_season":  "-3% (R3-R8小サンプル補正)",
+                                          "home_advantage":  "-2% (Huddersfield ホーム補正)"
+                                      },
+                      "estimated_win_pct":  87,
+                      "standings":  {
+                                        "LEE":  "2位 7試合 PD+98 (+14.00/G)",
+                                        "HUD":  "11位 7試合 PD-44 (-6.29/G)"
+                                    },
+                      "ev_calc":  "(0.87 × 1.32) - 1 = +14.8%",
+                      "rules_applied":  [
+                                            "SL001",
+                                            "SL002",
+                                            "SL003",
+                                            "SL007"
+                                        ],
+                      "note":  "Leeds Rhinos 2位と強豪。Huddersfield 11位で低迷。PD/G差20.3ptは早期閾値12pt大幅超過。John Smith\u0027s Stadium (Huddersfield) でのアウェイ戦だがLeeds優勢。lineup未確認 → 試合前に公式スクワッド要確認。",
+                      "result":  null,
+                      "score":  null,
+                      "hit":  null,
+                      "actual_ev":  null,
+                      "status":  "pending"
+                  },
+                  {
+                      "id":  "SL-002",
+                      "date":  "2026-04-19",
+                      "match":  "Catalans Dragons vs Warrington Wolves",
+                      "home":  "Catalans Dragons",
+                      "away":  "Warrington Wolves",
+                      "venue":  "Stade Gilbert Brutus, Perpignan, France",
+                      "round":  "R8 (推定)",
+                      "tier":  "go",
+                      "rec":  "Warrington Wolves",
+                      "rec_odds":  1.65,
+                      "ev":  32,
+                      "confidence":  80,
+                      "l1_metric":  "Points Differential/Game",
+                      "l1_data":  {
+                                      "WAR_pd_per_game":  21.17,
+                                      "CAT_pd_per_game":  -2.71,
+                                      "diff":  23.88,
+                                      "threshold":  12,
+                                      "rule":  "SL002_early_season"
+                                  },
+                      "adjustments":  {
+                                          "early_season":  "-3% (R3-R8小サンプル補正)",
+                                          "catalans_france_home":  "-5% (ペルピニャン・フランス開催: 長距離移動の相手チーム不利)",
+                                          "injury_penalty":  "-5% (Tanginoa OUT + Luke Yates OUT, two key back-rowers confirmed absent for R8 vs Catalans)"
+                                      },
+                      "estimated_win_pct":  85,
+                      "standings":  {
+                                        "WAR":  "1位 6試合 PD+127 (+21.17/G)",
+                                        "CAT":  "6位 7試合 PD-19 (-2.71/G)"
+                                    },
+                      "rules_applied":  [
+                                            "SL001",
+                                            "SL002",
+                                            "SL003",
+                                            "SL006"
+                                        ],
+                      "translation_note":  "JSON上は「バルサドラゴンズ vs ウェリントンウルフス」。バルサドラゴンズ=Catalans Dragons、ウェリントンウルフス=Warrington Wolves（Wellington誤訳）と特定。",
+                      "note":  "Warrington Wolves リーグ1位（PD/G +21.17）。Catalans Dragons 6位でPDマイナス。差23.9ptで圧倒的。Catalans仏国ホームは-5%考慮済み。それでもEV+40.3%は非常に高い。lineup未確認 → 試合前スクワッド要確認。",
+                      "result":  null,
+                      "score":  null,
+                      "hit":  null,
+                      "actual_ev":  null,
+                      "status":  "pending",
+                      "ev_calc":  "(0.80 x 1.65) - 1 = +32.0% (revised 2026-04-15 after squad news)",
+                      "squad_note":  "2026-04-15 confirmed: Tanginoa and Luke Yates both injured. Doubts: Niu, Brand, Hughes. Marc Sneyd returns to halves. Still GO but confidence reduced 85-\u003e80."
+                  }
+              ],
+    "screening_log":  [
+                          {
+                              "date":  "2026-04-14",
+                              "round":  "R8 (推定)",
+                              "total_games":  7,
+                              "l1_passed":  3,
+                              "go_recommendations":  2,
+                              "caution_recommendations":  0,
+                              "skipped":  [
+                                              {
+                                                  "match":  "Hull FC vs St Helens",
+                                                  "reason":  "L1差6.0pt \u003c 12pt早期閾値"
+                                              },
+                                              {
+                                                  "match":  "Toulouse vs Hull KR",
+                                                  "reason":  "L1差10.2pt \u003c 12pt + Hull KR @1.05短すぎ"
+                                              },
+                                              {
+                                                  "match":  "York Knights vs Leigh Leopards",
+                                                  "reason":  "L1差2.6pt \u003c 12pt"
+                                              },
+                                              {
+                                                  "match":  "Wakefield Trinity vs Bradford",
+                                                  "reason":  "L1差5.1pt \u003c 12pt"
+                                              },
+                                              {
+                                                  "match":  "Wigan Warriors vs Castleford",
+                                                  "reason":  "L1差26.7pt通過も @1.06 EV計算不可（確信度98%でEV+3.9%止まり）"
+                                              }
+                                          ],
+                              "notable":  "Super League初回スクリーニング。Warrington Wolves (PD/G +21.17) とLeeds Rhinos (+14.00) が突出。GO2件: Leeds @1.32 (EV+14.8%) / Warrington @1.65 (EV+40.3%)。"
+                          }
+                      ]
 }
