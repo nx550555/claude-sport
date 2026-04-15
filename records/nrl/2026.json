@@ -1,204 +1,216 @@
-﻿{
-    "sport":  "nrl",
-    "season":  "2026",
-    "bet_type":  "Head-to-Head (H2H)",
-    "rule_version":  "v1.0",
-    "started":  "2026-04-10",
-    "summary":  {
-                    "total":  3,
-                    "confirmed":  1,
-                    "hit":  0,
-                    "hit_rate":  0.0,
-                    "ev_total":  -1.0,
-                    "pending":  2
-                },
-    "games":  [
-                  {
-                      "date":  "2026-04-11",
-                      "match":  "South Sydney Rabbitohs vs Canberra Raiders",
-                      "home":  "South Sydney Rabbitohs",
-                      "away":  "Canberra Raiders",
-                      "venue":  "Optus Stadium, Perth (中立地)",
-                      "round":  6,
-                      "tier":  "go",
-                      "rec":  "South Sydney Rabbitohs",
-                      "rec_odds":  1.55,
-                      "ev":  20.9,
-                      "confidence":  78,
-                      "l1_metric":  "Points Differential/Game",
-                      "l1_data":  {
-                                      "SOU_PD_per_game":  3.5,
-                                      "CAN_PD_per_game":  -13.8,
-                                      "diff":  17.3
-                                  },
-                      "adjustments":  {
-                                          "venue_neutral":  "中立地のためホームアドバンテージなし (R004)",
-                                          "soo":  "SOO選考なし(4月) → 補正不要 (R007)",
-                                          "raiders_injury":  "Xavier Savage(key WC) 8週間離脱 → Raiders更に弱体化"
-                                      },
-                      "estimated_win_pct":  78,
-                      "standings":  {
-                                        "SOU":  "3-1, PD=+14 (P4, B1)",
-                                        "CAN":  "1-4, PD=-69 (P5)"
-                                    },
-                      "team_lists":  {
-                                         "SOU":  "Cameron Murray(C)確認済, Brandon Smith hooker復帰(プラス要因), 主力全員出場",
-                                         "CAN":  "Xavier Savage欠場(足首8週), Jed Stuart初出場(今季), 戦力低下確認"
-                                     },
-                      "rules_applied":  [
-                                            "R001",
-                                            "R002",
-                                            "R004",
-                                            "R006",
-                                            "R010"
-                                        ],
-                      "checklist_done":  true,
-                      "result":  "loss",
-                      "score":  "Raiders 36 - Rabbitohs 34",
-                      "hit":  false,
-                      "actual_ev":  -1.0,
-                      "miss_layer":  "L1過信（小サンプル）",
-                      "miss_analysis":  "PD -13.8/試合はR5終了時点5試合の小サンプル（L1過信の主因）。実態判明: Raiders前半24-4リード（一方的展開）、後半Rabbitohs猛反撃で5TRY→34点まで追い上げ。最終36-34でRaiders辛勝（2点差）。スコア誤記訂正: 旧36-34→実際36-34。Rabbitohs後半の猛追はR4旧説「Raiders突き放し」と大きく異なる実態。デスパレートエフェクト（1-4の崖っぷち）が後半に特に機能した可能性あり。L1過信（小サンプル78%）+ UFN_new（小サンプル補正不足）が主因確定。",
-                      "note":  "Rabbitohs 3-1好調。Raiders 1-4で最下位争い、PD -13.8/試合。主力Savage欠場でさらに弱体。Rabbitohs側はBrandon Smith(hooker)復帰がプラス。中立地Perth開催でHAなし。【結果】Raiders逆転勝利 36-34。MISS。"
-                  }
-              ],
-    "pending_games":  [
-                          {
-                              "date":  "2026-04-18",
-                              "match":  "Wests Tigers vs Brisbane Broncos",
-                              "round":  7,
-                              "tier":  "revoked",
-                              "rec":  "Brisbane Broncos",
-                              "rec_odds":  2.50,
-                              "ev":  119.0,
-                              "confidence":  87.6,
-                              "l1_data":  {
-                                              "BRI_PD_per_game":  10.0,
-                                              "WST_PD_per_game":  -4.1,
-                                              "diff":  14.1,
-                                              "threshold":  12,
-                                              "rule":  "R012_early_season"
-                                          },
-                              "status":  "revoked",
-                              "data_warning":  "GEN002_ALERT: model 87.6% vs market 40%(1/2.50) → 乖離47.6pp。PD/Gデータ帰属ミスの可能性あり。結果後に検証必須。",
-                              "odds_correction":  "2026-04-14: rec_odds 1.46(誤:Tigersのオッズ)→2.50(正:Broncosのオッズ)に修正。EV+27.9%→+119.0%に再計算。",
-                              "revoke_date":  "2026-04-15",
-                              "revoke_reason":  "R7_analysis_2026-04-15: (1) Luai returns from suspension - Tigers key playmaker back. (2) Carrigan suspended - Broncos lose captain/key prop. (3) Market confirms: Tigers 1.52 / Broncos 2.55, statsinsider Tigers 69% favorite. GEN002_ALERT confirmed as real squad-change gap, not data error. GO revoked."
-                          },
-                          {
-                              "date":  "2026-04-18",
-                              "match":  "NZ Warriors vs Gold Coast Titans",
-                              "round":  7,
-                              "tier":  "go",
-                              "rec":  "NZ Warriors",
-                              "rec_odds":  1.22,
-                              "ev":  10.7,
-                              "confidence":  90.7,
-                              "l1_data":  {
-                                              "NZW_PD_per_game":  8.7,
-                                              "GCT_PD_per_game":  -8.0,
-                                              "diff":  16.7,
-                                              "threshold":  12,
-                                              "rule":  "R012_early_season"
-                                          },
-                              "status":  "pending"
-                          },
-                          {
-                              "date":  "2026-04-17",
-                              "match":  "Penrith Panthers vs Dolphins",
-                              "round":  7,
-                              "tier":  "caution",
-                              "rec":  "Penrith Panthers",
-                              "rec_odds":  1.14,
-                              "ev":  9.2,
-                              "confidence":  95.8,
-                              "l1_data":  {
-                                              "PEN_PD_per_game":  16.0,
-                                              "DOL_PD_per_game":  -8.0,
-                                              "diff":  24.0,
-                                              "threshold":  12,
-                                              "rule":  "R012_early_season"
-                                          },
-                              "caution_reason":  "odds_too_short — 1.14でリターンが薄い",
-                              "status":  "skip",
-                              "skip_reason":  "odds_too_short_final: 1.14 EV+9.2% insufficient return. Originally CAUTION, formally SKIP after 2026-04-15 review."
-                          },
-                          {
-                              "date":  "2026-04-18",
-                              "match":  "South Sydney Rabbitohs vs St George Illawarra Dragons",
-                              "round":  7,
-                              "tier":  "caution",
-                              "rec":  "South Sydney Rabbitohs",
-                              "rec_odds":  1.18,
-                              "ev":  6.8,
-                              "confidence":  88.3,
-                              "l1_data":  {
-                                              "SOU_PD_per_game":  7.0,
-                                              "SGD_PD_per_game":  -6.5,
-                                              "diff":  13.5,
-                                              "threshold":  12,
-                                              "rule":  "R012_early_season"
-                                          },
-                              "caution_reason":  "odds_short — 1.18でEV+6.8%は閾値ギリギリ",
-                              "status":  "skip",
-                              "skip_reason":  "odds_short_final: 1.18 EV+6.8% at threshold limit, no margin for error. Originally CAUTION, formally SKIP after 2026-04-15 review."
-                          }
-                      ],
-    "screening_log":  [
-                          {
-                              "date":  "2026-04-13",
-                              "round":  7,
-                              "total_games":  8,
-                              "l1_passed":  4,
-                              "go_recommendations":  2,
-                              "caution_recommendations":  2,
-                              "skipped":  [
-                                              {
-                                                  "match":  "Melbourne Storm vs Canberra Raiders",
-                                                  "reason":  "L1差\u003c12pt早期閾値未達"
-                                              },
-                                              {
-                                                  "match":  "Sydney Roosters vs Manly Sea Eagles",
-                                                  "reason":  "L1差\u003c12pt早期閾値未達"
-                                              },
-                                              {
-                                                  "match":  "Canterbury Bulldogs vs Newcastle Knights",
-                                                  "reason":  "L1差\u003c12pt早期閾値未達"
-                                              },
-                                              {
-                                                  "match":  "North Queensland Cowboys vs Parramatta Eels",
-                                                  "reason":  "L1差\u003c12pt早期閾値未達"
-                                              }
-                                          ],
-                              "notable":  "NRL R7 4/13スクリーニング。早期閾値(R3-R8)=12pt適用。Broncos大型オッズ(1.46)でEV+27.9%が最高値。"
-                          },
-                          {
-                              "date":  "2026-04-10",
-                              "round":  6,
-                              "total_games":  7,
-                              "already_finished":  2,
-                              "live_skip":  1,
-                              "l1_passed":  1,
-                              "go_recommendations":  1,
-                              "skipped_after_l1":  [
-                                                       {
-                                                           "match":  "Sharks vs Roosters",
-                                                           "reason":  "L1差12.4ptでR001通過も信頼度65%→R010でSKIP"
-                                                       },
-                                                       {
-                                                           "match":  "Storm vs Warriors",
-                                                           "reason":  "L1差5.2pt \u003c 6pt閾値未達"
-                                                       },
-                                                       {
-                                                           "match":  "Eels vs Titans",
-                                                           "reason":  "L1差0.8pt \u003c 6pt閾値未達"
-                                                       },
-                                                       {
-                                                           "match":  "Tigers vs Knights",
-                                                           "reason":  "L1差4.6pt \u003c 6pt閾値未達"
-                                                       }
-                                                   ],
-                              "notable":  "NRL Round 6初回分析。Sharks vs Roostersはオッズ逆転（Roosters優位）でL1データと市場が乖離→追加調査要。"
-                          }
-                      ]
+{
+  "sport": "nrl",
+  "season": "2026",
+  "bet_type": "Head-to-Head (H2H)",
+  "rule_version": "v1.0",
+  "started": "2026-04-10",
+  "summary": {
+    "total": 3,
+    "confirmed": 1,
+    "hit": 0,
+    "hit_rate": 0.0,
+    "ev_total": -1.0,
+    "pending": 2
+  },
+  "games": [
+    {
+      "date": "2026-04-11",
+      "match": "South Sydney Rabbitohs vs Canberra Raiders",
+      "home": "South Sydney Rabbitohs",
+      "away": "Canberra Raiders",
+      "venue": "Optus Stadium, Perth (中立地)",
+      "round": 6,
+      "tier": "go",
+      "rec": "South Sydney Rabbitohs",
+      "rec_odds": 1.55,
+      "ev": 20.9,
+      "confidence": 78,
+      "l1_metric": "Points Differential/Game",
+      "l1_data": {
+        "SOU_PD_per_game": 3.5,
+        "CAN_PD_per_game": -13.8,
+        "diff": 17.3
+      },
+      "adjustments": {
+        "venue_neutral": "中立地のためホームアドバンテージなし (R004)",
+        "soo": "SOO選考なし(4月) → 補正不要 (R007)",
+        "raiders_injury": "Xavier Savage(key WC) 8週間離脱 → Raiders更に弱体化"
+      },
+      "estimated_win_pct": 78,
+      "standings": {
+        "SOU": "3-1, PD=+14 (P4, B1)",
+        "CAN": "1-4, PD=-69 (P5)"
+      },
+      "team_lists": {
+        "SOU": "Cameron Murray(C)確認済, Brandon Smith hooker復帰(プラス要因), 主力全員出場",
+        "CAN": "Xavier Savage欠場(足首8週), Jed Stuart初出場(今季), 戦力低下確認"
+      },
+      "rules_applied": [
+        "R001",
+        "R002",
+        "R004",
+        "R006",
+        "R010"
+      ],
+      "checklist_done": true,
+      "result": "loss",
+      "score": "Raiders 36 - Rabbitohs 34",
+      "hit": false,
+      "actual_ev": -1.0,
+      "miss_layer": "L1過信（小サンプル）",
+      "miss_analysis": "PD -13.8/試合はR5終了時点5試合の小サンプル（L1過信の主因）。実態判明: Raiders前半24-4リード（一方的展開）、後半Rabbitohs猛反撃で5TRY→34点まで追い上げ。最終36-34でRaiders辛勝（2点差）。スコア誤記訂正: 旧36-34→実際36-34。Rabbitohs後半の猛追はR4旧説「Raiders突き放し」と大きく異なる実態。デスパレートエフェクト（1-4の崖っぷち）が後半に特に機能した可能性あり。L1過信（小サンプル78%）+ UFN_new（小サンプル補正不足）が主因確定。",
+      "note": "Rabbitohs 3-1好調。Raiders 1-4で最下位争い、PD -13.8/試合。主力Savage欠場でさらに弱体。Rabbitohs側はBrandon Smith(hooker)復帰がプラス。中立地Perth開催でHAなし。【結果】Raiders逆転勝利 36-34。MISS。"
+    }
+  ],
+  "pending_games": [
+    {
+      "date": "2026-04-18",
+      "match": "Wests Tigers vs Brisbane Broncos",
+      "round": 7,
+      "tier": "revoked",
+      "rec": "Brisbane Broncos",
+      "rec_odds": 2.5,
+      "ev": 119.0,
+      "confidence": 87.6,
+      "l1_data": {
+        "BRI_PD_per_game": 10.0,
+        "WST_PD_per_game": -4.1,
+        "diff": 14.1,
+        "threshold": 12,
+        "rule": "R012_early_season"
+      },
+      "status": "revoked",
+      "data_warning": "GEN002_ALERT: model 87.6% vs market 40%(1/2.50) → 乖離47.6pp。PD/Gデータ帰属ミスの可能性あり。結果後に検証必須。",
+      "odds_correction": "2026-04-14: rec_odds 1.46(誤:Tigersのオッズ)→2.50(正:Broncosのオッズ)に修正。EV+27.9%→+119.0%に再計算。",
+      "revoke_date": "2026-04-15",
+      "revoke_reason": "R7_analysis_2026-04-15: (1) Luai returns from suspension - Tigers key playmaker back. (2) Carrigan suspended - Broncos lose captain/key prop. (3) Market confirms: Tigers 1.52 / Broncos 2.55, statsinsider Tigers 69% favorite. GEN002_ALERT confirmed as real squad-change gap, not data error. GO revoked.",
+      "revoke_confirmed": true,
+      "team_lists_r7": {
+        "WST": "Luai returns from knee injury (R3以来欠場). Taylan May returns from shoulder injury at centre. Starting lineup: Luai(5/8) + Doueihi(HB).",
+        "BRI": "Adam Reynolds returns from adductor injury (halfback). Pat Carrigan SUSPENDED (key prop/captain). Reece Walsh OUT (injury). Cory Paix OUT (specialist ruling). Xavier Willison replaces Carrigan at lock."
+      },
+      "revoke_note_updated": "Revoke confirmed by R7 team lists: Luai+May return (Tigers strength up) AND Carrigan/Walsh/Paix all OUT (Broncos weakened). 市場: Tigers 1.52 / Broncos 2.55 (大幅転換). 元のGEN002アラートはPD/G帰属ミスではなくスクワッド実力差だった。REVOKE正解。"
+    },
+    {
+      "date": "2026-04-18",
+      "match": "NZ Warriors vs Gold Coast Titans",
+      "round": 7,
+      "tier": "go",
+      "rec": "NZ Warriors",
+      "rec_odds": 1.22,
+      "ev": 10.7,
+      "confidence": 90.7,
+      "l1_data": {
+        "NZW_PD_per_game": 8.7,
+        "GCT_PD_per_game": -8.0,
+        "diff": 16.7,
+        "threshold": 12,
+        "rule": "R012_early_season"
+      },
+      "status": "pending",
+      "team_lists_r7": {
+        "NZW": "Kurt Capewell returns from 5-game calf injury (significant +). Marata Niukore moves to bench. Tanner Stowers-Smith OUT (hamstring). Nicoll-Klokstad(neck)/Barnett(thumb) in reserves - availability uncertain.",
+        "GCT": "No changes to 19-man squad after big win over Eels. Klese Haas in extended squad (returning from leg injury). Squad stable."
+      },
+      "team_list_assessment": "Warriors: Capewell復帰はプラス要因。軽傷者数名は懸念あるが主力に影響なし。Titans: 変更なし、安定継続。GO維持 (NZW PD/G+8.7 vs GCT -8.0, diff 16.7)。",
+      "go_confirmed": true
+    },
+    {
+      "date": "2026-04-17",
+      "match": "Penrith Panthers vs Dolphins",
+      "round": 7,
+      "tier": "caution",
+      "rec": "Penrith Panthers",
+      "rec_odds": 1.14,
+      "ev": 9.2,
+      "confidence": 95.8,
+      "l1_data": {
+        "PEN_PD_per_game": 16.0,
+        "DOL_PD_per_game": -8.0,
+        "diff": 24.0,
+        "threshold": 12,
+        "rule": "R012_early_season"
+      },
+      "caution_reason": "odds_too_short — 1.14でリターンが薄い",
+      "status": "skip",
+      "skip_reason": "odds_too_short_final: 1.14 EV+9.2% insufficient return. Originally CAUTION, formally SKIP after 2026-04-15 review."
+    },
+    {
+      "date": "2026-04-18",
+      "match": "South Sydney Rabbitohs vs St George Illawarra Dragons",
+      "round": 7,
+      "tier": "caution",
+      "rec": "South Sydney Rabbitohs",
+      "rec_odds": 1.18,
+      "ev": 6.8,
+      "confidence": 88.3,
+      "l1_data": {
+        "SOU_PD_per_game": 7.0,
+        "SGD_PD_per_game": -6.5,
+        "diff": 13.5,
+        "threshold": 12,
+        "rule": "R012_early_season"
+      },
+      "caution_reason": "odds_short — 1.18でEV+6.8%は閾値ギリギリ",
+      "status": "skip",
+      "skip_reason": "odds_short_final: 1.18 EV+6.8% at threshold limit, no margin for error. Originally CAUTION, formally SKIP after 2026-04-15 review."
+    }
+  ],
+  "screening_log": [
+    {
+      "date": "2026-04-13",
+      "round": 7,
+      "total_games": 8,
+      "l1_passed": 4,
+      "go_recommendations": 2,
+      "caution_recommendations": 2,
+      "skipped": [
+        {
+          "match": "Melbourne Storm vs Canberra Raiders",
+          "reason": "L1差<12pt早期閾値未達"
+        },
+        {
+          "match": "Sydney Roosters vs Manly Sea Eagles",
+          "reason": "L1差<12pt早期閾値未達"
+        },
+        {
+          "match": "Canterbury Bulldogs vs Newcastle Knights",
+          "reason": "L1差<12pt早期閾値未達"
+        },
+        {
+          "match": "North Queensland Cowboys vs Parramatta Eels",
+          "reason": "L1差<12pt早期閾値未達"
+        }
+      ],
+      "notable": "NRL R7 4/13スクリーニング。早期閾値(R3-R8)=12pt適用。Broncos大型オッズ(1.46)でEV+27.9%が最高値。"
+    },
+    {
+      "date": "2026-04-10",
+      "round": 6,
+      "total_games": 7,
+      "already_finished": 2,
+      "live_skip": 1,
+      "l1_passed": 1,
+      "go_recommendations": 1,
+      "skipped_after_l1": [
+        {
+          "match": "Sharks vs Roosters",
+          "reason": "L1差12.4ptでR001通過も信頼度65%→R010でSKIP"
+        },
+        {
+          "match": "Storm vs Warriors",
+          "reason": "L1差5.2pt < 6pt閾値未達"
+        },
+        {
+          "match": "Eels vs Titans",
+          "reason": "L1差0.8pt < 6pt閾値未達"
+        },
+        {
+          "match": "Tigers vs Knights",
+          "reason": "L1差4.6pt < 6pt閾値未達"
+        }
+      ],
+      "notable": "NRL Round 6初回分析。Sharks vs Roostersはオッズ逆転（Roosters優位）でL1データと市場が乖離→追加調査要。"
+    }
+  ]
 }

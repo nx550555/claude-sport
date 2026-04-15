@@ -59,3 +59,13 @@
 
 不要なものがあれば教えてください。引き続き対応が必要なものはキューに残しておきます。
 ```
+
+---
+**Session_30 更新 (2026-04-15):**
+- NHL CAR@NYI 2-1 HIT / COL@CGY 3-1 HIT (両CAUTION/SKIP・ベットなし・予測HIT) → pending_games cleared
+- UFL DC vs STL CAUTION: Ta'amu確認済・L1データ追加 (DC+16.7/G vs STL-2.0/G、conf78%、EV+12.3%)
+- NRL Warriors/Titans GO維持 (Capewell復帰確認) / Broncos REVOKED確認 (Luai+May復帰・Carrigan/Walsh/Paix全欠場)
+- ATP W16 R1 全5試合結果記録済
+- WTA Paolini vs Sonmez: 2ndセット中断中・未完了 (Sonmez 6-2 lead, 2nd set suspended)
+- WTA Zhang vs Noskova: 1stセット中断・未完了
+- P003 Stuttgart R1 trigger: 未達 (Paolini/Sonmez + Zhang/Noskova の2試合がまだ未完了)

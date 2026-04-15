@@ -20,12 +20,12 @@
 
 - [x] UFL Week3 Dallas vs Columbus 結果確認・記録（4/13 正午ET試合後）← Dallas GO EV+8.2% 信頼度82%
 - [x] MC2026 F Alcaraz vs Sinner 結果確認（4/13試合後）← SKIP（ベットなし・観戦のみ）
-- [ ] ATP W16 R1 今夜の結果確認（Nava/Shelton 21:10・Blockx/Hanfmann 22:20・Norrie/Wawrinka 23:00・Borges/Mannarino 23:00 全SKIP）→ 明日R2スクリーニング（casino data起点）
+- [x] ATP W16 R1 結果確認（全SKIP）: Shelton d.Nava 7-6(4)3-6 6-3 / Blockx d.Hanfmann 7-6(2)6-2 / Norrie d.Wawrinka 6-4 6-7(5)6-4 / Borges d.Mannarino 6-3 6-4 / Molcan d.Bublik(CAUTION) 6-4 6-2 → R2スクリーニングはcasino data待ち
 - [x] ATP Barcelona/Munich R1 全試合スクリーニング完了（casino data起点）← **GO3件: Musetti@1.27(EV+9.7%), Cobolli@1.21(EV+8.7%), Kopriva@1.36(EV+9.8%) ← 全4/14開催**
 - [x] WTA Stuttgart R1 全12試合完了（4/12〜4/13実施）← **GB001 Ostapenko HIT(+0.538u)。UPSET 2/10。**
 - [x] WTA Rouen R1 全16試合スクリーニング完了（casino data起点）← 全SKIP。CAUTION: Timofeyeva/Boulter(cElo要確認)
 - [x] WTA Stuttgart R2 スクリーニング（R1結果確認後・casino dataまたはOddsPortal起点）← GO: Paolini @1.24 EV+5.4%. 他8試合SKIP. Session_29完了
-- [ ] NHL RS最終盤 4/15 CAUTION2件 結果確認← CAR@NYI(CAR 1.90) / COL@CGY(COL 1.60 EV+24.8% ただしN016でSKIP相当). 結果要確認
+- [x] NHL RS最終盤 4/15 CAUTION2件 結果確認← CAR@NYI CAR 2-1 HIT(CAUTION/nobet) / COL@CGY COL 3-1 HIT(SKIP/N016)。予測両方HIT。
 - [ ] NHL プレーオフ R1 スクリーニング（4/16〜17実施予定）← ※プレーインなし。RS終了4/16→ブラケット確定後にMoneyPuck xGF%確認起点でスクリーニング。暫定ブラケット取得済み。
 
 ---

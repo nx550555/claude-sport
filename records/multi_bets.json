@@ -72,7 +72,7 @@
           "win_prob": 0.82,
           "odds": 1.65,
           "ev": 0.353,
-          "reason": "Louisville 3-0 vs Gamblers 0-3。DIFF/G差8点超。OLine格差。Week4閾値80%超。EV+35.3%。",
+          "reason": "Houston QB Tagovailoa 171yd 7-45 blowout loss W3 (unstable QB situation)。Louisville QB Bean W3 352yd 3TD (Houston戦で好パフォーマンス)。PD/G: Louisville -4.7/G vs Houston -18.3/G (Houston W3 45-7大敗でPD悪化)。L1 diff 13.6 > threshold 4。conf 82% > Week4 threshold 80%。EV+35.3%。",
           "result": "pending"
         },
         {

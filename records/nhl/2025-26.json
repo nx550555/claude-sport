@@ -9,11 +9,11 @@
     "hit": 2,
     "hit_rate": 1.0,
     "ev_total": 1.863,
-    "prediction_total": 6,
-    "prediction_hit": 4,
-    "prediction_hit_rate": 0.667,
+    "prediction_total": 8,
+    "prediction_hit": 6,
+    "prediction_hit_rate": 0.75,
     "prediction_pending": 0,
-    "note": "bet実績(GO tier): 2/2 100% +1.863u。予測精度(全L1通過試合): 4/6 66.7%（retroactive含む）。EDM@COL COL 2-1 SO HIT / VGK@WPG VGK 6-2 結果確認済"
+    "note": "bet実績(GO tier): 2/2 100% +1.863u。予測精度(全L1通過試合): 6/8 75.0%（retroactive含む）。4/15追加: CAR@NYI CAR 2-1 HIT + COL@CGY COL 3-1 HIT（両試合ともSKIP/CAUTION、ベットなし）"
   },
   "games": [
     {
@@ -52,7 +52,14 @@
         "COL": "51-16-10, 112pt（1位）",
         "CGY": "32-36-9, 73pt（消化試合確定）"
       },
-      "rules_applied": ["N001", "N004", "N005", "N008", "N013", "N014"],
+      "rules_applied": [
+        "N001",
+        "N004",
+        "N005",
+        "N008",
+        "N013",
+        "N014"
+      ],
       "goalie_confirmed": true,
       "checklist_done": true,
       "note": "COL 3-1 勝利。Presidents' Trophy確定。MacKinnon 52G+2A。予測通りxGF%差10ptの地力差が結果に直結。",
@@ -97,7 +104,11 @@
         "NYI": "xGF% 47.41% リーグ26位"
       },
       "goalie_confirmed": false,
-      "rules_applied": ["N001", "N004", "N006"],
+      "rules_applied": [
+        "N001",
+        "N004",
+        "N006"
+      ],
       "checklist_done": true,
       "result": "Ottawa Senators",
       "score": "3-2",
@@ -106,9 +117,9 @@
       "miss_layer": null,
       "note": "市場が50/50評価(2.52/2.53)だが、OTTはリーグ3位xGF%でNYI(26位)に対し実質5.52ptの優位。両チーム非B2B。Ullmark vs Sorokin両エース互角。市場乖離13.1ptが根拠。【結果】OTT 3-2 NYI。Brady Tkachuk残り13秒決勝点。ReimER先発（Ullmarkではなく）でも予測通りOTT勝利。市場乖離が機能。HIT (+1.53)。"
     },
-
-    {"_comment": "=== 4/13 JST（4/12 ET）: 10試合 retroactive screening（v3.0 prediction tracking） ==="},
-
+    {
+      "_comment": "=== 4/13 JST（4/12 ET）: 10試合 retroactive screening（v3.0 prediction tracking） ==="
+    },
     {
       "date": "2026-04-13",
       "date_et": "2026-04-12",
@@ -120,9 +131,15 @@
       "prediction_confidence": 60,
       "prediction_basis": "xGF% CAR 56.0 vs PHI 51.0、差5pt。L1通過。ベット推奨なし（EV・オッズ未確認）。",
       "prediction_hit": false,
-      "rec": null, "rec_odds": null, "ev": null,
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
       "l1_metric": "xGF% (MoneyPuck 2026-04-14)",
-      "l1_data": { "CAR_xGF": 56.0, "PHI_xGF": 51.0, "diff": 5.0 },
+      "l1_data": {
+        "CAR_xGF": 56.0,
+        "PHI_xGF": 51.0,
+        "diff": 5.0
+      },
       "result": "Philadelphia Flyers",
       "score": "3-2 SO",
       "hit": null,
@@ -142,9 +159,14 @@
       "prediction_confidence": 52,
       "prediction_basis": "xGF% diff 4pt < 5pt閾値。L1未達。市場値から推定。",
       "prediction_hit": true,
-      "rec": null, "rec_odds": null, "ev": null,
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
       "l1_metric": "xGF% (MoneyPuck 2026-04-14)",
-      "l1_data": { "xgf_diff_est": 4.0, "l1_pass": false },
+      "l1_data": {
+        "xgf_diff_est": 4.0,
+        "l1_pass": false
+      },
       "result": "Tampa Bay Lightning",
       "score": "4-3 OT",
       "hit": null,
@@ -163,9 +185,15 @@
       "prediction_confidence": 63,
       "prediction_basis": "xGF% DAL 52.0 vs TOR 46.0、差6pt。L1通過。ベット推奨なし（EV・オッズ未確認）。",
       "prediction_hit": true,
-      "rec": null, "rec_odds": null, "ev": null,
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
       "l1_metric": "xGF% (MoneyPuck 2026-04-14)",
-      "l1_data": { "DAL_xGF": 52.0, "TOR_xGF": 46.0, "diff": 6.0 },
+      "l1_data": {
+        "DAL_xGF": 52.0,
+        "TOR_xGF": 46.0,
+        "diff": 6.0
+      },
       "result": "Dallas Stars",
       "score": "6-5",
       "hit": null,
@@ -184,9 +212,14 @@
       "prediction_confidence": 51,
       "prediction_basis": "xGF% diff 1pt < 5pt閾値。L1未達。SJSホーム有利微小。",
       "prediction_hit": true,
-      "rec": null, "rec_odds": null, "ev": null,
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
       "l1_metric": "xGF% (MoneyPuck 2026-04-14)",
-      "l1_data": { "xgf_diff_est": 1.0, "l1_pass": false },
+      "l1_data": {
+        "xgf_diff_est": 1.0,
+        "l1_pass": false
+      },
       "result": "San Jose Sharks",
       "score": "2-0",
       "hit": null,
@@ -205,9 +238,15 @@
       "prediction_confidence": 62,
       "prediction_basis": "xGF% MIN 53.0 vs STL 47.0、差6pt。L1通過。ベット推奨なし（EV・オッズ未確認）。",
       "prediction_hit": false,
-      "rec": null, "rec_odds": null, "ev": null,
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
       "l1_metric": "xGF% (MoneyPuck 2026-04-14)",
-      "l1_data": { "MIN_xGF": 53.0, "STL_xGF": 47.0, "diff": 6.0 },
+      "l1_data": {
+        "MIN_xGF": 53.0,
+        "STL_xGF": 47.0,
+        "diff": 6.0
+      },
       "result": "St. Louis Blues",
       "score": "6-3",
       "hit": null,
@@ -227,9 +266,15 @@
       "prediction_confidence": 60,
       "prediction_basis": "xGF% BUF 49.0 vs CHI 44.0、差5pt。L1通過。ベット推奨なし（EV・オッズ未確認）。",
       "prediction_hit": true,
-      "rec": null, "rec_odds": null, "ev": null,
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
       "l1_metric": "xGF% (MoneyPuck 2026-04-14)",
-      "l1_data": { "BUF_xGF": 49.0, "CHI_xGF": 44.0, "diff": 5.0 },
+      "l1_data": {
+        "BUF_xGF": 49.0,
+        "CHI_xGF": 44.0,
+        "diff": 5.0
+      },
       "result": "Buffalo Sabres",
       "score": "4-2",
       "hit": null,
@@ -248,9 +293,14 @@
       "prediction_confidence": 55,
       "prediction_basis": "xGF% diff 4pt < 5pt閾値。L1未達。LAKホーム有利推定。",
       "prediction_hit": true,
-      "rec": null, "rec_odds": null, "ev": null,
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
       "l1_metric": "xGF% (MoneyPuck 2026-04-14)",
-      "l1_data": { "xgf_diff_est": 4.0, "l1_pass": false },
+      "l1_data": {
+        "xgf_diff_est": 4.0,
+        "l1_pass": false
+      },
       "result": "Los Angeles Kings",
       "score": "4-0",
       "hit": null,
@@ -269,9 +319,14 @@
       "prediction_confidence": 53,
       "prediction_basis": "xGF% diff 3pt < 5pt閾値。L1未達。FLA微小有利推定。",
       "prediction_hit": true,
-      "rec": null, "rec_odds": null, "ev": null,
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
       "l1_metric": "xGF% (MoneyPuck 2026-04-14)",
-      "l1_data": { "xgf_diff_est": 3.0, "l1_pass": false },
+      "l1_data": {
+        "xgf_diff_est": 3.0,
+        "l1_pass": false
+      },
       "result": "Florida Panthers",
       "score": "3-2",
       "hit": null,
@@ -290,9 +345,14 @@
       "prediction_confidence": 55,
       "prediction_basis": "xGF% diff推定。COLホーム有利。Presidents' Trophy確定チーム。",
       "prediction_hit": true,
-      "rec": null, "rec_odds": null, "ev": null,
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
       "l1_metric": "xGF% (MoneyPuck 2026-04-14)",
-      "l1_data": { "xgf_diff_est": "未確定", "l1_pass": null },
+      "l1_data": {
+        "xgf_diff_est": "未確定",
+        "l1_pass": null
+      },
       "result": "Colorado Avalanche",
       "score": "2-1 SO",
       "hit": null,
@@ -310,82 +370,97 @@
       "prediction_confidence": null,
       "prediction_basis": "xGF%未確認。スコア取得不可のため予測未確定。",
       "prediction_hit": null,
-      "rec": null, "rec_odds": null, "ev": null,
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
       "l1_metric": "xGF% (MoneyPuck 2026-04-14)",
-      "l1_data": { "xgf_diff_est": "未確定" },
+      "l1_data": {
+        "xgf_diff_est": "未確定"
+      },
       "result": "Vegas Golden Knights",
       "score": "6-2",
       "hit": null,
       "actual_ev": null,
-      "note": "retroactive prediction。スコア取得不可（Webキャッシュ問題）。後日確認。"
-    }
-  ],
-  "pending_games": [
+      "note": "retroactive prediction. predicted_winner=null (xGF%未確認のため予測未記録)。結果: VGK 6-2 WPG確認済。Stone 1G/Eichel 1G3A/Barbashev 1G1A/Andersson 1G1A/Smith 1G/Dorofeyev 1G。VGK Pacific Division title争い。"
+    },
     {
       "date": "2026-04-15",
+      "date_et": "2026-04-14",
       "match": "Carolina Hurricanes @ New York Islanders",
       "home": "New York Islanders",
       "away": "Carolina Hurricanes",
-      "round": "RS最終盤（4/15 JST）",
+      "venue": "UBS Arena, Elmont NY",
       "tier": "caution",
+      "predicted_winner": "Carolina Hurricanes",
+      "prediction_confidence": 78,
+      "prediction_basis": "xGF% CAR 56.0 vs NYI 48.0, diff 8pt. CAR RS1位確定。NYI PO圏外消化試合。",
+      "prediction_hit": true,
       "rec": "Carolina Hurricanes",
-      "rec_odds": 1.90,
+      "rec_odds": 1.9,
       "ev_est": 42.5,
-      "confidence_pending": "75-78%（N006確認待ち）",
-      "l1_metric": "xGF% (MoneyPuck 2026-04-14取得)",
+      "l1_metric": "xGF% (MoneyPuck 2026-04-14)",
       "l1_data": {
         "CAR_xGF": 56.0,
         "NYI_xGF": 48.0,
         "diff": 8.0
       },
       "adjustments": {
-        "CAR_away": "-5%（N004）",
-        "NYI_eliminated": "+5%（N008: NYI PO圏外・消化試合）"
+        "CAR_away": "-5% (N004)",
+        "NYI_eliminated": "+5% (N008: NYI PO圏外・消化試合)"
       },
-      "caution_reason": "N006解消: Andersen(CAR)先発確認済み(16-14-5 GAA3.05) / Sorokin(NYI)先発確認済み(29-24-2 GAA2.68)。試合進行中（4/15 JST早朝）。",
-      "playoff_note": "CAR vs OTT（PO R1予定）。CARはシード維持のため主力出場の可能性が高い。",
-      "nyi_status": "プレーオフ圏外確定（PO bracket外）",
-      "rules_applied": ["N001", "N004", "N006", "N008"],
-      "odds": { "CAR": 1.90, "NYI": 1.95 },
-      "status": "pending_goalie_confirmation",
-      "result": null,
-      "score": null,
+      "goalie_actual": "Brandon Bussi(CAR) 28sv / David Rittich(NYI)",
+      "goalie_note": "Andersen先発予告→実際はBussi先発。Bussi RS 31-6-2 好成績。予測通りCAR勝利。",
+      "result": "Carolina Hurricanes",
+      "score": "2-1",
       "hit": null,
-      "actual_ev": null
+      "actual_ev": null,
+      "miss_layer": null,
+      "rules_applied": [
+        "N001",
+        "N004",
+        "N006",
+        "N008",
+        "N016"
+      ],
+      "note": "CAUTION tier（ゴーリー確認前）→ベット未実施。予測HIT。CAR 2-1 NYI: Ehlers 1P(1G), Jankowski 3P決勝, Horvat NYI 1G。CARはRS東地区1位フィニッシュ。Bussiが28セーブの好守。"
     },
     {
       "date": "2026-04-15",
+      "date_et": "2026-04-14",
       "match": "Calgary Flames @ Colorado Avalanche",
       "home": "Colorado Avalanche",
       "away": "Calgary Flames",
-      "round": "RS最終盤（4/15 JST）",
-      "tier": "caution",
-      "rec": "Colorado Avalanche",
-      "rec_odds": 1.60,
-      "ev_est": 24.8,
-      "confidence_pending": "78-80%（N006確認待ち）",
-      "l1_metric": "xGF% (MoneyPuck 2026-04-14取得)",
+      "tier": "skip",
+      "predicted_winner": "Colorado Avalanche",
+      "prediction_confidence": 80,
+      "prediction_basis": "xGF% COL 56.0 vs CGY 47.0, diff 9pt。N016適用: Blackwood先発（Georgiev温存）→SKIP判断。",
+      "prediction_hit": true,
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "l1_metric": "xGF% (MoneyPuck 2026-04-14)",
       "l1_data": {
         "COL_xGF": 56.0,
         "CGY_xGF": 47.0,
         "diff": 9.0
       },
-      "adjustments": {
-        "COL_home": "+5%（N004）",
-        "CGY_eliminated": "+3%（N008: CGY消化試合確定）",
-        "COL_po_rest_risk": "⚠️ PO開始4/18まで3日。主力温存リスクあり（特にGeorgiev）"
-      },
-      "caution_reason": "N016発動確認: Blackwood(COL)先発（GeorgievではなくBlackwood）= 主力温存確定。N006+N016ダブル要因 → SKIP推奨。Wolf(CGY)先発。",
-      "playoff_note": "COL vs LAK（PO R1予定）。4/9の同カード（COL 3-1 HIT）と同条件に近い。",
-      "rules_applied": ["N001", "N004", "N006", "N008"],
-      "odds": { "COL": 1.60, "CGY": 2.40 },
-      "status": "pending_goalie_confirmation",
-      "result": null,
-      "score": null,
+      "n016_result": "N016正しく機能。Blackwood先発確認→SKIP。結果: COL 3-1で勝利。N016はbet回避だが予測としてHIT。COL完全主力出場なしでも地力差が出た。",
+      "result": "Colorado Avalanche",
+      "score": "3-1",
       "hit": null,
-      "actual_ev": null
+      "actual_ev": null,
+      "miss_layer": null,
+      "rules_applied": [
+        "N001",
+        "N004",
+        "N006",
+        "N008",
+        "N016"
+      ],
+      "note": "N016でSKIP（Blackwood先発確認済・Georgiev温存）。COL 3-1 CGY: Landeskog決勝, Lehkonen 1G, MacKinnon 53G目(リーグトップ), Makar 3A(7試合ぶり復帰)。COL 119pts（フランチャイズ記録タイ）。RS最終。CGY 消化試合。"
     }
   ],
+  "pending_games": [],
   "screening_log": [
     {
       "date": "2026-04-14",
@@ -397,15 +472,43 @@
       "caution_recommendations": 2,
       "skip_after_l1": 1,
       "l1_failed_detail": [
-        { "match": "BOS vs NJD", "xgf_diff": 4.0, "reason": "diff 4pt < 5pt閾値" },
-        { "match": "PHI vs MTL", "xgf_diff": 2.0, "reason": "diff 2pt < 5pt閾値" },
-        { "match": "CBJ vs WSH", "xgf_diff": 1.0, "reason": "diff 1pt < 5pt閾値" },
-        { "match": "MIN vs ANA", "xgf_diff": 3.0, "reason": "diff 3pt < 5pt閾値" },
-        { "match": "UTA vs WPG", "xgf_diff": 2.0, "reason": "diff 2pt < 5pt閾値" },
-        { "match": "STL vs PIT", "xgf_diff": 4.0, "reason": "diff 4pt < 5pt閾値" }
+        {
+          "match": "BOS vs NJD",
+          "xgf_diff": 4.0,
+          "reason": "diff 4pt < 5pt閾値"
+        },
+        {
+          "match": "PHI vs MTL",
+          "xgf_diff": 2.0,
+          "reason": "diff 2pt < 5pt閾値"
+        },
+        {
+          "match": "CBJ vs WSH",
+          "xgf_diff": 1.0,
+          "reason": "diff 1pt < 5pt閾値"
+        },
+        {
+          "match": "MIN vs ANA",
+          "xgf_diff": 3.0,
+          "reason": "diff 3pt < 5pt閾値"
+        },
+        {
+          "match": "UTA vs WPG",
+          "xgf_diff": 2.0,
+          "reason": "diff 2pt < 5pt閾値"
+        },
+        {
+          "match": "STL vs PIT",
+          "xgf_diff": 4.0,
+          "reason": "diff 4pt < 5pt閾値"
+        }
       ],
       "skip_after_l1_detail": [
-        { "match": "VAN vs LAK", "xgf_diff": 6.0, "reason": "L1通過もEV計算でマイナス（LAK 65% × 1.52 - 1 = -1.2%）。市場がxGF%をほぼ正しく織り込み済み" }
+        {
+          "match": "VAN vs LAK",
+          "xgf_diff": 6.0,
+          "reason": "L1通過もEV計算でマイナス（LAK 65% × 1.52 - 1 = -1.2%）。市場がxGF%をほぼ正しく織り込み済み"
+        }
       ],
       "notable": "RS最終盤のためN006（ゴーリー温存リスク）が全CAUTION案件に適用。CAR/COLは22〜24時JST頃の朝練習後に先発G確認→最終判断予定。"
     },
@@ -422,18 +525,78 @@
       "prediction_misses": 2,
       "prediction_pending": 0,
       "l1_passed_detail": [
-        { "match": "PHI@CAR", "xgf_diff": 5.0, "predicted": "CAR", "result": "PHI 3-2 SO", "prediction_hit": false },
-        { "match": "TOR@DAL", "xgf_diff": 6.0, "predicted": "DAL", "result": "DAL 6-5", "prediction_hit": true },
-        { "match": "MIN@STL", "xgf_diff": 6.0, "predicted": "MIN", "result": "STL 4-3", "prediction_hit": false },
-        { "match": "CHI@BUF", "xgf_diff": 5.0, "predicted": "BUF", "result": "BUF 4-2", "prediction_hit": true }
+        {
+          "match": "PHI@CAR",
+          "xgf_diff": 5.0,
+          "predicted": "CAR",
+          "result": "PHI 3-2 SO",
+          "prediction_hit": false
+        },
+        {
+          "match": "TOR@DAL",
+          "xgf_diff": 6.0,
+          "predicted": "DAL",
+          "result": "DAL 6-5",
+          "prediction_hit": true
+        },
+        {
+          "match": "MIN@STL",
+          "xgf_diff": 6.0,
+          "predicted": "MIN",
+          "result": "STL 4-3",
+          "prediction_hit": false
+        },
+        {
+          "match": "CHI@BUF",
+          "xgf_diff": 5.0,
+          "predicted": "BUF",
+          "result": "BUF 4-2",
+          "prediction_hit": true
+        }
       ],
       "l1_failed_detail": [
-        { "match": "TBL@DET", "xgf_diff": 4.0, "predicted": "TBL", "result": "TBL 4-3 OT", "prediction_hit": true },
-        { "match": "NSH@SJS", "xgf_diff": 1.0, "predicted": "SJS", "result": "SJS 2-0", "prediction_hit": true },
-        { "match": "SEA@LAK", "xgf_diff": 4.0, "predicted": "LAK", "result": "LAK 4-0", "prediction_hit": true },
-        { "match": "FLA@NYR", "xgf_diff": 3.0, "predicted": "FLA", "result": "FLA 3-2", "prediction_hit": true },
-        { "match": "EDM@COL", "xgf_diff": "未確定", "predicted": "COL", "result": "COL 2-1 SO", "prediction_hit": true },
-        { "match": "VGK@WPG", "xgf_diff": "未確定", "predicted": null, "result": "VGK 6-2", "prediction_hit": null }
+        {
+          "match": "TBL@DET",
+          "xgf_diff": 4.0,
+          "predicted": "TBL",
+          "result": "TBL 4-3 OT",
+          "prediction_hit": true
+        },
+        {
+          "match": "NSH@SJS",
+          "xgf_diff": 1.0,
+          "predicted": "SJS",
+          "result": "SJS 2-0",
+          "prediction_hit": true
+        },
+        {
+          "match": "SEA@LAK",
+          "xgf_diff": 4.0,
+          "predicted": "LAK",
+          "result": "LAK 4-0",
+          "prediction_hit": true
+        },
+        {
+          "match": "FLA@NYR",
+          "xgf_diff": 3.0,
+          "predicted": "FLA",
+          "result": "FLA 3-2",
+          "prediction_hit": true
+        },
+        {
+          "match": "EDM@COL",
+          "xgf_diff": "未確定",
+          "predicted": "COL",
+          "result": "COL 2-1 SO",
+          "prediction_hit": true
+        },
+        {
+          "match": "VGK@WPG",
+          "xgf_diff": "未確定",
+          "predicted": null,
+          "result": "VGK 6-2",
+          "prediction_hit": null
+        }
       ]
     },
     {
@@ -444,15 +607,20 @@
       "l1_failed": 10,
       "go_recommendations": 1,
       "skipped_after_l1": [
-        { "match": "CAR @ CHI", "reason": "CAR B2B away → 信頼度64%（75%未達）" },
-        { "match": "VGK @ SEA", "reason": "VGK B2B away → 信頼度58%（75%未達）" },
-        { "match": "VAN @ LA",  "reason": "LA信頼度75%達成もEV+3.3%（5%未達）" }
+        {
+          "match": "CAR @ CHI",
+          "reason": "CAR B2B away → 信頼度64%（75%未達）"
+        },
+        {
+          "match": "VGK @ SEA",
+          "reason": "VGK B2B away → 信頼度58%（75%未達）"
+        },
+        {
+          "match": "VAN @ LA",
+          "reason": "LA信頼度75%達成もEV+3.3%（5%未達）"
+        }
       ],
       "notable": "GF%（得失点率）を使用した場合の誤判断ケース：PIT@NJがGO候補（+20.5%EV）だったが、xGF%では差0.4ptで完全スキップ対象。xGF%の必要性が実証された"
     }
   ]
 }
-
-
-
-

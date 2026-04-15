@@ -128,9 +128,9 @@
       "rec_odds": null,
       "odds_dc": 1.44,
       "odds_stl": 2.75,
-      "ev_est": null,
-      "confidence": null,
-      "caution_reason": "DC QB not confirmed for W4. Market implied DC 69.4% (1.44). Need to verify DC starting QB before GO decision (U001).",
+      "ev_est": 12.3,
+      "confidence": 78,
+      "caution_reason": "conf 78% < Week4 threshold 80% (U008). L1 PASS: PD/G diff 18.7 (DC+16.7 vs STL-2.0). DC away -4% (U004). Ta'amu confirmed (W3 active). EV+12.3% (market 1.44). STL at home + Week3 comeback ability. Upgrade from 'QB unconfirmed' CAUTION to 'analyzed CAUTION'.",
       "status": "caution",
       "result": null,
       "score": null,
@@ -139,9 +139,27 @@
       "rules_applied": [
         "GEN001",
         "U001",
+        "U004",
         "U008"
       ],
-      "note": "CAUTION: DC QB status unconfirmed as of 2026-04-15. Market DC 1.44 vs STL 2.75. GEN001 requires verified QB info. Monitor DC QB announcement."
+      "note": "CAUTION: DC Defenders (away) vs St. Louis Battlehawks (home). L1 PASS (PD/G diff 18.7 > threshold 4). DC has best PD in league (+16.7/G). But DC is away (-4%), and conf 78% < W4 required 80%. STL showed resilience (W3 comeback 34-30 from 30-20 deficit). Ta'amu confirmed as DC starter. Monitor for any lineup/injury news closer to game.",
+      "l1_data": {
+        "DC_PD_per_game": 16.7,
+        "STL_PD_per_game": -2.0,
+        "diff": 18.7,
+        "threshold": 4.0,
+        "l1_pass": true,
+        "source": "UFL standings after Week 3 (theufl.com)"
+      },
+      "standings_w3": {
+        "DC": "2-1, PF=99, PA=49, Diff=+50",
+        "STL": "2-1, PF=65, PA=71, Diff=-6"
+      },
+      "qb_status": {
+        "DC": "Jordan Ta'amu confirmed (W3: 15/27 173yd 1TD, 45-7 blowout win)。MVP of 2025 UFL Championship。",
+        "STL": "Harrison Frost (came off bench W3: 9/15 148yd 3TD comeback 34-30 vs Stallions)"
+      },
+      "ev_calc": "(0.78 x 1.44) - 1 = +12.3%"
     },
     {
       "week": 4,
