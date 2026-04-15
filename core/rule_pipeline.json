@@ -24,10 +24,24 @@
       "trigger_threshold": 4,
       "current_count": 2,
       "evidence": [
-        { "id": "U002", "match": "Machac vs Cerundolo (MC2026-R32)", "diff": 153, "result": "MISS", "tag": "atp_celo_130_below" },
-        { "id": "U003", "match": "Nagal vs Nishikori (Barcelona 2026)", "diff": 99, "result": "MISS", "tag": "atp_celo_130_below" }
+        {
+          "id": "U002",
+          "match": "Machac vs Cerundolo (MC2026-R32)",
+          "diff": 153,
+          "result": "MISS",
+          "tag": "atp_celo_130_below"
+        },
+        {
+          "id": "U003",
+          "match": "Nagal vs Nishikori (Barcelona 2026)",
+          "diff": 99,
+          "result": "MISS",
+          "tag": "atp_celo_130_below"
+        }
       ],
-      "tag_matches": ["atp_celo_130_below"],
+      "tag_matches": [
+        "atp_celo_130_below"
+      ],
       "note": "4件揃ったら 100〜129ptの具体的なサブ条件（UF重複数、オッズ等）を統計化してR001に追記する"
     },
     {
@@ -40,9 +54,18 @@
       "trigger_threshold": 3,
       "current_count": 1,
       "evidence": [
-        { "id": "U005_analysis", "match": "MIN@STL 2026-04-13", "pattern": "本命消化試合 + 格下リビルドチーム奮起", "score_reversed": "0-2 -> 6-3", "tag": "nhl_motivated_underdog" }
+        {
+          "id": "U005_analysis",
+          "match": "MIN@STL 2026-04-13",
+          "pattern": "本命消化試合 + 格下リビルドチーム奮起",
+          "score_reversed": "0-2 -> 6-3",
+          "tag": "nhl_motivated_underdog"
+        }
       ],
-      "tag_matches": ["nhl_motivated_underdog", "nhl_blowup_reversal"],
+      "tag_matches": [
+        "nhl_motivated_underdog",
+        "nhl_blowup_reversal"
+      ],
       "note": "3件揃ったら補正値（現行N008 -5%を強化するか、別ルールとして追加するか）を決定する"
     },
     {
@@ -55,7 +78,9 @@
       "trigger_threshold": 1,
       "current_count": 0,
       "evidence": [],
-      "tag_matches": ["wta_stuttgart_r1_complete"],
+      "tag_matches": [
+        "wta_stuttgart_r1_complete"
+      ],
       "note": "Stuttgart R1全試合完了後（4/15以降）にupset_rate・avg_upset_elo_diff・min_upset_oddsを集計し、W007本文の具体数値として追記する。1件（結果確定）で即実装可。"
     },
     {
@@ -68,7 +93,9 @@
       "trigger_threshold": 8,
       "current_count": 0,
       "evidence": [],
-      "tag_matches": ["nhl_po_r1_result"],
+      "tag_matches": [
+        "nhl_po_r1_result"
+      ],
       "note": "PO R1 8件（2シリーズ以上）揃ったら+7%の妥当性を検証する"
     },
     {
@@ -81,8 +108,32 @@
       "trigger_threshold": 3,
       "current_count": 0,
       "evidence": [],
-      "tag_matches": ["wta_b2b_fatigue"],
+      "tag_matches": [
+        "wta_b2b_fatigue"
+      ],
       "note": "3件揃ったら2日連続試合の補正値（-2%〜-4%）を確定してW010として追加する"
+    },
+    {
+      "candidate_id": "P006",
+      "status": "watching",
+      "target_rule_file": "core/rules_tennis.json",
+      "proposed_rule_id": "R014",
+      "title": "Masters→翌週大会 B2B疲弊補正強化",
+      "description": "現行ルールR005/R006はB2B(連日試合)を対象とするが、大会間B2B(Masters→翌週250/500)は別途補正が必要。主要大会でQF以降まで進んだ選手(3-4試合消化)が翌週に直行する場合、現行-3%では不足。-6%〜-10%が妥当（Bublik事例から推定）。",
+      "trigger_threshold": 3,
+      "current_count": 1,
+      "evidence": [
+        {
+          "id": "U006",
+          "match": "Molcan vs Bublik (Munich 2026 R1)",
+          "pattern": "Bublik MC QF(Alcaraz戦大敗)→Munich 4日後。SKIP正解だが疲弊度は-3%以上だった。",
+          "tag": "atp_b2b_inter_tournament"
+        }
+      ],
+      "tag_matches": [
+        "atp_b2b_inter_tournament"
+      ],
+      "note": "3件揃ったら補正値(-6%〜-10%)と適用条件（何ラウンド以上+何日以内）を数値化してR014として実装。"
     }
   ],
   "implemented_rules": [
