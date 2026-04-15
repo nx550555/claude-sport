@@ -59,7 +59,7 @@
 - [x] ダッシュボード反映完了（NRL 36-34 / Stuttgart 2/10試合完了 / GB001 HIT / R001実装済 / ルール履歴3件）
 - [ ] WTA Stuttgart Paolini vs Sonmez 結果確認・記録（4/15開催 GO @1.24）
 - [ ] WTA Stuttgart Zhang vs Noskova 結果確認（4/15開催 SKIP @1.14）
-- [ ] ATP Munich GO3件 結果確認（Musetti/Cobolli/Kopriva 4/14開催）
+- [x] ATP Munich GO3件 結果確認（Musetti/Cobolli/Kopriva 4/14開催）
 - [ ] NHL CAR@NYI / COL@CGY: goalie確定後 GO/SKIP 最終判断（N016 COL rest risk）
 - [ ] NRL R7 全結果確認・記録（4/16-19: Tigers/Broncos GO・Warriors/Titans GO）
 
@@ -83,7 +83,7 @@
 - [x] 4ファイル commit & push（2f15699）
 - [x] セッションログ保存（session_logs/2026-04-14_23.md）
 - [x] CLAUDE_CODE_START.md 自発的コンテキストリセットプロトコル追加（T1〜T4トリガー）+ rule_pipeline.json毎回読み込み追加
-- [ ] ATP GO3件（Musetti/Cobolli/Kopriva）結果確認 ← 4/14試合進行中（本日夜〜深夜に結果出る）
+- [x] ATP GO3件（Musetti/Cobolli/Kopriva）結果確認 ← 4/14試合進行中（本日夜〜深夜に結果出る）
 - [ ] WTA Stuttgart R1残り（Zhang/Noskova・Sonmez/Paolini）結果確認 ← 4/15開催
 
 ---

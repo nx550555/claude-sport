@@ -342,7 +342,7 @@
         "CAR_away": "-5%（N004）",
         "NYI_eliminated": "+5%（N008: NYI PO圏外・消化試合）"
       },
-      "caution_reason": "N006（先発G確認必須）。Andersen/Kochetkov確認後に最終判断。",
+      "caution_reason": "N006解消: Andersen(CAR)先発確認済み(16-14-5 GAA3.05) / Sorokin(NYI)先発確認済み(29-24-2 GAA2.68)。試合進行中（4/15 JST早朝）。",
       "playoff_note": "CAR vs OTT（PO R1予定）。CARはシード維持のため主力出場の可能性が高い。",
       "nyi_status": "プレーオフ圏外確定（PO bracket外）",
       "rules_applied": ["N001", "N004", "N006", "N008"],
@@ -375,7 +375,7 @@
         "CGY_eliminated": "+3%（N008: CGY消化試合確定）",
         "COL_po_rest_risk": "⚠️ PO開始4/18まで3日。主力温存リスクあり（特にGeorgiev）"
       },
-      "caution_reason": "N006（Georgiev先発確認必須）＋PO直前温存リスク。両方確認後に最終判断。",
+      "caution_reason": "N016発動確認: Blackwood(COL)先発（GeorgievではなくBlackwood）= 主力温存確定。N006+N016ダブル要因 → SKIP推奨。Wolf(CGY)先発。",
       "playoff_note": "COL vs LAK（PO R1予定）。4/9の同カード（COL 3-1 HIT）と同条件に近い。",
       "rules_applied": ["N001", "N004", "N006", "N008"],
       "odds": { "COL": 1.60, "CGY": 2.40 },

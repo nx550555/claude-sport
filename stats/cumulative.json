@@ -1,19 +1,23 @@
 {
-  "updated": "2026-04-14",
+  "updated": "2026-04-15",
   "tennis_atp": {
     "total_predictions": 13,
-    "confirmed": 10,
-    "hits": 7,
-    "hit_rate": 0.700,
-    "ev_total": 0.53,
-    "pending": 3,
+    "confirmed": 13,
+    "hits": 10,
+    "hit_rate": 0.769,
+    "ev_total": 1.37,
+    "pending": 0,
     "note_hit_rate": "hit_rate = hits / confirmed (pending除外)。GO tierのみ集計（CAUTION除外）",
     "correction_note": "4/12: SF Sinner vs Zverev の結果を修正（MISS→HIT: Sinner 6-1 6-4）。旧セッションで誤記録。delta +1.65",
     "tournaments": [
       { "id": "2026-MC", "name": "Monte-Carlo 2026",
-        "predictions": 11, "confirmed": 10, "hits": 7, "hit_rate": 0.700, "ev_total": 0.53,
-        "status": "in_progress",
-        "note": "F予測更新（SKIP: Alcaraz vs Sinner 差20pt L1未達）。4/13決勝。" }
+        "predictions": 10, "confirmed": 10, "hits": 7, "hit_rate": 0.700, "ev_total": 0.53,
+        "status": "complete",
+        "note": "Sinner 7-6(5) 6-3 優勝（4/13決勝）。全試合完了。" },
+      { "id": "2026-W16-BarcelonaMunich", "name": "Barcelona Open + BMW Open Munich W16",
+        "predictions": 3, "confirmed": 3, "hits": 3, "hit_rate": 1.000, "ev_total": 0.84,
+        "status": "R1_complete",
+        "note": "GO3件全HIT: Musetti@1.27(+0.27u)/Cobolli@1.21(+0.21u)/Kopriva@1.36(+0.36u)。4/14開催。" }
     ]
   },
   "tennis_wta": {

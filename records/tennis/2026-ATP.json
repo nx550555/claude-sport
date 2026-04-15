@@ -321,7 +321,7 @@
         "landaluce_home_barcelona": "-3%（スペイン人・地元バルセロナ開催）"
       },
       "skip_reason": null,
-      "result": null, "score": null, "hit": null, "actual_ev": null,
+      "result": "Musetti", "score": "7-5 6-2", "hit": true, "actual_ev": 0.27,
       "rules_applied": ["R001", "R002"],
       "note": "Musetti cElo~2017 vs Landaluce cElo~1648。差369.5でL1大幅通過。Landaluce地元-3%調整後86.4%。EV+9.7%。GO推奨。"
     },
@@ -473,7 +473,7 @@
       "tier": "go", "rec": "Cobolli",
       "rec_odds": 1.21, "ev_est": 8.7, "confidence": 89.8,
       "skip_reason": null,
-      "result": null, "score": null, "hit": null, "actual_ev": null,
+      "result": "Cobolli", "score": "6-4 7-5", "hit": true, "actual_ev": 0.21,
       "rules_applied": ["R001", "R002"],
       "note": "Cobolli cElo1807 vs Dedura-Palmero cElo~1429（差377.6）。win% 89.8%。EV+8.7%。GO推奨。"
     },
@@ -706,7 +706,7 @@
         "engel_home_munich": "-5%（ドイツ人WC・地元ミュンヘン開催）"
       },
       "skip_reason": null,
-      "result": null, "score": null, "hit": null, "actual_ev": null,
+      "result": "Kopriva", "score": "6-3 5-7 6-2", "hit": true, "actual_ev": 0.36,
       "rules_applied": ["R001", "R002"],
       "note": "Kopriva cElo~1700 vs Engel J. cElo~1389（ドイツWC）。差310.6でL1通過。Engel地元WC-5%補正後conf 80.7%。EV+9.8%。GO推奨。"
     },
