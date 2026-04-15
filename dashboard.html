@@ -210,6 +210,25 @@ body.lang-en .name-en { display: inline; }
   font-size: 11px; font-weight: 700; cursor: pointer; letter-spacing: .04em;
 }
 #lang-toggle:hover { color: var(--text); border-color: var(--text2); }
+
+/* ── multi-bet betslip ── */
+.multi-combo{background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:hidden;}
+.mc-header{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 14px;border-bottom:1px solid var(--border);}
+.mc-rank{font-weight:700;font-size:15px;color:var(--text);min-width:24px;}
+.mc-legs-count{font-size:11px;font-weight:700;background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:1px 8px;color:var(--text2);}
+.mc-ev{font-size:13px;}
+.mc-odds,.mc-prob{font-size:12px;color:var(--text2);}
+.mc-legs{display:flex;flex-direction:column;gap:0;}
+.multi-leg{padding:8px 14px;border-bottom:1px solid var(--border);font-size:12px;}
+.multi-leg:last-child{border-bottom:none;}
+.ml-sport{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--text2);margin-right:6px;}
+.ml-date{font-size:10px;color:var(--text2);background:var(--surface2);border-radius:4px;padding:1px 5px;}
+.ml-match{color:var(--text2);margin-top:2px;}
+.ml-rec{margin-top:2px;}
+.ml-odds{font-size:11px;color:#e3b341;margin-left:4px;}
+.ml-conf{font-size:10px;color:var(--text2);}
+.mc-formula{font-size:10px;color:var(--text2);padding:6px 14px;background:var(--surface2);}
+
 </style>
 </head>
 <body>
@@ -274,6 +293,7 @@ body.lang-en .name-en { display: inline; }
 
     <div class="section-title">種目別成績</div>
     <div class="sport-cards">
+      <!-- SC:ATP -->
       <div class="sport-card">
         <div class="sport-card-header" style="color:#79c0ff;">🎾 ATP Tennis <span class="rule-ver">v2.0</span></div>
         <div class="sport-metrics">
@@ -283,19 +303,35 @@ body.lang-en .name-en { display: inline; }
           <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#3fb950;">76.9%</div></div>
           <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#3fb950;">+1.370</div></div>
           <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#d29922;">1</div></div>
+        </div><div class="sm-val">13</div></div>
+          <div class="sm"><div class="sm-label">結果済</div><div class="sm-val">13</div></div>
+          <div class="sm"><div class="sm-label">的中</div><div class="sm-val">10</div></div>
+          <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#3fb950;">76.9%</div></div>
+          <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#3fb950;">+1.370</div></div>
+          <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#d29922;">1</div></div>
         </div>
+      <!-- /SC:ATP -->
       </div>
+      <!-- SC:WTA -->
       <div class="sport-card">
         <div class="sport-card-header" style="color:#f9a8d4;">🎾 WTA Tennis <span class="rule-ver">v1.0</span></div>
         <div class="sport-metrics">
-          <div class="sm"><div class="sm-label">GB推奨</div><div class="sm-val" style="color:#f97316;">1</div></div>
+          <div class="sm"><div class="sm-label">GB推奨</div><div class="sm-val">1</div></div>
+          <div class="sm"><div class="sm-label">結果済</div><div class="sm-val">1</div></div>
+          <div class="sm"><div class="sm-label">的中</div><div class="sm-val">1</div></div>
+          <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#3fb950;">100.0%</div></div>
+          <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#3fb950;">+0.538</div></div>
+          <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#d29922;">2</div></div>
+        </div><div class="sm-val" style="color:#f97316;">1</div></div>
           <div class="sm"><div class="sm-label">結果済</div><div class="sm-val">1</div></div>
           <div class="sm"><div class="sm-label">的中</div><div class="sm-val" style="color:#3fb950;">1</div></div>
           <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#3fb950;">100%</div></div>
           <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#3fb950;">+0.538</div></div>
           <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#d29922;">2</div></div>
         </div>
+      <!-- /SC:WTA -->
       </div>
+      <!-- SC:NHL -->
       <div class="sport-card">
         <div class="sport-card-header" style="color:#a5f3fc;">🏒 NHL <span class="rule-ver">v1.2</span></div>
         <div class="sport-metrics">
@@ -305,19 +341,35 @@ body.lang-en .name-en { display: inline; }
           <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#3fb950;">100.0%</div></div>
           <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#3fb950;">+1.863</div></div>
           <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#8b949e;">0</div></div>
+        </div><div class="sm-val">2</div></div>
+          <div class="sm"><div class="sm-label">結果済</div><div class="sm-val">2</div></div>
+          <div class="sm"><div class="sm-label">的中</div><div class="sm-val">2</div></div>
+          <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#3fb950;">100.0%</div></div>
+          <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#3fb950;">+1.863</div></div>
+          <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#8b949e;">0</div></div>
         </div>
+      <!-- /SC:NHL -->
       </div>
+      <!-- SC:UFL -->
       <div class="sport-card">
         <div class="sport-card-header" style="color:#fca5a5;">🏈 UFL <span class="rule-ver">v1.0</span></div>
         <div class="sport-metrics">
           <div class="sm"><div class="sm-label">GO回数</div><div class="sm-val">3</div></div>
           <div class="sm"><div class="sm-label">結果済</div><div class="sm-val">1</div></div>
           <div class="sm"><div class="sm-label">的中</div><div class="sm-val">1</div></div>
+          <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#3fb950;">100.0%</div></div>
+          <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#3fb950;">+0.320</div></div>
+          <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#d29922;">2</div></div>
+        </div><div class="sm-val">3</div></div>
+          <div class="sm"><div class="sm-label">結果済</div><div class="sm-val">1</div></div>
+          <div class="sm"><div class="sm-label">的中</div><div class="sm-val">1</div></div>
           <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#3fb950;">100%</div></div>
           <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#3fb950;">+0.320</div></div>
           <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#d29922;">2</div></div>
         </div>
+      <!-- /SC:UFL -->
       </div>
+      <!-- SC:NRL -->
       <div class="sport-card">
         <div class="sport-card-header" style="color:#86efac;">🏉 NRL <span class="rule-ver">v1.0</span></div>
         <div class="sport-metrics">
@@ -327,8 +379,16 @@ body.lang-en .name-en { display: inline; }
           <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#f85149;">0.0%</div></div>
           <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#f85149;">-1.000</div></div>
           <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#d29922;">1</div></div>
+        </div><div class="sm-val">3</div></div>
+          <div class="sm"><div class="sm-label">結果済</div><div class="sm-val">1</div></div>
+          <div class="sm"><div class="sm-label">的中</div><div class="sm-val">0</div></div>
+          <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#f85149;">0.0%</div></div>
+          <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#f85149;">-1.000</div></div>
+          <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#d29922;">1</div></div>
         </div>
+      <!-- /SC:NRL -->
       </div>
+      <!-- SC:SRP -->
       <div class="sport-card">
         <div class="sport-card-header" style="color:#c4b5fd;">🏉 Super Rugby Pacific <span class="rule-ver">v1.0</span></div>
         <div class="sport-metrics">
@@ -338,8 +398,16 @@ body.lang-en .name-en { display: inline; }
           <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#3fb950;">100.0%</div></div>
           <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#3fb950;">+0.540</div></div>
           <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#8b949e;">0</div></div>
+        </div><div class="sm-val">1</div></div>
+          <div class="sm"><div class="sm-label">結果済</div><div class="sm-val">1</div></div>
+          <div class="sm"><div class="sm-label">的中</div><div class="sm-val">1</div></div>
+          <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#3fb950;">100.0%</div></div>
+          <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#3fb950;">+0.540</div></div>
+          <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#8b949e;">0</div></div>
         </div>
+      <!-- /SC:SRP -->
       </div>
+      <!-- SC:NBA -->
       <div class="sport-card">
         <div class="sport-card-header" style="color:#fca5a5;">🏀 NBA <span class="rule-ver">v1.0</span></div>
         <div class="sport-metrics">
@@ -349,21 +417,42 @@ body.lang-en .name-en { display: inline; }
           <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#3fb950;">100.0%</div></div>
           <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#3fb950;">+0.200</div></div>
           <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#8b949e;">0</div></div>
+        </div><div class="sm-val">1</div></div>
+          <div class="sm"><div class="sm-label">結果済</div><div class="sm-val">1</div></div>
+          <div class="sm"><div class="sm-label">的中</div><div class="sm-val">1</div></div>
+          <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#3fb950;">100.0%</div></div>
+          <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#3fb950;">+0.200</div></div>
+          <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#8b949e;">0</div></div>
         </div>
+      <!-- /SC:NBA -->
       </div>
+      <!-- SC:SL -->
       <div class="sport-card">
         <div class="sport-card-header" style="color:#bfdbfe;">🏉 Super League <span class="rule-ver">v1.0</span></div>
         <div class="sport-metrics">
           <div class="sm"><div class="sm-label">GO回数</div><div class="sm-val">2</div></div>
+          <div class="sm"><div class="sm-label">結果済</div><div class="sm-val">0</div></div>
+          <div class="sm"><div class="sm-label">的中</div><div class="sm-val">0</div></div>
+          <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#8b949e;">—</div></div>
+          <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#8b949e;">+0.000</div></div>
+          <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#d29922;">2</div></div>
+        </div><div class="sm-val">2</div></div>
           <div class="sm"><div class="sm-label">結果済</div><div class="sm-val">0</div></div>
           <div class="sm"><div class="sm-label">的中</div><div class="sm-val" style="color:#8b949e;">—</div></div>
           <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#8b949e;">—</div></div>
           <div class="sm"><div class="sm-label">累積EV</div><div class="sm-val" style="color:#8b949e;">0</div></div>
           <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#e3b341;">2</div></div>
         </div>
+      <!-- /SC:SL -->
       </div>
       <div class="preseason-card">
-        <div class="sport-card-header" style="color:#6b7280;">🏈 NFL <span class="ps-badge">プレシーズン</span></div>
+        <div class="sport-card-header" style="color:#6b7280;">🏈 NFL <span class="ps-badge">プレシーズン</span>iv class="sm-val" style="color:#8b949e;">0</div></div>
+          <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#e3b341;">2</div></div>
+        </div>
+      <!-- /SC:SL -->
+      </div>
+      <div class="preseason-card">
+        <div class="sport-card-header" style="color:#6b7280;">🏈 NFL <span class="ps-badge">プレシーズン</span>
         <div style="font-size:12px;color:#6b7280;">2026年9月開幕予定 | rules_nfl.json v1.0 準備済 | L1: DVOA (Football Outsiders)</div>
       </div>
       <div class="preseason-card">
@@ -3200,97 +3289,172 @@ body.lang-en .name-en { display: inline; }
       出力Aの試合のみ使用。マルチEV = (全体推定勝率 &times; マルチオッズ) &minus; 1。EV+の組み合わせをマルチEV高い順に上位5パターン表示。
     </p>
     <div id="multi-rows" style="display:flex;flex-direction:column;gap:12px;">
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px;">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
-          <span style="font-weight:700;font-size:15px;color:var(--text);">&#x1F947; 1位</span>
-          <span style="font-size:13px;color:var(--text2);"><span class="name-ja">ルイビル × レネゲーズ × ムセッティ</span><span class="name-en">Louisville × Renegades × Musetti</span>（3試合）</span>
+      <div class="multi-combo">
+        <div class="mc-header">
+          <span class="mc-rank">🥇 1位</span>
+          <span class="mc-legs-count">3連複</span>
+          <span class="mc-ev" style="color:#4ade80;">EV <strong>+67.1%</strong></span>
+          <span class="mc-odds">マルチオッズ: <strong>3.0743</strong></span>
+          <span class="mc-prob">全体勝率: <strong style="color:#4ade80;">54.4%</strong></span>
           <span class="badge badge-pending" style="margin-left:auto;">PENDING</span>
         </div>
-        <div style="font-size:12px;color:var(--text2);margin-bottom:8px;">
-          <span class="name-ja">ヒューストン</span><span class="name-en">Houston Gamblers</span> vs <strong><span class="name-ja">ルイビル・キングス</span><span class="name-en">Louisville Kings</span></strong> (UFL W4) &times; <span class="name-ja">アビエイターズ @</span><span class="name-en">Aviators @</span> <strong><span class="name-ja">レネゲーズ</span><span class="name-en">Renegades</span></strong> (UFL W4) &times; <span class="name-ja">ムテ</span><span class="name-en">Moutet</span> vs <strong><span class="name-ja">ムセッティ</span><span class="name-en">Musetti</span></strong> (バルセロナ R2)
+        <div class="mc-legs">
+        <div class="ml-card">
+          <span class="ml-sport">🏈 UFL Week4</span><span class="ml-date">4/17</span>
+          <div class="ml-match"><span class="name-ja">ヒューストン・ギャンブラーズ vs ルイビル・キングス</span><span class="name-en">Houston Gamblers vs Louisville Kings</span></div>
+          <div class="ml-rec">→ <strong style="color:#3fb950;"><span class="name-ja">ルイビル・キングス</span><span class="name-en">Louisville Kings</span></strong><span class="ml-odds"> @1.65</span><span class="ml-conf"> (82%)</span><span style="font-size:9px;color:#3fb950;font-weight:600;margin-left:3px;">EV+</span></div>
         </div>
-        <div style="display:flex;gap:16px;flex-wrap:wrap;font-size:12px;">
-          <span>全体推定勝率: <strong style="color:#4ade80;">54.4%</strong></span>
-          <span>マルチオッズ: <strong>3.0743</strong></span>
-          <span>マルチEV: <strong style="color:#4ade80;">+67.1%</strong></span>
+        <div class="ml-card">
+          <span class="ml-sport">🏈 UFL Week4</span><span class="ml-date">4/18</span>
+          <div class="ml-match"><span class="name-ja">コロンバス・アビエイターズ @ アーリントン・レネゲーズ</span><span class="name-en">Columbus Aviators @ Arlington Renegades</span></div>
+          <div class="ml-rec">→ <strong style="color:#3fb950;"><span class="name-ja">アーリントン・レネゲーズ</span><span class="name-en">Arlington Renegades</span></strong><span class="ml-odds"> @1.36</span><span class="ml-conf"> (85%)</span><span style="font-size:9px;color:#3fb950;font-weight:600;margin-left:3px;">EV+</span></div>
         </div>
-        <div style="font-size:10px;color:var(--text2);margin-top:6px;">
-          0.82&times;0.85&times;0.78=0.5437 &nbsp;|&nbsp; 1.65&times;1.36&times;1.37=3.0743 &nbsp;|&nbsp; EV=0.5437&times;3.0743&minus;1=+67.1%
+        <div class="ml-card">
+          <span class="ml-sport">🎾 ATP Barcelona R2</span><span class="ml-date">4/16</span>
+          <div class="ml-match"><span class="name-ja">ムテ C. vs ムセッティ L.(2)</span><span class="name-en">Moutet C. vs Musetti L.(2)</span></div>
+          <div class="ml-rec">→ <strong style="color:#3fb950;"><span class="name-ja">ムセッティ L.</span><span class="name-en">Musetti L.</span></strong><span class="ml-odds"> @1.37</span><span class="ml-conf"> (78%)</span><span style="font-size:9px;color:#3fb950;font-weight:600;margin-left:3px;">EV+</span></div>
         </div>
+        </div>
+        <div class="mc-formula">0.82×0.85×0.78=0.5437  |  1.65×1.36×1.37=3.0743  |  EV=+67.1%</div>
       </div>
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px;">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
-          <span style="font-weight:700;font-size:15px;color:var(--text);">&#x1F948; 2位</span>
-          <span style="font-size:13px;color:var(--text2);"><span class="name-ja">ルイビル × レネゲーズ × ムセッティ × アルカラス</span><span class="name-en">Louisville × Renegades × Musetti × Alcaraz</span>（4試合）</span>
+      <div class="multi-combo">
+        <div class="mc-header">
+          <span class="mc-rank">🥈 2位</span>
+          <span class="mc-legs-count">4連複</span>
+          <span class="mc-ev" style="color:#4ade80;">EV <strong>+63.2%</strong></span>
+          <span class="mc-odds">マルチオッズ: <strong>3.4124</strong></span>
+          <span class="mc-prob">全体勝率: <strong style="color:#4ade80;">47.8%</strong></span>
           <span class="badge badge-pending" style="margin-left:auto;">PENDING</span>
         </div>
-        <div style="font-size:12px;color:var(--text2);margin-bottom:8px;">
-          +<strong><span class="name-ja">アルカラス</span><span class="name-en">Alcaraz</span></strong> (バルセロナ R2) 追加
+        <div class="mc-legs">
+        <div class="ml-card">
+          <span class="ml-sport">🏈 UFL Week4</span><span class="ml-date">4/17</span>
+          <div class="ml-match"><span class="name-ja">ヒューストン・ギャンブラーズ vs ルイビル・キングス</span><span class="name-en">Houston Gamblers vs Louisville Kings</span></div>
+          <div class="ml-rec">→ <strong style="color:#3fb950;"><span class="name-ja">ルイビル・キングス</span><span class="name-en">Louisville Kings</span></strong><span class="ml-odds"> @1.65</span><span class="ml-conf"> (82%)</span><span style="font-size:9px;color:#3fb950;font-weight:600;margin-left:3px;">EV+</span></div>
         </div>
-        <div style="display:flex;gap:16px;flex-wrap:wrap;font-size:12px;">
-          <span>全体推定勝率: <strong style="color:#4ade80;">47.8%</strong></span>
-          <span>マルチオッズ: <strong>3.4125</strong></span>
-          <span>マルチEV: <strong style="color:#4ade80;">+63.3%</strong></span>
+        <div class="ml-card">
+          <span class="ml-sport">🏈 UFL Week4</span><span class="ml-date">4/18</span>
+          <div class="ml-match"><span class="name-ja">コロンバス・アビエイターズ @ アーリントン・レネゲーズ</span><span class="name-en">Columbus Aviators @ Arlington Renegades</span></div>
+          <div class="ml-rec">→ <strong style="color:#3fb950;"><span class="name-ja">アーリントン・レネゲーズ</span><span class="name-en">Arlington Renegades</span></strong><span class="ml-odds"> @1.36</span><span class="ml-conf"> (85%)</span><span style="font-size:9px;color:#3fb950;font-weight:600;margin-left:3px;">EV+</span></div>
         </div>
-        <div style="font-size:10px;color:var(--text2);margin-top:6px;">
-          prob=0.4784 &nbsp;|&nbsp; odds=3.4125 &nbsp;|&nbsp; EV=+63.3%
+        <div class="ml-card">
+          <span class="ml-sport">🎾 ATP Barcelona R2</span><span class="ml-date">4/16</span>
+          <div class="ml-match"><span class="name-ja">ムテ C. vs ムセッティ L.(2)</span><span class="name-en">Moutet C. vs Musetti L.(2)</span></div>
+          <div class="ml-rec">→ <strong style="color:#3fb950;"><span class="name-ja">ムセッティ L.</span><span class="name-en">Musetti L.</span></strong><span class="ml-odds"> @1.37</span><span class="ml-conf"> (78%)</span><span style="font-size:9px;color:#3fb950;font-weight:600;margin-left:3px;">EV+</span></div>
         </div>
+        <div class="ml-card"  style="opacity:.9;">
+          <span class="ml-sport">🎾 ATP Barcelona R2</span><span style="font-size:9px;background:#0d1f16;color:#3fb950;border:1px solid #238636;border-radius:3px;padding:1px 5px;margin-right:4px;">+追加</span><span class="ml-date">4/16</span>
+          <div class="ml-match"><span class="name-ja">アルカラス C. vs マハッチ T.</span><span class="name-en">Alcaraz C. vs Machac T.</span></div>
+          <div class="ml-rec">→ <strong style="color:#3fb950;"><span class="name-ja">アルカラス C.</span><span class="name-en">Alcaraz C.</span></strong><span class="ml-odds"> @1.11</span><span class="ml-conf"> (88%)</span><span style="font-size:9px;color:#8b949e;margin-left:3px;">予測のみ</span></div>
+        </div>
+        </div>
+        <div class="mc-formula">prob=0.4785  |  odds=3.4124  |  EV=+63.2%</div>
       </div>
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px;">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
-          <span style="font-weight:700;font-size:15px;color:var(--text);">&#x1F949; 3位</span>
-          <span style="font-size:13px;color:var(--text2);"><span class="name-ja">ルイビル × レネゲーズ × ムセッティ × パオリーニ</span><span class="name-en">Louisville × Renegades × Musetti × Paolini</span>（4試合）</span>
+      <div class="multi-combo">
+        <div class="mc-header">
+          <span class="mc-rank">🥉 3位</span>
+          <span class="mc-legs-count">4連複</span>
+          <span class="mc-ev" style="color:#4ade80;">EV <strong>+61.7%</strong></span>
+          <span class="mc-odds">マルチオッズ: <strong>3.8121</strong></span>
+          <span class="mc-prob">全体勝率: <strong style="color:#4ade80;">42.4%</strong></span>
           <span class="badge badge-pending" style="margin-left:auto;">PENDING</span>
         </div>
-        <div style="font-size:12px;color:var(--text2);margin-bottom:8px;">
-          +<strong><span class="name-ja">パオリーニ</span><span class="name-en">Paolini</span></strong> (WTA シュトゥットガルト R2) 追加
+        <div class="mc-legs">
+        <div class="ml-card">
+          <span class="ml-sport">🏈 UFL Week4</span><span class="ml-date">4/17</span>
+          <div class="ml-match"><span class="name-ja">ヒューストン・ギャンブラーズ vs ルイビル・キングス</span><span class="name-en">Houston Gamblers vs Louisville Kings</span></div>
+          <div class="ml-rec">→ <strong style="color:#3fb950;"><span class="name-ja">ルイビル・キングス</span><span class="name-en">Louisville Kings</span></strong><span class="ml-odds"> @1.65</span><span class="ml-conf"> (82%)</span><span style="font-size:9px;color:#3fb950;font-weight:600;margin-left:3px;">EV+</span></div>
         </div>
-        <div style="display:flex;gap:16px;flex-wrap:wrap;font-size:12px;">
-          <span>全体推定勝率: <strong style="color:#4ade80;">42.4%</strong></span>
-          <span>マルチオッズ: <strong>3.8121</strong></span>
-          <span>マルチEV: <strong style="color:#4ade80;">+61.7%</strong></span>
+        <div class="ml-card">
+          <span class="ml-sport">🏈 UFL Week4</span><span class="ml-date">4/18</span>
+          <div class="ml-match"><span class="name-ja">コロンバス・アビエイターズ @ アーリントン・レネゲーズ</span><span class="name-en">Columbus Aviators @ Arlington Renegades</span></div>
+          <div class="ml-rec">→ <strong style="color:#3fb950;"><span class="name-ja">アーリントン・レネゲーズ</span><span class="name-en">Arlington Renegades</span></strong><span class="ml-odds"> @1.36</span><span class="ml-conf"> (85%)</span><span style="font-size:9px;color:#3fb950;font-weight:600;margin-left:3px;">EV+</span></div>
         </div>
-        <div style="font-size:10px;color:var(--text2);margin-top:6px;">
-          prob=0.4241 &nbsp;|&nbsp; odds=3.8121 &nbsp;|&nbsp; EV=+61.7%
+        <div class="ml-card">
+          <span class="ml-sport">🎾 ATP Barcelona R2</span><span class="ml-date">4/16</span>
+          <div class="ml-match"><span class="name-ja">ムテ C. vs ムセッティ L.(2)</span><span class="name-en">Moutet C. vs Musetti L.(2)</span></div>
+          <div class="ml-rec">→ <strong style="color:#3fb950;"><span class="name-ja">ムセッティ L.</span><span class="name-en">Musetti L.</span></strong><span class="ml-odds"> @1.37</span><span class="ml-conf"> (78%)</span><span style="font-size:9px;color:#3fb950;font-weight:600;margin-left:3px;">EV+</span></div>
         </div>
+        <div class="ml-card"  style="opacity:.9;">
+          <span class="ml-sport">🎾 WTA Stuttgart R2</span><span style="font-size:9px;background:#0d1f16;color:#3fb950;border:1px solid #238636;border-radius:3px;padding:1px 5px;margin-right:4px;">+追加</span><span class="ml-date">4/15</span>
+          <div class="ml-match"><span class="name-ja">ソンメズ Z. vs パオリーニ J.(4)</span><span class="name-en">Sonmez Z. vs Paolini J.(4)</span></div>
+          <div class="ml-rec">→ <strong style="color:#3fb950;"><span class="name-ja">パオリーニ J.</span><span class="name-en">Paolini J.</span></strong><span class="ml-odds"> @1.24</span><span class="ml-conf"> (78%)</span><span style="font-size:9px;color:#3fb950;font-weight:600;margin-left:3px;">EV+</span></div>
+        </div>
+        </div>
+        <div class="mc-formula">prob=0.4241  |  odds=3.8121  |  EV=+61.7%</div>
       </div>
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px;">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
-          <span style="font-weight:700;font-size:15px;color:var(--text);">4位</span>
-          <span style="font-size:13px;color:var(--text2);"><span class="name-ja">ルイビル × レネゲーズ × ムセッティ × アルカラス × パオリーニ</span><span class="name-en">Louisville × Renegades × Musetti × Alcaraz × Paolini</span>（5試合）</span>
+      <div class="multi-combo">
+        <div class="mc-header">
+          <span class="mc-rank">4位</span>
+          <span class="mc-legs-count">5連複</span>
+          <span class="mc-ev" style="color:#4ade80;">EV <strong>+57.9%</strong></span>
+          <span class="mc-odds">マルチオッズ: <strong>4.2314</strong></span>
+          <span class="mc-prob">全体勝率: <strong style="color:#4ade80;">37.3%</strong></span>
           <span class="badge badge-pending" style="margin-left:auto;">PENDING</span>
         </div>
-        <div style="font-size:12px;color:var(--text2);margin-bottom:8px;">
-          +<strong><span class="name-ja">アルカラス</span><span class="name-en">Alcaraz</span></strong> &amp; <strong><span class="name-ja">パオリーニ</span><span class="name-en">Paolini</span></strong> 追加（5連複）
+        <div class="mc-legs">
+        <div class="ml-card">
+          <span class="ml-sport">🏈 UFL Week4</span><span class="ml-date">4/17</span>
+          <div class="ml-match"><span class="name-ja">ヒューストン・ギャンブラーズ vs ルイビル・キングス</span><span class="name-en">Houston Gamblers vs Louisville Kings</span></div>
+          <div class="ml-rec">→ <strong style="color:#3fb950;"><span class="name-ja">ルイビル・キングス</span><span class="name-en">Louisville Kings</span></strong><span class="ml-odds"> @1.65</span><span class="ml-conf"> (82%)</span><span style="font-size:9px;color:#3fb950;font-weight:600;margin-left:3px;">EV+</span></div>
         </div>
-        <div style="display:flex;gap:16px;flex-wrap:wrap;font-size:12px;">
-          <span>全体推定勝率: <strong style="color:#4ade80;">37.3%</strong></span>
-          <span>マルチオッズ: <strong>4.2314</strong></span>
-          <span>マルチEV: <strong style="color:#4ade80;">+57.9%</strong></span>
+        <div class="ml-card">
+          <span class="ml-sport">🏈 UFL Week4</span><span class="ml-date">4/18</span>
+          <div class="ml-match"><span class="name-ja">コロンバス・アビエイターズ @ アーリントン・レネゲーズ</span><span class="name-en">Columbus Aviators @ Arlington Renegades</span></div>
+          <div class="ml-rec">→ <strong style="color:#3fb950;"><span class="name-ja">アーリントン・レネゲーズ</span><span class="name-en">Arlington Renegades</span></strong><span class="ml-odds"> @1.36</span><span class="ml-conf"> (85%)</span><span style="font-size:9px;color:#3fb950;font-weight:600;margin-left:3px;">EV+</span></div>
         </div>
-        <div style="font-size:10px;color:var(--text2);margin-top:6px;">
-          prob=0.3732 &nbsp;|&nbsp; odds=4.2314 &nbsp;|&nbsp; EV=+57.9%
+        <div class="ml-card">
+          <span class="ml-sport">🎾 ATP Barcelona R2</span><span class="ml-date">4/16</span>
+          <div class="ml-match"><span class="name-ja">ムテ C. vs ムセッティ L.(2)</span><span class="name-en">Moutet C. vs Musetti L.(2)</span></div>
+          <div class="ml-rec">→ <strong style="color:#3fb950;"><span class="name-ja">ムセッティ L.</span><span class="name-en">Musetti L.</span></strong><span class="ml-odds"> @1.37</span><span class="ml-conf"> (78%)</span><span style="font-size:9px;color:#3fb950;font-weight:600;margin-left:3px;">EV+</span></div>
         </div>
+        <div class="ml-card"  style="opacity:.9;">
+          <span class="ml-sport">🎾 ATP Barcelona R2</span><span style="font-size:9px;background:#0d1f16;color:#3fb950;border:1px solid #238636;border-radius:3px;padding:1px 5px;margin-right:4px;">+追加</span><span class="ml-date">4/16</span>
+          <div class="ml-match"><span class="name-ja">アルカラス C. vs マハッチ T.</span><span class="name-en">Alcaraz C. vs Machac T.</span></div>
+          <div class="ml-rec">→ <strong style="color:#3fb950;"><span class="name-ja">アルカラス C.</span><span class="name-en">Alcaraz C.</span></strong><span class="ml-odds"> @1.11</span><span class="ml-conf"> (88%)</span><span style="font-size:9px;color:#8b949e;margin-left:3px;">予測のみ</span></div>
+        </div>
+        <div class="ml-card"  style="opacity:.9;">
+          <span class="ml-sport">🎾 WTA Stuttgart R2</span><span style="font-size:9px;background:#0d1f16;color:#3fb950;border:1px solid #238636;border-radius:3px;padding:1px 5px;margin-right:4px;">+追加</span><span class="ml-date">4/15</span>
+          <div class="ml-match"><span class="name-ja">ソンメズ Z. vs パオリーニ J.(4)</span><span class="name-en">Sonmez Z. vs Paolini J.(4)</span></div>
+          <div class="ml-rec">→ <strong style="color:#3fb950;"><span class="name-ja">パオリーニ J.</span><span class="name-en">Paolini J.</span></strong><span class="ml-odds"> @1.24</span><span class="ml-conf"> (78%)</span><span style="font-size:9px;color:#3fb950;font-weight:600;margin-left:3px;">EV+</span></div>
+        </div>
+        </div>
+        <div class="mc-formula">prob=0.3732  |  odds=4.2314  |  EV=+57.9%</div>
       </div>
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px;">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
-          <span style="font-weight:700;font-size:15px;color:var(--text);">5位</span>
-          <span style="font-size:13px;color:var(--text2);"><span class="name-ja">ルイビル × レネゲーズ × ムセッティ × シフィアテク</span><span class="name-en">Louisville × Renegades × Musetti × Swiatek</span>（4試合）</span>
+      <div class="multi-combo">
+        <div class="mc-header">
+          <span class="mc-rank">5位</span>
+          <span class="mc-legs-count">4連複</span>
+          <span class="mc-ev" style="color:#4ade80;">EV <strong>+56.8%</strong></span>
+          <span class="mc-odds">マルチオッズ: <strong>3.1358</strong></span>
+          <span class="mc-prob">全体勝率: <strong style="color:#4ade80;">50.0%</strong></span>
           <span class="badge badge-pending" style="margin-left:auto;">PENDING</span>
         </div>
-        <div style="font-size:12px;color:var(--text2);margin-bottom:8px;">
-          +<strong><span class="name-ja">シフィアテク</span><span class="name-en">Swiatek</span></strong> (WTA シュトゥットガルト R2) 追加
+        <div class="mc-legs">
+        <div class="ml-card">
+          <span class="ml-sport">🏈 UFL Week4</span><span class="ml-date">4/17</span>
+          <div class="ml-match"><span class="name-ja">ヒューストン・ギャンブラーズ vs ルイビル・キングス</span><span class="name-en">Houston Gamblers vs Louisville Kings</span></div>
+          <div class="ml-rec">→ <strong style="color:#3fb950;"><span class="name-ja">ルイビル・キングス</span><span class="name-en">Louisville Kings</span></strong><span class="ml-odds"> @1.65</span><span class="ml-conf"> (82%)</span><span style="font-size:9px;color:#3fb950;font-weight:600;margin-left:3px;">EV+</span></div>
         </div>
-        <div style="display:flex;gap:16px;flex-wrap:wrap;font-size:12px;">
-          <span>全体推定勝率: <strong style="color:#4ade80;">50.0%</strong></span>
-          <span>マルチオッズ: <strong>3.1358</strong></span>
-          <span>マルチEV: <strong style="color:#4ade80;">+56.8%</strong></span>
+        <div class="ml-card">
+          <span class="ml-sport">🏈 UFL Week4</span><span class="ml-date">4/18</span>
+          <div class="ml-match"><span class="name-ja">コロンバス・アビエイターズ @ アーリントン・レネゲーズ</span><span class="name-en">Columbus Aviators @ Arlington Renegades</span></div>
+          <div class="ml-rec">→ <strong style="color:#3fb950;"><span class="name-ja">アーリントン・レネゲーズ</span><span class="name-en">Arlington Renegades</span></strong><span class="ml-odds"> @1.36</span><span class="ml-conf"> (85%)</span><span style="font-size:9px;color:#3fb950;font-weight:600;margin-left:3px;">EV+</span></div>
         </div>
-        <div style="font-size:10px;color:var(--text2);margin-top:6px;">
-          prob=0.5002 &nbsp;|&nbsp; odds=3.1358 &nbsp;|&nbsp; EV=+56.8%
+        <div class="ml-card">
+          <span class="ml-sport">🎾 ATP Barcelona R2</span><span class="ml-date">4/16</span>
+          <div class="ml-match"><span class="name-ja">ムテ C. vs ムセッティ L.(2)</span><span class="name-en">Moutet C. vs Musetti L.(2)</span></div>
+          <div class="ml-rec">→ <strong style="color:#3fb950;"><span class="name-ja">ムセッティ L.</span><span class="name-en">Musetti L.</span></strong><span class="ml-odds"> @1.37</span><span class="ml-conf"> (78%)</span><span style="font-size:9px;color:#3fb950;font-weight:600;margin-left:3px;">EV+</span></div>
         </div>
+        <div class="ml-card"  style="opacity:.9;">
+          <span class="ml-sport">🎾 WTA Stuttgart R2</span><span style="font-size:9px;background:#0d1f16;color:#3fb950;border:1px solid #238636;border-radius:3px;padding:1px 5px;margin-right:4px;">+追加</span><span class="ml-date">4/16</span>
+          <div class="ml-match"><span class="name-ja">シフィアテク I. vs ジーゲムント L.</span><span class="name-en">Swiatek I. vs Siegemund L.</span></div>
+          <div class="ml-rec">→ <strong style="color:#3fb950;"><span class="name-ja">シフィアテク I.</span><span class="name-en">Swiatek I.</span></strong><span class="ml-odds"> @1.02</span><span class="ml-conf"> (92%)</span><span style="font-size:9px;color:#8b949e;margin-left:3px;">予測のみ</span></div>
+        </div>
+        </div>
+        <div class="mc-formula">prob=0.5002  |  odds=3.1358  |  EV=+56.8%</div>
       </div>
-      <div style="font-size:11px;color:var(--text2);text-align:right;">
+      <div style="font-size:11px;color:var(--text2);text-align:right;padding:4px 2px;">
         Session _29 (2026-04-15) &nbsp;|&nbsp; 出力A: 7試合 &nbsp;|&nbsp; EV+組み合わせ: 5パターン &nbsp;|&nbsp; &#x26A0; Musetti conf 82%&#x2192;78% 修正済
       </div>
     </div>

@@ -1,0 +1,88 @@
+{
+  "_comment": "Sport card の唯一の真実ソース。記録更新後は必ずここを更新してから sync_sport_cards.py を実行すること",
+  "last_updated": "2026-04-15",
+  "session": "_29b",
+  "sports": {
+    "atp": {
+      "go_count": 13,
+      "confirmed_count": 13,
+      "hit_count": 10,
+      "hit_rate": 0.769,
+      "ev_total": 1.370,
+      "pending_count": 1,
+      "pending_detail": "Musetti Barcelona R2"
+    },
+    "wta": {
+      "go_count": 1,
+      "go_label": "GB推奨",
+      "confirmed_count": 1,
+      "hit_count": 1,
+      "hit_rate": 1.0,
+      "ev_total": 0.538,
+      "pending_count": 2,
+      "pending_detail": "Bondar Rouen R1 + Paolini Stuttgart R2"
+    },
+    "nhl": {
+      "go_count": 2,
+      "confirmed_count": 2,
+      "hit_count": 2,
+      "hit_rate": 1.0,
+      "ev_total": 1.863,
+      "pending_count": 0,
+      "pending_detail": "CAUTION 2件(CAR@NYI / COL@CGY)は CAUTION tier のため GO待機中カウント外"
+    },
+    "ufl": {
+      "go_count": 3,
+      "confirmed_count": 1,
+      "hit_count": 1,
+      "hit_rate": 1.0,
+      "ev_total": 0.320,
+      "pending_count": 2,
+      "pending_detail": "Louisville W4 + Renegades W4"
+    },
+    "nrl": {
+      "go_count": 3,
+      "confirmed_count": 1,
+      "hit_count": 0,
+      "hit_rate": 0.0,
+      "ev_total": -1.000,
+      "pending_count": 1,
+      "pending_detail": "Warriors R7（Broncos R7はREVOKED、CAUTION/SKIPは除外）"
+    },
+    "superrugby": {
+      "go_count": 1,
+      "confirmed_count": 1,
+      "hit_count": 1,
+      "hit_rate": 1.0,
+      "ev_total": 0.540,
+      "pending_count": 0,
+      "pending_detail": ""
+    },
+    "nba": {
+      "go_count": 1,
+      "confirmed_count": 1,
+      "hit_count": 1,
+      "hit_rate": 1.0,
+      "ev_total": 0.200,
+      "pending_count": 0,
+      "pending_detail": ""
+    },
+    "superleague": {
+      "go_count": 2,
+      "confirmed_count": 0,
+      "hit_count": 0,
+      "hit_rate": null,
+      "ev_total": 0,
+      "pending_count": 2,
+      "pending_detail": "Leeds R8 + Warrington R8"
+    }
+  },
+  "overview": {
+    "total_go": 26,
+    "total_confirmed": 22,
+    "total_hits": 16,
+    "total_ev": 3.831,
+    "total_pending": 8,
+    "pending_breakdown": "ATP x1 + WTA x2 + NRL x1 + SL x2 + UFL x2"
+  }
+}

@@ -79,6 +79,22 @@
    - 全組み合わせがEV-なら「EV+の組み合わせなし」と出力
 3. `records/multi_bets.json` の sessions 配列に追記する
 4. `dashboard.html` の「高確率予想」「マルチベット」タブを更新する
+5. **出力Aのアップセット分析への活用**：
+   - 出力Aに含まれた試合の `prediction_hit` を結果確認後に必ず更新する
+   - 出力A内で `prediction_hit: false`（外れ）だった試合は必ず `miss_analysis` を records JSON に追記する
+   - miss_analysis の内容を `rules_{sport}.json` に知見として追記する（アップセット要因の蓄積）
+   - 特に「高確率予想に入ったがMISSした」試合はアップセットの典型例として `rule_pipeline.json` の候補にも記録する
+
+**【記録更新後・毎回必須】ダッシュボード同期プロトコル（整合性保証）：**
+試合結果を records/*.json に書き込んだら、必ず以下を実行する：
+
+1. `core/dashboard_stats.json` を更新する（各sport の go_count / confirmed_count / hit_count / hit_rate / ev_total / pending_count を再計算）
+2. `python sync_sport_cards.py` を実行してダッシュボードに反映する
+3. dashboard.html の「アクティブ推奨」タブから完了した試合を削除する
+4. 更新後に概要big-stat・各スポーツカードの全数値を目視で確認し、不整合があれば即修正する
+
+⚠️ **records更新 → dashboard_stats.json更新 → sync実行 の3ステップを必ずセットで行うこと。**
+⚠️ **この手順を省略してダッシュボードの数字がずれることは絶対に禁止。**
 
 **【会話終了時】セッション終了手順（③の要件）：**
 ユーザーが「会話を終了する」「終わり」「終了」「記録して」などと言ったら：
