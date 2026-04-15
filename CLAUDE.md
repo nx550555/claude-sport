@@ -15,7 +15,10 @@
    - `OPEN` の項目があれば「未解決の指摘があります」と報告する
 3. `C:\Users\ohwada\Desktop\claude_sport\monitoring\pending_actions.md` を読み込む
    - `PENDING` / `WAITING` / `IN_PROGRESS` の項目を一覧で報告する
-4. `C:\Users\ohwada\Desktop\claude_sport\core\rule_pipeline.json` を読み込む
+4. `C:\Users\ohwada\Desktop\claude_sport\monitoring\claude_error_log.md` を読み込む
+   - `ACTIVE` のエラーを必ず把握する（このセッションで同じミスをしないため）
+   - **ミスが発覚したら即座にこのファイルに追記する**（CE001, CE002...の連番で）
+5. `C:\Users\ohwada\Desktop\claude_sport\core\rule_pipeline.json` を読み込む
    - `current_count >= trigger_threshold` の候補があれば「ルール追加トリガー発動：〇〇を実装します」と報告してそのまま実装する
 
 **【毎回必須】アクティブ推奨の最新情報チェック（GEN003）：**
