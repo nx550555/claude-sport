@@ -92,9 +92,8 @@ def calc_stats(data):
     confirmed_count = len(confirmed)
     hit_count       = sum(1 for e in confirmed if e.get("hit") is True)
     hit_rate        = hit_count / confirmed_count if confirmed_count > 0 else None
-    # 実現損益: HIT=+1u, MISS=-1u（1単位ベット想定）
-    miss_count      = confirmed_count - hit_count
-    pnl             = float(hit_count - miss_count)
+    # 実現損益: actual_ev を使用（hit=True: rec_odds-1, hit=False: -1.0）
+    pnl             = sum((e.get("actual_ev") or 0) for e in confirmed)
     pending_count   = go_count - confirmed_count
     return {
         "go_count":        go_count,
@@ -345,7 +344,7 @@ def update_overview(content, overview):
     # bs-sub: 単位説明
     content = re.sub(
         r'(<div class="bs-sub">単位:)[^<]*(</div>)',
-        r'\g<1> HIT=+1u / MISS=-1u（1単位想定）\2',
+        r'\g<1> (オッズ-1)u / MISS=-1u（1単位ベット）\2',
         content
     )
     # 待機中（数値）
