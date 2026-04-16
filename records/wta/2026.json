@@ -1,15 +1,15 @@
-﻿{
+{
   "sport": "tennis_wta",
   "season": "2026",
   "bet_type": "Moneyline (ML)",
   "rule_version": "v1.0",
   "started": "2026-04-10",
   "summary": {
-    "total": 2,
-    "hit": 1,
-    "hit_rate": 0.5,
-    "ev_total": -0.4625,
-    "note": "GOまたはGAMBLE_BET tier推奨のみカウント。GB001 Ostapenko HIT(+0.5375u)。Paolini Stuttgart R1 MISS(-1.0u)。通算: 1/2 50% -0.4625u"
+    "total": 3,
+    "hit": 2,
+    "hit_rate": 0.667,
+    "ev_total": -0.2525,
+    "note": "GOまたはGAMBLE_BET tier推奨のみカウント。GB001 Ostapenko HIT(+0.5375u)。Paolini Stuttgart R1 MISS(-1.0u)。Bondar Rouen R1 HIT(+0.21u)。通算: 2/3 66.7% -0.2525u"
   },
   "tournaments": [
     {
@@ -848,6 +848,38 @@
             "W001"
           ],
           "note": "Cocciaretto E. cElo~1645 vs Charalambous A. cElo~1495推定（差~150）。L1通過だがEV大幅マイナス。"
+        },
+        {
+          "tournament": "WTA Rouen (Open Capfinances Rouen Metropole)",
+          "round": "R1",
+          "date": "2026-04-15",
+          "start_time": "18:30",
+          "match": "Tan H. vs Bondar A.",
+          "retroactive": true,
+          "retroactive_note": "Session 36/37: GO entry added retroactively. Match found in dashboard active section but was missing from JSON records.",
+          "celo_note": "Hard cElo source limited. Market+form analysis used. Market implied Bondar 82.6%.",
+          "l1_diff": null,
+          "l1_pass": null,
+          "tier": "go",
+          "rec": "Bondar",
+          "rec_odds": 1.21,
+          "ev_est": 6.5,
+          "confidence": 88,
+          "ev_calc": "(0.88 x 1.21) - 1 = +6.5%",
+          "skip_reason": null,
+          "result": "Bondar A.",
+          "score": "6-2 4-6 6-0",
+          "hit": true,
+          "actual_ev": 0.21,
+          "predicted_winner": "Bondar A.",
+          "prediction_confidence": 88,
+          "prediction_hit": true,
+          "status": "completed",
+          "note": "WTA Rouen indoor hard. Market+form: Bondar 88% conf. EV+6.5% @1.21. RESULT: Bondar d. Tan 6-2 4-6 6-0 (news.de/WTA Official confirmed 2026-04-15). HIT. actual_ev = 1.21-1 = 0.21u.",
+          "sources": [
+            "https://www.news.de/sport/859523515/wta-tennis-15-04-2026-in-frankreich-liveticker-harmony-tan-gegen-anna-bondar/1/",
+            "https://www.wtatennis.com/tournaments/2066/rouen/2026/scores/LS028"
+          ]
         }
       ]
     }
