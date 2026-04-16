@@ -26,7 +26,9 @@
 | PA003 | ATP | Barcelona/Munich GO3件の結果確認（Musetti@1.27/Cobolli@1.21/Kopriva@1.36 4/14開催） | DONE | 高 | 完了 4/15 全HIT |
 | PA004 | WTA | Stuttgart R2 スクリーニング（R1結果確認後） | PENDING | 高 | 4/14〜 |
 | PA005 | NHL | 4/15 CAUTION2件ゴーリー確認完了: CAR@NYI=Andersen確認(N006解消)試合進行中 / COL@CGY=Blackwood起用→N016発動→SKIP推奨 | DONE | 高 | 完了 4/15 |
-| PA006 | NHL | PO R1 スクリーニング（RS終了4/16後、ブラケット確定→MoneyPuck xGF%起点） | PENDING | 高 | 4/16〜17 |
+| PA006 | NHL | PO R1 スクリーニング（RS終了4/16後、ブラケット確定→MoneyPuck xGF%起点） | DONE | 高 | 完了 4/16 |
+| PA014 | NHL | PO R1 TBL vs MTL CAUTION→GO確認（ゴーリー確認4/18朝・オッズ確認要・min odds 1.38） | PENDING | 高 | 4/18試合当日 |
+| PA015 | NHL | PO R1 COL vs LAK CAUTION（score-adj 5v5 xGF%差5.73pp・Manson怪我確認・オッズ確認要） | PENDING | 中 | 4/18試合当日 |
 | PA007 | NRL | R7 Broncos@Tigers オッズ確認（REVOKED済→odds discrepancy無効） | SKIP | 中 | Broncos REVOKED済 |
 | PA008 | NRL | R7 GO2件（Warriors 4/18/Broncos 4/18）・CAUTION2件の結果確認 | WAITING | 中 | 4/18〜19試合後 |
 | PA009 | NBA | Play-in（4/15-16）・PO R1（4/19〜）全SKIP確認済み。結果モニタリングのみ | WAITING | 低 | 継続 |
@@ -81,3 +83,15 @@
 - PA007: NRL Broncos REVOKED済のため odds discrepancy は無効 → SKIP推奨
 - Zhang/Noskova Stuttgart R1: まだサスペンド中 (Zhang 7-5/Noskova 6-4/3rd set in progress) → PA012追加
 - ATP Barcelona R2 Musetti@1.37 GO (4/16 18:00) 結果確認要 → PA013追加
+
+---
+**Session_32 更新 (2026-04-16):**
+- MoneyPuck統計: 5v5 All Season xGF%を確認。最高精度指標でPO R1スクリーニング実施
+- NHL PO R1 全8シリーズL1スクリーニング完了 (PA006 DONE)
+  - L1通過: TBL vs MTL (diff 6.11pp) → CAUTION (goalie+odds確認待ち, min odds 1.38)
+  - L1近傍CAUTION: COL vs LAK (raw 4.70pp / score-adj 5.73pp) → CAUTION
+  - SKIP 6シリーズ: BUF/BOS・CAR/OTT・PIT/PHI・DAL/MIN・VGK/UTA・EDM/ANA
+  - 注目: MIN(C3)がDAL(C2)より5v5 xGF%高い / ANA(P3)がEDM(P2)より微小上回る
+  - PA014(TBL G1確認) / PA015(COL G1確認) 追加
+- PA013 Musetti vs Moutet: 14:00 UTC試合・結果未確認 (WAITING継続)
+- PA012 Zhang/Noskova: WTA公式でSet2=6-1表示 (記録の6-4と差異)。試合完了後に要確認

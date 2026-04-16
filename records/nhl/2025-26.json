@@ -1,4 +1,4 @@
-﻿{
+{
   "sport": "nhl",
   "season": "2025-26",
   "bet_type": "Moneyline (ML)",
@@ -458,10 +458,258 @@
         "N016"
       ],
       "note": "N016でSKIP（Blackwood先発確認済・Georgiev温存）。COL 3-1 CGY: Landeskog決勝, Lehkonen 1G, MacKinnon 53G目(リーグトップ), Makar 3A(7試合ぶり復帰)。COL 119pts（フランチャイズ記録タイ）。RS最終。CGY 消化試合。"
+    },
+    {
+      "_comment": "=== NHL PO R1 2026 Screening (2026-04-16, MoneyPuck 5v5 All Season xGF%) ==="
+    },
+    {
+      "series": "PO_R1_E1",
+      "date": "2026-04-18",
+      "date_label": "PO R1 G1",
+      "match": "Boston Bruins @ Buffalo Sabres",
+      "home": "Buffalo Sabres",
+      "away": "Boston Bruins",
+      "seeding": "A1 BUF vs WC1 BOS",
+      "tier": "skip",
+      "predicted_winner": "Buffalo Sabres",
+      "prediction_confidence": 55,
+      "prediction_basis": "5v5 xGF% BUF 49.95% vs BOS 47.29%, diff 2.66pp. L1 SKIP (< 5pt). BUF home ice PO (+7%) only. NOTE: BOS PDO 102.26, Goals%(all) 54.98% >> 5v5 xGF% 47.29% (+7.69pp) = luck-driven, PO regression risk.",
+      "l1_metric": "xGF% (MoneyPuck 5v5 All Season 2026-04-16)",
+      "l1_data": {
+        "BUF_xGF_5v5": 49.95,
+        "BOS_xGF_5v5": 47.29,
+        "diff": 2.66,
+        "l1_pass": false
+      },
+      "hit": null,
+      "result": null
+    },
+    {
+      "series": "PO_R1_E2",
+      "date": "2026-04-18",
+      "date_label": "PO R1 G1",
+      "match": "Montreal Canadiens @ Tampa Bay Lightning",
+      "home": "Tampa Bay Lightning",
+      "away": "Montreal Canadiens",
+      "seeding": "A2 TBL vs A3 MTL",
+      "tier": "caution",
+      "predicted_winner": "Tampa Bay Lightning",
+      "prediction_confidence": 76,
+      "prediction_basis": "5v5 xGF% TBL 54.00% vs MTL 47.89%, diff 6.11pp. L1 PASS. TBL home PO +7%. MTL Goals%(all) 53.33% >> xGF% 47.89% = +5.44pp overperformance (PDO 101.81, regression risk). Holmberg injured (depth, minor).",
+      "rec": "Tampa Bay Lightning",
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 76,
+      "l1_metric": "xGF% (MoneyPuck 5v5 All Season 2026-04-16)",
+      "l1_data": {
+        "TBL_xGF_5v5": 54.0,
+        "MTL_xGF_5v5": 47.89,
+        "diff": 6.11,
+        "l1_pass": true
+      },
+      "adjustments": {
+        "TBL_home_po": "+7% (N004 PO)",
+        "MTL_pdo_regression": "+2% TBL (MTL overperforming xGF% by 5.44pp)",
+        "holmberg_injury": "-1% TBL (depth forward, minor)"
+      },
+      "estimated_win_pct": 76,
+      "min_odds_for_go_ev5pct": 1.38,
+      "goalie_confirmed": false,
+      "n006_note": "G1 goalie confirm needed (dailyfaceoff 4/18 morning). TBL=Vasilevskiy expected. MTL=Dobes expected (RS vs TBL: 2-1, .928sv%, 2.15GAA).",
+      "series_context": {
+        "tbl_record": "50-25-6 (A2 seed)",
+        "mtl_record": "48-24-10 (A3 seed)",
+        "mtl_suzuki": "Suzuki 101pts career high. Slafkovsky 7pts(4G3A) vs TBL.",
+        "status": "CAUTION -> GO upgrade pending: goalie confirm + odds confirm (need odds >= 1.38)"
+      },
+      "hit": null,
+      "result": null
+    },
+    {
+      "series": "PO_R1_E3",
+      "date": "2026-04-18",
+      "date_label": "PO R1 G1",
+      "match": "Ottawa Senators @ Carolina Hurricanes",
+      "home": "Carolina Hurricanes",
+      "away": "Ottawa Senators",
+      "seeding": "M1 CAR vs WC2 OTT",
+      "tier": "skip",
+      "predicted_winner": "Carolina Hurricanes",
+      "prediction_confidence": 53,
+      "prediction_basis": "5v5 xGF% CAR 56.31% vs OTT 55.65%, diff 0.66pp. L1 SKIP. Both elite (55%+ xGF%). CAR home ice (+7%) only. Near-even series by process.",
+      "l1_metric": "xGF% (MoneyPuck 5v5 All Season 2026-04-16)",
+      "l1_data": {
+        "CAR_xGF_5v5": 56.31,
+        "OTT_xGF_5v5": 55.65,
+        "diff": 0.66,
+        "l1_pass": false
+      },
+      "series_note": "Both xGF%55%+ elite. If OTT wins series = NOT an xGF%-based upset.",
+      "hit": null,
+      "result": null
+    },
+    {
+      "series": "PO_R1_E4",
+      "date": "2026-04-18",
+      "date_label": "PO R1 G1",
+      "match": "Philadelphia Flyers @ Pittsburgh Penguins",
+      "home": "Pittsburgh Penguins",
+      "away": "Philadelphia Flyers",
+      "seeding": "M2 PIT vs M3 PHI",
+      "tier": "skip",
+      "predicted_winner": "Pittsburgh Penguins",
+      "prediction_confidence": 52,
+      "prediction_basis": "5v5 xGF% PIT 51.03% vs PHI 50.63%, diff 0.40pp. L1 SKIP. Coin flip. PIT home ice (+7%) only.",
+      "l1_metric": "xGF% (MoneyPuck 5v5 All Season 2026-04-16)",
+      "l1_data": {
+        "PIT_xGF_5v5": 51.03,
+        "PHI_xGF_5v5": 50.63,
+        "diff": 0.4,
+        "l1_pass": false
+      },
+      "hit": null,
+      "result": null
+    },
+    {
+      "series": "PO_R1_W1",
+      "date": "2026-04-18",
+      "date_label": "PO R1 G1",
+      "match": "Los Angeles Kings @ Colorado Avalanche",
+      "home": "Colorado Avalanche",
+      "away": "Los Angeles Kings",
+      "seeding": "C1 COL vs WC2 LAK",
+      "tier": "caution",
+      "predicted_winner": "Colorado Avalanche",
+      "prediction_confidence": 66,
+      "prediction_basis": "5v5 xGF% COL 56.67% vs LAK 51.97%, raw diff 4.70pp (below 5pt threshold). Score-adjusted 5v5: COL 57.48% vs LAK 51.75% = diff 5.73pp (passes threshold). COL Presidents Trophy, Makar healthy, home +7%.",
+      "l1_metric": "xGF% (MoneyPuck 5v5 All Season 2026-04-16)",
+      "l1_data": {
+        "COL_xGF_5v5": 56.67,
+        "LAK_xGF_5v5": 51.97,
+        "diff_raw": 4.7,
+        "l1_pass_raw": false,
+        "COL_xGF_5v5_score_adj": 57.48,
+        "LAK_xGF_5v5_score_adj": 51.75,
+        "diff_score_adj": 5.73,
+        "l1_pass_score_adj": true,
+        "note": "COL leads big -> score-adj reveals true gap"
+      },
+      "adjustments": {
+        "COL_home_po": "+7% (N004 PO)",
+        "makar": "healthy",
+        "manson": "upper body questionable"
+      },
+      "estimated_win_pct": 66,
+      "goalie_confirmed": false,
+      "caution_reason": "Raw diff 4.70pp < 5pt. Market may price COL so short EV+5% is difficult. Score-adj supports quality gap.",
+      "hit": null,
+      "result": null
+    },
+    {
+      "series": "PO_R1_W2",
+      "date": "2026-04-18",
+      "date_label": "PO R1 G1",
+      "match": "Minnesota Wild @ Dallas Stars",
+      "home": "Dallas Stars",
+      "away": "Minnesota Wild",
+      "seeding": "C2 DAL vs C3 MIN",
+      "tier": "skip",
+      "predicted_winner": "Dallas Stars",
+      "prediction_confidence": 51,
+      "prediction_basis": "5v5 xGF% MIN 51.50% > DAL 50.79% (MIN higher by 0.71pp). L1 SKIP. DAL home +7% offsets MIN edge. NOTE: lower seed MIN has better 5v5 process.",
+      "l1_metric": "xGF% (MoneyPuck 5v5 All Season 2026-04-16)",
+      "l1_data": {
+        "DAL_xGF_5v5": 50.79,
+        "MIN_xGF_5v5": 51.5,
+        "diff": 0.71,
+        "higher_xgf_team": "Minnesota Wild (lower seed)",
+        "l1_pass": false
+      },
+      "type_a_watch": "MIN(C3) higher 5v5 xGF% than DAL(C2). MIN win would NOT be xGF%-based upset.",
+      "hit": null,
+      "result": null
+    },
+    {
+      "series": "PO_R1_W3",
+      "date": "2026-04-18",
+      "date_label": "PO R1 G1",
+      "match": "Utah Mammoth @ Vegas Golden Knights",
+      "home": "Vegas Golden Knights",
+      "away": "Utah Mammoth",
+      "seeding": "P1 VGK vs WC1 UTA",
+      "tier": "skip",
+      "predicted_winner": "Vegas Golden Knights",
+      "prediction_confidence": 56,
+      "prediction_basis": "5v5 xGF% VGK 54.37% vs UTA 52.41%, diff 1.96pp. L1 SKIP. VGK home +7%.",
+      "l1_metric": "xGF% (MoneyPuck 5v5 All Season 2026-04-16)",
+      "l1_data": {
+        "VGK_xGF_5v5": 54.37,
+        "UTA_xGF_5v5": 52.41,
+        "diff": 1.96,
+        "l1_pass": false
+      },
+      "hit": null,
+      "result": null
+    },
+    {
+      "series": "PO_R1_W4",
+      "date": "2026-04-18",
+      "date_label": "PO R1 G1",
+      "match": "Anaheim Ducks @ Edmonton Oilers",
+      "home": "Edmonton Oilers",
+      "away": "Anaheim Ducks",
+      "seeding": "P2 EDM vs P3 ANA",
+      "tier": "skip",
+      "predicted_winner": "Edmonton Oilers",
+      "prediction_confidence": 51,
+      "prediction_basis": "5v5 xGF% ANA 51.76% > EDM 51.54% (ANA higher by 0.22pp). L1 SKIP. EDM home +7% only. NOTE: lower seed ANA marginally better 5v5 process. McDavid/Draisaitl individual impact not fully in team xGF%.",
+      "l1_metric": "xGF% (MoneyPuck 5v5 All Season 2026-04-16)",
+      "l1_data": {
+        "EDM_xGF_5v5": 51.54,
+        "ANA_xGF_5v5": 51.76,
+        "diff": 0.22,
+        "higher_xgf_team": "Anaheim Ducks (lower seed)",
+        "l1_pass": false
+      },
+      "type_a_watch": "ANA(P3) marginally higher 5v5 xGF% than EDM(P2). ANA win would NOT be xGF%-based upset.",
+      "hit": null,
+      "result": null
     }
   ],
   "pending_games": [],
   "screening_log": [
+    {
+      "date": "2026-04-16",
+      "note": "NHL PO R1 2026 - All 8 Series L1 Screening. Source: MoneyPuck 5v5 All Season xGF% (user Statsupdated.txt). RS ended 4/16, PO starts 4/18.",
+      "total_series": 8,
+      "l1_passed": 1,
+      "l1_caution_borderline": [
+        {
+          "series": "LAK@COL",
+          "diff_raw": 4.7,
+          "diff_score_adj": 5.73,
+          "note": "raw below threshold, score-adj passes"
+        }
+      ],
+      "l1_failed": 6,
+      "l1_metric_used": "5v5 All Season xGF% (MoneyPuck)",
+      "go_recommendations": 0,
+      "caution_pending": 2,
+      "l1_passed_detail": [
+        {
+          "series": "MTL@TBL",
+          "xgf_diff_5v5": 6.11,
+          "higher_team": "TBL",
+          "tier": "caution->GO pending goalie+odds"
+        }
+      ],
+      "notable_findings": [
+        "MIN(C3) 5v5 xGF% 51.50% > DAL(C2) 50.79%: lower seed has better process",
+        "ANA(P3) 5v5 xGF% 51.76% > EDM(P2) 51.54%: lower seed marginally better",
+        "CAR vs OTT: both 55%+, diff 0.66pp - elite even series",
+        "BOS PDO 102.26: Goals% 54.98% >> 5v5 xGF% 47.29% (+7.69pp gap) - luck-driven, regression risk"
+      ]
+    },
     {
       "date": "2026-04-14",
       "note": "4/15 JST試合（RS最終盤）スクリーニング。データ起点：手動試合データ/2026-04-14.json",
