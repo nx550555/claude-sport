@@ -18,6 +18,12 @@
 
 ## 未完了・作業中（次回セッション最優先）
 
+- [ ] 【最重要・次セッション最優先】Type Aアップセット分析 品質補完 ← A001-A013全件について以下を実施すること
+  1. ニュース/ブログ/SNS/インタビュー記事をWebSearchで各試合ごとに検索（スコア確認だけでは不十分）
+  2. 「なぜ負けたか」を実際のソースで検証し factor_notes を更新する
+  3. rule_pipeline.json の候補（P010-P013・W_P_new1・NRL_R_new2・UFU_R_new）を実装するか判断し rules_tennis.json / rules_wta.json 等を更新する
+  ※ feedback_miss_analysis_depth.md のルール（複数ソース→検証→ルール化）を守れていなかったことが判明（Session_35）。
+
 - [x] UFL Week3 Dallas vs Columbus 結果確認・記録（4/13 正午ET試合後）← Dallas GO EV+8.2% 信頼度82%
 - [x] MC2026 F Alcaraz vs Sinner 結果確認（4/13試合後）← SKIP（ベットなし・観戦のみ）
 - [x] ATP W16 R1 結果確認（全SKIP）: Shelton d.Nava 7-6(4)3-6 6-3 / Blockx d.Hanfmann 7-6(2)6-2 / Norrie d.Wawrinka 6-4 6-7(5)6-4 / Borges d.Mannarino 6-3 6-4 / Molcan d.Bublik(CAUTION) 6-4 6-2 → R2スクリーニングはcasino data待ち
