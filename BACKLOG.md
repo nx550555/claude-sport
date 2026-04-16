@@ -18,12 +18,13 @@
 
 ## 未完了・作業中（次回セッション最優先）
 
-- [ ] 【最重要・次セッション最優先】GO推奨の試合結果確認（4/18-19開催分）
-  - UFL W4: Renegades GO / Louisville Kings GO → 結果確認・records更新・hit/miss記録
-  - NRL R7: Warriors/Titans GO・Tigers/Broncos → 結果確認・records更新
-  - WTA Stuttgart Paolini vs Sonmez → 中断→再開後の最終結果確認
-  - NHL PO G1: PA014 (TBL vs MTL) / PA015 (COL vs LAK) → 当日朝オッズ確認・GO/SKIP最終判断
-  ※ 4/18 JST朝にGEN003最新情報確認（怪我・先発変更）必須
+- [ ] 【最優先①】新規試合・オッズ情報のスクリーニング（ユーザー提供データ起点・重複除外）
+- [ ] 【優先②】アクティブGO推奨の最新情報確認（GEN003）
+  - ATP: Musetti vs Moutet R2（4/16 結果確認・WebFetch必須）
+  - UFL W4: Louisville Kings GO（4/17）/ Renegades GO（4/18）→ 結果確認
+  - NRL R7: Warriors vs Titans GO（4/18）→ 結果確認
+  - SL R8: Leeds GO（4/18）/ Warrington GO（4/19）→ 結果確認
+  - NHL PO G1: PA014 TBL vs MTL CAUTION / PA015 COL vs LAK CAUTION → オッズ確認
 
 - [x] 【最重要・次セッション最優先】Type Aアップセット分析 品質補完 ← A001-A013全件について以下を実施すること
   1. ニュース/ブログ/SNS/インタビュー記事をWebSearchで各試合ごとに検索（スコア確認だけでは不十分）
