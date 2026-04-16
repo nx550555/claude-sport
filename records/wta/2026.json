@@ -18,7 +18,7 @@
       "tier": "WTA500",
       "surface": "Clay (indoor)",
       "dates": "2026-04-13 to 2026-04-19",
-      "status": "r1_partial",
+      "status": "r2_screening_done",
       "note": "R1全12試合完了（4/13-14）。UPSET多発（indoor clay効果顕著）。GB001 Ostapenko HIT(+0.5375u)。",
       "checklist": [
         "tennisabstract.comでWTA cElo（Clay）上位選手を確認",
@@ -433,6 +433,138 @@
             "duration": "1h15m",
             "source": "WTA Official stats centre"
           }
+        },
+        {
+          "tournament": "Porsche Tennis Grand Prix Stuttgart",
+          "round": "R2",
+          "date": "2026-04-16",
+          "match": "Muchova K. vs Mertens E.",
+          "celo_p1": 1853.8,
+          "celo_p2": 1831.2,
+          "l1_diff": 22.6,
+          "l1_pass": false,
+          "tier": "skip",
+          "predicted_winner": "Muchova K.",
+          "prediction_confidence": 51,
+          "prediction_basis": "cElo diff 22.6pt < 80pt WTA L1 threshold. Near coin flip.",
+          "odds": {
+            "Muchova": 1.47,
+            "Mertens": 2.55
+          },
+          "hit": null,
+          "result": null
+        },
+        {
+          "tournament": "Porsche Tennis Grand Prix Stuttgart",
+          "round": "R2",
+          "date": "2026-04-16",
+          "match": "Alexandrova E. vs Noskova L.",
+          "celo_p1": 1784.4,
+          "celo_p2": 1764.6,
+          "l1_diff": 19.8,
+          "l1_pass": false,
+          "tier": "skip",
+          "predicted_winner": "Noskova L.",
+          "prediction_confidence": 51,
+          "prediction_basis": "cElo diff 19.8pt < 80pt WTA L1 threshold. Noskova slight market fav @1.77.",
+          "odds": {
+            "Alexandrova": 1.97,
+            "Noskova": 1.77
+          },
+          "hit": null,
+          "result": null
+        },
+        {
+          "tournament": "Porsche Tennis Grand Prix Stuttgart",
+          "round": "R2",
+          "date": "2026-04-16",
+          "match": "Parks A. vs Andreeva M.",
+          "celo_p1": 1515.3,
+          "celo_p2": 1961.8,
+          "l1_diff": 446.5,
+          "l1_pass": true,
+          "tier": "skip",
+          "predicted_winner": "Andreeva M.",
+          "prediction_confidence": 93,
+          "prediction_basis": "cElo diff 446.5pt (L1 pass). P(Andreeva)=0.929. EV=(0.929*1.07)-1=-0.6%. Odds @1.07 too short.",
+          "ev": -0.6,
+          "rec": null,
+          "skip_reason": "EV -0.6%. Market has Andreeva @1.07 (too short despite high confidence).",
+          "odds": {
+            "Parks": 7.4,
+            "Andreeva": 1.07
+          },
+          "hit": null,
+          "result": null
+        },
+        {
+          "tournament": "Porsche Tennis Grand Prix Stuttgart",
+          "round": "R2",
+          "date": "2026-04-17",
+          "match": "Rybakina E. vs Schneider D.",
+          "celo_p1": 2011.5,
+          "celo_p2": 1817.9,
+          "l1_diff": 193.6,
+          "l1_pass": true,
+          "tier": "skip",
+          "predicted_winner": "Rybakina E.",
+          "prediction_confidence": 75,
+          "prediction_basis": "cElo diff 193.6pt (L1 pass). P(Rybakina)=0.753. EV=(0.753*1.23)-1=-7.4%. Stuttgart indoor clay may slightly narrow gap.",
+          "ev": -7.4,
+          "rec": null,
+          "skip_reason": "EV -7.4%. Below +5% threshold.",
+          "odds": {
+            "Rybakina": 1.23,
+            "Schneider": 3.85
+          },
+          "hit": null,
+          "result": null
+        },
+        {
+          "tournament": "Porsche Tennis Grand Prix Stuttgart",
+          "round": "R2",
+          "date": "2026-04-17",
+          "match": "Samsonova L. vs Gauff C.",
+          "celo_p1": 1740.2,
+          "celo_p2": 2057.9,
+          "l1_diff": 317.7,
+          "l1_pass": true,
+          "tier": "skip",
+          "predicted_winner": "Gauff C.",
+          "prediction_confidence": 86,
+          "prediction_basis": "cElo diff 317.7pt (L1 pass). P(Gauff)=0.861. EV=(0.861*1.16)-1=-0.1%. Essentially break-even but below +5% threshold.",
+          "ev": -0.1,
+          "rec": null,
+          "skip_reason": "EV -0.1%. Below +5% threshold.",
+          "odds": {
+            "Samsonova": 4.9,
+            "Gauff": 1.16
+          },
+          "hit": null,
+          "result": null
+        },
+        {
+          "tournament": "Porsche Tennis Grand Prix Stuttgart",
+          "round": "R2",
+          "date": "2026-04-17",
+          "match": "Fernandez L. vs Sonmez Z.",
+          "celo_p1": 1697.2,
+          "celo_p2": 1616.0,
+          "l1_diff": 81.2,
+          "l1_pass": true,
+          "tier": "skip",
+          "predicted_winner": "Fernandez L.",
+          "prediction_confidence": 61,
+          "prediction_basis": "cElo diff 81.2pt (L1 pass 80+). P(Fernandez)=0.615. EV=(0.615*1.59)-1=-2.2%.",
+          "ev": -2.2,
+          "rec": null,
+          "skip_reason": "EV -2.2%. Below +5% threshold.",
+          "odds": {
+            "Fernandez": 1.59,
+            "Sonmez": 2.27
+          },
+          "hit": null,
+          "result": null
         }
       ]
     },
@@ -880,6 +1012,139 @@
             "https://www.news.de/sport/859523515/wta-tennis-15-04-2026-in-frankreich-liveticker-harmony-tan-gegen-anna-bondar/1/",
             "https://www.wtatennis.com/tournaments/2066/rouen/2026/scores/LS028"
           ]
+        },
+        {
+          "tournament": "WTA Rouen",
+          "round": "R2",
+          "date": "2026-04-16",
+          "match": "Salkova D. vs Maria T.",
+          "celo_p1": 1522.9,
+          "celo_p2": 1521.6,
+          "l1_diff": 1.3,
+          "l1_pass": false,
+          "tier": "skip",
+          "predicted_winner": "Salkova D.",
+          "prediction_confidence": 50,
+          "prediction_basis": "cElo diff 1.3pt - essentially equal. Coin flip.",
+          "odds": {
+            "Salkova": 1.37,
+            "Maria": 2.85
+          },
+          "hit": null,
+          "result": null
+        },
+        {
+          "tournament": "WTA Rouen",
+          "round": "R2",
+          "date": "2026-04-16",
+          "match": "Baptiste H. vs Simanovic I.",
+          "celo_p1": 1709.7,
+          "celo_p2": 1504.8,
+          "l1_diff": 204.9,
+          "l1_pass": true,
+          "tier": "skip",
+          "predicted_winner": "Baptiste H.",
+          "prediction_confidence": 77,
+          "prediction_basis": "cElo diff 204.9pt (L1 pass 80+). P(Baptiste)=0.765. EV=(0.765*1.23)-1=-5.9%.",
+          "ev": -5.9,
+          "rec": null,
+          "skip_reason": "EV -5.9%. Below +5% threshold.",
+          "odds": {
+            "Baptiste": 1.23,
+            "Simanovic": 3.75
+          },
+          "hit": null,
+          "result": null
+        },
+        {
+          "tournament": "WTA Rouen",
+          "round": "R2",
+          "date": "2026-04-17",
+          "match": "Cocciaretto E. vs Podrez V.",
+          "celo_p1": 1756.2,
+          "celo_p2": 1269.9,
+          "l1_diff": 486.3,
+          "celo_note": "Cocciaretto cElo from prev session (unconfirmed). Podrez cElo uncertain (rank 458).",
+          "l1_pass": true,
+          "tier": "skip",
+          "predicted_winner": "Cocciaretto E.",
+          "prediction_confidence": 79,
+          "prediction_basis": "cElo diff ~486pt (L1 pass). Dimers-based P(Cocciaretto)=0.79. EV=(0.79*1.23)-1=-2.7%. Data uncertain - CE005 caution.",
+          "ev": -2.7,
+          "rec": null,
+          "skip_reason": "EV -2.7%. Below +5% threshold. Podrez cElo uncertain.",
+          "odds": {
+            "Cocciaretto": 1.23,
+            "Podrez": 3.7
+          },
+          "hit": null,
+          "result": null
+        },
+        {
+          "tournament": "WTA Rouen",
+          "round": "R2",
+          "date": "2026-04-17",
+          "match": "Wang Xinyu vs Cirstea S.",
+          "celo_p1": 1668.6,
+          "celo_p2": 1781.9,
+          "l1_diff": 113.3,
+          "l1_pass": true,
+          "tier": "skip",
+          "predicted_winner": "Cirstea S.",
+          "prediction_confidence": 66,
+          "prediction_basis": "cElo diff 113.3pt (L1 pass 80+). P(Cirstea)=0.658. EV=(0.658*1.24)-1=-18.4%. Market massively overvalues Cirstea.",
+          "ev": -18.4,
+          "rec": null,
+          "skip_reason": "EV -18.4%. Market has Cirstea @1.24 but cElo P only 65.8%.",
+          "odds": {
+            "Wang": 3.65,
+            "Cirstea": 1.24
+          },
+          "hit": null,
+          "result": null
+        },
+        {
+          "tournament": "WTA Rouen",
+          "round": "R2",
+          "date": "2026-04-17",
+          "match": "Bondar A. vs Oliynykova O.",
+          "celo_p1": 1724.8,
+          "celo_p2": 1726.1,
+          "l1_diff": 1.3,
+          "l1_pass": false,
+          "tier": "skip",
+          "predicted_winner": "Oliynykova O.",
+          "prediction_confidence": 50,
+          "prediction_basis": "cElo diff 1.3pt - essentially equal. Coin flip.",
+          "odds": {
+            "Bondar": 1.85,
+            "Oliynykova": 1.85
+          },
+          "hit": null,
+          "result": null
+        },
+        {
+          "tournament": "WTA Rouen",
+          "round": "R2",
+          "date": "2026-04-17",
+          "match": "Kostyuk M. vs Li Ann",
+          "celo_p1": 1843.0,
+          "celo_p2": 1692.7,
+          "l1_diff": 150.3,
+          "l1_pass": true,
+          "tier": "skip",
+          "predicted_winner": "Kostyuk M.",
+          "prediction_confidence": 70,
+          "prediction_basis": "cElo diff 150.3pt (L1 pass 80+). P(Kostyuk)=0.704. EV=(0.704*1.30)-1=-8.5%.",
+          "ev": -8.5,
+          "rec": null,
+          "skip_reason": "EV -8.5%. Below +5% threshold.",
+          "odds": {
+            "Kostyuk": 1.3,
+            "Li Ann": 3.25
+          },
+          "hit": null,
+          "result": null
         }
       ]
     }

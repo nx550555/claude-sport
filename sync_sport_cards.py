@@ -153,7 +153,8 @@ def recalc_all_stats():
         stats = {}
     stats["sports"]  = sports
     stats["overview"] = overview
-    stats["last_updated"] = "2026-04-15"
+    import datetime
+    stats["last_updated"] = datetime.date.today().isoformat()
 
     with open(STATS_PATH, "w", encoding="utf-8") as f:
         json.dump(stats, f, ensure_ascii=False, indent=2)
@@ -353,12 +354,12 @@ def update_overview(content, overview):
         lambda m: f'{m.group(1)}{total_pending}{m.group(2)}',
         content
     )
-    # 待機中内訳
+    # 待機中内訳（bs-sub直前のbs-valが待機中数値の場合のみ更新）
     if breakdown:
         content = re.sub(
-            r'(<div class="bs-sub">)(ATP[^<]*)(</div>\s*</div>\s*</div>\s*</div>)',
-            lambda m: f'{m.group(1)}{breakdown}{m.group(3)}',
-            content, count=1
+            r'(<div class="bs-label">待機中</div>.*?<div class="bs-sub">)[^<]*(</div>\s*</div>)',
+            lambda m: f'{m.group(1)}{breakdown}{m.group(2)}',
+            content, count=1, flags=re.DOTALL
         )
     return content
 

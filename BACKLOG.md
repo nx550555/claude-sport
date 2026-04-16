@@ -20,11 +20,16 @@
 
 - [ ] 【最優先①】新規試合・オッズ情報のスクリーニング（ユーザー提供データ起点・重複除外）
 - [ ] 【優先②】アクティブGO推奨の最新情報確認（GEN003）
-  - ATP: Musetti vs Moutet R2（4/16 結果確認・WebFetch必須）
+  - ATP: Musetti vs Moutet R2（4/16結果・PA013 WAITING → 確認必須）
   - UFL W4: Louisville Kings GO（4/17）/ Renegades GO（4/18）→ 結果確認
-  - NRL R7: Warriors vs Titans GO（4/18）→ 結果確認
+  - NRL R7: Warriors vs Titans GO @1.25（4/18-19）→ 結果確認（PA008 WAITING）
   - SL R8: Leeds GO（4/18）/ Warrington GO（4/19）→ 結果確認
-  - NHL PO G1: PA014 TBL vs MTL CAUTION / PA015 COL vs LAK CAUTION → オッズ確認
+  - NHL PO G1: TBL vs MTL CAUTION min@1.38 / COL vs LAK CAUTION → 当日オッズ確認（PA014/PA015）
+  - NBA PO R1 G1: SAS vs POR GO @1.18（4/20 JST）→ 結果確認（PA017）
+- [x] ATP Barcelona R2 / Munich R2 スクリーニング完了（全SKIP/EV負）
+- [x] WTA Stuttgart R2 / Rouen R2 スクリーニング完了（全SKIP/EV負）
+- [x] WTA Stuttgart Paolini vs Sonmez 結果確認完了（Sonmez d. Paolini 6-2 6-2、MISS記録済）
+- [x] ダッシュボード全タブ整合性確認・修正完了（Session_38）
 
 - [x] 【最重要・次セッション最優先】Type Aアップセット分析 品質補完 ← A001-A013全件について以下を実施すること
   1. ニュース/ブログ/SNS/インタビュー記事をWebSearchで各試合ごとに検索（スコア確認だけでは不十分）

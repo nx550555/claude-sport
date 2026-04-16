@@ -674,10 +674,116 @@
       "type_a_watch": "ANA(P3) marginally higher 5v5 xGF% than EDM(P2). ANA win would NOT be xGF%-based upset.",
       "hit": null,
       "result": null
+    },
+    {
+      "_comment": "=== NHL RS Final Day 2026-04-16 ET (2026-04-17 JST) - 6 games SKIP (xGF% unavailable) ===",
+      "date": "2026-04-17",
+      "date_et": "2026-04-16",
+      "match": "St. Louis Blues @ Utah Mammoth",
+      "tier": "skip",
+      "predicted_winner": "Utah Mammoth",
+      "prediction_confidence": 53,
+      "prediction_basis": "Points% proxy: UTH 92pts(56.8%) vs STL 84pts(51.9%). diff 8pts. Market: both -110 (even). No xGF% available. RS final day lineup uncertainty.",
+      "skip_reason": "NHL RS final day: xGF% (L1 metric) unavailable. MoneyPuck/NST inaccessible via WebFetch. Lineup uncertainty (resting starters possible).",
+      "odds": {
+        "Blues": 1.87,
+        "Utah": 1.83
+      },
+      "hit": null,
+      "result": null
+    },
+    {
+      "date": "2026-04-17",
+      "date_et": "2026-04-16",
+      "match": "Nashville Predators vs Anaheim Ducks",
+      "tier": "skip",
+      "predicted_winner": "Anaheim Ducks",
+      "prediction_confidence": 50,
+      "prediction_basis": "Points%: ANA 104pts(63.4%) vs NSH 86pts(53.1%). BUT market says even (-110/-110) = strong signal ANA resting starters. No xGF% available.",
+      "skip_reason": "Market line (both -110) strongly implies ANA resting for PO. With major starters absent, game becomes coin flip. No xGF% available.",
+      "l4_note": "ANA has 104 pts but plays NSH at even money - confirms expected rest scenario.",
+      "odds": {
+        "Predators": 1.87,
+        "Ducks": 1.83
+      },
+      "hit": null,
+      "result": null
+    },
+    {
+      "date": "2026-04-17",
+      "date_et": "2026-04-16",
+      "match": "San Jose Sharks @ Winnipeg Jets",
+      "tier": "skip",
+      "predicted_winner": "Winnipeg Jets",
+      "prediction_confidence": 57,
+      "prediction_basis": "WPG -162 market favorite. SJS 84pts slightly higher than WPG 82pts but WPG has HCA. Both teams eliminated from PO. No xGF% available.",
+      "skip_reason": "Both teams eliminated. No xGF% available. No strong L1 signal.",
+      "odds": {
+        "Sharks": 2.21,
+        "Jets": 1.59
+      },
+      "hit": null,
+      "result": null
+    },
+    {
+      "date": "2026-04-17",
+      "date_et": "2026-04-16",
+      "match": "Los Angeles Kings @ Calgary Flames",
+      "tier": "skip",
+      "predicted_winner": "Los Angeles Kings",
+      "prediction_confidence": 62,
+      "prediction_basis": "LAK 90pts(PO-bound) vs CGY 58pts(eliminated). LAK -142 market favorite. LAK may rest some starters for PO. No xGF% available.",
+      "skip_reason": "No xGF% available. LAK starters rest risk for PO. Cannot confirm L1 with confidence.",
+      "odds": {
+        "Kings": 1.66,
+        "Flames": 2.1
+      },
+      "hit": null,
+      "result": null
+    },
+    {
+      "date": "2026-04-17",
+      "date_et": "2026-04-16",
+      "match": "Vancouver Canucks @ Edmonton Oilers",
+      "tier": "skip",
+      "predicted_winner": "Edmonton Oilers",
+      "prediction_confidence": 68,
+      "prediction_basis": "EDM 112pts(locked W2 PO) vs VAN 75pts(eliminated). EDM -325 market favorite. BUT EDM likely rests McDavid/Draisaitl for PO. No xGF% available.",
+      "skip_reason": "EDM locked W2 seed. High probability of star rest (McDavid/Draisaitl). No xGF% available.",
+      "odds": {
+        "Canucks": 3.45,
+        "Oilers": 1.27
+      },
+      "hit": null,
+      "result": null
+    },
+    {
+      "date": "2026-04-17",
+      "date_et": "2026-04-16",
+      "match": "Seattle Kraken @ Colorado Avalanche",
+      "tier": "skip",
+      "predicted_winner": "Colorado Avalanche",
+      "prediction_confidence": 63,
+      "prediction_basis": "COL 119pts(best in league, Presidents Trophy) vs SEA 79pts(eliminated). COL -185 market. COL may rest MacKinnon/Makar. No xGF% available.",
+      "skip_reason": "COL locked W1 seed. Starters rest risk. No xGF% available.",
+      "odds": {
+        "Kraken": 2.37,
+        "Avalanche": 1.52
+      },
+      "hit": null,
+      "result": null
     }
   ],
   "pending_games": [],
   "screening_log": [
+    {
+      "date": "2026-04-16",
+      "note": "NHL RS Final Day (6 games, 4/16 ET / 4/17 JST). xGF% unavailable (MoneyPuck/NST/Evolving-Hockey all return 403 or JS-only). All games SKIP due to: (1) no L1 metric, (2) RS final day lineup uncertainty (resting starters). Points% proxy used for predicted_winner only.",
+      "total_games": 6,
+      "go_recommendations": 0,
+      "skip": 6,
+      "skip_reason": "xGF% metric unavailable + lineup uncertainty"
+    },
     {
       "date": "2026-04-16",
       "note": "NHL PO R1 2026 - All 8 Series L1 Screening. Source: MoneyPuck 5v5 All Season xGF% (user Statsupdated.txt). RS ended 4/16, PO starts 4/18.",

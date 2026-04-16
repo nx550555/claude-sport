@@ -1,32 +1,17 @@
 {
   "date": "2026-04-16",
-  "updated_at": "2026-04-16T09:26:35.824Z",
+  "updated_at": "2026-04-16T12:51:53.813Z",
   "tournaments": [
     {
-      "tournament": "Multiple Rugby and Tennis Tournaments",
-      "category": "Mixed Sports",
+      "tournament": "NRL",
+      "category": "rugby_league",
       "sport": "rugby",
-      "date": "2024-04-16",
+      "date": "2024-04-17",
       "matches": {
-        "live": [
-          {
-            "tournament": "WTA Rouen, France",
-            "team1": "サルコバ・ドミニカ",
-            "team2": "マリア・タチャナ",
-            "current_time": "5m",
-            "odds": {
-              "team1": 1.37,
-              "team2": 2.85
-            },
-            "markets": [
-              "勝者"
-            ]
-          }
-        ],
+        "live": [],
         "completed": [],
         "upcoming": [
           {
-            "tournament": "NRL",
             "date": "2024-04-17",
             "start_time": "17:00",
             "team1": "ノースクイーンズランド・カウボーイズ",
@@ -40,7 +25,6 @@
             ]
           },
           {
-            "tournament": "NRL",
             "date": "2024-04-17",
             "start_time": "19:00",
             "team1": "キャンベラ・ライダース",
@@ -54,7 +38,6 @@
             ]
           },
           {
-            "tournament": "NRL",
             "date": "2024-04-18",
             "start_time": "14:00",
             "team1": "Dolphins (Nrl)",
@@ -68,7 +51,6 @@
             ]
           },
           {
-            "tournament": "NRL",
             "date": "2024-04-18",
             "start_time": "16:30",
             "team1": "ニュージランド・ウォリアーズ",
@@ -82,7 +64,6 @@
             ]
           },
           {
-            "tournament": "NRL",
             "date": "2024-04-18",
             "start_time": "18:35",
             "team1": "サウス・シドニー・ラビトス",
@@ -96,7 +77,6 @@
             ]
           },
           {
-            "tournament": "NRL",
             "date": "2024-04-19",
             "start_time": "13:00",
             "team1": "ウェスト・タイガース",
@@ -110,7 +90,6 @@
             ]
           },
           {
-            "tournament": "NRL",
             "date": "2024-04-19",
             "start_time": "15:05",
             "team1": "シドニー・ルースターズ",
@@ -124,9 +103,8 @@
             ]
           },
           {
-            "tournament": "NRL",
-            "date": "2024-04-17",
-            "start_time": "04:00",
+            "date": "2024-04-19",
+            "start_time": "",
             "team1": "パラマッタ・イールズ",
             "team2": "カンタベリー・ブルドックス",
             "odds": {
@@ -136,9 +114,20 @@
             "markets": [
               "勝者（延長とペナルティを含む)"
             ]
-          },
+          }
+        ]
+      }
+    },
+    {
+      "tournament": "Super League / England Premiership",
+      "category": "Rugby League / Rugby Union",
+      "sport": "rugby",
+      "date": "2024-04-17",
+      "matches": {
+        "live": [],
+        "completed": [],
+        "upcoming": [
           {
-            "tournament": "スーパーリーグ",
             "date": "2024-04-17",
             "start_time": "04:00",
             "team1": "ハルFC",
@@ -152,7 +141,6 @@
             ]
           },
           {
-            "tournament": "スーパーリーグ",
             "date": "2024-04-18",
             "start_time": "02:00",
             "team1": "トゥールーズ・オリンピケ XIII",
@@ -166,7 +154,6 @@
             ]
           },
           {
-            "tournament": "スーパーリーグ",
             "date": "2024-04-18",
             "start_time": "04:00",
             "team1": "ヨークシティナイツ",
@@ -180,7 +167,6 @@
             ]
           },
           {
-            "tournament": "スーパーリーグ",
             "date": "2024-04-18",
             "start_time": "04:00",
             "team1": "ハダースフィールドジャイアンツ",
@@ -194,7 +180,6 @@
             ]
           },
           {
-            "tournament": "スーパーリーグ",
             "date": "2024-04-18",
             "start_time": "23:00",
             "team1": "ワケフィエルド・トリニティ",
@@ -208,7 +193,6 @@
             ]
           },
           {
-            "tournament": "スーパーリーグ",
             "date": "2024-04-19",
             "start_time": "02:00",
             "team1": "バルサドラゴンズ",
@@ -222,7 +206,6 @@
             ]
           },
           {
-            "tournament": "スーパーリーグ",
             "date": "2024-04-19",
             "start_time": "23:00",
             "team1": "ウィガンウォリアーズ",
@@ -236,7 +219,6 @@
             ]
           },
           {
-            "tournament": "イングランドプレミアシップ",
             "date": "2024-04-18",
             "start_time": "03:45",
             "team1": "ブリストルRC・ビアース",
@@ -250,7 +232,6 @@
             ]
           },
           {
-            "tournament": "イングランドプレミアシップ",
             "date": "2024-04-18",
             "start_time": "23:00",
             "team1": "レスターFC・タイガース",
@@ -264,7 +245,6 @@
             ]
           },
           {
-            "tournament": "イングランドプレミアシップ",
             "date": "2024-04-18",
             "start_time": "23:05",
             "team1": "エクセターRC・チーフス",
@@ -278,7 +258,6 @@
             ]
           },
           {
-            "tournament": "イングランドプレミアシップ",
             "date": "2024-04-19",
             "start_time": "01:30",
             "team1": "バース・ラグビー",
@@ -292,7 +271,6 @@
             ]
           },
           {
-            "tournament": "イングランドプレミアシップ",
             "date": "2024-04-19",
             "start_time": "23:00",
             "team1": "セール・ラグビーユニオンFC・シャークス",
@@ -300,6 +278,753 @@
             "odds": {
               "team1": 2.22,
               "team2": 1.59
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tournament": "フランス選手権トップ14 / ラグビー、プロD2",
+      "category": "rugby",
+      "sport": "rugby",
+      "date": "2024-04-17",
+      "matches": {
+        "live": [],
+        "completed": [],
+        "upcoming": [
+          {
+            "date": "2024-04-18",
+            "start_time": "21:30",
+            "team1": "ラ・ロシェル",
+            "team2": "ユニオン・ボードー・ベグルズ",
+            "odds": {
+              "team1": 1.24,
+              "team2": 3.65
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2024-04-18",
+            "start_time": "23:35",
+            "team1": "US Montalbanaise",
+            "team2": "RCタウロナイズ",
+            "odds": {
+              "team1": 9.4,
+              "team2": 1.03
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2024-04-18",
+            "start_time": "23:35",
+            "team1": "モーングペリェー・エーロー・ラグビー",
+            "team2": "USAパーピグナン",
+            "odds": {
+              "team1": 1.03,
+              "team2": 9.2
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2024-04-18",
+            "start_time": "23:35",
+            "team1": "ASMクレアモント・オーベアン",
+            "team2": "ライオン・オー",
+            "odds": {
+              "team1": 1.11,
+              "team2": 5.6
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2024-04-18",
+            "start_time": "23:35",
+            "team1": "バイヨンヌ",
+            "team2": "セクション・パロワーズ",
+            "odds": {
+              "team1": 1.4,
+              "team2": 2.75
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2024-04-19",
+            "start_time": "04:00",
+            "team1": "キャスターズオリンピック",
+            "team2": "スタード・トゥールーザン",
+            "odds": {
+              "team1": 1.73,
+              "team2": 1.99
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2024-04-20",
+            "start_time": "04:05",
+            "team1": "レーシング92",
+            "team2": "ステードフランシスパリス",
+            "odds": {
+              "team1": 1.49,
+              "team2": 2.45
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2024-04-17",
+            "start_time": "04:00",
+            "team1": "アジャン",
+            "team2": "ビアリッツ",
+            "odds": {
+              "team1": 1.09,
+              "team2": 6
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2024-04-18",
+            "start_time": "02:00",
+            "team1": "Stade Montois Rugby",
+            "team2": "US Dax",
+            "odds": {
+              "team1": 1.24,
+              "team2": 3.6
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2024-04-18",
+            "start_time": "02:30",
+            "team1": "コロミアーズ・ラグビー",
+            "team2": "USカルカッソンヌ",
+            "odds": {
+              "team1": 1,
+              "team2": 12
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2024-04-18",
+            "start_time": "02:30",
+            "team1": "ブリーヴ",
+            "team2": "スタード・AURILLACOIS",
+            "odds": {
+              "team1": 1.02,
+              "team2": 9.6
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2024-04-18",
+            "start_time": "02:30",
+            "team1": "ウソン・ネバース",
+            "team2": "バレンスロマンスドロメ",
+            "odds": {
+              "team1": 1.46,
+              "team2": 2.55
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2024-04-18",
+            "start_time": "02:30",
+            "team1": "ソヨー・アングレーム",
+            "team2": "ラグビークラブ・ヴァンヌ",
+            "odds": {
+              "team1": 3.3,
+              "team2": 1.29
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2024-04-18",
+            "start_time": "02:30",
+            "team1": "ASベジエ・エロー",
+            "team2": "Provence Rugby",
+            "odds": {
+              "team1": 1.63,
+              "team2": 2.14
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2024-04-18",
+            "start_time": "04:00",
+            "team1": "FCグルノーブル・ラグビー",
+            "team2": "USオヨナ",
+            "odds": {
+              "team1": 1.39,
+              "team2": 2.75
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tournament": "ATP バルセロナ",
+      "category": "男子シングルス",
+      "sport": "tennis",
+      "date": "2024-04-16",
+      "matches": {
+        "live": [],
+        "completed": [],
+        "upcoming": [
+          {
+            "date": "2024-04-16",
+            "start_time": "20:30",
+            "player1": "ソネゴ・ロレンツォ",
+            "player2": "ルブレフ・アンドレイ",
+            "odds": {
+              "player1": 4,
+              "player2": 1.23
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-16",
+            "start_time": "23:00",
+            "player1": "ムテ・コランタン",
+            "player2": "ムセッティ・ロレンツォ",
+            "odds": {
+              "player1": 3.6,
+              "player2": 1.28
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-17",
+            "start_time": "02:30",
+            "player1": "フィル・アートゥ",
+            "player2": "ナカシマ・ブランドン",
+            "odds": {
+              "player1": 1.3,
+              "player2": 3.4
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-17",
+            "start_time": "18:00",
+            "player1": "ノリー・キャメロン",
+            "player2": "ホダル・ラファエル",
+            "odds": {
+              "player1": 3.05,
+              "player2": 1.36
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-17",
+            "start_time": "18:00",
+            "player1": "メジェドビッチ・ハマド",
+            "player2": "ボルジェス・ヌーノ",
+            "odds": {
+              "player1": 1.44,
+              "player2": 2.75
+            },
+            "markets": [
+              "勝者"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tournament": "ATP ミュンヘン",
+      "category": "男子シングルス",
+      "sport": "tennis",
+      "date": "2024-04-16",
+      "matches": {
+        "live": [],
+        "completed": [],
+        "upcoming": [
+          {
+            "date": "2024-04-16",
+            "start_time": "20:20",
+            "player1": "アルトマイアー・ダニエル",
+            "player2": "モルチャン・アレックス",
+            "odds": {
+              "player1": 1.74,
+              "player2": 2.06
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-16",
+            "start_time": "21:30",
+            "player1": "ツベレフ・アレクサンダー",
+            "player2": "ディアロ・ガブリエル",
+            "odds": {
+              "player1": 1.07,
+              "player2": 8
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-17",
+            "start_time": "18:00",
+            "player1": "シャポバロフ・デニス",
+            "player2": "マロジャン・ファビアン",
+            "odds": {
+              "player1": 2.11,
+              "player2": 1.7
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-17",
+            "start_time": "18:00",
+            "player1": "コボッリ・フラビオ",
+            "player2": "コプジバ・ヴィト",
+            "odds": {
+              "player1": 1.42,
+              "player2": 2.8
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-17",
+            "start_time": "00:00",
+            "player1": "フォンセカ・ジョアン",
+            "player2": "シェルトン・ベン",
+            "odds": {
+              "player1": 1.52,
+              "player2": 2.48
+            },
+            "markets": [
+              "勝者"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tournament": "WTA シュトゥットガルト",
+      "category": "女子シングルス",
+      "sport": "tennis",
+      "date": "2024-04-16",
+      "matches": {
+        "live": [],
+        "completed": [],
+        "upcoming": [
+          {
+            "date": "2024-04-16",
+            "start_time": "19:30",
+            "player1": "ムホバ・カロリナ",
+            "player2": "メルテンス・エリーズ",
+            "odds": {
+              "player1": 1.47,
+              "player2": 2.55
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-16",
+            "start_time": "20:40",
+            "player1": "アレクサンドロワ・エカテリーナ",
+            "player2": "ノスコバ・リンダ",
+            "odds": {
+              "player1": 1.97,
+              "player2": 1.77
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-16",
+            "start_time": "20:40",
+            "player1": "パークス・アリシア",
+            "player2": "アンドレーバ・ミッラ",
+            "odds": {
+              "player1": 7.4,
+              "player2": 1.07
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-17",
+            "start_time": "00:00",
+            "player1": "リバキナ・エレナ",
+            "player2": "シュナイダー・ディアナ",
+            "odds": {
+              "player1": 1.23,
+              "player2": 3.85
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-17",
+            "start_time": "01:30",
+            "player1": "サムソノワ・リュドミラ",
+            "player2": "ゴーフ・ココ",
+            "odds": {
+              "player1": 4.9,
+              "player2": 1.16
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-17",
+            "start_time": "02:40",
+            "player1": "フェルナンデス・レイラ",
+            "player2": "ソンメズ・ゼイネップ",
+            "odds": {
+              "player1": 1.59,
+              "player2": 2.27
+            },
+            "markets": [
+              "勝者"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tournament": "WTA Rouen, France Women Singles",
+      "category": "WTA",
+      "sport": "tennis",
+      "date": "2024-04-16",
+      "matches": {
+        "live": [],
+        "completed": [],
+        "upcoming": [
+          {
+            "date": "2024-04-16",
+            "start_time": "19:40",
+            "player1": "サルコバ・ドミニカ",
+            "player2": "マリア・タチャナ",
+            "odds": {
+              "player1": 1.37,
+              "player2": 2.85
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-16",
+            "start_time": "20:50",
+            "player1": "バプティスト・ヘイリー",
+            "player2": "シマノビッチ・イリーナ",
+            "odds": {
+              "player1": 1.23,
+              "player2": 3.75
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-17",
+            "start_time": "00:30",
+            "player1": "コッチャレット・エリザベッタ",
+            "player2": "ポドレス ベロニカ",
+            "odds": {
+              "player1": 1.23,
+              "player2": 3.7
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-17",
+            "start_time": "02:30",
+            "player1": "ワン・シンユー",
+            "player2": "チルステア・ソラナ",
+            "odds": {
+              "player1": 3.65,
+              "player2": 1.24
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-17",
+            "start_time": "18:30",
+            "player1": "ボンダル・アンナ",
+            "player2": "オリイニコワ・オレクサンドラ",
+            "odds": {
+              "player1": 1.85,
+              "player2": 1.85
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-17",
+            "start_time": "18:30",
+            "player1": "コスチューク・マルタ",
+            "player2": "リー・アン",
+            "odds": {
+              "player1": 1.3,
+              "player2": 3.25
+            },
+            "markets": [
+              "勝者"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tournament": "NBA",
+      "category": "basketball",
+      "sport": "basketball",
+      "date": "2024-04-18",
+      "matches": {
+        "live": [],
+        "completed": [],
+        "upcoming": [
+          {
+            "date": "2024-04-18",
+            "start_time": "08:30",
+            "team1": "オーランド マジック",
+            "team2": "シャーロット・ホーネッツ",
+            "odds": {
+              "team1": 2.34,
+              "team2": 1.58
+            },
+            "markets": [
+              "勝者（延長戦含む）"
+            ]
+          },
+          {
+            "date": "2024-04-18",
+            "start_time": "11:00",
+            "team1": "フェニックス サンズ",
+            "team2": "ゴールデン ステート ウォリアーズ",
+            "odds": {
+              "team1": 1.75,
+              "team2": 2.05
+            },
+            "markets": [
+              "勝者（延長戦含む）"
+            ]
+          },
+          {
+            "date": "2024-04-19",
+            "start_time": "02:00",
+            "team1": "クリーブランド・キャバリアーズ",
+            "team2": "トロント ラプターズ",
+            "odds": {
+              "team1": 1.27,
+              "team2": 3.65
+            },
+            "markets": [
+              "勝者（延長戦含む）"
+            ]
+          },
+          {
+            "date": "2024-04-19",
+            "start_time": "04:30",
+            "team1": "デンバー ナゲッツ",
+            "team2": "ミネソタ・ティンバーウルヴス",
+            "odds": {
+              "team1": 1.35,
+              "team2": 3.1
+            },
+            "markets": [
+              "勝者（延長戦含む）"
+            ]
+          },
+          {
+            "date": "2024-04-19",
+            "start_time": "07:00",
+            "team1": "ニューヨーク ニックス",
+            "team2": "アトランタ・ホークス",
+            "odds": {
+              "team1": 1.46,
+              "team2": 2.65
+            },
+            "markets": [
+              "勝者（延長戦含む）"
+            ]
+          },
+          {
+            "date": "2024-04-19",
+            "start_time": "09:30",
+            "team1": "ロサンゼルス レイカーズ",
+            "team2": "ヒューストン ロケッツ",
+            "odds": {
+              "team1": 2.75,
+              "team2": 1.43
+            },
+            "markets": [
+              "勝者（延長戦含む）"
+            ]
+          },
+          {
+            "date": "2024-04-20",
+            "start_time": "02:00",
+            "team1": "ボストン セルティックス",
+            "team2": "フィラデルフィア・セブンティーシクサーズ",
+            "odds": {
+              "team1": 1.13,
+              "team2": 5.8
+            },
+            "markets": [
+              "勝者（延長戦含む）"
+            ]
+          },
+          {
+            "date": "2024-04-20",
+            "start_time": "10:00",
+            "team1": "サンアントニオ スパーズ",
+            "team2": "ポートランドトレイルブレーザーズ",
+            "odds": {
+              "team1": 1.18,
+              "team2": 4.7
+            },
+            "markets": [
+              "勝者（延長戦含む）"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tournament": "ナショナルホッケーリーグ",
+      "category": "ice_hockey",
+      "sport": "ice_hockey",
+      "date": "2024-04-17",
+      "matches": {
+        "live": [],
+        "completed": [],
+        "upcoming": [
+          {
+            "date": "2024-04-17",
+            "start_time": "08:30",
+            "team1": "Utah Hockey Club",
+            "team2": "セントルイスブルース",
+            "odds": {
+              "team1": 1.83,
+              "team2": 1.87
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2024-04-17",
+            "start_time": "09:00",
+            "team1": "ナッシュビル・プレデターズ",
+            "team2": "アナハイム・ダックス",
+            "odds": {
+              "team1": 1.83,
+              "team2": 1.87
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2024-04-17",
+            "start_time": "09:00",
+            "team1": "ウィニペグ・ジェッツ",
+            "team2": "サンジョーズシャークス",
+            "odds": {
+              "team1": 1.59,
+              "team2": 2.21
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2024-04-17",
+            "start_time": "10:00",
+            "team1": "カルガリー・フレームズ",
+            "team2": "ロスアンジェルスキングス",
+            "odds": {
+              "team1": 2.1,
+              "team2": 1.66
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2024-04-17",
+            "start_time": "10:00",
+            "team1": "エドモントンオイラーズ",
+            "team2": "バンクーバー・カナックス",
+            "odds": {
+              "team1": 1.27,
+              "team2": 3.45
+            },
+            "markets": [
+              "勝者（延長とペナルティを含む)"
+            ]
+          },
+          {
+            "date": "2024-04-17",
+            "start_time": "11:00",
+            "team1": "コロラド・アバランチ",
+            "team2": "Seattle Kraken",
+            "odds": {
+              "team1": 1.52,
+              "team2": 2.37
             },
             "markets": [
               "勝者（延長とペナルティを含む)"

@@ -23,20 +23,21 @@
 |---|---|---|---|---|---|
 | PA001 | UFL | Week3 Dallas vs Columbus 結果確認・記録（GO Dallas EV+8.2% 信頼度82%） | DONE | 高 | 完了 4/14 |
 | PA016 | 全スポーツ | Type Aアップセット分析 品質補完（A001-A013 ニュース/ブログ/SNS多ソース検証 + rule_pipeline候補を rules_*.json に実装） | DONE | 最高 | 完了 2026-04-16 |
-| PA002 | ATP | W16 R2 スクリーニング（R1結果確認後・casino data起点） | PENDING | 高 | 4/14〜 |
+| PA002 | ATP | W16 R2 スクリーニング（Barcelona R2 4件 + Munich R2 5件 完了） | DONE | 高 | 完了 2026-04-16 |
 | PA003 | ATP | Barcelona/Munich GO3件の結果確認（Musetti@1.27/Cobolli@1.21/Kopriva@1.36 4/14開催） | DONE | 高 | 完了 4/15 全HIT |
-| PA004 | WTA | Stuttgart R2 スクリーニング（R1結果確認後） | PENDING | 高 | 4/14〜 |
+| PA004 | WTA | Stuttgart R2 + Rouen R2 スクリーニング完了（全試合SKIP/EV負） | DONE | 高 | 完了 2026-04-16 |
 | PA005 | NHL | 4/15 CAUTION2件ゴーリー確認完了: CAR@NYI=Andersen確認(N006解消)試合進行中 / COL@CGY=Blackwood起用→N016発動→SKIP推奨 | DONE | 高 | 完了 4/15 |
 | PA006 | NHL | PO R1 スクリーニング（RS終了4/16後、ブラケット確定→MoneyPuck xGF%起点） | DONE | 高 | 完了 4/16 |
 | PA014 | NHL | PO R1 TBL vs MTL CAUTION→GO確認（G1=4/18。TBL: Vasilevskiy確認済4-2 2.19GAA .912sv%。MTL: Dobes(29-10-4 2.78GAA .901sv%)。オッズ確認+min 1.38要） | PENDING | 高 | 4/18試合当日 |
 | PA015 | NHL | PO R1 COL vs LAK CAUTION（G1=4/18。Manson OUT(上半身)/Bednar返答済→playoff復帰見込。Kadri復帰見込。Blackwood 22-10-2 2.55GAA .901sv%。オッズ確認要） | PENDING | 中 | 4/18試合当日 |
+| PA017 | NBA | PO R1 SAS vs POR GO @1.18 結果確認（G1=4/20 JST。Wembanyama ACTIVE確認済。Lillard OUT全季。EV+5.6%） | WAITING | 高 | 4/20試合後 |
 | PA007 | NRL | R7 Broncos@Tigers オッズ確認（REVOKED済→odds discrepancy無効） | SKIP | 中 | Broncos REVOKED済 |
 | PA008 | NRL | R7 GO2件（Warriors 4/18/Broncos 4/18）・CAUTION2件の結果確認 | WAITING | 中 | 4/18〜19試合後 |
 | PA009 | NBA | Play-in（4/15-16）・PO R1（4/19〜）全SKIP確認済み。結果モニタリングのみ | WAITING | 低 | 継続 |
 | PA010 | MC2026 | F Alcaraz vs Sinner 結果確認（SKIP・観戦のみ） | DONE | 低 | 完了 4/14 Sinner 7-6(5) 6-3 |
 | PA011 | システム | 【フェーズ移行T3発動】実装済みルール3件達成→Phase2移行可否をユーザーに確認 | PENDING | 中 | 確認待ち |
 | PA012 | WTA | Stuttgart Zhang vs Noskova R1 結果確認 | DONE | 高 | 完了 4/16 Noskova d. Zhang 5-7 6-1 6-4 (予測HIT/SKIP nobet) |
-| PA013 | ATP | Barcelona R2 Musetti vs Moutet GO @1.37 結果確認 | DONE | 高 | 完了 4/16 Musetti HIT (ATP Tour公式確認) actual_ev +0.37u スコア未確認 |
+| PA013 | ATP | Barcelona R2 Musetti vs Moutet GO @1.37 結果確認 | WAITING | 高 | 4/16 14:00 UTC試合・ATP Tour結果未確認 |
 
 ---
 
@@ -106,3 +107,12 @@
   - PA014(TBL G1確認) / PA015(COL G1確認) 追加
 - PA013 Musetti vs Moutet: 14:00 UTC試合・結果未確認 (WAITING継続)
 - PA012 Zhang/Noskova: WTA公式でSet2=6-1表示 (記録の6-4と差異)。試合完了後に要確認
+---
+**Session_38 更新 (2026-04-16):**
+- PA002 DONE: ATP Barcelona R2(4件) + Munich R2(5件) スクリーニング完了 (全SKIP/EV負)
+- PA004 DONE: WTA Stuttgart R2(6件) + Rouen R2(6件) スクリーニング完了 (全SKIP/EV負)
+- NBA-003 追加: SAS vs POR GO @1.18 (EV+5.6%, Wembanyama ACTIVE, Lillard OUT) → PA017追加
+- NRL Warriors vs Titans: オッズ @1.22→@1.25更新 (EV 10.7%→13.4%)
+- NHL RS最終日6試合: 全SKIP (xGF%取得不可 + 主力温存リスク)
+- dashboard_stats.json更新: GO=29, confirmed=22, hit=17, P&L=+3.0u
+- PA013 DONE誤判定修正: 「Alcaraz, Musetti advance」=R1ハイライト（アルカラスはR2前に手首負傷ウォークオーバー）。Musetti vs Moutet R2は4/16 14:00 UTC開始予定。WAITINGに戻す。cumulative.json ATPも修正。

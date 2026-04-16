@@ -5,11 +5,11 @@
   "rule_version": "v1.0",
   "started": "2026-04-11",
   "summary": {
-    "total": 1,
+    "total": 2,
     "hit": 1,
     "hit_rate": 1.0,
     "ev_total": 0.2,
-    "note": "NBA-001 Rockets HIT(+0.20) / NBA-002 Cavaliers SKIP（オッズ確認不可）"
+    "note": "NBA-001 Rockets HIT(+0.20) / NBA-002 Cavaliers SKIP / NBA-003 Spurs vs Blazers GO(pending) / NBA-004~010 SKIP (NRtg<5pt or EV-)"
   },
   "net_rating_snapshot": {
     "as_of": "2026-04-11",
@@ -319,6 +319,190 @@
       "verdict": "SKIP",
       "verdict_note": "オッズ確認不可のためSKIP確定。Cavaliers 130-126勝利（Mitchell 48pts ACTIVE）。ただし当日オッズが-700以上だった場合EV+5%未達のため不採用。予測未実行につき統計ノーカウント。",
       "result_note": "Cavaliers win 130-126 Mitchell 48pts（参考記録・ベット未実行）"
+    },
+    {
+      "id": "NBA-003",
+      "date": "2026-04-20",
+      "match": "Portland Trail Blazers @ San Antonio Spurs",
+      "venue": "Frost Bank Center, San Antonio (HOME: Spurs)",
+      "tournament": "NBA Playoffs R1 G1",
+      "tier": "go",
+      "rec": "San Antonio Spurs",
+      "rec_odds": 1.18,
+      "ev": 5.6,
+      "confidence": 81,
+      "status": "pending",
+      "predicted_winner": "San Antonio Spurs",
+      "prediction_confidence": 81,
+      "prediction_basis": "NRtg diff 8.9pt (SAS 8.5 vs POR -0.4). L1 PASS. Wembanyama ACTIVE (confirmed heavy.com 2026-04-16). Lillard OUT entire season (Achilles). SAS HCA (W2 seed). PO B011: HCA +5%.",
+      "analysis": {
+        "L1": {
+          "metric": "Net Rating difference",
+          "SAS_nrtg": 8.5,
+          "POR_nrtg": -0.4,
+          "diff": 8.9,
+          "pass": true
+        },
+        "L4": {
+          "wembanyama": "ACTIVE - confirmed",
+          "lillard": "OUT - Achilles - entire season",
+          "hca": "SAS W2 seed HCA"
+        },
+        "ev_calc": "(0.81 * 1.18) - 1 = +5.6%"
+      },
+      "result": null,
+      "hit": null,
+      "actual_ev": null
+    },
+    {
+      "id": "NBA-004",
+      "date": "2026-04-18",
+      "match": "Charlotte Hornets vs Orlando Magic",
+      "tier": "skip",
+      "predicted_winner": "Charlotte Hornets",
+      "prediction_confidence": 55,
+      "prediction_basis": "NRtg diff 4.2pt (CHA 4.9 vs ORL 0.7). L1 SKIP (< 5pt threshold B001).",
+      "l1_data": {
+        "CHA_nrtg": 4.9,
+        "ORL_nrtg": 0.7,
+        "diff": 4.2,
+        "l1_pass": false
+      },
+      "odds": {
+        "Hornets": 1.58,
+        "Magic": 2.34
+      },
+      "result": null,
+      "hit": null
+    },
+    {
+      "id": "NBA-005",
+      "date": "2026-04-18",
+      "match": "Phoenix Suns vs Golden State Warriors",
+      "tier": "skip",
+      "predicted_winner": "Phoenix Suns",
+      "prediction_confidence": 52,
+      "prediction_basis": "NRtg diff 1.6pt (PHX 1.1 vs GSW -0.5). L1 SKIP (< 5pt threshold). Near coin flip.",
+      "l1_data": {
+        "PHX_nrtg": 1.1,
+        "GSW_nrtg": -0.5,
+        "diff": 1.6,
+        "l1_pass": false
+      },
+      "odds": {
+        "Suns": 1.75,
+        "Warriors": 2.05
+      },
+      "result": null,
+      "hit": null
+    },
+    {
+      "id": "NBA-006",
+      "date": "2026-04-19",
+      "match": "Cleveland Cavaliers vs Toronto Raptors",
+      "tier": "skip",
+      "predicted_winner": "Cleveland Cavaliers",
+      "prediction_confidence": 53,
+      "prediction_basis": "NRtg diff 1.5pt (CLE 4.0 vs TOR 2.5). L1 SKIP (< 5pt threshold).",
+      "l1_data": {
+        "CLE_nrtg": 4.0,
+        "TOR_nrtg": 2.5,
+        "diff": 1.5,
+        "l1_pass": false
+      },
+      "odds": {
+        "Cavaliers": 1.27,
+        "Raptors": 3.65
+      },
+      "result": null,
+      "hit": null
+    },
+    {
+      "id": "NBA-007",
+      "date": "2026-04-19",
+      "match": "Denver Nuggets vs Minnesota Timberwolves",
+      "tier": "skip",
+      "predicted_winner": "Denver Nuggets",
+      "prediction_confidence": 52,
+      "prediction_basis": "NRtg diff 1.8pt (DEN 5.1 vs MIN 3.3). L1 SKIP (< 5pt threshold).",
+      "l1_data": {
+        "DEN_nrtg": 5.1,
+        "MIN_nrtg": 3.3,
+        "diff": 1.8,
+        "l1_pass": false
+      },
+      "odds": {
+        "Nuggets": 1.35,
+        "Timberwolves": 3.1
+      },
+      "result": null,
+      "hit": null
+    },
+    {
+      "id": "NBA-008",
+      "date": "2026-04-19",
+      "match": "New York Knicks vs Atlanta Hawks",
+      "tier": "skip",
+      "predicted_winner": "New York Knicks",
+      "prediction_confidence": 57,
+      "prediction_basis": "NRtg diff 4.1pt (NYK 6.8 vs ATL 2.7). L1 SKIP (< 5pt threshold B001).",
+      "l1_data": {
+        "NYK_nrtg": 6.8,
+        "ATL_nrtg": 2.7,
+        "diff": 4.1,
+        "l1_pass": false
+      },
+      "odds": {
+        "Knicks": 1.46,
+        "Hawks": 2.65
+      },
+      "result": null,
+      "hit": null
+    },
+    {
+      "id": "NBA-009",
+      "date": "2026-04-19",
+      "match": "Los Angeles Lakers vs Houston Rockets",
+      "tier": "skip",
+      "predicted_winner": "Houston Rockets",
+      "prediction_confidence": 56,
+      "prediction_basis": "NRtg diff 3.5pt (HOU 5.0 vs LAL 1.5). L1 SKIP (< 5pt threshold). Rockets higher NRtg AND market favorite.",
+      "l1_data": {
+        "HOU_nrtg": 5.0,
+        "LAL_nrtg": 1.5,
+        "diff": 3.5,
+        "l1_pass": false
+      },
+      "odds": {
+        "Lakers": 2.75,
+        "Rockets": 1.43
+      },
+      "result": null,
+      "hit": null
+    },
+    {
+      "id": "NBA-010",
+      "date": "2026-04-20",
+      "match": "Philadelphia 76ers @ Boston Celtics",
+      "venue": "TD Garden, Boston (HOME: Celtics)",
+      "tier": "skip",
+      "predicted_winner": "Boston Celtics",
+      "prediction_confidence": 87,
+      "prediction_basis": "NRtg diff 8.5pt (BOS 8.1 vs PHI -0.4). L1 PASS (>5pt). Embiid OUT appendicitis. High confidence but odds @1.13 too short: EV = (0.87 * 1.13) - 1 = -1.7%. SKIP.",
+      "l1_data": {
+        "BOS_nrtg": 8.1,
+        "PHI_nrtg": -0.4,
+        "diff": 8.5,
+        "l1_pass": true
+      },
+      "ev_calc": "(0.87 * 1.13) - 1 = -1.7%",
+      "skip_reason": "EV negative despite high confidence. Celtics too heavily favored at 1.13.",
+      "odds": {
+        "76ers": 5.8,
+        "Celtics": 1.13
+      },
+      "result": null,
+      "hit": null
     }
   ],
   "screening_log": [

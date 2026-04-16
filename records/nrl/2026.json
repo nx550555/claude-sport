@@ -117,8 +117,9 @@
       "round": 7,
       "tier": "go",
       "rec": "NZ Warriors",
-      "rec_odds": 1.22,
-      "ev": 10.7,
+      "rec_odds": 1.25,
+      "ev": 13.4,
+      "odds_update_note": "2026-04-16: Updated from @1.22 to @1.25. EV recalculated: (0.907 * 1.25) - 1 = +13.4%.",
       "confidence": 90.7,
       "l1_data": {
         "NZW_PD_per_game": 8.7,
@@ -174,6 +175,100 @@
       "caution_reason": "odds_short — 1.18でEV+6.8%は閾値ギリギリ",
       "status": "skip",
       "skip_reason": "odds_short_final: 1.18 EV+6.8% at threshold limit, no margin for error. Originally CAUTION, formally SKIP after 2026-04-15 review."
+    },
+    {
+      "date": "2026-04-17",
+      "match": "North Queensland Cowboys vs Manly Sea Eagles",
+      "round": 7,
+      "tier": "skip",
+      "rec": null,
+      "status": "pending",
+      "skip_reason": "R012_early_season: PD/G diff 8.6pt (COW -2.3 vs MAN +6.3) < 12pt threshold. L1 not passed.",
+      "predicted_winner": "Manly Sea Eagles",
+      "prediction_confidence": 55,
+      "prediction_basis": "Manly PD/G +6.3 vs Cowboys -2.3 (diff 8.6pt). Note: market has Cowboys @1.50 as favorite despite lower PD/G - possible HCA or roster factor not captured.",
+      "l1_data": {
+        "COW_PD_per_game": -2.3,
+        "MAN_PD_per_game": 6.3,
+        "diff": 8.6,
+        "threshold": 12,
+        "rule": "R012_early_season",
+        "l1_pass": false
+      },
+      "odds": {"Cowboys": 1.5, "Manly": 2.42},
+      "hit": null,
+      "result": null
+    },
+    {
+      "date": "2026-04-17",
+      "match": "Canberra Raiders vs Melbourne Storm",
+      "round": 7,
+      "tier": "skip",
+      "rec": null,
+      "status": "pending",
+      "skip_reason": "R012_early_season: PD/G diff 11.5pt (CAN -11.2 vs MEL +0.3) < 12pt threshold. L1 not passed.",
+      "predicted_winner": "Melbourne Storm",
+      "prediction_confidence": 65,
+      "prediction_basis": "Storm PD/G +0.3 vs Raiders -11.2 (diff 11.5pt). Market confirms Storm @1.68 as favorite.",
+      "l1_data": {
+        "CAN_PD_per_game": -11.2,
+        "MEL_PD_per_game": 0.3,
+        "diff": 11.5,
+        "threshold": 12,
+        "rule": "R012_early_season",
+        "l1_pass": false
+      },
+      "odds": {"Raiders": 2.06, "Storm": 1.68},
+      "hit": null,
+      "result": null
+    },
+    {
+      "date": "2026-04-19",
+      "match": "Sydney Roosters vs Newcastle Knights",
+      "round": 7,
+      "tier": "skip",
+      "rec": null,
+      "status": "pending",
+      "skip_reason": "R012_early_season: PD/G diff 6.6pt (SYD -4.6 vs NEW +2.0) < 12pt threshold. L1 not passed.",
+      "predicted_winner": "Newcastle Knights",
+      "prediction_confidence": 52,
+      "prediction_basis": "Knights PD/G +2.0 vs Roosters -4.6 (diff 6.6pt). NOTE: market has Roosters @1.22 as strong favorite despite lower PD/G - significant market discrepancy. R012 SKIP masks potential GEN002-type anomaly.",
+      "l1_data": {
+        "SYD_PD_per_game": -4.6,
+        "NEW_PD_per_game": 2.0,
+        "diff": 6.6,
+        "threshold": 12,
+        "rule": "R012_early_season",
+        "l1_pass": false
+      },
+      "odds": {"Roosters": 1.22, "Knights": 3.8},
+      "market_vs_model_note": "Roosters are 1.22 market favorite but Knights have higher PD/G. Possible roster/HCA factor overriding raw stats.",
+      "hit": null,
+      "result": null
+    },
+    {
+      "date": "2026-04-19",
+      "match": "Parramatta Eels vs Canterbury Bulldogs",
+      "round": 7,
+      "tier": "skip",
+      "rec": null,
+      "status": "pending",
+      "skip_reason": "L1 passed (diff 18pt > 12pt R012 threshold) but EV -8.3%: (0.767 * 1.19) - 1 = -8.7%. Market correctly prices Bulldogs dominance.",
+      "predicted_winner": "Canterbury Bulldogs",
+      "prediction_confidence": 77,
+      "prediction_basis": "Bulldogs PD/G +1.0 vs Eels -17.0 (diff 18pt). L1 PASSED R012 threshold. Market: Bulldogs @1.19 (implied 84%). EV negative - SKIP.",
+      "l1_data": {
+        "PAR_PD_per_game": -17.0,
+        "CBY_PD_per_game": 1.0,
+        "diff": 18.0,
+        "threshold": 12,
+        "rule": "R012_early_season",
+        "l1_pass": true
+      },
+      "ev_calc": "(0.767 * 1.19) - 1 = -8.7%",
+      "odds": {"Eels": 4.2, "Bulldogs": 1.19},
+      "hit": null,
+      "result": null
     }
   ],
   "screening_log": [
