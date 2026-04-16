@@ -1,4 +1,4 @@
-{
+﻿{
   "description": "全8種目のアンダードッグ勝利・予測外れの要因分析。第一段階の精度向上と第二段階（逆転予測）への橋渡しデータ。",
   "phase": 1,
   "updated": "2026-04-11",
@@ -320,7 +320,10 @@
       "underdog_market": "Philadelphia Flyers",
       "result_score": "PHI 3-2 SO",
       "actual_winner": "Philadelphia Flyers",
-      "upset_factors": ["UFH04", "UF06"],
+      "upset_factors": [
+        "UFH04",
+        "UF06"
+      ],
       "factor_notes": {
         "UFH04": "CAR was resting key players late in RS (N016: goalie/lineup rest triggered). Andersen not confirmed → SKIP was correct.",
         "UF06": "CAR had motivation reduction (playoff spot secured, resting for PO). PHI played with full intensity as underdog."
@@ -342,7 +345,10 @@
       "underdog_market": "St. Louis Blues",
       "result_score": "STL 6-3",
       "actual_winner": "St. Louis Blues",
-      "upset_factors": ["UF06", "UFH04"],
+      "upset_factors": [
+        "UF06",
+        "UFH04"
+      ],
       "factor_notes": {
         "UF06": "STL motivated underdog at RS end — playing hard at home despite no PO hopes. High-scoring (6-3) indicates full-intensity performance.",
         "UFH04": "MIN had secured playoff position; motivation reduced relative to STL's fight-or-die posture."
@@ -364,7 +370,11 @@
       "underdog_market": "Vacherot V.(WC) @1.57",
       "result_score": "Vacherot 6-4 3-6 6-3",
       "actual_winner": "Vacherot V. (WC, Monaco)",
-      "upset_factors": ["UFT03", "UF07", "UF02"],
+      "upset_factors": [
+        "UFT03",
+        "UF07",
+        "UF02"
+      ],
       "factor_notes": {
         "UFT03": "Vacherot WC (Monaco native). QF at home MC — first Monegasque player to reach MC QF in Open Era. Maximum home crowd support in front of prince and nation.",
         "UF07": "Full home advantage: crowd, familiarity, conditions, mental freedom of the underdog with nothing to lose.",
@@ -389,7 +399,11 @@
       "underdog_market": "Shapovalov D. @~2.40",
       "result_score": "Shapovalov 6-4 3-6 6-2",
       "actual_winner": "Shapovalov D.",
-      "upset_factors": ["UF02", "UF05", "UF03"],
+      "upset_factors": [
+        "UF02",
+        "UF05",
+        "UF03"
+      ],
       "factor_notes": {
         "UF02": "Shapovalov returning to form — aggressive serve/forehand combo on clay. Market undervalued comeback potential at cElo 1728.",
         "UF05": "Shapovalov's flat/serve-centric style vs Griekspoor's clay baseline game created mismatch.",
@@ -412,7 +426,11 @@
       "underdog_market": "Marozsan F. @2.26",
       "result_score": "Marozsan 3-6 7-6(5) 6-4",
       "actual_winner": "Marozsan F.",
-      "upset_factors": ["UF06", "UF01", "UF04"],
+      "upset_factors": [
+        "UF06",
+        "UF01",
+        "UF04"
+      ],
       "factor_notes": {
         "UF06": "Tsitsipas MC R1 loss to Cerundolo = first-ever R1 exit at event with 22-4 prior record. Quoted: 'hit rock bottom'. Deep confidence crisis entering Munich.",
         "UF01": "Marozsan is a clay baseline specialist (Hungarian). His style well-suited to Munich outdoor clay even vs Tsitsipas.",
@@ -437,7 +455,11 @@
       "underdog_market": "New Zealand Warriors",
       "result_score": "Warriors 38 - Storm 14",
       "actual_winner": "New Zealand Warriors",
-      "upset_factors": ["UF02", "UF07", "UF06"],
+      "upset_factors": [
+        "UF02",
+        "UF07",
+        "UF06"
+      ],
       "factor_notes": {
         "UF02": "Warriors ended a 17-game NRL losing streak. Collective breakthrough moment — extreme pent-up motivation beyond standard metrics.",
         "UF07": "Warriors home advantage (NZ or home venue). Storm travelled for away game.",
@@ -461,7 +483,11 @@
       "underdog_market": "Sydney Roosters",
       "result_score": "Roosters 34 - Sharks 22",
       "actual_winner": "Sydney Roosters",
-      "upset_factors": ["UF03", "UF07", "UFN_new"],
+      "upset_factors": [
+        "UF03",
+        "UF07",
+        "UFN_new"
+      ],
       "factor_notes": {
         "UF03": "Early NRL season (R6) small sample PD. Sharks PD advantage overstated by outlier games in first 5 rounds.",
         "UF07": "Roosters strong home record at Allianz Stadium (Sydney). Home ground advantage underweighted.",
@@ -484,7 +510,11 @@
       "underdog_market": "Orlando Storm",
       "result_score": "Storm 29 - Louisville 27 OT",
       "actual_winner": "Orlando Storm",
-      "upset_factors": ["UF03", "UFU02", "UF04"],
+      "upset_factors": [
+        "UF03",
+        "UFU02",
+        "UF04"
+      ],
       "factor_notes": {
         "UF03": "conf 75% right at threshold. L1 diff was borderline. Storm was genuinely competitive, not a clear underdog.",
         "UFU02": "UFL W3: only 2 games of sample per team. PD/G has very wide confidence intervals in early season.",
@@ -507,7 +537,11 @@
       "underdog_market": "St. Louis Battlehawks",
       "result_score": "Battlehawks 34 - Stallions 30",
       "actual_winner": "St. Louis Battlehawks",
-      "upset_factors": ["UF03", "UF07", "UFU02"],
+      "upset_factors": [
+        "UF03",
+        "UF07",
+        "UFU02"
+      ],
       "factor_notes": {
         "UF03": "L1 PD差5pt is borderline. Effectively equal teams. Close result (4pt) confirms this.",
         "UF07": "St. Louis home game. Battlehawks have one of the strongest home crowds in UFL (STL market passionate football city).",
@@ -530,7 +564,11 @@
       "underdog_market": "Ugo Carabelli C. @~3.0+",
       "result_score": "Carabelli 6-4 6-3",
       "actual_winner": "Ugo Carabelli C.",
-      "upset_factors": ["UF03", "UF01", "UF02"],
+      "upset_factors": [
+        "UF03",
+        "UF01",
+        "UF02"
+      ],
       "factor_notes": {
         "UF03": "cElo差82pt is borderline — below our 100pt threshold. Effectively close match. Carabelli (Argentina) is a clay specialist; Khachanov's clay cElo may be overestimated.",
         "UF01": "Carabelli from Argentina — clay is his natural surface. Khachanov is primarily a hard court player with limited clay record.",
@@ -539,6 +577,35 @@
       "screening_decision_review": "SKIP was correct (L1未達 at 82pt). But the 6-4 6-3 scoreline shows Carabelli was dominant, not just lucky. The 82pt cElo gap may overestimate Khachanov's clay advantage. Rule improvement: clay specialists from Argentina/Spain should get a surface bonus in WTA/ATP cElo calculations.",
       "what_signal_could_detect": "Hard court player vs clay specialist in diff range 70-100pt = effectively coin flip on clay. Market over-prices the hard court player's ranking.",
       "rule_candidate": "P012: Clay specialist bonus for ATP: Argentine/Spanish clay specialists receive +15pt to effective clay cElo when L1 diff < 120pt. Reduces false confidence in hard-court-ranked players.",
+      "miss_layer": null
+    },
+    {
+      "id": "A012",
+      "type": "type_a",
+      "type_note": "Type A: CAUTION（no-bet）だった試合でアップセット発生。スクリーニング閾値・CAUTION判断の妥当性検証用。",
+      "date": "2026-04-14",
+      "sport": "tennis_atp",
+      "tournament": "BMW Open Munich 2026",
+      "round": "R1",
+      "our_verdict": "CAUTION (Bublik conf 65.5% -> R010 SKIP/no-bet。Molcan upset risk明示的にflag済)",
+      "favorite_market": "Bublik A.(3) @1.34 (seeded 3rd, cElo1900)",
+      "underdog_market": "Molcan A. @3.2 (cElo~1765)",
+      "result_score": "Molcan A. 6-4 6-2",
+      "actual_winner": "Molcan A.",
+      "upset_factors": [
+        "UF06",
+        "UF05",
+        "UFT02"
+      ],
+      "factor_notes": {
+        "UF06": "Bublik had just lost MC R3 vs Alcaraz 1-6 3-6 (bagel set). Mental reset in Munich R1 as 3rd seed may have been incomplete.",
+        "UF05": "MC QF base adjustment -3% applied (within 2 weeks window). 6-4 6-2 scoreline suggests actual fatigue/mental drop may warrant -5% not -3%.",
+        "UFT02": "Molcan noted as 'Djokovic beater' quality — dangerous clay opponent. Our system flagged this explicitly in the note. CAUTION verdict was CORRECT."
+      },
+      "screening_decision_review": "CAUTION判断は正しかった。Bublikへのbet推奨を出さなかったことで損失回避。ただし65.5%のconfidence算出では'upset risk有り'と明示flagできていた点は評価ポイント。MC QF後疲労補正は-3%で計算したが、6-4 6-2の大差を見ると実際の下落は-5%〜-7%程度だった可能性。",
+      "what_signal_could_detect": "直前大会でQF以上を戦い、同週別大会に移動した選手は第1試合で疲労による性能低下が顕著。現状-3%より大きい補正（-5%）が妥当。",
+      "rule_candidate": "P013: ATP 500/250 seeded player who played QF+ at previous week's tournament: fatigue adjustment -5% (not -3%) for first match of next tournament within 7 days.",
+      "note_special": "CE010関連: casino dataに'Bublik vs Hurkacz'のphantom entryが存在（Hurkacz withdrew）。実際の対戦相手はMolcan。phantom entryはtier=invalidで無効化済み。",
       "miss_layer": null
     }
   ],
@@ -612,7 +679,7 @@
     ]
   },
   "pattern_summary": {
-    "total_upsets_tracked": 19,
+    "total_upsets_tracked": 20,
     "last_updated": "2026-04-16",
     "gamble_bet_results": {
       "total": 1,

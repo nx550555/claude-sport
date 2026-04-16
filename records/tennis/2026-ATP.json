@@ -964,7 +964,7 @@
       "match": "Bublik A.(3) vs Hurkacz H.",
       "l1_diff": 156.9,
       "l1_pass": true,
-      "tier": "skip",
+      "tier": "invalid",
       "rec": null,
       "confidence": null,
       "skip_reason": "試合中のためベット不可。L1通過だが時間窓締切済み。",
@@ -975,7 +975,11 @@
       "rules_applied": [
         "R001"
       ],
-      "note": "Bublik cElo1900 vs Hurkacz cElo1744。差157でL1通過。4/13試合中・スクリーニング窓締切済み。"
+      "note": "Bublik cElo1900 vs Hurkacz cElo1744。差157でL1通過。4/13試合中・スクリーニング窓締切済み。",
+      "ce_error": "CE010",
+      "invalidation_note": "Casino data error: this match was never played. Hurkacz withdrew before R1. Actual match: Molcan A. vs Bublik A.(3) on 2026-04-14 (separate entry). l1_diff 156.9pt was valid but opponent was wrong.",
+      "prediction_hit": null,
+      "predicted_winner": null
     },
     {
       "tournament": "BMW Open Munich",
@@ -1199,7 +1203,12 @@
         "R001",
         "R010"
       ],
-      "note": "Bublik cElo1900 vs Molcan cElo~1765（差135）。MCでAlcarazに1-6 3-6で大敗後Munich参戦。疲労補正で信頼度65.5%→SKIP。CAUTION: Molcan upset候補（Djokovic撃破歴あり）。 | Molcan UPSET Bublik(3) 6-4 6-2. CAUTION rec=null (Bublik conf 65.5% -> SKIP). Molcan upset was flagged as risk."
+      "note": "Bublik cElo1900 vs Molcan cElo~1765（差135）。MCでAlcarazに1-6 3-6で大敗後Munich参戦。疲労補正で信頼度65.5%→SKIP。CAUTION: Molcan upset候補（Djokovic撃破歴あり）。 | Molcan UPSET Bublik(3) 6-4 6-2. CAUTION rec=null (Bublik conf 65.5% -> SKIP). Molcan upset was flagged as risk.",
+      "predicted_winner": "Bublik A.",
+      "prediction_confidence": 65.5,
+      "prediction_basis": "cElo: Bublik 1900 vs Molcan ~1765 (+135pt L1通過). MC QF後疲労-3%調整で信頼度65.5% → R010でSKIP/CAUTION止まり。Molcan upset risk flagged (Djokovic beater).",
+      "prediction_hit": false,
+      "type_a_upset_id": "A012"
     },
     {
       "tournament": "BMW Open Munich",
