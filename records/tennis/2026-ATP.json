@@ -583,12 +583,16 @@
       "ev_est": null,
       "confidence": null,
       "skip_reason": "L1未達（差25 < 閾値100）",
-      "result": null,
-      "score": null,
+      "result": "Etcheverry T.M.",
+      "score": "3-6 6-3 4-1 ret.",
       "hit": null,
       "actual_ev": null,
       "rules_applied": [],
-      "note": "Etcheverry cElo1789 vs Draper cElo1815。H2H 2-0 Etcheverry。Etcheverry R2以降で注目。"
+      "note": "Etcheverry cElo1789 vs Draper cElo1815。H2H 2-0 Etcheverry。Etcheverry R2以降で注目。",
+      "predicted_winner": "Etcheverry T.M.",
+      "prediction_confidence": 55,
+      "prediction_basis": "cElo: Draper 1815 > Etcheverry 1789 (+26pt) but H2H 2-0 Etcheverry on clay + clay specialist. L1 diff insufficient (25pt). Essentially coin flip, H2H/surface edge to Etcheverry.",
+      "prediction_hit": true
     },
     {
       "tournament": "Barcelona Open Banc Sabadell",
