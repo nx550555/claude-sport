@@ -1,4 +1,4 @@
-﻿{
+{
   "description": "全8種目のアンダードッグ勝利・予測外れの要因分析。第一段階の精度向上と第二段階（逆転予測）への橋渡しデータ。",
   "phase": 1,
   "updated": "2026-04-11",
@@ -299,13 +299,18 @@
       ],
       "factor_notes": {
         "UF07": "Lys WC (German home player in Stuttgart). Home crowd advantage. Court/conditions familiarity.",
-        "UF08": "Badosa ranked #102 due to extended injury. Market priced her at 1.32 (76% implied) based on pre-injury peak reputation. Badosa 15 DFs reflects poor physical condition post-comeback."
+        "UF08": "Badosa ranked #106 at match time due to extended injury (season of inconsistency: R32 Charleston, R1 Linz). Market priced her at 1.32 (76% implied) based on pre-injury peak reputation. Badosa 15 DFs reflects poor physical condition post-comeback. SOURCE CONFIRMED: puntodebreak.com 'Badosa also fails to surpass the debut in Stuttgart'. tennis.com: 'Eva Lys battles past Paula Badosa to end losing skid' - Lys herself was also on a losing run, making this a form-uncertain matchup for both."
       },
       "screening_decision_review": "SKIP was correct (no bet). But: when former top-10 returns from injury at #102, market over-prices based on name. L1 was unverifiable (Badosa injury) = correct outcome. Signal for future: injury comeback player at rank 100+ vs home WC = upset flag.",
       "what_signal_could_detect": "Pre-match signal: player's current ranking >40 positions below 52-week high rank → injury comeback discount. Home WC + opponent injury comeback = elevated upset probability.",
       "rule_candidate": "P009: Injury comeback player discount. If favorite's rank > 40 spots below 52-week peak, apply -10% to market implied probability.",
       "learning": "Market over-values big-name returning injury players based on reputation (not current fitness). Our cElo was correctly marked as unverifiable. Type A: home WC + opponent injury comeback is a detectable pre-match upset signal.",
-      "miss_layer": null
+      "miss_layer": null,
+      "sources": [
+        "puntodebreak.com: Badosa also fails to surpass the debut in Stuttgart (2026-04-14)",
+        "tennis.com: Eva Lys battles past Paula Badosa to end losing skid (Stuttgart Highlights)",
+        "WTA Official score page: Lys vs. Badosa Round of 32 Porsche Tennis Grand Prix 2026"
+      ]
     },
     {
       "id": "A002",
@@ -325,12 +330,17 @@
         "UF06"
       ],
       "factor_notes": {
-        "UFH04": "CAR was resting key players late in RS (N016: goalie/lineup rest triggered). Andersen not confirmed → SKIP was correct.",
+        "UFH04": "CAR was resting key players (N016: seeding secured, motivated to rest for PO). CRITICAL NEW CONTEXT: PHI was playing for a PLAYOFF CLINCHER (first berth since 2020). PHI had maximum motivational asymmetry vs CAR's rest management. Score 3-2 SO — Matvei Michkov + Trevor Zegras scored for PHI; PHI clinched East playoff spot. CAR still got the loser point needed to secure East top seed — both teams got what they needed.",
         "UF06": "CAR had motivation reduction (playoff spot secured, resting for PO). PHI played with full intensity as underdog."
       },
       "screening_decision_review": "SKIP was correct (N016発動). Result validates that N016 lineup-rest rule correctly removes false GO candidates. PHI SO win shows how effective rest-team lineup is reduced.",
       "rule_candidate": null,
-      "miss_layer": null
+      "miss_layer": null,
+      "sources": [
+        "nhl.com: Flyers clinch playoff spot with shootout win against Hurricanes (2026-04-13)",
+        "espn.com: Flyers 3-2 Hurricanes Final Score",
+        "washingtonpost.com: Flyers beat East top seed Hurricanes 3-2 in SO and secure first playoff berth since 2020"
+      ]
     },
     {
       "id": "A003",
@@ -350,12 +360,17 @@
         "UFH04"
       ],
       "factor_notes": {
-        "UF06": "STL motivated underdog at RS end — playing hard at home despite no PO hopes. High-scoring (6-3) indicates full-intensity performance.",
+        "UF06": "STL came back from 3-1 deficit with 5 unanswered goals — maximum intensity at home. MIN had secured playoff position; motivation reduced relative to STL's desperate home rally. NHL.com headline: 'Blues score 5 unanswered goals, rally past Wild'. Buchnevich scored 200th NHL career goal (personal milestone motivation). Joel Hofer made 28 saves (hot goalie). Result: 6-3 STL comeback win confirms R001 xGF% advantage alone does not capture game-day intensity asymmetry.",
         "UFH04": "MIN had secured playoff position; motivation reduced relative to STL's fight-or-die posture."
       },
       "screening_decision_review": "SKIP was appropriate. STL 6-3 dominant win shows how RS-end motivation asymmetry can produce outsized upsets. xGF% alone doesn't capture game-day intensity.",
       "rule_candidate": null,
-      "miss_layer": null
+      "miss_layer": null,
+      "sources": [
+        "nhl.com: Blues score 5 unanswered goals, rally past Wild (2026-04-13)",
+        "espn.com: Blues 6-3 Wild Final Score",
+        "cbssports.com: Minnesota Wild vs. St. Louis Blues Game Recap April 13 2026"
+      ]
     },
     {
       "id": "A004",
@@ -376,7 +391,7 @@
         "UF02"
       ],
       "factor_notes": {
-        "UFT03": "Vacherot WC (Monaco native). QF at home MC — first Monegasque player to reach MC QF in Open Era. Maximum home crowd support in front of prince and nation.",
+        "UFT03": "CORRECTION: Vacherot became first player from Monaco to reach Monte-Carlo Masters SEMI-FINAL in Open Era (not just QF - tennismajors.com: 'Vacherot stuns de Minaur to become the first Monegasque in a Monte-Carlo Masters semifinal'; ATP Tour: 'Home hope Vacherot downs De Minaur for fairytale SF spot in Monte-Carlo'). Full path to QF: beat Musetti (4th seed, R2) + Hurkacz (R3) before de Minaur - two top-10 home wins. ATP Tour: Vacherot saved 13 BPs en route to Monte-Carlo SFs. Maximum home crowd with Monaco prince in attendance.",
         "UF07": "Full home advantage: crowd, familiarity, conditions, mental freedom of the underdog with nothing to lose.",
         "UF02": "Vacherot on hot streak: R32 d. Hurkacz(PR) — our model correctly predicted this HIT (GO @1.57 +0.57u). QF momentum carry is a real effect."
       },
@@ -384,7 +399,12 @@
       "what_signal_could_detect": "WC home player who beat seeded opponent in prior round: +5% momentum bonus → moves 70% → 75% = right at GO threshold. Would have caught this.",
       "rule_candidate": "P010: WC home player consecutive round momentum bonus +5%. If WC home beat seeded player in previous round, increase next-round confidence by 5%.",
       "miss_layer": null,
-      "learning": "MC2026 QF upset validates home crowd + hot-streak compounding. Model correctly had Vacherot as GO in R16 — the same logic should carry to QF."
+      "learning": "MC2026 QF upset validates home crowd + hot-streak compounding. Model correctly had Vacherot as GO in R16 — the same logic should carry to QF.",
+      "sources": [
+        "tennismajors.com: Vacherot stuns de Minaur to become the first Monegasque in a Monte-Carlo Masters semifinal",
+        "atptour.com: Vacherot continues historic run, saves 13 BPs en route to Monte-Carlo SFs",
+        "atptour.com: Home hope Vacherot downs De Minaur for fairytale SF spot in Monte-Carlo (highlights)"
+      ]
     },
     {
       "id": "A005",
@@ -411,7 +431,11 @@
       },
       "screening_decision_review": "SKIP was correct (L1未達). Result confirms cElo差<50pt matches are genuinely unpredictable. No issue with SKIP decision.",
       "rule_candidate": null,
-      "miss_layer": null
+      "miss_layer": null,
+      "sources": [
+        "tsn.ca: Shapovalov beats Griekspoor, moves into second round at BMW Open",
+        "chroniclejournal.com: Shapovalov beats Griekspoor (confirmed score 6-4 3-6 6-2)"
+      ]
     },
     {
       "id": "A006",
@@ -432,7 +456,7 @@
         "UF04"
       ],
       "factor_notes": {
-        "UF06": "Tsitsipas MC R1 loss to Cerundolo = first-ever R1 exit at event with 22-4 prior record. Quoted: 'hit rock bottom'. Deep confidence crisis entering Munich.",
+        "UF06": "SOURCE VERIFIED: puntodebreak.com HEADLINE (Munich match): 'Tsitsipas hits rock bottom with a new defeat' - media characterization of Munich loss, not a direct Tsitsipas quote. Confirmed Tsitsipas post-Munich quote: 'I accept my current position, understanding that this is part of the process.' (tennisuptodate.com). KEY CONTEXT: Tsitsipas made deliberate schedule SWITCH from Barcelona to Munich (tennis365.com: 'Tsitsipas Munich switch backfires as rankings slide continues'). Ranking set to fall outside Top 75. MATCH NOTE: Match was suspended mid-way and completed next morning (tennisuptodate.com). MC R1 loss to Cerundolo = first-ever R1 exit at MC (22-4 prior record); Munich continued downward spiral.",
         "UF01": "Marozsan is a clay baseline specialist (Hungarian). His style well-suited to Munich outdoor clay even vs Tsitsipas.",
         "UF04": "MC (Monaco) → Munich cross-tournament travel. Physical and mental depletion post-MC disaster."
       },
@@ -440,7 +464,13 @@
       "what_signal_could_detect": "Career-worst tournament result (first-ever R1 exit after 20+ appearance history) triggers -10% mental penalty, not just -5%.",
       "rule_candidate": "P011: Career-worst tournament result (first-ever R1 exit at event with 20+ prior appearances) triggers -10% mental penalty instead of standard -5% form adjustment.",
       "miss_layer": null,
-      "learning": "Our model correctly SKIP'd this match via R010 + form adjustment. Validates the MC-form-slump rule chain."
+      "learning": "Our model correctly SKIP'd this match via R010 + form adjustment. Validates the MC-form-slump rule chain.",
+      "sources": [
+        "puntodebreak.com: Tsitsipas hits rock bottom with a new defeat (2026-04-15)",
+        "tennisuptodate.com: I accept my current position - Tsitsipas faces restart after Munich match suspension",
+        "tennis365.com: Tsitsipas Munich switch backfires as rankings slide continues",
+        "cypress-mail.com: Tsitsipas Munich switch backfires as rankings slide continues"
+      ]
     },
     {
       "id": "A007",
@@ -461,14 +491,20 @@
         "UF06"
       ],
       "factor_notes": {
-        "UF02": "Warriors ended a 17-game NRL losing streak. Collective breakthrough moment — extreme pent-up motivation beyond standard metrics.",
+        "UF02": "Warriors ended a 17-game H2H losing streak specifically against Melbourne Storm - NOT a general season losing streak. First Warriors win in Melbourne in 12 years. SOURCE: newswire.co.nz: 'Warriors End 12-Year Melbourne Hoodoo with Dominant 38-14 Demolition of Storm'. ESPN: 'Warriors rock Storm to serve up fourth straight loss' (Storm 4th consecutive loss). Coach Webster revealed deliberate 'themed build-up' to break streak: 'We wanted to change history' (sportnation.nz). HT: Warriors 18-14 Storm - then 3 tries in first 11 min after restart turned it to 36-14 blowout.",
         "UF07": "Warriors home advantage (NZ or home venue). Storm travelled for away game.",
         "UF06": "Storm had secured playoff contention — intensity potentially lower than Warriors' desperation to end the streak."
       },
       "screening_decision_review": "38-14 final margin is enormous. Losing-streak-ending effect is systematically under-modeled. Even if SKIP was correct, this warrants a new NRL rule candidate.",
       "what_signal_could_detect": "Team attempting to end a 10+ game losing streak has significant elevated motivation. Flag opponent team as reduced-confidence target.",
       "rule_candidate": "NRL_R_new2: Extreme losing streak (10+ games) = opponent motivation penalty -8%. Apply to team they are facing.",
-      "miss_layer": null
+      "miss_layer": null,
+      "sources": [
+        "newswire.co.nz: Warriors End 12-Year Melbourne Hoodoo with Dominant 38-14 Demolition of Storm (2026-04-11)",
+        "espn.com: Warriors rock Storm to serve up fourth straight loss (NRL Round 6 report)",
+        "sportnation.nz: We wanted to change history - Webster reveals Warriors themed build-up",
+        "nrl.com: Storm v Warriors Round 6 2026 match centre"
+      ]
     },
     {
       "id": "A008",
@@ -490,12 +526,17 @@
       ],
       "factor_notes": {
         "UF03": "Early NRL season (R6) small sample PD. Sharks PD advantage overstated by outlier games in first 5 rounds.",
-        "UF07": "Roosters strong home record at Allianz Stadium (Sydney). Home ground advantage underweighted.",
+        "UF07": "CORRECTION: Game was played at OPTUS STADIUM PERTH — NEUTRAL venue for both Sydney teams (previously incorrectly noted as Roosters home at Allianz Stadium). Roosters came back from 22-6 deficit at a neutral Perth ground. Sharks may have had slight Perth crowd advantage (popular travel destination for Sharks fans). Roosters' comeback at neutral/away venue is even more impressive than initially noted.",
         "UFN_new": "Same small-sample NRL factor as U005: R6 PDG less reliable than R12+ data. Sharks PD inflated by early-season outlier results."
       },
-      "screening_decision_review": "SKIP was appropriate given uncertainty. 34-22 shows Roosters clearly outperformed expectations. Validates R12 (early season small sample restriction).",
+      "screening_decision_review": "SKIP was appropriate. 34-22 comeback from 22-6 shows Roosters outperformed despite playing at neutral venue in Perth (not home). CORRECTION: UF07 home advantage was misidentified. The actual NRL small-sample factor (UFN_new/R012) was the primary driver. Game pattern: Sharks dominated first half 22-12, Roosters swept second half. 'Game of two halves' validates R012 (small sample PDG unreliable early season).",
       "rule_candidate": null,
-      "miss_layer": null
+      "miss_layer": null,
+      "sources": [
+        "nrl.com: Sharks v Roosters Round 6 2026 match centre",
+        "leagueunlimited.com: Red-hot Roosters stun Sharks in big comeback",
+        "zerotackle.com: Sharks vs Roosters Round 6 2026 live scores and stats"
+      ]
     },
     {
       "id": "A009",
@@ -517,12 +558,18 @@
       ],
       "factor_notes": {
         "UF03": "conf 75% right at threshold. L1 diff was borderline. Storm was genuinely competitive, not a clear underdog.",
-        "UFU02": "UFL W3: only 2 games of sample per team. PD/G has very wide confidence intervals in early season.",
+        "UFU02": "UFL W3: only 3 games of sample per team. Storm 3-0 (2nd OT win of season already), Louisville 0-3. IMPORTANT: OT result was CONTROVERSIAL — Storm won via UFL's unique 2-point OT rule (2nd defensive foul by same team = automatic successful try for offense). Louisville OUTGAINED Storm 449-323 in total yards but lost due to the rule quirk. thegruelingtruth.com: 'Storm Stay Perfect, Kings Stay Winless — Orlando Escapes Louisville in Controversial OT Thriller'. This adds a new factor: UFL overtime rule specifics create variance beyond pure team quality.",
         "UF04": "OT result (29-27 = 2pt) confirms these teams were essentially equal on the day."
       },
       "screening_decision_review": "SKIP was correct. OT result validates borderline confidence — when conf is 74-76% in early UFL season, SKIP is appropriate. Pattern: early UFL season games at 75% conf are effectively 60-65% real probability.",
-      "rule_candidate": "UFU_R_new: UFL early season (W1-W6) effective confidence cap of 70% (apply -5% to all UFL predictions until W7+). Accounts for small sample instability.",
-      "miss_layer": null
+      "rule_candidate": "UFU_R_new: UFL early season (W1-W6) effective confidence cap of 70% (apply -5% to all UFL predictions until W7+). Accounts for small sample instability. NOTE: A009 OT controversy also suggests UFL overtime format is a unique variance factor — OT games should be flagged with additional caution.",
+      "miss_layer": null,
+      "sources": [
+        "foxsports.com: Orlando Storm vs. Louisville Kings Final Score April 10 2026 (box score)",
+        "thegruelingtruth.com: Storm Stay Perfect — Orlando Escapes Louisville in Controversial OT Thriller",
+        "yahoo.com: Louisville Kings fall to Orlando Storm on bizarre UFL overtime rule",
+        "uflnewshub.com: UFL Scores Today Orlando Storm 29 Louisville Kings 27 OT"
+      ]
     },
     {
       "id": "A010",
@@ -544,12 +591,17 @@
       ],
       "factor_notes": {
         "UF03": "L1 PD差5pt is borderline. Effectively equal teams. Close result (4pt) confirms this.",
-        "UF07": "St. Louis home game. Battlehawks have one of the strongest home crowds in UFL (STL market passionate football city).",
-        "UFU02": "Birmingham Stallions' historical USFL dominance may have inflated market expectations beyond actual current team quality."
+        "UF07": "St. Louis HOME game at The Dome at America's Center — attendance 20,209, one of strongest UFL home crowd environments (oursportscentral.com). 21-POINT 4th quarter comeback by Battlehawks (Harrison Frost: 3 TD passes in Q4; Hakeem Butler: 4 rec 146 yds inc 64-yd TD). Home crowd effect was clearly a factor — Battlehawks came back from 10-point deficit TWICE. Confirms that STL home advantage (+3% candidate) is real and should be considered.",
+        "UFU02": "Birmingham Stallions' historical USFL dominance (prior dynasty) may have inflated market expectations. But Stallions showed genuine competitiveness (led for most of the game). 21-point Battlehawks Q4 comeback is statistically rare — confirms borderline L1 + home crowd can flip games in late stages. Final: 34-30 (4-pt margin validates borderline L1 call)."
       },
       "screening_decision_review": "SKIP was correct — borderline L1 diff was appropriately excluded. Home advantage (UF07) in UFL appears meaningful for St. Louis specifically.",
       "rule_candidate": "Consider adding STL home advantage credit (+3%) to UFL screening given their strong fanbase/home record.",
-      "miss_layer": null
+      "miss_layer": null,
+      "sources": [
+        "oursportscentral.com: Battlehawks Rally to Defeat Stallions in Thrilling 34-30 Victory",
+        "fox2now.com: Battlehawks edge Stallions in dramatic 34-30 comeback win",
+        "foxsports.com: Birmingham Stallions vs St. Louis Battlehawks Final Score April 12 2026"
+      ]
     },
     {
       "id": "A011",
@@ -570,14 +622,19 @@
         "UF02"
       ],
       "factor_notes": {
-        "UF03": "cElo差82pt is borderline — below our 100pt threshold. Effectively close match. Carabelli (Argentina) is a clay specialist; Khachanov's clay cElo may be overestimated.",
-        "UF01": "Carabelli from Argentina — clay is his natural surface. Khachanov is primarily a hard court player with limited clay record.",
+        "UF03": "cElo gap 82pt borderline. BUT Carabelli arrived with exceptional 2026 clay form: 10-4 on clay, WON Rosario Challenger, reached Marrakech SF (Source: PB Tennis X / ATP Stats Centre). This was Carabelli's FIRST career win vs Top 20 player (after 10 previous losses vs Top 20). Khachanov ALSO lost MC R1 (to Arthur Rinderknech) - entered Barcelona with back-to-back early exits. Result: 6-3 6-4 in 74 minutes - Khachanov given ZERO break point opportunities.",
+        "UF01": "Carabelli from Argentina (clay specialist). Khachanov primarily hard court player. In 2026, Carabelli 10-4 on clay (eleco.com.ar confirmed: 'Carabelli dio el golpe en Barcelona y elimino a Khachanov'). Completely dominant performance - no BPs faced. SCORE NOTE: Spanish sources (eleco.com.ar) show 6-3 6-4; our record shows 6-4 6-3 - possible set-order discrepancy, verify via ATP stats centre.",
         "UF02": "Carabelli on home continent (South American clay specialist). Lower-ranked players with strong clay pedigree outperform cElo on this surface."
       },
       "screening_decision_review": "SKIP was correct (L1未達 at 82pt). But the 6-4 6-3 scoreline shows Carabelli was dominant, not just lucky. The 82pt cElo gap may overestimate Khachanov's clay advantage. Rule improvement: clay specialists from Argentina/Spain should get a surface bonus in WTA/ATP cElo calculations.",
       "what_signal_could_detect": "Hard court player vs clay specialist in diff range 70-100pt = effectively coin flip on clay. Market over-prices the hard court player's ranking.",
       "rule_candidate": "P012: Clay specialist bonus for ATP: Argentine/Spanish clay specialists receive +15pt to effective clay cElo when L1 diff < 120pt. Reduces false confidence in hard-court-ranked players.",
-      "miss_layer": null
+      "miss_layer": null,
+      "sources": [
+        "eleco.com.ar: Camilo Ugo Carabelli dio el golpe en Barcelona y elimino a Karen Khachanov",
+        "atptour.com: Stats Centre - Carabelli vs Khachanov Barcelona 2026 R32",
+        "x.com/Probahis (PB Tennis): Carabelli 2026 clay 10-4 form data"
+      ]
     },
     {
       "id": "A012",
@@ -598,7 +655,7 @@
         "UFT02"
       ],
       "factor_notes": {
-        "UF06": "Bublik had just lost MC R3 vs Alcaraz 1-6 3-6 (bagel set). Mental reset in Munich R1 as 3rd seed may have been incomplete.",
+        "UF06": "Bublik's FIRST appearance at Munich (Munich debut — puntodebreak headline: 'Molcan surprises Bublik in his ATP Munich debut'). No venue familiarity. MC QF base adjustment -3% applied (within 2 weeks window). 6-4 6-2 scoreline (42 pts vs Molcan's 61) suggests actual fatigue/mental drop may warrant -5% not -3%. Bublik had just lost MC R3 vs Alcaraz 1-6 3-6 (bagel set). Mental reset in Munich R1 as 3rd seed may have been incomplete.",
         "UF05": "MC QF base adjustment -3% applied (within 2 weeks window). 6-4 6-2 scoreline suggests actual fatigue/mental drop may warrant -5% not -3%.",
         "UFT02": "Molcan noted as 'Djokovic beater' quality — dangerous clay opponent. Our system flagged this explicitly in the note. CAUTION verdict was CORRECT."
       },
@@ -606,7 +663,24 @@
       "what_signal_could_detect": "直前大会でQF以上を戦い、同週別大会に移動した選手は第1試合で疲労による性能低下が顕著。現状-3%より大きい補正（-5%）が妥当。",
       "rule_candidate": "P013: ATP 500/250 seeded player who played QF+ at previous week's tournament: fatigue adjustment -5% (not -3%) for first match of next tournament within 7 days.",
       "note_special": "CE010関連: casino dataに'Bublik vs Hurkacz'のphantom entryが存在（Hurkacz withdrew）。実際の対戦相手はMolcan。phantom entryはtier=invalidで無効化済み。",
-      "miss_layer": null
+      "miss_layer": null,
+      "match_stats": {
+        "molcan_winners": 23,
+        "molcan_1st_serve_pct": "74% (23/31)",
+        "molcan_2nd_serve_pts_won": "60% (12/20)",
+        "molcan_aces": 6,
+        "molcan_double_faults": 1,
+        "molcan_bp_converted": "4/9 (44%)",
+        "bublik_total_pts": 42,
+        "molcan_total_pts": 61,
+        "duration": "1h05m",
+        "source": "tennistonic.com / ATP Tour (puntodebreak.com: Molcan surprises Bublik in his ATP Munich debut)"
+      },
+      "sources": [
+        "puntodebreak.com: Molcan surprises Bublik in his ATP Munich debut (2026-04-14)",
+        "tennistonic.com: Alex Molcan surprises Bublik in the 1st round at the BMW Open (stats)",
+        "atptour.com: Highlights - Molcan sends third seed Bublik tumbling in Munich 2026"
+      ]
     },
     {
       "id": "A013",
@@ -629,12 +703,17 @@
       "factor_notes": {
         "UFT01": "Jacquemot is French (home crowd in Rouen, France). Home crowd effect can boost local players' confidence and add pressure to opponents — but Maria reeled off 8 straight games at one point.",
         "UF01": "Maria T. (Germany) is a clay specialist with strong European clay baseline. Despite lower cElo, her clay movement and consistency beat the younger Jacquemot.",
-        "UF07": "Jacquemot (younger, ranked higher) may have felt pressure as local favorite. Maria as veteran overcame 3-1 and 4-2 deficits — mental resilience advantage."
+        "UF07": "WTA Official: 'Maria tops Jacquemot in Rouen for first Top 100 win of 2026' - Maria ranked OUTSIDE Top 100 beating a seeded (Top 100) player. Jacquemot was #9 seed. Maria avenged 3-set loss to Jacquemot in 2025 Guadalajara. Stats (WTA Official): Maria 63% BP conversion (5/8), 5 breaks. Total points: Maria 73 - Jacquemot 66. Veteran Maria (34, 250+ career wins) handled local-favorite pressure better than younger Jacquemot (22)."
       },
       "screening_decision_review": "SKIP正しかった（L1差50pt < 80pt閾値）。ただしMariaの6-4 6-3勝利はランダムな接戦ではなく、逆転後に8ゲーム連取という実力差を示す内容。Maria（ドイツ）のクレー経験値がJacquemot（フランス）の地元アドバンテージを上回った。",
       "what_signal_could_detect": "L1差50-80ptの『グレーゾーン』ではveteran vs young player on clay を追加分析すべき。Maria 34歳の経験値 vs Jacquemot 22歳のプレッシャーという構図は系統的に見落としやすい。",
       "rule_candidate": "W_P_new1: WTA clay: veteran player (30+ age, 50+ career wins) vs young player (<25) in diff 40-80pt range → reduce confidence in younger player by 5%.",
-      "miss_layer": null
+      "miss_layer": null,
+      "sources": [
+        "wtatennis.com: Maria tops Jacquemot in Rouen for first Top 100 win of 2026 (video)",
+        "wtatennis.com: Maria vs. Jacquemot Round of 32 Open Capfinances Rouen Metropole 2026 (score page)",
+        "tennistonic.com: H2H Tatjana Maria vs Dominika Salkova in Rouen - includes Maria stats"
+      ]
     }
   ],
   "gamble_bet_candidates": {

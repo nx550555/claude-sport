@@ -1,7 +1,7 @@
 {
   "sport": "ufl",
-  "version": "1.0",
-  "updated": "2026-04-10",
+  "version": "1.1",
+  "updated": "2026-04-16",
   "bet_type": "Moneyline (ML) のみ",
   "target": "UFL レギュラーシーズン・プレーオフ全試合",
   "league_profile": {
@@ -19,7 +19,10 @@
     "critical": "QBの先発確認が必須（N相当のU006）"
   },
   "thresholds": {
-    "recommend_go": { "confidence_min": 75, "ev_min": 5 },
+    "recommend_go": {
+      "confidence_min": 75,
+      "ev_min": 5
+    },
     "skip": "信頼度75%未満 または EV+5%未満",
     "week1_note": "Week1は実績なし→推奨保留。Week2以降から本格稼働"
   },
@@ -38,45 +41,74 @@
   },
   "rules": [
     {
-      "id": "U001", "type": "initial", "title": "L1スクリーニング（得失点差）",
+      "id": "U001",
+      "type": "initial",
+      "title": "L1スクリーニング（得失点差）",
       "body": "シーズン累積得失点差÷試合数（Points Diff/G）を算出。差が4点以上の試合のみ候補とする。Week2以降から有効。Week1は実績なし→全試合スキップ推奨。シーズン序盤（3試合未満）は閾値を6点に引き上げ。Yards/Play diffが入手可能な場合は差0.6以上を閾値とする。",
       "precision_ranking": "Yards/Play diff > Points Diff/G"
     },
     {
-      "id": "U002", "type": "initial", "title": "L2フォーム品質（直近3試合）",
+      "id": "U002",
+      "type": "initial",
+      "title": "L2フォーム品質（直近3試合）",
       "body": "UFLは試合数が少ない（全10試合）ため、直近3試合の対戦相手強度で加重評価する。強豪（勝率6割超）相手に勝利: +5%。弱小（勝率4割未満）相手のみの勝利: -3%。3連勝: +5%。3連敗: -5%。"
     },
     {
-      "id": "U003", "type": "initial", "title": "L3スタッツ補正",
+      "id": "U003",
+      "type": "initial",
+      "title": "L3スタッツ補正",
       "body": "① ターンオーバー差（シーズン累積）: +2差以上優位な場合+4%。② レッドゾーンTD率（50%超）: +3%。③ 3rd Down成功率差: 5%以上優位で+3%。④ サック数/試合差: 2以上優位で+2%。"
     },
     {
-      "id": "U004", "type": "initial", "title": "ホームフィールドアドバンテージ",
+      "id": "U004",
+      "type": "initial",
+      "title": "ホームフィールドアドバンテージ",
       "body": "ホームチームに+4%固定補正（NFLより小さい。スタジアム規模・観客数が少ないため）。プレーオフは+6%。中立地試合（チャンピオンシップ）は0%。"
     },
     {
-      "id": "U005", "type": "initial", "title": "QB先発確認（最重要）",
+      "id": "U005",
+      "type": "initial",
+      "title": "QB先発確認（最重要）",
       "body": "先発QBが未確認の場合は推奨保留。スターターと控えの差が大きい場合は-15%補正（NFLより差が小さいことが多い）。確認タイミング: 試合前日〜当日午前中にtheufl.comの公式ニュースで確認。",
-      "checklist": ["先発QB確認", "負傷報告書確認（木曜公開）"]
+      "checklist": [
+        "先発QB確認",
+        "負傷報告書確認（木曜公開）"
+      ]
     },
     {
-      "id": "U006", "type": "initial", "title": "怪我・欠場補正",
+      "id": "U006",
+      "type": "initial",
+      "title": "怪我・欠場補正",
       "body": "スターターQB欠場: -15%。第1WR/TE欠場: -5%。第1RB欠場: -3%。複数欠場は累積（上限-15%）。UFLは選手層が薄いため、NFL同等ポジション欠場でもインパクトが大きい。"
     },
     {
-      "id": "U007", "type": "initial", "title": "天候補正（屋外スタジアム限定）",
+      "id": "U007",
+      "type": "initial",
+      "title": "天候補正（屋外スタジアム限定）",
       "body": "降雨（25mm以上予報）: パスオフェンス優位チームは-3%。強風（30km/h以上）: 同様に-3%。屋内スタジアム開催の場合は0%。UFLの試合は4月〜6月開催のため暑さも考慮（35度超: +2%ホームアドバンテージ拡大）。",
       "stadiums": {
-        "屋内": ["DC Defenders（Audi Field→屋外）", "要スタジアム別確認"],
+        "屋内": [
+          "DC Defenders（Audi Field→屋外）",
+          "要スタジアム別確認"
+        ],
         "note": "theufl.comのスタジアム情報で毎試合確認"
       }
     },
     {
-      "id": "U008", "type": "initial", "title": "シーズン序盤の不確実性割引",
-      "body": "Week1〜2: 実績不足のため全試合SKIP推奨（データなし）。Week3〜4: 信頼度閾値を80%に引き上げ（通常75%）。Week5以降: 通常通り75%閾値で運用。理由: サンプルサイズが小さく得失点差が不安定。"
+      "id": "U008",
+      "type": "modified",
+      "title": "シーズン序盤の不確実性割引",
+      "body": "Week1〜2: 実績不足のため全試合SKIP推奨（データなし）。Week3〜6: 信頼度閾値を80%に引き上げ（通常75%）。この期間の実質的な上限信頼度は70%として扱う（表示75%は実質70%相当）。Week7以降: 通常通り75%閾値で運用。【理由】Week3〜6時点では各チーム3〜6試合のサンプルしかなく、1〜2試合の外れ値が得失点差を5〜10pt歪める（NRL R012と同じ小サンプル問題）。【根拠】A009（Storm d. Louisville OT 29-27 W3: conf 75%がOT接戦）・A010（Battlehawks d. Stallions 34-30 W3: 4pt差接戦）の両試合でW3時点の75%信頼度が実際の確率を過大評価していた。NFL早期シーズン同様のサンプル不足効果。",
+      "modified": "2026-04-16",
+      "evidence": [
+        "A009 (Storm d. Louisville OT W3)",
+        "A010 (Battlehawks d. Stallions 34-30 W3)"
+      ]
     },
     {
-      "id": "U009", "type": "initial", "title": "ラインナップ確認チェックリスト",
+      "id": "U009",
+      "type": "initial",
+      "title": "ラインナップ確認チェックリスト",
       "body": "分析前に確認必須: ① 先発QB（theufl.com公式）② 主力WR/TE出場可否 ③ 天候（Weather.com or AccuWeather） ④ 直近の怪我情報（木曜練習レポート）。全項目確認後のみGO判断を出す。"
     }
   ]

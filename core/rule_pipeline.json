@@ -1,223 +1,359 @@
 {
-    "description": "ルール追加トリガー管理ファイル。証拠が十分に積まれた候補ルールを自動的にルールファイルへ昇格させる仕組み。",
-    "version": "1.0",
-    "created": "2026-04-14",
-    "instructions_for_claude": [
-        "セッション開始時にこのファイルを読み、current_count >= trigger_threshold を満たした候補がないか確認する",
-        "閾値に達した候補は即時ルールファイルへ追加し、このファイルのstatusをimplementedに更新する",
-        "新しいアップセット・MISS事例が追加されたら、該当する候補のevidenceとcurrent_countを更新する",
-        "実装済みルールはimplemented_rulesセクションへ移動し、candidatesからは削除しない（履歴として残す）"
-    ],
-    "trigger_check_protocol": {
-        "when": "upset_patterns.jsonにU00x IDで新規エントリ追加時 / BACKLOG.md更新時",
-        "action": "下記candidatesのtag_matchesリストと照合し、一致する候補のcurrent_countを+1する",
-        "auto_implement": "current_count >= trigger_threshold の場合、次のセッション開始時に自動実装する"
+  "description": "ルール追加トリガー管理ファイル。証拠が十分に積まれた候補ルールを自動的にルールファイルへ昇格させる仕組み。",
+  "version": "1.0",
+  "created": "2026-04-14",
+  "instructions_for_claude": [
+    "セッション開始時にこのファイルを読み、current_count >= trigger_threshold を満たした候補がないか確認する",
+    "閾値に達した候補は即時ルールファイルへ追加し、このファイルのstatusをimplementedに更新する",
+    "新しいアップセット・MISS事例が追加されたら、該当する候補のevidenceとcurrent_countを更新する",
+    "実装済みルールはimplemented_rulesセクションへ移動し、candidatesからは削除しない（履歴として残す）"
+  ],
+  "trigger_check_protocol": {
+    "when": "upset_patterns.jsonにU00x IDで新規エントリ追加時 / BACKLOG.md更新時",
+    "action": "下記candidatesのtag_matchesリストと照合し、一致する候補のcurrent_countを+1する",
+    "auto_implement": "current_count >= trigger_threshold の場合、次のセッション開始時に自動実装する"
+  },
+  "candidates": [
+    {
+      "candidate_id": "P001",
+      "status": "watching",
+      "target_rule_file": "core/rules_tennis.json",
+      "proposed_rule_id": "R001_sub",
+      "title": "ATP cElo 100〜129ptゾーンの詳細分類（CAUTION細分化）",
+      "description": "R001のCAUTIONゾーン（100〜129pt）内で、特定のUF因子が重なる場合のみGO許可するサブルール化。現状は全部CAUTIONだが、条件絞り込みで精度向上の可能性あり。",
+      "trigger_threshold": 4,
+      "current_count": 2,
+      "evidence": [
+        {
+          "id": "U002",
+          "match": "Machac vs Cerundolo (MC2026-R32)",
+          "diff": 153,
+          "result": "MISS",
+          "tag": "atp_celo_130_below"
+        },
+        {
+          "id": "U003",
+          "match": "Nagal vs Nishikori (Barcelona 2026)",
+          "diff": 99,
+          "result": "MISS",
+          "tag": "atp_celo_130_below"
+        }
+      ],
+      "tag_matches": [
+        "atp_celo_130_below"
+      ],
+      "note": "4件揃ったら 100〜129ptの具体的なサブ条件（UF重複数、オッズ等）を統計化してR001に追記する"
     },
-    "candidates": [
+    {
+      "candidate_id": "P002",
+      "status": "watching",
+      "target_rule_file": "core/rules_nhl.json",
+      "proposed_rule_id": "N017",
+      "title": "NHL リビルドチームvs消化試合チームのモチベ差詳細（UFH04拡張）",
+      "description": "現在UFH04（強豪チームの消化試合モチベ低下）は定性的記述のみ。MIN@STL（Blues 2点差ビハインドから5連続失点）のような逆転パターンの数値補正ルール化。",
+      "trigger_threshold": 3,
+      "current_count": 1,
+      "evidence": [
         {
-            "candidate_id": "P001",
-            "status": "watching",
-            "target_rule_file": "core/rules_tennis.json",
-            "proposed_rule_id": "R001_sub",
-            "title": "ATP cElo 100〜129ptゾーンの詳細分類（CAUTION細分化）",
-            "description": "R001のCAUTIONゾーン（100〜129pt）内で、特定のUF因子が重なる場合のみGO許可するサブルール化。現状は全部CAUTIONだが、条件絞り込みで精度向上の可能性あり。",
-            "trigger_threshold": 4,
-            "current_count": 2,
-            "evidence": [
-                {
-                    "id": "U002",
-                    "match": "Machac vs Cerundolo (MC2026-R32)",
-                    "diff": 153,
-                    "result": "MISS",
-                    "tag": "atp_celo_130_below"
-                },
-                {
-                    "id": "U003",
-                    "match": "Nagal vs Nishikori (Barcelona 2026)",
-                    "diff": 99,
-                    "result": "MISS",
-                    "tag": "atp_celo_130_below"
-                }
-            ],
-            "tag_matches": [
-                "atp_celo_130_below"
-            ],
-            "note": "4件揃ったら 100〜129ptの具体的なサブ条件（UF重複数、オッズ等）を統計化してR001に追記する"
-        },
-        {
-            "candidate_id": "P002",
-            "status": "watching",
-            "target_rule_file": "core/rules_nhl.json",
-            "proposed_rule_id": "N017",
-            "title": "NHL リビルドチームvs消化試合チームのモチベ差詳細（UFH04拡張）",
-            "description": "現在UFH04（強豪チームの消化試合モチベ低下）は定性的記述のみ。MIN@STL（Blues 2点差ビハインドから5連続失点）のような逆転パターンの数値補正ルール化。",
-            "trigger_threshold": 3,
-            "current_count": 1,
-            "evidence": [
-                {
-                    "id": "U005_analysis",
-                    "match": "MIN@STL 2026-04-13",
-                    "pattern": "本命消化試合 + 格下リビルドチーム奮起",
-                    "score_reversed": "0-2 -> 6-3",
-                    "tag": "nhl_motivated_underdog"
-                }
-            ],
-            "tag_matches": [
-                "nhl_motivated_underdog",
-                "nhl_blowup_reversal"
-            ],
-            "note": "3件揃ったら補正値（現行N008 -5%を強化するか、別ルールとして追加するか）を決定する"
-        },
-        {
-            "candidate_id": "P003",
-            "status": "watching",
-            "target_rule_file": "core/rules_wta.json",
-            "proposed_rule_id": "W007_indoor_clay_threshold",
-            "title": "WTA Indoor Clayアップセット率の数値閾値確定",
-            "description": "W007にindoor_clay_noteを追記済みだが、Stuttgart 2026の結果が全部揃ったらupset率と閾値（cElo差・オッズ）を数値化する。",
-            "trigger_threshold": 1,
-            "current_count": 0,
-            "evidence": [
-                {
-                    "id": "U007",
-                    "match": "Sonmez (Q) vs Paolini (4) Stuttgart 2026",
-                    "pattern": "cElo差200pt+のqualifier upset。indoor clay型フラット攻撃系。6-2 6-2完勝。",
-                    "tag": "wta_stuttgart_r1_upset"
-                }
-            ],
-            "tag_matches": [
-                "wta_stuttgart_r1_complete"
-            ],
-            "note": "Stuttgart R1全試合完了後（4/15以降）にupset_rate・avg_upset_elo_diff・min_upset_oddsを集計し、W007本文の具体数値として追記する。1件（結果確定）で即実装可。"
-        },
-        {
-            "candidate_id": "P004",
-            "status": "watching",
-            "target_rule_file": "core/rules_nhl.json",
-            "proposed_rule_id": "N018",
-            "title": "NHL プレーオフ R1 ホームアイス補正の実績ベース検証",
-            "description": "N004でPOホームシードに+7%を付けているが、実際のPO R1での勝率データで検証・修正する。",
-            "trigger_threshold": 8,
-            "current_count": 0,
-            "evidence": [],
-            "tag_matches": [
-                "nhl_po_r1_result"
-            ],
-            "note": "PO R1 8件（2シリーズ以上）揃ったら+7%の妥当性を検証する"
-        },
-        {
-            "candidate_id": "P005",
-            "status": "watching",
-            "target_rule_file": "core/rules_wta.json",
-            "proposed_rule_id": "W010",
-            "title": "WTA B2B（連続試合）補正強化",
-            "description": "NHLのN005と同様にWTAの連日試合における疲労補正を定量化する。現在W004に『3日連続-4%』があるが2日連続は未定義。",
-            "trigger_threshold": 3,
-            "current_count": 0,
-            "evidence": [],
-            "tag_matches": [
-                "wta_b2b_fatigue"
-            ],
-            "note": "3件揃ったら2日連続試合の補正値（-2%〜-4%）を確定してW010として追加する"
-        },
-        {
-            "candidate_id": "P006",
-            "status": "watching",
-            "target_rule_file": "core/rules_tennis.json",
-            "proposed_rule_id": "R014",
-            "title": "Masters→翌週大会 B2B疲弊補正強化",
-            "description": "現行ルールR005/R006はB2B(連日試合)を対象とするが、大会間B2B(Masters→翌週250/500)は別途補正が必要。主要大会でQF以降まで進んだ選手(3-4試合消化)が翌週に直行する場合、現行-3%では不足。-6%〜-10%が妥当（Bublik事例から推定）。",
-            "trigger_threshold": 3,
-            "current_count": 1,
-            "evidence": [
-                {
-                    "id": "U006",
-                    "match": "Molcan vs Bublik (Munich 2026 R1)",
-                    "pattern": "Bublik MC QF(Alcaraz戦大敗)→Munich 4日後。SKIP正解だが疲弊度は-3%以上だった。",
-                    "tag": "atp_b2b_inter_tournament"
-                }
-            ],
-            "tag_matches": [
-                "atp_b2b_inter_tournament"
-            ],
-            "note": "3件揃ったら補正値(-6%〜-10%)と適用条件（何ラウンド以上+何日以内）を数値化してR014として実装。"
-        },
-        {
-            "candidate_id": "P007",
-            "status": "watching",
-            "target_rule_file": "core/rules_wta.json (and rules_tennis.json)",
-            "proposed_rule_id": "W011 / R013",
-            "title": "シーズンフォームスランプ補正（cElo過大評価防止）",
-            "description": "cEloは過去累積勝率を表すため、当季のフォームスランプを2-4週遅延でしか反映しない。特に前年クレー主要タイトル保持者（ローマ/全仏優勝等）が翌年同大会に出場する場合、cEloは高値を保つが実際の競技力は大幅低下していることがある。当季勝率60%未満かつランキング上位選手 → 信頼度-10%補正。",
-            "trigger_threshold": 3,
-            "current_count": 1,
-            "evidence": [
-                {
-                    "id": "U007",
-                    "match": "Sonmez vs Paolini (Stuttgart 2026 R1)",
-                    "pattern": "Paolini 2026: 8-7(53%)、20位圏外に6敗。cEloは2025年ローマ優勝・全仏準優勝を反映→過大評価。2ndサーブPts 37.5%、BP変換33.3%→実力より大幅低下。",
-                    "tag": "wta_form_slump_top_player"
-                }
-            ],
-            "tag_matches": [
-                "wta_form_slump_top_player",
-                "atp_form_slump_top_player"
-            ],
-            "note": "3件揃ったら「当季勝率チェック」をL3必須確認項目として追加する。適用基準案: 当季勝率<60% AND ランキング上位10位以内 → 信頼度-10%。ATP版はR013、WTA版はW011として追加予定。特に前年タイトル保持者の翌年ディフェンス試合は要注意フラグを立てる。"
-        },
-        {
-            "candidate_id": "P008",
-            "status": "watching",
-            "target_rule_file": "core/rules_tennis.json",
-            "proposed_rule_id": "R015",
-            "title": "PR(Protected Ranking)選手の実力補正",
-            "description": "Protected Ranking選手は「長期離脱後の復帰」を示すが、身体的回復済みの場合は実際のプレーレベルが現ランキング相当以上になる。PR選手と対戦する場合: (a) H2H確認が特に重要, (b) PR選手がサーブ型(Hurkacz等)なら回復後の威力は保持されやすい, (c) PR選手を「自動的に弱化」とみなしてはならない—むしろ意欲が高い可能性。推奨: PR選手対戦時はL2で「直近大会出場有無・セット数消化量」を確認し、フルフィット判断できる場合はcElo補正なしのフル評価を使う。",
-            "trigger_threshold": 2,
-            "current_count": 1,
-            "evidence": [
-                {
-                    "id": "U008",
-                    "match": "Marozsan vs Hurkacz (MC2026 R32)",
-                    "pattern": "HurkaczPR復帰初戦で6-2 6-3圧勝。PR=弱体化前提が崩壊。81% 1stSrvPts。",
-                    "tag": "atp_pr_player_recovery"
-                }
-            ],
-            "tag_matches": [
-                "atp_pr_player_recovery"
-            ],
-            "note": "2件揃ったらR015として: PR選手対戦時のL2必須確認項目とcElo補正方針を明文化。"
+          "id": "U005_analysis",
+          "match": "MIN@STL 2026-04-13",
+          "pattern": "本命消化試合 + 格下リビルドチーム奮起",
+          "score_reversed": "0-2 -> 6-3",
+          "tag": "nhl_motivated_underdog"
         }
-    ],
-    "implemented_rules": [
+      ],
+      "tag_matches": [
+        "nhl_motivated_underdog",
+        "nhl_blowup_reversal"
+      ],
+      "note": "3件揃ったら補正値（現行N008 -5%を強化するか、別ルールとして追加するか）を決定する"
+    },
+    {
+      "candidate_id": "P003",
+      "status": "watching",
+      "target_rule_file": "core/rules_wta.json",
+      "proposed_rule_id": "W007_indoor_clay_threshold",
+      "title": "WTA Indoor Clayアップセット率の数値閾値確定",
+      "description": "W007にindoor_clay_noteを追記済みだが、Stuttgart 2026の結果が全部揃ったらupset率と閾値（cElo差・オッズ）を数値化する。",
+      "trigger_threshold": 1,
+      "current_count": 0,
+      "evidence": [
         {
-            "candidate_id": "IMPL001",
-            "implemented_date": "2026-04-14",
-            "target_rule_file": "core/rules_nhl.json",
-            "rule_id": "N016",
-            "title": "シーディング確定チーム終盤ラインナップrest確認",
-            "trigger_event": "PHI@CAR 2026-04-13: CAR 6名意図的restで MISS（L4_External）",
-            "evidence_count": 1,
-            "note": "1件でも影響度が大きく（-8〜SKIP相当）即実装を判断"
-        },
-        {
-            "candidate_id": "IMPL002",
-            "implemented_date": "2026-04-14",
-            "target_rule_file": "core/rules_wta.json",
-            "rule_id": "W007",
-            "title": "Indoor Clay補足note追加",
-            "trigger_event": "Stuttgart 2026 R1: Korpatsch + Eala upset（2/12=16.7%、indoor clay速いサーフェス）",
-            "evidence_count": 2,
-            "note": "数値閾値はP003で継続追跡。今回は定性的補足のみ追記"
-        },
-        {
-            "candidate_id": "IMPL003",
-            "implemented_date": "2026-04-14",
-            "target_rule_file": "core/rules_tennis.json",
-            "rule_id": "R001",
-            "title": "cEloスクリーニング 130pt CAUTION閾値導入",
-            "trigger_event": "U002(Machac差153MISS) + U003(Nagal差99MISS) 2件でGO閾値100ptが過小と判定",
-            "evidence_count": 2,
-            "note": "CAUTIONゾーン詳細化はP001で継続追跡（4件で再判断）"
+          "id": "U007",
+          "match": "Sonmez (Q) vs Paolini (4) Stuttgart 2026",
+          "pattern": "cElo差200pt+のqualifier upset。indoor clay型フラット攻撃系。6-2 6-2完勝。",
+          "tag": "wta_stuttgart_r1_upset"
         }
-    ]
+      ],
+      "tag_matches": [
+        "wta_stuttgart_r1_complete"
+      ],
+      "note": "Stuttgart R1全試合完了後（4/15以降）にupset_rate・avg_upset_elo_diff・min_upset_oddsを集計し、W007本文の具体数値として追記する。1件（結果確定）で即実装可。"
+    },
+    {
+      "candidate_id": "P004",
+      "status": "watching",
+      "target_rule_file": "core/rules_nhl.json",
+      "proposed_rule_id": "N018",
+      "title": "NHL プレーオフ R1 ホームアイス補正の実績ベース検証",
+      "description": "N004でPOホームシードに+7%を付けているが、実際のPO R1での勝率データで検証・修正する。",
+      "trigger_threshold": 8,
+      "current_count": 0,
+      "evidence": [],
+      "tag_matches": [
+        "nhl_po_r1_result"
+      ],
+      "note": "PO R1 8件（2シリーズ以上）揃ったら+7%の妥当性を検証する"
+    },
+    {
+      "candidate_id": "P005",
+      "status": "watching",
+      "target_rule_file": "core/rules_wta.json",
+      "proposed_rule_id": "W010",
+      "title": "WTA B2B（連続試合）補正強化",
+      "description": "NHLのN005と同様にWTAの連日試合における疲労補正を定量化する。現在W004に『3日連続-4%』があるが2日連続は未定義。",
+      "trigger_threshold": 3,
+      "current_count": 0,
+      "evidence": [],
+      "tag_matches": [
+        "wta_b2b_fatigue"
+      ],
+      "note": "3件揃ったら2日連続試合の補正値（-2%〜-4%）を確定してW010として追加する"
+    },
+    {
+      "candidate_id": "P006",
+      "status": "watching",
+      "target_rule_file": "core/rules_tennis.json",
+      "proposed_rule_id": "R014",
+      "title": "Masters→翌週大会 B2B疲弊補正強化",
+      "description": "現行ルールR005/R006はB2B(連日試合)を対象とするが、大会間B2B(Masters→翌週250/500)は別途補正が必要。主要大会でQF以降まで進んだ選手(3-4試合消化)が翌週に直行する場合、現行-3%では不足。-6%〜-10%が妥当（Bublik事例から推定）。",
+      "trigger_threshold": 3,
+      "current_count": 1,
+      "evidence": [
+        {
+          "id": "U006",
+          "match": "Molcan vs Bublik (Munich 2026 R1)",
+          "pattern": "Bublik MC QF(Alcaraz戦大敗)→Munich 4日後。SKIP正解だが疲弊度は-3%以上だった。",
+          "tag": "atp_b2b_inter_tournament"
+        }
+      ],
+      "tag_matches": [
+        "atp_b2b_inter_tournament"
+      ],
+      "note": "3件揃ったら補正値(-6%〜-10%)と適用条件（何ラウンド以上+何日以内）を数値化してR014として実装。 | P013 in upset_patterns = same phenomenon. A012/U006同一試合。evidence_count=1のまま（重複なし）。3件揃ったら補正値(-6%〜-10%)と適用条件を数値化してR014として実装。",
+      "cross_references": [
+        "A012 (= U006同一試合: Molcan d. Bublik Munich 2026 R1 / CAUTION判断正しかった)"
+      ]
+    },
+    {
+      "candidate_id": "P007",
+      "status": "watching",
+      "target_rule_file": "core/rules_wta.json (and rules_tennis.json)",
+      "proposed_rule_id": "W011 / R013",
+      "title": "シーズンフォームスランプ補正（cElo過大評価防止）",
+      "description": "cEloは過去累積勝率を表すため、当季のフォームスランプを2-4週遅延でしか反映しない。特に前年クレー主要タイトル保持者（ローマ/全仏優勝等）が翌年同大会に出場する場合、cEloは高値を保つが実際の競技力は大幅低下していることがある。当季勝率60%未満かつランキング上位選手 → 信頼度-10%補正。",
+      "trigger_threshold": 3,
+      "current_count": 1,
+      "evidence": [
+        {
+          "id": "U007",
+          "match": "Sonmez vs Paolini (Stuttgart 2026 R1)",
+          "pattern": "Paolini 2026: 8-7(53%)、20位圏外に6敗。cEloは2025年ローマ優勝・全仏準優勝を反映→過大評価。2ndサーブPts 37.5%、BP変換33.3%→実力より大幅低下。",
+          "tag": "wta_form_slump_top_player"
+        }
+      ],
+      "tag_matches": [
+        "wta_form_slump_top_player",
+        "atp_form_slump_top_player"
+      ],
+      "note": "3件揃ったら「当季勝率チェック」をL3必須確認項目として追加する。適用基準案: 当季勝率<60% AND ランキング上位10位以内 → 信頼度-10%。ATP版はR013、WTA版はW011として追加予定。特に前年タイトル保持者の翌年ディフェンス試合は要注意フラグを立てる。"
+    },
+    {
+      "candidate_id": "P008",
+      "status": "watching",
+      "target_rule_file": "core/rules_tennis.json",
+      "proposed_rule_id": "R015",
+      "title": "PR(Protected Ranking)選手の実力補正",
+      "description": "Protected Ranking選手は「長期離脱後の復帰」を示すが、身体的回復済みの場合は実際のプレーレベルが現ランキング相当以上になる。PR選手と対戦する場合: (a) H2H確認が特に重要, (b) PR選手がサーブ型(Hurkacz等)なら回復後の威力は保持されやすい, (c) PR選手を「自動的に弱化」とみなしてはならない—むしろ意欲が高い可能性。推奨: PR選手対戦時はL2で「直近大会出場有無・セット数消化量」を確認し、フルフィット判断できる場合はcElo補正なしのフル評価を使う。",
+      "trigger_threshold": 2,
+      "current_count": 1,
+      "evidence": [
+        {
+          "id": "U008",
+          "match": "Marozsan vs Hurkacz (MC2026 R32)",
+          "pattern": "HurkaczPR復帰初戦で6-2 6-3圧勝。PR=弱体化前提が崩壊。81% 1stSrvPts。",
+          "tag": "atp_pr_player_recovery"
+        }
+      ],
+      "tag_matches": [
+        "atp_pr_player_recovery"
+      ],
+      "note": "2件揃ったらR015として: PR選手対戦時のL2必須確認項目とcElo補正方針を明文化。"
+    },
+    {
+      "candidate_id": "P009",
+      "status": "watching",
+      "target_rule_file": "core/rules_tennis.json and core/rules_wta.json",
+      "proposed_rule_id": "R016 / W011",
+      "title": "怪我復帰選手（ランキング大幅低下）の市場過大評価割引",
+      "description": "Protected Rankingや怪我明け復帰で現在のランキングが52週前比-40位以上の選手を市場が名声ベースで過大評価するケースへの補正。特にhome WCまたは地元選手との対戦では逆転リスクが高まる。補正案: 怪我復帰選手の信頼度から-10%。",
+      "trigger_threshold": 2,
+      "current_count": 1,
+      "evidence": [
+        {
+          "id": "A001",
+          "match": "Lys d. Badosa Stuttgart 2026 WTA R1",
+          "pattern": "Badosa #106 (怪我復帰) vs Lys(WC, ドイツ地元). 市場1.32=76%だがBadosaは実質的に復帰明け低調。15DFs。",
+          "tag": "wta_injury_comeback_overrated"
+        }
+      ],
+      "tag_matches": [
+        "wta_injury_comeback_overrated",
+        "atp_injury_comeback_overrated"
+      ],
+      "note": "2件揃ったら: 現ランキングと52週前ランキングの差が40位以上の場合の信頼度補正を実装。Source: puntodebreak.com (A001)"
+    },
+    {
+      "candidate_id": "P010",
+      "status": "watching",
+      "target_rule_file": "core/rules_tennis.json",
+      "proposed_rule_id": "R017",
+      "title": "WCホームプレイヤーの連続ラウンドモメンタム加算",
+      "description": "地元大会WCが前ラウンドでシード選手を撃破した場合、次ラウンドの信頼度に+5%モメンタムボーナスを加算。現在R009はWC+2%だが、連続格上撃破後はホームコートの雰囲気効果が最大化する。+5%追加で信頼度70% → 75%移行により将来的なGO判断に貢献。",
+      "trigger_threshold": 2,
+      "current_count": 1,
+      "evidence": [
+        {
+          "id": "A004",
+          "match": "Vacherot d. de Minaur MC2026 QF",
+          "pattern": "Vacherot(WC, Monaco) がR2 Musetti(4) + R3 Hurkacz + QF de Minaur(5)を連続撃破。初のモナコ人MCセミファイナリスト。QF前conf=70%→+5%なら75%でGO。",
+          "tag": "atp_wc_home_consecutive_momentum"
+        }
+      ],
+      "tag_matches": [
+        "atp_wc_home_consecutive_momentum",
+        "wta_wc_home_consecutive_momentum"
+      ],
+      "note": "2件揃ったら: 前ラウンドでシード撃破したホームWCに対するR009強化版+5%モメンタムボーナスルールを実装。Source: tennismajors.com, atptour.com (A004)"
+    },
+    {
+      "candidate_id": "P011",
+      "status": "watching",
+      "target_rule_file": "core/rules_tennis.json",
+      "proposed_rule_id": "R018",
+      "title": "キャリア最悪大会結果後の次大会メンタル崩壊補正",
+      "description": "過去20試合以上出場した大会でキャリア初のR1敗退など最悪結果を記録した後、翌週別大会に直行する選手には-10%メンタル崩壊補正を適用。現行の-5%フォーム調整では不足（キャリア最悪結果のダメージは通常の2倍）。特に選手がスケジュール変更（本来の大会を回避して別大会へ）した場合は-12%に強化。",
+      "trigger_threshold": 2,
+      "current_count": 1,
+      "evidence": [
+        {
+          "id": "A006",
+          "match": "Marozsan d. Tsitsipas Munich 2026 R1",
+          "pattern": "Tsitsipas MC R1初敗退（22-4記録からの初大会R1敗退）後、Barcelona→Munich変更で直行。puntodebreak: 'Tsitsipas hits rock bottom'。ランキング75位圏外へ。",
+          "tag": "atp_career_worst_exit_mental_penalty"
+        }
+      ],
+      "tag_matches": [
+        "atp_career_worst_exit_mental_penalty",
+        "wta_career_worst_exit_mental_penalty"
+      ],
+      "note": "2件揃ったら: R018として '過去20回以上出場した大会でキャリア初のR1/R2敗退後の翌週大会: -10%メンタル補正' を実装。Source: puntodebreak.com, tennis365.com (A006)"
+    },
+    {
+      "candidate_id": "P012",
+      "status": "watching",
+      "target_rule_file": "core/rules_tennis.json",
+      "proposed_rule_id": "R019",
+      "title": "クレースペシャリスト（南米/スペイン）対ハードコーター: L1差縮小補正",
+      "description": "アルゼンチン・スペイン等南米/欧州クレースペシャリストがクレーで'名声ランキング高め'のハードコーターと対戦する場合、実質cElo差を縮小して評価すべき。L1差<120ptのケースでは+15ptクレー補正（スペシャリスト側cEloを実態に近づける）。",
+      "trigger_threshold": 3,
+      "current_count": 1,
+      "evidence": [
+        {
+          "id": "A011",
+          "match": "Carabelli d. Khachanov Barcelona 2026 R1",
+          "pattern": "Carabelli(ARG, クレー10-4) vs Khachanov(主にハード). cElo差82pt→実質的に同格以下かも。Carabelli初Top20勝利。Khachanov MC R1も敗退。",
+          "tag": "atp_clay_specialist_vs_hardcourt_player"
+        }
+      ],
+      "tag_matches": [
+        "atp_clay_specialist_vs_hardcourt_player"
+      ],
+      "note": "3件揃ったら: アルゼンチン/スペイン選手のクレーcElo補正値を定量化しR019として実装。Source: eleco.com.ar, ATP Stats Centre (A011)"
+    },
+    {
+      "candidate_id": "W_P_new1",
+      "status": "watching",
+      "target_rule_file": "core/rules_wta.json",
+      "proposed_rule_id": "W012",
+      "title": "WTAクレー: ベテラン選手 vs 若手地元選手（経験値補正）",
+      "description": "30歳以上・クレー経験豊富なベテランが25歳以下の若手地元選手と対戦する場合、cElo差40〜80ptの範囲では若手側の信頼度から-5%補正。地元プレッシャーと経験差が組み合わさり、若手が実力通りのパフォーマンスを出せないリスクあり。",
+      "trigger_threshold": 3,
+      "current_count": 1,
+      "evidence": [
+        {
+          "id": "A013",
+          "match": "Maria d. Jacquemot Rouen 2026 R1",
+          "pattern": "Maria(34歳, cElo<閾値) vs Jacquemot(22歳, フランス地元). Maria 6-4 6-3。63% BP変換。地元プレッシャーで若手が崩れた典型例。WTA公式: Mariaの2026年初Top100勝利。",
+          "tag": "wta_veteran_vs_young_clay_local"
+        }
+      ],
+      "tag_matches": [
+        "wta_veteran_vs_young_clay_local"
+      ],
+      "note": "3件揃ったら: ベテラン(30+)/若手(25-)クレーマッチのcElo差補正をW012として実装。Source: wtatennis.com (A013)"
+    }
+  ],
+  "implemented_rules": [
+    {
+      "candidate_id": "IMPL001",
+      "implemented_date": "2026-04-14",
+      "target_rule_file": "core/rules_nhl.json",
+      "rule_id": "N016",
+      "title": "シーディング確定チーム終盤ラインナップrest確認",
+      "trigger_event": "PHI@CAR 2026-04-13: CAR 6名意図的restで MISS（L4_External）",
+      "evidence_count": 1,
+      "note": "1件でも影響度が大きく（-8〜SKIP相当）即実装を判断"
+    },
+    {
+      "candidate_id": "IMPL002",
+      "implemented_date": "2026-04-14",
+      "target_rule_file": "core/rules_wta.json",
+      "rule_id": "W007",
+      "title": "Indoor Clay補足note追加",
+      "trigger_event": "Stuttgart 2026 R1: Korpatsch + Eala upset（2/12=16.7%、indoor clay速いサーフェス）",
+      "evidence_count": 2,
+      "note": "数値閾値はP003で継続追跡。今回は定性的補足のみ追記"
+    },
+    {
+      "candidate_id": "IMPL003",
+      "implemented_date": "2026-04-14",
+      "target_rule_file": "core/rules_tennis.json",
+      "rule_id": "R001",
+      "title": "cEloスクリーニング 130pt CAUTION閾値導入",
+      "trigger_event": "U002(Machac差153MISS) + U003(Nagal差99MISS) 2件でGO閾値100ptが過小と判定",
+      "evidence_count": 2,
+      "note": "CAUTIONゾーン詳細化はP001で継続追跡（4件で再判断）"
+    },
+    {
+      "candidate_id": "NRL_R_new2",
+      "implemented_date": "2026-04-16",
+      "target_rule_file": "core/rules_nrl.json",
+      "rule_id": "R013",
+      "title": "長期H2Hストリーク終焉チームの超高モチベーション補正 (-8%)",
+      "trigger_event": "A007 (Warriors 38-14 d. Storm NRL R6 2026: 17試合H2H連敗打破, 12年ぶりメルボルン勝利, Coachテーマ準備)",
+      "evidence_count": 1,
+      "note": "コーチ発言で心理準備が確認できた場合は-10%に強化。R011と重複時は大きい方を適用。"
+    },
+    {
+      "candidate_id": "UFU_R_new",
+      "implemented_date": "2026-04-16",
+      "target_rule_file": "core/rules_ufl.json",
+      "rule_id": "U008_modified",
+      "title": "UFL早期シーズン信頼度上限をW6まで拡大（W3-6: 実質70%上限）",
+      "trigger_event": "A009 (Storm d. Louisville OT W3) + A010 (Battlehawks d. Stallions 34-30 W3): W3時点75%信頼度が過大評価",
+      "evidence_count": 2,
+      "note": "U008のWeek3-4 cap → Week3-6 capに拡大。NFLシーズン序盤サンプル問題と同様の設計。"
+    }
+  ]
 }
