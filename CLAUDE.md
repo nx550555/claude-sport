@@ -20,6 +20,18 @@
    - **ミスが発覚したら即座にこのファイルに追記する**（CE001, CE002...の連番で）
 5. `C:\Users\ohwada\Desktop\claude_sport\core\rule_pipeline.json` を読み込む
    - `current_count >= trigger_threshold` の候補があれば「ルール追加トリガー発動：〇〇を実装します」と報告してそのまま実装する
+6. `C:\Users\ohwada\Desktop\claude_sport\core\framework.json` の `phase_transition.triggers` を確認する
+   - 以下の4つのトリガーを全件チェックし、いずれか1つでも条件を満たしていたら即座にユーザーへ報告する
+   - **T1（サンプル数）**: いずれかのスポーツで `hit!=null` の確認済み試合が20件以上か？
+     → records/{sport}/*.json を読み込んでhit!=nullをカウントする
+   - **T2（アップセット蓄積）**: `stats/upset_patterns.json` のconfirmed_upsets がテニス合計10件以上 OR 他スポーツ1種目で5件以上か？
+     → upset_patterns.json を読み込んでスポーツ別にカウントする
+   - **T3（ルール実装数）**: `core/rule_pipeline.json` の `implemented_rules` が3件以上か？
+     → rule_pipeline.json の implemented_rules 件数をカウントする（現在: 3件→既に達成済み確認要）
+   - **T4（予測精度）**: `stats/cumulative.json` のhit_rateが70%以上かつ達成から90日以上経過しているか？
+     → cumulative.json を確認する
+   - いずれかのトリガーが条件を満たした場合は: 「【フェーズ移行トリガー発動: Tx】〇〇が条件を満たしました。Phase2（アップセット積極予測）への移行を検討しますか？」と報告する
+   - framework.json の triggers[].met を true に、met_date に当日日付を記録する
 
 **【毎回必須】アクティブ推奨の最新情報チェック（GEN003）：**
 セッション開始時、GO/CAUTIONのpending推奨が1件でもあれば、以下を全件実行する：

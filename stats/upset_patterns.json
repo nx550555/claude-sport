@@ -88,7 +88,7 @@
       "underdog": "Machac T.",
       "strength_diff_metric": "cElo差130pt",
       "market_odds_underdog": 2.6,
-      "result_score": "6-2 7-6(3)",
+      "result_score": "7-6(2) 6-3",
       "upset_factors": [
         "UF03",
         "UF05"
@@ -100,7 +100,8 @@
       "our_prediction": "Cerundolo（GO）",
       "miss_layer": "L2",
       "learning": "クレーでアグレッシブサーブ系がベースライナーを崩せる",
-      "rule_created": "R011（攻撃型サーブ注意）"
+      "rule_created": "R011（攻撃型サーブ注意）",
+      "score_correction_note": "CE001修正: 旧誤記録 6-2 7-6(3) -> 正 7-6(2) 6-3"
     },
     {
       "id": "U003",
@@ -226,6 +227,85 @@
       "learning": "WTA GOで高信頼度候補をスクリーニングする際、当該選手の今季勝率も必ずチェックする。60%未満の場合は-10%補正適用。特に前年クレー主要タイトル保持者は翌年同大会で「ポイント防衛プレッシャー」型スランプに注意。",
       "rule_created": null,
       "rule_candidate": "P007: シーズンフォームスランプ補正（当季勝率<60%のランキング上位選手に-10%）"
+    },
+    {
+      "id": "U008",
+      "date": "2026-04-08",
+      "tournament": "Monte-Carlo Masters",
+      "round": "R32",
+      "match": "Marozsan F. vs Hurkacz H.(PR)",
+      "predicted": "Marozsan",
+      "actual_winner": "Hurkacz",
+      "score": "6-2 6-3",
+      "upset_type": "PR_PlayerDomination",
+      "miss_layer": "L3_PRPlayerUnderestimated",
+      "pattern": "Protected Ranking選手が完全回復済み。PR=弱体化という前提を完全否定。Hurkacz 81%/71% serve pts won、0 BPs faced、UE14 vs Marozsan UE33。H2H Hurkacz 2-0も無視。",
+      "key_stats": {
+        "hurkacz_1st_serve_pts_won": "81%",
+        "hurkacz_bp_faced": 0,
+        "marozsan_ufe": 33,
+        "margin": "6-2 6-3 (71min)"
+      },
+      "tag": "atp_pr_player_recovery",
+      "rule_created": null,
+      "rule_candidate": "P008_PR_player_correction"
+    },
+    {
+      "id": "U009",
+      "date": "2026-04-11",
+      "tournament": "NRL 2026 Round 6",
+      "match": "South Sydney Rabbitohs vs Canberra Raiders",
+      "predicted": "South Sydney Rabbitohs",
+      "actual_winner": "Canberra Raiders",
+      "score": "36-34",
+      "upset_type": "DespDespert_NeutralVenue",
+      "miss_layer": "L3_DespDespert_NeutralVenue",
+      "pattern": "崖っぷちチーム(1-4)が前半24-4で圧倒。小サンプルPD/G(-13.8/G)が実態を反映していなかった。中立地Perth開催でRabbitohs移動疲弊。デスパレートエフェクトは統計外。",
+      "key_stats": {
+        "halftime": "Raiders 24 - Rabbitohs 4",
+        "raiders_record_at_time": "1-4",
+        "pd_diff_predicted": 17.3,
+        "sample_size_games": 5
+      },
+      "tag": "nrl_desperate_underdog",
+      "rule_created": null,
+      "rule_candidate": "NRL_R_new: desperate_underdog_correction"
+    },
+    {
+      "id": "A001",
+      "type": "type_a",
+      "type_note": "Type A: SKIPした試合で発生したアップセット。スクリーニング閾値・判断の妥当性検証用。",
+      "date": "2026-04-13",
+      "sport": "tennis_wta",
+      "tournament": "Porsche Tennis Grand Prix Stuttgart 2026",
+      "round": "R1",
+      "our_verdict": "SKIP (L1 cElo差未確認: Badosa怪我でcElo信頼性低)",
+      "favorite_market": "Badosa P. @1.32 (market implied 76%)",
+      "underdog_market": "Lys E.(WC) @3.20 (market implied 31%)",
+      "result_score": "Lys 2-6 7-5 6-4 (2h15m)",
+      "actual_winner": "Lys E. (WC, Germany)",
+      "match_stats": {
+        "lys_total_pts_won": "99/195 (50.8%)",
+        "badosa_total_pts_won": "96/195 (49.2%)",
+        "lys_bp_converted": "6/12 (50%)",
+        "lys_double_faults": 7,
+        "badosa_bp_converted": "6/15 (40%)",
+        "badosa_double_faults": 15,
+        "note": "Stats from WTA page (partial). Score 2-6 7-5 6-4 confirmed by Tennis Tonic/Tennis.com/WTA video."
+      },
+      "upset_factors": [
+        "UF07",
+        "UF08"
+      ],
+      "factor_notes": {
+        "UF07": "Lys WC (German home player in Stuttgart). Home crowd advantage. Court/conditions familiarity.",
+        "UF08": "Badosa ranked #102 due to extended injury. Market priced her at 1.32 (76% implied) based on pre-injury peak reputation. Badosa 15 DFs reflects poor physical condition post-comeback."
+      },
+      "screening_decision_review": "SKIP was correct (no bet). But: when former top-10 returns from injury at #102, market over-prices based on name. L1 was unverifiable (Badosa injury) = correct outcome. Signal for future: injury comeback player at rank 100+ vs home WC = upset flag.",
+      "what_signal_could_detect": "Pre-match signal: player's current ranking >40 positions below 52-week high rank → injury comeback discount. Home WC + opponent injury comeback = elevated upset probability.",
+      "rule_candidate": "P009: Injury comeback player discount. If favorite's rank > 40 spots below 52-week peak, apply -10% to market implied probability.",
+      "learning": "Market over-values big-name returning injury players based on reputation (not current fitness). Our cElo was correctly marked as unverifiable. Type A: home WC + opponent injury comeback is a detectable pre-match upset signal.",
+      "miss_layer": null
     }
   ],
   "gamble_bet_candidates": {
@@ -298,7 +378,7 @@
     ]
   },
   "pattern_summary": {
-    "total_upsets_tracked": 6,
+    "total_upsets_tracked": 7,
     "gamble_bet_results": {
       "total": 1,
       "hits": 1,
@@ -326,23 +406,26 @@
       "UF09": 1,
       "UFT01": 1,
       "UF03_variant(NRL小サンプル)": 1,
-      "UF06_variant(desperate team)": 1
+      "UF06_variant(desperate team)": 1,
+      "UF07": 1,
+      "UF08": 1
     },
     "most_common_factor": "UF01（コート表面適性）とUF03（実力差ボーダーライン）が各2件でタイ",
-    "key_insight_current": "Stuttgart indoor clay R1（4/13-14）で4/12がアップセット。UF01（表面適性逆転）の影響が想定以上に強い。Ostapenko GB001はこのパターンで的中。W007補正を強化検討中。",
+    "key_insight_current": "Stuttgart indoor clay R1(4/13-14): Type A upset 1 confirmed (Lys/Badosa A001). CE006/CE009 corrections: Korpatsch/Shnaider/Eala/Fernandez/Samsonova/Ruzic were all data errors (correct winners won). Zhang/Noskova suspended.",
     "stuttgart_r1_pattern_note": {
       "date": "2026-04-14",
       "surface": "Indoor Clay（Stuttgart）",
       "upsets_observed": 2,
       "total_matches": 12,
-      "upset_rate": "2/12 confirmed (2 pending Apr-15)",
+      "upset_rate": "2/12 confirmed (Eala/Fernandez + Lys/Badosa). Zhang/Noskova pending completion.",
       "notable_upsets": [
-        "Korpatsch(4.70) d. Shnaider(1.16): UF01+UFT03",
-        "Zhang(5.20) d. Noskova(1.14): UF01（フラット系有利）",
         "Sönmez(3.85) d. Paolini(4)(1.23): UF01（cElo差300ptも逆転）",
-        "Eala(2.39) d. Fernandez Q(1.54): UF01+UF04（Fernandez疲弊）"
+        "Lys(3.20) d. Badosa(1.32): 2-6 7-5 6-4 (2h15m). Lys WC comeback. Badosa injury/low ranking (UF08)."
       ],
-      "learning": "indoor clay（Stuttgart）はcElo予測を最大300pt差でも覆す。攻撃型・フラット系が表面補正を大きく受ける。W007を強化検討。"
+      "learning": "indoor clay（Stuttgart）はcElo予測を最大300pt差でも覆す。攻撃型・フラット系が表面補正を大きく受ける。W007を強化検討。",
+      "pending_matches": [
+        "Zhang vs Noskova (suspended 4/16, 3rd set in progress, Noskova leading)"
+      ]
     }
   },
   "rule_improvement_candidates": [

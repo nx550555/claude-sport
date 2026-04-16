@@ -157,5 +157,77 @@
     "after_result": "result・prediction_hit・hit（GOのみ）・miss_analysisをrecords/{sport}/{year}.jsonに記入する",
     "rule_update": "miss_analysisから導いた新パターンをrules_{sport}.jsonに追記する",
     "stats_update": "stats/cumulative.jsonのprediction_accuracy・bet_performanceを両方更新する"
+  },
+
+  "phase_transition": {
+    "_description": "現在はPhase1（強い側が勝つかどうかのスクリーニング）。以下のいずれかのトリガーが満たされたら、ユーザーに報告してPhase2（アップセット確率の積極的予測）への移行可否を確認する。",
+    "_instruction_for_claude": "セッション開始時またはrecords更新後に、以下のtriggersを全件チェックし、いずれか1つでもmet=trueになったら即座にユーザーへ報告する。報告文例: '【フェーズ移行トリガー発動】T○が条件を満たしました。アップセット予測フェーズ(Phase2)への移行を検討しますか？'",
+    "current_phase": "Phase1",
+    "next_phase": "Phase2",
+    "phase_definitions": {
+      "Phase1": "強い側（L1指標上位）が勝つかどうかをスクリーニングし、精度ベースラインを構築する",
+      "Phase2": "アップセット確率を積極的に定量化し、弱い側が勝つシナリオも正面から予測に組み込む"
+    },
+    "triggers": [
+      {
+        "id": "T1",
+        "name": "サンプル数条件",
+        "description": "各スポーツで確認済み試合(hit!=null)が20件以上に達した",
+        "check_method": "records/{sport}/*.json の hit!=null の試合数を各スポーツでカウント",
+        "threshold": "いずれか1スポーツで20件以上",
+        "met": false,
+        "met_date": null,
+        "current_counts": {
+          "tennis_atp": "確認時に再カウント",
+          "tennis_wta": "確認時に再カウント",
+          "nhl": "確認時に再カウント",
+          "nrl": "確認時に再カウント",
+          "ufl": "確認時に再カウント"
+        }
+      },
+      {
+        "id": "T2",
+        "name": "アップセットパターン蓄積条件",
+        "description": "upset_patterns.jsonのconfirmed_upsets がテニス(ATP+WTA)合計10件、または他スポーツで5件以上に達した",
+        "check_method": "stats/upset_patterns.json の confirmed_upsets をスポーツ別にカウント",
+        "threshold": "テニス合計10件 OR 他スポーツいずれか1つで5件以上",
+        "met": false,
+        "met_date": null,
+        "current_counts": {
+          "tennis": "確認時に再カウント",
+          "nrl": "確認時に再カウント"
+        }
+      },
+      {
+        "id": "T3",
+        "name": "ルール実装完成度条件",
+        "description": "rule_pipeline.jsonのimplemented_rulesが累計3件以上になった（学習サイクルが一周したことの証明）",
+        "check_method": "core/rule_pipeline.json の implemented_rules の件数をカウント",
+        "threshold": "3件以上",
+        "met": true,
+        "met_date": "2026-04-15",
+        "current_count": 3,
+        "implemented": ["IMPL001/N016", "IMPL002/W007", "IMPL003/R001"]
+      },
+      {
+        "id": "T4",
+        "name": "予測精度ベースライン条件",
+        "description": "ベット推奨(GO/CAUTION)のhit_rateが70%以上を3ヶ月以上維持した",
+        "check_method": "stats/cumulative.json のbet_performance.hit_rateと達成開始日を確認。開始日から90日以上経過かつhit_rate>=0.70",
+        "threshold": "hit_rate >= 70% かつ 継続期間 >= 90日",
+        "met": false,
+        "met_date": null,
+        "tracking": {
+          "above_threshold_since": null,
+          "days_maintained": 0
+        }
+      }
+    ],
+    "transition_procedure": {
+      "step1": "いずれかのトリガーが満たされた時点でセッション内にユーザーへ報告する",
+      "step2": "報告文: '【フェーズ移行トリガー発動: Tx】（条件の説明）。アップセット予測フェーズへの移行を検討しますか？移行する場合はPhase2の具体的な実装方針をご提案します。'",
+      "step3": "ユーザーが移行を承認した場合: framework.jsonのcurrent_phaseを'Phase2'に更新し、各ルールファイルにアップセット予測セクションを追加する",
+      "step4": "ユーザーが移行を保留した場合: 次回トリガー確認時に再報告する（current_phaseはPhase1のまま）"
+    }
   }
 }

@@ -27,10 +27,13 @@
 | PA004 | WTA | Stuttgart R2 スクリーニング（R1結果確認後） | PENDING | 高 | 4/14〜 |
 | PA005 | NHL | 4/15 CAUTION2件ゴーリー確認完了: CAR@NYI=Andersen確認(N006解消)試合進行中 / COL@CGY=Blackwood起用→N016発動→SKIP推奨 | DONE | 高 | 完了 4/15 |
 | PA006 | NHL | PO R1 スクリーニング（RS終了4/16後、ブラケット確定→MoneyPuck xGF%起点） | PENDING | 高 | 4/16〜17 |
-| PA007 | NRL | R7 Broncos@Tigers オッズ確認（記録rec_odds 1.46 vs データ 2.50 の不一致を解消） | PENDING | 中 | 試合前 4/18まで |
+| PA007 | NRL | R7 Broncos@Tigers オッズ確認（REVOKED済→odds discrepancy無効） | SKIP | 中 | Broncos REVOKED済 |
 | PA008 | NRL | R7 GO2件（Warriors 4/18/Broncos 4/18）・CAUTION2件の結果確認 | WAITING | 中 | 4/18〜19試合後 |
 | PA009 | NBA | Play-in（4/15-16）・PO R1（4/19〜）全SKIP確認済み。結果モニタリングのみ | WAITING | 低 | 継続 |
 | PA010 | MC2026 | F Alcaraz vs Sinner 結果確認（SKIP・観戦のみ） | DONE | 低 | 完了 4/14 Sinner 7-6(5) 6-3 |
+| PA011 | システム | 【フェーズ移行T3発動】実装済みルール3件達成→Phase2移行可否をユーザーに確認 | PENDING | 中 | 確認待ち |
+| PA012 | WTA | Stuttgart Zhang vs Noskova R1 結果確認（3rdセットサスペンド中: Zhang 7-5/Noskova 6-4/続行中） | WAITING | 高 | 完了次第 |
+| PA013 | ATP | Barcelona R2 Musetti vs Moutet GO @1.37 結果確認（4/16 18:00予定） | WAITING | 高 | 4/16試合後 |
 
 ---
 
@@ -69,3 +72,12 @@
 - WTA Paolini vs Sonmez: 2ndセット中断中・未完了 (Sonmez 6-2 lead, 2nd set suspended)
 - WTA Zhang vs Noskova: 1stセット中断・未完了
 - P003 Stuttgart R1 trigger: 未達 (Paolini/Sonmez + Zhang/Noskova の2試合がまだ未完了)
+
+---
+**Session_31 更新 (2026-04-16):**
+- Type A/B アップセット分析フレームワーク深掘り実施
+- CE006-CE009: Stuttgart R1 データ誤入力4件修正 (Korpatsch/Shnaider・Eala/Fernandez・Samsonova/Ruzic・Zhang/Noskova SL)
+- 真のType A確認済みアップセット: Lys/Badosa 2-6 7-5 6-4 → A001として upset_patterns.json に追記
+- PA007: NRL Broncos REVOKED済のため odds discrepancy は無効 → SKIP推奨
+- Zhang/Noskova Stuttgart R1: まだサスペンド中 (Zhang 7-5/Noskova 6-4/3rd set in progress) → PA012追加
+- ATP Barcelona R2 Musetti@1.37 GO (4/16 18:00) 結果確認要 → PA013追加

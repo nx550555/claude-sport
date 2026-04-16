@@ -29,12 +29,11 @@
       "indoor_clay_note": "Stuttgartはindoor clay（屋内クレー）。屋外クレーより速い可能性あり。サーブ力のある選手を過小評価しないよう注意。W007の表面特化補正を緩めに適用",
       "r1_upset_analysis": {
         "total_r1_matches": 12,
-        "upsets_by_odds": 2,
+        "upsets_by_odds": 1,
         "upset_list": [
-          "Korpatsch d. Shnaider (Korpatsch 4.70→勝利)",
-          "Eala d. Fernandez (Eala 2.39→勝利)"
+          "Lys d. Badosa 2-6 7-5 6-4 (Lys WC 3.20, Badosa 1.32). UF07+UF08."
         ],
-        "key_insight": "R1で4/12がアップセット。indoor clay（低バウンド）で攻撃型・フラット系が軒並み優位に立った。UF01の影響が予想以上に強い。GB001のOstapenko予測はUF01+UFT01で的中。",
+        "key_insight": "R1 CE006/CE009修正後: Stuttgart R1真のアップセット1件(Lys/Badosa)のみ確認。Korpatsch/Shnaider・Eala/Fernandez・Samsonova/Ruzicは全て本命勝利(誤入力)。Zhang/Noskova未完了。",
         "rule_candidate": "Stuttgart indoor clayではW007補正を強化検討。cElo差200pt以上でもフラット攻撃型アンダードッグは過小評価しない。"
       },
       "predictions": [
@@ -57,19 +56,23 @@
           "adjustments": {
             "W008_korpatsch_wc_home": "-2% (Korpatsch WCドイツ地元補正)"
           },
-          "result": "Korpatsch d. Shnaider",
-          "score": null,
+          "result": "Shnaider d. Korpatsch 6-3 6-1",
+          "score": "6-3 6-1",
           "hit": null,
           "actual_ev": null,
           "actual_odds_at_start": {
             "korpatsch": 4.7,
             "shnaider": 1.16
           },
-          "outcome_note": "UPSET。Korpatsch 4.70→勝利。indoor clay + WC地元効果。UF01+UFT03。",
+          "outcome_note": "Shnaider(CE006修正: 本命1.16)勝利。6-3 6-1(1h30m)。予測通り(SKIP正解)。旧誤入力「Korpatsch UPSET 4.70」を修正。",
           "rules_applied": [
             "W001",
             "W008"
-          ]
+          ],
+          "predicted_winner": "Shnaider D.",
+          "prediction_confidence": 75.6,
+          "prediction_basis": "cElo差215.9ptでL1通過。Shnaider本命(EV-10%でSKIP)",
+          "prediction_hit": true
         },
         {
           "tournament": "Porsche Tennis Grand Prix Stuttgart",
@@ -129,20 +132,24 @@
           "ev_est": 6.4,
           "skip_reason": "信頼度64.1% < 75%閾値（W006除外）。EVは+6.4%あるがW005未達。",
           "note": "両者southpaw。Fernandez Q（クオリファイ疲労リスクあり）。市場implied 60.2% vs 推定64.1%で差が小さい。",
-          "result": "Eala d. Fernandez",
-          "score": null,
+          "result": "Fernandez d. Eala 6-1 6-4",
+          "score": "6-1 6-4",
           "hit": null,
           "actual_ev": null,
           "actual_odds_at_start": {
             "eala": 2.39,
             "fernandez": 1.54
           },
-          "outcome_note": "UPSET（中程度）。Eala 2.39→勝利。Fernandez Q疲労あり。",
+          "outcome_note": "Fernandez(Q, CE009修正: 本命1.54/1.66)勝利。6-1 6-4(1h29m)。予測通り(SKIP正解: conf64.1%でW006除外)。旧誤入力「Eala UPSET 2.39」修正。",
           "rules_applied": [
             "W001",
             "W005",
             "W006"
-          ]
+          ],
+          "predicted_winner": "Fernandez L.",
+          "prediction_confidence": 64.1,
+          "prediction_basis": "cElo差100.7ptでL1通過。Fernandez(Q)本命。conf64.1% < 75%でW006除外→SKIP",
+          "prediction_hit": true
         },
         {
           "tournament": "Porsche Tennis Grand Prix Stuttgart",
@@ -154,16 +161,21 @@
           "tier": "skip",
           "rec": null,
           "skip_reason": "Badosa怪我（No.102に降格）。実力差不明確。L1未達。",
-          "result": "Lys d. Badosa",
-          "score": null,
+          "result": "Lys d. Badosa 2-6 7-5 6-4",
+          "score": "2-6 7-5 6-4",
           "hit": null,
           "actual_ev": null,
           "actual_odds_at_start": {
             "lys": 3.2,
             "badosa": 1.32
           },
-          "outcome_note": "Lys WC（地元ドイツ）勝利。Badosa怪我の影響か。",
-          "rules_applied": []
+          "outcome_note": "Lys(WC, 3.20)comeback勝利。2-6 7-5 6-4(2h15m)。SKIP正解(L1未達・Badosa怪我cElo不確定)。Type A upset A001として記録。",
+          "rules_applied": [],
+          "predicted_winner": "Badosa P.",
+          "prediction_confidence": null,
+          "prediction_basis": "L1未達(Badosa怪我でcElo確認不可)。市場Badosa 76%implied。Lys cElo未取得。",
+          "prediction_hit": false,
+          "type_a_upset_id": "A001"
         },
         {
           "tournament": "Porsche Tennis Grand Prix Stuttgart",
@@ -189,12 +201,14 @@
             "zhang": 5.2,
             "noskova": 1.14
           },
-          "outcome_note": "4/15開催予定（未試合）。WebSearch確認: April 15 12:30 UTC予定。",
+          "outcome_note": "4/16 suspended: Zhang 7-5 / Noskova 6-4 / 3rd set in progress (Noskova leading). CE008 related. Update after completion.",
           "rules_applied": [
             "W001",
             "W006"
           ],
-          "note": "Noskova cElo1753 vs Zhang cElo1588。差165でL1通過。Zhang 36歳補正後74.1%もW006閾値75%に届かず。4/14開催。"
+          "note": "Noskova cElo1753 vs Zhang cElo1588。差165でL1通過。Zhang 36歳補正後74.1%もW006閾値75%に届かず。4/14開催。",
+          "suspension_status": "suspended_3rd_set",
+          "suspension_score_so_far": "Zhang 7-5, Noskova 6-4, 3rd set in progress"
         },
         {
           "tournament": "Porsche Tennis Grand Prix Stuttgart",
@@ -894,7 +908,7 @@
         {
           "match": "Shnaider vs Korpatsch",
           "verdict_was": "SKIP",
-          "result": "Korpatsch WIN(UPSET 4.70)",
+          "result": "Shnaider WIN(CE006: 誤入力修正. 本命勝利 6-3 6-1)",
           "no_bet": true
         },
         {
@@ -906,7 +920,7 @@
         {
           "match": "Fernandez vs Eala",
           "verdict_was": "SKIP",
-          "result": "Eala WIN(UPSET 2.39)",
+          "result": "Fernandez WIN 6-1 6-4 (CE009: 旧誤入力「Eala UPSET 2.39」修正)",
           "no_bet": true
         },
         {
@@ -918,13 +932,13 @@
         {
           "match": "Noskova vs Zhang",
           "verdict_was": "SKIP",
-          "result": "Zhang WIN(UPSET 5.20)",
+          "result": "SUSPENDED (未完了: Zhang 7-5/Noskova 6-4/3rdセット中断 4/16時点. 完了後更新要)",
           "no_bet": true
         },
         {
           "match": "Samsonova vs Ruzic",
           "verdict_was": "SKIP",
-          "result": "Ruzic WIN(UPSET 2.95)",
+          "result": "Samsonova WIN 6-0 6-4 (SKIP正解. CE008: 旧誤入力「Ruzic WIN UPSET」修正済み)",
           "no_bet": true
         },
         {
