@@ -22,7 +22,7 @@
 | ID | 種目 | 内容 | ステータス | 優先度 | 期日 |
 |---|---|---|---|---|---|
 | PA001 | UFL | Week3 Dallas vs Columbus 結果確認・記録（GO Dallas EV+8.2% 信頼度82%） | DONE | 高 | 完了 4/14 |
-| PA016 | 全スポーツ | Type Aアップセット分析 品質補完（A001-A013 ニュース/ブログ/SNS多ソース検証 + rule_pipeline候補を rules_*.json に実装） | PENDING | 最高 | 次セッション最優先 |
+| PA016 | 全スポーツ | Type Aアップセット分析 品質補完（A001-A013 ニュース/ブログ/SNS多ソース検証 + rule_pipeline候補を rules_*.json に実装） | DONE | 最高 | 完了 2026-04-16 |
 | PA002 | ATP | W16 R2 スクリーニング（R1結果確認後・casino data起点） | PENDING | 高 | 4/14〜 |
 | PA003 | ATP | Barcelona/Munich GO3件の結果確認（Musetti@1.27/Cobolli@1.21/Kopriva@1.36 4/14開催） | DONE | 高 | 完了 4/15 全HIT |
 | PA004 | WTA | Stuttgart R2 スクリーニング（R1結果確認後） | PENDING | 高 | 4/14〜 |
