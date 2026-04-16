@@ -607,6 +607,34 @@
       "rule_candidate": "P013: ATP 500/250 seeded player who played QF+ at previous week's tournament: fatigue adjustment -5% (not -3%) for first match of next tournament within 7 days.",
       "note_special": "CE010関連: casino dataに'Bublik vs Hurkacz'のphantom entryが存在（Hurkacz withdrew）。実際の対戦相手はMolcan。phantom entryはtier=invalidで無効化済み。",
       "miss_layer": null
+    },
+    {
+      "id": "A013",
+      "type": "type_a",
+      "type_note": "Type A: SKIPだった試合でアップセット発生。スクリーニング閾値の妥当性検証用。",
+      "date": "2026-04-14",
+      "sport": "tennis_wta",
+      "tournament": "Open Capfinances Rouen Metropole 2026",
+      "round": "R1",
+      "our_verdict": "SKIP (L1未達: cElo差~50pt < 閾値80pt)",
+      "favorite_market": "Jacquemot E. @1.38 (French player, home crowd)",
+      "underdog_market": "Maria T. @2.8 (Germany)",
+      "result_score": "Maria 6-4 6-3",
+      "actual_winner": "Maria T.",
+      "upset_factors": [
+        "UFT01",
+        "UF01",
+        "UF07"
+      ],
+      "factor_notes": {
+        "UFT01": "Jacquemot is French (home crowd in Rouen, France). Home crowd effect can boost local players' confidence and add pressure to opponents — but Maria reeled off 8 straight games at one point.",
+        "UF01": "Maria T. (Germany) is a clay specialist with strong European clay baseline. Despite lower cElo, her clay movement and consistency beat the younger Jacquemot.",
+        "UF07": "Jacquemot (younger, ranked higher) may have felt pressure as local favorite. Maria as veteran overcame 3-1 and 4-2 deficits — mental resilience advantage."
+      },
+      "screening_decision_review": "SKIP正しかった（L1差50pt < 80pt閾値）。ただしMariaの6-4 6-3勝利はランダムな接戦ではなく、逆転後に8ゲーム連取という実力差を示す内容。Maria（ドイツ）のクレー経験値がJacquemot（フランス）の地元アドバンテージを上回った。",
+      "what_signal_could_detect": "L1差50-80ptの『グレーゾーン』ではveteran vs young player on clay を追加分析すべき。Maria 34歳の経験値 vs Jacquemot 22歳のプレッシャーという構図は系統的に見落としやすい。",
+      "rule_candidate": "W_P_new1: WTA clay: veteran player (30+ age, 50+ career wins) vs young player (<25) in diff 40-80pt range → reduce confidence in younger player by 5%.",
+      "miss_layer": null
     }
   ],
   "gamble_bet_candidates": {
@@ -679,7 +707,7 @@
     ]
   },
   "pattern_summary": {
-    "total_upsets_tracked": 20,
+    "total_upsets_tracked": 21,
     "last_updated": "2026-04-16",
     "gamble_bet_results": {
       "total": 1,

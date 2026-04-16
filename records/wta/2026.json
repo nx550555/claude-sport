@@ -515,12 +515,16 @@
           "odds_stevens": 1.8,
           "odds_podres": 1.91,
           "skip_reason": "市場ほぼ互角（1.80 vs 1.91）→cElo差小さく L1未達推定。",
-          "result": null,
-          "score": null,
+          "result": "Podres V.",
+          "score": "6-2 6-1",
           "hit": null,
           "actual_ev": null,
           "rules_applied": [],
-          "note": "Sloane Stevens vs Veronica Podres。cElo未確認。市場互角（差~0pp）。"
+          "note": "Sloane Stevens vs Veronica Podres。cElo未確認。市場互角（差~0pp）。",
+          "predicted_winner": "Stevens S.",
+          "prediction_confidence": 52,
+          "prediction_basis": "Market slight favorite Stevens (1.80 vs 1.91). cElo unconfirmed. Essentially coin flip.",
+          "prediction_hit": false
         },
         {
           "tournament": "WTA Rouen",
@@ -565,14 +569,18 @@
           "est_win_pct_cristian": 98.5,
           "ev_cristian": 10.3,
           "skip_reason": "オッズ1.12→EV+10.3%理論値あるが実際のcElo未確認。1.12は過剰ブックマーク領域。",
-          "result": null,
-          "score": null,
+          "result": "Cristian J.",
+          "score": "2-6 7-6(6) 7-5",
           "hit": null,
           "actual_ev": null,
           "rules_applied": [
             "W001"
           ],
-          "note": "野球で言うサビアン（フランスWC）vs Cristian(ルーマニア)推定。cElo差大（400推定）。しかしオッズ1.12は実質EV-5%以下。SKIP。"
+          "note": "野球で言うサビアン（フランスWC）vs Cristian(ルーマニア)推定。cElo差大（400推定）。しかしオッズ1.12は実質EV-5%以下。SKIP。",
+          "predicted_winner": "Cristian J.",
+          "prediction_confidence": 85,
+          "prediction_basis": "Cristian heavy favorite (odds 1.12). Estimated cElo diff ~400pt. SKIP (odds too short).",
+          "prediction_hit": true
         },
         {
           "tournament": "WTA Rouen",
@@ -587,12 +595,17 @@
           "odds_maria": 2.8,
           "odds_jacquemot": 1.38,
           "skip_reason": "L1未達推定（差~50 < 閾値80）。",
-          "result": null,
-          "score": null,
+          "result": "Maria T.",
+          "score": "6-4 6-3",
           "hit": null,
           "actual_ev": null,
           "rules_applied": [],
-          "note": "Maria T.(ドイツ) cElo~1580 vs Jacquemot E.(フランス) cElo~1630推定。差~50。L1未達。"
+          "note": "Maria T.(ドイツ) cElo~1580 vs Jacquemot E.(フランス) cElo~1630推定。差~50。L1未達。",
+          "predicted_winner": "Jacquemot E.",
+          "prediction_confidence": 65,
+          "prediction_basis": "Jacquemot favorite (1.38 vs 2.8). cElo diff ~50pt L1未達. Jacquemot (France) home court.",
+          "prediction_hit": false,
+          "type_a_upset_id": "A013"
         },
         {
           "tournament": "WTA Rouen",
@@ -607,12 +620,17 @@
           "odds_mcnally": 2.04,
           "odds_bolinets": 1.7,
           "skip_reason": "市場ほぼ互角（2.04 vs 1.70）→cElo差小さく L1未達推定。",
-          "result": null,
-          "score": null,
+          "result": "McNally K.",
+          "score": "1-6 6-1 6-1",
           "hit": null,
           "actual_ev": null,
           "rules_applied": [],
-          "note": "McNally K.(米) vs Bolinets K.。市場小差。L1未達推定。"
+          "note": "McNally K.(米) vs Bolinets K.。市場小差。L1未達推定。",
+          "predicted_winner": "Bolinets K.",
+          "prediction_confidence": 55,
+          "prediction_basis": "Bolinets slight market favorite (1.70 vs 2.04). WTA official shows opponent as Volynets - possible name discrepancy in casino data.",
+          "prediction_hit": false,
+          "note_name": "WTA official match listed as McNally vs Volynets K. (not Bolinets). Possible casino data name error."
         },
         {
           "tournament": "WTA Rouen",
@@ -655,12 +673,16 @@
           "odds_baptiste": 1.15,
           "odds_ponchet": 4.8,
           "skip_reason": "オッズ1.15→EV≈-10%以下。過剰ブックマーク。",
-          "result": null,
-          "score": null,
+          "result": "Baptiste H.",
+          "score": "3-6 7-6(6) 6-2",
           "hit": null,
           "actual_ev": null,
           "rules_applied": [],
-          "note": "Baptiste H. vs Ponchet J.(フランス)。オッズ1.15極短。"
+          "note": "Baptiste H. vs Ponchet J.(フランス)。オッズ1.15極短。",
+          "predicted_winner": "Baptiste H.",
+          "prediction_confidence": 88,
+          "prediction_basis": "Baptiste heavy favorite (1.15 vs 4.8). SKIP (odds too short, EV negative).",
+          "prediction_hit": true
         },
         {
           "tournament": "WTA Rouen",
@@ -677,14 +699,19 @@
           "est_win_pct_potapova": 73.8,
           "ev_potapova": -8.5,
           "skip_reason": "EV -8.5%（市場implied 80.6% >> cElo推定73.8%）。市場がPotapova過大評価。",
-          "result": null,
+          "result": "cancelled",
           "score": null,
           "hit": null,
           "actual_ev": null,
           "rules_applied": [
             "W001"
           ],
-          "note": "Potapova cElo~1680 vs Brinkova cElo~1500（差~180）。L1通過だがEVマイナス。"
+          "note": "Potapova cElo~1680 vs Brinkova cElo~1500（差~180）。L1通過だがEVマイナス。",
+          "predicted_winner": null,
+          "prediction_confidence": null,
+          "prediction_basis": "Match cancelled (source: Yahoo Sports). Likely withdrawal by one player.",
+          "prediction_hit": null,
+          "note_name": "Records show Brinkova A. but actual player is Blinkova A. (Anna Blinkova). Name typo in source data."
         },
         {
           "tournament": "WTA Rouen",
