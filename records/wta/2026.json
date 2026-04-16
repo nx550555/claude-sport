@@ -1,4 +1,4 @@
-{
+﻿{
   "sport": "tennis_wta",
   "season": "2026",
   "bet_type": "Moneyline (ML)",
@@ -33,7 +33,7 @@
         "upset_list": [
           "Lys d. Badosa 2-6 7-5 6-4 (Lys WC 3.20, Badosa 1.32). UF07+UF08."
         ],
-        "key_insight": "R1 CE006/CE009修正後: Stuttgart R1真のアップセット1件(Lys/Badosa)のみ確認。Korpatsch/Shnaider・Eala/Fernandez・Samsonova/Ruzicは全て本命勝利(誤入力)。Zhang/Noskova未完了。",
+        "key_insight": "R1 CE006/CE009修正後: Stuttgart R1真のアップセット1件(Lys/Badosa A001)のみ確認。Korpatsch/Shnaider・Eala/Fernandez・Samsonova/Ruzicは全て本命勝利(誤入力)。Zhang/Noskova完了: Noskova d. Zhang 5-7 6-1 6-4(SKIP正解・予測HIT)。",
         "rule_candidate": "Stuttgart indoor clayではW007補正を強化検討。cElo差200pt以上でもフラット攻撃型アンダードッグは過小評価しない。"
       },
       "predictions": [
@@ -193,22 +193,24 @@
           "adjustments": {
             "zhang_age36_form": "+2%（36歳・直近フォーム低下）"
           },
-          "result": null,
-          "score": null,
+          "result": "Noskova d. Zhang",
+          "score": "5-7 6-1 6-4",
           "hit": null,
           "actual_ev": null,
           "actual_odds_at_start": {
             "zhang": 5.2,
             "noskova": 1.14
           },
-          "outcome_note": "4/16 suspended: Zhang 7-5 / Noskova 6-4 / 3rd set in progress (Noskova leading). CE008 related. Update after completion.",
+          "predicted_winner": "Noskova L.",
+          "prediction_confidence": 74.1,
+          "prediction_basis": "cElo差165pt. Zhang 36歳補正後74.1%",
+          "prediction_hit": true,
+          "outcome_note": "Noskova d. Zhang 5-7 6-1 6-4. 1st set Zhang took 7-5, but Noskova won 2nd 6-1 and completed 3rd 6-4 after suspension. SKIP正解(EV-10%超・ノーベット)。予測はNoskova = HIT。WTA公式動画「Noskova wins big-hitting duel vs Zhang」確認。",
           "rules_applied": [
             "W001",
             "W006"
           ],
-          "note": "Noskova cElo1753 vs Zhang cElo1588。差165でL1通過。Zhang 36歳補正後74.1%もW006閾値75%に届かず。4/14開催。",
-          "suspension_status": "suspended_3rd_set",
-          "suspension_score_so_far": "Zhang 7-5, Noskova 6-4, 3rd set in progress"
+          "note": "Noskova cElo1753 vs Zhang cElo1588。差165でL1通過。Zhang 36歳補正後74.1%もW006閾値75%に届かず。4/14開催。"
         },
         {
           "tournament": "Porsche Tennis Grand Prix Stuttgart",
@@ -453,16 +455,19 @@
           "odds_kasatkina": 2.01,
           "odds_li_ann": 1.72,
           "skip_reason": "Li Ann大きな有利（1.72）。Kasatkina cElo確認要。市場implied Li Ann 58.1%。L1/cElo確認未実施（完了済みのため後追い）。",
-          "result": "Kasatkina d. Li Ann",
-          "score": null,
+          "result": "Ann Li d. Kasatkina",
+          "score": "6-7(6) 6-2 6-4",
           "hit": null,
           "actual_ev": null,
           "actual_odds_at_start": {
             "kasatkina": 2.01,
             "li_ann": 1.72
           },
-          "outcome_note": "Kasatkina（アンダードッグ2.01）勝利。興味深いアップセット気味。",
-          "rules_applied": []
+          "outcome_note": "CE修正(2026-04-16): Ann Li(5) d. Kasatkina 6-7(6) 6-2 6-4。旧誤記録「Kasatkina d. Li Ann」は誤り。Ann LiはAmerican player seeded 5th、日本語名順で「Li Ann」と表記されていた。tennistonic.com/WTA公式確認。",
+          "rules_applied": [],
+          "predicted_winner": "Ann Li",
+          "prediction_confidence": null,
+          "prediction_hit": false
         },
         {
           "tournament": "WTA Rouen",
@@ -483,7 +488,7 @@
           "ev_est": 13.9,
           "skip_reason": "信頼度73.0% < 75%閾値（W006）。EV+13.9%あるが閾値未達。",
           "note": "market vs cElo乖離あり（64.1% vs 73.0% = 8.9pp）。閾値75%あと2%不足。GAMBLE_BET: cElo差172.8pt > 上限150pt。W009対象外。",
-          "result": null,
+          "result": "Rakhimova K.",
           "score": null,
           "hit": null,
           "actual_ev": null,
@@ -491,7 +496,11 @@
             "W001",
             "W005",
             "W006"
-          ]
+          ],
+          "outcome_note": "Rakhimova d. Kalieva (came from 5-2 down in 2nd set). WTA官式動画確認。",
+          "predicted_winner": "Rakhimova K.",
+          "prediction_confidence": 73.0,
+          "prediction_hit": true
         },
         {
           "tournament": "WTA Rouen",
@@ -528,14 +537,18 @@
           "est_win_pct_boulter": 76.0,
           "ev_boulter": 8.7,
           "skip_reason": "選手名要確認（casino表記: ボルター・ケイティ）。Katie Boulterと仮定するとconf 76%, EV+8.7%→GO候補。cElo実数確認必要。",
-          "result": null,
+          "result": "Boulter K.",
           "score": null,
           "hit": null,
           "actual_ev": null,
           "rules_applied": [
             "W001"
           ],
-          "note": "CAUTION: casino表記'ボルター・ケイティ'= Katie Boulter(GBR, cElo~1700)と仮定。vs Timofeyeva cElo~1500。差~200でL1通過。conf 76%, EV+8.7%。tennisabstractでcElo確認後GO判断可。"
+          "note": "CAUTION: casino表記'ボルター・ケイティ'= Katie Boulter(GBR, cElo~1700)と仮定。vs Timofeyeva cElo~1500。差~200でL1通過。conf 76%, EV+8.7%。tennisabstractでcElo確認後GO判断可。",
+          "outcome_note": "Boulter d. Timofeeva (Boulter advanced to R2 vs Cristian confirmed by WTA draws). Score not confirmed.",
+          "predicted_winner": "Boulter K.",
+          "prediction_confidence": 76.0,
+          "prediction_hit": true
         },
         {
           "tournament": "WTA Rouen",
@@ -616,14 +629,18 @@
           "est_win_pct_kostyuk": 64.0,
           "ev_kostyuk": -23.8,
           "skip_reason": "EV -23.8%（市場implied 84% >> cElo推定64%）。オッズ1.19は短すぎ。",
-          "result": null,
-          "score": null,
+          "result": "Kostyuk M.",
+          "score": "6-1 6-4",
           "hit": null,
           "actual_ev": null,
           "rules_applied": [
             "W001"
           ],
-          "note": "Kostyuk cElo~1720 vs Parry D.(フランス) cElo~1620。差~100でL1通過だがEV大幅マイナス。"
+          "note": "Kostyuk cElo~1720 vs Parry D.(フランス) cElo~1620。差~100でL1通過だがEV大幅マイナス。",
+          "outcome_note": "Kostyuk d. Parry 6-1 6-4. tennistemple.com/WTA公式確認。SKIP正解(EV-23.8%)。",
+          "predicted_winner": "Kostyuk M.",
+          "prediction_confidence": 64.0,
+          "prediction_hit": true
         },
         {
           "tournament": "WTA Rouen",
@@ -684,14 +701,18 @@
           "est_win_pct_cirstea": 69.1,
           "ev_cirstea": -21.9,
           "skip_reason": "EV -21.9%（オッズ1.13→implied 88.5% >> cElo推定69.1%）。",
-          "result": null,
-          "score": null,
+          "result": "Cirstea S.",
+          "score": "6-3 6-7(5) 7-6(2)",
           "hit": null,
           "actual_ev": null,
           "rules_applied": [
             "W001"
           ],
-          "note": "Cirstea cElo~1650 vs Ferro F. cElo~1510（差~140）。L1通過だがオッズ極短。"
+          "note": "Cirstea cElo~1650 vs Ferro F. cElo~1510（差~140）。L1通過だがオッズ極短。",
+          "outcome_note": "Cirstea d. Ferro 6-3 6-7(5) 7-6(2). tennistonic.com確認。SKIP正解(EV-21.9%)。",
+          "predicted_winner": "Cirstea S.",
+          "prediction_confidence": 69.1,
+          "prediction_hit": true
         },
         {
           "tournament": "WTA Rouen",
@@ -932,7 +953,7 @@
         {
           "match": "Noskova vs Zhang",
           "verdict_was": "SKIP",
-          "result": "SUSPENDED (未完了: Zhang 7-5/Noskova 6-4/3rdセット中断 4/16時点. 完了後更新要)",
+          "result": "Noskova WIN 5-7 6-1 6-4 (SKIP正解. 予測HIT: Noskova本命)",
           "no_bet": true
         },
         {

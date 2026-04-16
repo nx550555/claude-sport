@@ -1,11 +1,11 @@
 {
   "updated": "2026-04-15",
   "tennis_atp": {
-    "total_predictions": 13,
-    "confirmed": 13,
-    "hits": 10,
-    "hit_rate": 0.769,
-    "ev_total": 1.37,
+    "total_predictions": 14,
+    "confirmed": 14,
+    "hits": 11,
+    "hit_rate": 0.786,
+    "ev_total": 1.74,
     "pending": 0,
     "note_hit_rate": "hit_rate = hits / confirmed (pending除外)。GO tierのみ集計（CAUTION除外）",
     "correction_note": "4/12: SF Sinner vs Zverev の結果を修正（MISS→HIT: Sinner 6-1 6-4）。旧セッションで誤記録。delta +1.65",
@@ -15,9 +15,9 @@
         "status": "complete",
         "note": "Sinner 7-6(5) 6-3 優勝（4/13決勝）。全試合完了。" },
       { "id": "2026-W16-BarcelonaMunich", "name": "Barcelona Open + BMW Open Munich W16",
-        "predictions": 3, "confirmed": 3, "hits": 3, "hit_rate": 1.000, "ev_total": 0.84,
-        "status": "R1_complete",
-        "note": "GO3件全HIT: Musetti@1.27(+0.27u)/Cobolli@1.21(+0.21u)/Kopriva@1.36(+0.36u)。4/14開催。" }
+        "predictions": 4, "confirmed": 4, "hits": 4, "hit_rate": 1.000, "ev_total": 1.21,
+        "status": "R1_complete_R2_in_progress",
+        "note": "R1 GO3件全HIT: Musetti@1.27(+0.27u)/Cobolli@1.21(+0.21u)/Kopriva@1.36(+0.36u)。R2 Musetti@1.37 HIT(+0.37u) 4/16確認。合計4/4 100% EV+1.21u。" }
     ]
   },
   "tennis_wta": {

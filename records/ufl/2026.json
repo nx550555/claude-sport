@@ -1,4 +1,4 @@
-{
+﻿{
   "sport": "ufl",
   "season": "2026",
   "bet_type": "Moneyline (ML)",
@@ -252,6 +252,25 @@
         {
           "match": "St.Louis vs Birmingham",
           "reason": "L1差5pt弱シグナル + 市場はBirmingham優勢 → SKIP"
+        }
+      ],
+      "type_a_results": [
+        {
+          "match": "Louisville vs Orlando (Storm)",
+          "result": "Storm 29 - Louisville 27 OT",
+          "type_a": "A009",
+          "note": "Louisville conf 75% SKIP correct. OT = essentially even teams."
+        },
+        {
+          "match": "DC vs Houston",
+          "result": "DC 45 - Houston 7",
+          "note": "DC was predicted favorite, SKIP correct (EV+6.4% insufficient). DC dominated."
+        },
+        {
+          "match": "St.Louis vs Birmingham (Stallions)",
+          "result": "Battlehawks 34 - Stallions 30",
+          "type_a": "A010",
+          "note": "Battlehawks home upset. L1差5pt SKIP correct. Home crowd factor."
         }
       ]
     }

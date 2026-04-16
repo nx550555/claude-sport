@@ -1,4 +1,4 @@
-{
+﻿{
   "sport": "tennis",
   "tour": "ATP",
   "season": "2026",
@@ -306,10 +306,15 @@
       "rec_odds": null,
       "ev": null,
       "confidence": 70,
-      "result": null,
-      "score": null,
+      "result": "Vacherot V.",
+      "score": "6-4 3-6 6-3",
       "hit": null,
       "actual_ev": null,
+      "predicted_winner": "de Minaur A.",
+      "prediction_confidence": 70,
+      "prediction_basis": "de Minaur #5 seed. conf 70% < 75% threshold (R010 SKIP). Vacherot WC home player on hot streak (A004).",
+      "prediction_hit": false,
+      "type_a_upset_id": "A004",
       "rules_applied": [
         "R009",
         "R010"
@@ -429,8 +434,8 @@
       "ev_est": null,
       "confidence": null,
       "skip_reason": "cElo未確認（ドロー変更後の新対戦）。市場ほぼ互角（1.83 vs 1.94）。",
-      "result": null,
-      "score": null,
+      "result": "Nakashima B.",
+      "score": "6-3 7-5",
       "hit": null,
       "actual_ev": null,
       "rules_applied": [],
@@ -477,14 +482,17 @@
       "ev_est": -0.4,
       "confidence": 83.0,
       "skip_reason": "EV -0.4%（閾値+5%未達）。市場implied 83.3%≒cElo推定83.0%で乖離なし。",
-      "result": null,
-      "score": null,
+      "result": "Fils A.",
+      "score": "4-6 6-4 7-6(7)",
       "hit": null,
       "actual_ev": null,
       "rules_applied": [
         "R001"
       ],
-      "note": "Fils cElo1894 vs Atmane cElo1618。差276でL1通過。ただしEV極薄（市場が完全に織り込み済み）。"
+      "note": "Fils cElo1894 vs Atmane cElo1618。差276でL1通過。ただしEV極薄（市場が完全に織り込み済み）。",
+      "predicted_winner": "Fils A.",
+      "prediction_confidence": 83.0,
+      "prediction_hit": true
     },
     {
       "tournament": "Barcelona Open Banc Sabadell",
@@ -526,12 +534,15 @@
       "ev_est": null,
       "confidence": null,
       "skip_reason": "L1未達（差82 < 閾値100）",
-      "result": null,
-      "score": null,
+      "result": "Ugo Carabelli C.",
+      "score": "6-4 6-3",
       "hit": null,
       "actual_ev": null,
       "rules_applied": [],
-      "note": "Khachanov cElo1823 vs Carabelli cElo1741。"
+      "note": "Khachanov cElo1823 vs Carabelli cElo1741。",
+      "predicted_winner": "Khachanov K.",
+      "prediction_hit": false,
+      "type_a_upset_id": "A011"
     },
     {
       "tournament": "Barcelona Open Banc Sabadell",
@@ -548,12 +559,13 @@
       "ev_est": null,
       "confidence": null,
       "skip_reason": "L1未達（差70 < 閾値100）",
-      "result": null,
+      "result": "Rublev A.",
       "score": null,
       "hit": null,
       "actual_ev": null,
       "rules_applied": [],
-      "note": "Rublev cElo1850 vs Navone cElo1780。"
+      "note": "Rublev cElo1850 vs Navone cElo1780。",
+      "predicted_winner": "Rublev A."
     },
     {
       "tournament": "Barcelona Open Banc Sabadell",
@@ -593,7 +605,7 @@
       "ev_est": null,
       "confidence": null,
       "skip_reason": "L1未達（差13 < 閾値100）",
-      "result": null,
+      "result": "Machac T.",
       "score": null,
       "hit": null,
       "actual_ev": null,
@@ -645,12 +657,14 @@
       "ev_est": null,
       "confidence": null,
       "skip_reason": "L1未達（差77 < 閾値100）",
-      "result": null,
-      "score": null,
+      "result": "Jodar R.",
+      "score": "6-1 6-2",
       "hit": null,
       "actual_ev": null,
       "rules_applied": [],
-      "note": "Munar cElo1737 vs Jodar cElo1815。Jodar(WC)が格上。差77でL1未達。"
+      "note": "Munar cElo1737 vs Jodar cElo1815。Jodar(WC)が格上。差77でL1未達。",
+      "predicted_winner": "Jodar R.",
+      "prediction_hit": true
     },
     {
       "tournament": "Barcelona Open Banc Sabadell",
@@ -667,8 +681,8 @@
       "ev_est": null,
       "confidence": null,
       "skip_reason": "L1未達（差10 < 閾値100）",
-      "result": null,
-      "score": null,
+      "result": "Quinn E.",
+      "score": "7-5 7-6(7)",
       "hit": null,
       "actual_ev": null,
       "rules_applied": [],
@@ -712,15 +726,16 @@
       "ev_est": -14.5,
       "confidence": 69.1,
       "skip_reason": "EV -14.5%（極端にマイナス）。市場implied 81.3% >> cElo推定69.1%。市場がde Minaur大幅過大評価か、またはcElo未調整。",
-      "result": null,
-      "score": null,
+      "result": "de Minaur A.",
+      "score": "7-6(7) 6-4",
       "hit": null,
       "actual_ev": null,
       "rules_applied": [
         "R001",
         "R010"
       ],
-      "note": "de Minaur cElo~1770 vs Ofner cElo~1630（差140推定）。市場1.23は短すぎ。EV大幅マイナス。"
+      "note": "de Minaur cElo~1770 vs Ofner cElo~1630（差140推定）。市場1.23は短すぎ。EV大幅マイナス。",
+      "prediction_confidence": 69.1
     },
     {
       "tournament": "Barcelona Open Banc Sabadell",
@@ -738,14 +753,17 @@
       "ev_est": -1.0,
       "confidence": 99.0,
       "skip_reason": "オッズ1.02→EV≈-1%。過剰ブックマーク。ベット価値ゼロ。",
-      "result": null,
-      "score": null,
+      "result": "Alcaraz C.",
+      "score": "6-4 6-2",
       "hit": null,
       "actual_ev": null,
       "rules_applied": [
         "R001"
       ],
-      "note": "Alcaraz cElo~2200 vs Virtanen O.（フィンランド）cElo~1550。差650。オッズ1.02は市場が100%押し。EV皆無。"
+      "note": "Alcaraz cElo~2200 vs Virtanen O.（フィンランド）cElo~1550。差650。オッズ1.02は市場が100%押し。EV皆無。",
+      "predicted_winner": "Alcaraz C.",
+      "prediction_confidence": 99.0,
+      "prediction_hit": true
     },
     {
       "tournament": "Barcelona Open Banc Sabadell",
@@ -762,12 +780,14 @@
       "ev_est": null,
       "confidence": null,
       "skip_reason": "L1未達推定（差~60 < 閾値100）",
-      "result": null,
-      "score": null,
+      "result": "Sonego L.",
+      "score": "6-2 2-6 6-4",
       "hit": null,
       "actual_ev": null,
       "rules_applied": [],
-      "note": "Martinez P. cElo~1680（スペイン clay specialist）vs Sonego L. cElo~1620（イタリア）。差60推定。オッズ: Martinez 1.57, Sonego 2.37。L1未達。"
+      "note": "Martinez P. cElo~1680（スペイン clay specialist）vs Sonego L. cElo~1620（イタリア）。差60推定。オッズ: Martinez 1.57, Sonego 2.37。L1未達。",
+      "predicted_winner": "Martinez P.",
+      "prediction_hit": false
     },
     {
       "tournament": "BMW Open Munich",
@@ -784,14 +804,17 @@
       "ev_est": -6.2,
       "confidence": 81,
       "skip_reason": "EV -6.2%（閾値+5%未達）。オッズ1.158は短すぎる。",
-      "result": null,
-      "score": null,
+      "result": "Zverev A.",
+      "score": "6-3 3-6 7-6(2)",
       "hit": null,
       "actual_ev": null,
       "rules_applied": [
         "R001"
       ],
-      "note": "Zverev cElo2007 vs Kecmanovic cElo1691。信頼度81%だがオッズが壁。⚠️ Kecmanovic今季Acapulco（HC）でZverev撃破6-3 6-7 7-6。MC直後疲労-2%。"
+      "note": "Zverev cElo2007 vs Kecmanovic cElo1691。信頼度81%だがオッズが壁。⚠️ Kecmanovic今季Acapulco（HC）でZverev撃破6-3 6-7 7-6。MC直後疲労-2%。",
+      "predicted_winner": "Zverev A.",
+      "prediction_confidence": 81,
+      "prediction_hit": true
     },
     {
       "tournament": "BMW Open Munich",
@@ -894,8 +917,8 @@
       "ev_est": null,
       "confidence": null,
       "skip_reason": "L1未達（差17 < 閾値100）",
-      "result": null,
-      "score": null,
+      "result": "Fonseca J.",
+      "score": "7-6(1) 6-3",
       "hit": null,
       "actual_ev": null,
       "rules_applied": [],
@@ -916,10 +939,15 @@
       "ev_est": null,
       "confidence": null,
       "skip_reason": "L1未達（差45 < 閾値100）",
-      "result": null,
-      "score": null,
+      "result": "Shapovalov D.",
+      "score": "6-4 3-6 6-2",
       "hit": null,
       "actual_ev": null,
+      "predicted_winner": "Griekspoor T.",
+      "prediction_confidence": null,
+      "prediction_basis": "L1未達 cElo差45pt < 100pt threshold. SKIP.",
+      "prediction_hit": false,
+      "type_a_upset_id": "A005",
       "rules_applied": [],
       "note": "Griekspoor cElo1773 vs Shapovalov cElo1728。"
     },
@@ -982,12 +1010,13 @@
       "ev_est": null,
       "confidence": null,
       "skip_reason": "L1未達（差47 < 閾値100）。試合開始直前・スクリーニング窓締切済み。",
-      "result": null,
-      "score": null,
+      "result": "Rinderknech A.",
+      "score": "6-3 6-3",
       "hit": null,
       "actual_ev": null,
       "rules_applied": [],
-      "note": "Rinderknech cElo1729 vs Michelsen cElo1681。差47でL1未達。"
+      "note": "Rinderknech cElo1729 vs Michelsen cElo1681。差47でL1未達。",
+      "predicted_winner": "Rinderknech A."
     },
     {
       "tournament": "BMW Open Munich",
@@ -1004,14 +1033,19 @@
       "rec_odds_american": -151,
       "confidence": 68,
       "ev_est": null,
+      "result": "Marozsan F.",
+      "score": "3-6 7-6(5) 6-4",
+      "hit": null,
+      "actual_ev": null,
+      "predicted_winner": "Tsitsipas S.",
+      "prediction_confidence": 68,
+      "prediction_basis": "cElo diff 172.8 L1 pass. MC R1 form slump -5% → conf 68% R010 SKIP.",
+      "prediction_hit": false,
+      "type_a_upset_id": "A006",
       "skip_reason": "MC R1でCerundoloに7-5 6-4で敗退 → 直近フォーム-5%補正 → 信頼度68%（閾値75%未達）",
       "adjustments": {
         "mc_r1_loss": "-5%（MCで格下相手に初のR1敗退・キャリア最悪結果）"
       },
-      "result": null,
-      "score": null,
-      "hit": null,
-      "actual_ev": null,
       "rules_applied": [
         "R001",
         "R010"
@@ -1179,15 +1213,18 @@
       "confidence_darderi": 66.6,
       "ev_darderi": -12.1,
       "skip_reason": "信頼度66.6%→R010除外（閾値75%）。市場implied 75.8% >> cElo66.6%。",
-      "result": null,
-      "score": null,
+      "result": "Darderi L.",
+      "score": "7-6(5) 3-6 6-1",
       "hit": null,
       "actual_ev": null,
       "rules_applied": [
         "R001",
         "R010"
       ],
-      "note": "Zhang Z. cElo~1540（中国、主にハードコート）vs Darderi L. cElo~1660（アルゼンチン系イタリア、クレー専門）。差~120でL1通過だが信頼度不足。"
+      "note": "Zhang Z. cElo~1540（中国、主にハードコート）vs Darderi L. cElo~1660（アルゼンチン系イタリア、クレー専門）。差~120でL1通過だが信頼度不足。",
+      "predicted_winner": "Darderi L.",
+      "prediction_confidence": 66.6,
+      "prediction_hit": true
     },
     {
       "tournament": "BMW Open Munich",
@@ -1205,14 +1242,17 @@
       "confidence_bergs": 82.6,
       "ev_bergs": 4.1,
       "skip_reason": "EV +4.1%（閾値5%未達）。Topo M.のcElo未確認（qualifier/WC想定）。",
-      "result": null,
-      "score": null,
+      "result": "Bergs Z.",
+      "score": "6-1 6-4",
       "hit": null,
       "actual_ev": null,
       "rules_applied": [
         "R001"
       ],
-      "note": "Bergs cElo~1720（ベルギー、クレー専門）vs Topo M. cElo未取得（~1450推定）。差270推定でL1通過。EV+4.1%はわずかに閾値未達。"
+      "note": "Bergs cElo~1720（ベルギー、クレー専門）vs Topo M. cElo未取得（~1450推定）。差270推定でL1通過。EV+4.1%はわずかに閾値未達。",
+      "predicted_winner": "Bergs Z.",
+      "prediction_confidence": 82.6,
+      "prediction_hit": true
     },
     {
       "tournament": "BMW Open Munich",
@@ -1268,16 +1308,19 @@
         "net": "78-79% confidence range"
       },
       "skip_reason": null,
-      "result": null,
+      "result": "Musetti",
       "score": null,
-      "hit": null,
-      "actual_ev": null,
+      "hit": true,
+      "actual_ev": 0.37,
+      "predicted_winner": "Musetti L.",
+      "prediction_confidence": 78,
+      "prediction_hit": true,
       "rules_applied": [
         "R001",
         "R013"
       ],
-      "status": "pending",
-      "note": "Moutet beat Buse R1 to advance. Musetti (seed2) has 271pt cElo advantage. Multiple 2026 injuries (AO adductor+Miami arm) raised to -5% PR concern per R013 (avoid over-penalization). Net 78% confidence. EV+6.9% at odds 1.37. GO confirmed per all-source check 2026-04-15."
+      "status": "completed",
+      "note": "Moutet beat Buse R1 to advance. Musetti (seed2) has 271pt cElo advantage. Multiple 2026 injuries (AO adductor+Miami arm) raised to -5% PR concern per R013 (avoid over-penalization). Net 78% confidence. EV+6.9% at odds 1.37. GO confirmed per all-source check 2026-04-15. RESULT: Musetti HIT confirmed by ATP Tour (Extended Highlights: Alcaraz, Musetti advance in Barcelona 2026). Exact score 未確認(一次ソース取得不可)。actual_ev=rec_odds-1=0.37u。"
     }
   ],
   "screening_log": [

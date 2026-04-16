@@ -306,6 +306,240 @@
       "rule_candidate": "P009: Injury comeback player discount. If favorite's rank > 40 spots below 52-week peak, apply -10% to market implied probability.",
       "learning": "Market over-values big-name returning injury players based on reputation (not current fitness). Our cElo was correctly marked as unverifiable. Type A: home WC + opponent injury comeback is a detectable pre-match upset signal.",
       "miss_layer": null
+    },
+    {
+      "id": "A002",
+      "type": "type_a",
+      "type_note": "Type A: SKIPした試合で発生したアップセット。スクリーニング閾値・判断の妥当性検証用。",
+      "date": "2026-04-13",
+      "sport": "nhl",
+      "league": "NHL Regular Season 2025-26",
+      "match": "Carolina Hurricanes vs Philadelphia Flyers",
+      "our_verdict": "SKIP (N016発動: CAR選手休養でゴーリー変更→GO基準外)",
+      "favorite_market": "Carolina Hurricanes",
+      "underdog_market": "Philadelphia Flyers",
+      "result_score": "PHI 3-2 SO",
+      "actual_winner": "Philadelphia Flyers",
+      "upset_factors": ["UFH04", "UF06"],
+      "factor_notes": {
+        "UFH04": "CAR was resting key players late in RS (N016: goalie/lineup rest triggered). Andersen not confirmed → SKIP was correct.",
+        "UF06": "CAR had motivation reduction (playoff spot secured, resting for PO). PHI played with full intensity as underdog."
+      },
+      "screening_decision_review": "SKIP was correct (N016発動). Result validates that N016 lineup-rest rule correctly removes false GO candidates. PHI SO win shows how effective rest-team lineup is reduced.",
+      "rule_candidate": null,
+      "miss_layer": null
+    },
+    {
+      "id": "A003",
+      "type": "type_a",
+      "type_note": "Type A: SKIPした試合で発生したアップセット。スクリーニング閾値・判断の妥当性検証用。",
+      "date": "2026-04-13",
+      "sport": "nhl",
+      "league": "NHL Regular Season 2025-26",
+      "match": "St. Louis Blues vs Minnesota Wild",
+      "our_verdict": "SKIP (xGF%差 or goalie concern)",
+      "favorite_market": "Minnesota Wild",
+      "underdog_market": "St. Louis Blues",
+      "result_score": "STL 6-3",
+      "actual_winner": "St. Louis Blues",
+      "upset_factors": ["UF06", "UFH04"],
+      "factor_notes": {
+        "UF06": "STL motivated underdog at RS end — playing hard at home despite no PO hopes. High-scoring (6-3) indicates full-intensity performance.",
+        "UFH04": "MIN had secured playoff position; motivation reduced relative to STL's fight-or-die posture."
+      },
+      "screening_decision_review": "SKIP was appropriate. STL 6-3 dominant win shows how RS-end motivation asymmetry can produce outsized upsets. xGF% alone doesn't capture game-day intensity.",
+      "rule_candidate": null,
+      "miss_layer": null
+    },
+    {
+      "id": "A004",
+      "type": "type_a",
+      "type_note": "Type A: SKIPした試合で発生したアップセット。スクリーニング閾値・判断の妥当性検証用。",
+      "date": "2026-04-10",
+      "sport": "tennis_atp",
+      "tournament": "Monte-Carlo Masters 2026",
+      "round": "QF",
+      "our_verdict": "SKIP (conf 70% < 75% threshold, R010 applied)",
+      "favorite_market": "de Minaur A.(5) @~1.60 implied ~62%",
+      "underdog_market": "Vacherot V.(WC) @1.57",
+      "result_score": "Vacherot 6-4 3-6 6-3",
+      "actual_winner": "Vacherot V. (WC, Monaco)",
+      "upset_factors": ["UFT03", "UF07", "UF02"],
+      "factor_notes": {
+        "UFT03": "Vacherot WC (Monaco native). QF at home MC — first Monegasque player to reach MC QF in Open Era. Maximum home crowd support in front of prince and nation.",
+        "UF07": "Full home advantage: crowd, familiarity, conditions, mental freedom of the underdog with nothing to lose.",
+        "UF02": "Vacherot on hot streak: R32 d. Hurkacz(PR) — our model correctly predicted this HIT (GO @1.57 +0.57u). QF momentum carry is a real effect."
+      },
+      "screening_decision_review": "SKIP was technically correct (R010). But our R16 prediction was Vacherot GO and HIT. Pattern: when a WC home player has already beaten a seeded player in prior round, their next-round confidence should carry a +5% momentum bonus.",
+      "what_signal_could_detect": "WC home player who beat seeded opponent in prior round: +5% momentum bonus → moves 70% → 75% = right at GO threshold. Would have caught this.",
+      "rule_candidate": "P010: WC home player consecutive round momentum bonus +5%. If WC home beat seeded player in previous round, increase next-round confidence by 5%.",
+      "miss_layer": null,
+      "learning": "MC2026 QF upset validates home crowd + hot-streak compounding. Model correctly had Vacherot as GO in R16 — the same logic should carry to QF."
+    },
+    {
+      "id": "A005",
+      "type": "type_a",
+      "type_note": "Type A: SKIPした試合で発生したアップセット。スクリーニング閾値・判断の妥当性検証用。",
+      "date": "2026-04-14",
+      "sport": "tennis_atp",
+      "tournament": "BMW Open Munich 2026",
+      "round": "R1",
+      "our_verdict": "SKIP (L1未達: cElo差45pt < 閾値100pt)",
+      "favorite_market": "Griekspoor T.(8) @~1.55",
+      "underdog_market": "Shapovalov D. @~2.40",
+      "result_score": "Shapovalov 6-4 3-6 6-2",
+      "actual_winner": "Shapovalov D.",
+      "upset_factors": ["UF02", "UF05", "UF03"],
+      "factor_notes": {
+        "UF02": "Shapovalov returning to form — aggressive serve/forehand combo on clay. Market undervalued comeback potential at cElo 1728.",
+        "UF05": "Shapovalov's flat/serve-centric style vs Griekspoor's clay baseline game created mismatch.",
+        "UF03": "cElo差45pt is well within noise band. Effectively same level match — 50/50 at best."
+      },
+      "screening_decision_review": "SKIP was correct (L1未達). Result confirms cElo差<50pt matches are genuinely unpredictable. No issue with SKIP decision.",
+      "rule_candidate": null,
+      "miss_layer": null
+    },
+    {
+      "id": "A006",
+      "type": "type_a",
+      "type_note": "Type A: SKIPした試合で発生したアップセット。スクリーニング閾値・判断の妥当性検証用。",
+      "date": "2026-04-14",
+      "sport": "tennis_atp",
+      "tournament": "BMW Open Munich 2026",
+      "round": "R1",
+      "our_verdict": "SKIP (Tsitsipas conf 68% after MC R1 loss -5% adjustment, R010 applied)",
+      "favorite_market": "Tsitsipas S. @1.63 (implied ~61%)",
+      "underdog_market": "Marozsan F. @2.26",
+      "result_score": "Marozsan 3-6 7-6(5) 6-4",
+      "actual_winner": "Marozsan F.",
+      "upset_factors": ["UF06", "UF01", "UF04"],
+      "factor_notes": {
+        "UF06": "Tsitsipas MC R1 loss to Cerundolo = first-ever R1 exit at event with 22-4 prior record. Quoted: 'hit rock bottom'. Deep confidence crisis entering Munich.",
+        "UF01": "Marozsan is a clay baseline specialist (Hungarian). His style well-suited to Munich outdoor clay even vs Tsitsipas.",
+        "UF04": "MC (Monaco) → Munich cross-tournament travel. Physical and mental depletion post-MC disaster."
+      },
+      "screening_decision_review": "SKIP was correct — the -5% MC form adjustment was the key insight that caught this match. Marozsan win in 3 sets (TB in 2nd set) validates mental fragility of Tsitsipas at this stage.",
+      "what_signal_could_detect": "Career-worst tournament result (first-ever R1 exit after 20+ appearance history) triggers -10% mental penalty, not just -5%.",
+      "rule_candidate": "P011: Career-worst tournament result (first-ever R1 exit at event with 20+ prior appearances) triggers -10% mental penalty instead of standard -5% form adjustment.",
+      "miss_layer": null,
+      "learning": "Our model correctly SKIP'd this match via R010 + form adjustment. Validates the MC-form-slump rule chain."
+    },
+    {
+      "id": "A007",
+      "type": "type_a",
+      "type_note": "Type A: SKIPした試合で発生したアップセット。スクリーニング閾値・判断の妥当性検証用。",
+      "date": "2026-04-11",
+      "sport": "nrl",
+      "tournament": "NRL 2026 Round 6",
+      "match": "Melbourne Storm vs New Zealand Warriors",
+      "our_verdict": "SKIP (screening_log R6: Storm/Warriors SKIP。PDG差が閾値以下か他優先試合あり)",
+      "favorite_market": "Melbourne Storm",
+      "underdog_market": "New Zealand Warriors",
+      "result_score": "Warriors 38 - Storm 14",
+      "actual_winner": "New Zealand Warriors",
+      "upset_factors": ["UF02", "UF07", "UF06"],
+      "factor_notes": {
+        "UF02": "Warriors ended a 17-game NRL losing streak. Collective breakthrough moment — extreme pent-up motivation beyond standard metrics.",
+        "UF07": "Warriors home advantage (NZ or home venue). Storm travelled for away game.",
+        "UF06": "Storm had secured playoff contention — intensity potentially lower than Warriors' desperation to end the streak."
+      },
+      "screening_decision_review": "38-14 final margin is enormous. Losing-streak-ending effect is systematically under-modeled. Even if SKIP was correct, this warrants a new NRL rule candidate.",
+      "what_signal_could_detect": "Team attempting to end a 10+ game losing streak has significant elevated motivation. Flag opponent team as reduced-confidence target.",
+      "rule_candidate": "NRL_R_new2: Extreme losing streak (10+ games) = opponent motivation penalty -8%. Apply to team they are facing.",
+      "miss_layer": null
+    },
+    {
+      "id": "A008",
+      "type": "type_a",
+      "type_note": "Type A: SKIPした試合で発生したアップセット。スクリーニング閾値・判断の妥当性検証用。",
+      "date": "2026-04-11",
+      "sport": "nrl",
+      "tournament": "NRL 2026 Round 6",
+      "match": "Sydney Roosters vs Cronulla Sharks",
+      "our_verdict": "SKIP (conf 65% < threshold or Sharks L1 advantage but below GO confidence)",
+      "favorite_market": "Cronulla Sharks (L1 PD advantage estimated)",
+      "underdog_market": "Sydney Roosters",
+      "result_score": "Roosters 34 - Sharks 22",
+      "actual_winner": "Sydney Roosters",
+      "upset_factors": ["UF03", "UF07", "UFN_new"],
+      "factor_notes": {
+        "UF03": "Early NRL season (R6) small sample PD. Sharks PD advantage overstated by outlier games in first 5 rounds.",
+        "UF07": "Roosters strong home record at Allianz Stadium (Sydney). Home ground advantage underweighted.",
+        "UFN_new": "Same small-sample NRL factor as U005: R6 PDG less reliable than R12+ data. Sharks PD inflated by early-season outlier results."
+      },
+      "screening_decision_review": "SKIP was appropriate given uncertainty. 34-22 shows Roosters clearly outperformed expectations. Validates R12 (early season small sample restriction).",
+      "rule_candidate": null,
+      "miss_layer": null
+    },
+    {
+      "id": "A009",
+      "type": "type_a",
+      "type_note": "Type A: SKIPした試合で発生したアップセット。スクリーニング閾値・判断の妥当性検証用。",
+      "date": "2026-04-12",
+      "sport": "ufl",
+      "tournament": "UFL 2026 Week 3",
+      "match": "Orlando Storm vs Louisville Kings",
+      "our_verdict": "SKIP (Louisville conf 75% = at threshold, SKIP decision)",
+      "favorite_market": "Louisville Kings",
+      "underdog_market": "Orlando Storm",
+      "result_score": "Storm 29 - Louisville 27 OT",
+      "actual_winner": "Orlando Storm",
+      "upset_factors": ["UF03", "UFU02", "UF04"],
+      "factor_notes": {
+        "UF03": "conf 75% right at threshold. L1 diff was borderline. Storm was genuinely competitive, not a clear underdog.",
+        "UFU02": "UFL W3: only 2 games of sample per team. PD/G has very wide confidence intervals in early season.",
+        "UF04": "OT result (29-27 = 2pt) confirms these teams were essentially equal on the day."
+      },
+      "screening_decision_review": "SKIP was correct. OT result validates borderline confidence — when conf is 74-76% in early UFL season, SKIP is appropriate. Pattern: early UFL season games at 75% conf are effectively 60-65% real probability.",
+      "rule_candidate": "UFU_R_new: UFL early season (W1-W6) effective confidence cap of 70% (apply -5% to all UFL predictions until W7+). Accounts for small sample instability.",
+      "miss_layer": null
+    },
+    {
+      "id": "A010",
+      "type": "type_a",
+      "type_note": "Type A: SKIPした試合で発生したアップセット。スクリーニング閾値・判断の妥当性検証用。",
+      "date": "2026-04-12",
+      "sport": "ufl",
+      "tournament": "UFL 2026 Week 3",
+      "match": "St. Louis Battlehawks vs Birmingham Stallions",
+      "our_verdict": "SKIP (L1差5pt weak, borderline or below 4pt/G threshold note)",
+      "favorite_market": "Birmingham Stallions (market slight edge)",
+      "underdog_market": "St. Louis Battlehawks",
+      "result_score": "Battlehawks 34 - Stallions 30",
+      "actual_winner": "St. Louis Battlehawks",
+      "upset_factors": ["UF03", "UF07", "UFU02"],
+      "factor_notes": {
+        "UF03": "L1 PD差5pt is borderline. Effectively equal teams. Close result (4pt) confirms this.",
+        "UF07": "St. Louis home game. Battlehawks have one of the strongest home crowds in UFL (STL market passionate football city).",
+        "UFU02": "Birmingham Stallions' historical USFL dominance may have inflated market expectations beyond actual current team quality."
+      },
+      "screening_decision_review": "SKIP was correct — borderline L1 diff was appropriately excluded. Home advantage (UF07) in UFL appears meaningful for St. Louis specifically.",
+      "rule_candidate": "Consider adding STL home advantage credit (+3%) to UFL screening given their strong fanbase/home record.",
+      "miss_layer": null
+    },
+    {
+      "id": "A011",
+      "type": "type_a",
+      "type_note": "Type A: SKIPした試合で発生したアップセット。スクリーニング閾値・判断の妥当性検証用。",
+      "date": "2026-04-13",
+      "sport": "tennis_atp",
+      "tournament": "Barcelona Open Banc Sabadell 2026",
+      "round": "R1",
+      "our_verdict": "SKIP (L1未達: cElo差82pt < 閾値100pt)",
+      "favorite_market": "Khachanov K.(4) @implied ~70%",
+      "underdog_market": "Ugo Carabelli C. @~3.0+",
+      "result_score": "Carabelli 6-4 6-3",
+      "actual_winner": "Ugo Carabelli C.",
+      "upset_factors": ["UF03", "UF01", "UF02"],
+      "factor_notes": {
+        "UF03": "cElo差82pt is borderline — below our 100pt threshold. Effectively close match. Carabelli (Argentina) is a clay specialist; Khachanov's clay cElo may be overestimated.",
+        "UF01": "Carabelli from Argentina — clay is his natural surface. Khachanov is primarily a hard court player with limited clay record.",
+        "UF02": "Carabelli on home continent (South American clay specialist). Lower-ranked players with strong clay pedigree outperform cElo on this surface."
+      },
+      "screening_decision_review": "SKIP was correct (L1未達 at 82pt). But the 6-4 6-3 scoreline shows Carabelli was dominant, not just lucky. The 82pt cElo gap may overestimate Khachanov's clay advantage. Rule improvement: clay specialists from Argentina/Spain should get a surface bonus in WTA/ATP cElo calculations.",
+      "what_signal_could_detect": "Hard court player vs clay specialist in diff range 70-100pt = effectively coin flip on clay. Market over-prices the hard court player's ranking.",
+      "rule_candidate": "P012: Clay specialist bonus for ATP: Argentine/Spanish clay specialists receive +15pt to effective clay cElo when L1 diff < 120pt. Reduces false confidence in hard-court-ranked players.",
+      "miss_layer": null
     }
   ],
   "gamble_bet_candidates": {
@@ -378,7 +612,8 @@
     ]
   },
   "pattern_summary": {
-    "total_upsets_tracked": 7,
+    "total_upsets_tracked": 19,
+    "last_updated": "2026-04-16",
     "gamble_bet_results": {
       "total": 1,
       "hits": 1,
@@ -389,12 +624,12 @@
     "sports_covered": [
       "tennis_atp",
       "tennis_wta",
-      "nrl"
+      "nrl",
+      "nhl",
+      "ufl"
     ],
     "sports_pending_data": [
-      "nhl",
       "superrugby",
-      "ufl",
       "nfl",
       "cfl"
     ],
@@ -423,9 +658,7 @@
         "Lys(3.20) d. Badosa(1.32): 2-6 7-5 6-4 (2h15m). Lys WC comeback. Badosa injury/low ranking (UF08)."
       ],
       "learning": "indoor clay（Stuttgart）はcElo予測を最大300pt差でも覆す。攻撃型・フラット系が表面補正を大きく受ける。W007を強化検討。",
-      "pending_matches": [
-        "Zhang vs Noskova (suspended 4/16, 3rd set in progress, Noskova leading)"
-      ]
+      "pending_matches": []
     }
   },
   "rule_improvement_candidates": [

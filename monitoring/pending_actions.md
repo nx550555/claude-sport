@@ -27,15 +27,15 @@
 | PA004 | WTA | Stuttgart R2 スクリーニング（R1結果確認後） | PENDING | 高 | 4/14〜 |
 | PA005 | NHL | 4/15 CAUTION2件ゴーリー確認完了: CAR@NYI=Andersen確認(N006解消)試合進行中 / COL@CGY=Blackwood起用→N016発動→SKIP推奨 | DONE | 高 | 完了 4/15 |
 | PA006 | NHL | PO R1 スクリーニング（RS終了4/16後、ブラケット確定→MoneyPuck xGF%起点） | DONE | 高 | 完了 4/16 |
-| PA014 | NHL | PO R1 TBL vs MTL CAUTION→GO確認（ゴーリー確認4/18朝・オッズ確認要・min odds 1.38） | PENDING | 高 | 4/18試合当日 |
-| PA015 | NHL | PO R1 COL vs LAK CAUTION（score-adj 5v5 xGF%差5.73pp・Manson怪我確認・オッズ確認要） | PENDING | 中 | 4/18試合当日 |
+| PA014 | NHL | PO R1 TBL vs MTL CAUTION→GO確認（G1=4/18。TBL: Vasilevskiy確認済4-2 2.19GAA .912sv%。MTL: Dobes(29-10-4 2.78GAA .901sv%)。オッズ確認+min 1.38要） | PENDING | 高 | 4/18試合当日 |
+| PA015 | NHL | PO R1 COL vs LAK CAUTION（G1=4/18。Manson OUT(上半身)/Bednar返答済→playoff復帰見込。Kadri復帰見込。Blackwood 22-10-2 2.55GAA .901sv%。オッズ確認要） | PENDING | 中 | 4/18試合当日 |
 | PA007 | NRL | R7 Broncos@Tigers オッズ確認（REVOKED済→odds discrepancy無効） | SKIP | 中 | Broncos REVOKED済 |
 | PA008 | NRL | R7 GO2件（Warriors 4/18/Broncos 4/18）・CAUTION2件の結果確認 | WAITING | 中 | 4/18〜19試合後 |
 | PA009 | NBA | Play-in（4/15-16）・PO R1（4/19〜）全SKIP確認済み。結果モニタリングのみ | WAITING | 低 | 継続 |
 | PA010 | MC2026 | F Alcaraz vs Sinner 結果確認（SKIP・観戦のみ） | DONE | 低 | 完了 4/14 Sinner 7-6(5) 6-3 |
 | PA011 | システム | 【フェーズ移行T3発動】実装済みルール3件達成→Phase2移行可否をユーザーに確認 | PENDING | 中 | 確認待ち |
-| PA012 | WTA | Stuttgart Zhang vs Noskova R1 結果確認（3rdセットサスペンド中: Zhang 7-5/Noskova 6-4/続行中） | WAITING | 高 | 完了次第 |
-| PA013 | ATP | Barcelona R2 Musetti vs Moutet GO @1.37 結果確認（4/16 18:00予定） | WAITING | 高 | 4/16試合後 |
+| PA012 | WTA | Stuttgart Zhang vs Noskova R1 結果確認 | DONE | 高 | 完了 4/16 Noskova d. Zhang 5-7 6-1 6-4 (予測HIT/SKIP nobet) |
+| PA013 | ATP | Barcelona R2 Musetti vs Moutet GO @1.37 結果確認 | DONE | 高 | 完了 4/16 Musetti HIT (ATP Tour公式確認) actual_ev +0.37u スコア未確認 |
 
 ---
 
@@ -83,6 +83,16 @@
 - PA007: NRL Broncos REVOKED済のため odds discrepancy は無効 → SKIP推奨
 - Zhang/Noskova Stuttgart R1: まだサスペンド中 (Zhang 7-5/Noskova 6-4/3rd set in progress) → PA012追加
 - ATP Barcelona R2 Musetti@1.37 GO (4/16 18:00) 結果確認要 → PA013追加
+
+---
+**Session_33 更新 (2026-04-16) GEN003チェック:**
+- PA012 DONE: Noskova d. Zhang 5-7 6-1 6-4 (WTA公式動画確認)。予測HIT・SKIPノーベット。
+- PA013 DONE: Musetti HIT vs Moutet (ATP Tour公式「Alcaraz, Musetti advance」確認)。actual_ev +0.37u。スコア要確認。
+- PA014更新: TBL Vasilevskiy確認(4-2 2.19GAA .912sv%) / MTL Dobes確認(29-10-4 2.78GAA .901sv%)。G1=4/18。
+- PA015更新: COL Manson OUT(上半身) / Bednar playoff復帰見込 / Kadri復帰見込。Blackwood 22-10-2 .901sv%。
+- NRL R7: Luai+May(Tigers)復帰確認=Broncos REVOKED維持正解。Adam Reynolds(Broncos)復帰・Carrigan依然停止。
+- NRL Warriors GO維持: Capewell返答済・Titans変更なし。
+- UFL W4: Renegades特定怪我情報なし。Louisville OL軽傷あり(Watson/Tunstill out, 試合前確認要)。
 
 ---
 **Session_32 更新 (2026-04-16):**
