@@ -1,4 +1,4 @@
-﻿{
+{
   "sport": "tennis",
   "tour": "ATP",
   "season": "2026",
@@ -1321,19 +1321,19 @@
         "net": "78-79% confidence range"
       },
       "skip_reason": null,
-      "result": "Musetti",
+      "result": null,
       "score": null,
-      "hit": true,
-      "actual_ev": 0.37,
+      "hit": null,
+      "actual_ev": null,
       "predicted_winner": "Musetti L.",
       "prediction_confidence": 78,
-      "prediction_hit": true,
+      "prediction_hit": null,
       "rules_applied": [
         "R001",
         "R013"
       ],
-      "status": "completed",
-      "note": "Moutet beat Buse R1 to advance. Musetti (seed2) has 271pt cElo advantage. Multiple 2026 injuries (AO adductor+Miami arm) raised to -5% PR concern per R013 (avoid over-penalization). Net 78% confidence. EV+6.9% at odds 1.37. GO confirmed per all-source check 2026-04-15. RESULT: Musetti HIT confirmed by ATP Tour (Extended Highlights: Alcaraz, Musetti advance in Barcelona 2026). Exact score 未確認(一次ソース取得不可)。actual_ev=rec_odds-1=0.37u。"
+      "status": "pending",
+      "note": "Moutet beat Buse R1 to advance. Musetti (seed2) has 271pt cElo advantage. Multiple 2026 injuries (AO adductor+Miami arm) raised to -5% PR concern per R013 (avoid over-penalization). Net 78% confidence. EV+6.9% at odds 1.37. GO confirmed per all-source check 2026-04-15."
     }
   ],
   "screening_log": [

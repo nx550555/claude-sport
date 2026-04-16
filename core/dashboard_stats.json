@@ -5,11 +5,11 @@
   "sports": {
     "atp": {
       "go_count": 14,
-      "confirmed_count": 14,
-      "hit_count": 11,
-      "hit_rate": 0.786,
-      "pnl": 1.74,
-      "pending_count": 0
+      "confirmed_count": 13,
+      "hit_count": 10,
+      "hit_rate": 0.769,
+      "pnl": 1.37,
+      "pending_count": 1
     },
     "wta": {
       "go_count": 3,
@@ -70,11 +70,11 @@
   },
   "overview": {
     "total_go": 28,
-    "total_confirmed": 23,
-    "total_hits": 18,
-    "hit_rate": 0.783,
-    "total_pnl": 3.4,
-    "total_pending": 5,
-    "pending_breakdown": "UFL x2 + NRL x1 + SL x2"
+    "total_confirmed": 22,
+    "total_hits": 17,
+    "hit_rate": 0.773,
+    "total_pnl": 3.0,
+    "total_pending": 6,
+    "pending_breakdown": "ATP x1 + UFL x2 + NRL x1 + SL x2"
   }
 }
