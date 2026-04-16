@@ -26,7 +26,8 @@
 - [x] WTA Rouen R1 全16試合スクリーニング完了（casino data起点）← 全SKIP。CAUTION: Timofeyeva/Boulter(cElo要確認)
 - [x] WTA Stuttgart R2 スクリーニング（R1結果確認後・casino dataまたはOddsPortal起点）← GO: Paolini @1.24 EV+5.4%. 他8試合SKIP. Session_29完了
 - [x] NHL RS最終盤 4/15 CAUTION2件 結果確認← CAR@NYI CAR 2-1 HIT(CAUTION/nobet) / COL@CGY COL 3-1 HIT(SKIP/N016)。予測両方HIT。
-- [ ] NHL プレーオフ R1 スクリーニング（4/16〜17実施予定）← ※プレーインなし。RS終了4/16→ブラケット確定後にMoneyPuck xGF%確認起点でスクリーニング。暫定ブラケット取得済み。
+- [x] NHL プレーオフ R1 スクリーニング（4/16完了）← 5v5 All Season xGF%使用。TBL/MTL CAUTION（6.11pp）/ COL/LAK CAUTION（score-adj 5.73pp）/ 他6シリーズSKIP。PA014/PA015追加。
+- [ ] 【最重要・本来依頼】全スポーツ遡りType Aアップセット調査 ← スクリーニング開始以来の全SKIP試合について実際の結果をWebSearchで確認し、アップセット発生試合をType Aとして記録・分析する。対象: ATP（MC2026・Barcelona・Munich等）/ WTA（Stuttgart Rouenの残り）/ NRL R6〜R7 / UFL W3〜W4 / NHL RS終盤。※WTA Stuttgart R1のみ完了（A001 Lys/Badosa登録済み）。他は未調査。
 
 ---
 
