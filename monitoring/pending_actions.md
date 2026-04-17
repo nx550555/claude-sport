@@ -28,8 +28,8 @@
 | PA004 | WTA | Stuttgart R2 + Rouen R2 スクリーニング完了（全試合SKIP/EV負） | DONE | 高 | 完了 2026-04-16 |
 | PA005 | NHL | 4/15 CAUTION2件ゴーリー確認完了: CAR@NYI=Andersen確認(N006解消)試合進行中 / COL@CGY=Blackwood起用→N016発動→SKIP推奨 | DONE | 高 | 完了 4/15 |
 | PA006 | NHL | PO R1 スクリーニング（RS終了4/16後、ブラケット確定→MoneyPuck xGF%起点） | DONE | 高 | 完了 4/16 |
-| PA014 | NHL | PO R1 TBL vs MTL CAUTION→GO確認（G1=4/18。TBL: Vasilevskiy確認済4-2 2.19GAA .912sv%。MTL: Dobes(29-10-4 2.78GAA .901sv%)。オッズ確認+min 1.38要） | PENDING | 高 | 4/18試合当日 |
-| PA015 | NHL | PO R1 COL vs LAK CAUTION（G1=4/18。Manson OUT(上半身)/Bednar返答済→playoff復帰見込。Kadri復帰見込。Blackwood 22-10-2 2.55GAA .901sv%。オッズ確認要） | PENDING | 中 | 4/18試合当日 |
+| PA014 | NHL | PO R1 TBL vs MTL CAUTION→GO確認（**G1=4/19 5:45pm ET** GEN003 4/17日付修正。TBL: Vasilevskiy確認済4-2 2.19GAA .912sv%。MTL: Dobes(29-10-4 2.78GAA .901sv%)。オッズ確認+min 1.38要） | PENDING | 高 | 4/19試合当日 |
+| PA015 | NHL | PO R1 COL vs LAK CAUTION（**G1=4/19 3pm ET** GEN003 4/17日付修正。Manson OUT(上半身)/Bednar返答済→playoff復帰見込。Kadri復帰見込。Blackwood 22-10-2 2.55GAA .901sv%。オッズ確認要） | PENDING | 中 | 4/19試合当日 |
 | PA017 | NBA | PO R1 SAS vs POR GO @1.18 結果確認（G1=4/20 JST。Wembanyama ACTIVE確認済。Lillard OUT全季。EV+5.6%） | WAITING | 高 | 4/20試合後 |
 | PA007 | NRL | R7 Broncos@Tigers オッズ確認（REVOKED済→odds discrepancy無効） | SKIP | 中 | Broncos REVOKED済 |
 | PA008 | NRL | R7 GO2件（Warriors 4/18/Broncos 4/18）・CAUTION2件の結果確認 | WAITING | 中 | 4/18〜19試合後 |
@@ -54,6 +54,9 @@
 | PA031 | NHL | TBL vs MTL G1: min odds 1.38 PASSED (now 1.53). 信頼度76%/EV+16.28%→goalie confirmed次第でCAUTION→GO昇格候補。dailyfaceoff 4/18 morning確認要 | IN_PROGRESS | 最高 | 4/18試合当日 |
 | PA032 | AHL | 初回スクリーニング完了 (27試合 RS最終週4/18-19 全SKIP)。Basic Tier厳格閾値 + AHL固有補正で全試合conf<78%/EV<+7%。プレーオフ(4/22〜)で再評価 | DONE | 中 | 完了 2026-04-17 |
 | PA033 | AHL | Calder Cup Playoffs R1 (4/22〜) スクリーニング - best-of-3シリーズ。ラインナップ安定期でGO/CAUTION候補期待 | PENDING | 中 | 4/22以降 |
+| PA034 | SL | R8 Leeds vs Huddersfield @1.23 GO 結果確認 (試合時刻: UK 4/17 19:00 = JST 4/18 04:00) | WAITING | 高 | 4/18早朝 |
+| PA035 | SL | R8 Warrington @Catalans GEN003アップグレード: Tanginoa復帰確認 → conf 80→83%, EV 32→+36.1% / 4/19試合後結果確認 | WAITING | 高 | 4/19試合後 |
+| PA036 | NRL | R7 Warriors: GEN003 4/17追加情報 — Titans Brimson OUT (出産), Randall OUT (calf), Haas 復帰 → Titans弱体化補強。Warriors GO @1.25 維持 | WAITING | 中 | 4/18試合後 |
 
 ---
 
@@ -132,6 +135,16 @@
 - rule_pipeline P013 新候補追加 (R1 upsetter R2モメンタム): Molcan/Kopriva 2件・残1件で実装
 - rule_pipeline P014 新候補追加 (R1 upset winner R2 reversion): Shapovalov/Marozsan 1件
 - rule_pipeline P007 evidence +1 (Paolini R2 MISS): current_count 1→2、残1件で実装
+
+---
+**Session_41 更新 (2026-04-17 GEN003実行):**
+- PA014/PA015: NHL PO G1 両試合 **日付修正 4/18 → 4/19** (公式NHLスケジュール確認)
+- PA035 新規: SL Warrington **Tanginoa 復帰確認** (Yahoo Sports + seriousaboutrl) → confidence 80→83, EV +32→+36.1%, records/superleague/2026.json 更新済
+- PA036 新規: NRL Warriors — Titans Brimson(第二子出産)+ Randall(calf) 欠場。Titans更に弱体化。Warriors予測強化方向。
+- PA034 新規: SL Leeds vs Huddersfield 試合時刻確認 (UK 4/17 19:00 = JST 4/18 04:00)
+- UFL Renegades: 怪我情報なし、推奨維持
+- NBA SAS: Wembanyama 100%近い、推奨維持
+- ダッシュボード更新: 予測精度タブ (19/24 79.2% / Tier分離表示)、ルール変更インパクト表 (R013/U008拡張/GEN004/Tier分類/AHL復活の5行追加)、アクティブ推奨 Warringtonカード (83%/+36.1%)、AHL sport-card pending 0→27 更新
 
 ---
 **Session_39 更新 (2026-04-17):**

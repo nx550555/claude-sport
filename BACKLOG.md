@@ -18,7 +18,7 @@
 
 ## 未完了・作業中（次回セッション最優先）
 
-- [ ] 【次回最優先・ユーザー依頼】ダッシュボード編集（詳細は次回確認）
+- [x] 【Session_41 完了】ダッシュボード大規模改修（Phase 1-3全項目完了）
 - [ ] 【新リーグ】Premiership/Top 14/Pro D2 の全チームPD/G標準データ取得 → pending_data試合の本格L1スクリーニング（Exeter-Northampton/Sale-Saracens/Bayonne-Pau/Castres-Toulouse/Racing-StadeFrancais/Stade Montois-Dax/Nevers-Valence/Beziers-Provence/Grenoble-Oyonnax 計9試合）
 - [ ] 【結果確認（次セッション最優先）】Munich QF (Fonseca/Shelton, Shapovalov/Molcan, Zverev/Cerundolo) / Stuttgart QF (Swiatek/Andreeva, Rybakina/Fernandez, Muchova/Gauff) / Rouen QF (Podrez/Boulter, Shymanovich/Maria) — WebSearchインデックス後一次確認して記録
 - [ ] 【NHL G1】TBL vs MTL G1: goalie確定（dailyfaceoff 4/18朝）でCAUTION→GO昇格判定

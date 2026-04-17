@@ -70,8 +70,8 @@
       "tier": "go",
       "rec": "Warrington Wolves",
       "rec_odds": 1.64,
-      "ev": 31.2,
-      "confidence": 80,
+      "ev": 36.1,
+      "confidence": 83,
       "l1_metric": "Points Differential/Game",
       "l1_data": {
         "WAR_pd_per_game": 21.17,
@@ -83,9 +83,9 @@
       "adjustments": {
         "early_season": "-3% (R3-R8小サンプル補正)",
         "catalans_france_home": "-5% (ペルピニャン・フランス開催: 長距離移動の相手チーム不利)",
-        "injury_penalty": "-5% (Tanginoa OUT + Luke Yates OUT, two key back-rowers confirmed absent for R8 vs Catalans)"
+        "injury_penalty": "-2% (Luke Yates OUT (neck). Tanginoa RETURNED from groin injury, included in 21-man squad per Yahoo Sports 2026-04-17)"
       },
-      "estimated_win_pct": 85,
+      "estimated_win_pct": 83,
       "standings": {
         "WAR": "1位 6試合 PD+127 (+21.17/G)",
         "CAT": "6位 7試合 PD-19 (-2.71/G)"
@@ -103,10 +103,10 @@
       "hit": null,
       "actual_ev": null,
       "status": "pending",
-      "ev_calc": "(0.80 × 1.64) - 1 = +31.20%",
-      "squad_note": "2026-04-15 confirmed: Tanginoa and Luke Yates both injured. Doubts: Niu, Brand, Hughes. Marc Sneyd returns to halves. Still GO but confidence reduced 85->80.",
+      "ev_calc": "(0.83 × 1.64) - 1 = +36.12%",
+      "squad_note": "2026-04-17 UPDATE (GEN003): Tanginoa RETURNED (groin recovered) per Yahoo Sports + seriousaboutrl. Luke Yates STILL OUT (neck). Net injury penalty reduced from -5% to -2%. Confidence 80 -> 83.",
       "odds_updated_at": "2026-04-17",
-      "odds_update_note": "2026-04-17: @1.65 -> @1.64. EV 32% -> 31.20%. GO tier maintained."
+      "odds_update_note": "2026-04-17: @1.65 -> @1.64. Confidence 85->80->83 after Tanginoa return. EV 32%->31.2%->36.1%. GO tier maintained."
     }
   ],
   "screening_log": [
