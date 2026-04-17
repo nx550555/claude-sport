@@ -18,8 +18,11 @@
 
 ## 未完了・作業中（次回セッション最優先）
 
+- [ ] 【次回最優先・ユーザー依頼】ダッシュボード編集（詳細は次回確認）
 - [ ] 【新リーグ】Premiership/Top 14/Pro D2 の全チームPD/G標準データ取得 → pending_data試合の本格L1スクリーニング（Exeter-Northampton/Sale-Saracens/Bayonne-Pau/Castres-Toulouse/Racing-StadeFrancais/Stade Montois-Dax/Nevers-Valence/Beziers-Provence/Grenoble-Oyonnax 計9試合）
 - [ ] 【結果確認（次セッション最優先）】Munich QF (Fonseca/Shelton, Shapovalov/Molcan, Zverev/Cerundolo) / Stuttgart QF (Swiatek/Andreeva, Rybakina/Fernandez, Muchova/Gauff) / Rouen QF (Podrez/Boulter, Shymanovich/Maria) — WebSearchインデックス後一次確認して記録
+- [ ] 【NHL G1】TBL vs MTL G1: goalie確定（dailyfaceoff 4/18朝）でCAUTION→GO昇格判定
+- [ ] 【AHL PO】Calder Cup Playoffs R1 (4/22〜best-of-3) 再スクリーニング
 - [ ] 【最優先①】新規試合・オッズ情報のスクリーニング（ユーザー提供データ起点・重複除外）
 - [~] 【優先②】アクティブGO推奨の最新情報確認（GEN003） — 4/16-17結果分実施済み（Session_39）
   - [x] ATP: Musetti vs Moutet R2 → DONE 4/17（Musetti 6-3 6-4 GO @1.37 HIT +0.37u）
@@ -54,6 +57,23 @@
 - [x] 【最重要・本来依頼】全スポーツ遡りType Aアップセット調査 ← A001-A011計11件登録完了(4/16)。ATP(MC/Barcelona/Munich)/WTA(Stuttgart/Rouen)/NRL R6/UFL W3/NHL RS終盤のSKIP試合を全点検。残課題: Etcheverry/Draper結果要確認・NRL R6 Eels-Titans・Tigers-Knights・WTA Rouen残6試合。
 
 ---
+
+## 直近完了（4/17 Session _40: GEN004 + Tier system + AHL復活）
+
+- [x] GEN004ルール制定: 既分析データ再提供時のオッズ変化再計算
+- [x] NRL Warriors + UFL Renegades EV再計算
+- [x] NHL PO G1 8試合オッズ追加 (TBL-MTL GO昇格候補判明)
+- [x] NBA PO/Play-in 7試合screening
+- [x] NRL R8 3試合追加
+- [x] Super League 2試合再計算
+- [x] ATP Barcelona QF 2試合オッズ追加
+- [x] Premiership/Top 14/Pro D2 新リーグ3種設置 (rules + records + 19試合初期screening)
+- [x] Tier分類システム (Advanced/Basic) + Basic閾値引き上げ (conf>=78/EV>+7)
+- [x] 別枠集計インフラ (cumulative.json + dashboard_stats.json by_tier)
+- [x] ダッシュボードUI tier badge + 分離表示
+- [x] AHL 復活 (sports_excluded→active・Basic Tier)
+- [x] AHL 27試合初回screening (全SKIP, Basic Tier設計動作確認)
+- [x] session_logs/2026-04-17_40.md 保存
 
 ## 直近完了（4/15 Session _29b: betslip形式 + 整合性保証 + div崩れ修正）
 
