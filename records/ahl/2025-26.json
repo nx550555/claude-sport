@@ -1,0 +1,20 @@
+{
+  "sport": "ahl",
+  "season": "2025-26",
+  "bet_type": "Head-to-Head (H2H) + Over/Under goals",
+  "rule_version": "v1.0",
+  "started": "2026-04-17",
+  "reactivation_note": "以前 sports_excluded だったが Basic Tier運用で復活（2026-04-17）。プレーオフ期試験稼働。",
+  "accuracy_tier": "basic",
+  "summary": {
+    "total": 0,
+    "confirmed": 0,
+    "hit": 0,
+    "hit_rate": null,
+    "ev_total": 0,
+    "pending": 0
+  },
+  "games": [],
+  "pending_games": [],
+  "screening_log": []
+}

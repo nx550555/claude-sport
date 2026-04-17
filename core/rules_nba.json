@@ -5,7 +5,6 @@
   "bet_type": "Moneyline (ML) のみ",
   "target": "レギュラーシーズン・プレーオフ問わずオッズが付いている試合すべて",
   "surface_note": "インドアコート統一。ただしデンバー（高地補正 B011）は例外",
-
   "nba_vs_other_sports": {
     "高ポゼッション数": "1試合あたり約100possession → 試合内の分散がアイスホッケー・テニスより低い。ただし3ポイントシュートの短期変動が大きい",
     "スター依存度": "NBA最大の特徴。1人のスター欠場がMLオッズを10〜15%動かす。NHLのゴーリー補正より影響が大きい",
@@ -14,7 +13,6 @@
     "3ポイント分散": "試合単位での3P%の変動が大きく、直近の3P%ホットストリークは平均回帰しやすい（B009）",
     "82試合シーズン": "サンプルが多く、シーズン中盤以降はNet Ratingの信頼性が高い"
   },
-
   "screening": {
     "L1_primary": {
       "metric": "Net Rating（NRtg = ORtg - DRtg）",
@@ -35,97 +33,126 @@
     },
     "four_factors_source": "nba.com/stats/teams/four-factors（無料）"
   },
-
   "thresholds": {
-    "recommend_go": { "confidence_min": 75, "ev_min": 5 },
-    "skip": "信頼度75%未満 または EV+5%未満"
+    "recommend_go": {
+      "confidence_min": 75,
+      "ev_min": 5
+    },
+    "skip": "信頼度75%未満 または EV+5%未満",
+    "tier_specific_note": "Advanced Tier 標準閾値。cElo/xGF%/NRtg/DVOA等の高精度指標使用。"
   },
-
   "ev_formula": "(推定勝率 × MLオッズ) - 1",
-
   "layers": {
     "L1": "Net Rating差（チーム地力・Basketball-Reference）",
     "L2": "直近15試合のNRtgトレンド + 対戦相手品質スコア（±12%）",
     "L3": "Four Factors補正（eFG%・TOV%・ORB%・FTr）+ 3P%平均回帰チェック（±8%）",
     "L4": "スター欠場・B2B・ロードマネジメント・ホームコート・高地・休息日（±18%）"
   },
-
   "data_sources": {
-    "net_rating":       "https://www.basketball-reference.com/leagues/NBA_2026_ratings.html",
-    "four_factors":     "https://www.nba.com/stats/teams/four-factors",
-    "injury_official":  "https://official.nba.com/nba-injury-report-2025-26-season/",
-    "injury_realtime":  "https://www.rotowire.com/basketball/injury-report.php",
-    "injury_espn":      "https://www.espn.com/nba/injuries",
-    "rest_b2b":         "https://www.teamrankings.com/nba/trends/win_trends/?sc=rest_advantage",
-    "odds":             "OddsPortal / Pinnacle",
-    "schedule":         "https://www.nba.com/schedule（B2B確認）"
+    "net_rating": "https://www.basketball-reference.com/leagues/NBA_2026_ratings.html",
+    "four_factors": "https://www.nba.com/stats/teams/four-factors",
+    "injury_official": "https://official.nba.com/nba-injury-report-2025-26-season/",
+    "injury_realtime": "https://www.rotowire.com/basketball/injury-report.php",
+    "injury_espn": "https://www.espn.com/nba/injuries",
+    "rest_b2b": "https://www.teamrankings.com/nba/trends/win_trends/?sc=rest_advantage",
+    "odds": "OddsPortal / Pinnacle",
+    "schedule": "https://www.nba.com/schedule（B2B確認）"
   },
-
   "rules": [
     {
-      "id": "B001", "type": "initial", "title": "L1スクリーニング — Net Rating差",
+      "id": "B001",
+      "type": "initial",
+      "title": "L1スクリーニング — Net Rating差",
       "body": "Basketball-ReferenceのNRtg（ORtg - DRtg）を一次指標として使用。差5pt/100possession以上の試合のみ候補とする。NRtgはサンプル（試合数）が増えるほど信頼性が増す。シーズン序盤（〜20試合）は差7pt以上を推奨。差5pt未満の試合は地力差が小さくコインフリップに近いため除外。",
       "precision_note": "NRtg > SRS > 得失点差/試合 の順に精度が高い"
     },
     {
-      "id": "B002", "type": "initial", "title": "L2フォームトレンド + 対戦相手品質",
+      "id": "B002",
+      "type": "initial",
+      "title": "L2フォームトレンド + 対戦相手品質",
       "body": "直近15試合のNRtgを確認し、トレンドを評価する。上昇トレンド（直近15試合NRtg > シーズン平均+3pt）: +5%。下降トレンド（直近15試合NRtg < シーズン平均-3pt）: -5%。対戦相手の直近15試合NRtgも確認し、弱い相手への連勝は割り引いて評価する。",
       "sample_note": "15試合はNBAの標準的なフォーム評価期間。それ以下は過小サンプル"
     },
     {
-      "id": "B003", "type": "initial", "title": "L3 Four Factors補正",
+      "id": "B003",
+      "type": "initial",
+      "title": "L3 Four Factors補正",
       "body": "Dean Oliver理論に基づくFour Factorsで補正する。①eFG%（実効FG率・重み40%）: 差5%以上で優位側に+3%。②TOV%（ターンオーバー率・重み25%）: 差3%以上で低いチームに+2%。③ORB%（攻撃リバウンド率・重み20%）: 差5%以上で優位側に+2%。④FTr（フリースロー比率・重み15%）: 差0.05以上で優位側に+1%。上限: Four Factors補正合計+8%/-8%。データソース: nba.com/stats/teams/four-factors"
     },
     {
-      "id": "B004", "type": "initial", "title": "ホームコートアドバンテージ",
+      "id": "B004",
+      "type": "initial",
+      "title": "ホームコートアドバンテージ",
       "body": "NBA正規シーズンのホームコート価値は約+2.7点（勝率+54%相当）。補正値: ホームチームに+3.5%固定。プレーオフはシリーズ上位シードホームに+5%（ファン・慣れたコート効果が増大）。ただしNBAのホームアドバンテージは歴史的に低下傾向（2000年代: 勝率60%→現在: 54%）のため、AFL・ラグビーほど強くない。",
       "evidence": "統計研究: 正規シーズンホーム勝率54%・約2.7点相当（PMC研究 2024）"
     },
     {
-      "id": "B005", "type": "initial", "title": "スター選手欠場補正（最重要・NBA固有）",
+      "id": "B005",
+      "type": "initial",
+      "title": "スター選手欠場補正（最重要・NBA固有）",
       "body": "NBAはスター依存度が最も高いスポーツ。スター欠場時の補正値: 【MVP候補/All-NBA 1st Team級】欠場: -15〜-20%（win probabilityに直結）。【All-Star・All-NBA 2nd/3rd Team級】欠場: -10〜-15%。【主力ローテーション選手（出場時間25分以上）】欠場: -5〜-8%。複数人欠場の場合は累積可（上限-25%）。逆に相手のスターが欠場する場合は同量の上乗せを検討。必ずB008（公式傷病リスト）で確認してからGO判断を出すこと。",
       "nba_rule": "NBA公式のPlayer Participation Policy: All-Star等のスター選手は1試合1人まで休養可能（2024〜）"
     },
     {
-      "id": "B006", "type": "initial", "title": "B2B（連戦）補正",
+      "id": "B006",
+      "type": "initial",
+      "title": "B2B（連戦）補正",
       "body": "NBAはシーズン中にB2B（連続試合）が多い（1チーム平均15〜20回/シーズン）。補正値: B2B第2戦（アウェー）: -6%。B2B第2戦（ホーム）: -4%。相手がフレッシュ（2日以上休息）かつ自チームB2B: さらに-2%（合計最大-8%）。3試合/4日間のシーズン終盤: -3%。統計的根拠: B2B第2戦は平均約1〜1.6点の純得点差が生じる（teamrankings.com調査）。",
       "b2b_source": "https://www.teamrankings.com/nba/trends/win_trends/?sc=rest_advantage"
     },
     {
-      "id": "B007", "type": "initial", "title": "ロードマネジメント対応（NBA固有）",
+      "id": "B007",
+      "type": "initial",
+      "title": "ロードマネジメント対応（NBA固有）",
       "body": "NBA選手は意図的な休養（ロードマネジメント）を取ることがある。スター選手が直前まで出場可否不明のケースが多い。対応方針: ①NBA公式傷病リストの5pm提出（前日）と11am〜1pm更新（当日）を確認してからGO判断を出す（B008参照）。②ロードマネジメント傾向が高い選手（過去に複数回実施したスター）がいるチームは判断を遅らせる。③オッズが公式リスト前に動いている場合は市場が先行情報を得ている可能性あり（追いかけない）。",
       "known_pattern": "B2B後半戦・シーズン終盤・すでにプレーオフシード確定済みのチームでロードマネジメント頻度が高い"
     },
     {
-      "id": "B008", "type": "initial", "title": "公式傷病リスト確認（GO判断の前提条件）",
+      "id": "B008",
+      "type": "initial",
+      "title": "公式傷病リスト確認（GO判断の前提条件）",
       "body": "NBAはリーグ規則により傷病情報の提出が義務付けられている。確認タイミングとソース: 【前日5pm EST】: official.nba.com/nba-injury-report（前日の公式リスト）。【当日11am〜1pm EST】: 同上（当日リスト・最終確認）。【リアルタイム更新】: rotowire.com/basketball/injury-report / espn.com/nba/injuries。GO判断はB008確認後にのみ出す。スター選手のステータスが「Questionable」の場合は判断保留。「Doubtful/Out」確認後に確定補正を適用する。",
       "nba_rule": "NBA義務: 試合前日5pm ESSTまでに傷病リスト提出 + 当日11am-1pm ESTに更新"
     },
     {
-      "id": "B009", "type": "initial", "title": "3ポイントシュート分散リスク（NBA固有）",
+      "id": "B009",
+      "type": "initial",
+      "title": "3ポイントシュート分散リスク（NBA固有）",
       "body": "3ポイントシュートの試合単位変動は非常に大きく（安定化に750本以上が必要）、直近の好調不調は平均回帰しやすい。対応方針: ①直近5試合で3P%がシーズン平均+5%以上継続しているチームを「過大評価」リスクと判定 → 信頼度から-3%調整。②反対に3P%がシーズン平均-5%以上の不調継続チームは「過小評価」の可能性 → +2%調整。③eFG%補正（B003）と合わせて評価することでより精度が上がる。シーズン3P%データ: nba.com/stats/teams/four-factorsのeFG%を参照。",
       "evidence": "研究: 3P%安定化には最低750本のサンプルが必要（thepowerrank.com調査）"
     },
     {
-      "id": "B010", "type": "initial", "title": "デンバー・ナゲッツ高地補正",
+      "id": "B010",
+      "type": "initial",
+      "title": "デンバー・ナゲッツ高地補正",
       "body": "デンバーは海抜1600m超。高地では酸素が薄くスタミナに影響が出るため、遠征チームには追加補正を適用する。補正値: デンバーホーム vs 未高地チーム（初遠征）: 通常ホームB004の+3.5%に+2%追加。デンバーホーム vs 高地慣れチーム（シーズン2回目以降の遠征）: +1%追加。デンバーアウェー: 補正なし（ホームで高地に慣れているため）。",
       "altitude": "海抜1,609m（Mile High City）。NBA中で唯一の高地開催アリーナ"
     },
     {
-      "id": "B011", "type": "initial", "title": "シーズン段階補正",
+      "id": "B011",
+      "type": "initial",
+      "title": "シーズン段階補正",
       "body": "NBAシーズン段階によって分析アプローチを変える。【序盤（1〜20試合）】: NRtgのサンプル不足。差7pt以上でないとL1通過させない。前シーズンのNRtgも参考にする（ウェイト50%）。【中盤（21〜60試合）】: 通常の差5pt閾値を適用。【終盤（61〜82試合）】: プレーオフシードを既に確定したチームはロードマネジメント頻度が高い。モチベーション補正-3〜-5%を追加検討。【プレーオフ】: B4（ホームコート）を+5%に引き上げ。7戦シリーズのため疲労・怪我情報がより重要。"
     },
     {
-      "id": "B012", "type": "initial", "title": "ペース差補正",
+      "id": "B012",
+      "type": "initial",
+      "title": "ペース差補正",
       "body": "チームごとのPace（100secあたりのポゼッション数）が異なる。ハイペースチーム（Pace 100以上）vs スローペースチーム（Pace 96以下）の対戦では、どちらのペースに試合が引き寄せられるかで優位性が変わる。補正: 両チームのPaceが5以上差がある場合、ハイペースチームが得意なペースになりやすいが、スローペースのディフェンシブチームがペースを落とすことでアドバンテージを得ることもある。Paceデータ: basketball-reference.com/leagues/NBA_2026_ratings.html で取得可能。このルールはML予測のEV計算より Total（合計点）予測に役立つ参考指標として使用する。"
     },
     {
-      "id": "B013", "type": "initial", "title": "推奨基準",
+      "id": "B013",
+      "type": "initial",
+      "title": "推奨基準",
       "body": "信頼度≥75% AND EV>+5%の両方を満たす場合のみ推奨（go）とする。B008（公式傷病リスト確認）が完了していることがGO判断の必須前提条件。スター選手がQuestionableの場合はOut/Activeが確定するまで保留とする。"
     },
     {
-      "id": "B014", "type": "initial", "title": "信頼度75%未満は完全除外",
+      "id": "B014",
+      "type": "initial",
+      "title": "信頼度75%未満は完全除外",
       "body": "NBA最大の特徴である3ポイント分散とスター依存度を考慮し、他スポーツと同様に信頼度75%未満の試合は推奨・要検討から完全除外する。"
     }
-  ]
+  ],
+  "accuracy_tier": "advanced",
+  "tier_note": "高精度Tier: 高度な調整済指標（cElo/xGF%/NRtg/DVOA等）をL1に使用。標準GO閾値(conf>=75%, EV>+5%)で運用。"
 }

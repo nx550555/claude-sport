@@ -1,0 +1,89 @@
+{
+  "sport": "ahl",
+  "league_name": "American Hockey League",
+  "rule_version": "v1.0",
+  "created": "2026-04-17",
+  "reactivation_context": "以前 framework.json で sports_excluded に分類されていたが、Basic Tier精度での運用を前提に復活。プレーオフ期(4月後半〜6月)はコールアップ制限でラインナップ安定 → 試験稼働の好機。",
+  "derived_from": "core/rules_nhl.json を雛形、ただしxGF%等の高度指標部分を削除しBasic統計に置換",
+  "accuracy_tier": "basic",
+  "tier_note": "Basic Tier: xGF% (MoneyPuck) や score-adjusted Corsi等の高度指標がAHL対応サービスとして存在しない。GF/GA・GF%・PP%・PK%・PDOのcounting statsのみで運用。NHL同等精度は出せないことを前提とする。",
+  "screening": {
+    "L1_primary": {
+      "metric": "GF% (Goals For percentage) — chances相当の代替",
+      "fallback_metric": "GF/G - GA/G 差（得失点差/試合）",
+      "source_primary": "quanthockey.com/ahl (team stats)",
+      "source_alternate": "theahl.com (official)",
+      "threshold": "GF% 差 5pt 以上 OR GF-GA/G 差 0.6 以上",
+      "precision_penalty": "-5% 信頼度補正（N001③ 精度ペナルティを毎回発動）"
+    },
+    "L2_form": "直近5試合の勝敗・PDO・相手強度",
+    "L3_stats": "PP%, PK%, SOG差",
+    "L4_factors": "コールアップ/センドダウン・goalie・ラインアップ変更"
+  },
+  "thresholds": {
+    "go": "confidence >= 78% AND EV > +7% AND L1 PASS AND 主力欠場なし",
+    "caution": "L1 PASS かつ (confidence >= 72% AND EV > +5%) 但し上記GO未達",
+    "skip": "上記以外",
+    "tier_specific_note": "Basic Tier 厳格閾値 (2026-04-17 制定)。Advanced Tier (conf>=75%/EV>+5%) より高めに設定。L1精度の構造的低さをバッファで補う。",
+    "threshold_history": [
+      {
+        "date": "2026-04-17",
+        "from": "conf>=75% AND EV>+5%",
+        "to": "conf>=78% AND EV>+7%",
+        "reason": "Basic Tier精度補正"
+      }
+    ]
+  },
+  "adjustments": {
+    "A001_home_advantage": {
+      "rule": "ホームチームに +3% 信頼度補正",
+      "note": "NHLと同じ"
+    },
+    "A002_callup_risk": {
+      "rule": "試合前3日以内にNHL本体にコールアップが発生した場合 -5%",
+      "note": "主力center/defenseman召集は特に影響大"
+    },
+    "A003_goalie_confirmation": {
+      "rule": "先発ゴーリーがチーム公式SNSまたはLine Changeサイト等で確認できない場合 CAUTION止まり",
+      "reference": "NHL N006と同趣旨"
+    },
+    "A004_playoff_roster_stability": {
+      "rule": "プレーオフ期(4/20以降)はコールアップ制限でラインナップ安定 → L4 confirm failure penalty を -5% → -3% に緩和",
+      "note": "プレーオフ期限定の緩和措置"
+    },
+    "A005_b2b_travel": {
+      "rule": "AHL特有の長距離バス移動 B2B は通常より -7% (NHL -4%より重い)",
+      "note": "AHL付随の移動負荷はNHLより大きい"
+    },
+    "A006_end_season_rest": {
+      "rule": "プレーオフ確定済みチームがレギュラーシーズン最終盤でコールアップ主力起用の場合 +3% 相手側",
+      "note": "NHL N008/N016と同趣旨"
+    }
+  },
+  "tournament_context": {
+    "regular_season": "Oct-Apr (~72試合)",
+    "calder_cup_playoffs": "April 下旬 - June (best-of-5 R1, best-of-7 R2+)"
+  },
+  "key_dependency": [
+    "quanthockey.com/ahl/team-stats (primary)",
+    "theahl.com/stats (alternate/official)",
+    "dailyfaceoff.com → NHL専用のためAHLゴーリー確認不可。チーム公式X/SNS監視必要"
+  ],
+  "reactivation_caveats": [
+    "xGF%なし：shot qualityを考慮できない。GF%は運要素を含むため過大/過小評価リスクあり",
+    "ゴーリー確認：30チーム公式個別監視は現実的でない。重要試合（GO候補）のみチーム公式Xを手動確認",
+    "ラインアップ不安定：試合直前コールアップ・怪我で主力欠場多発。L4未充足率高い"
+  ],
+  "rules_log": [
+    {
+      "version": "v1.0",
+      "date": "2026-04-17",
+      "change": "sports_excludedから復活。Basic Tier運用で試験稼働開始。プレーオフ期がタイミング的好機。"
+    },
+    {
+      "version": "v1.1",
+      "date": "2026-04-17",
+      "change": "Basic Tier threshold raise: GO条件 conf>=75%/EV>+5% → conf>=78%/EV>+7%. CAUTION: conf>=70% → conf>=72%/EV>+5%."
+    }
+  ]
+}

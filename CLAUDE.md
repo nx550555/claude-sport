@@ -220,6 +220,11 @@
 1. 暫定: NRLルールを準拠 (`core/rules_nrl.json` 参照)。独自rules_superleague.jsonは未作成
 2. `C:\Users\ohwada\Desktop\claude_sport\records\superleague\2026.json` を読み込む
 
+**AHL（American Hockey League・アイスホッケー）の作業をするとき：**
+1. `C:\Users\ohwada\Desktop\claude_sport\core\rules_ahl.json` を読み込む
+2. `C:\Users\ohwada\Desktop\claude_sport\records\ahl\2025-26.json` を読み込む
+3. Basic Tier運用（xGF%なし・GF%のみ）。精度はNHLより劣る前提で扱う
+
 3. 現在の状況を把握して「引き継ぎ完了」と報告する
 4. 次の指示を待つ
 

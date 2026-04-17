@@ -19,12 +19,18 @@
     "critical": "QBの先発確認が必須（N相当のU006）"
   },
   "thresholds": {
-    "recommend_go": {
-      "confidence_min": 75,
-      "ev_min": 5
-    },
-    "skip": "信頼度75%未満 または EV+5%未満",
-    "week1_note": "Week1は実績なし→推奨保留。Week2以降から本格稼働"
+    "go": "confidence >= 78% AND EV > +7% AND L1 PASS AND 主力欠場なし",
+    "caution": "L1 PASS かつ (confidence >= 72% AND EV > +5%) 但し上記GO未達",
+    "skip": "上記以外",
+    "tier_specific_note": "Basic Tier 厳格閾値 (2026-04-17 制定)。Advanced Tier (conf>=75%/EV>+5%) より高めに設定。L1精度の構造的低さをバッファで補う。",
+    "threshold_history": [
+      {
+        "date": "2026-04-17",
+        "from": "conf>=75% AND EV>+5%",
+        "to": "conf>=78% AND EV>+7%",
+        "reason": "Basic Tier精度補正"
+      }
+    ]
   },
   "ev_formula": "(推定勝率 × MLオッズ) - 1",
   "layers": {
@@ -110,6 +116,15 @@
       "type": "initial",
       "title": "ラインナップ確認チェックリスト",
       "body": "分析前に確認必須: ① 先発QB（theufl.com公式）② 主力WR/TE出場可否 ③ 天候（Weather.com or AccuWeather） ④ 直近の怪我情報（木曜練習レポート）。全項目確認後のみGO判断を出す。"
+    }
+  ],
+  "accuracy_tier": "basic",
+  "tier_note": "Basic Tier: 基本統計（PD/G等counting stats）のみ。高度な調整指標は業界標準として存在しないため構造的精度上限あり。L4依存度が高くGO判定は保守的に扱う。均衡試合では根拠が薄いことを前提に運用。",
+  "rules_log": [
+    {
+      "version": "v1.1",
+      "date": "2026-04-17",
+      "change": "Basic Tier threshold raise: GO条件 conf>=75%/EV>+5% → conf>=78%/EV>+7%. CAUTION: conf>=70% → conf>=72%/EV>+5%."
     }
   ]
 }

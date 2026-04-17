@@ -9,7 +9,8 @@
       "hit_count": 11,
       "hit_rate": 0.786,
       "pnl": 1.74,
-      "pending_count": 0
+      "pending_count": 0,
+      "tier": "advanced"
     },
     "wta": {
       "go_count": 3,
@@ -17,7 +18,8 @@
       "hit_count": 2,
       "hit_rate": 0.667,
       "pnl": -0.25250000000000006,
-      "pending_count": 0
+      "pending_count": 0,
+      "tier": "advanced"
     },
     "nhl": {
       "go_count": 2,
@@ -25,7 +27,8 @@
       "hit_count": 2,
       "hit_rate": 1.0,
       "pnl": 1.863,
-      "pending_count": 0
+      "pending_count": 0,
+      "tier": "advanced"
     },
     "ufl": {
       "go_count": 3,
@@ -33,7 +36,8 @@
       "hit_count": 2,
       "hit_rate": 1.0,
       "pnl": 0.97,
-      "pending_count": 1
+      "pending_count": 1,
+      "tier": "basic"
     },
     "nrl": {
       "go_count": 2,
@@ -41,7 +45,8 @@
       "hit_count": 0,
       "hit_rate": 0.0,
       "pnl": -1.0,
-      "pending_count": 1
+      "pending_count": 1,
+      "tier": "basic"
     },
     "superrugby": {
       "go_count": 1,
@@ -49,7 +54,8 @@
       "hit_count": 1,
       "hit_rate": 1.0,
       "pnl": 0.54,
-      "pending_count": 0
+      "pending_count": 0,
+      "tier": "basic"
     },
     "nba": {
       "go_count": 2,
@@ -57,7 +63,8 @@
       "hit_count": 1,
       "hit_rate": 1.0,
       "pnl": 0.2,
-      "pending_count": 1
+      "pending_count": 1,
+      "tier": "advanced"
     },
     "superleague": {
       "go_count": 2,
@@ -65,7 +72,44 @@
       "hit_count": 0,
       "hit_rate": null,
       "pnl": 0,
-      "pending_count": 2
+      "pending_count": 2,
+      "tier": "basic"
+    },
+    "premiership": {
+      "go_count": 0,
+      "confirmed_count": 0,
+      "hit_count": 0,
+      "hit_rate": null,
+      "pnl": 0,
+      "pending_count": 0,
+      "tier": "basic"
+    },
+    "top14": {
+      "go_count": 0,
+      "confirmed_count": 0,
+      "hit_count": 0,
+      "hit_rate": null,
+      "pnl": 0,
+      "pending_count": 0,
+      "tier": "basic"
+    },
+    "prod2": {
+      "go_count": 0,
+      "confirmed_count": 0,
+      "hit_count": 0,
+      "hit_rate": null,
+      "pnl": 0,
+      "pending_count": 0,
+      "tier": "basic"
+    },
+    "ahl": {
+      "go_count": 0,
+      "confirmed_count": 0,
+      "hit_count": 0,
+      "hit_rate": null,
+      "pnl": 0,
+      "pending_count": 0,
+      "tier": "basic"
     }
   },
   "overview": {
@@ -75,6 +119,63 @@
     "hit_rate": 0.792,
     "total_pnl": 4.1,
     "total_pending": 5,
-    "pending_breakdown": "UFL x1 + NRL x1 + NBA x1 + SL x2"
+    "pending_breakdown": "UFL x1 + NRL x1 + NBA x1 + SL x2",
+    "by_tier_separation": {
+      "advanced": {
+        "hit_rate": 0.8,
+        "hits": 16,
+        "confirmed": 20,
+        "pnl": 3.5505,
+        "pending": 1
+      },
+      "basic": {
+        "hit_rate": 0.75,
+        "hits": 3,
+        "confirmed": 4,
+        "pnl": 0.51,
+        "pending": 4
+      },
+      "overall": {
+        "hit_rate": 0.792,
+        "hits": 19,
+        "confirmed": 24,
+        "pnl": 4.1
+      },
+      "note": "Tier別で機能が別として管理（精度差あり）。Overall は参考値。"
+    }
+  },
+  "by_tier": {
+    "advanced": {
+      "go_count": 21,
+      "confirmed_count": 20,
+      "hit_count": 16,
+      "pnl": 3.5505,
+      "pending_count": 1,
+      "sports": [
+        "atp",
+        "wta",
+        "nhl",
+        "nba"
+      ],
+      "hit_rate": 0.8
+    },
+    "basic": {
+      "go_count": 8,
+      "confirmed_count": 4,
+      "hit_count": 3,
+      "pnl": 0.51,
+      "pending_count": 4,
+      "sports": [
+        "ufl",
+        "nrl",
+        "superrugby",
+        "superleague",
+        "premiership",
+        "top14",
+        "prod2",
+        "ahl"
+      ],
+      "hit_rate": 0.75
+    }
   }
 }

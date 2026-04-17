@@ -13,7 +13,8 @@
       "confidence_min": 75,
       "ev_min": 5
     },
-    "skip": "信頼度75%未満 または EV+5%未満"
+    "skip": "信頼度75%未満 または EV+5%未満",
+    "tier_specific_note": "Advanced Tier 標準閾値。cElo/xGF%/NRtg/DVOA等の高精度指標使用。"
   },
   "ev_formula": "(推定勝率 × オッズ) - 1",
   "layers": {
@@ -101,5 +102,7 @@
       "stake_rule": "通常GO=1u に対して GAMBLE_BET=0.25〜0.33u",
       "example": "Ostapenko vs Andreeva (Stuttgart 2026-04-13): Ostapenko cElo1811 vs Andreeva cElo1918 → 差107pt。UF01(室内クレー速いサーフェス=Ostapenko有利) + UFT01(defending champion・大会相性) → 2因子。オッズ3.73。推定41% vs 市場26.8% → 乖離14.2pt。EV+53.3%。→ GAMBLE_BET発動（0.25u）"
     }
-  ]
+  ],
+  "accuracy_tier": "advanced",
+  "tier_note": "高精度Tier: 高度な調整済指標（cElo/xGF%/NRtg/DVOA等）をL1に使用。標準GO閾値(conf>=75%, EV>+5%)で運用。"
 }

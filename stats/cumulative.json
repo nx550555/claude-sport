@@ -32,7 +32,8 @@
         "status": "R2_complete",
         "note": "R1 GO3件全HIT + R2 Musetti@1.37 HIT(+0.37u)。4/4 100% EV+1.21u。"
       }
-    ]
+    ],
+    "tier": "advanced"
   },
   "tennis_wta": {
     "total_predictions": 3,
@@ -66,7 +67,8 @@
         "status": "r1_complete",
         "note": "Tan H. d. Bondar A. GO HIT(+0.21u)."
       }
-    ]
+    ],
+    "tier": "advanced"
   },
   "nhl": {
     "total_predictions": 2,
@@ -75,7 +77,8 @@
     "ev_total": 1.863,
     "pending": 0,
     "status": "in_progress",
-    "note": "COL 3-1 HIT(+0.333) / OTT 3-2 NYI HIT(+1.53)。2/2 100%。"
+    "note": "COL 3-1 HIT(+0.333) / OTT 3-2 NYI HIT(+1.53)。2/2 100%。",
+    "tier": "advanced"
   },
   "ufl": {
     "total_predictions": 3,
@@ -85,7 +88,8 @@
     "ev_total": 0.97,
     "pending": 1,
     "status": "in_progress",
-    "note": "W3 Dallas HIT(+0.32u). W4 Louisville Kings HIT(+0.65u 24-22 OT). Renegades 4/18 pending. 2/2 100%."
+    "note": "W3 Dallas HIT(+0.32u). W4 Louisville Kings HIT(+0.65u 24-22 OT). Renegades 4/18 pending. 2/2 100%.",
+    "tier": "basic"
   },
   "nrl": {
     "total_predictions": 2,
@@ -95,7 +99,8 @@
     "ev_total": -1.0,
     "pending": 1,
     "status": "in_progress",
-    "note": "R6 Rabbitohs vs Raiders MISS（Raiders 30-22勝利）。R7: Warriors GO @1.25 EV+13.4% PENDING 4/18。Broncos REVOKED（Luai+May Tigers復帰でスクリーニング取消）。"
+    "note": "R6 Rabbitohs vs Raiders MISS（Raiders 30-22勝利）。R7: Warriors GO @1.25 EV+13.4% PENDING 4/18。Broncos REVOKED（Luai+May Tigers復帰でスクリーニング取消）。",
+    "tier": "basic"
   },
   "superrugby": {
     "total_predictions": 1,
@@ -104,21 +109,24 @@
     "ev_total": 0.54,
     "pending": 0,
     "status": "in_progress",
-    "note": "R9 Crusaders 32-12 Reds HIT(+0.54)。ホームセミファイナル確定。"
+    "note": "R9 Crusaders 32-12 Reds HIT(+0.54)。ホームセミファイナル確定。",
+    "tier": "basic"
   },
   "nfl": {
     "total_predictions": 0,
     "hits": 0,
     "hit_rate": null,
     "ev_total": 0,
-    "status": "プレシーズン（2026年9月開幕予定）"
+    "status": "プレシーズン（2026年9月開幕予定）",
+    "tier": "advanced"
   },
   "cfl": {
     "total_predictions": 0,
     "hits": 0,
     "hit_rate": null,
     "ev_total": 0,
-    "status": "プレシーズン（2026年6月開幕予定）"
+    "status": "プレシーズン（2026年6月開幕予定）",
+    "tier": "basic"
   },
   "nba": {
     "total_predictions": 2,
@@ -128,6 +136,109 @@
     "ev_total": 0.2,
     "pending": 1,
     "status": "PO R1進行中。NBA-001 Rockets 124-109 HIT(+0.20)。NBA-003 SAS vs POR GO @1.18 EV+5.6% PENDING 4/20。",
-    "note": "NBA-002は参考記録のみ（Cavaliers 130-126 Mitchell 48pts）。オッズ未確認のためカウント外。"
+    "note": "NBA-002は参考記録のみ（Cavaliers 130-126 Mitchell 48pts）。オッズ未確認のためカウント外。",
+    "tier": "advanced"
+  },
+  "premiership": {
+    "total_predictions": 0,
+    "confirmed": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "ev_total": 0,
+    "pending": 0,
+    "tier": "basic",
+    "status": "初回稼働 2026-04-17",
+    "note": "データなし（初期状態）"
+  },
+  "top14": {
+    "total_predictions": 0,
+    "confirmed": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "ev_total": 0,
+    "pending": 0,
+    "tier": "basic",
+    "status": "初回稼働 2026-04-17",
+    "note": "データなし（初期状態）"
+  },
+  "prod2": {
+    "total_predictions": 0,
+    "confirmed": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "ev_total": 0,
+    "pending": 0,
+    "tier": "basic",
+    "status": "初回稼働 2026-04-17",
+    "note": "データなし（初期状態）"
+  },
+  "ahl": {
+    "total_predictions": 0,
+    "confirmed": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "ev_total": 0,
+    "pending": 0,
+    "tier": "basic",
+    "status": "復活稼働 2026-04-17",
+    "note": "データなし（初期状態）"
+  },
+  "super_league": {
+    "total_predictions": 0,
+    "confirmed": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "ev_total": 0,
+    "pending": 0,
+    "tier": "basic",
+    "status": "Super League 2026 (既存)",
+    "note": "データなし（初期状態）"
+  },
+  "by_tier": {
+    "advanced": {
+      "total_predictions": 21,
+      "confirmed": 20,
+      "hits": 16,
+      "ev_total": 3.5505,
+      "pending": 1,
+      "sports_included": [
+        "tennis_atp",
+        "tennis_wta",
+        "nhl",
+        "nba",
+        "nfl"
+      ],
+      "note": "高精度Tier集計: cElo/xGF%/NRtg/DVOA使用スポーツ合計",
+      "hit_rate": 0.8
+    },
+    "basic": {
+      "total_predictions": 6,
+      "confirmed": 4,
+      "hits": 3,
+      "ev_total": 0.51,
+      "pending": 2,
+      "sports_included": [
+        "ufl",
+        "cfl",
+        "nrl",
+        "superrugby",
+        "premiership",
+        "top14",
+        "prod2",
+        "ahl",
+        "super_league"
+      ],
+      "note": "Basic Tier集計: PD/G等counting statsのみ使用スポーツ合計",
+      "hit_rate": 0.75
+    }
+  },
+  "overall_combined": {
+    "total_predictions": 27,
+    "confirmed": 24,
+    "hits": 19,
+    "pending": 3,
+    "ev_total": 4.0605,
+    "note": "Advanced + Basic 合算。ただし精度が異なるため個別参照を推奨（「機能が別」扱い）",
+    "hit_rate": 0.7917
   }
 }

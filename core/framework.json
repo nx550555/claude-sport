@@ -23,15 +23,14 @@
     "nba",
     "premiership",
     "top14",
-    "prod2"
+    "prod2",
+    "ahl"
   ],
   "sports_preseason": [
     "nfl",
     "cfl"
   ],
-  "sports_excluded": [
-    "ahl"
-  ],
+  "sports_excluded": [],
   "sports_active_note": {
     "tennis_atp": "クレーシーズン進行中（MC2026 F待ち）",
     "tennis_wta": "クレーシーズン進行中（Stuttgart 4/13開幕）",
@@ -42,7 +41,8 @@
     "nba": "レギュラーシーズン終盤・プレーオフ直前（2025-26）",
     "premiership": "English Premiership Rugby 2025-26 (R14前後・5月末プレーオフ)",
     "top14": "French Top 14 2025-26 (R20-21前後・6月プレーオフ)",
-    "prod2": "French Pro D2 2025-26 (R26-27前後・5月プレーオフ)"
+    "prod2": "French Pro D2 2025-26 (R26-27前後・5月プレーオフ)",
+    "ahl": "AHL (American Hockey League) 2025-26 reactivated 2026-04-17. Basic Tier運用・プレーオフ期試験稼働。"
   },
   "sports_preseason_note": {
     "nfl": "2026年9月開幕予定",
@@ -68,7 +68,10 @@
         "AHLゴーリー先発の一元確認ワークフローを確立する",
         "（補足）プレーオフ期間はコールアップ制限でラインナップが安定するため試験稼働の選択肢あり"
       ],
-      "detail_ref": "core/rules_nhl.json → N015"
+      "detail_ref": "core/rules_nhl.json → N015",
+      "status": "reactivated_2026-04-17 (Basic Tier)",
+      "reactivation_date": "2026-04-17",
+      "reactivation_reason": "Basic Tier精度での運用前提で復活。以前の3障壁（L1指標なし・ゴーリー確認不可・ラインナップ不安定）は Basic Tier では許容範囲として受容。プレーオフ期でラインナップ安定もプラス要因。"
     }
   },
   "sport_categories": {
@@ -84,7 +87,8 @@
       "prod2"
     ],
     "ice_hockey": [
-      "nhl"
+      "nhl",
+      "ahl"
     ],
     "american_football": [
       "ufl",
@@ -167,7 +171,8 @@
     "premiership": "core/rules_premiership.json",
     "top14": "core/rules_top14.json",
     "prod2": "core/rules_prod2.json",
-    "super_league": "core/rules_superleague.json (暫定・NRL準拠)"
+    "super_league": "core/rules_superleague.json (暫定・NRL準拠)",
+    "ahl": "core/rules_ahl.json"
   },
   "records_files": {
     "tennis_atp": "records/tennis/2026-ATP.json",
@@ -182,7 +187,8 @@
     "premiership": "records/premiership/2026.json",
     "top14": "records/top14/2026.json",
     "prod2": "records/prod2/2026.json",
-    "super_league": "records/superleague/2026.json"
+    "super_league": "records/superleague/2026.json",
+    "ahl": "records/ahl/2025-26.json"
   },
   "workflow": {
     "screening": "全試合にpredicted_winner・prediction_confidence・prediction_basisを記録してからtier(go/caution/skip)を判定する",
@@ -265,5 +271,85 @@
       "step4": "ユーザーが移行を保留した場合: 次回トリガー確認時に再報告する（current_phaseはPhase1のまま）"
     }
   },
-  "updated_note": "Added Premiership/Top 14/Pro D2 as new rugby union leagues. Initial rules files v1.0 derived from SuperRugby template. Standings partial - requires deeper fetch for full L1 screening."
+  "updated_note": "Added Premiership/Top 14/Pro D2 as new rugby union leagues. Initial rules files v1.0 derived from SuperRugby template. Standings partial - requires deeper fetch for full L1 screening. | accuracy_tier_classification 追加 (advanced/basic 2段階).",
+  "accuracy_tier_classification": {
+    "description": "予測精度ティア区分（2026-04-17制定）。L1指標の精度に基づきadvanced/basicの2段階で分類する。",
+    "advanced": {
+      "description": "高精度・調整済指標（possession調整・shot quality調整・Bayesian rating等）がL1指標に使える",
+      "sports": [
+        "tennis_atp",
+        "tennis_wta",
+        "nhl",
+        "nba",
+        "nfl"
+      ],
+      "examples": {
+        "tennis_atp": "cElo (surface-specific Bayesian rating)",
+        "tennis_wta": "cElo Women's",
+        "nhl": "xGF% (MoneyPuck, shot quality adjusted)",
+        "nba": "Net Rating (possession adjusted)",
+        "nfl": "DVOA (situation-adjusted)"
+      },
+      "operational_implication": "標準の閾値 (conf>=75% AND EV>+5%) をGO条件として使用可",
+      "thresholds": {
+        "go": "conf >= 75% AND EV > +5%",
+        "caution": "conf >= 70% AND L1 PASS",
+        "stake": "1u (基準)"
+      }
+    },
+    "basic": {
+      "description": "基本統計（PD/G, GF%等のcounting stats）のみ利用可能。高度な調整指標が業界標準として存在しない",
+      "sports": [
+        "ufl",
+        "cfl",
+        "nrl",
+        "superrugby",
+        "super_league",
+        "premiership",
+        "top14",
+        "prod2",
+        "ahl"
+      ],
+      "potential_addition": [],
+      "examples": {
+        "ufl": "PD/G (得失点差/試合)",
+        "nrl": "PD/G",
+        "superrugby": "PD/G",
+        "super_league": "PD/G",
+        "premiership": "PD/G",
+        "top14": "PD/G",
+        "prod2": "PD/G",
+        "cfl": "PD/G (推定・開幕待ち)"
+      },
+      "operational_implication": "L1精度が低いため、均衡試合での予測根拠が薄い。L4依存度が高い。ステーク・閾値の差別化を検討（Q2-4で決定待ち）",
+      "limits_note": "ラグビー・二部野球(AHL)等は業界全体として高度指標が整備されていないための構造的制約。推奨の信頼性は他tierより劣る前提で運用する",
+      "thresholds": {
+        "go": "conf >= 78% AND EV > +7%",
+        "caution": "conf >= 72% AND EV > +5% AND L1 PASS",
+        "stake": "1u (Advanced と同額)",
+        "note": "2026-04-17 制定。Advanced より厳しい条件でGO発動。精度補正としてバッファ付与。"
+      }
+    },
+    "tracking": {
+      "cumulative_separation": "stats/cumulative.json と core/dashboard_stats.json にて advanced_tier / basic_tier を別枠で集計する",
+      "dashboard_separation": "dashboard.html の overview big-stat とアクティブ推奨タブを Tier 別に分離表示",
+      "stake_uniform": "ステークは 1u 統一 (Q3 半額案は不採用)"
+    }
+  },
+  "sports_tier_map": {
+    "tennis_atp": "advanced",
+    "tennis_wta": "advanced",
+    "nhl": "advanced",
+    "nba": "advanced",
+    "nfl": "advanced",
+    "ufl": "basic",
+    "cfl": "basic",
+    "nrl": "basic",
+    "superrugby": "basic",
+    "super_league": "basic",
+    "premiership": "basic",
+    "top14": "basic",
+    "prod2": "basic",
+    "ahl": "basic"
+  }
 }

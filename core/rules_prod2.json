@@ -6,7 +6,6 @@
   "derived_from": "core/rules_top14.json (second-division variant)",
   "season_context": "2025-26 season. Regular season R26 completed by mid-April. R27-30 + playoffs remaining.",
   "note": "初版ルール。Top 14 の第二部。試合数が多く（R30まで）サンプルサイズ大。プロモーション争いが終盤の動機要因。",
-
   "screening": {
     "L1_primary": {
       "metric": "Points Differential per Game (PD/G)",
@@ -18,13 +17,20 @@
     "L3_stats": "Try bonus rate, losing bonus点",
     "L4_factors": "Injury, travel (国土広い), home vs away PD差"
   },
-
   "thresholds": {
-    "go": "confidence >= 75% AND EV > +5% AND L1 PASS AND 主力欠場なし",
-    "caution": "L1 PASS かつ confidence >= 70% 但し上記GO未達",
-    "skip": "上記以外"
+    "go": "confidence >= 78% AND EV > +7% AND L1 PASS AND 主力欠場なし",
+    "caution": "L1 PASS かつ (confidence >= 72% AND EV > +5%) 但し上記GO未達",
+    "skip": "上記以外",
+    "tier_specific_note": "Basic Tier 厳格閾値 (2026-04-17 制定)。Advanced Tier (conf>=75%/EV>+5%) より高めに設定。L1精度の構造的低さをバッファで補う。",
+    "threshold_history": [
+      {
+        "date": "2026-04-17",
+        "from": "conf>=75% AND EV>+5%",
+        "to": "conf>=78% AND EV>+7%",
+        "reason": "Basic Tier精度補正"
+      }
+    ]
   },
-
   "adjustments": {
     "PD001_home_advantage": {
       "rule": "ホームチームに +5% 信頼度補正",
@@ -43,23 +49,27 @@
       "note": "フランス国土広く移動負担大"
     }
   },
-
   "tournament_context": {
     "regular_season": "R1-R30 (Aug-May)",
     "playoffs": "Access to Top 14 via top 6 → QF + SF + F (May-June)",
     "note": "1st直行昇格なし。トップ6プレーオフ勝者が昇格"
   },
-
   "key_dependency": [
     "prod2.lnr.fr/classement (official LNR Pro D2)",
     "allrugby.com/competitions/pro-d2/classement.html (alternate)"
   ],
-
   "rules_log": [
     {
       "version": "v1.0",
       "date": "2026-04-17",
       "change": "Initial version. L1 threshold 8pt (higher than Top 14 due to larger spread in this league)."
+    },
+    {
+      "version": "v1.1",
+      "date": "2026-04-17",
+      "change": "Basic Tier threshold raise: GO条件 conf>=75%/EV>+5% → conf>=78%/EV>+7%. CAUTION: conf>=70% → conf>=72%/EV>+5%."
     }
-  ]
+  ],
+  "accuracy_tier": "basic",
+  "tier_note": "Basic Tier: 基本統計（PD/G等counting stats）のみ。高度な調整指標は業界標準として存在しないため構造的精度上限あり。L4依存度が高くGO判定は保守的に扱う。均衡試合では根拠が薄いことを前提に運用。"
 }

@@ -22,9 +22,13 @@
     "critical": "先発QBの確認が必須（U005と同様）"
   },
   "thresholds": {
-    "recommend_go": { "confidence_min": 75, "ev_min": 5 },
+    "recommend_go": {
+      "confidence_min": 75,
+      "ev_min": 5
+    },
     "skip": "信頼度75%未満 または EV+5%未満",
-    "week1_note": "Week1は実績なし→DVOA未算出のため全試合SKIP推奨"
+    "week1_note": "Week1は実績なし→DVOA未算出のため全試合SKIP推奨",
+    "tier_specific_note": "Advanced Tier 標準閾値。cElo/xGF%/NRtg/DVOA等の高精度指標使用。"
   },
   "ev_formula": "(推定勝率 × MLオッズ) - 1",
   "layers": {
@@ -42,28 +46,43 @@
   },
   "rules": [
     {
-      "id": "F001", "type": "initial", "title": "L1スクリーニング（DVOA）",
+      "id": "F001",
+      "type": "initial",
+      "title": "L1スクリーニング（DVOA）",
       "body": "footballoutsiders.comのTotal DVOAを使用。攻撃DVOA（高いほど良い）+ 守備DVOA（低いほど良い）を合計した実質差が10%以上の試合のみ候補とする。Week1はDVOA未算出のため全試合SKIP。Week2〜3は閾値を15%に引き上げ（サンプル不足）。"
     },
     {
-      "id": "F002", "type": "initial", "title": "L2フォーム品質（直近4試合）",
+      "id": "F002",
+      "type": "initial",
+      "title": "L2フォーム品質（直近4試合）",
       "body": "直近4試合の対戦相手DVOAを加重評価。強豪（DVOA上位8チーム）相手に勝利: +5%。弱小（DVOA下位8チーム）のみへの連勝: -3%。4連勝: +4%。4連敗: -6%。"
     },
     {
-      "id": "F003", "type": "initial", "title": "L3スタッツ補正",
+      "id": "F003",
+      "type": "initial",
+      "title": "L3スタッツ補正",
       "body": "① ターンオーバー差（シーズン累積）: +2差以上優位で+4%。② レッドゾーンTD率差（50%が境）: 差10%以上で+3%。③ 3rd Down成功率差: 差5%以上で+3%。④ サック数/試合差: 差1.5以上で+2%。"
     },
     {
-      "id": "F004", "type": "initial", "title": "ホームフィールドアドバンテージ",
+      "id": "F004",
+      "type": "initial",
+      "title": "ホームフィールドアドバンテージ",
       "body": "ホームチームに+5%固定補正（約3ポイント相当）。例外: ① ドーム球場はホームアドバンテージが小さい場合あり→+4%。② 極端な気候（Green Bay極寒・南部の酷暑）: ホームチームに慣れた気候でさらに+2%。③ プレーオフは+6%（ファン圧力が増大）。"
     },
     {
-      "id": "F005", "type": "initial", "title": "QB評価補正（最重要）",
+      "id": "F005",
+      "type": "initial",
+      "title": "QB評価補正（最重要）",
       "body": "NFLはQBが最も重要なポジション。QBR差が20以上: +8%（優位側）。バックアップQB起用: -12〜-18%（スターターとの差による）。先発QB確認はnfl.com/injuries + rotowire.comで試合前日に必須確認。",
-      "checklist": ["先発QB確認", "QB怪我状況（Questionable以上は要注意）"]
+      "checklist": [
+        "先発QB確認",
+        "QB怪我状況（Questionable以上は要注意）"
+      ]
     },
     {
-      "id": "F006", "type": "initial", "title": "怪我・欠場補正",
+      "id": "F006",
+      "type": "initial",
+      "title": "怪我・欠場補正",
       "body": "水曜/木曜/金曜の公式Injury ReportでOut/Doubtfulを確認必須。WR #1欠場: -5%（パスゲームへの影響）。TE #1欠場: -3%。CB #1欠場: -4%（守備崩壊リスク）。OL（主力ガード/センター）欠場: -3%（QBへの圧力増大）。複数欠場は累積（上限-15%）。",
       "nfl_injury_status": {
         "Out": "出場なし → 上記補正を最大値で適用",
@@ -73,21 +92,36 @@
       }
     },
     {
-      "id": "F007", "type": "initial", "title": "天候補正（屋外スタジアム限定）",
+      "id": "F007",
+      "type": "initial",
+      "title": "天候補正（屋外スタジアム限定）",
       "body": "強風（50km/h以上）: パスオフェンス優位チームは-5%（両チーム均一化）。強雨（25mm以上）: パスオフェンス優位チームは-4%。極寒（体感-10度以下）: 慣れていない南部チームに-4%（寒冷地ホームチームに優位）。屋内スタジアム（ドーム）では天候補正なし。"
     },
     {
-      "id": "F008", "type": "initial", "title": "バイウィーク効果",
+      "id": "F008",
+      "type": "initial",
+      "title": "バイウィーク効果",
       "body": "バイウィーク明け（前週試合なし）のチームに+4%（休息・戦略準備の優位）。特にプレーオフシードで1週休んだチームはさらに有利（+6%）。ただし「勢いが止まる」側面もあるため、フォームが下がりトレンドの場合は+2%に縮小。"
     },
     {
-      "id": "F009", "type": "initial", "title": "プレーオフ補正",
+      "id": "F009",
+      "type": "initial",
+      "title": "プレーオフ補正",
       "body": "プレーオフはDVOAより直近フォームを重視（コーチング・準備期間が均一化するため）。信頼度閾値を80%に引き上げ。第1シードのホームは+7%。ワイルドカードチームの背水の陣効果: +3%（負けたら終わりで集中力が高まる）。"
     },
     {
-      "id": "F010", "type": "initial", "title": "ラインナップ確認チェックリスト",
+      "id": "F010",
+      "type": "initial",
+      "title": "ラインナップ確認チェックリスト",
       "body": "分析前確認必須: ① 先発QB確認（rotowire/nfl.com）② Injury ReportでOut/Doubtful選手全員確認 ③ 天候確認（屋外の場合）④ バイウィーク有無。全項目確認後のみGO判断を出す。",
-      "checklist": ["先発QB確認", "Injury Report確認（水木金）", "天候確認", "バイウィーク確認"]
+      "checklist": [
+        "先発QB確認",
+        "Injury Report確認（水木金）",
+        "天候確認",
+        "バイウィーク確認"
+      ]
     }
-  ]
+  ],
+  "accuracy_tier": "advanced",
+  "tier_note": "高精度Tier: 高度な調整済指標（cElo/xGF%/NRtg/DVOA等）をL1に使用。標準GO閾値(conf>=75%, EV>+5%)で運用。"
 }

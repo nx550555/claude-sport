@@ -6,7 +6,6 @@
   "derived_from": "core/rules_superrugby.json (template baseline)",
   "season_context": "2025-26 season. Regular season ~R14-15 by mid-April.",
   "note": "初版ルール。SuperRugby rules を雛形に英国Premiership用に調整。L1=PD/G, threshold 7pt (同一)。追加知見はシーズン進行で更新。",
-
   "screening": {
     "L1_primary": {
       "metric": "Points Differential per Game (PD/G)",
@@ -18,13 +17,20 @@
     "L3_stats": "Try-scoring rate, defensive metrics",
     "L4_factors": "Injury reports, European fixture fatigue, home/away history"
   },
-
   "thresholds": {
-    "go": "confidence >= 75% AND EV > +5% AND L1 PASS AND 主力欠場なし",
-    "caution": "L1 PASS かつ confidence >= 70% 但し上記GO未達",
-    "skip": "上記以外"
+    "go": "confidence >= 78% AND EV > +7% AND L1 PASS AND 主力欠場なし",
+    "caution": "L1 PASS かつ (confidence >= 72% AND EV > +5%) 但し上記GO未達",
+    "skip": "上記以外",
+    "tier_specific_note": "Basic Tier 厳格閾値 (2026-04-17 制定)。Advanced Tier (conf>=75%/EV>+5%) より高めに設定。L1精度の構造的低さをバッファで補う。",
+    "threshold_history": [
+      {
+        "date": "2026-04-17",
+        "from": "conf>=75% AND EV>+5%",
+        "to": "conf>=78% AND EV>+7%",
+        "reason": "Basic Tier精度補正"
+      }
+    ]
   },
-
   "adjustments": {
     "P001_home_advantage": {
       "rule": "ホームチームに +3% 信頼度補正",
@@ -43,24 +49,28 @@
       "note": "SuperRugby/UFL と同じ"
     }
   },
-
   "tournament_context": {
     "regular_season": "R1-R18 (Sep-May)",
     "playoffs": "SF + F (May-June)",
     "champions_cup_overlap": "Dec/Jan knockout rounds overlap with Prem season"
   },
-
   "key_dependency": [
     "rugbypass.com/premiership/standings/ (primary PD/G source)",
     "espn.com/rugby/standings/_/league/267979 (alternate)",
     "Wikipedia 2025-26 Premiership Rugby (team news)"
   ],
-
   "rules_log": [
     {
       "version": "v1.0",
       "date": "2026-04-17",
       "change": "Initial version based on SuperRugby template. L1 threshold 7pt."
+    },
+    {
+      "version": "v1.1",
+      "date": "2026-04-17",
+      "change": "Basic Tier threshold raise: GO条件 conf>=75%/EV>+5% → conf>=78%/EV>+7%. CAUTION: conf>=70% → conf>=72%/EV>+5%."
     }
-  ]
+  ],
+  "accuracy_tier": "basic",
+  "tier_note": "Basic Tier: 基本統計（PD/G等counting stats）のみ。高度な調整指標は業界標準として存在しないため構造的精度上限あり。L4依存度が高くGO判定は保守的に扱う。均衡試合では根拠が薄いことを前提に運用。"
 }
