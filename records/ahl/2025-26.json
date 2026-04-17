@@ -7,14 +7,1418 @@
   "reactivation_note": "以前 sports_excluded だったが Basic Tier運用で復活（2026-04-17）。プレーオフ期試験稼働。",
   "accuracy_tier": "basic",
   "summary": {
-    "total": 0,
+    "total": 27,
+    "go": 0,
+    "caution": 0,
+    "skip": 27,
     "confirmed": 0,
-    "hit": 0,
+    "hits": 0,
     "hit_rate": null,
     "ev_total": 0,
-    "pending": 0
+    "pending": 27,
+    "note_screening": "RS最終週 4/18-19 G1/G2 27試合 (home-and-home series). Basic Tier厳格閾値適用 + AHL A001-A006補正。"
   },
   "games": [],
-  "pending_games": [],
-  "screening_log": []
+  "pending_games": [
+    {
+      "id": "AHL-001",
+      "date": "2026-04-18",
+      "match": "ハートフォード・ウルフパック vs スプリングフィールドサンダーバード (Hartford Wolf Pack vs Springfield Thunderbirds)",
+      "home": "Hartford Wolf Pack",
+      "away": "Springfield Thunderbirds",
+      "start_time_jst": "08:00",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 50,
+      "predicted_winner": "Springfield Thunderbirds",
+      "prediction_confidence": 50,
+      "prediction_basis": "PTS/G 0.829(Hartford Wolf Pack) vs 1.000(Springfield Thunderbirds), diff 0.171 (thr 0.25). L1 FAIL. Fav=Springfield Thunderbirds@1.74.",
+      "prediction_hit": null,
+      "status": "pending",
+      "l1_data": {
+        "metric": "PTS/G (proxy for GF%/win strength; AHL GF/GA data not fully available)",
+        "Hartford Wolf Pack_ppg": 0.829,
+        "Springfield Thunderbirds_ppg": 1.0,
+        "diff": 0.171,
+        "threshold": 0.25,
+        "pass": false,
+        "data_source": "Wikipedia 2025-26 AHL season standings (as of Apr 15)"
+      },
+      "odds": {
+        "home": 2.02,
+        "away": 1.74
+      },
+      "adjustments_log": [
+        "A002 end-of-season callup -5%",
+        "opponent eliminated (motivation gap) +2%",
+        "A001 precision penalty (no xGF%) -5%"
+      ],
+      "ev_calc": "(0.50 * 1.74) - 1 = -13.00%",
+      "clinch_status": {
+        "Hartford Wolf Pack": "eliminated",
+        "Springfield Thunderbirds": "playoff_A6"
+      },
+      "skip_reason": "Basic Tier threshold not met: conf 50% < 78, EV -13.00% < +7%.",
+      "caution_reason": null,
+      "rules_applied": [
+        "AHL_v1.0",
+        "Basic_Tier_Thresholds",
+        "A001_precision_penalty",
+        "A002_callup_risk",
+        "A006_end_season_rest"
+      ],
+      "source": "手動試合データ/2026-04-17-2.json"
+    },
+    {
+      "id": "AHL-002",
+      "date": "2026-04-18",
+      "match": "ベレビールセナトース vs シラクース・クランチ (Belleville Senators vs Syracuse Crunch)",
+      "home": "Belleville Senators",
+      "away": "Syracuse Crunch",
+      "start_time_jst": "08:00",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 57,
+      "predicted_winner": "Syracuse Crunch",
+      "prediction_confidence": 57,
+      "prediction_basis": "PTS/G 0.900(Belleville Senators) vs 1.243(Syracuse Crunch), diff 0.343 (thr 0.25). L1 PASS. Fav=Syracuse Crunch@1.54.",
+      "prediction_hit": null,
+      "status": "pending",
+      "l1_data": {
+        "metric": "PTS/G (proxy for GF%/win strength; AHL GF/GA data not fully available)",
+        "Belleville Senators_ppg": 0.9,
+        "Syracuse Crunch_ppg": 1.243,
+        "diff": 0.343,
+        "threshold": 0.25,
+        "pass": true,
+        "data_source": "Wikipedia 2025-26 AHL season standings (as of Apr 15)"
+      },
+      "odds": {
+        "home": 2.37,
+        "away": 1.54
+      },
+      "adjustments_log": [
+        "A002 end-of-season callup -5%",
+        "opponent eliminated (motivation gap) +2%",
+        "A001 precision penalty (no xGF%) -5%"
+      ],
+      "ev_calc": "(0.57 * 1.54) - 1 = -12.22%",
+      "clinch_status": {
+        "Belleville Senators": "eliminated",
+        "Syracuse Crunch": "playoff_N2"
+      },
+      "skip_reason": "Basic Tier threshold not met: conf 57% < 78, EV -12.22% < +7%.",
+      "caution_reason": null,
+      "rules_applied": [
+        "AHL_v1.0",
+        "Basic_Tier_Thresholds",
+        "A001_precision_penalty",
+        "A002_callup_risk",
+        "A006_end_season_rest"
+      ],
+      "source": "手動試合データ/2026-04-17-2.json"
+    },
+    {
+      "id": "AHL-003",
+      "date": "2026-04-18",
+      "match": "ウティカ・コメッツ vs プロビデンス・ブルインズ (Utica Comets vs Providence Bruins)",
+      "home": "Utica Comets",
+      "away": "Providence Bruins",
+      "start_time_jst": "08:00",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 57,
+      "predicted_winner": "Providence Bruins",
+      "prediction_confidence": 57,
+      "prediction_basis": "PTS/G 0.957(Utica Comets) vs 1.571(Providence Bruins), diff 0.614 (thr 0.25). L1 PASS. Fav=Providence Bruins@1.52.",
+      "prediction_hit": null,
+      "status": "pending",
+      "l1_data": {
+        "metric": "PTS/G (proxy for GF%/win strength; AHL GF/GA data not fully available)",
+        "Utica Comets_ppg": 0.957,
+        "Providence Bruins_ppg": 1.571,
+        "diff": 0.614,
+        "threshold": 0.25,
+        "pass": true,
+        "data_source": "Wikipedia 2025-26 AHL season standings (as of Apr 15)"
+      },
+      "odds": {
+        "home": 2.44,
+        "away": 1.52
+      },
+      "adjustments_log": [
+        "A002 end-of-season callup -5%",
+        "favorite is division champ (rest risk) -5%",
+        "A001 precision penalty (no xGF%) -5%"
+      ],
+      "ev_calc": "(0.57 * 1.52) - 1 = -13.36%",
+      "clinch_status": {
+        "Utica Comets": "bubble",
+        "Providence Bruins": "div_champ_A1"
+      },
+      "skip_reason": "Basic Tier threshold not met: conf 57% < 78, EV -13.36% < +7%.",
+      "caution_reason": null,
+      "rules_applied": [
+        "AHL_v1.0",
+        "Basic_Tier_Thresholds",
+        "A001_precision_penalty",
+        "A002_callup_risk",
+        "A006_end_season_rest"
+      ],
+      "source": "手動試合データ/2026-04-17-2.json"
+    },
+    {
+      "id": "AHL-004",
+      "date": "2026-04-18",
+      "match": "ロチェスター・アメリカンズ vs クリベランドモンスタース (Rochester Americans vs Cleveland Monsters)",
+      "home": "Rochester Americans",
+      "away": "Cleveland Monsters",
+      "start_time_jst": "08:05",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 46,
+      "predicted_winner": "Cleveland Monsters",
+      "prediction_confidence": 46,
+      "prediction_basis": "PTS/G 1.029(Rochester Americans) vs 1.129(Cleveland Monsters), diff 0.100 (thr 0.25). L1 FAIL. Fav=Cleveland Monsters@1.81.",
+      "prediction_hit": null,
+      "status": "pending",
+      "l1_data": {
+        "metric": "PTS/G (proxy for GF%/win strength; AHL GF/GA data not fully available)",
+        "Rochester Americans_ppg": 1.029,
+        "Cleveland Monsters_ppg": 1.129,
+        "diff": 0.1,
+        "threshold": 0.25,
+        "pass": false,
+        "data_source": "Wikipedia 2025-26 AHL season standings (as of Apr 15)"
+      },
+      "odds": {
+        "home": 1.94,
+        "away": 1.81
+      },
+      "adjustments_log": [
+        "A002 end-of-season callup -5%",
+        "A001 precision penalty (no xGF%) -5%"
+      ],
+      "ev_calc": "(0.46 * 1.81) - 1 = -16.74%",
+      "clinch_status": {
+        "Rochester Americans": "playoff_N5",
+        "Cleveland Monsters": "playoff_N3"
+      },
+      "skip_reason": "Basic Tier threshold not met: conf 46% < 78, EV -16.74% < +7%.",
+      "caution_reason": null,
+      "rules_applied": [
+        "AHL_v1.0",
+        "Basic_Tier_Thresholds",
+        "A001_precision_penalty",
+        "A002_callup_risk",
+        "A006_end_season_rest"
+      ],
+      "source": "手動試合データ/2026-04-17-2.json"
+    },
+    {
+      "id": "AHL-005",
+      "date": "2026-04-18",
+      "match": "ウィルケス・バレ/スクラントン・ペンギンズ vs ブリッジポート・サウンドタイガース (WBS Penguins vs Bridgeport Islanders)",
+      "home": "WBS Penguins",
+      "away": "Bridgeport Islanders",
+      "start_time_jst": "08:05",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 58,
+      "predicted_winner": "WBS Penguins",
+      "prediction_confidence": 58,
+      "prediction_basis": "PTS/G 1.386(WBS Penguins) vs 1.057(Bridgeport Islanders), diff 0.329 (thr 0.25). L1 PASS. Fav=WBS Penguins@1.59.",
+      "prediction_hit": null,
+      "status": "pending",
+      "l1_data": {
+        "metric": "PTS/G (proxy for GF%/win strength; AHL GF/GA data not fully available)",
+        "WBS Penguins_ppg": 1.386,
+        "Bridgeport Islanders_ppg": 1.057,
+        "diff": 0.329,
+        "threshold": 0.25,
+        "pass": true,
+        "data_source": "Wikipedia 2025-26 AHL season standings (as of Apr 15)"
+      },
+      "odds": {
+        "home": 1.59,
+        "away": 2.28
+      },
+      "adjustments_log": [
+        "home +3%",
+        "A002 end-of-season callup -5%",
+        "A001 precision penalty (no xGF%) -5%"
+      ],
+      "ev_calc": "(0.58 * 1.59) - 1 = -7.78%",
+      "clinch_status": {
+        "WBS Penguins": "playoff_A2",
+        "Bridgeport Islanders": "playoff_A4"
+      },
+      "skip_reason": "Basic Tier threshold not met: conf 58% < 78, EV -7.78% < +7%.",
+      "caution_reason": null,
+      "rules_applied": [
+        "AHL_v1.0",
+        "Basic_Tier_Thresholds",
+        "A001_precision_penalty",
+        "A002_callup_risk",
+        "A006_end_season_rest"
+      ],
+      "source": "手動試合データ/2026-04-17-2.json"
+    },
+    {
+      "id": "AHL-006",
+      "date": "2026-04-18",
+      "match": "テキサス・スターズ vs ロックフォード・アイスホグス (Texas Stars vs Rockford IceHogs)",
+      "home": "Texas Stars",
+      "away": "Rockford IceHogs",
+      "start_time_jst": "09:00",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 55,
+      "predicted_winner": "Texas Stars",
+      "prediction_confidence": 55,
+      "prediction_basis": "PTS/G 1.086(Texas Stars) vs 0.871(Rockford IceHogs), diff 0.215 (thr 0.25). L1 FAIL. Fav=Texas Stars@1.65.",
+      "prediction_hit": null,
+      "status": "pending",
+      "l1_data": {
+        "metric": "PTS/G (proxy for GF%/win strength; AHL GF/GA data not fully available)",
+        "Texas Stars_ppg": 1.086,
+        "Rockford IceHogs_ppg": 0.871,
+        "diff": 0.215,
+        "threshold": 0.25,
+        "pass": false,
+        "data_source": "Wikipedia 2025-26 AHL season standings (as of Apr 15)"
+      },
+      "odds": {
+        "home": 1.65,
+        "away": 2.16
+      },
+      "adjustments_log": [
+        "home +3%",
+        "A002 end-of-season callup -5%",
+        "opponent eliminated (motivation gap) +2%",
+        "A001 precision penalty (no xGF%) -5%"
+      ],
+      "ev_calc": "(0.55 * 1.65) - 1 = -9.25%",
+      "clinch_status": {
+        "Texas Stars": "playoff_C3",
+        "Rockford IceHogs": "eliminated"
+      },
+      "skip_reason": "Basic Tier threshold not met: conf 55% < 78, EV -9.25% < +7%.",
+      "caution_reason": null,
+      "rules_applied": [
+        "AHL_v1.0",
+        "Basic_Tier_Thresholds",
+        "A001_precision_penalty",
+        "A002_callup_risk",
+        "A006_end_season_rest"
+      ],
+      "source": "手動試合データ/2026-04-17-2.json"
+    },
+    {
+      "id": "AHL-007",
+      "date": "2026-04-18",
+      "match": "アイオワ・ワイルド vs マニトバムース (Iowa Wild vs Manitoba Moose)",
+      "home": "Iowa Wild",
+      "away": "Manitoba Moose",
+      "start_time_jst": "09:00",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 51,
+      "predicted_winner": "Manitoba Moose",
+      "prediction_confidence": 51,
+      "prediction_basis": "PTS/G 0.871(Iowa Wild) vs 1.071(Manitoba Moose), diff 0.200 (thr 0.25). L1 FAIL. Fav=Manitoba Moose@1.75.",
+      "prediction_hit": null,
+      "status": "pending",
+      "l1_data": {
+        "metric": "PTS/G (proxy for GF%/win strength; AHL GF/GA data not fully available)",
+        "Iowa Wild_ppg": 0.871,
+        "Manitoba Moose_ppg": 1.071,
+        "diff": 0.2,
+        "threshold": 0.25,
+        "pass": false,
+        "data_source": "Wikipedia 2025-26 AHL season standings (as of Apr 15)"
+      },
+      "odds": {
+        "home": 2,
+        "away": 1.75
+      },
+      "adjustments_log": [
+        "A002 end-of-season callup -5%",
+        "opponent eliminated (motivation gap) +2%",
+        "A001 precision penalty (no xGF%) -5%"
+      ],
+      "ev_calc": "(0.51 * 1.75) - 1 = -10.75%",
+      "clinch_status": {
+        "Iowa Wild": "eliminated",
+        "Manitoba Moose": "playoff_C4"
+      },
+      "skip_reason": "Basic Tier threshold not met: conf 51% < 78, EV -10.75% < +7%.",
+      "caution_reason": null,
+      "rules_applied": [
+        "AHL_v1.0",
+        "Basic_Tier_Thresholds",
+        "A001_precision_penalty",
+        "A002_callup_risk",
+        "A006_end_season_rest"
+      ],
+      "source": "手動試合データ/2026-04-17-2.json"
+    },
+    {
+      "id": "AHL-008",
+      "date": "2026-04-18",
+      "match": "ミルウォーキー・アドミラルズ vs グランドラピッズ・グリフィンズ (Milwaukee Admirals vs Grand Rapids Griffins)",
+      "home": "Milwaukee Admirals",
+      "away": "Grand Rapids Griffins",
+      "start_time_jst": "09:00",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 53,
+      "predicted_winner": "Grand Rapids Griffins",
+      "prediction_confidence": 53,
+      "prediction_basis": "PTS/G 1.029(Milwaukee Admirals) vs 1.500(Grand Rapids Griffins), diff 0.471 (thr 0.25). L1 PASS. Fav=Grand Rapids Griffins@1.59.",
+      "prediction_hit": null,
+      "status": "pending",
+      "l1_data": {
+        "metric": "PTS/G (proxy for GF%/win strength; AHL GF/GA data not fully available)",
+        "Milwaukee Admirals_ppg": 1.029,
+        "Grand Rapids Griffins_ppg": 1.5,
+        "diff": 0.471,
+        "threshold": 0.25,
+        "pass": true,
+        "data_source": "Wikipedia 2025-26 AHL season standings (as of Apr 15)"
+      },
+      "odds": {
+        "home": 2.27,
+        "away": 1.59
+      },
+      "adjustments_log": [
+        "A002 end-of-season callup -5%",
+        "favorite is division champ (rest risk) -5%",
+        "A001 precision penalty (no xGF%) -5%"
+      ],
+      "ev_calc": "(0.53 * 1.59) - 1 = -15.73%",
+      "clinch_status": {
+        "Milwaukee Admirals": "playoff_C5",
+        "Grand Rapids Griffins": "div_champ_C1"
+      },
+      "skip_reason": "Basic Tier threshold not met: conf 53% < 78, EV -15.73% < +7%.",
+      "caution_reason": null,
+      "rules_applied": [
+        "AHL_v1.0",
+        "Basic_Tier_Thresholds",
+        "A001_precision_penalty",
+        "A002_callup_risk",
+        "A006_end_season_rest"
+      ],
+      "source": "手動試合データ/2026-04-17-2.json"
+    },
+    {
+      "id": "AHL-009",
+      "date": "2026-04-18",
+      "match": "コロラドイーグルス vs Calgary Wranglers (Colorado Eagles vs Calgary Wranglers)",
+      "home": "Colorado Eagles",
+      "away": "Calgary Wranglers",
+      "start_time_jst": "10:05",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 67,
+      "predicted_winner": "Colorado Eagles",
+      "prediction_confidence": 67,
+      "prediction_basis": "PTS/G 1.329(Colorado Eagles) vs 0.814(Calgary Wranglers), diff 0.515 (thr 0.25). L1 PASS. Fav=Colorado Eagles@1.36.",
+      "prediction_hit": null,
+      "status": "pending",
+      "l1_data": {
+        "metric": "PTS/G (proxy for GF%/win strength; AHL GF/GA data not fully available)",
+        "Colorado Eagles_ppg": 1.329,
+        "Calgary Wranglers_ppg": 0.814,
+        "diff": 0.515,
+        "threshold": 0.25,
+        "pass": true,
+        "data_source": "Wikipedia 2025-26 AHL season standings (as of Apr 15)"
+      },
+      "odds": {
+        "home": 1.36,
+        "away": 3
+      },
+      "adjustments_log": [
+        "home +3%",
+        "A002 end-of-season callup -5%",
+        "opponent eliminated (motivation gap) +2%",
+        "A001 precision penalty (no xGF%) -5%"
+      ],
+      "ev_calc": "(0.67 * 1.36) - 1 = -8.88%",
+      "clinch_status": {
+        "Colorado Eagles": "playoff_P2",
+        "Calgary Wranglers": "eliminated"
+      },
+      "skip_reason": "Basic Tier threshold not met: conf 67% < 78, EV -8.88% < +7%.",
+      "caution_reason": null,
+      "rules_applied": [
+        "AHL_v1.0",
+        "Basic_Tier_Thresholds",
+        "A001_precision_penalty",
+        "A002_callup_risk",
+        "A006_end_season_rest"
+      ],
+      "source": "手動試合データ/2026-04-17-2.json"
+    },
+    {
+      "id": "AHL-010",
+      "date": "2026-04-18",
+      "match": "オンタリオレイン vs サン・ディエゴ・グールス (Ontario Reign vs San Diego Gulls)",
+      "home": "Ontario Reign",
+      "away": "San Diego Gulls",
+      "start_time_jst": "11:00",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 53,
+      "predicted_winner": "Ontario Reign",
+      "prediction_confidence": 53,
+      "prediction_basis": "PTS/G 1.386(Ontario Reign) vs 1.114(San Diego Gulls), diff 0.272 (thr 0.25). L1 PASS. Fav=Ontario Reign@1.61.",
+      "prediction_hit": null,
+      "status": "pending",
+      "l1_data": {
+        "metric": "PTS/G (proxy for GF%/win strength; AHL GF/GA data not fully available)",
+        "Ontario Reign_ppg": 1.386,
+        "San Diego Gulls_ppg": 1.114,
+        "diff": 0.272,
+        "threshold": 0.25,
+        "pass": true,
+        "data_source": "Wikipedia 2025-26 AHL season standings (as of Apr 15)"
+      },
+      "odds": {
+        "home": 1.61,
+        "away": 2.24
+      },
+      "adjustments_log": [
+        "home +3%",
+        "A002 end-of-season callup -5%",
+        "favorite is division champ (rest risk) -5%",
+        "A001 precision penalty (no xGF%) -5%"
+      ],
+      "ev_calc": "(0.53 * 1.61) - 1 = -14.67%",
+      "clinch_status": {
+        "Ontario Reign": "div_champ_P1",
+        "San Diego Gulls": "playoff_P7"
+      },
+      "skip_reason": "Basic Tier threshold not met: conf 53% < 78, EV -14.67% < +7%.",
+      "caution_reason": null,
+      "rules_applied": [
+        "AHL_v1.0",
+        "Basic_Tier_Thresholds",
+        "A001_precision_penalty",
+        "A002_callup_risk",
+        "A006_end_season_rest"
+      ],
+      "source": "手動試合データ/2026-04-17-2.json"
+    },
+    {
+      "id": "AHL-011",
+      "date": "2026-04-18",
+      "match": "タクソンロードランナース vs Henderson Silver Knights (Tucson Roadrunners vs Henderson Silver Knights)",
+      "home": "Tucson Roadrunners",
+      "away": "Henderson Silver Knights",
+      "start_time_jst": "11:00",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 52,
+      "predicted_winner": "Henderson Silver Knights",
+      "prediction_confidence": 52,
+      "prediction_basis": "PTS/G 1.057(Tucson Roadrunners) vs 1.271(Henderson Silver Knights), diff 0.214 (thr 0.25). L1 FAIL. Fav=Henderson Silver Knights@1.63.",
+      "prediction_hit": null,
+      "status": "pending",
+      "l1_data": {
+        "metric": "PTS/G (proxy for GF%/win strength; AHL GF/GA data not fully available)",
+        "Tucson Roadrunners_ppg": 1.057,
+        "Henderson Silver Knights_ppg": 1.271,
+        "diff": 0.214,
+        "threshold": 0.25,
+        "pass": false,
+        "data_source": "Wikipedia 2025-26 AHL season standings (as of Apr 15)"
+      },
+      "odds": {
+        "home": 2.19,
+        "away": 1.63
+      },
+      "adjustments_log": [
+        "A002 end-of-season callup -5%",
+        "opponent eliminated (motivation gap) +2%",
+        "A001 precision penalty (no xGF%) -5%"
+      ],
+      "ev_calc": "(0.52 * 1.63) - 1 = -15.24%",
+      "clinch_status": {
+        "Tucson Roadrunners": "eliminated",
+        "Henderson Silver Knights": "playoff_P3"
+      },
+      "skip_reason": "Basic Tier threshold not met: conf 52% < 78, EV -15.24% < +7%.",
+      "caution_reason": null,
+      "rules_applied": [
+        "AHL_v1.0",
+        "Basic_Tier_Thresholds",
+        "A001_precision_penalty",
+        "A002_callup_risk",
+        "A006_end_season_rest"
+      ],
+      "source": "手動試合データ/2026-04-17-2.json"
+    },
+    {
+      "id": "AHL-012",
+      "date": "2026-04-18",
+      "match": "ベカースフィルドコンドース vs サン・ホセバーラキュダ (Bakersfield Condors vs San Jose Barracuda)",
+      "home": "Bakersfield Condors",
+      "away": "San Jose Barracuda",
+      "start_time_jst": "11:00",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 45,
+      "predicted_winner": "Bakersfield Condors",
+      "prediction_confidence": 45,
+      "prediction_basis": "PTS/G 1.186(Bakersfield Condors) vs 1.171(San Jose Barracuda), diff 0.015 (thr 0.25). L1 FAIL. Fav=Bakersfield Condors@1.87.",
+      "prediction_hit": null,
+      "status": "pending",
+      "l1_data": {
+        "metric": "PTS/G (proxy for GF%/win strength; AHL GF/GA data not fully available)",
+        "Bakersfield Condors_ppg": 1.186,
+        "San Jose Barracuda_ppg": 1.171,
+        "diff": 0.015,
+        "threshold": 0.25,
+        "pass": false,
+        "data_source": "Wikipedia 2025-26 AHL season standings (as of Apr 15)"
+      },
+      "odds": {
+        "home": 1.87,
+        "away": 1.87
+      },
+      "adjustments_log": [
+        "home +3%",
+        "A002 end-of-season callup -5%",
+        "A001 precision penalty (no xGF%) -5%"
+      ],
+      "ev_calc": "(0.45 * 1.87) - 1 = -15.85%",
+      "clinch_status": {
+        "Bakersfield Condors": "playoff_P5",
+        "San Jose Barracuda": "playoff_P6"
+      },
+      "skip_reason": "Basic Tier threshold not met: conf 45% < 78, EV -15.85% < +7%.",
+      "caution_reason": null,
+      "rules_applied": [
+        "AHL_v1.0",
+        "Basic_Tier_Thresholds",
+        "A001_precision_penalty",
+        "A002_callup_risk",
+        "A006_end_season_rest"
+      ],
+      "source": "手動試合データ/2026-04-17-2.json"
+    },
+    {
+      "id": "AHL-013",
+      "date": "2026-04-19",
+      "match": "シャーロット・シャークス vs レイ・ヴァレー・ファントムズ (Charlotte Checkers vs Lehigh Valley Phantoms)",
+      "home": "Charlotte Checkers",
+      "away": "Lehigh Valley Phantoms",
+      "start_time_jst": "05:00",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 63,
+      "predicted_winner": "Charlotte Checkers",
+      "prediction_confidence": 63,
+      "prediction_basis": "PTS/G 1.300(Charlotte Checkers) vs 0.943(Lehigh Valley Phantoms), diff 0.357 (thr 0.25). L1 PASS. Fav=Charlotte Checkers@1.52.",
+      "prediction_hit": null,
+      "status": "pending",
+      "l1_data": {
+        "metric": "PTS/G (proxy for GF%/win strength; AHL GF/GA data not fully available)",
+        "Charlotte Checkers_ppg": 1.3,
+        "Lehigh Valley Phantoms_ppg": 0.943,
+        "diff": 0.357,
+        "threshold": 0.25,
+        "pass": true,
+        "data_source": "Wikipedia 2025-26 AHL season standings (as of Apr 15)"
+      },
+      "odds": {
+        "home": 1.52,
+        "away": 2.43
+      },
+      "adjustments_log": [
+        "home +3%",
+        "A002 end-of-season callup -5%",
+        "opponent eliminated (motivation gap) +2%",
+        "A001 precision penalty (no xGF%) -5%"
+      ],
+      "ev_calc": "(0.63 * 1.52) - 1 = -4.24%",
+      "clinch_status": {
+        "Charlotte Checkers": "playoff_A3",
+        "Lehigh Valley Phantoms": "eliminated"
+      },
+      "skip_reason": "Basic Tier threshold not met: conf 63% < 78, EV -4.24% < +7%.",
+      "caution_reason": null,
+      "rules_applied": [
+        "AHL_v1.0",
+        "Basic_Tier_Thresholds",
+        "A001_precision_penalty",
+        "A002_callup_risk",
+        "A006_end_season_rest"
+      ],
+      "source": "手動試合データ/2026-04-17-2.json"
+    },
+    {
+      "id": "AHL-014",
+      "date": "2026-04-19",
+      "match": "トロント・マーリーズ vs ラバルリケット (Toronto Marlies vs Laval Rocket)",
+      "home": "Toronto Marlies",
+      "away": "Laval Rocket",
+      "start_time_jst": "05:00",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 48,
+      "predicted_winner": "Laval Rocket",
+      "prediction_confidence": 48,
+      "prediction_basis": "PTS/G 1.114(Toronto Marlies) vs 1.286(Laval Rocket), diff 0.172 (thr 0.25). L1 FAIL. Fav=Laval Rocket@1.72.",
+      "prediction_hit": null,
+      "status": "pending",
+      "l1_data": {
+        "metric": "PTS/G (proxy for GF%/win strength; AHL GF/GA data not fully available)",
+        "Toronto Marlies_ppg": 1.114,
+        "Laval Rocket_ppg": 1.286,
+        "diff": 0.172,
+        "threshold": 0.25,
+        "pass": false,
+        "data_source": "Wikipedia 2025-26 AHL season standings (as of Apr 15)"
+      },
+      "odds": {
+        "home": 2.05,
+        "away": 1.72
+      },
+      "adjustments_log": [
+        "A002 end-of-season callup -5%",
+        "A001 precision penalty (no xGF%) -5%"
+      ],
+      "ev_calc": "(0.48 * 1.72) - 1 = -17.44%",
+      "clinch_status": {
+        "Toronto Marlies": "playoff_N4",
+        "Laval Rocket": "playoff_N1"
+      },
+      "skip_reason": "Basic Tier threshold not met: conf 48% < 78, EV -17.44% < +7%.",
+      "caution_reason": null,
+      "rules_applied": [
+        "AHL_v1.0",
+        "Basic_Tier_Thresholds",
+        "A001_precision_penalty",
+        "A002_callup_risk",
+        "A006_end_season_rest"
+      ],
+      "source": "手動試合データ/2026-04-17-2.json"
+    },
+    {
+      "id": "AHL-015",
+      "date": "2026-04-19",
+      "match": "スプリングフィールドサンダーバード vs ハートフォード・ウルフパック (Springfield Thunderbirds vs Hartford Wolf Pack)",
+      "home": "Springfield Thunderbirds",
+      "away": "Hartford Wolf Pack",
+      "start_time_jst": "07:05",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 53,
+      "predicted_winner": "Springfield Thunderbirds",
+      "prediction_confidence": 53,
+      "prediction_basis": "PTS/G 1.000(Springfield Thunderbirds) vs 0.829(Hartford Wolf Pack), diff 0.171 (thr 0.25). L1 FAIL. Fav=Springfield Thunderbirds@1.8.",
+      "prediction_hit": null,
+      "status": "pending",
+      "l1_data": {
+        "metric": "PTS/G (proxy for GF%/win strength; AHL GF/GA data not fully available)",
+        "Springfield Thunderbirds_ppg": 1.0,
+        "Hartford Wolf Pack_ppg": 0.829,
+        "diff": 0.171,
+        "threshold": 0.25,
+        "pass": false,
+        "data_source": "Wikipedia 2025-26 AHL season standings (as of Apr 15)"
+      },
+      "odds": {
+        "home": 1.8,
+        "away": 1.95
+      },
+      "adjustments_log": [
+        "home +3%",
+        "A002 end-of-season callup -5%",
+        "opponent eliminated (motivation gap) +2%",
+        "A001 precision penalty (no xGF%) -5%"
+      ],
+      "ev_calc": "(0.53 * 1.8) - 1 = -4.60%",
+      "clinch_status": {
+        "Springfield Thunderbirds": "playoff_A6",
+        "Hartford Wolf Pack": "eliminated"
+      },
+      "skip_reason": "Basic Tier threshold not met: conf 53% < 78, EV -4.60% < +7%.",
+      "caution_reason": null,
+      "rules_applied": [
+        "AHL_v1.0",
+        "Basic_Tier_Thresholds",
+        "A001_precision_penalty",
+        "A002_callup_risk",
+        "A006_end_season_rest"
+      ],
+      "source": "手動試合データ/2026-04-17-2.json"
+    },
+    {
+      "id": "AHL-016",
+      "date": "2026-04-19",
+      "match": "ウィルケス・バレ/スクラントン・ペンギンズ vs ロチェスター・アメリカンズ (WBS Penguins vs Rochester Americans)",
+      "home": "WBS Penguins",
+      "away": "Rochester Americans",
+      "start_time_jst": "07:05",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 61,
+      "predicted_winner": "WBS Penguins",
+      "prediction_confidence": 61,
+      "prediction_basis": "PTS/G 1.386(WBS Penguins) vs 1.029(Rochester Americans), diff 0.357 (thr 0.25). L1 PASS. Fav=WBS Penguins@1.78.",
+      "prediction_hit": null,
+      "status": "pending",
+      "l1_data": {
+        "metric": "PTS/G (proxy for GF%/win strength; AHL GF/GA data not fully available)",
+        "WBS Penguins_ppg": 1.386,
+        "Rochester Americans_ppg": 1.029,
+        "diff": 0.357,
+        "threshold": 0.25,
+        "pass": true,
+        "data_source": "Wikipedia 2025-26 AHL season standings (as of Apr 15)"
+      },
+      "odds": {
+        "home": 1.78,
+        "away": 1.96
+      },
+      "adjustments_log": [
+        "home +3%",
+        "A002 end-of-season callup -5%",
+        "A001 precision penalty (no xGF%) -5%"
+      ],
+      "ev_calc": "(0.61 * 1.78) - 1 = +8.58%",
+      "clinch_status": {
+        "WBS Penguins": "playoff_A2",
+        "Rochester Americans": "playoff_N5"
+      },
+      "skip_reason": "Basic Tier threshold not met: conf 61% < 78, EV +8.58% >= +7%.",
+      "caution_reason": null,
+      "rules_applied": [
+        "AHL_v1.0",
+        "Basic_Tier_Thresholds",
+        "A001_precision_penalty",
+        "A002_callup_risk",
+        "A006_end_season_rest"
+      ],
+      "source": "手動試合データ/2026-04-17-2.json"
+    },
+    {
+      "id": "AHL-017",
+      "date": "2026-04-19",
+      "match": "シラクース・クランチ vs ベレビールセナトース (Syracuse Crunch vs Belleville Senators)",
+      "home": "Syracuse Crunch",
+      "away": "Belleville Senators",
+      "start_time_jst": "08:00",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 60,
+      "predicted_winner": "Syracuse Crunch",
+      "prediction_confidence": 60,
+      "prediction_basis": "PTS/G 1.243(Syracuse Crunch) vs 0.900(Belleville Senators), diff 0.343 (thr 0.25). L1 PASS. Fav=Syracuse Crunch@1.55.",
+      "prediction_hit": null,
+      "status": "pending",
+      "l1_data": {
+        "metric": "PTS/G (proxy for GF%/win strength; AHL GF/GA data not fully available)",
+        "Syracuse Crunch_ppg": 1.243,
+        "Belleville Senators_ppg": 0.9,
+        "diff": 0.343,
+        "threshold": 0.25,
+        "pass": true,
+        "data_source": "Wikipedia 2025-26 AHL season standings (as of Apr 15)"
+      },
+      "odds": {
+        "home": 1.55,
+        "away": 2.34
+      },
+      "adjustments_log": [
+        "home +3%",
+        "A002 end-of-season callup -5%",
+        "opponent eliminated (motivation gap) +2%",
+        "A001 precision penalty (no xGF%) -5%"
+      ],
+      "ev_calc": "(0.60 * 1.55) - 1 = -7.00%",
+      "clinch_status": {
+        "Syracuse Crunch": "playoff_N2",
+        "Belleville Senators": "eliminated"
+      },
+      "skip_reason": "Basic Tier threshold not met: conf 60% < 78, EV -7.00% < +7%.",
+      "caution_reason": null,
+      "rules_applied": [
+        "AHL_v1.0",
+        "Basic_Tier_Thresholds",
+        "A001_precision_penalty",
+        "A002_callup_risk",
+        "A006_end_season_rest"
+      ],
+      "source": "手動試合データ/2026-04-17-2.json"
+    },
+    {
+      "id": "AHL-018",
+      "date": "2026-04-19",
+      "match": "アイオワ・ワイルド vs マニトバムース (Iowa Wild vs Manitoba Moose)",
+      "home": "Iowa Wild",
+      "away": "Manitoba Moose",
+      "start_time_jst": "08:00",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 51,
+      "predicted_winner": "Manitoba Moose",
+      "prediction_confidence": 51,
+      "prediction_basis": "PTS/G 0.871(Iowa Wild) vs 1.071(Manitoba Moose), diff 0.200 (thr 0.25). L1 FAIL. Fav=Manitoba Moose@1.81.",
+      "prediction_hit": null,
+      "status": "pending",
+      "l1_data": {
+        "metric": "PTS/G (proxy for GF%/win strength; AHL GF/GA data not fully available)",
+        "Iowa Wild_ppg": 0.871,
+        "Manitoba Moose_ppg": 1.071,
+        "diff": 0.2,
+        "threshold": 0.25,
+        "pass": false,
+        "data_source": "Wikipedia 2025-26 AHL season standings (as of Apr 15)"
+      },
+      "odds": {
+        "home": 1.93,
+        "away": 1.81
+      },
+      "adjustments_log": [
+        "A002 end-of-season callup -5%",
+        "opponent eliminated (motivation gap) +2%",
+        "A001 precision penalty (no xGF%) -5%"
+      ],
+      "ev_calc": "(0.51 * 1.81) - 1 = -7.69%",
+      "clinch_status": {
+        "Iowa Wild": "eliminated",
+        "Manitoba Moose": "playoff_C4"
+      },
+      "skip_reason": "Basic Tier threshold not met: conf 51% < 78, EV -7.69% < +7%.",
+      "caution_reason": null,
+      "rules_applied": [
+        "AHL_v1.0",
+        "Basic_Tier_Thresholds",
+        "A001_precision_penalty",
+        "A002_callup_risk",
+        "A006_end_season_rest"
+      ],
+      "source": "手動試合データ/2026-04-17-2.json"
+    },
+    {
+      "id": "AHL-019",
+      "date": "2026-04-19",
+      "match": "ハーシー・ベアーズ vs ブリッジポート・サウンドタイガース (Hershey Bears vs Bridgeport Islanders)",
+      "home": "Hershey Bears",
+      "away": "Bridgeport Islanders",
+      "start_time_jst": "08:00",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 43,
+      "predicted_winner": "Bridgeport Islanders",
+      "prediction_confidence": 43,
+      "prediction_basis": "PTS/G 1.014(Hershey Bears) vs 1.057(Bridgeport Islanders), diff 0.043 (thr 0.25). L1 FAIL. Fav=Bridgeport Islanders@2.21.",
+      "prediction_hit": null,
+      "status": "pending",
+      "l1_data": {
+        "metric": "PTS/G (proxy for GF%/win strength; AHL GF/GA data not fully available)",
+        "Hershey Bears_ppg": 1.014,
+        "Bridgeport Islanders_ppg": 1.057,
+        "diff": 0.043,
+        "threshold": 0.25,
+        "pass": false,
+        "data_source": "Wikipedia 2025-26 AHL season standings (as of Apr 15)"
+      },
+      "odds": {
+        "home": 1.62,
+        "away": 2.21
+      },
+      "adjustments_log": [
+        "A002 end-of-season callup -5%",
+        "A001 precision penalty (no xGF%) -5%"
+      ],
+      "ev_calc": "(0.43 * 2.21) - 1 = -4.97%",
+      "clinch_status": {
+        "Hershey Bears": "playoff_A5",
+        "Bridgeport Islanders": "playoff_A4"
+      },
+      "skip_reason": "Basic Tier threshold not met: conf 43% < 78, EV -4.97% < +7%.",
+      "caution_reason": null,
+      "rules_applied": [
+        "AHL_v1.0",
+        "Basic_Tier_Thresholds",
+        "A001_precision_penalty",
+        "A002_callup_risk",
+        "A006_end_season_rest"
+      ],
+      "source": "手動試合データ/2026-04-17-2.json"
+    },
+    {
+      "id": "AHL-020",
+      "date": "2026-04-19",
+      "match": "プロビデンス・ブルインズ vs ウティカ・コメッツ (Providence Bruins vs Utica Comets)",
+      "home": "Providence Bruins",
+      "away": "Utica Comets",
+      "start_time_jst": "08:05",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 60,
+      "predicted_winner": "Providence Bruins",
+      "prediction_confidence": 60,
+      "prediction_basis": "PTS/G 1.571(Providence Bruins) vs 0.957(Utica Comets), diff 0.614 (thr 0.25). L1 PASS. Fav=Providence Bruins@1.52.",
+      "prediction_hit": null,
+      "status": "pending",
+      "l1_data": {
+        "metric": "PTS/G (proxy for GF%/win strength; AHL GF/GA data not fully available)",
+        "Providence Bruins_ppg": 1.571,
+        "Utica Comets_ppg": 0.957,
+        "diff": 0.614,
+        "threshold": 0.25,
+        "pass": true,
+        "data_source": "Wikipedia 2025-26 AHL season standings (as of Apr 15)"
+      },
+      "odds": {
+        "home": 1.52,
+        "away": 2.43
+      },
+      "adjustments_log": [
+        "home +3%",
+        "A002 end-of-season callup -5%",
+        "favorite is division champ (rest risk) -5%",
+        "A001 precision penalty (no xGF%) -5%"
+      ],
+      "ev_calc": "(0.60 * 1.52) - 1 = -8.80%",
+      "clinch_status": {
+        "Providence Bruins": "div_champ_A1",
+        "Utica Comets": "bubble"
+      },
+      "skip_reason": "Basic Tier threshold not met: conf 60% < 78, EV -8.80% < +7%.",
+      "caution_reason": null,
+      "rules_applied": [
+        "AHL_v1.0",
+        "Basic_Tier_Thresholds",
+        "A001_precision_penalty",
+        "A002_callup_risk",
+        "A006_end_season_rest"
+      ],
+      "source": "手動試合データ/2026-04-17-2.json"
+    },
+    {
+      "id": "AHL-021",
+      "date": "2026-04-19",
+      "match": "テキサス・スターズ vs ロックフォード・アイスホグス (Texas Stars vs Rockford IceHogs)",
+      "home": "Texas Stars",
+      "away": "Rockford IceHogs",
+      "start_time_jst": "09:00",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 55,
+      "predicted_winner": "Texas Stars",
+      "prediction_confidence": 55,
+      "prediction_basis": "PTS/G 1.086(Texas Stars) vs 0.871(Rockford IceHogs), diff 0.215 (thr 0.25). L1 FAIL. Fav=Texas Stars@1.59.",
+      "prediction_hit": null,
+      "status": "pending",
+      "l1_data": {
+        "metric": "PTS/G (proxy for GF%/win strength; AHL GF/GA data not fully available)",
+        "Texas Stars_ppg": 1.086,
+        "Rockford IceHogs_ppg": 0.871,
+        "diff": 0.215,
+        "threshold": 0.25,
+        "pass": false,
+        "data_source": "Wikipedia 2025-26 AHL season standings (as of Apr 15)"
+      },
+      "odds": {
+        "home": 1.59,
+        "away": 2.28
+      },
+      "adjustments_log": [
+        "home +3%",
+        "A002 end-of-season callup -5%",
+        "opponent eliminated (motivation gap) +2%",
+        "A001 precision penalty (no xGF%) -5%"
+      ],
+      "ev_calc": "(0.55 * 1.59) - 1 = -12.55%",
+      "clinch_status": {
+        "Texas Stars": "playoff_C3",
+        "Rockford IceHogs": "eliminated"
+      },
+      "skip_reason": "Basic Tier threshold not met: conf 55% < 78, EV -12.55% < +7%.",
+      "caution_reason": null,
+      "rules_applied": [
+        "AHL_v1.0",
+        "Basic_Tier_Thresholds",
+        "A001_precision_penalty",
+        "A002_callup_risk",
+        "A006_end_season_rest"
+      ],
+      "source": "手動試合データ/2026-04-17-2.json"
+    },
+    {
+      "id": "AHL-022",
+      "date": "2026-04-19",
+      "match": "シカゴ・ウルブス vs ミルウォーキー・アドミラルズ (Chicago Wolves vs Milwaukee Admirals)",
+      "home": "Chicago Wolves",
+      "away": "Milwaukee Admirals",
+      "start_time_jst": "09:00",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 51,
+      "predicted_winner": "Chicago Wolves",
+      "prediction_confidence": 51,
+      "prediction_basis": "PTS/G 1.186(Chicago Wolves) vs 1.029(Milwaukee Admirals), diff 0.157 (thr 0.25). L1 FAIL. Fav=Chicago Wolves@1.86.",
+      "prediction_hit": null,
+      "status": "pending",
+      "l1_data": {
+        "metric": "PTS/G (proxy for GF%/win strength; AHL GF/GA data not fully available)",
+        "Chicago Wolves_ppg": 1.186,
+        "Milwaukee Admirals_ppg": 1.029,
+        "diff": 0.157,
+        "threshold": 0.25,
+        "pass": false,
+        "data_source": "Wikipedia 2025-26 AHL season standings (as of Apr 15)"
+      },
+      "odds": {
+        "home": 1.86,
+        "away": 1.87
+      },
+      "adjustments_log": [
+        "home +3%",
+        "A002 end-of-season callup -5%",
+        "A001 precision penalty (no xGF%) -5%"
+      ],
+      "ev_calc": "(0.51 * 1.86) - 1 = -5.14%",
+      "clinch_status": {
+        "Chicago Wolves": "playoff_C2",
+        "Milwaukee Admirals": "playoff_C5"
+      },
+      "skip_reason": "Basic Tier threshold not met: conf 51% < 78, EV -5.14% < +7%.",
+      "caution_reason": null,
+      "rules_applied": [
+        "AHL_v1.0",
+        "Basic_Tier_Thresholds",
+        "A001_precision_penalty",
+        "A002_callup_risk",
+        "A006_end_season_rest"
+      ],
+      "source": "手動試合データ/2026-04-17-2.json"
+    },
+    {
+      "id": "AHL-023",
+      "date": "2026-04-19",
+      "match": "サン・ディエゴ・グールス vs Coachella Valley Firebirds (San Diego Gulls vs Coachella Valley Firebirds)",
+      "home": "San Diego Gulls",
+      "away": "Coachella Valley Firebirds",
+      "start_time_jst": "10:00",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 46,
+      "predicted_winner": "Coachella Valley Firebirds",
+      "prediction_confidence": 46,
+      "prediction_basis": "PTS/G 1.114(San Diego Gulls) vs 1.229(Coachella Valley Firebirds), diff 0.115 (thr 0.25). L1 FAIL. Fav=Coachella Valley Firebirds@1.91.",
+      "prediction_hit": null,
+      "status": "pending",
+      "l1_data": {
+        "metric": "PTS/G (proxy for GF%/win strength; AHL GF/GA data not fully available)",
+        "San Diego Gulls_ppg": 1.114,
+        "Coachella Valley Firebirds_ppg": 1.229,
+        "diff": 0.115,
+        "threshold": 0.25,
+        "pass": false,
+        "data_source": "Wikipedia 2025-26 AHL season standings (as of Apr 15)"
+      },
+      "odds": {
+        "home": 1.83,
+        "away": 1.91
+      },
+      "adjustments_log": [
+        "A002 end-of-season callup -5%",
+        "A001 precision penalty (no xGF%) -5%"
+      ],
+      "ev_calc": "(0.46 * 1.91) - 1 = -12.14%",
+      "clinch_status": {
+        "San Diego Gulls": "playoff_P7",
+        "Coachella Valley Firebirds": "playoff_P4"
+      },
+      "skip_reason": "Basic Tier threshold not met: conf 46% < 78, EV -12.14% < +7%.",
+      "caution_reason": null,
+      "rules_applied": [
+        "AHL_v1.0",
+        "Basic_Tier_Thresholds",
+        "A001_precision_penalty",
+        "A002_callup_risk",
+        "A006_end_season_rest"
+      ],
+      "source": "手動試合データ/2026-04-17-2.json"
+    },
+    {
+      "id": "AHL-024",
+      "date": "2026-04-19",
+      "match": "オンタリオレイン vs アボッツフォード カナックス (Ontario Reign vs Abbotsford Canucks)",
+      "home": "Ontario Reign",
+      "away": "Abbotsford Canucks",
+      "start_time_jst": "10:00",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 62,
+      "predicted_winner": "Ontario Reign",
+      "prediction_confidence": 62,
+      "prediction_basis": "PTS/G 1.386(Ontario Reign) vs 0.843(Abbotsford Canucks), diff 0.543 (thr 0.25). L1 PASS. Fav=Ontario Reign@1.55.",
+      "prediction_hit": null,
+      "status": "pending",
+      "l1_data": {
+        "metric": "PTS/G (proxy for GF%/win strength; AHL GF/GA data not fully available)",
+        "Ontario Reign_ppg": 1.386,
+        "Abbotsford Canucks_ppg": 0.843,
+        "diff": 0.543,
+        "threshold": 0.25,
+        "pass": true,
+        "data_source": "Wikipedia 2025-26 AHL season standings (as of Apr 15)"
+      },
+      "odds": {
+        "home": 1.55,
+        "away": 2.37
+      },
+      "adjustments_log": [
+        "home +3%",
+        "A002 end-of-season callup -5%",
+        "favorite is division champ (rest risk) -5%",
+        "opponent eliminated (motivation gap) +2%",
+        "A001 precision penalty (no xGF%) -5%"
+      ],
+      "ev_calc": "(0.62 * 1.55) - 1 = -3.90%",
+      "clinch_status": {
+        "Ontario Reign": "div_champ_P1",
+        "Abbotsford Canucks": "eliminated"
+      },
+      "skip_reason": "Basic Tier threshold not met: conf 62% < 78, EV -3.90% < +7%.",
+      "caution_reason": null,
+      "rules_applied": [
+        "AHL_v1.0",
+        "Basic_Tier_Thresholds",
+        "A001_precision_penalty",
+        "A002_callup_risk",
+        "A006_end_season_rest"
+      ],
+      "source": "手動試合データ/2026-04-17-2.json"
+    },
+    {
+      "id": "AHL-025",
+      "date": "2026-04-19",
+      "match": "コロラドイーグルス vs Calgary Wranglers (Colorado Eagles vs Calgary Wranglers)",
+      "home": "Colorado Eagles",
+      "away": "Calgary Wranglers",
+      "start_time_jst": "10:05",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 67,
+      "predicted_winner": "Colorado Eagles",
+      "prediction_confidence": 67,
+      "prediction_basis": "PTS/G 1.329(Colorado Eagles) vs 0.814(Calgary Wranglers), diff 0.515 (thr 0.25). L1 PASS. Fav=Colorado Eagles@1.5.",
+      "prediction_hit": null,
+      "status": "pending",
+      "l1_data": {
+        "metric": "PTS/G (proxy for GF%/win strength; AHL GF/GA data not fully available)",
+        "Colorado Eagles_ppg": 1.329,
+        "Calgary Wranglers_ppg": 0.814,
+        "diff": 0.515,
+        "threshold": 0.25,
+        "pass": true,
+        "data_source": "Wikipedia 2025-26 AHL season standings (as of Apr 15)"
+      },
+      "odds": {
+        "home": 1.5,
+        "away": 2.47
+      },
+      "adjustments_log": [
+        "home +3%",
+        "A002 end-of-season callup -5%",
+        "opponent eliminated (motivation gap) +2%",
+        "A001 precision penalty (no xGF%) -5%"
+      ],
+      "ev_calc": "(0.67 * 1.5) - 1 = +0.50%",
+      "clinch_status": {
+        "Colorado Eagles": "playoff_P2",
+        "Calgary Wranglers": "eliminated"
+      },
+      "skip_reason": "Basic Tier threshold not met: conf 67% < 78, EV +0.50% < +7%.",
+      "caution_reason": null,
+      "rules_applied": [
+        "AHL_v1.0",
+        "Basic_Tier_Thresholds",
+        "A001_precision_penalty",
+        "A002_callup_risk",
+        "A006_end_season_rest"
+      ],
+      "source": "手動試合データ/2026-04-17-2.json"
+    },
+    {
+      "id": "AHL-026",
+      "date": "2026-04-19",
+      "match": "サン・ホセバーラキュダ vs ベカースフィルドコンドース (San Jose Barracuda vs Bakersfield Condors)",
+      "home": "San Jose Barracuda",
+      "away": "Bakersfield Condors",
+      "start_time_jst": "11:00",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 42,
+      "predicted_winner": "Bakersfield Condors",
+      "prediction_confidence": 42,
+      "prediction_basis": "PTS/G 1.171(San Jose Barracuda) vs 1.186(Bakersfield Condors), diff 0.015 (thr 0.25). L1 FAIL. Fav=Bakersfield Condors@2.02.",
+      "prediction_hit": null,
+      "status": "pending",
+      "l1_data": {
+        "metric": "PTS/G (proxy for GF%/win strength; AHL GF/GA data not fully available)",
+        "San Jose Barracuda_ppg": 1.171,
+        "Bakersfield Condors_ppg": 1.186,
+        "diff": 0.015,
+        "threshold": 0.25,
+        "pass": false,
+        "data_source": "Wikipedia 2025-26 AHL season standings (as of Apr 15)"
+      },
+      "odds": {
+        "home": 1.74,
+        "away": 2.02
+      },
+      "adjustments_log": [
+        "A002 end-of-season callup -5%",
+        "A001 precision penalty (no xGF%) -5%"
+      ],
+      "ev_calc": "(0.42 * 2.02) - 1 = -15.16%",
+      "clinch_status": {
+        "San Jose Barracuda": "playoff_P6",
+        "Bakersfield Condors": "playoff_P5"
+      },
+      "skip_reason": "Basic Tier threshold not met: conf 42% < 78, EV -15.16% < +7%.",
+      "caution_reason": null,
+      "rules_applied": [
+        "AHL_v1.0",
+        "Basic_Tier_Thresholds",
+        "A001_precision_penalty",
+        "A002_callup_risk",
+        "A006_end_season_rest"
+      ],
+      "source": "手動試合データ/2026-04-17-2.json"
+    },
+    {
+      "id": "AHL-027",
+      "date": "2026-04-19",
+      "match": "タクソンロードランナース vs Henderson Silver Knights (Tucson Roadrunners vs Henderson Silver Knights)",
+      "home": "Tucson Roadrunners",
+      "away": "Henderson Silver Knights",
+      "start_time_jst": "11:00",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 52,
+      "predicted_winner": "Henderson Silver Knights",
+      "prediction_confidence": 52,
+      "prediction_basis": "PTS/G 1.057(Tucson Roadrunners) vs 1.271(Henderson Silver Knights), diff 0.214 (thr 0.25). L1 FAIL. Fav=Henderson Silver Knights@1.9.",
+      "prediction_hit": null,
+      "status": "pending",
+      "l1_data": {
+        "metric": "PTS/G (proxy for GF%/win strength; AHL GF/GA data not fully available)",
+        "Tucson Roadrunners_ppg": 1.057,
+        "Henderson Silver Knights_ppg": 1.271,
+        "diff": 0.214,
+        "threshold": 0.25,
+        "pass": false,
+        "data_source": "Wikipedia 2025-26 AHL season standings (as of Apr 15)"
+      },
+      "odds": {
+        "home": 1.84,
+        "away": 1.9
+      },
+      "adjustments_log": [
+        "A002 end-of-season callup -5%",
+        "opponent eliminated (motivation gap) +2%",
+        "A001 precision penalty (no xGF%) -5%"
+      ],
+      "ev_calc": "(0.52 * 1.9) - 1 = -1.20%",
+      "clinch_status": {
+        "Tucson Roadrunners": "eliminated",
+        "Henderson Silver Knights": "playoff_P3"
+      },
+      "skip_reason": "Basic Tier threshold not met: conf 52% < 78, EV -1.20% < +7%.",
+      "caution_reason": null,
+      "rules_applied": [
+        "AHL_v1.0",
+        "Basic_Tier_Thresholds",
+        "A001_precision_penalty",
+        "A002_callup_risk",
+        "A006_end_season_rest"
+      ],
+      "source": "手動試合データ/2026-04-17-2.json"
+    }
+  ],
+  "screening_log": [
+    {
+      "date": "2026-04-17",
+      "source": "手動試合データ/2026-04-17-2.json",
+      "total_screened": 27,
+      "go": 0,
+      "caution": 0,
+      "skip": 27,
+      "notes": [
+        "Basic Tier thresholds: GO conf>=78% AND EV>+7%. CAUTION conf>=72% AND EV>+5%",
+        "AHL固有補正: A001 precision -5%, A002 callup -5% end-of-season全件, A006 division-champ rest risk -5%",
+        "GF/GA detailed data部分取得: PTS/G (prox) で代替L1使用。Wikipedia 2025-26 standings as of 2026-04-15.",
+        "Division clinched teams (Providence/Grand Rapids/Ontario) 主力温存リスク高",
+        "Eliminated teams (Hartford/Belleville/Lehigh Valley/Utica?/Rockford/Iowa/Tucson/Abbotsford/Calgary) motivation gap"
+      ]
+    }
+  ]
 }

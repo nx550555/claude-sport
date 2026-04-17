@@ -52,6 +52,8 @@
 | PA029 | Top 14 | Bayonne-Pau/Castres-Toulouse/Racing-StadeFrancais 3試合のPD/G完全取得→L1スクリーニング | PENDING | 中 | 4/18-20試合前 |
 | PA030 | Pro D2 | Stade Montois-Dax/Nevers-Valence/Beziers-Provence/Grenoble-Oyonnax 4試合のPD/G完全取得→L1スクリーニング | PENDING | 中 | 4/18試合前 |
 | PA031 | NHL | TBL vs MTL G1: min odds 1.38 PASSED (now 1.53). 信頼度76%/EV+16.28%→goalie confirmed次第でCAUTION→GO昇格候補。dailyfaceoff 4/18 morning確認要 | IN_PROGRESS | 最高 | 4/18試合当日 |
+| PA032 | AHL | 初回スクリーニング完了 (27試合 RS最終週4/18-19 全SKIP)。Basic Tier厳格閾値 + AHL固有補正で全試合conf<78%/EV<+7%。プレーオフ(4/22〜)で再評価 | DONE | 中 | 完了 2026-04-17 |
+| PA033 | AHL | Calder Cup Playoffs R1 (4/22〜) スクリーニング - best-of-3シリーズ。ラインナップ安定期でGO/CAUTION候補期待 | PENDING | 中 | 4/22以降 |
 
 ---
 
