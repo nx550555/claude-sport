@@ -1,7 +1,7 @@
 {
   "sport": "tennis_wta",
   "version": "1.1",
-  "updated": "2026-04-15",
+  "updated": "2026-04-17",
   "surface_note": "現在はクレーシーズン。WTAはATPより表面特化が顕著なためサーフェス別cEloを必ず使用",
   "screening": {
     "L1_source": "Tennis Abstract WTA cElo (tennisabstract.com → Women's tab)",
@@ -81,7 +81,9 @@
       "type": "initial",
       "title": "表面特化補正（WTA専用）",
       "body": "WTAはATPより表面特化が顕著。クレー専門家（WTA Top30のクレーcEloがハードより150以上高い選手）が初ハードに出る場合は-8%。逆にハード専門家の初クレーは-8%。ATPのR008より強めの補正。",
-      "indoor_clay_note": "【Indoor Clay追記 2026-04-14】Stuttgart等の屋内クレーコートはアウトドアクレーより球足が速く低バウンド。フラット攻撃型・サービス+1速攻型選手（Ostapenko/Korpatsch スタイル）はアウトドアクレーより有利。cElo差が215pt以上の格下でも逆転が発生しやすい（Stuttgart 2026 R1: Korpatsch/Eala/Sonmezの3例）。通常の-8%補正に加え、outdoor clay有利選手 vs indoor clay有利選手はさらに-5%追加補正推奨。【Stuttgart 2026 R1 upset集計（4/13-15確認分）】確認アップセット: Korpatsch d.Shnaider(cElo差~216) / Eala d.Fernandez / Sonmez(Q) d.Paolini(4)。Sonmez: 1stサーブ72.2%・2ndサーブPts73.3%(11/15)・Paolini2ndサーブPts37.5%。indoor clayでアグレッシブQualifierが4シードを6-2 6-2で完勝。【P003追跡中】Zhang/Noskova結果確認後に全集計してW007数値閾値を更新する。"
+      "indoor_clay_note": "【Indoor Clay追記 2026-04-14】Stuttgart等の屋内クレーコートはアウトドアクレーより球足が速く低バウンド。フラット攻撃型・サービス+1速攻型選手（Ostapenko/Korpatsch スタイル）はアウトドアクレーより有利。cElo差が215pt以上の格下でも逆転が発生しやすい（Stuttgart 2026 R1: Korpatsch/Eala/Sonmezの3例）。通常の-8%補正に加え、outdoor clay有利選手 vs indoor clay有利選手はさらに-5%追加補正推奨。【Stuttgart 2026 R1 upset集計（4/13-15確認分）】確認アップセット: Korpatsch d.Shnaider(cElo差~216) / Eala d.Fernandez / Sonmez(Q) d.Paolini(4)。Sonmez: 1stサーブ72.2%・2ndサーブPts73.3%(11/15)・Paolini2ndサーブPts37.5%。indoor clayでアグレッシブQualifierが4シードを6-2 6-2で完勝。【P003追跡中】Zhang/Noskova結果確認後に全集計してW007数値閾値を更新する。",
+      "emotional_breakdown_note": "【Emotional Breakdown観測 2026-04-17】Stuttgart 2026 R1 Sonmez(Q) d. Paolini(4) 6-2 6-2。試合中盤にPaolini tears観測（tennisuptodate映像ソース）。Paolini 2024 Rome優勝 + 2025 WTA Finals優勝 + Roland Garros F という「最近の栄光」保持者が、2026シーズン初クレー大会R1でQに完敗。【示唆】前年タイトル保持者（特にBig Title多数）が翌年同大会に出場する場合、cEloは過去栄光を反映して過大評価になりやすい。加えてindoor clay + emotional pressure + qualifier のaggressive playスタイルで崩壊リスク極大。P007(rule_pipeline)でシーズンフォームスランプ補正を追跡中。今後3件目のevidenceで W011 実装予定: 「当季勝率<60% AND ランキング上位10位 AND 前年同大会ディープラウンド進出 → 信頼度-10%」。",
+      "emotional_breakdown_updated": "2026-04-17"
     },
     {
       "id": "W008",

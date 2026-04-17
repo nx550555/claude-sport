@@ -1321,18 +1321,18 @@
         "net": "78-79% confidence range"
       },
       "skip_reason": null,
-      "result": null,
-      "score": null,
-      "hit": null,
-      "actual_ev": null,
+      "result": "Musetti L.",
+      "score": "6-3 6-4",
+      "hit": true,
+      "actual_ev": 0.37,
       "predicted_winner": "Musetti L.",
       "prediction_confidence": 78,
-      "prediction_hit": null,
+      "prediction_hit": true,
       "rules_applied": [
         "R001",
         "R013"
       ],
-      "status": "pending",
+      "status": "completed",
       "note": "Moutet beat Buse R1 to advance. Musetti (seed2) has 271pt cElo advantage. Multiple 2026 injuries (AO adductor+Miami arm) raised to -5% PR concern per R013 (avoid over-penalization). Net 78% confidence. EV+6.9% at odds 1.37. GO confirmed per all-source check 2026-04-15."
     },
     {
@@ -1358,7 +1358,10 @@
         "Rublev": 1.23
       },
       "hit": null,
-      "result": null
+      "result": "Rublev A.",
+      "score": "6-2 6-3",
+      "status": "completed",
+      "prediction_hit": true
     },
     {
       "tournament": "Barcelona Open",
@@ -1383,7 +1386,10 @@
         "Nakashima": 3.4
       },
       "hit": null,
-      "result": null
+      "result": "Fils A.",
+      "score": "6-2 6-3",
+      "status": "completed",
+      "prediction_hit": true
     },
     {
       "tournament": "Barcelona Open",
@@ -1406,7 +1412,16 @@
         "Quinn": 1.36
       },
       "hit": null,
-      "result": null
+      "result": "Norrie C.",
+      "score": "6-3 4-6 6-4",
+      "status": "completed",
+      "prediction_hit": false,
+      "miss_analysis": "Norrie 6-3 4-6 6-4、2h30m。Quinn 2ndセット2breaksで奪取したが、3rdセット早breakでNorrie勝利確定。根本原因: 我々の予測=Quinn自体が誤り。実際はNorrie (#54, GS優勝経験, Indian Wells champ, Roland Garros 4R実績) vs Quinn (#120台 qualifier)。cElo差・実績・クレー経験すべてNorrie優位。スクリーニング時の predicted_winner 記入ミス、またはR1 Norrie-Wawrinka 3セット消耗を過大視した可能性。CE012候補: 予測勝者の記録妥当性レビューが必要。Source: britwatchsports.com, tennistonic.com/986095.",
+      "miss_layer": "PREDICTION_LOGIC_ERROR",
+      "miss_sources": [
+        "britwatchsports.com",
+        "tennistonic.com/986095"
+      ]
     },
     {
       "tournament": "Barcelona Open",
@@ -1451,7 +1466,16 @@
         "Molcan": 2.06
       },
       "hit": null,
-      "result": null
+      "result": "Molcan A.",
+      "score": "Molcan won (comprehensive, 84% 1stSrv pts)",
+      "prediction_hit": false,
+      "status": "completed",
+      "miss_analysis": "Molcan R1でBublik(3seed)6-4 6-2で撃破したqualifier。R2 Altmaier戦は84% 1stSrvPts・総得点73-63で圧勝。連続upsetによる典型的モメンタム効果。我々の予測=Altmaier(ホームドイツ・クレー好き)は妥当だったが、Molcan R1モメンタム評価が不足。L2_form + \"R1 upsetter R2継続\" パターン認識の欠如。Source: tennistonic \"Molcan stuns Altmaier\", ATP Stats Centre MS013.",
+      "miss_layer": "L2_form / P013_momentum",
+      "miss_sources": [
+        "tennistonic.com/tennis-news/986366",
+        "atptour.com/stats-centre MS013"
+      ]
     },
     {
       "tournament": "BMW Open Munich",
@@ -1476,7 +1500,10 @@
         "Diallo": 8.0
       },
       "hit": null,
-      "result": null
+      "result": "Zverev A.",
+      "score": "6-1 6-2",
+      "status": "completed",
+      "prediction_hit": true
     },
     {
       "tournament": "BMW Open Munich",
@@ -1498,24 +1525,33 @@
         "Marozsan": 1.7
       },
       "hit": null,
-      "result": null
+      "result": "Shapovalov D.",
+      "score": "7-6(7) 6-2",
+      "prediction_hit": false,
+      "status": "completed",
+      "miss_analysis": "Shapovalov 1stセットTB接戦→2ndセット6-2完勝。直前3連敗の反発+Dallas SF/IW 3R形態回復。Marozsan R1 Tsitsipas撃破の\"upset winner\"だったが、典型的な R2 reversion パターン（感情ピーク後の脱力）。我々の予測=Marozsan(R1 upset winner補正)が過大評価。Shapovalov のGriekspoor戦3セット消耗は「調子のピーク前」ではなく「調子回復途上」サイン。Source: Globe and Mail \"Shapovalov advances to QF\", tennistemple.",
+      "miss_layer": "L2_form / P014_reversion",
+      "miss_sources": [
+        "theglobeandmail.com",
+        "en.tennistemple.com/match/shapovalov-marozsan"
+      ]
     },
     {
       "tournament": "BMW Open Munich",
       "category": "ATP250",
       "surface": "Clay (outdoor)",
-      "round": "R2",
+      "round": "QF",
       "date": "2026-04-17",
-      "match": "Cobolli F. vs Kopriva V.",
+      "match": "Cobolli F.(4) vs Kopriva V.",
       "celo_p1": 1807.3,
       "celo_p2": 1671.9,
       "l1_diff": 135.4,
       "l1_pass": true,
       "tier": "skip",
       "predicted_winner": "Cobolli F.",
-      "prediction_confidence": 69,
-      "prediction_basis": "cElo diff 135.4pt (L1 pass). P(Cobolli)=0.686. EV=(0.686*1.42)-1=-2.6%.",
-      "ev": -2.6,
+      "prediction_confidence": 68,
+      "prediction_basis": "Cobolli @1.48 implied 68% / Dimers 72%。R1 GO HIT後の流れ。ただしH2H Kopriva 2-0でKopriva価値あり。cElo差での GO水準(75%+)には届かず。",
+      "ev": null,
       "rec": null,
       "skip_reason": "EV -2.6%. Below +5% threshold.",
       "odds": {
@@ -1523,13 +1559,17 @@
         "Kopriva": 2.8
       },
       "hit": null,
-      "result": null
+      "result": null,
+      "prediction_hit": null,
+      "status": "pending",
+      "note": "QF 4/17対戦。もともと\"R2\"としてCE011誤記録されていたが、実はQFの組合せと偶然一致。cElo差・オッズ要確認。",
+      "rec_odds": null
     },
     {
       "tournament": "BMW Open Munich",
       "category": "ATP250",
       "surface": "Clay (outdoor)",
-      "round": "R2",
+      "round": "QF",
       "date": "2026-04-17",
       "match": "Fonseca J. vs Shelton B.",
       "celo_p1": 1800.3,
@@ -1538,14 +1578,215 @@
       "l1_pass": false,
       "tier": "skip",
       "predicted_winner": "Fonseca J.",
-      "prediction_confidence": 52,
-      "prediction_basis": "cElo diff 38.2pt < 130pt L1 threshold. Fonseca slight market fav @1.52.",
+      "prediction_confidence": 62,
+      "prediction_basis": "Fonseca @1.54 ML-186 implied 65% / Dimers 59% / Polymarket 63%。Fonseca クレー絶好調(全試合セット落とさず) + MC QFから連続QF。Shelton 2-seed反撃力。均衡でSKIP。",
       "odds": {
         "Fonseca": 1.52,
         "Shelton": 2.48
       },
       "hit": null,
-      "result": null
+      "result": null,
+      "prediction_hit": null,
+      "status": "pending",
+      "note": "QF 4/17対戦。もともと\"R2\"としてCE011誤記録されていたが、実質QF予測として活用可能（両者R2勝ち上がり確認済）。cElo差・オッズ要確認。",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null
+    },
+    {
+      "tournament": "Barcelona Open Banc Sabadell",
+      "round": "R2",
+      "date": "2026-04-16",
+      "match": "Alcaraz C. vs Machac T.",
+      "tier": "skip",
+      "predicted_winner": "Alcaraz C.",
+      "prediction_confidence": 88,
+      "prediction_basis": "Output A #2: ATP #3 clay specialist vs 世界66位, cElo差300pt超",
+      "prediction_hit": null,
+      "status": "withdrawn",
+      "result": "WALKOVER - Alcaraz withdrew",
+      "score": "W/O",
+      "note": "Alcaraz withdrew before R2 due to right wrist injury. Machac advanced via WO.",
+      "output_a_entry": true
+    },
+    {
+      "tournament": "BMW Open Munich",
+      "round": "R2",
+      "date": "2026-04-15",
+      "match": "Cobolli F.(4) vs Bergs Z.",
+      "tier": "skip",
+      "predicted_winner": "Cobolli F.",
+      "prediction_confidence": 75,
+      "prediction_basis": "cElo差100pt強(Cobolli 4 seed vs Bergs)。R1 Cobolli大勝(GO HIT)、R1 Bergs d. Topo。",
+      "prediction_hit": true,
+      "result": "Cobolli F.",
+      "score": "6-2 6-3",
+      "status": "completed",
+      "note": "Retroactive R2 entry - added Session_39 after CE011 detection"
+    },
+    {
+      "tournament": "BMW Open Munich",
+      "round": "R2",
+      "date": "2026-04-15",
+      "match": "Fonseca J. vs Rinderknech A.(7)",
+      "tier": "skip",
+      "predicted_winner": "Fonseca J.",
+      "prediction_confidence": 70,
+      "prediction_basis": "Fonseca MC QF進出の勢い + R1 d. Tabilo 快勝 + 8日前にRinderknechに勝利済み。",
+      "prediction_hit": true,
+      "result": "Fonseca J.",
+      "score": "6-3 6-2",
+      "status": "completed",
+      "note": "Retroactive R2 entry - Session_39. Fonseca saved all 9 BPs. 76% 1st srv pts."
+    },
+    {
+      "tournament": "BMW Open Munich",
+      "round": "R2",
+      "date": "2026-04-15",
+      "match": "Shelton B.(2) vs Blockx A.",
+      "tier": "skip",
+      "predicted_winner": "Shelton B.",
+      "prediction_confidence": 75,
+      "prediction_basis": "Shelton 2-seed vs Blockx(R1 d. Hanfmann)。cElo差100pt強。",
+      "prediction_hit": true,
+      "result": "Shelton B.",
+      "score": "6-4 7-6(8)",
+      "status": "completed",
+      "note": "Retroactive R2 entry - Session_39. Shelton saved 2 set points in TB."
+    },
+    {
+      "tournament": "BMW Open Munich",
+      "round": "R2",
+      "date": "2026-04-16",
+      "match": "Cerundolo F.(5) vs Van de Zandschulp B.",
+      "tier": "skip",
+      "predicted_winner": "Cerundolo F.",
+      "prediction_confidence": 75,
+      "prediction_basis": "5-seed cElo優勢 + R1 Cerundolo d. Nagal快勝 / VdZ R1 d. Huesler。",
+      "prediction_hit": true,
+      "result": "Cerundolo F.",
+      "score": "Cerundolo won 6-0 first set confirmed",
+      "status": "completed",
+      "note": "Retroactive R2 entry - Session_39. Exact final score to verify."
+    },
+    {
+      "tournament": "BMW Open Munich",
+      "round": "R2",
+      "date": "2026-04-16",
+      "match": "Darderi L. vs Kopriva V.",
+      "tier": "skip",
+      "predicted_winner": "Darderi L.",
+      "prediction_confidence": 65,
+      "prediction_basis": "Darderi R1 大勝(Zhang 6-4 6-1 pred HIT) vs Kopriva GO winner(Engel)。名声でDarderi優勢。",
+      "prediction_hit": false,
+      "result": "Kopriva V.",
+      "status": "completed",
+      "note": "Retroactive R2 entry - Session_39. \"Kopriva Upsets Darderi\" headline. UPSET event.",
+      "miss_analysis": "Kopriva 1stセット2-6敗、2ndセット0-2ビハインドから逆転で勝利。Kopriva #77だが、南米クレーでリオSF進出経験+2026クレー7-6。R1でEngel戦3セット消耗後もモメンタム継続。Darderi \"より強い2026クレー実績\"で市場本命 @1.37前後だったが、Kopriva のclay rallying能力を過小評価。我々の予測=Darderi MISS → P013 (R1 upsetter R2 momentum)の重要evidence。Source: bleachernation, tennistemple/match/kopriva-darderi-munich-2026.",
+      "miss_layer": "L2_form / P013_momentum",
+      "score": "Kopriva won 2-6 then reversed from 0-2 down in set 2",
+      "miss_sources": [
+        "bleachernation.com",
+        "en.tennistemple.com/match/kopriva-darderi-munich-2026"
+      ]
+    },
+    {
+      "tournament": "BMW Open Munich",
+      "round": "QF",
+      "date": "2026-04-17",
+      "match": "Zverev A.(1) vs Cerundolo F.(5)",
+      "tier": "skip",
+      "predicted_winner": "Zverev A.",
+      "prediction_confidence": 71,
+      "prediction_basis": "Zverev @1.40 implied 71% / クレーホーム + seed1。Cerundolo クレースペだがZverev有利。信頼度75%未達でSKIP。",
+      "prediction_hit": null,
+      "status": "pending",
+      "note": "QF 4/17対戦。Session_39追加。cElo差・オッズ要確認。Zverev R2 d. Diallo 6-1 6-2 / Cerundolo R2 d. VdZ.",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null
+    },
+    {
+      "tournament": "BMW Open Munich",
+      "round": "QF",
+      "date": "2026-04-17",
+      "match": "Shapovalov D. vs Molcan A.",
+      "tier": "skip",
+      "predicted_winner": "Shapovalov D.",
+      "prediction_confidence": 58,
+      "prediction_basis": "Shapovalov @1.68 implied 60%。ただしMolcan連続upset(Bublik→Altmaier) L4+5%モメンタム補正でShapovalov 60%→55-58%程度。P013候補該当。信頼度低く SKIP。",
+      "prediction_hit": null,
+      "status": "pending",
+      "note": "QF 4/17対戦。Session_39追加。Molcan連続upset(Bublik→Altmaier)とShapovalov 4-match run継続の対決。",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "p013_candidate": true
+    },
+    {
+      "tournament": "Barcelona Open Banc Sabadell",
+      "round": "QF",
+      "date": "2026-04-17",
+      "match": "Medjedovic H. vs Borges N.",
+      "tier": "skip",
+      "predicted_winner": "Medjedovic H.",
+      "prediction_confidence": 63,
+      "prediction_basis": "Medjedovic -210 implied 68% / Dimers 63%。R2 Medjedovic d. de Minaur(5) UPSET勢い。Borges 安定型。信頼度 75% 未達。",
+      "prediction_hit": null,
+      "status": "pending",
+      "note": "QF 4/17。cElo差・オッズ要確認。",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null
+    },
+    {
+      "tournament": "Barcelona Open Banc Sabadell",
+      "round": "QF",
+      "date": "2026-04-17",
+      "match": "Machac T. vs Rublev A.(5)",
+      "tier": "skip",
+      "predicted_winner": "Rublev A.",
+      "prediction_confidence": 64,
+      "prediction_basis": "Rublev @1.57 implied 64% / H2H Machac 1-0 (2024 Miami ハード) / Machac Alcaraz WO でQF直行(R2試合なし)。Rublev 2試合セット落とさず。均衡。",
+      "prediction_hit": null,
+      "status": "pending",
+      "note": "QF 4/17。Rublev優位だが Machac WO後のフレッシュ性あり。",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null
+    },
+    {
+      "tournament": "Barcelona Open Banc Sabadell",
+      "round": "QF",
+      "date": "2026-04-17",
+      "match": "Fils A.(9) vs Musetti L.(2)",
+      "tier": "skip",
+      "predicted_winner": "Musetti L.",
+      "prediction_confidence": 66,
+      "prediction_basis": "Musetti @~1.50 (implied 66%) / Dimers Fils 51%。クレーMusetti有利だがFils現在フォーム良。cElo差小。Musetti R2 d. Moutet勢いあるがBarcelona疲労蓄積。",
+      "prediction_hit": null,
+      "status": "pending",
+      "note": "QF 4/17。",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null
+    },
+    {
+      "tournament": "Barcelona Open Banc Sabadell",
+      "round": "QF",
+      "date": "2026-04-17",
+      "match": "Norrie C. vs Jodar R.",
+      "tier": "skip",
+      "predicted_winner": "Jodar R.",
+      "prediction_confidence": 68,
+      "prediction_basis": "Jódar @1.37 implied 73%。地元WC + R1/R2連勝モメンタム（P010 evidence候補）。Norrie 30歳ベテランクレー得意だがR2 3セット消耗。Jódar 68%予測（市場73%からP010逆補正-5%）。",
+      "prediction_hit": null,
+      "status": "pending",
+      "note": "QF 4/17 センターコート最終試合。",
+      "p010_candidate": true,
+      "rec": null,
+      "rec_odds": null,
+      "ev": null
     }
   ],
   "screening_log": [

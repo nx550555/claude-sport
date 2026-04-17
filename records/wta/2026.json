@@ -432,7 +432,11 @@
             "paolini_total_pts": "46/110 (41.8%)",
             "duration": "1h15m",
             "source": "WTA Official stats centre"
-          }
+          },
+          "predicted_winner": "Paolini J.",
+          "prediction_confidence": 78,
+          "prediction_basis": "cElo差300pt (Paolini 1916 vs Sonmez 1616)。Output A #7.",
+          "prediction_hit": false
         },
         {
           "tournament": "Porsche Tennis Grand Prix Stuttgart",
@@ -452,7 +456,10 @@
             "Mertens": 2.55
           },
           "hit": null,
-          "result": null
+          "result": "Muchova K.",
+          "score": "1-6 6-3 6-0",
+          "prediction_hit": true,
+          "status": "completed"
         },
         {
           "tournament": "Porsche Tennis Grand Prix Stuttgart",
@@ -518,7 +525,11 @@
             "Schneider": 3.85
           },
           "hit": null,
-          "result": null
+          "result": "Rybakina E.",
+          "score": "6-3 6-4",
+          "prediction_hit": true,
+          "status": "completed",
+          "note": "opponent name: Shnaider D."
         },
         {
           "tournament": "Porsche Tennis Grand Prix Stuttgart",
@@ -541,7 +552,11 @@
             "Gauff": 1.16
           },
           "hit": null,
-          "result": null
+          "result": "Gauff C.",
+          "score": "7-5 6-1",
+          "prediction_hit": true,
+          "status": "completed",
+          "outcome_note": "Gauff recovered from early double-break deficit."
         },
         {
           "tournament": "Porsche Tennis Grand Prix Stuttgart",

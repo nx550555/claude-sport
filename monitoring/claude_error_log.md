@@ -40,6 +40,8 @@
 | CE007 | 2026-04-16 | DATA_ERROR | ATP Munich Nagal/Cerundolo 結果誤入力（実: Cerundolo勝利） | MITIGATED |
 | CE008 | 2026-04-16 | DATA_ERROR | WTA Stuttgart screening_log結果誤入力2件（Samsonova勝利→Ruzic誤記 / Zhang/Noskova未完了→Zhang WIN誤記） | MITIGATED |
 | CE009 | 2026-04-16 | DATA_ERROR | WTA Stuttgart Eala/Fernandez 結果誤入力（実: Fernandez Q 6-1 6-4 勝利） | MITIGATED |
+| CE011 | 2026-04-17 | PROCESS | Munich QF予測をR2ラベルで誤登録（組合せ自体はQF対戦として偶然正しかった）。ラベル修正で対応 | MITIGATED |
+| CE012 | 2026-04-17 | ANALYSIS | Norrie vs Quinn R2 の predicted_winner=Quinn は明確な誤記（実際はNorrie GS決勝経験者が本命） | ACTIVE |
 
 ---
 
@@ -262,3 +264,67 @@ Type A調査フェーズで「Bublik vs Hurkaczの結果が記録されていな
 
 **再発防止策:**  
 Casino dataのエントリーが実際の試合と一致するか、大会ドローと照合するステップを設ける。特にseededプレイヤーの対戦相手は変更（棄権・LL置き換え等）が起こりやすい。
+
+### CE011 — R2予測エントリ作成時のドロー構造未照合（Munich R2）
+**日付:** 2026-04-17（Session_39）
+**カテゴリ:** PROCESS / DATA_ERROR
+**ステータス:** MITIGATED
+
+**何を間違えたか:**
+Munich QF予測エントリを誤って "R2" ラベルで登録した。
+- [58] "Cobolli F. vs Kopriva V." — 実際のR2は Cobolli d. Bergs / Kopriva d. Darderi。**QFで対戦組合せと偶然一致**（4/17 QF: Cobolli vs Kopriva）。
+- [59] "Fonseca J. vs Shelton B." — 実際のR2は Fonseca d. Rinderknech / Shelton d. Blockx。**QFで対戦組合せと偶然一致**（4/17 QF: Fonseca vs Shelton）。
+
+つまり組合せ自体は将来QFで実現した正しい対戦だったが、ラウンドラベルを誤っていた。完全な誤組合せではなく "ラウンド齟齬"。
+
+**どう発覚したか:**
+Session_39 で「結果が出た試合の分析」中、WebSearchでMunich R2結果を取得した際に、記録した対戦カードと実際のR2マッチアップが一致しないことが判明。ATPドロー構造を照合して正誤を特定。
+
+**なぜ発生したか:**
+R2予測を「R1の両勝者候補を掛け合わせて推定」した。実際にはATPドローのセクション構造（上半分・下半分・クォーター区分）により、R1勝者の対戦相手は固定されている。ドロー未照合で組合せを仮定したのが根本原因。
+
+**修正内容:**
+- [58][59] をinvalid化→ユーザー指摘で再検証→**QF組合せと偶然一致していたため、round="R2"→"QF"に修正、tier="pending_screening"で復活**
+- [58] Cobolli vs Kopriva / [59] Fonseca vs Shelton をQFエントリとして活用
+- 真のR2 5試合をretroactiveエントリとして別途追加（Cobolli/Bergs, Fonseca/Rinderknech, Shelton/Blockx, Cerundolo/VdZ, Darderi/Kopriva）
+- Munich QF 残り2試合 (Zverev/Cerundolo, Shapovalov/Molcan) を新規登録・スクリーニング実施
+
+**再発防止ルール:**
+→ 次ラウンド予測エントリを作成する前に、**必ずATPドロー/WTAドロー公式で対戦組合せと該当ラウンドを照合する**
+→ ラウンドラベル（R1/R2/R3/R16/QF/SF/F）を確定するため、ドロー構造（上半分/下半分/クォーター区分）を確認
+→ ドロー未確定のラウンドについて予測エントリを作成する場合は、対戦組合せが「本当にそのラウンドで成立するか」を必ず検証
+→ 万が一ラベル誤りが発見された場合、組合せ自体が別ラウンドで偶然正しい可能性もあるため、invalidate前に再検証する
+
+### CE012 — Norrie vs Quinn R2 の predicted_winner 誤記
+**日付:** 2026-04-17（Session_39）
+**カテゴリ:** ANALYSIS
+**ステータス:** ACTIVE（再発防止ルール必要）
+
+**何を間違えたか:**
+Barcelona R2 Norrie vs Quinn の predicted_winner を "Quinn E." と記録。実際はNorrieが6-3 4-6 6-4で勝利。
+- Norrie: #54、ATP Masters 1000 Indian Wells champ (2022)、Roland Garros 4R (2022)、GS決勝経験（US Open SF）
+- Quinn: #120台、クオリファイアー、ATP実績少
+- cElo差・実績・クレー経験すべてNorrie圧倒的優位
+
+**どう発覚したか:**
+MISS深掘り調査中（WebSearch）、Norrieの実績・ランキングがQuinn予測と不整合と判明。
+
+**なぜ発生したか (推定):**
+- スクリーニング時の predicted_winner 記入ミス
+- またはR1 Norrie-Wawrinka 3セット消耗情報に引きずられ、Quinn (fresh) を過大視
+- または記憶違い / data 転写ミス
+
+**修正内容:**
+- miss_analysis に誤記原因と正しい評価を記録
+- miss_layer = PREDICTION_LOGIC_ERROR
+
+**再発防止ルール（新規）:**
+→ **predicted_winner 記入前self-check**: (1) 両者のATPランキング確認 (2) クレー直近勝率確認 (3) cElo差の方向性確認 (4) 記入した predicted_winner がL1優位側と一致するか検証
+→ SKIP予測であっても predicted_winner の選択は L1 cElo評価に忠実に従う
+→ 「R1消耗」を理由に本命を外す場合は、明確な根拠 (セット数・試合時間・怪我情報) を prediction_basis に明記する
+→ 一致しない場合は prediction_basis に「逆選択理由」を書く義務（例: "cElo優位のNorrieではなくQuinn予測の理由: R1消耗 + XXX"）
+
+**今後の記入時チェックリスト (self-check):**
+- [ ] predicted_winner は cElo/ランキング優位側か？
+- [ ] 優位側を選ばない場合、prediction_basis に明確な理由を記載したか？
+- [ ] L1指標値 (cElo差) を prediction_basis に含めたか？

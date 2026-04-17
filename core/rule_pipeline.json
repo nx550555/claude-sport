@@ -153,20 +153,31 @@
       "title": "シーズンフォームスランプ補正（cElo過大評価防止）",
       "description": "cEloは過去累積勝率を表すため、当季のフォームスランプを2-4週遅延でしか反映しない。特に前年クレー主要タイトル保持者（ローマ/全仏優勝等）が翌年同大会に出場する場合、cEloは高値を保つが実際の競技力は大幅低下していることがある。当季勝率60%未満かつランキング上位選手 → 信頼度-10%補正。",
       "trigger_threshold": 3,
-      "current_count": 1,
+      "current_count": 2,
       "evidence": [
         {
           "id": "U007",
           "match": "Sonmez vs Paolini (Stuttgart 2026 R1)",
           "pattern": "Paolini 2026: 8-7(53%)、20位圏外に6敗。cEloは2025年ローマ優勝・全仏準優勝を反映→過大評価。2ndサーブPts 37.5%、BP変換33.3%→実力より大幅低下。",
           "tag": "wta_form_slump_top_player"
+        },
+        {
+          "id": "U007_R2",
+          "match": "Sonmez(Q) vs Paolini(4) Stuttgart 2026 R2",
+          "pattern": "Paolini R2 (実際はR1/Round of 32) で Sonmez(Q)に6-2 6-2で完敗(1h15m)。【新たな発見】mid-match tears観測 (tennisuptodate \"Paolini struggles as Sonmez takes control\"映像ソース)。Sonmezブレイク4回/BPは1 saved、Paolini 2ndサーブPts 37.5%。Paolini 2024 Rome優勝 + 2025 WTA Finals winner + Roland Garros F = 過去の栄光が cEloに残存、現在(2026 8-7, 53%勝率)の実力と乖離。単なるformスランプ以上の「栄光後の emotional vulnerability」。",
+          "tag": "wta_form_slump_top_player",
+          "sources": [
+            "tennisuptodate.com mid-match-tears",
+            "dailysabah.com Sonmez career-defining",
+            "tennistemple.com/actu qualifier-sonmez-stuns-paolini"
+          ]
         }
       ],
       "tag_matches": [
         "wta_form_slump_top_player",
         "atp_form_slump_top_player"
       ],
-      "note": "3件揃ったら「当季勝率チェック」をL3必須確認項目として追加する。適用基準案: 当季勝率<60% AND ランキング上位10位以内 → 信頼度-10%。ATP版はR013、WTA版はW011として追加予定。特に前年タイトル保持者の翌年ディフェンス試合は要注意フラグを立てる。"
+      "note": "3件揃ったら「当季勝率チェック」をL3必須確認項目として追加する。適用基準案: 当季勝率<60% AND ランキング上位10位以内 → 信頼度-10%。ATP版はR013、WTA版はW011として追加予定。特に前年タイトル保持者の翌年ディフェンス試合は要注意フラグを立てる。 / 2件目evidence U007_R2 追加(2026-04-17)。閾値3まで残1件。 深掘り完了(Session_39): mid-match tears等の emotional breakdown要因を確認。P007は単なるformスランプ+メンタル要因の複合として定義すべき。"
     },
     {
       "candidate_id": "P008",
@@ -302,6 +313,71 @@
         "wta_veteran_vs_young_clay_local"
       ],
       "note": "3件揃ったら: ベテラン(30+)/若手(25-)クレーマッチのcElo差補正をW012として実装。Source: wtatennis.com (A013)"
+    },
+    {
+      "candidate_id": "P013",
+      "status": "watching",
+      "target_rule_file": "core/rules_tennis.json",
+      "proposed_rule_id": "R020",
+      "title": "R1アップセット勝者（Q/WC/LL/seed外）のR2モメンタム継続補正 +5%",
+      "description": "R1でseed選手を破った/高オッズで勝利したunderdog（qualifier・WC・LL・seed圏外）がR2でseededと対戦する場合、L4の信頼度に+5%モメンタムボーナスを適用。P010（WC home + 連続ラウンド）と類似だがこちらはqualifier等ホーム外でも発動。",
+      "trigger_threshold": 3,
+      "current_count": 2,
+      "evidence": [
+        {
+          "id": "U006_R2",
+          "match": "Molcan d. Altmaier Munich 2026 R2",
+          "pattern": "Molcan(Q) Munich R1 d. Bublik(3seed) 6-4 6-2 → R2 d. Altmaier 84% 1stSrvPts・総得点73-63で圧勝。連続upsetでqualifierがseedを2連破。Altmaierはクレー得意ドイツ人(ホーム)でも押された。",
+          "tag": "atp_r1_upsetter_r2_momentum",
+          "sources": [
+            "tennistonic.com/986366 Molcan stuns Altmaier",
+            "atptour.com/stats-centre MS013"
+          ]
+        },
+        {
+          "id": "A014",
+          "match": "Kopriva d. Darderi Munich 2026 R2",
+          "pattern": "Kopriva(#77) Munich R1 d. Engel(WC) 3セット (GO HIT) → R2 d. Darderi(クレー2026 13-4)。1stセット2-6敗、2ndセット0-2ビハインドから逆転勝利。南米クレーRio SF実績のrally能力が decisive。Darderiはクレー本命@1.37だったが、Koprivaのclay rally experienceに敗北。",
+          "tag": "atp_r1_upsetter_r2_momentum",
+          "sources": [
+            "bleachernation.com",
+            "en.tennistemple.com/match/kopriva-darderi-munich-2026",
+            "x.com/Probahis/status/2044250268397633677"
+          ]
+        }
+      ],
+      "tag_matches": [
+        "atp_r1_upsetter_r2_momentum",
+        "wta_r1_upsetter_r2_momentum"
+      ],
+      "note": "3件揃ったら R020として「R1でseed/本命破った非seed選手のR2モメンタム+5%補正」を実装。P010と違い home要件なし。 深掘り完了(Session_39): 両evidence共通「非seed選手のR1勝利→R2で本命(seed/高オッズ本命)を破る」。具体補正値提案: L4 +5%モメンタム、ただしR1試合セット数・勝因タイプ(tight 3セットか dominant 2セットか)で差別化検討。"
+    },
+    {
+      "candidate_id": "P014",
+      "status": "watching",
+      "target_rule_file": "core/rules_tennis.json",
+      "proposed_rule_id": "R021",
+      "title": "R1 upset winner の R2予測過大評価注意（3-match losing streak選手の reversion）",
+      "description": "R1で想定外の勝利をしたunderdogを、R2でも自動的に本命扱いしないよう注意。特に、直前まで連敗中だった seeded選手がR1で苦戦気味に勝った(3セットや長時間試合)場合、R2では逆に反発上昇する。",
+      "trigger_threshold": 3,
+      "current_count": 1,
+      "evidence": [
+        {
+          "id": "A015",
+          "match": "Shapovalov d. Marozsan Munich 2026 R2",
+          "pattern": "Shapovalov R1 d. Griekspoor 6-4 3-6 6-2 (3連敗脱出の反発win) → R2 d. Marozsan 7-6(7) 6-2。1stセット TB接戦で勝ちきり、2ndセット完勝。3連敗中→3セット勝利=「ピーク前の調子回復途上」パターン。対照的に Marozsan R1 d. Tsitsipas は \"career-worst-exit opponent\" での大興奮upset、R2ではその興奮が引いて実力通りのplay → R2 reversion。R1 upset winner を安易にR2本命視するのは危険。",
+          "tag": "atp_r1_upset_winner_r2_reversion",
+          "sources": [
+            "theglobeandmail.com Shapovalov QF",
+            "en.tennistemple.com/match/shapovalov-marozsan"
+          ]
+        }
+      ],
+      "tag_matches": [
+        "atp_r1_upset_winner_r2_reversion",
+        "wta_r1_upset_winner_r2_reversion"
+      ],
+      "note": "P013と併用注意: R1 upsetが「選手能力の真の発現」か「一時的な調子ピーク」かを L2で見分ける必要。3件揃ったら R021として実装。 深掘り完了(Session_39): R1 upset winnerのR2 reversion パターン確認。P011(キャリア最悪exit後)との対照: 勝者側も負者側も感情ピーク後は volatile。"
     }
   ],
   "implemented_rules": [

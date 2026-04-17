@@ -37,7 +37,14 @@
 | PA010 | MC2026 | F Alcaraz vs Sinner 結果確認（SKIP・観戦のみ） | DONE | 低 | 完了 4/14 Sinner 7-6(5) 6-3 |
 | PA011 | システム | 【フェーズ移行T3発動】実装済みルール3件達成→Phase2移行可否をユーザーに確認 | PENDING | 中 | 確認待ち |
 | PA012 | WTA | Stuttgart Zhang vs Noskova R1 結果確認 | DONE | 高 | 完了 4/16 Noskova d. Zhang 5-7 6-1 6-4 (予測HIT/SKIP nobet) |
-| PA013 | ATP | Barcelona R2 Musetti vs Moutet GO @1.37 結果確認 | WAITING | 高 | 4/16 14:00 UTC試合・ATP Tour結果未確認 |
+| PA013 | ATP | Barcelona R2 Musetti vs Moutet GO @1.37 結果確認 | DONE | 高 | 完了 4/17 Musetti d. Moutet 6-3 6-4 (GO HIT +0.37u) |
+| PA018 | UFL | W4 Louisville vs Houston GO @1.65 結果確認 | DONE | 高 | 完了 4/17 Louisville 24-22 OT (HIT +0.65u) |
+| PA019 | WTA | Stuttgart R2 全6試合結果確認 (Swiatek/Gauff/Muchova/Rybakina HIT, Alexandrova/Andreeva/Fernandez R2一部未確認) | IN_PROGRESS | 中 | 4/17 |
+| PA020 | ATP | Alcaraz Barcelona R2棄権 (右手首負傷) → 出力A #2/マルチ rank 2&4 VOID対応 | DONE | 高 | 完了 4/17 |
+| PA021 | UFL | W4 Renegades @1.36 GO 結果確認 (4/18 Columbus @ Arlington) | WAITING | 高 | 4/18試合後 |
+| PA022 | NHL | PA014 TBL vs MTL: Lightning series -275 ≈ML1.36でmin 1.38未達の可能性 → G1オッズ精査必要 | IN_PROGRESS | 高 | 4/18試合当日 |
+| PA023 | ATP | Munich QF 4試合(4/17)結果確認 — 全SKIP予測(Cobolli/Zverev/Fonseca/Shapovalov)。特に Shapovalov vs Molcan は P013/P014 候補関連 | WAITING | 高 | 4/17試合後 |
+| PA024 | ATP | Barcelona QF 4試合(4/17)結果確認 — 全SKIP予測(Medjedovic/Rublev/Musetti/Jodar)。Jódar P010 候補関連 | WAITING | 高 | 4/17試合後 |
 
 ---
 
@@ -107,6 +114,29 @@
   - PA014(TBL G1確認) / PA015(COL G1確認) 追加
 - PA013 Musetti vs Moutet: 14:00 UTC試合・結果未確認 (WAITING継続)
 - PA012 Zhang/Noskova: WTA公式でSet2=6-1表示 (記録の6-4と差異)。試合完了後に要確認
+---
+**Session_39 追加 (2026-04-17 CE011再判定):**
+- FB006記録・対応完了: [58][59]をinvalid→QF記録に格上げ
+- CE011 再分類: 「R2組合せ誤り」→「ラウンドラベル誤り（QF組合せと偶然一致）」に格下げ
+- Munich QF 4試合スクリーニング完了: 全SKIP (Cobolli 68%/Zverev 71%/Fonseca 62%/Shapovalov 58%)
+- Barcelona QF 4試合スクリーニング完了: 全SKIP (Medjedovic 63%/Rublev 64%/Musetti 66%/Jodar 68%)
+- rule_pipeline P013 新候補追加 (R1 upsetter R2モメンタム): Molcan/Kopriva 2件・残1件で実装
+- rule_pipeline P014 新候補追加 (R1 upset winner R2 reversion): Shapovalov/Marozsan 1件
+- rule_pipeline P007 evidence +1 (Paolini R2 MISS): current_count 1→2、残1件で実装
+
+---
+**Session_39 更新 (2026-04-17):**
+- PA013 DONE: Musetti d. Moutet 6-3 6-4 (ATP Tour公式・puntodebreak複数ソース確認)。GO @1.37 HIT +0.37u。
+- PA018 追加→DONE: UFL W4 Louisville 24-22 OT Houston (Kings初勝利・Bean 17/34 192yd・OT 2pt conv成功)。GO @1.65 HIT +0.65u。
+- PA019 追加: WTA Stuttgart R2 Swiatek/Gauff/Muchova/Rybakina HIT確認。Alexandrova vs Noskova / Andreeva vs Parks / Fernandez vs Sonmez (4/17) は追加確認要。
+- PA020 追加→DONE: Alcaraz Barcelona R2棄権 (右手首負傷4/16判明)。出力A #2 VOID / マルチ rank 2/4 のAlcarazレッグはブックで再評価。Madrid/Rome・Roland Garros出場リスク報道。
+- PA021 追加: Renegades @1.36 GO 4/18開催 WAITING。
+- PA022 追加: TBL vs MTL series price -275 ≈ ML1.36、min odds 1.38要件未達の可能性大 → 4/18当日G1オッズ再精査。
+- 出力A結果: HIT=4 (Swiatek/Louisville/Gauff/Musetti) / MISS=1 (Paolini) / VOID=1 (Alcaraz) / PENDING=1 (Renegades)
+- 出力B結果: LOSE=2 (rank3/4 Paolini MISS) / PENDING=3 (rank1/2/5 Renegades待ち、うちrank2はAlcaraz VOIDで再評価)
+- dashboard_stats.json 更新: ATP 11/14 78.6% +1.74u / UFL 2/2 100% +0.97u / Overall 19/24 79.2% +4.06u
+- dashboard.html: Musetti/Louisvilleアクティブカード削除 + 出力A結果列反映 + マルチベットタブ leg-status行追加
+
 ---
 **Session_38 更新 (2026-04-16):**
 - PA002 DONE: ATP Barcelona R2(4件) + Munich R2(5件) スクリーニング完了 (全SKIP/EV負)

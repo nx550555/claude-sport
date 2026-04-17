@@ -19,13 +19,16 @@
 ## 未完了・作業中（次回セッション最優先）
 
 - [ ] 【最優先①】新規試合・オッズ情報のスクリーニング（ユーザー提供データ起点・重複除外）
-- [ ] 【優先②】アクティブGO推奨の最新情報確認（GEN003）
-  - ATP: Musetti vs Moutet R2（4/16結果・PA013 WAITING → 確認必須）
-  - UFL W4: Louisville Kings GO（4/17）/ Renegades GO（4/18）→ 結果確認
-  - NRL R7: Warriors vs Titans GO @1.25（4/18-19）→ 結果確認（PA008 WAITING）
-  - SL R8: Leeds GO（4/18）/ Warrington GO（4/19）→ 結果確認
-  - NHL PO G1: TBL vs MTL CAUTION min@1.38 / COL vs LAK CAUTION → 当日オッズ確認（PA014/PA015）
-  - NBA PO R1 G1: SAS vs POR GO @1.18（4/20 JST）→ 結果確認（PA017）
+- [~] 【優先②】アクティブGO推奨の最新情報確認（GEN003） — 4/16-17結果分実施済み（Session_39）
+  - [x] ATP: Musetti vs Moutet R2 → DONE 4/17（Musetti 6-3 6-4 GO @1.37 HIT +0.37u）
+  - [x] UFL W4: Louisville Kings GO（4/17）→ DONE（Louisville 24-22 OT GO @1.65 HIT +0.65u）
+  - [ ] UFL W4: Renegades GO（4/18）→ WAITING（PA021）
+  - [ ] NRL R7: Warriors vs Titans GO @1.25（4/18-19）→ 結果確認（PA008 WAITING） — 最新: Titans Brimson/Randall OUT
+  - [ ] SL R8: Leeds GO（4/18）/ Warrington GO（4/19）→ 結果確認
+  - [ ] NHL PO G1: TBL vs MTL series-275≈ML1.36でmin 1.38未達の可能性 → G1オッズ要精査（PA022）
+  - [ ] NHL PO G1: COL vs LAK CAUTION → G1オッズ確認（PA015）
+  - [ ] NBA PO R1 G1: SAS vs POR GO @1.18（4/20 JST）→ 結果確認（PA017）
+  - [x] Alcaraz Barcelona R2棄権（右手首負傷）対応（出力A #2 VOID / マルチ rank 2&4 再評価）
 - [x] ATP Barcelona R2 / Munich R2 スクリーニング完了（全SKIP/EV負）
 - [x] WTA Stuttgart R2 / Rouen R2 スクリーニング完了（全SKIP/EV負）
 - [x] WTA Stuttgart Paolini vs Sonmez 結果確認完了（Sonmez d. Paolini 6-2 6-2、MISS記録済）

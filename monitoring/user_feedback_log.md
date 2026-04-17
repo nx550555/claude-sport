@@ -24,3 +24,4 @@
 | FB003 | 2026-04-14 | 指摘 | 「データを持ち込んでもらえればは私が提供するものではない」→ xGF%等の統計データはClaudeが自分で取得すべき | ONGOING | 対応済み。今後もユーザーに統計取得を求めない。MoneyPuck/Basketball-Reference等を自分でWebFetch |
 | FB004 | 2026-04-14 | 質問 | 「スクリーニングしたデータは4/13に存在しなかったデータか？」→ 新データの確認 | RESOLVED | 4/15 NHL試合は4/14ファイルにのみ存在することを確認・報告 |
 | FB005 | 2026-04-14 | 意見 | 日本時間（JST）でデータが提供されているため時刻解釈に注意が必要 | ONGOING | 常にJSTベースで解釈。4/15 08:00 JST = 4/14 7PM ET等の変換を意識する |
+| FB006 | 2026-04-17 | 指摘 | [59] Fonseca vs Shelton は「今日」。私がCE011としてinvalid化したが、QFで対戦するため組合せとしては正しかった | RESOLVED | [59]を R2→QF に修正・invalid解除。[58] Cobolli vs Kopriva も同様にQFで対戦することを確認し修正。Munich QF残り2試合(Zverev/Cerundolo, Shapovalov/Molcan)も新規登録。CE011の記述を「R2ラベル誤りだがQF組合せと偶然一致」に格下げ |

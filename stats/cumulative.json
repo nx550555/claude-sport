@@ -1,12 +1,12 @@
 {
-  "updated": "2026-04-16",
+  "updated": "2026-04-17",
   "tennis_atp": {
     "total_predictions": 14,
-    "confirmed": 13,
-    "hits": 10,
-    "hit_rate": 0.769,
-    "ev_total": 1.37,
-    "pending": 1,
+    "confirmed": 14,
+    "hits": 11,
+    "hit_rate": 0.786,
+    "ev_total": 1.74,
+    "pending": 0,
     "note_hit_rate": "hit_rate = hits / confirmed (pending除外)。GO tierのみ集計（CAUTION除外）",
     "correction_note": "4/12: SF Sinner vs Zverev の結果を修正（MISS→HIT: Sinner 6-1 6-4）。旧セッションで誤記録。delta +1.65",
     "tournaments": [
@@ -25,12 +25,12 @@
         "id": "2026-W16-BarcelonaMunich",
         "name": "Barcelona Open + BMW Open Munich W16",
         "predictions": 4,
-        "confirmed": 3,
-        "hits": 3,
+        "confirmed": 4,
+        "hits": 4,
         "hit_rate": 1.0,
-        "ev_total": 0.84,
-        "status": "R1_complete_R2_pending",
-        "note": "R1 GO3件3件全HIT: Musetti@1.27(+0.27u)/Cobolli@1.21(+0.21u)/Kopriva@1.36(+0.36u)。R2 Musetti@1.37 PENDING (4/16試合中，未確認)。3/3 100% EV+0.84u"
+        "ev_total": 1.21,
+        "status": "R2_complete",
+        "note": "R1 GO3件全HIT + R2 Musetti@1.37 HIT(+0.37u)。4/4 100% EV+1.21u。"
       }
     ]
   },
@@ -78,14 +78,14 @@
     "note": "COL 3-1 HIT(+0.333) / OTT 3-2 NYI HIT(+1.53)。2/2 100%。"
   },
   "ufl": {
-    "total_predictions": 1,
-    "confirmed": 1,
-    "hits": 1,
+    "total_predictions": 3,
+    "confirmed": 2,
+    "hits": 2,
     "hit_rate": 1.0,
-    "ev_total": 0.32,
-    "pending": 0,
+    "ev_total": 0.97,
+    "pending": 1,
     "status": "in_progress",
-    "note": "Week3 Dallas 28-23 Columbus（4/12）HIT(+0.32u)。Dallas GO（1.32 EV+8.2% 信頼度82%）。PD差30ptの地力差通り。"
+    "note": "W3 Dallas HIT(+0.32u). W4 Louisville Kings HIT(+0.65u 24-22 OT). Renegades 4/18 pending. 2/2 100%."
   },
   "nrl": {
     "total_predictions": 2,

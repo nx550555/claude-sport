@@ -1,4 +1,4 @@
-﻿{
+{
   "sport": "ufl",
   "season": "2026",
   "bet_type": "Moneyline (ML)",
@@ -76,16 +76,22 @@
         "houston_qb_note": "Dekkers shoulder W1 injury -> Tagovailoa started W3, poor performance",
         "threshold": "Week4 GO threshold: conf >= 80%"
       },
-      "status": "pending",
-      "result": null,
-      "score": null,
-      "hit": null,
-      "actual_ev": null,
+      "status": "completed",
+      "result": "Louisville Kings 24-22 OT",
+      "score": "24-22 OT",
+      "hit": true,
+      "actual_ev": 0.65,
       "rules_applied": [
         "GEN001",
         "UFL_v1.0"
       ],
-      "note": "Houston QB situation unstable (Dekkers W1 shoulder injury, Tagovailoa fill-in W3 171yd 7-45 loss). Louisville QB Bean excellent W3 (352yd 3TD). Home/away TBD. GO per all-source check 2026-04-15. conf 82% > W4 threshold 80%."
+      "note": "Houston QB situation unstable (Dekkers W1 shoulder injury, Tagovailoa fill-in W3 171yd 7-45 loss). Louisville QB Bean excellent W3 (352yd 3TD). Home/away TBD. GO per all-source check 2026-04-15. conf 82% > W4 threshold 80%.",
+      "predicted_winner": "Louisville Kings",
+      "prediction_confidence": 82,
+      "prediction_basis": "PD/G差 Louisville -4.7 vs Houston -18.3 (Houston W3 45-7大敗), Jason Bean W3 352yd 3TD, Tagovailoa不安定",
+      "prediction_hit": true,
+      "miss_analysis": null,
+      "outcome_note": "Louisville hold off Houston in OT shootout for first franchise win. Bean 17/34 192yd. OT 2pt conv: Kings convert, Gamblers miss."
     },
     {
       "week": 4,
