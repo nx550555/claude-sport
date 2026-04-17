@@ -1,8 +1,7 @@
 {
   "system": "マルチスポーツベッティング分析システム",
   "version": "3.0",
-  "updated": "2026-04-14",
-
+  "updated": "2026-04-17",
   "core_philosophy": {
     "primary_goal": "市場（オッズ・大衆予想）とは独立して、根拠を持って正しい勝者を予測できるシステムを育てること",
     "learning_engine": "多くの予測を行い、外れた予測の原因を深く検証することで予測精度を向上させ続ける",
@@ -14,11 +13,25 @@
     "miss_value": "MISSは損失ではなく、なぜ実際の勝者がモデル予測を上回ったかを解明する機会。蓄積されたMISS分析がupset_patternsとrules更新に変換され、予測精度の向上につながる",
     "long_term_target": "均衡した試合でも根拠を持って勝者を導き出せるようになること。現在のL1閾値（大きな実力差のみ対象）は学習初期の安全設計であり、精度向上とともに対象試合を広げていく"
   },
-
-  "sports_active": ["tennis_atp", "tennis_wta", "nhl", "ufl", "nrl", "superrugby", "nba"],
-  "sports_preseason": ["nfl", "cfl"],
-  "sports_excluded": ["ahl"],
-
+  "sports_active": [
+    "tennis_atp",
+    "tennis_wta",
+    "nhl",
+    "ufl",
+    "nrl",
+    "superrugby",
+    "nba",
+    "premiership",
+    "top14",
+    "prod2"
+  ],
+  "sports_preseason": [
+    "nfl",
+    "cfl"
+  ],
+  "sports_excluded": [
+    "ahl"
+  ],
   "sports_active_note": {
     "tennis_atp": "クレーシーズン進行中（MC2026 F待ち）",
     "tennis_wta": "クレーシーズン進行中（Stuttgart 4/13開幕）",
@@ -26,7 +39,10 @@
     "ufl": "Week3進行中（〜6月）",
     "nrl": "Round6進行中（〜9月）",
     "superrugby": "Round9進行中（〜7月）",
-    "nba": "レギュラーシーズン終盤・プレーオフ直前（2025-26）"
+    "nba": "レギュラーシーズン終盤・プレーオフ直前（2025-26）",
+    "premiership": "English Premiership Rugby 2025-26 (R14前後・5月末プレーオフ)",
+    "top14": "French Top 14 2025-26 (R20-21前後・6月プレーオフ)",
+    "prod2": "French Pro D2 2025-26 (R26-27前後・5月プレーオフ)"
   },
   "sports_preseason_note": {
     "nfl": "2026年9月開幕予定",
@@ -55,30 +71,42 @@
       "detail_ref": "core/rules_nhl.json → N015"
     }
   },
-
   "sport_categories": {
-    "tennis": ["tennis_atp", "tennis_wta"],
-    "rugby": ["nrl", "superrugby"],
-    "ice_hockey": ["nhl"],
-    "american_football": ["ufl", "nfl", "cfl"],
-    "basketball": ["nba"]
+    "tennis": [
+      "tennis_atp",
+      "tennis_wta"
+    ],
+    "rugby": [
+      "nrl",
+      "superrugby",
+      "premiership",
+      "top14",
+      "prod2"
+    ],
+    "ice_hockey": [
+      "nhl"
+    ],
+    "american_football": [
+      "ufl",
+      "nfl",
+      "cfl"
+    ],
+    "basketball": [
+      "nba"
+    ]
   },
-
   "common_layers": {
     "L1": "地力評価（スポーツ固有のEloレーティングまたは得失点差指標）",
     "L2": "直近フォーム品質スコア（対戦相手の強さを実測）",
     "L3": "スタッツ補正（数値指標）±5〜8%",
     "L4": "外部要因補正（怪我・体調・モチベーション・ホーム）±10〜15%"
   },
-
   "common_thresholds": {
     "predict": "全試合対象。閾値なし。必ず predicted_winner を記録する",
     "recommend_bet": "信頼度≥75% AND EV>+5%",
     "skip_bet": "上記以外（予測はするが、ベットは推奨しない）"
   },
-
   "ev_formula": "(推定勝率 × オッズ) - 1",
-
   "record_schema": {
     "_description": "v3.0以降の標準レコード構造。全試合にprediction fieldsを記録する",
     "prediction_fields": {
@@ -113,7 +141,6 @@
       "miss_analysis": "なぜ予測が外れたかの検証内容"
     }
   },
-
   "accuracy_tracking": {
     "_description": "予測精度トラッキング（v3.0以降。予測とベットを分けて管理）",
     "prediction_accuracy": {
@@ -127,38 +154,42 @@
       "note": "予測精度が上がると自然にbet_performanceも向上する関係"
     }
   },
-
   "rules_files": {
-    "tennis_atp":  "core/rules_tennis.json",
-    "tennis_wta":  "core/rules_wta.json",
-    "nhl":         "core/rules_nhl.json",
-    "ufl":         "core/rules_ufl.json",
-    "nrl":         "core/rules_nrl.json",
-    "superrugby":  "core/rules_superrugby.json",
-    "nfl":         "core/rules_nfl.json",
-    "cfl":         "core/rules_cfl.json",
-    "nba":         "core/rules_nba.json"
+    "tennis_atp": "core/rules_tennis.json",
+    "tennis_wta": "core/rules_wta.json",
+    "nhl": "core/rules_nhl.json",
+    "ufl": "core/rules_ufl.json",
+    "nrl": "core/rules_nrl.json",
+    "superrugby": "core/rules_superrugby.json",
+    "nfl": "core/rules_nfl.json",
+    "cfl": "core/rules_cfl.json",
+    "nba": "core/rules_nba.json",
+    "premiership": "core/rules_premiership.json",
+    "top14": "core/rules_top14.json",
+    "prod2": "core/rules_prod2.json",
+    "super_league": "core/rules_superleague.json (暫定・NRL準拠)"
   },
-
   "records_files": {
-    "tennis_atp":  "records/tennis/2026-ATP.json",
-    "tennis_wta":  "records/wta/2026.json",
-    "nhl":         "records/nhl/2025-26.json",
-    "ufl":         "records/ufl/2026.json",
-    "nrl":         "records/nrl/2026.json",
-    "superrugby":  "records/superrugby/2026.json",
-    "nfl":         "records/nfl/2026-27.json",
-    "cfl":         "records/cfl/2026.json",
-    "nba":         "records/nba/2025-26.json"
+    "tennis_atp": "records/tennis/2026-ATP.json",
+    "tennis_wta": "records/wta/2026.json",
+    "nhl": "records/nhl/2025-26.json",
+    "ufl": "records/ufl/2026.json",
+    "nrl": "records/nrl/2026.json",
+    "superrugby": "records/superrugby/2026.json",
+    "nfl": "records/nfl/2026-27.json",
+    "cfl": "records/cfl/2026.json",
+    "nba": "records/nba/2025-26.json",
+    "premiership": "records/premiership/2026.json",
+    "top14": "records/top14/2026.json",
+    "prod2": "records/prod2/2026.json",
+    "super_league": "records/superleague/2026.json"
   },
-
   "workflow": {
     "screening": "全試合にpredicted_winner・prediction_confidence・prediction_basisを記録してからtier(go/caution/skip)を判定する",
     "after_result": "result・prediction_hit・hit（GOのみ）・miss_analysisをrecords/{sport}/{year}.jsonに記入する",
     "rule_update": "miss_analysisから導いた新パターンをrules_{sport}.jsonに追記する",
     "stats_update": "stats/cumulative.jsonのprediction_accuracy・bet_performanceを両方更新する"
   },
-
   "phase_transition": {
     "_description": "現在はPhase1（強い側が勝つかどうかのスクリーニング）。以下のいずれかのトリガーが満たされたら、ユーザーに報告してPhase2（アップセット確率の積極的予測）への移行可否を確認する。",
     "_instruction_for_claude": "セッション開始時またはrecords更新後に、以下のtriggersを全件チェックし、いずれか1つでもmet=trueになったら即座にユーザーへ報告する。報告文例: '【フェーズ移行トリガー発動】T○が条件を満たしました。アップセット予測フェーズ(Phase2)への移行を検討しますか？'",
@@ -207,7 +238,11 @@
         "met": true,
         "met_date": "2026-04-15",
         "current_count": 3,
-        "implemented": ["IMPL001/N016", "IMPL002/W007", "IMPL003/R001"]
+        "implemented": [
+          "IMPL001/N016",
+          "IMPL002/W007",
+          "IMPL003/R001"
+        ]
       },
       {
         "id": "T4",
@@ -229,5 +264,6 @@
       "step3": "ユーザーが移行を承認した場合: framework.jsonのcurrent_phaseを'Phase2'に更新し、各ルールファイルにアップセット予測セクションを追加する",
       "step4": "ユーザーが移行を保留した場合: 次回トリガー確認時に再報告する（current_phaseはPhase1のまま）"
     }
-  }
+  },
+  "updated_note": "Added Premiership/Top 14/Pro D2 as new rugby union leagues. Initial rules files v1.0 derived from SuperRugby template. Standings partial - requires deeper fetch for full L1 screening."
 }

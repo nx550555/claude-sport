@@ -49,6 +49,23 @@
 
 ⚠️ この確認を飛ばして分析・記録に入ることは禁止。
 
+**【毎回必須】既分析データの再提供時ルール（GEN004）：**
+ユーザーが `手動試合データ/*.json` を提供した際、過去に受取・分析済みの試合が再度含まれている場合は以下の手順で処理する：
+
+1. **試合照合**：提供データの各試合を `records/{sport}/*.json` と照合する
+   - 一致判定基準: 同一対戦カード + 同一日付 / または round + player/team名一致
+2. **オッズ比較**：既分析済み試合について、新オッズと記録済み `rec_odds`（GO/CAUTIONのみ）を比較
+3. **判定分岐**：
+   - **新規試合** → 通常のスクリーニング実行
+   - **既分析 + オッズ変化あり** → EV再計算（`(推定勝率 × 新オッズ) - 1`）して records JSON の `rec_odds` と `ev` を更新。閾値を割り込めば tier 変更（GO→CAUTION等）
+   - **既分析 + オッズ変化なし** → 何もしない（ログに「既分析・変化なし」と一行記録）
+4. **オッズ変化の許容範囲**：±0.01 未満は「変化なし」扱い。±0.01以上は再計算。
+5. **記録**: 再計算実行時は records の該当試合に `odds_updated_at` フィールドを追加（いつ・どう変化したか）
+
+この手順は提供されたデータ起点のルーチン処理。ユーザーへの確認なしで実行可。
+
+---
+
 **【毎回必須】抜け漏れチェック（②の要件）：**
 以下を確認して「現状チェック」として報告する：
 - hit:null の未確認試合が records/ にないか
@@ -186,6 +203,22 @@
 **NBA（バスケットボール）の作業をするとき：**
 1. `C:\Users\ohwada\Desktop\claude_sport\core\rules_nba.json` を読み込む
 2. `C:\Users\ohwada\Desktop\claude_sport\records\nba\2025-26.json` を読み込む
+
+**England Premiership（ラグビーユニオン・英国）の作業をするとき：**
+1. `C:\Users\ohwada\Desktop\claude_sport\core\rules_premiership.json` を読み込む
+2. `C:\Users\ohwada\Desktop\claude_sport\records\premiership\2026.json` を読み込む
+
+**Top 14（ラグビーユニオン・フランス1部）の作業をするとき：**
+1. `C:\Users\ohwada\Desktop\claude_sport\core\rules_top14.json` を読み込む
+2. `C:\Users\ohwada\Desktop\claude_sport\records\top14\2026.json` を読み込む
+
+**Pro D2（ラグビーユニオン・フランス2部）の作業をするとき：**
+1. `C:\Users\ohwada\Desktop\claude_sport\core\rules_prod2.json` を読み込む
+2. `C:\Users\ohwada\Desktop\claude_sport\records\prod2\2026.json` を読み込む
+
+**Super League（ラグビーリーグ・英国）の作業をするとき：**
+1. 暫定: NRLルールを準拠 (`core/rules_nrl.json` 参照)。独自rules_superleague.jsonは未作成
+2. `C:\Users\ohwada\Desktop\claude_sport\records\superleague\2026.json` を読み込む
 
 3. 現在の状況を把握して「引き継ぎ完了」と報告する
 4. 次の指示を待つ

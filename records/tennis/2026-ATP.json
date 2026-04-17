@@ -1769,7 +1769,13 @@
       "note": "QF 4/17。",
       "rec": null,
       "rec_odds": null,
-      "ev": null
+      "ev": null,
+      "odds_data_2026_04_17": {
+        "Fils": 1.88,
+        "Musetti": 1.89
+      },
+      "ev_with_new_odds": 24.74,
+      "note_odds_update": "2026-04-17 odds added: Musetti @1.89. EV = +24.74% but conf 66% < 75 GO threshold. Tier SKIP maintained."
     },
     {
       "tournament": "Barcelona Open Banc Sabadell",
@@ -1786,7 +1792,13 @@
       "p010_candidate": true,
       "rec": null,
       "rec_odds": null,
-      "ev": null
+      "ev": null,
+      "odds_data_2026_04_17": {
+        "Norrie": 3.15,
+        "Jodar": 1.35
+      },
+      "ev_with_new_odds": -8.2,
+      "note_odds_update": "2026-04-17 odds added: Jodar @1.35. EV = -8.20% - SKIP maintained (EV-)."
     }
   ],
   "screening_log": [

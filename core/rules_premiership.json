@@ -1,0 +1,66 @@
+{
+  "sport": "rugby_union_premiership",
+  "league_name": "English Premiership Rugby (Gallagher Premiership)",
+  "rule_version": "v1.0",
+  "created": "2026-04-17",
+  "derived_from": "core/rules_superrugby.json (template baseline)",
+  "season_context": "2025-26 season. Regular season ~R14-15 by mid-April.",
+  "note": "初版ルール。SuperRugby rules を雛形に英国Premiership用に調整。L1=PD/G, threshold 7pt (同一)。追加知見はシーズン進行で更新。",
+
+  "screening": {
+    "L1_primary": {
+      "metric": "Points Differential per Game (PD/G)",
+      "source": "rugbypass.com/premiership/standings/ or ESPN Premiership standings",
+      "threshold": "差 7pt 以上でL1 PASS",
+      "fallback": "試合数が少ない場合（R5以下）は信頼度上限70%"
+    },
+    "L2_form": "直近3試合の勝敗＋対戦相手強度",
+    "L3_stats": "Try-scoring rate, defensive metrics",
+    "L4_factors": "Injury reports, European fixture fatigue, home/away history"
+  },
+
+  "thresholds": {
+    "go": "confidence >= 75% AND EV > +5% AND L1 PASS AND 主力欠場なし",
+    "caution": "L1 PASS かつ confidence >= 70% 但し上記GO未達",
+    "skip": "上記以外"
+  },
+
+  "adjustments": {
+    "P001_home_advantage": {
+      "rule": "ホームチームに +3% 信頼度補正",
+      "note": "Premiership はホーム優位が顕著（天候・芝質の違い）"
+    },
+    "P002_european_fatigue": {
+      "rule": "直前週にChampions Cup/Challenge Cup試合があり、アウェイ遠征・QF/SF進出等で消耗した場合 -5%",
+      "note": "シーズン終盤特に注意"
+    },
+    "P003_end_season_rest": {
+      "rule": "プレーオフ確定済みチームが消化試合で主力温存の兆しがある場合 -8%",
+      "note": "NHL N008と同趣旨"
+    },
+    "P004_small_sample_early_season": {
+      "rule": "R5 以下の試合は信頼度上限70%",
+      "note": "SuperRugby/UFL と同じ"
+    }
+  },
+
+  "tournament_context": {
+    "regular_season": "R1-R18 (Sep-May)",
+    "playoffs": "SF + F (May-June)",
+    "champions_cup_overlap": "Dec/Jan knockout rounds overlap with Prem season"
+  },
+
+  "key_dependency": [
+    "rugbypass.com/premiership/standings/ (primary PD/G source)",
+    "espn.com/rugby/standings/_/league/267979 (alternate)",
+    "Wikipedia 2025-26 Premiership Rugby (team news)"
+  ],
+
+  "rules_log": [
+    {
+      "version": "v1.0",
+      "date": "2026-04-17",
+      "change": "Initial version based on SuperRugby template. L1 threshold 7pt."
+    }
+  ]
+}

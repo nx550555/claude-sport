@@ -1,0 +1,213 @@
+{
+  "sport": "rugby_union_top14",
+  "league_name": "French Top 14",
+  "season": "2025-26",
+  "rule_version": "v1.0",
+  "started": "2026-04-17",
+  "note": "初版データ。2025-26 R20前後。標準データ部分取得。全チームPD/G要追加WebSearch。",
+  "standings_snapshot_partial": {
+    "as_of": "2026-04-17",
+    "source": "rugbypass.com/top-14/standings/",
+    "teams_known": {
+      "Toulouse": {
+        "position": 1,
+        "pd_total": 357,
+        "games_played": 20,
+        "pd_per_game": 17.85
+      },
+      "Pau": {
+        "position": 2,
+        "pd_per_game": "unknown"
+      },
+      "Stade Francais": {
+        "position": 3,
+        "pd_per_game": "unknown"
+      }
+    },
+    "data_gap_note": "全チームPD/G未取得。"
+  },
+  "summary": {
+    "total": 7,
+    "go": 0,
+    "caution": 0,
+    "skip": 4,
+    "pending_data": 3
+  },
+  "games": [
+    {
+      "id": "TOP14-001",
+      "date": "2026-04-18",
+      "match": "La Rochelle vs UBB",
+      "home": "La Rochelle",
+      "away": "UBB",
+      "round": "R21-22 (est)",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "odds": {
+        "home": 1.16,
+        "away": 4.5
+      },
+      "predicted_winner": "La Rochelle",
+      "prediction_confidence": null,
+      "prediction_basis": "Structural SKIP: favorite @1.16 too short (max EV +10.20%).",
+      "prediction_hit": null,
+      "status": "pending",
+      "skip_reason": "Structural SKIP: favorite @1.16 too short (max EV +10.20%).",
+      "warning": null,
+      "note": "Initial screening 2026-04-17. Requires full PD/G standings.",
+      "source": "手動試合データ/2026-04-17.json"
+    },
+    {
+      "id": "TOP14-002",
+      "date": "2026-04-18",
+      "match": "US Montalbanaise vs RCT Toulon",
+      "home": "US Montalbanaise",
+      "away": "RCT Toulon",
+      "round": "R21-22 (est)",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "odds": {
+        "home": 8.0,
+        "away": 1.05
+      },
+      "predicted_winner": "RCT Toulon",
+      "prediction_confidence": null,
+      "prediction_basis": "Structural SKIP: favorite @1.05 too short (max EV -0.25%).",
+      "prediction_hit": null,
+      "status": "pending",
+      "skip_reason": "Structural SKIP: favorite @1.05 too short (max EV -0.25%).",
+      "warning": "WARNING: US Montalbanaise is typically Pro D2. Match categorization may be data error.",
+      "note": "Initial screening 2026-04-17. Requires full PD/G standings.",
+      "source": "手動試合データ/2026-04-17.json"
+    },
+    {
+      "id": "TOP14-003",
+      "date": "2026-04-18",
+      "match": "Montpellier vs USA Perpignan",
+      "home": "Montpellier",
+      "away": "USA Perpignan",
+      "round": "R21-22 (est)",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "odds": {
+        "home": 1.03,
+        "away": 9.2
+      },
+      "predicted_winner": "Montpellier",
+      "prediction_confidence": null,
+      "prediction_basis": "Structural SKIP: favorite @1.03 too short (max EV -2.15%).",
+      "prediction_hit": null,
+      "status": "pending",
+      "skip_reason": "Structural SKIP: favorite @1.03 too short (max EV -2.15%).",
+      "warning": null,
+      "note": "Initial screening 2026-04-17. Requires full PD/G standings.",
+      "source": "手動試合データ/2026-04-17.json"
+    },
+    {
+      "id": "TOP14-004",
+      "date": "2026-04-18",
+      "match": "ASM Clermont Auvergne vs LOU Lyon",
+      "home": "ASM Clermont",
+      "away": "LOU Lyon",
+      "round": "R21-22 (est)",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "odds": {
+        "home": 1.1,
+        "away": 5.8
+      },
+      "predicted_winner": "ASM Clermont",
+      "prediction_confidence": null,
+      "prediction_basis": "Structural SKIP: favorite @1.1 too short (max EV +4.50%).",
+      "prediction_hit": null,
+      "status": "pending",
+      "skip_reason": "Structural SKIP: favorite @1.1 too short (max EV +4.50%).",
+      "warning": null,
+      "note": "Initial screening 2026-04-17. Requires full PD/G standings.",
+      "source": "手動試合データ/2026-04-17.json"
+    },
+    {
+      "id": "TOP14-005",
+      "date": "2026-04-18",
+      "match": "Bayonne vs Section Paloise Pau",
+      "home": "Bayonne",
+      "away": "Section Paloise",
+      "round": "R21-22 (est)",
+      "tier": "pending_data",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "odds": {
+        "home": 1.4,
+        "away": 2.75
+      },
+      "predicted_winner": null,
+      "prediction_confidence": null,
+      "prediction_basis": "L1 analysis needed. Favorite @1.4. Need PD/G for both teams.",
+      "prediction_hit": null,
+      "status": "pending_data",
+      "skip_reason": null,
+      "warning": null,
+      "note": "Initial screening 2026-04-17. Requires full PD/G standings.",
+      "source": "手動試合データ/2026-04-17.json"
+    },
+    {
+      "id": "TOP14-006",
+      "date": "2026-04-19",
+      "match": "Castres vs Stade Toulousain",
+      "home": "Castres",
+      "away": "Stade Toulousain",
+      "round": "R21-22 (est)",
+      "tier": "pending_data",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "odds": {
+        "home": 1.68,
+        "away": 2.06
+      },
+      "predicted_winner": null,
+      "prediction_confidence": null,
+      "prediction_basis": "L1 analysis needed. Favorite @1.68. Need PD/G for both teams.",
+      "prediction_hit": null,
+      "status": "pending_data",
+      "skip_reason": null,
+      "warning": null,
+      "note": "Initial screening 2026-04-17. Requires full PD/G standings.",
+      "source": "手動試合データ/2026-04-17.json"
+    },
+    {
+      "id": "TOP14-007",
+      "date": "2026-04-20",
+      "match": "Racing 92 vs Stade Francais Paris",
+      "home": "Racing 92",
+      "away": "Stade Francais",
+      "round": "R21-22 (est)",
+      "tier": "pending_data",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "odds": {
+        "home": 1.3,
+        "away": 3.2
+      },
+      "predicted_winner": "Racing 92",
+      "prediction_confidence": null,
+      "prediction_basis": "L1 data incomplete. Favorite @1.3 (Racing 92). Need full PD/G.",
+      "prediction_hit": null,
+      "status": "pending_data",
+      "skip_reason": null,
+      "warning": null,
+      "note": "Initial screening 2026-04-17. Requires full PD/G standings.",
+      "source": "手動試合データ/2026-04-17.json"
+    }
+  ]
+}

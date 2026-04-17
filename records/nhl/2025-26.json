@@ -482,7 +482,15 @@
         "l1_pass": false
       },
       "hit": null,
-      "result": null
+      "result": null,
+      "odds_data_2026_04_17": {
+        "home_odds": 1.61,
+        "away_odds": 2.28,
+        "source": "手動試合データ/2026-04-17.json"
+      },
+      "rec_odds_calculated": 1.61,
+      "ev_calculated": -11.45,
+      "skip_note_odds": "Odds for predicted winner (Buffalo Sabres): 1.61. EV = -11.45%. Below thresholds."
     },
     {
       "series": "PO_R1_E2",
@@ -497,8 +505,8 @@
       "prediction_confidence": 76,
       "prediction_basis": "5v5 xGF% TBL 54.00% vs MTL 47.89%, diff 6.11pp. L1 PASS. TBL home PO +7%. MTL Goals%(all) 53.33% >> xGF% 47.89% = +5.44pp overperformance (PDO 101.81, regression risk). Holmberg injured (depth, minor).",
       "rec": "Tampa Bay Lightning",
-      "rec_odds": null,
-      "ev": null,
+      "rec_odds": 1.53,
+      "ev": 16.28,
       "confidence": 76,
       "l1_metric": "xGF% (MoneyPuck 5v5 All Season 2026-04-16)",
       "l1_data": {
@@ -523,7 +531,15 @@
         "status": "CAUTION -> GO upgrade pending: goalie confirm + odds confirm (need odds >= 1.38)"
       },
       "hit": null,
-      "result": null
+      "result": null,
+      "odds_data_2026_04_17": {
+        "home_odds": 1.53,
+        "away_odds": 2.46,
+        "source": "手動試合データ/2026-04-17.json"
+      },
+      "rec_odds_calculated": 1.53,
+      "ev_calculated": 16.28,
+      "caution_reason": "Confidence 76% >= 75, EV +16.28% > +5%, min odds 1.53 > 1.38 (PASSED). CAUTION maintained until goalie confirmed (Vasilevskiy/Dobes expected dailyfaceoff 4/18 morning). If confirmed: upgrade to GO."
     },
     {
       "series": "PO_R1_E3",
@@ -546,7 +562,15 @@
       },
       "series_note": "Both xGF%55%+ elite. If OTT wins series = NOT an xGF%-based upset.",
       "hit": null,
-      "result": null
+      "result": null,
+      "odds_data_2026_04_17": {
+        "home_odds": 1.65,
+        "away_odds": 2.2,
+        "source": "手動試合データ/2026-04-17.json"
+      },
+      "rec_odds_calculated": 1.65,
+      "ev_calculated": -12.55,
+      "skip_note_odds": "Odds for predicted winner (Carolina Hurricanes): 1.65. EV = -12.55%. Below thresholds."
     },
     {
       "series": "PO_R1_E4",
@@ -568,7 +592,15 @@
         "l1_pass": false
       },
       "hit": null,
-      "result": null
+      "result": null,
+      "odds_data_2026_04_17": {
+        "home_odds": 1.67,
+        "away_odds": 2.17,
+        "source": "手動試合データ/2026-04-17.json"
+      },
+      "rec_odds_calculated": 1.67,
+      "ev_calculated": -13.16,
+      "skip_note_odds": "Odds for predicted winner (Pittsburgh Penguins): 1.67. EV = -13.16%. Below thresholds."
     },
     {
       "series": "PO_R1_W1",
@@ -601,9 +633,19 @@
       },
       "estimated_win_pct": 66,
       "goalie_confirmed": false,
-      "caution_reason": "Raw diff 4.70pp < 5pt. Market may price COL so short EV+5% is difficult. Score-adj supports quality gap.",
+      "caution_reason": "Score-adj 5.73pp PASSED L1. Home +7%. But conf 66% < 75 AND EV -5.62% < +5%. No GO upgrade even with goalie confirm. Effectively SKIP for bet purposes.",
       "hit": null,
-      "result": null
+      "result": null,
+      "odds_data_2026_04_17": {
+        "home_odds": 1.43,
+        "away_odds": 2.75,
+        "source": "手動試合データ/2026-04-17.json"
+      },
+      "rec_odds_calculated": 1.43,
+      "ev_calculated": -5.62,
+      "rec": "Colorado Avalanche",
+      "rec_odds": 1.43,
+      "ev": -5.62
     },
     {
       "series": "PO_R1_W2",
@@ -627,7 +669,15 @@
       },
       "type_a_watch": "MIN(C3) higher 5v5 xGF% than DAL(C2). MIN win would NOT be xGF%-based upset.",
       "hit": null,
-      "result": null
+      "result": null,
+      "odds_data_2026_04_17": {
+        "home_odds": 1.82,
+        "away_odds": 1.96,
+        "source": "手動試合データ/2026-04-17.json"
+      },
+      "rec_odds_calculated": 1.82,
+      "ev_calculated": -7.18,
+      "skip_note_odds": "Odds for predicted winner (Dallas Stars): 1.82. EV = -7.18%. Below thresholds."
     },
     {
       "series": "PO_R1_W3",
@@ -649,7 +699,15 @@
         "l1_pass": false
       },
       "hit": null,
-      "result": null
+      "result": null,
+      "odds_data_2026_04_17": {
+        "home_odds": 1.64,
+        "away_odds": 2.22,
+        "source": "手動試合データ/2026-04-17.json"
+      },
+      "rec_odds_calculated": 1.64,
+      "ev_calculated": -8.16,
+      "skip_note_odds": "Odds for predicted winner (Vegas Golden Knights): 1.64. EV = -8.16%. Below thresholds."
     },
     {
       "series": "PO_R1_W4",
@@ -673,7 +731,15 @@
       },
       "type_a_watch": "ANA(P3) marginally higher 5v5 xGF% than EDM(P2). ANA win would NOT be xGF%-based upset.",
       "hit": null,
-      "result": null
+      "result": null,
+      "odds_data_2026_04_17": {
+        "home_odds": 1.6,
+        "away_odds": 2.3,
+        "source": "手動試合データ/2026-04-17.json"
+      },
+      "rec_odds_calculated": 1.6,
+      "ev_calculated": -18.4,
+      "skip_note_odds": "Odds for predicted winner (Edmonton Oilers): 1.6. EV = -18.40%. Below thresholds."
     },
     {
       "_comment": "=== NHL RS Final Day 2026-04-16 ET (2026-04-17 JST) - 6 games SKIP (xGF% unavailable) ===",

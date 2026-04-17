@@ -1,0 +1,242 @@
+{
+  "sport": "rugby_union_prod2",
+  "league_name": "French Pro D2",
+  "season": "2025-26",
+  "rule_version": "v1.0",
+  "started": "2026-04-17",
+  "note": "初版データ。2025-26 R26終了時点の標準 WebSearch で部分取得。",
+  "standings_snapshot_partial": {
+    "as_of": "2026-04-17",
+    "source": "prod2.lnr.fr / allrugby.com",
+    "teams_known_pd_per_game": {
+      "Vannes": {
+        "position": 1,
+        "pd": 471,
+        "games": 26,
+        "pd_per_game": 18.12
+      },
+      "Colomiers": {
+        "position": 2,
+        "pd": 283,
+        "pd_per_game": 10.88
+      },
+      "Oyonnax": {
+        "position": "~5",
+        "pd": 240,
+        "pd_per_game": 9.23
+      },
+      "Grenoble": {
+        "position": "~6",
+        "pd": 186,
+        "pd_per_game": 7.15
+      },
+      "Nevers": {
+        "position": 4,
+        "pd": 131,
+        "pd_per_game": 5.04
+      },
+      "Valence Romans": {
+        "position": 3,
+        "pd": 49,
+        "pd_per_game": 1.88
+      }
+    },
+    "data_gap_note": "Unknown: Carcassonne, Brive, Aurillac, Stade Montois, Dax, Soyaux, Beziers, Provence, Oyonnax"
+  },
+  "summary": {
+    "total": 7,
+    "go": 0,
+    "caution": 0,
+    "skip": 3,
+    "pending_data": 4
+  },
+  "games": [
+    {
+      "id": "PROD2-001",
+      "date": "2026-04-18",
+      "match": "Stade Montois vs US Dax",
+      "home": "Stade Montois",
+      "away": "US Dax",
+      "round": "R27 (est)",
+      "tier": "pending_data",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "odds": {
+        "home": 1.33,
+        "away": 3.05
+      },
+      "predicted_winner": "Stade Montois",
+      "prediction_confidence": null,
+      "prediction_basis": "L1 data partial. Favorite @1.33 (Stade Montois). Need PD/G for both teams.",
+      "prediction_hit": null,
+      "status": "pending_data",
+      "skip_reason": null,
+      "l1_data_partial": null,
+      "note": "Initial screening 2026-04-17. Data partial.",
+      "source": "手動試合データ/2026-04-17.json"
+    },
+    {
+      "id": "PROD2-002",
+      "date": "2026-04-18",
+      "match": "Colomiers vs USC Carcassonne",
+      "home": "Colomiers",
+      "away": "USC Carcassonne",
+      "round": "R27 (est)",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "odds": {
+        "home": 1.01,
+        "away": 12.0
+      },
+      "predicted_winner": "Colomiers",
+      "prediction_confidence": null,
+      "prediction_basis": "Structural SKIP: favorite @1.01 too short (max EV -4.05%).",
+      "prediction_hit": null,
+      "status": "pending",
+      "skip_reason": "Structural SKIP: favorite @1.01 too short (max EV -4.05%).",
+      "l1_data_partial": null,
+      "note": "Initial screening 2026-04-17. Data partial.",
+      "source": "手動試合データ/2026-04-17.json"
+    },
+    {
+      "id": "PROD2-003",
+      "date": "2026-04-18",
+      "match": "Brive vs Aurillac",
+      "home": "Brive",
+      "away": "Aurillac",
+      "round": "R27 (est)",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "odds": {
+        "home": 1.05,
+        "away": 8.0
+      },
+      "predicted_winner": "Brive",
+      "prediction_confidence": null,
+      "prediction_basis": "Structural SKIP: favorite @1.05 too short (max EV -0.25%).",
+      "prediction_hit": null,
+      "status": "pending",
+      "skip_reason": "Structural SKIP: favorite @1.05 too short (max EV -0.25%).",
+      "l1_data_partial": null,
+      "note": "Initial screening 2026-04-17. Data partial.",
+      "source": "手動試合データ/2026-04-17.json"
+    },
+    {
+      "id": "PROD2-004",
+      "date": "2026-04-18",
+      "match": "Nevers vs Valence Romans",
+      "home": "Nevers",
+      "away": "Valence Romans",
+      "round": "R27 (est)",
+      "tier": "pending_data",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "odds": {
+        "home": 1.41,
+        "away": 2.7
+      },
+      "predicted_winner": "Nevers",
+      "prediction_confidence": null,
+      "prediction_basis": "L1 data partial. Favorite @1.41 (Nevers). L1 diff 3.16pt FAIL.",
+      "prediction_hit": null,
+      "status": "pending_data",
+      "skip_reason": null,
+      "l1_data_partial": {
+        "home_pd_per_game": 5.04,
+        "away_pd_per_game": 1.88,
+        "diff": 3.16,
+        "threshold": 8,
+        "pass": false
+      },
+      "note": "Initial screening 2026-04-17. Data partial.",
+      "source": "手動試合データ/2026-04-17.json"
+    },
+    {
+      "id": "PROD2-005",
+      "date": "2026-04-18",
+      "match": "Soyaux-Angouleme vs Vannes",
+      "home": "Soyaux-Angouleme",
+      "away": "Vannes",
+      "round": "R27 (est)",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "odds": {
+        "home": 3.7,
+        "away": 1.23
+      },
+      "predicted_winner": "Vannes",
+      "prediction_confidence": null,
+      "prediction_basis": "Structural SKIP: favorite @1.23 too short (max EV +16.85%).",
+      "prediction_hit": null,
+      "status": "pending",
+      "skip_reason": "Structural SKIP: favorite @1.23 too short (max EV +16.85%).",
+      "l1_data_partial": null,
+      "note": "Initial screening 2026-04-17. Data partial.",
+      "source": "手動試合データ/2026-04-17.json"
+    },
+    {
+      "id": "PROD2-006",
+      "date": "2026-04-18",
+      "match": "Beziers vs Provence Rugby",
+      "home": "Beziers",
+      "away": "Provence Rugby",
+      "round": "R27 (est)",
+      "tier": "pending_data",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "odds": {
+        "home": 1.57,
+        "away": 2.25
+      },
+      "predicted_winner": "Beziers",
+      "prediction_confidence": null,
+      "prediction_basis": "L1 data partial. Favorite @1.57 (Beziers). Need PD/G for both teams.",
+      "prediction_hit": null,
+      "status": "pending_data",
+      "skip_reason": null,
+      "l1_data_partial": null,
+      "note": "Initial screening 2026-04-17. Data partial.",
+      "source": "手動試合データ/2026-04-17.json"
+    },
+    {
+      "id": "PROD2-007",
+      "date": "2026-04-18",
+      "match": "Grenoble vs Oyonnax",
+      "home": "Grenoble",
+      "away": "Oyonnax",
+      "round": "R27 (est)",
+      "tier": "pending_data",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "odds": {
+        "home": 1.49,
+        "away": 2.45
+      },
+      "predicted_winner": null,
+      "prediction_confidence": null,
+      "prediction_basis": "L1 inverted data. Oyonnax(+9.23) higher PD/G but away underdog @2.45. Need deeper look.",
+      "prediction_hit": null,
+      "status": "pending_data",
+      "skip_reason": null,
+      "l1_data_partial": {
+        "home_pd_per_game": 7.15,
+        "away_pd_per_game": 9.23,
+        "diff": 2.08,
+        "threshold": 8,
+        "pass": false
+      },
+      "note": "Initial screening 2026-04-17. Data partial.",
+      "source": "手動試合データ/2026-04-17.json"
+    }
+  ]
+}

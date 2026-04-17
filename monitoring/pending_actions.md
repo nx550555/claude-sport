@@ -45,6 +45,13 @@
 | PA022 | NHL | PA014 TBL vs MTL: Lightning series -275 ≈ML1.36でmin 1.38未達の可能性 → G1オッズ精査必要 | IN_PROGRESS | 高 | 4/18試合当日 |
 | PA023 | ATP | Munich QF 4試合(4/17)結果確認 — 全SKIP予測(Cobolli/Zverev/Fonseca/Shapovalov)。特に Shapovalov vs Molcan は P013/P014 候補関連 | WAITING | 高 | 4/17試合後 |
 | PA024 | ATP | Barcelona QF 4試合(4/17)結果確認 — 全SKIP予測(Medjedovic/Rublev/Musetti/Jodar)。Jódar P010 候補関連 | WAITING | 高 | 4/17試合後 |
+| PA025 | WTA | Rouen QF 結果確認: 手動データ(2026-04-17.json)でPodrez d. Boulter(upset 2.55)報告あり。WebSearchインデックス遅延→次セッションで一次確認後に記録 | WAITING | 高 | 次セッション |
+| PA026 | ATP | Munich QF 手動データ(2026-04-17.json)完了分報告: Fonseca d. Shelton / Shapovalov d. Molcan。WebSearchインデックス遅延→次セッションで一次確認後に記録 | WAITING | 高 | 次セッション |
+| PA027 | WTA | Stuttgart QF 手動データ(2026-04-17.json)完了分報告: Swiatek d. Andreeva / Rybakina d. Fernandez。WebSearchインデックス遅延→次セッションで一次確認後に記録 | WAITING | 高 | 次セッション |
+| PA028 | Premiership | Exeter-Northampton/Sale-Saracens 2試合のPD/G完全取得→L1スクリーニング | PENDING | 中 | 4/18試合前 |
+| PA029 | Top 14 | Bayonne-Pau/Castres-Toulouse/Racing-StadeFrancais 3試合のPD/G完全取得→L1スクリーニング | PENDING | 中 | 4/18-20試合前 |
+| PA030 | Pro D2 | Stade Montois-Dax/Nevers-Valence/Beziers-Provence/Grenoble-Oyonnax 4試合のPD/G完全取得→L1スクリーニング | PENDING | 中 | 4/18試合前 |
+| PA031 | NHL | TBL vs MTL G1: min odds 1.38 PASSED (now 1.53). 信頼度76%/EV+16.28%→goalie confirmed次第でCAUTION→GO昇格候補。dailyfaceoff 4/18 morning確認要 | IN_PROGRESS | 最高 | 4/18試合当日 |
 
 ---
 

@@ -1,0 +1,65 @@
+{
+  "sport": "rugby_union_prod2",
+  "league_name": "French Pro D2 Rugby (second division)",
+  "rule_version": "v1.0",
+  "created": "2026-04-17",
+  "derived_from": "core/rules_top14.json (second-division variant)",
+  "season_context": "2025-26 season. Regular season R26 completed by mid-April. R27-30 + playoffs remaining.",
+  "note": "初版ルール。Top 14 の第二部。試合数が多く（R30まで）サンプルサイズ大。プロモーション争いが終盤の動機要因。",
+
+  "screening": {
+    "L1_primary": {
+      "metric": "Points Differential per Game (PD/G)",
+      "source": "prod2.lnr.fr/classement or allrugby.com/competitions/pro-d2/classement.html",
+      "threshold": "差 8pt 以上でL1 PASS",
+      "threshold_note": "Top 14 より閾値高め(8pt)。PD/G差が出やすいリーグ特性（上位-下位差大）"
+    },
+    "L2_form": "直近5試合の勝敗＋プロモーション動機",
+    "L3_stats": "Try bonus rate, losing bonus点",
+    "L4_factors": "Injury, travel (国土広い), home vs away PD差"
+  },
+
+  "thresholds": {
+    "go": "confidence >= 75% AND EV > +5% AND L1 PASS AND 主力欠場なし",
+    "caution": "L1 PASS かつ confidence >= 70% 但し上記GO未達",
+    "skip": "上記以外"
+  },
+
+  "adjustments": {
+    "PD001_home_advantage": {
+      "rule": "ホームチームに +5% 信頼度補正",
+      "note": "Top 14 同様強い。地方クラブのホーム観客力"
+    },
+    "PD002_promotion_motivation": {
+      "rule": "トップ2圏内チーム + トップ6圏内チーム（プレーオフボーダー）は終盤試合で+3% 動機補正",
+      "note": "Top 14 昇格はフランス rugby の最大商業的motivation"
+    },
+    "PD003_relegation_avoidance": {
+      "rule": "降格ゾーン逃れ争いのチームも +3% 動機補正",
+      "note": "Nationale降格回避"
+    },
+    "PD004_travel_fatigue": {
+      "rule": "前週遠征 + 長距離移動の場合 -3%",
+      "note": "フランス国土広く移動負担大"
+    }
+  },
+
+  "tournament_context": {
+    "regular_season": "R1-R30 (Aug-May)",
+    "playoffs": "Access to Top 14 via top 6 → QF + SF + F (May-June)",
+    "note": "1st直行昇格なし。トップ6プレーオフ勝者が昇格"
+  },
+
+  "key_dependency": [
+    "prod2.lnr.fr/classement (official LNR Pro D2)",
+    "allrugby.com/competitions/pro-d2/classement.html (alternate)"
+  ],
+
+  "rules_log": [
+    {
+      "version": "v1.0",
+      "date": "2026-04-17",
+      "change": "Initial version. L1 threshold 8pt (higher than Top 14 due to larger spread in this league)."
+    }
+  ]
+}

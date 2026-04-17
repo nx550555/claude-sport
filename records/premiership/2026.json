@@ -1,0 +1,158 @@
+{
+  "sport": "rugby_union_premiership",
+  "league_name": "English Premiership Rugby",
+  "season": "2025-26",
+  "rule_version": "v1.0",
+  "started": "2026-04-17",
+  "note": "初版データ。2025-26シーズン末期R14前後。PD/G標準で未取得のチーム多いため、暫定状態で登録。標準データはrugbypass.com/premiership/standings/から追取要。",
+  "standings_snapshot_partial": {
+    "as_of": "2026-04-17 WebSearch partial",
+    "source": "rugbypass.com / Wikipedia",
+    "teams_known": {
+      "Northampton Saints": {
+        "position": 1,
+        "pd_total": 113,
+        "games_played": 12,
+        "pd_per_game": 9.4
+      },
+      "Bath": {
+        "position": 2,
+        "pd_per_game": "unknown"
+      },
+      "Leicester Tigers": {
+        "position": 3,
+        "pd_per_game": "unknown"
+      }
+    },
+    "data_gap_note": "全チームPD/G未取得。次回追加WebSearch要。"
+  },
+  "summary": {
+    "total": 5,
+    "go": 0,
+    "caution": 0,
+    "skip": 3,
+    "pending_data": 2
+  },
+  "games": [
+    {
+      "id": "PREM-001",
+      "date": "2026-04-18",
+      "match": "Bristol Bears vs Gloucester",
+      "home": "Bristol Bears",
+      "away": "Gloucester",
+      "round": "R14-15 (est)",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "odds": {
+        "home": 1.09,
+        "away": 6.0
+      },
+      "predicted_winner": "Bristol Bears",
+      "prediction_confidence": null,
+      "prediction_basis": "Structural SKIP: favorite @1.09 too short (max possible EV at 95% conf: +3.55%).",
+      "prediction_hit": null,
+      "status": "pending",
+      "skip_reason": "Structural SKIP: favorite @1.09 too short (max possible EV at 95% conf: +3.55%).",
+      "note": "Initial screening 2026-04-17 (data: 手動試合データ/2026-04-17.json). Full L1 requires PD/G for all teams.",
+      "source": "手動試合データ/2026-04-17.json"
+    },
+    {
+      "id": "PREM-002",
+      "date": "2026-04-18",
+      "match": "Leicester Tigers vs Newcastle Falcons",
+      "home": "Leicester Tigers",
+      "away": "Newcastle Falcons",
+      "round": "R14-15 (est)",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "odds": {
+        "home": 1.01,
+        "away": 12.0
+      },
+      "predicted_winner": "Leicester Tigers",
+      "prediction_confidence": null,
+      "prediction_basis": "Structural SKIP: favorite @1.01 too short (max possible EV at 95% conf: -4.05%).",
+      "prediction_hit": null,
+      "status": "pending",
+      "skip_reason": "Structural SKIP: favorite @1.01 too short (max possible EV at 95% conf: -4.05%).",
+      "note": "Initial screening 2026-04-17 (data: 手動試合データ/2026-04-17.json). Full L1 requires PD/G for all teams.",
+      "source": "手動試合データ/2026-04-17.json"
+    },
+    {
+      "id": "PREM-003",
+      "date": "2026-04-18",
+      "match": "Exeter Chiefs vs Northampton Saints",
+      "home": "Exeter Chiefs",
+      "away": "Northampton Saints",
+      "round": "R14-15 (est)",
+      "tier": "pending_data",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "odds": {
+        "home": 1.72,
+        "away": 2.0
+      },
+      "predicted_winner": null,
+      "prediction_confidence": null,
+      "prediction_basis": "L1 data incomplete (Exeter PD/G unknown). Northampton known +9.4/G. Northampton @2.0 (away) vs Exeter @1.72 (home). Need full PD/G standings.",
+      "prediction_hit": null,
+      "status": "pending_data",
+      "skip_reason": null,
+      "note": "Initial screening 2026-04-17 (data: 手動試合データ/2026-04-17.json). Full L1 requires PD/G for all teams.",
+      "source": "手動試合データ/2026-04-17.json"
+    },
+    {
+      "id": "PREM-004",
+      "date": "2026-04-19",
+      "match": "Bath vs Harlequins",
+      "home": "Bath",
+      "away": "Harlequins",
+      "round": "R14-15 (est)",
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "odds": {
+        "home": 1.03,
+        "away": 9.0
+      },
+      "predicted_winner": "Bath",
+      "prediction_confidence": null,
+      "prediction_basis": "Structural SKIP: favorite @1.03 too short (max possible EV at 95% conf: -2.15%).",
+      "prediction_hit": null,
+      "status": "pending",
+      "skip_reason": "Structural SKIP: favorite @1.03 too short (max possible EV at 95% conf: -2.15%).",
+      "note": "Initial screening 2026-04-17 (data: 手動試合データ/2026-04-17.json). Full L1 requires PD/G for all teams.",
+      "source": "手動試合データ/2026-04-17.json"
+    },
+    {
+      "id": "PREM-005",
+      "date": "2026-04-19",
+      "match": "Sale Sharks vs Saracens",
+      "home": "Sale Sharks",
+      "away": "Saracens",
+      "round": "R14-15 (est)",
+      "tier": "pending_data",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "odds": {
+        "home": 3.2,
+        "away": 1.3
+      },
+      "predicted_winner": "Saracens",
+      "prediction_confidence": null,
+      "prediction_basis": "L1 data incomplete. Favorite @1.3 (Saracens). Need PD/G standings.",
+      "prediction_hit": null,
+      "status": "pending_data",
+      "skip_reason": null,
+      "note": "Initial screening 2026-04-17 (data: 手動試合データ/2026-04-17.json). Full L1 requires PD/G for all teams.",
+      "source": "手動試合データ/2026-04-17.json"
+    }
+  ]
+}

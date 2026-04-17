@@ -1,4 +1,4 @@
-﻿{
+{
   "sport": "nrl",
   "season": "2026",
   "bet_type": "Head-to-Head (H2H)",
@@ -117,9 +117,9 @@
       "round": 7,
       "tier": "go",
       "rec": "NZ Warriors",
-      "rec_odds": 1.25,
-      "ev": 13.4,
-      "odds_update_note": "2026-04-16: Updated from @1.22 to @1.25. EV recalculated: (0.907 * 1.25) - 1 = +13.4%.",
+      "rec_odds": 1.23,
+      "ev": 11.56,
+      "odds_update_note": "2026-04-16: Updated from @1.22 to @1.25. EV recalculated: (0.907 * 1.25) - 1 = +13.4%. | 2026-04-17: Updated from @1.25 to @1.23. EV recalculated: (0.907 * 1.23) - 1 = +11.56%. GO tier maintained.",
       "confidence": 90.7,
       "l1_data": {
         "NZW_PD_per_game": 8.7,
@@ -134,7 +134,8 @@
         "GCT": "No changes to 19-man squad after big win over Eels. Klese Haas in extended squad (returning from leg injury). Squad stable."
       },
       "team_list_assessment": "Warriors: Capewell復帰はプラス要因。軽傷者数名は懸念あるが主力に影響なし。Titans: 変更なし、安定継続。GO維持 (NZW PD/G+8.7 vs GCT -8.0, diff 16.7)。",
-      "go_confirmed": true
+      "go_confirmed": true,
+      "odds_updated_at": "2026-04-17"
     },
     {
       "date": "2026-04-17",
@@ -195,7 +196,10 @@
         "rule": "R012_early_season",
         "l1_pass": false
       },
-      "odds": {"Cowboys": 1.5, "Manly": 2.42},
+      "odds": {
+        "Cowboys": 1.5,
+        "Manly": 2.42
+      },
       "hit": null,
       "result": null
     },
@@ -218,7 +222,10 @@
         "rule": "R012_early_season",
         "l1_pass": false
       },
-      "odds": {"Raiders": 2.06, "Storm": 1.68},
+      "odds": {
+        "Raiders": 2.06,
+        "Storm": 1.68
+      },
       "hit": null,
       "result": null
     },
@@ -241,7 +248,10 @@
         "rule": "R012_early_season",
         "l1_pass": false
       },
-      "odds": {"Roosters": 1.22, "Knights": 3.8},
+      "odds": {
+        "Roosters": 1.22,
+        "Knights": 3.8
+      },
       "market_vs_model_note": "Roosters are 1.22 market favorite but Knights have higher PD/G. Possible roster/HCA factor overriding raw stats.",
       "hit": null,
       "result": null
@@ -266,9 +276,125 @@
         "l1_pass": true
       },
       "ev_calc": "(0.767 * 1.19) - 1 = -8.7%",
-      "odds": {"Eels": 4.2, "Bulldogs": 1.19},
+      "odds": {
+        "Eels": 4.2,
+        "Bulldogs": 1.19
+      },
       "hit": null,
       "result": null
+    },
+    {
+      "date": "2026-04-23",
+      "match": "Wests Tigers vs Canberra Raiders",
+      "home": "Wests Tigers",
+      "away": "Canberra Raiders",
+      "round": 8,
+      "tier": "caution",
+      "rec": null,
+      "rec_odds": 1.51,
+      "ev": null,
+      "confidence": 68,
+      "caution_reason": "L1 PASS (WST -4.1 vs CAN -11.2 = diff 7.1pt > 6pt threshold). WST home +3%. Market implied 66.2%. Est conf 68% (< 75 GO threshold). EV(@1.51) ≈ +2.7% (< +5% GO threshold). CAUTION pending R8 team list (Tuesday team lists due 4/21).",
+      "l1_metric": "Points Differential/Game",
+      "l1_data": {
+        "WST_PD_per_game": -4.1,
+        "CAN_PD_per_game": -11.2,
+        "diff": 7.1,
+        "threshold": 6,
+        "pass": true
+      },
+      "adjustments": {
+        "home_advantage": "+3% WST (R005)",
+        "fatigue": "TBD post team list"
+      },
+      "standings_note": "WST 3-4, CAN 1-6 (最下位争い)",
+      "estimated_win_pct": 68,
+      "predicted_winner": "Wests Tigers",
+      "prediction_confidence": 68,
+      "prediction_basis": "PD/G差7.1pt (WST -4.1 vs CAN -11.2)。WST home Leichhardt。Capewell復帰(NZW)情報別件。R8 team list 4/21公開待ち。",
+      "prediction_hit": null,
+      "status": "pending",
+      "source": "手動試合データ/2026-04-17.json",
+      "rules_applied": [
+        "NRL_v1.0",
+        "R001_PD_per_game_6pt_threshold",
+        "R005_home_advantage"
+      ],
+      "note": "R8 first match (4/23 Leichhardt). Data: 手動試合データ/2026-04-17.json. Tigers home, 2-match win streak (d. Storm R5, d. Broncos R7 assumed). Raiders struggling."
+    },
+    {
+      "date": "2026-04-24",
+      "match": "North Queensland Cowboys vs Cronulla-Sutherland Sharks",
+      "home": "North Queensland Cowboys",
+      "away": "Cronulla-Sutherland Sharks",
+      "round": 8,
+      "tier": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "confidence": 55,
+      "skip_reason": "L1 FAIL: COW -2.3 vs CRO ≈-5.14 (7試合PD -36 per zerotackle.com), diff 2.84pt < 6pt threshold. Market has Sharks favored @1.71 despite weaker L1 – market-model discrepancy. SKIP per L1 principle.",
+      "l1_metric": "Points Differential/Game",
+      "l1_data": {
+        "COW_PD_per_game": -2.3,
+        "CRO_PD_per_game": -5.14,
+        "diff": 2.84,
+        "threshold": 6,
+        "pass": false
+      },
+      "predicted_winner": "North Queensland Cowboys",
+      "prediction_confidence": 55,
+      "prediction_basis": "COW PD/G slight advantage (-2.3 vs -5.14). COW home. Market inversion (Sharks favored) noted - potential L4 factor (Cronulla squad quality?) not captured by PD/G.",
+      "prediction_hit": null,
+      "status": "pending",
+      "source": "手動試合データ/2026-04-17.json",
+      "rules_applied": [
+        "NRL_v1.0",
+        "R001_PD_per_game_6pt_threshold",
+        "GEN002_market_divergence"
+      ],
+      "note": "Market-L1 divergence (Sharks favored @1.71 despite worse PD/G). SKIP per L1, but monitor result for Type A analysis."
+    },
+    {
+      "date": "2026-04-24",
+      "match": "Brisbane Broncos vs Canterbury Bulldogs",
+      "home": "Brisbane Broncos",
+      "away": "Canterbury Bulldogs",
+      "round": 8,
+      "tier": "caution",
+      "rec": null,
+      "rec_odds": 1.67,
+      "ev": null,
+      "confidence": 70,
+      "caution_reason": "L1 PASS (BRI +10.0 vs CBY +1.0 = diff 9.0pt > 6pt threshold). BRI home Suncorp +3%. Reynolds returned R7 (+2%). Market implied 59.9%, est conf 70%. EV(@1.67) ≈ +16.9% > +5% but conf 70% < 75% GO threshold → CAUTION. Monitor R8 team list (Carrigan suspension status).",
+      "l1_metric": "Points Differential/Game",
+      "l1_data": {
+        "BRI_PD_per_game": 10.0,
+        "CBY_PD_per_game": 1.0,
+        "diff": 9.0,
+        "threshold": 6,
+        "pass": true
+      },
+      "adjustments": {
+        "home_advantage": "+3% BRI (R005 Suncorp)",
+        "reynolds_return": "+2% BRI (R7 return from adductor confirmed)",
+        "carrigan_suspension": "TBD - check R8 team list 4/21",
+        "bulldogs_thompson": "+0% CBY (Thompson back from calf R7, neutral absorbed)"
+      },
+      "standings_note": "BRI 2位 PD/G +10.0, CBY 6位 PD/G +1.0",
+      "estimated_win_pct": 70,
+      "predicted_winner": "Brisbane Broncos",
+      "prediction_confidence": 70,
+      "prediction_basis": "PD/G差9pt (BRI +10.0 vs CBY +1.0)。BRI home Suncorp。Reynolds復帰(R7)で攻撃力+。CBY Leo Thompson復帰は限定的。",
+      "prediction_hit": null,
+      "status": "pending",
+      "source": "手動試合データ/2026-04-17.json",
+      "rules_applied": [
+        "NRL_v1.0",
+        "R001_PD_per_game_6pt_threshold",
+        "R005_home_advantage"
+      ],
+      "note": "R8 match (4/24 Suncorp). Data: 手動試合データ/2026-04-17.json. Broncos strong form. Carrigan suspension status to verify."
     }
   ],
   "screening_log": [

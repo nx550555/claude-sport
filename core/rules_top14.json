@@ -1,0 +1,68 @@
+{
+  "sport": "rugby_union_top14",
+  "league_name": "French Top 14 Rugby",
+  "rule_version": "v1.0",
+  "created": "2026-04-17",
+  "derived_from": "core/rules_superrugby.json (template baseline)",
+  "season_context": "2025-26 season. Regular season R20 completed by mid-April.",
+  "note": "初版ルール。SuperRugby rules を雛形にフランスTop 14用に調整。L1=PD/G, threshold 7pt (同一)。",
+
+  "screening": {
+    "L1_primary": {
+      "metric": "Points Differential per Game (PD/G)",
+      "source": "rugbypass.com/top-14/standings/ or all.rugby/tournament/top-14/table",
+      "threshold": "差 7pt 以上でL1 PASS"
+    },
+    "L2_form": "直近3試合の勝敗＋対戦相手強度",
+    "L3_stats": "Try bonus rate, set-piece efficiency",
+    "L4_factors": "Injury reports, Champions Cup fatigue, derby motivation"
+  },
+
+  "thresholds": {
+    "go": "confidence >= 75% AND EV > +5% AND L1 PASS AND 主力欠場なし",
+    "caution": "L1 PASS かつ confidence >= 70% 但し上記GO未達",
+    "skip": "上記以外"
+  },
+
+  "adjustments": {
+    "T001_home_advantage": {
+      "rule": "ホームチームに +5% 信頼度補正",
+      "note": "Top 14 はホーム優位が非常に強い（フランス各地のローカルパッション）。英Prem より強め設定。"
+    },
+    "T002_european_fatigue": {
+      "rule": "直前週にChampions Cup/Challenge Cup試合（特に遠征）で消耗した場合 -5%",
+      "note": "フランス勢は欧州杯深掘り傾向"
+    },
+    "T003_derby_factor": {
+      "rule": "地域ダービー（Stade Francais vs Racing 92, Toulouse vs Castres 等）ではUPSET率が通常より高い",
+      "note": "L1 margin < 10pt の場合 CAUTION格下げ検討"
+    },
+    "T004_small_sample_early_season": {
+      "rule": "R5 以下の試合は信頼度上限70%"
+    },
+    "T005_national_team_absent": {
+      "rule": "フランス代表招集期間（Six Nations/Tournament of Champions）は主力欠場多く信頼度上限75%",
+      "note": "現在はWindowオフなので影響なし"
+    }
+  },
+
+  "tournament_context": {
+    "regular_season": "R1-R26 (Aug-May)",
+    "playoffs": "QF + SF + F (June)",
+    "champions_cup_overlap": "Dec/Jan knockout rounds"
+  },
+
+  "key_dependency": [
+    "rugbypass.com/top-14/standings/ (primary)",
+    "all.rugby/tournament/top-14/table (alternate)",
+    "lnr.fr (official LNR site, French)"
+  ],
+
+  "rules_log": [
+    {
+      "version": "v1.0",
+      "date": "2026-04-17",
+      "change": "Initial version. Home advantage +5% (vs +3% in other leagues) due to strong French home factor."
+    }
+  ]
+}
