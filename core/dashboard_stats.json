@@ -108,8 +108,11 @@
       "hit_count": 0,
       "hit_rate": null,
       "pnl": 0,
-      "pending_count": 27,
-      "tier": "basic"
+      "pending_count": 0,
+      "screened_count": 27,
+      "all_skipped": true,
+      "tier": "basic",
+      "note": "RS最終週27試合screening全SKIP (Basic閾値 conf>=78/EV>+7 未達)。Calder Cup PO R1 (4/22〜) で再評価予定"
     }
   },
   "overview": {
@@ -118,8 +121,8 @@
     "total_hits": 19,
     "hit_rate": 0.792,
     "total_pnl": 4.1,
-    "total_pending": 32,
-    "pending_breakdown": "UFL x1 + NRL x1 + NBA x1 + SL x2",
+    "total_pending": 5,
+    "pending_breakdown": "UFL x1 + NRL x1 + NBA x1 + SL x2 (AHL 27件はスクリーニング済・全SKIP・待機中ではない)",
     "by_tier_separation": {
       "advanced": {
         "hit_rate": 0.8,
@@ -133,7 +136,8 @@
         "hits": 3,
         "confirmed": 4,
         "pnl": 0.51,
-        "pending": 4
+        "pending": 4,
+        "ahl_screened_all_skip": 27
       },
       "overall": {
         "hit_rate": 0.792,
@@ -164,7 +168,7 @@
       "confirmed_count": 4,
       "hit_count": 3,
       "pnl": 0.51,
-      "pending_count": 31,
+      "pending_count": 4,
       "sports": [
         "ufl",
         "nrl",
@@ -175,7 +179,8 @@
         "prod2",
         "ahl"
       ],
-      "hit_rate": 0.75
+      "hit_rate": 0.75,
+      "note": "AHL 27件はスクリーニング済・全SKIPのためpendingに含まない（スクリーニング定義を厳格化: pending = GO/CAUTION の未確定のみ）"
     }
   }
 }
