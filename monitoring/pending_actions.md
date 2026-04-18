@@ -35,7 +35,7 @@
 | PA008 | NRL | R7 GO2件（Warriors 4/18/Broncos 4/18）・CAUTION2件の結果確認 | WAITING | 中 | 4/18〜19試合後 |
 | PA009 | NBA | Play-in（4/15-16）・PO R1（4/19〜）全SKIP確認済み。結果モニタリングのみ | WAITING | 低 | 継続 |
 | PA010 | MC2026 | F Alcaraz vs Sinner 結果確認（SKIP・観戦のみ） | DONE | 低 | 完了 4/14 Sinner 7-6(5) 6-3 |
-| PA011 | システム | 【フェーズ移行T3発動】実装済みルール3件達成→Phase2移行可否をユーザーに確認 | PENDING | 中 | 確認待ち |
+| PA011 | システム | 【完了 2026-04-18】Phase1→Phase2 移行実施。UPSET_PICK命名（旧GAMBLE_BET）+ stake 1u統一 + GEN005衝突解消ルール制定 | DONE | 中 | 完了 2026-04-18 |
 | PA012 | WTA | Stuttgart Zhang vs Noskova R1 結果確認 | DONE | 高 | 完了 4/16 Noskova d. Zhang 5-7 6-1 6-4 (予測HIT/SKIP nobet) |
 | PA013 | ATP | Barcelona R2 Musetti vs Moutet GO @1.37 結果確認 | DONE | 高 | 完了 4/17 Musetti d. Moutet 6-3 6-4 (GO HIT +0.37u) |
 | PA018 | UFL | W4 Louisville vs Houston GO @1.65 結果確認 | DONE | 高 | 完了 4/17 Louisville 24-22 OT (HIT +0.65u) |

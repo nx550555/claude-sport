@@ -328,7 +328,7 @@ body.lang-en .name-en { display: inline; }
       <div class="sport-card">
         <div class="sport-card-header" style="color:#f9a8d4;">🎾 WTA Tennis <span class="tier-badge tier-adv">🅰 Advanced</span> <span class="rule-ver">v1.0</span></div>
         <div class="sport-metrics">
-          <div class="sm"><div class="sm-label">GB推奨</div><div class="sm-val">3</div></div>
+          <div class="sm"><div class="sm-label">GO回数</div><div class="sm-val">3</div></div>
           <div class="sm"><div class="sm-label">結果済</div><div class="sm-val">3</div></div>
           <div class="sm"><div class="sm-label">的中</div><div class="sm-val">2</div></div>
           <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#e3b341;">66.7%</div></div>
@@ -1917,7 +1917,7 @@ body.lang-en .name-en { display: inline; }
     (1) 2026-04-17 改修: セッション別行を廃止、リーグ別9行に統合（ユーザー要望）。
     (2) ATP MC2026 の受信数は当時の記録が不完全なため仮値 20（R32-F計）含む。
     (3) 各リーグの "~" 値は複数セッション累積の推定値。正確な受信数は records/*.json の predictions 件数で算出可。
-    (4) GB = GAMBLE_BET（高オッズアンダードッグ賭け・別stake管理）。
+    (4) GB = 旧GAMBLE_BET / 現UPSET_PICK (Phase2・2026-04-18改名)。アップセット予測・stake 1u統一。
     (5) 新リーグ3種は 19 試合受信のうち 9 SKIP（短オッズ）＋ 10 pending_data（PD/G データ取得待ち）。
   </div>
 </div>
@@ -2217,12 +2217,12 @@ body.lang-en .name-en { display: inline; }
         <div class="tg-item">
           <div class="tg-dot" style="background:#f97316;box-shadow:0 0 0 3px rgba(249,115,22,.3);"></div>
           <div class="tg-date">2026-04-13 &nbsp;|&nbsp; 最新</div>
-          <div class="tg-title">🎾 WTA Stuttgart R1 — GB001 Ostapenko HIT！GAMBLE_BET初回的中</div>
-          <div class="tg-desc">Stuttgart indoor clay R1 10/12試合完了（残2試合は4/15）。UPSET 2/10確認済（20.0%）。GB001: Ostapenko def. Andreeva(6) @3.15 HIT +0.538u（stake 0.25u）。UF01（indoor clay速め）+UFT01（defending champion）の2因子が的中に貢献。今週の全ATP/WTA試合SKIP（信頼度・EV閾値未達）。累積EV+2.671。</div>
+          <div class="tg-title">🎾 WTA Stuttgart R1 — GB001 Ostapenko HIT！UPSET_PICK初回的中（旧GAMBLE_BET命名）</div>
+          <div class="tg-desc">Stuttgart indoor clay R1 10/12試合完了。UPSET 2/10確認済（20.0%）。GB001: Ostapenko def. Andreeva(6) @3.15 HIT +0.538u（当時stake 0.25u・現Phase2からは1u統一）。UF01（indoor clay速め）+UFT01（defending champion）の2因子が的中に貢献。当時はPhase1の「GAMBLE_BET」枠だったが、2026-04-18のPhase2移行で「UPSET_PICK」に改名。累積EV+2.671。</div>
           <div class="tg-metrics">
             <span class="tg-metric" style="color:#3fb950;">通算: 19/24 (79.2%) [4/17時点]</span>
             <span class="tg-metric" style="color:#3fb950;">累積EV +4.10u</span>
-            <span class="tg-metric" style="color:#f97316;">GAMBLE_BET W009初回HIT</span>
+            <span class="tg-metric" style="color:#f97316;">UPSET_PICK W009初回HIT（当時GAMBLE_BET命名）</span>
           </div>
         </div>
         <div class="tg-item">
@@ -2923,17 +2923,17 @@ body.lang-en .name-en { display: inline; }
   <div class="section">
     <div class="section-title">予測システム 3段階フレームワーク</div>
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:8px;">
-      <div style="background:var(--surface);border:2px solid #58a6ff;border-radius:10px;padding:16px;">
-        <div style="font-size:11px;font-weight:700;color:#58a6ff;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">▶ 第一段階（現在）</div>
+      <div style="background:var(--surface);border:2px solid var(--border);border-radius:10px;padding:16px;opacity:.75;">
+        <div style="font-size:11px;font-weight:700;color:#58a6ff;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">✓ 第一段階（完了 2026-04-18）</div>
         <div style="font-size:14px;font-weight:700;margin-bottom:6px;">強い側が確実に勝つことを読み取る</div>
-        <div style="font-size:12px;color:var(--text2);line-height:1.7;">cElo・xGF%・PDなどの強さ指標で優位側を特定し、確信度≥75%でGO推奨。外れた場合も要因を蓄積してルール改善へ。</div>
-        <div style="margin-top:10px;font-size:11px;background:#0c2d4e;border:1px solid #1f6feb;border-radius:4px;padding:6px 8px;color:#79c0ff;">現在の的中率: <strong style="color:#3fb950;">79.2% (19/24)</strong> +4.10u</div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.7;">Phase1最終成績: 79.2% (19/24) / +4.10u。T3達成（実装ルール5件）で Phase2 に移行。</div>
+        <div style="margin-top:10px;font-size:11px;background:#0c2d4e;border:1px solid #1f6feb;border-radius:4px;padding:6px 8px;color:#79c0ff;">最終的中率: <strong style="color:#3fb950;">79.2% (19/24)</strong> / +4.10u</div>
       </div>
-      <div style="background:var(--surface);border:2px solid #d29922;border-radius:10px;padding:16px;">
-        <div style="font-size:11px;font-weight:700;color:#d29922;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">◎ 第二段階（T3達成・移行可）</div>
-        <div style="font-size:14px;font-weight:700;margin-bottom:6px;">逆転する可能性を想定する</div>
-        <div style="font-size:12px;color:var(--text2);line-height:1.7;">Type A（SKIP upset）13件 + Type B（予測MISS）5件を記録。実装ルール5件達成でT3クリア、ユーザー判断待ち。</div>
-        <div style="margin-top:10px;font-size:11px;background:#2d2100;border:1px solid #d29922;border-radius:4px;padding:6px 8px;color:#d29922;">T3達成（実装ルール5件）→ 移行確認中 (PA011)</div>
+      <div style="background:var(--surface);border:2px solid #3fb950;border-radius:10px;padding:16px;">
+        <div style="font-size:11px;font-weight:700;color:#3fb950;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">▶ 第二段階（現在運用中）</div>
+        <div style="font-size:14px;font-weight:700;margin-bottom:6px;">逆転する可能性を積極的に予測する</div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.7;">UPSET_PICK トラック始動（旧GAMBLE_BETから改名・stake 1u統一）。UF因子3個以上+市場乖離≥15pp でアンダードッグ推奨。GEN005衝突解消ルールで GO と排他。</div>
+        <div style="margin-top:10px;font-size:11px;background:#0d2d1f;border:1px solid #3fb950;border-radius:4px;padding:6px 8px;color:#3fb950;">2026-04-18 Phase2移行 / Type A 13件 + Type B 5件 記録蓄積中</div>
       </div>
       <div style="background:var(--surface);border:2px solid var(--border);border-radius:10px;padding:16px;opacity:.5;">
         <div style="font-size:11px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">◇ 第三段階（将来）</div>
@@ -2988,8 +2988,8 @@ body.lang-en .name-en { display: inline; }
         <div style="font-size:12px;line-height:1.7;">実力差が大きい試合（差≥200pt）では外部要因が重ならない限り本命が勝つ傾向。強さ指標の絶対差が信頼できるゾーンの特定が第一優先。</div>
       </div>
       <div style="background:#1a2640;border:1px solid #1f6feb40;border-radius:8px;padding:12px;">
-        <div style="font-size:11px;font-weight:700;color:#f97316;margin-bottom:4px;">📋 GAMBLE_BET枠（1件発動済）</div>
-        <div style="font-size:12px;line-height:1.7;">条件：実力差ボーダー＋UF2つ以上＋高オッズ。<strong style="color:#3fb950;">GB001 HIT +0.538u</strong>（W009初回発動的中）。</div>
+        <div style="font-size:11px;font-weight:700;color:#f97316;margin-bottom:4px;">📋 UPSET_PICK（旧GAMBLE_BET・2026-04-18改名）</div>
+        <div style="font-size:12px;line-height:1.7;">「ギャンブル」ではなく「分析による逆張り予測」。Phase2移行（4/18）で stake 1u 統一・UF因子3個以上/EV≥+15% に条件厳格化。<br>過去実績: <strong style="color:#3fb950;">GB001 HIT +0.538u</strong>（旧W009発動 stake 0.25u時代）。</div>
       </div>
     </div>
   </div>
@@ -3231,7 +3231,7 @@ body.lang-en .name-en { display: inline; }
     </div>
   </div>
 
-  <!-- ルール改善候補 + GAMBLE_BET定義 -->
+  <!-- ルール改善候補 + UPSET_PICK定義（Phase2以降） -->
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
     <div class="chart-wrap" style="margin-bottom:0;">
       <div class="chart-title">ルール改善候補（証拠蓄積中）</div>
@@ -3261,21 +3261,24 @@ body.lang-en .name-en { display: inline; }
     </div>
 
     <div class="chart-wrap" style="margin-bottom:0;">
-      <div class="chart-title">GAMBLE_BET枠（別stake管理）</div>
+      <div class="chart-title">UPSET_PICK（Phase2以降）— 市場の本命誤りを突く</div>
       <div style="background:#1a2640;border:1px solid #1f6feb40;border-radius:8px;padding:12px;margin-bottom:10px;">
-        <div style="font-size:11px;font-weight:700;color:#58a6ff;margin-bottom:8px;">発動条件（共通）</div>
-        <div style="font-size:12px;color:var(--text2);line-height:1.8;">① 実力差ボーダーゾーン（UF03該当）<br>② アップセット要因 2つ以上重複<br>③ アンダードッグオッズが高い</div>
+        <div style="font-size:11px;font-weight:700;color:#58a6ff;margin-bottom:8px;">発動条件（2026-04-18 厳格化）</div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.8;">① UF因子 <strong style="color:var(--text);">3個以上</strong> 重複<br>② 市場インプライド確率との乖離 <strong style="color:var(--text);">≥ 15pp</strong><br>③ 推定アンダードッグ勝率 ≥ 35%<br>④ アンダードッグオッズ ≥ 2.50<br>⑤ EV ≥ +15%</div>
       </div>
       <div style="font-size:11px;font-weight:600;color:var(--text2);margin-bottom:8px;">種目別オッズ閾値</div>
       <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:12px;font-size:12px;">
-        <div style="display:flex;justify-content:space-between;padding:5px 8px;background:var(--surface2);border-radius:4px;"><span>🎾 Tennis</span><span style="color:#e3b341;">cElo差 50〜130pt ＋ オッズ≥2.50</span></div>
-        <div style="display:flex;justify-content:space-between;padding:5px 8px;background:var(--surface2);border-radius:4px;"><span>🏒 NHL</span><span style="color:#e3b341;">xGF%差＜5pt ＋ オッズ≥3.00</span></div>
-        <div style="display:flex;justify-content:space-between;padding:5px 8px;background:var(--surface2);border-radius:4px;"><span>🏉 NRL</span><span style="color:#e3b341;">PD差＜10 ＋ オッズ≥3.00</span></div>
-        <div style="display:flex;justify-content:space-between;padding:5px 8px;background:var(--surface2);border-radius:4px;"><span>🏉 Super Rugby</span><span style="color:#e3b341;">PD差＜12 ＋ オッズ≥3.00</span></div>
-        <div style="display:flex;justify-content:space-between;padding:5px 8px;background:var(--surface2);border-radius:4px;"><span>🏈 UFL</span><span style="color:#e3b341;">PD差＜15 ＋ オッズ≥3.00</span></div>
+        <div style="display:flex;justify-content:space-between;padding:5px 8px;background:var(--surface2);border-radius:4px;"><span>🎾 Tennis</span><span style="color:#e3b341;">cElo差 50〜150pt ＋ オッズ≥2.50</span></div>
+        <div style="display:flex;justify-content:space-between;padding:5px 8px;background:var(--surface2);border-radius:4px;"><span>🏒 NHL</span><span style="color:#e3b341;">xGF%差 3〜8pt ＋ オッズ≥2.50</span></div>
+        <div style="display:flex;justify-content:space-between;padding:5px 8px;background:var(--surface2);border-radius:4px;"><span>🏉 NRL</span><span style="color:#e3b341;">PD差 5〜15 ＋ オッズ≥2.80</span></div>
+        <div style="display:flex;justify-content:space-between;padding:5px 8px;background:var(--surface2);border-radius:4px;"><span>🏉 Super Rugby</span><span style="color:#e3b341;">PD差 5〜15 ＋ オッズ≥2.80</span></div>
+        <div style="display:flex;justify-content:space-between;padding:5px 8px;background:var(--surface2);border-radius:4px;"><span>🏈 UFL</span><span style="color:#e3b341;">PD差 10〜25 ＋ オッズ≥3.00</span></div>
       </div>
-      <div style="background:#0f2c1a;border:1px solid #23863640;border-radius:6px;padding:10px;font-size:11px;color:#3fb950;">
-        ✓ 現在 1件発動済（GB001 HIT <strong>+0.538u</strong>）<br>通常stakeの1/3以下で管理。GOとは完全に分けて記録。
+      <div style="background:#0f2c1a;border:1px solid #23863640;border-radius:6px;padding:10px;font-size:11px;color:#3fb950;margin-bottom:8px;">
+        ✓ stake <strong>1u 統一</strong>（GO推奨と同額）— 的中率比較のバイアスを排除<br>旧GAMBLE_BET時代の0.25uは過去記録のみ保持（GB001）
+      </div>
+      <div style="background:var(--surface2);border-radius:6px;padding:10px;font-size:11px;color:var(--text2);">
+        📌 <strong>GEN005衝突解消:</strong> 同じ試合がGOとUPSET_PICKに同時成立することは禁止。UF因子を検知した時点で本命の確信度は揺らぐため、UF因子数で推奨段階を判定（UF0-1 → GO / UF2 → CAUTION / UF3+ → UPSET_PICK）。
       </div>
     </div>
   </div>

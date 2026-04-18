@@ -61,6 +61,84 @@
         "情報なし": "推奨維持 → 一行で報告"
       },
       "output_format": "【推奨再確認】\n- 〇〇 vs △△: [最新情報なし / 変更: 内容] → [推奨維持 / 変更後推奨]"
+    },
+    {
+      "id": "GEN004",
+      "name": "既分析データ再提供時のオッズ変化再計算（Re-analyze on Odds Change）",
+      "version": "v1.0",
+      "added": "2026-04-17",
+      "rule": "手動試合データが再提供された際、既分析試合はオッズ変化がある場合のみ再計算、なければ何もしない",
+      "trigger": "2026-04-17 NRL Warriors 1.25→1.23 / UFL Renegades 1.36→1.34 等、同一試合のオッズ揺れ",
+      "match_identification": "同一対戦カード + 同一日付（または round + player/team名一致）",
+      "odds_tolerance": "±0.01未満 = 変化なし扱い（何もしない） / ±0.01以上 = EV再計算",
+      "recalc_impact": "EV再計算によってtier変更の可能性（GO→CAUTION / CAUTION→SKIP 等）",
+      "record_field": "records の該当試合に odds_updated_at フィールドを追加（変化履歴）",
+      "user_confirmation_required": false,
+      "note": "データ起点のルーチン処理のためユーザー確認不要"
+    },
+    {
+      "id": "GEN005",
+      "name": "Phase1×Phase2衝突解消ルール（Bet Conflict Resolution）",
+      "version": "v1.0",
+      "added": "2026-04-18",
+      "trigger": "Phase2移行（2026-04-18）。本命GO推奨とアップセット候補が同一試合で同時成立する矛盾を解消する必要性。",
+      "core_logic": "アップセット要因（UF因子）が検知された時点で、本命側の確信度は必ず下がる。検知強度に応じて段階的に推奨を調整する。",
+      "mandatory_flow": [
+        "STEP1: L1〜L4で本命側の confidence を算出",
+        "STEP2: 同時に UF因子 (upset_factors) を全てチェック",
+        "STEP3: UF因子数 + 市場乖離 で衝突段階を判定",
+        "STEP4: 下記テーブルに基づき推奨トラックを決定"
+      ],
+      "conflict_resolution_table": {
+        "UF因子0-1個_乖離<10pp": {
+          "track": "GO",
+          "action": "通常のGO推奨",
+          "note": "本命の確信度は維持される"
+        },
+        "UF因子2個_乖離10-15pp": {
+          "track": "CAUTION",
+          "action": "GOからCAUTIONにダウングレード・ベット見送り",
+          "note": "両方向とも決定打に欠く。結果で検証しルール強化に使う"
+        },
+        "UF因子3個以上_乖離≥15pp": {
+          "track": "UPSET_PICK",
+          "action": "本命側GOを取り下げ、アップセット側を UPSET_PICK として推奨",
+          "note": "アップセット兆候が十分強い → 市場の本命評価が誤っている可能性が高い"
+        }
+      },
+      "track_definitions": {
+        "GO": {
+          "purpose": "本命で稼ぐ（Phase1由来）",
+          "criteria": "Advanced Tier: conf≥75% AND EV>+5% / Basic Tier: conf≥78% AND EV>+7%",
+          "uf_condition": "UF因子0-1個のみ",
+          "stake": "1u"
+        },
+        "UPSET_PICK": {
+          "purpose": "市場の本命評価誤りを突く（Phase2由来）",
+          "criteria": "UF因子3個以上 + 市場乖離≥15pp + 推定アンダードッグ勝率≥35% + アンダードッグEV>+15%",
+          "stake": "1u",
+          "rename_note": "旧名 GAMBLE_BET (ユーザー要望で2026-04-18改名)。『ギャンブル』ではなく『分析に基づく逆張り予測』の意。",
+          "historical_records_retained": "GB001は過去記録としてそのまま保持（当時のstake 0.25uも記録通り）"
+        },
+        "CAUTION": {
+          "purpose": "結果検証・ルール強化用",
+          "criteria": "L1通過だが信頼度不足 OR 両方向の兆候が拮抗",
+          "stake": "なし（ベット見送り）"
+        },
+        "高確率予想": {
+          "purpose": "モデル品質測定（EVと独立した予測精度トラック）",
+          "criteria": "確信度 ≥ 80%（EV条件なし・ベット不問）",
+          "stake": "なし"
+        }
+      },
+      "exclusivity_rule": "同一試合が複数のベットトラック(GO/UPSET_PICK)に同時掲載されるのは禁止。高確率予想とベットトラックは併存可。",
+      "uf_factor_counting_notes": [
+        "upset_patterns.jsonのUF分類に準拠",
+        "2つ以上が独立して成立した場合のみカウント（相関の強い因子は1として扱う）",
+        "スポーツ固有UF(UFT/UFH/UFN/UFU等)も共通UFと合算",
+        "怪我・出場停止（UF08）が重大な場合は単独で2因子相当扱いOK"
+      ],
+      "impact": "GO推奨数は減る可能性があるが、精度は向上する。アップセット予測の学習サイクルが回り始める。"
     }
   ]
 }

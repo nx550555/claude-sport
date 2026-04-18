@@ -199,11 +199,27 @@
   "phase_transition": {
     "_description": "現在はPhase1（強い側が勝つかどうかのスクリーニング）。以下のいずれかのトリガーが満たされたら、ユーザーに報告してPhase2（アップセット確率の積極的予測）への移行可否を確認する。",
     "_instruction_for_claude": "セッション開始時またはrecords更新後に、以下のtriggersを全件チェックし、いずれか1つでもmet=trueになったら即座にユーザーへ報告する。報告文例: '【フェーズ移行トリガー発動】T○が条件を満たしました。アップセット予測フェーズ(Phase2)への移行を検討しますか？'",
-    "current_phase": "Phase1",
-    "next_phase": "Phase2",
+    "current_phase": "Phase2",
+    "next_phase": "Phase3",
+    "transition_log": [
+      {
+        "from": "Phase1",
+        "to": "Phase2",
+        "date": "2026-04-18",
+        "trigger": "T3達成（実装ルール5件: N016/W007/R001/R013/U008拡張）+ ユーザー承認",
+        "phase1_final_stats": {
+          "hit_rate": 0.792,
+          "hits": 19,
+          "confirmed": 24,
+          "pnl_u": 4.1
+        },
+        "phase2_key_rule": "GEN005衝突解消ルール制定（UPSET_PICK新設・GAMBLE_BETから改名）"
+      }
+    ],
     "phase_definitions": {
-      "Phase1": "強い側（L1指標上位）が勝つかどうかをスクリーニングし、精度ベースラインを構築する",
-      "Phase2": "アップセット確率を積極的に定量化し、弱い側が勝つシナリオも正面から予測に組み込む"
+      "Phase1": "強い側（L1指標上位）が勝つかどうかをスクリーニングし、精度ベースラインを構築する（2026-04-18 完了）",
+      "Phase2": "アップセット確率を積極的に定量化し、弱い側が勝つシナリオもUPSET_PICKとして正面から予測に組み込む（現在）",
+      "Phase3": "第一・第二段階の知見を統合し、均衡試合でも根拠を持って勝者を予測する"
     },
     "triggers": [
       {
