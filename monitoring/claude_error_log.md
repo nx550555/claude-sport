@@ -42,6 +42,9 @@
 | CE009 | 2026-04-16 | DATA_ERROR | WTA Stuttgart Eala/Fernandez 結果誤入力（実: Fernandez Q 6-1 6-4 勝利） | MITIGATED |
 | CE011 | 2026-04-17 | PROCESS | Munich QF予測をR2ラベルで誤登録（組合せ自体はQF対戦として偶然正しかった）。ラベル修正で対応 | MITIGATED |
 | CE012 | 2026-04-17 | ANALYSIS | Norrie vs Quinn R2 の predicted_winner=Quinn は明確な誤記（実際はNorrie GS決勝経験者が本命） | ACTIVE |
+| CE013 | 2026-04-18 | DATA_ERROR | UFL Week4 Renegades vs Aviators の勝敗を真逆に報告（実: Aviators 28-14 勝利）。Week3スコアをWeek4と誤認 + WebSearch snippet依存 + 一次ソース未確認 | MITIGATED |
+| CE014 | 2026-04-18 | DATA_ERROR | 【遡及発覚】GB001 Ostapenko vs Andreeva Stuttgart R1 (2026-04-13) を HIT として記録していたが、実際は Andreeva 5-7 6-2 6-4 で Ostapenko 敗北 (MISS -0.25u)。約1週間誤データでダッシュボード表示 | MITIGATED |
+| CE015 | 2026-04-18 | DATA_ERROR | 【遡及発覚】MC2026 SF Alcaraz vs de Minaur と記録していたが、de Minaur は QF で Vacherot に敗退。実際の SF は Alcaraz vs Vacherot 6-4 6-4。対戦相手記載誤り + スコア"確認中"のまま未検証 | MITIGATED |
 
 ---
 
@@ -328,3 +331,114 @@ MISS深掘り調査中（WebSearch）、Norrieの実績・ランキングがQuin
 - [ ] predicted_winner は cElo/ランキング優位側か？
 - [ ] 優位側を選ばない場合、prediction_basis に明確な理由を記載したか？
 - [ ] L1指標値 (cElo差) を prediction_basis に含めたか？
+
+---
+
+### CE013 — UFL Week4 Renegades vs Aviators 勝敗真逆報告
+**日付:** 2026-04-18（Session_42）
+**カテゴリ:** DATA_ERROR（CE005 FABRICATION系の再発）
+**ステータス:** MITIGATED
+
+**何を間違えたか:**
+UFL Week4 Columbus Aviators @ Arlington Renegades (4/17 開催) の結果について、最初のWebSearch snippetに「Dallas (3-0) edged Columbus (0-3) 28-23」という記述があったため、それをWeek 4の結果と誤認してユーザーに「Renegades 28-23 Aviators HIT」と報告した。実際はそれはWeek 3のスコアで、Week 4は**Aviators 28-14 Renegades**（expansion チームのUPSET勝利）が正しい結果。Renegades GO @1.36 は **MISS -1.0u** が真実。
+
+**どう発覚したか:**
+ユーザーから「外しているはず」と指摘され、再確認のためESPN scoreboard をWebFetchしたところ「Aviators (1-3) 28, Renegades (3-1) 14」と明確に表示され、勝敗が真逆だったことが判明。
+
+**なぜ発生したか:**
+1. **一次ソースを最初に当たらなかった**: ESPN scoreboard / UFL公式 / 大会 boxscore を最初から参照せず、WebSearch のAI要約snippetで済ませた
+2. **Week3とWeek4の混同**: 同じ対戦カードのWeek3結果(28-23)をWeek4のものと読み違えた
+3. **通算成績との論理整合性チェックを怠った**: 「Renegades 3-1 / Aviators 1-3」という通算勝敗が出ていれば、Week4でRenegadesが敗れたことは自明だった
+4. **複数ソースでの相互検証なし**: 1つのsnippet情報だけで確定扱いした
+
+**重大性:**
+勝敗情報の真逆報告は、ベット判断システムにおいて最悪クラスの誤り。ユーザーの信頼・累積統計・EV計算・ルール追加判断の全てに波及する。CE005（FABRICATION）の再発パターンとして深刻。
+
+**再発防止ルール（最重要・即時発効）:**
+
+**【勝敗・スコア確認 新プロトコル】**
+records/{sport}/*.json に結果を書き込む前に、以下を必ず実施する：
+
+1. **一次ソースを最低2つ参照**
+   - 優先順位: ①大会公式サイト（NHL.com gamecenter / ATP Tour / WTA.com / nrl.com / theufl.com / NBA.com 等） ②ESPN scoreboard or boxscore ③Flashscore or sofascore
+   - WebSearch snippet **だけ** での勝敗確定は禁止。必ず WebFetch で具体ページを開いて「X 28, Y 14」のような明示スコアを確認する
+
+2. **日付・ラウンド・週番号の一致確認**
+   - 参照しているスコアが「問い合わせ試合日」と合致していることを確認
+   - 特に連戦・リマッチ試合では「Week 3 結果」と「Week 4 結果」を混同しないよう週番号を必ず照合
+   - 「Live Score」「Preview」「Recap」などページ種別も確認（試合前プレビュー記事を結果と誤認しない）
+
+3. **通算成績との論理整合性チェック**
+   - 勝敗記録（3-0→3-1 / 0-3→1-3 等）は試合結果の論理的証拠
+   - 通算勝敗が更新されていれば、どちらが直近勝ったかが逆算できる
+   - snippet内の通算記録と「勝利者」の主張が矛盾する場合は必ず再検証
+
+4. **「defeated」「edged」「held off」等の表現と具体スコアの対応を厳密に読む**
+   - 「A defeated B, score 28-14」を「A 28, B 14」と解釈するのはOK
+   - ただし記事が複数試合を報告している場合、どの試合のスコアか必ず明示されていることを確認
+   - 疑わしい場合は WebFetch で直接 boxscore を取得
+
+5. **自己疑義の発動**
+   - 「アップセット濃厚だった試合で本命が勝った」「高オッズ側が勝った」といった驚きの結果は特に慎重に確認
+   - ユーザーが「本当にそう？」と疑問を呈した時点で、推測せず即座に一次ソース再確認
+
+**再発防止：自己チェック追加項目（応答前必須）:**
+- [ ] 勝敗を記述する前に、一次ソース2つ以上で確認したか？
+- [ ] WebFetch で boxscore/gamecenter を開き、明示スコアを確認したか？
+- [ ] 参照記事の試合日・週番号が対象試合と一致するか？
+- [ ] 通算勝敗記録と「誰が勝ったか」の論理整合性が取れているか？
+
+---
+
+### CE014 — GB001 Ostapenko HIT → 実は MISS（遡及発覚）
+**日付:** 2026-04-18 発覚（元データ入力: 2026-04-13）
+**カテゴリ:** DATA_ERROR（CE013 と同じ勝敗真逆パターン）
+**ステータス:** MITIGATED
+
+**何を間違えたか:**
+WTA Stuttgart R1 (2026-04-13) GB001 Ostapenko vs Andreeva について、"Ostapenko d. Andreeva" として記録、hit=true、actual_ev=+0.5375u で約1週間ダッシュボード表示されていた。実際は **Andreeva 5-7 6-2 6-4 で Ostapenko 敗北**。Andreeva が defending champion Ostapenko を dethrone した試合。
+
+**どう発覚したか:**
+CE013 訂正後、Session_42 で全確定 GO エントリを再検証していた際、WebSearch で Stuttgart R1 結果を確認したところ「Andreeva dethrones defending champ Ostapenko」の複数ソース記事を発見。records の "Ostapenko d. Andreeva" と矛盾。
+
+**なぜ発生したか:**
+- 試合結果をセッション内推定で記録し、一次ソース確認を省略（CE005と同根本原因）
+- GAMBLE_BET 枠の特殊推奨だったため、「Ostapenko 側をプレイした = Ostapenko 勝利」と無意識に混同？
+- 約1週間チェックされず残存
+
+**修正内容:**
+- records/wta/2026.json GB001 entry: hit=false, result=Andreeva d. Ostapenko, score=5-7 6-2 6-4, actual_ev=-0.25
+- summary: hit 2→1, hit_rate 0.667→0.333, ev_total -0.2525→-1.04
+- 検証ソース記録: WTA Official + Sofascore + Tennis Tonic 複数
+- cumulative.json WTA 再計算 (追加更新要)
+
+**重大性:**
+- 約1週間、システム統計が誤表示されていた (正答率を過大評価)
+- CE013 と同一パターン (結果の真逆記録) が発覚 → 過去分全件再検証の必要性が確定
+
+---
+
+### CE015 — MC2026 SF 対戦相手誤記（de Minaur → Vacherot）
+**日付:** 2026-04-18 発覚（元データ入力: 2026-04-11）
+**カテゴリ:** DATA_ERROR（対戦組合せ未検証）
+**ステータス:** MITIGATED
+
+**何を間違えたか:**
+MC2026 SF で "Alcaraz C.(1) vs de Minaur A.(5)" として記録し、スコアは "確認中"（未検証）のまま hit=true として累計統計に入っていた。実際は de Minaur は QF で Vacherot(WC) に敗退しており、SF対戦相手は **Vacherot**。Alcaraz 6-4 6-4 Vacherot（84分）。
+
+**どう発覚したか:**
+Session_42 CE013/CE014 後の過去エントリ再検証中、WebSearch で「Alcaraz de Minaur MC2026 SF」検索に対して「de Minaur は Vacherot に QF で敗退」という複数情報源の記述を発見。records の QF entry (line 303-309) でも "de Minaur(5) vs Vacherot(WC) Vacherot V. 6-4 3-6 6-3" が記録されており、論理矛盾が明白だった。
+
+**なぜ発生したか:**
+- SF対戦組合せを draw sheet で確認せず、シード通り (#1 vs #5) と仮定して記録
+- スコア "確認中" のまま修正を怠った（CE003 "未完了を完了と報告" の類型）
+- QF の Vacherot 勝利情報は記録されていたが、SF の組合せ生成時に参照していなかった
+
+**修正内容:**
+- records/tennis/2026-ATP.json SF entry: match="Alcaraz C.(1) vs Vacherot V.(WC)"、score="6-4 6-4"、verification_sources 追加
+- hit=true は維持（Alcaraz は予測通り勝利）
+
+**再発防止ルール:**
+→ トーナメント各ラウンドの対戦組合せは draw sheet / 前ラウンド結果から必ず確認する
+→ スコア "確認中" "TBD" "未確認" のままのエントリを定期的に scan して解消する（grep自動化検討）
+→ 前ラウンドの結果を参照するとトーナメント logical consistency が validation 可能

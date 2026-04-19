@@ -378,6 +378,35 @@
         "wta_r1_upset_winner_r2_reversion"
       ],
       "note": "P013と併用注意: R1 upsetが「選手能力の真の発現」か「一時的な調子ピーク」かを L2で見分ける必要。3件揃ったら R021として実装。 深掘り完了(Session_39): R1 upset winnerのR2 reversion パターン確認。P011(キャリア最悪exit後)との対照: 勝者側も負者側も感情ピーク後は volatile。"
+    },
+    {
+      "candidate_id": "P015",
+      "status": "watching",
+      "target_rule_file": "core/rules_ufl.json",
+      "proposed_rule_id": "U009",
+      "title": "UFL/Expansion-league: expansion team home rematch after narrow road loss",
+      "description": "前戦でわずかな点差で敗れたexpansion team が自分のホームでリマッチする場合、L3 (ラン攻撃 + TOP) と L4 (モチベーション・初勝利渇望) の複合効果で PD/G ベースの予測が大きく外れるパターン。PD/G 差 ≥10 でも Week 4 以前は信頼度上限を 75% (基準80%比-5%) に制限 + 対戦相手のホーム初実施時は追加 -3% 補正検討。",
+      "trigger_threshold": 2,
+      "current_count": 1,
+      "evidence": [
+        {
+          "id": "A016",
+          "match": "Aviators d. Renegades UFL Week 4 2026-04-17",
+          "pattern": "Columbus Aviators (expansion, 0-3, 5点差惜敗after Week 3) が Historic Crew Stadium 初ホームで Arlington Renegades (3-0, PD/G差+8pt優位) を 28-14 UPSET。Aviators 202 rushing yds vs Renegades 97. TOP 36:38 vs 23:22. Renegades QB Reed 13/27 48% (シーズンペース大幅ダウン)。",
+          "tag": "ufl_expansion_home_rematch_upset",
+          "factor_notes": [
+            "L3_rushing_dominance: 2倍以上のラン攻撃・時計支配",
+            "L3_qb_efficiency_regression: 本命QBがシーズン平均を大幅下回る",
+            "L4_first_home_game_motivation: expansion初ホーム+初勝利の心理的渇望",
+            "L4_rematch_emotional_lift: 前週5点差惜敗の改善余地が大きい"
+          ]
+        }
+      ],
+      "tag_matches": [
+        "ufl_expansion_home_rematch_upset",
+        "ufl_small_sample_pd_g_overrate"
+      ],
+      "note": "2件揃ったら U009 として実装: 「expansion team (シーズン2年目以内) の home game vs PD/G優位チーム = 信頼度上限75%」+ 前週road lossが10点差以内だった場合は -3% 追加補正。3件揃ったら PD/G base の弱点が確定。"
     }
   ],
   "implemented_rules": [

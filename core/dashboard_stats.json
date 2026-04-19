@@ -1,7 +1,7 @@
 {
   "_comment": "Sport card の唯一の真実ソース。記録更新後は必ずここを更新してから sync_sport_cards.py を実行すること",
-  "last_updated": "2026-04-17",
-  "session": "_39",
+  "last_updated": "2026-04-18",
+  "session": "_42",
   "sports": {
     "atp": {
       "go_count": 14,
@@ -9,17 +9,15 @@
       "hit_count": 11,
       "hit_rate": 0.786,
       "pnl": 1.74,
-      "pending_count": 0,
-      "tier": "advanced"
+      "pending_count": 0
     },
     "wta": {
       "go_count": 3,
       "confirmed_count": 3,
-      "hit_count": 2,
-      "hit_rate": 0.667,
-      "pnl": -0.25250000000000006,
-      "pending_count": 0,
-      "tier": "advanced"
+      "hit_count": 1,
+      "hit_rate": 0.333,
+      "pnl": -1.04,
+      "pending_count": 0
     },
     "nhl": {
       "go_count": 2,
@@ -27,26 +25,23 @@
       "hit_count": 2,
       "hit_rate": 1.0,
       "pnl": 1.863,
-      "pending_count": 0,
-      "tier": "advanced"
+      "pending_count": 0
     },
     "ufl": {
       "go_count": 3,
-      "confirmed_count": 2,
+      "confirmed_count": 3,
       "hit_count": 2,
-      "hit_rate": 1.0,
-      "pnl": 0.97,
-      "pending_count": 1,
-      "tier": "basic"
+      "hit_rate": 0.667,
+      "pnl": -0.02999999999999997,
+      "pending_count": 0
     },
     "nrl": {
       "go_count": 2,
-      "confirmed_count": 1,
-      "hit_count": 0,
-      "hit_rate": 0.0,
-      "pnl": -1.0,
-      "pending_count": 1,
-      "tier": "basic"
+      "confirmed_count": 2,
+      "hit_count": 1,
+      "hit_rate": 0.5,
+      "pnl": -0.77,
+      "pending_count": 0
     },
     "superrugby": {
       "go_count": 1,
@@ -54,8 +49,7 @@
       "hit_count": 1,
       "hit_rate": 1.0,
       "pnl": 0.54,
-      "pending_count": 0,
-      "tier": "basic"
+      "pending_count": 0
     },
     "nba": {
       "go_count": 2,
@@ -63,17 +57,15 @@
       "hit_count": 1,
       "hit_rate": 1.0,
       "pnl": 0.2,
-      "pending_count": 1,
-      "tier": "advanced"
+      "pending_count": 1
     },
     "superleague": {
       "go_count": 2,
-      "confirmed_count": 0,
-      "hit_count": 0,
-      "hit_rate": null,
-      "pnl": 0,
-      "pending_count": 2,
-      "tier": "basic"
+      "confirmed_count": 1,
+      "hit_count": 1,
+      "hit_rate": 1.0,
+      "pnl": 0.23,
+      "pending_count": 1
     },
     "premiership": {
       "go_count": 0,
@@ -81,8 +73,7 @@
       "hit_count": 0,
       "hit_rate": null,
       "pnl": 0,
-      "pending_count": 0,
-      "tier": "basic"
+      "pending_count": 0
     },
     "top14": {
       "go_count": 0,
@@ -90,8 +81,7 @@
       "hit_count": 0,
       "hit_rate": null,
       "pnl": 0,
-      "pending_count": 0,
-      "tier": "basic"
+      "pending_count": 0
     },
     "prod2": {
       "go_count": 0,
@@ -99,8 +89,7 @@
       "hit_count": 0,
       "hit_rate": null,
       "pnl": 0,
-      "pending_count": 0,
-      "tier": "basic"
+      "pending_count": 0
     },
     "ahl": {
       "go_count": 0,
@@ -108,52 +97,24 @@
       "hit_count": 0,
       "hit_rate": null,
       "pnl": 0,
-      "pending_count": 0,
-      "screened_count": 27,
-      "all_skipped": true,
-      "tier": "basic",
-      "note": "RS最終週27試合screening全SKIP (Basic閾値 conf>=78/EV>+7 未達)。Calder Cup PO R1 (4/22〜) で再評価予定"
+      "pending_count": 0
     }
   },
   "overview": {
     "total_go": 29,
-    "total_confirmed": 24,
-    "total_hits": 19,
-    "hit_rate": 0.792,
-    "total_pnl": 4.1,
-    "total_pending": 5,
-    "pending_breakdown": "UFL x1 + NRL x1 + NBA x1 + SL x2 (AHL 27件はスクリーニング済・全SKIP・待機中ではない)",
-    "by_tier_separation": {
-      "advanced": {
-        "hit_rate": 0.8,
-        "hits": 16,
-        "confirmed": 20,
-        "pnl": 3.5505,
-        "pending": 1
-      },
-      "basic": {
-        "hit_rate": 0.75,
-        "hits": 3,
-        "confirmed": 4,
-        "pnl": 0.51,
-        "pending": 4,
-        "ahl_screened_all_skip": 27
-      },
-      "overall": {
-        "hit_rate": 0.792,
-        "hits": 19,
-        "confirmed": 24,
-        "pnl": 4.1
-      },
-      "note": "Tier別で機能が別として管理（精度差あり）。Overall は参考値。"
-    }
+    "total_confirmed": 27,
+    "total_hits": 20,
+    "hit_rate": 0.741,
+    "total_pnl": 2.7,
+    "total_pending": 2,
+    "pending_breakdown": "NBA x1 + SL x1"
   },
   "by_tier": {
     "advanced": {
       "go_count": 21,
       "confirmed_count": 20,
-      "hit_count": 16,
-      "pnl": 3.5505,
+      "hit_count": 15,
+      "pnl": 2.763,
       "pending_count": 1,
       "sports": [
         "atp",
@@ -161,14 +122,15 @@
         "nhl",
         "nba"
       ],
-      "hit_rate": 0.8
+      "hit_rate": 0.75,
+      "note": "CE014訂正後 2026-04-18: WTA GB001 Ostapenko MISS 確定で hit 16→15, pnl 3.5505→2.763"
     },
     "basic": {
       "go_count": 8,
-      "confirmed_count": 4,
-      "hit_count": 3,
-      "pnl": 0.51,
-      "pending_count": 4,
+      "confirmed_count": 7,
+      "hit_count": 5,
+      "pnl": -0.03,
+      "pending_count": 1,
       "sports": [
         "ufl",
         "nrl",
@@ -179,7 +141,7 @@
         "prod2",
         "ahl"
       ],
-      "hit_rate": 0.75,
+      "hit_rate": 0.7143,
       "note": "AHL 27件はスクリーニング済・全SKIPのためpendingに含まない（スクリーニング定義を厳格化: pending = GO/CAUTION の未確定のみ）"
     }
   }

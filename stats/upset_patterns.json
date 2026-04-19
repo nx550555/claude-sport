@@ -784,28 +784,35 @@
           "ev_above_25": true
         },
         "prediction": "Ostapenko（GAMBLE_BET）",
-        "result": "Ostapenko d. Andreeva",
-        "score": null,
-        "hit": true,
-        "actual_ev": 0.5375,
+        "result": "Andreeva d. Ostapenko",
+        "score": "5-7 6-2 6-4",
+        "hit": false,
+        "actual_ev": -0.25,
         "actual_odds_at_start": 3.15,
         "rec_odds_predicted": 3.73,
-        "profit_note": "stake 0.25u × (3.15-1) = +0.5375u。予測odds 3.73→実際3.15に下落もHIT。",
-        "validation_note": "UF01（indoor clay速め）+ UFT01（defending champion）の2因子が的中に貢献。indoor clay R1でOstapenko以外も多くがアップセット（Korpatsch/Zhang/Sönmez等）。W009フレームワーク初回HIT。",
-        "note": "通常フロー: Andreeva EV -26.4%でSKIP。GAMBLE_BET枠: Ostapenko側に全条件クリア。W009発動。stake 0.25u。"
+        "profit_note": "stake 0.25u × (-1) = -0.25u。Andreeva dethrones defending champ Ostapenko 5-7 6-2 6-4 (2h22m, 第3セット 4-1 ビハインドから逆転)。",
+        "validation_note": "【CE014訂正 2026-04-18】元は HIT と記録していたが、一次ソース（WTA Official/Sofascore/Tennis Tonic）で Andreeva の勝利が明確。W009フレームワーク初回は不的中。UF01（indoor clay）+UFT01（defending champion）の2因子があっても現役若手の伸びと defending champion の守備転向への適応難が勝った可能性。",
+        "note": "通常フロー: Andreeva EV -26.4%でSKIP。GAMBLE_BET枠: Ostapenko側に全条件クリア。W009発動。stake 0.25u。結果は MISS だが、W009 発動条件自体の妥当性は継続検証中。",
+        "ce_correction": "CE014 (2026-04-18)",
+        "verification_sources": [
+          "https://www.wtatennis.com/news/4488477/andreeva-dethrones-defending-champ-ostapenko-in-stuttgart-opener",
+          "https://tennistonic.com/tennis-news/985771/mirra-andreeva-downs-ostapenko-in-the-1st-round-stuttgart-results-highlights/",
+          "https://www.sofascore.com/tennis/match/mirra-andreeva-jelena-ostapenko/WOAsBKmd"
+        ]
       }
     ]
   },
   "pattern_summary": {
     "total_upsets_tracked": 21,
-    "last_updated": "2026-04-16",
+    "last_updated": "2026-04-18",
     "gamble_bet_results": {
       "total": 1,
-      "hits": 1,
-      "hit_rate": 1.0,
-      "ev_total": 0.5375
+      "hits": 0,
+      "hit_rate": 0.0,
+      "ev_total": -0.25,
+      "ce_correction": "CE014 (2026-04-18): GB001 は当初 HIT 記録だったが Andreeva 5-7 6-2 6-4 で MISS が正しい。W009/UPSET_PICK はまだ的中なし。"
     },
-    "correction_note": "4/12: U004（SF Sinner vs Zverev）を削除。実際はSinner HIT（upset未発生）。旧セッションの誤記録。",
+    "correction_note": "4/12: U004（SF Sinner vs Zverev）を削除（Sinner HIT 実際はupset未発生）。4/18: GB001 HIT→MISS 訂正（CE014）。",
     "sports_covered": [
       "tennis_atp",
       "tennis_wta",

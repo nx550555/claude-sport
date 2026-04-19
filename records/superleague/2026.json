@@ -7,21 +7,24 @@
   "note": "Super League (英国ラグビーリーグ) 2026シーズン。NRL rules準拠。PD/G L1指標。",
   "summary": {
     "total": 2,
-    "confirmed": 0,
-    "hit": 0,
-    "hit_rate": null,
-    "ev_total": 0,
-    "pending": 2
+    "confirmed": 1,
+    "hit": 1,
+    "hit_rate": 1.0,
+    "ev_total": 0.23,
+    "pending": 1
   },
   "games": [
     {
       "id": "SL-001",
-      "date": "2026-04-18",
+      "date": "2026-04-17",
       "match": "Huddersfield Giants vs Leeds Rhinos",
       "home": "Huddersfield Giants",
       "away": "Leeds Rhinos",
       "round": "R8 (推定)",
       "tier": "go",
+      "predicted_winner": "Leeds Rhinos",
+      "prediction_confidence": 87,
+      "prediction_basis": "PD/G差 Leeds +14.00 vs Huddersfield -6.29 (diff 20.29 > threshold 12). 2位 vs 11位。",
       "rec": "Leeds Rhinos",
       "rec_odds": 1.23,
       "ev": 7.01,
@@ -50,14 +53,20 @@
         "SL003",
         "SL007"
       ],
-      "note": "Leeds Rhinos 2位と強豪。Huddersfield 11位で低迷。PD/G差20.3ptは早期閾値12pt大幅超過。John Smith's Stadium (Huddersfield) でのアウェイ戦だがLeeds優勢。lineup未確認 → 試合前に公式スクワッド要確認。",
-      "result": null,
-      "score": null,
-      "hit": null,
-      "actual_ev": null,
-      "status": "pending",
+      "note": "Leeds 56-22 Huddersfield HIT (+0.23u). Brodie Croft 4 tries. Brad Arthur 50th match in charge celebration. 10 tries total. Away overwhelming victory. 確認ソース: seriousaboutrl.com直接記事 + Sofascore summary.",
+      "result": "Leeds Rhinos",
+      "score": "22-56 (home-away)",
+      "prediction_hit": true,
+      "hit": true,
+      "actual_ev": 0.23,
+      "status": "completed",
       "odds_updated_at": "2026-04-17",
-      "odds_update_note": "2026-04-17: @1.32 -> @1.23. EV 14.8% -> 7.01%. GO tier maintained."
+      "odds_update_note": "2026-04-17: @1.32 -> @1.23. EV 14.8% -> 7.01%. GO tier maintained.",
+      "outcome_note": "56-22 blowout。Leeds dominant away win。10 tries、Croft 4 tries。予測HIT。L1差20.3ptが結果に直結。",
+      "verification_sources": [
+        "https://www.seriousaboutrl.com/rugby-league-news-huddersfield-giants-v-leeds-rhinos-talking-points-2-114441",
+        "https://www.seriousaboutrl.com/huddersfield-giants-made-to-pay-for-soft-defence-in-leeds-rhinos-defeat-as-coach-gives-honest-verdict-114450"
+      ]
     },
     {
       "id": "SL-002",

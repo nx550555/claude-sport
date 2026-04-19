@@ -19,21 +19,28 @@
 ## 未完了・作業中（次回セッション最優先）
 
 - [x] 【Session_41 完了】ダッシュボード大規模改修（Phase 1-3全項目完了）
+- [x] 【Session_42 完了】CE013/CE014/CE015 発生・訂正・全体整合性検証（詳細は session_logs/2026-04-20_42.md）
 - [ ] 【新リーグ】Premiership/Top 14/Pro D2 の全チームPD/G標準データ取得 → pending_data試合の本格L1スクリーニング（Exeter-Northampton/Sale-Saracens/Bayonne-Pau/Castres-Toulouse/Racing-StadeFrancais/Stade Montois-Dax/Nevers-Valence/Beziers-Provence/Grenoble-Oyonnax 計9試合）
-- [ ] 【結果確認（次セッション最優先）】Munich QF (Fonseca/Shelton, Shapovalov/Molcan, Zverev/Cerundolo) / Stuttgart QF (Swiatek/Andreeva, Rybakina/Fernandez, Muchova/Gauff) / Rouen QF (Podrez/Boulter, Shymanovich/Maria) — WebSearchインデックス後一次確認して記録
-- [ ] 【NHL G1】TBL vs MTL G1: goalie確定（dailyfaceoff 4/18朝）でCAUTION→GO昇格判定
+- [ ] 【次セッション最優先】4/19-20 結果確認（新プロトコル一次ソース2つ+WebFetch必須）:
+  - NHL PO G1: TBL vs MTL（4/19 5:45pm ET）結果確認（PA014/PA022）
+  - NHL PO G1: COL vs LAK（4/19 3pm ET）結果確認（PA015）
+  - NBA PO R1 G1: SAS vs POR（4/20 JST）結果確認（PA017）
+  - SL R8: Warrington @ Catalans（4/19）結果確認（PA035）
+- [ ] 【結果確認】Munich QF (Fonseca/Shelton, Shapovalov/Molcan, Zverev/Cerundolo) / Stuttgart QF (Swiatek/Andreeva, Rybakina/Fernandez, Muchova/Gauff) / Rouen QF (Podrez/Boulter, Shymanovich/Maria) — WebSearchインデックス後一次確認して記録
 - [ ] 【AHL PO】Calder Cup Playoffs R1 (4/22〜best-of-3) 再スクリーニング
 - [ ] 【最優先①】新規試合・オッズ情報のスクリーニング（ユーザー提供データ起点・重複除外）
-- [~] 【優先②】アクティブGO推奨の最新情報確認（GEN003） — 4/16-17結果分実施済み（Session_39）
+- [x] 【優先②】アクティブGO推奨の最新情報確認（GEN003） — 4/17-18結果分実施済み（Session_42）
   - [x] ATP: Musetti vs Moutet R2 → DONE 4/17（Musetti 6-3 6-4 GO @1.37 HIT +0.37u）
   - [x] UFL W4: Louisville Kings GO（4/17）→ DONE（Louisville 24-22 OT GO @1.65 HIT +0.65u）
-  - [ ] UFL W4: Renegades GO（4/18）→ WAITING（PA021）
-  - [ ] NRL R7: Warriors vs Titans GO @1.25（4/18-19）→ 結果確認（PA008 WAITING） — 最新: Titans Brimson/Randall OUT
-  - [ ] SL R8: Leeds GO（4/18）/ Warrington GO（4/19）→ 結果確認
-  - [ ] NHL PO G1: TBL vs MTL series-275≈ML1.36でmin 1.38未達の可能性 → G1オッズ要精査（PA022）
-  - [ ] NHL PO G1: COL vs LAK CAUTION → G1オッズ確認（PA015）
+  - [x] UFL W4: Renegades GO（4/17）→ **DONE MISS -1.0u（Aviators 28-14 UPSET / CE013発生・訂正済）**
+  - [x] NRL R7: Warriors vs Titans GO @1.23（4/18）→ **DONE HIT +0.23u（28-20）**
+  - [x] SL R8: Leeds GO（4/17）→ **DONE HIT +0.23u（56-22 blowout）**
+  - [ ] SL R8: Warrington GO（4/19）→ 結果確認（PA035）
+  - [ ] NHL PO G1: TBL vs MTL 結果確認（PA014/PA022・4/19）
+  - [ ] NHL PO G1: COL vs LAK 結果確認（PA015・4/19）
   - [ ] NBA PO R1 G1: SAS vs POR GO @1.18（4/20 JST）→ 結果確認（PA017）
   - [x] Alcaraz Barcelona R2棄権（右手首負傷）対応（出力A #2 VOID / マルチ rank 2&4 再評価）
+- [x] 【CE014/CE015 遡及訂正】WTA GB001 Ostapenko MISS 訂正 + MC SF Alcaraz vs Vacherot 相手名訂正
 - [x] ATP Barcelona R2 / Munich R2 スクリーニング完了（全SKIP/EV負）
 - [x] WTA Stuttgart R2 / Rouen R2 スクリーニング完了（全SKIP/EV負）
 - [x] WTA Stuttgart Paolini vs Sonmez 結果確認完了（Sonmez d. Paolini 6-2 6-2、MISS記録済）

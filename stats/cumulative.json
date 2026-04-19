@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-17",
+  "updated": "2026-04-18",
   "tennis_atp": {
     "total_predictions": 14,
     "confirmed": 14,
@@ -38,23 +38,23 @@
   "tennis_wta": {
     "total_predictions": 3,
     "confirmed": 3,
-    "hits": 2,
-    "hit_rate": 0.667,
-    "ev_total": -0.2525,
+    "hits": 1,
+    "hit_rate": 0.333,
+    "ev_total": -1.04,
     "pending": 0,
     "status": "Stuttgart R1/R2+Rouen R1完了",
-    "note": "GB001 Ostapenko d. Andreeva HIT(+0.5375u). Sonmez d. Paolini(4) MISS Stuttgart R1(-1.0u). Tan d. Bondar Rouen R1 HIT(+0.21u). 2/3 66.7% EV-0.2525u.",
+    "note": "【CE014訂正 2026-04-18】GB001 Ostapenko は実は MISS (Andreeva 5-7 6-2 6-4) -0.25u. Sonmez d. Paolini(4) MISS Stuttgart R1(-1.0u). Bondar d. Tan Rouen R1 HIT(+0.21u 6-2 4-6 6-0). 1/3 33.3% EV-1.04u.",
     "tournaments": [
       {
         "id": "2026-Stuttgart",
         "name": "Porsche Tennis Grand Prix Stuttgart 2026",
         "predictions": 2,
         "confirmed": 2,
-        "hits": 1,
-        "hit_rate": 0.5,
-        "ev_total": -0.4625,
+        "hits": 0,
+        "hit_rate": 0.0,
+        "ev_total": -1.25,
         "status": "r1_r2_complete",
-        "note": "GB001 Ostapenko HIT(+0.5375u). Paolini GO MISS(-1.0u Sonmez 6-2 6-2). 1/2 50% EV-0.4625u."
+        "note": "【CE014訂正】GB001 Ostapenko 誤 HIT → 実 MISS (Andreeva 5-7 6-2 6-4, -0.25u). Paolini GO MISS(-1.0u Sonmez 6-2 6-2). 0/2 0% EV-1.25u."
       },
       {
         "id": "2026-Rouen",
@@ -65,7 +65,7 @@
         "hit_rate": 1.0,
         "ev_total": 0.21,
         "status": "r1_complete",
-        "note": "Tan H. d. Bondar A. GO HIT(+0.21u)."
+        "note": "Bondar d. Tan 6-2 4-6 6-0 (GO推奨Bondar HIT +0.21u)."
       }
     ],
     "tier": "advanced"
@@ -82,24 +82,24 @@
   },
   "ufl": {
     "total_predictions": 3,
-    "confirmed": 2,
+    "confirmed": 3,
     "hits": 2,
-    "hit_rate": 1.0,
-    "ev_total": 0.97,
-    "pending": 1,
+    "hit_rate": 0.667,
+    "ev_total": -0.03,
+    "pending": 0,
     "status": "in_progress",
-    "note": "W3 Dallas HIT(+0.32u). W4 Louisville Kings HIT(+0.65u 24-22 OT). Renegades 4/18 pending. 2/2 100%.",
+    "note": "W3 Dallas HIT(+0.32u). W4 Louisville Kings HIT(+0.65u 24-22 OT). W4 Renegades MISS(-1.0u Aviators 28-14 UPSET 4/17 Columbus Historic Crew Stadium). 2/3 66.7%.",
     "tier": "basic"
   },
   "nrl": {
     "total_predictions": 2,
-    "confirmed": 1,
-    "hits": 0,
-    "hit_rate": 0.0,
-    "ev_total": -1.0,
-    "pending": 1,
+    "confirmed": 2,
+    "hits": 1,
+    "hit_rate": 0.5,
+    "ev_total": -0.77,
+    "pending": 0,
     "status": "in_progress",
-    "note": "R6 Rabbitohs vs Raiders MISS（Raiders 30-22勝利）。R7: Warriors GO @1.25 EV+13.4% PENDING 4/18。Broncos REVOKED（Luai+May Tigers復帰でスクリーニング取消）。",
+    "note": "R6 Rabbitohs vs Raiders MISS（Raiders 36-34逆転）。R7: Warriors HIT @1.23 (+0.23u 28-20 Titans 4/18)。Broncos REVOKED（Luai+May Tigers復帰でスクリーニング取消）。",
     "tier": "basic"
   },
   "superrugby": {
@@ -184,22 +184,22 @@
     "note": "データなし（初期状態）"
   },
   "super_league": {
-    "total_predictions": 0,
-    "confirmed": 0,
-    "hits": 0,
-    "hit_rate": null,
-    "ev_total": 0,
-    "pending": 0,
+    "total_predictions": 2,
+    "confirmed": 1,
+    "hits": 1,
+    "hit_rate": 1.0,
+    "ev_total": 0.23,
+    "pending": 1,
     "tier": "basic",
-    "status": "Super League 2026 (既存)",
-    "note": "データなし（初期状態）"
+    "status": "in_progress",
+    "note": "R8 Leeds HIT(+0.23u Leeds 56-22 Huddersfield 4/17・Brodie Croft 4 tries・Brad Arthur 50th match)。Warrington @ Catalans 4/19 pending (GO @1.64 conf 83%)。"
   },
   "by_tier": {
     "advanced": {
       "total_predictions": 21,
       "confirmed": 20,
-      "hits": 16,
-      "ev_total": 3.5505,
+      "hits": 15,
+      "ev_total": 2.763,
       "pending": 1,
       "sports_included": [
         "tennis_atp",
@@ -208,15 +208,15 @@
         "nba",
         "nfl"
       ],
-      "note": "高精度Tier集計: cElo/xGF%/NRtg/DVOA使用スポーツ合計",
-      "hit_rate": 0.8
+      "note": "高精度Tier集計: cElo/xGF%/NRtg/DVOA使用スポーツ合計。CE014訂正後: GB001 MISS 確定で hits 16→15, pnl 3.5505→2.763",
+      "hit_rate": 0.75
     },
     "basic": {
-      "total_predictions": 6,
-      "confirmed": 4,
-      "hits": 3,
-      "ev_total": 0.51,
-      "pending": 2,
+      "total_predictions": 8,
+      "confirmed": 7,
+      "hits": 5,
+      "ev_total": -0.03,
+      "pending": 1,
       "sports_included": [
         "ufl",
         "cfl",
@@ -228,17 +228,17 @@
         "ahl",
         "super_league"
       ],
-      "note": "Basic Tier集計: PD/G等counting statsのみ使用スポーツ合計",
-      "hit_rate": 0.75
+      "note": "Basic Tier集計: PD/G等counting statsのみ使用スポーツ合計。4/17-18完了分3件: UFL Renegades MISS(-1.0u) / NRL Warriors HIT(+0.23u) / SL Leeds HIT(+0.23u)",
+      "hit_rate": 0.7143
     }
   },
   "overall_combined": {
-    "total_predictions": 27,
-    "confirmed": 24,
-    "hits": 19,
-    "pending": 3,
-    "ev_total": 4.0605,
-    "note": "Advanced + Basic 合算。ただし精度が異なるため個別参照を推奨（「機能が別」扱い）",
-    "hit_rate": 0.7917
+    "total_predictions": 29,
+    "confirmed": 27,
+    "hits": 20,
+    "pending": 2,
+    "ev_total": 2.733,
+    "note": "Advanced + Basic 合算。ただし精度が異なるため個別参照を推奨（「機能が別」扱い）。2026-04-18更新: CE013(UFL Renegades真逆報告) + CE014(GB001 Ostapenko真逆遡及発覚) + CE015(MC SF対戦相手誤記) 計3件訂正後の値。",
+    "hit_rate": 0.7407
   }
 }

@@ -327,20 +327,26 @@
       "surface": "Clay (outdoor)",
       "round": "SF",
       "date": "2026-04-11",
-      "match": "Alcaraz C.(1) vs de Minaur A.(5)",
+      "match": "Alcaraz C.(1) vs Vacherot V.(WC)",
       "tier": "go",
       "rec": "Alcaraz",
       "rec_odds": 1.5,
       "ev": 24.5,
       "confidence": 83,
       "result": "Alcaraz",
-      "score": "確認中",
+      "score": "6-4 6-4",
       "hit": true,
       "actual_ev": 0.5,
       "rules_applied": [
         "R001",
         "R002",
         "R005"
+      ],
+      "ce_correction": "CE015 (2026-04-18): 対戦相手誤記修正 — de Minaur は QF で Vacherot に敗退していた（QF entry line 303確認）。Alcaraz の SF対戦相手は Vacherot。Alcaraz 6-4 6-4 で 84分勝利。HIT判定は維持（Alcaraz 予測勝利）。",
+      "verification_sources": [
+        "https://www.atptour.com/en/news/alcaraz-vacherot-monte-carlo-2026-sf",
+        "https://www.sofascore.com/news/alcaraz-downs-vacherot-6-4-6-4-into-monte-carlo-final",
+        "https://www.tennismajors.com/atp/alcaraz-beats-vacherot-to-set-up-the-first-alcaraz-sinner-final-of-2026-with-no-1-at-stake-848250.html"
       ]
     },
     {

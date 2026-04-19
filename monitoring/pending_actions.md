@@ -41,7 +41,7 @@
 | PA018 | UFL | W4 Louisville vs Houston GO @1.65 結果確認 | DONE | 高 | 完了 4/17 Louisville 24-22 OT (HIT +0.65u) |
 | PA019 | WTA | Stuttgart R2 全6試合結果確認 (Swiatek/Gauff/Muchova/Rybakina HIT, Alexandrova/Andreeva/Fernandez R2一部未確認) | IN_PROGRESS | 中 | 4/17 |
 | PA020 | ATP | Alcaraz Barcelona R2棄権 (右手首負傷) → 出力A #2/マルチ rank 2&4 VOID対応 | DONE | 高 | 完了 4/17 |
-| PA021 | UFL | W4 Renegades @1.36 GO 結果確認 (4/18 Columbus @ Arlington) | WAITING | 高 | 4/18試合後 |
+| PA021 | UFL | W4 Renegades @1.34 GO 結果確認 — **DONE 4/17 Aviators 28-14 Renegades UPSET MISS -1.0u** (CE013発生で勝敗報告ミス→訂正済) | DONE | 高 | 完了 2026-04-17 |
 | PA022 | NHL | PA014 TBL vs MTL: Lightning series -275 ≈ML1.36でmin 1.38未達の可能性 → G1オッズ精査必要 | IN_PROGRESS | 高 | 4/18試合当日 |
 | PA023 | ATP | Munich QF 4試合(4/17)結果確認 — 全SKIP予測(Cobolli/Zverev/Fonseca/Shapovalov)。特に Shapovalov vs Molcan は P013/P014 候補関連 | WAITING | 高 | 4/17試合後 |
 | PA024 | ATP | Barcelona QF 4試合(4/17)結果確認 — 全SKIP予測(Medjedovic/Rublev/Musetti/Jodar)。Jódar P010 候補関連 | WAITING | 高 | 4/17試合後 |
@@ -54,9 +54,9 @@
 | PA031 | NHL | TBL vs MTL G1: min odds 1.38 PASSED (now 1.53). 信頼度76%/EV+16.28%→goalie confirmed次第でCAUTION→GO昇格候補。dailyfaceoff 4/18 morning確認要 | IN_PROGRESS | 最高 | 4/18試合当日 |
 | PA032 | AHL | 初回スクリーニング完了 (27試合 RS最終週4/18-19 全SKIP)。Basic Tier厳格閾値 + AHL固有補正で全試合conf<78%/EV<+7%。プレーオフ(4/22〜)で再評価 | DONE | 中 | 完了 2026-04-17 |
 | PA033 | AHL | Calder Cup Playoffs R1 (4/22〜) スクリーニング - best-of-3シリーズ。ラインナップ安定期でGO/CAUTION候補期待 | PENDING | 中 | 4/22以降 |
-| PA034 | SL | R8 Leeds vs Huddersfield @1.23 GO 結果確認 (試合時刻: UK 4/17 19:00 = JST 4/18 04:00) | WAITING | 高 | 4/18早朝 |
+| PA034 | SL | R8 Leeds vs Huddersfield @1.23 GO 結果確認 — **DONE 4/17 Leeds 56-22 HIT +0.23u** (10 tries, Brodie Croft 4 tries, Brad Arthur 50th match celebration) | DONE | 高 | 完了 2026-04-17 |
 | PA035 | SL | R8 Warrington @Catalans GEN003アップグレード: Tanginoa復帰確認 → conf 80→83%, EV 32→+36.1% / 4/19試合後結果確認 | WAITING | 高 | 4/19試合後 |
-| PA036 | NRL | R7 Warriors: GEN003 4/17追加情報 — Titans Brimson OUT (出産), Randall OUT (calf), Haas 復帰 → Titans弱体化補強。Warriors GO @1.25 維持 | WAITING | 中 | 4/18試合後 |
+| PA036 | NRL | R7 Warriors @1.23 GO 結果確認 — **DONE 4/18 Warriors 28-20 Titans HIT +0.23u** (HT 22pt lead, Titans後半猛追も Warriors が最終ラインで止めて8点差逃げ切り) | DONE | 中 | 完了 2026-04-18 |
 
 ---
 
@@ -145,6 +145,19 @@
 - UFL Renegades: 怪我情報なし、推奨維持
 - NBA SAS: Wembanyama 100%近い、推奨維持
 - ダッシュボード更新: 予測精度タブ (19/24 79.2% / Tier分離表示)、ルール変更インパクト表 (R013/U008拡張/GEN004/Tier分類/AHL復活の5行追加)、アクティブ推奨 Warringtonカード (83%/+36.1%)、AHL sport-card pending 0→27 更新
+
+---
+**Session_42 更新 (2026-04-18 CE013発生・訂正・全体整合性検証):**
+- **CE013 発生**: UFL Week4 Renegades vs Aviators の勝敗を真逆に誤報（WebSearch snippet のWeek3スコアをWeek4と誤認）。ユーザー指摘で発覚。一次ソース確認で Aviators 28-14 Renegades UPSET が正しいことを確定。
+- 再発防止: feedback_result_verification.md 新規作成（memory自動ロード）。claude_error_log.md CE013詳細追記。新プロトコル: 一次ソース最低2つ+WebFetch具体boxscore確認+週番号照合+通算勝敗整合性チェック。
+- PA021 DONE: Aviators 28-14 Renegades → GO MISS -1.0u (CE013訂正後)
+- PA034 DONE: Leeds 56-22 Huddersfield → GO HIT +0.23u
+- PA036 DONE: Warriors 28-20 Titans → GO HIT +0.23u
+- P015 新規追加 rule_pipeline.json: UFL expansion team home rematch after narrow road loss パターン (A016として evidence 1件記録)
+- records/ufl・nrl・superleague、cumulative.json、dashboard_stats.json 全更新
+- dashboard.html: sync_sport_cards.py 実行で sport cards 再生成、overview big-stat 自動更新、アクティブ推奨から完了3件削除、履歴テーブル3件 PENDING→HIT/MISS更新、stale PENDING 4件 (Louisville/Musetti R2/Tan-Bondar) も訂正、高確率予想 rank3 Renegades MISS反映、マルチベット 全5コンボ LOSE確定 (P&L -5.0u)
+- Tan/Bondar note typo修正: cumulative.json で "Tan d. Bondar" → "Bondar d. Tan 6-2 4-6 6-0"
+- 通算: 21/27 (77.8%) +3.52u (Phase2移行直後の初期値更新)
 
 ---
 **Session_39 更新 (2026-04-17):**

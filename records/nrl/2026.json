@@ -6,11 +6,11 @@
   "started": "2026-04-10",
   "summary": {
     "total": 3,
-    "confirmed": 1,
-    "hit": 0,
-    "hit_rate": 0.0,
-    "ev_total": -1.0,
-    "pending": 2
+    "confirmed": 2,
+    "hit": 1,
+    "hit_rate": 0.5,
+    "ev_total": -0.77,
+    "pending": 1
   },
   "games": [
     {
@@ -121,6 +121,9 @@
       "ev": 11.56,
       "odds_update_note": "2026-04-16: Updated from @1.22 to @1.25. EV recalculated: (0.907 * 1.25) - 1 = +13.4%. | 2026-04-17: Updated from @1.25 to @1.23. EV recalculated: (0.907 * 1.23) - 1 = +11.56%. GO tier maintained.",
       "confidence": 90.7,
+      "predicted_winner": "NZ Warriors",
+      "prediction_confidence": 90.7,
+      "prediction_basis": "PD/G差 Warriors +8.7 vs Titans -8.0 (diff 16.7 > threshold 12). Capewell復帰。Titans Brimson/Randall OUT。",
       "l1_data": {
         "NZW_PD_per_game": 8.7,
         "GCT_PD_per_game": -8.0,
@@ -128,14 +131,25 @@
         "threshold": 12,
         "rule": "R012_early_season"
       },
-      "status": "pending",
+      "status": "completed",
       "team_lists_r7": {
         "NZW": "Kurt Capewell returns from 5-game calf injury (significant +). Marata Niukore moves to bench. Tanner Stowers-Smith OUT (hamstring). Nicoll-Klokstad(neck)/Barnett(thumb) in reserves - availability uncertain.",
-        "GCT": "No changes to 19-man squad after big win over Eels. Klese Haas in extended squad (returning from leg injury). Squad stable."
+        "GCT": "No changes to 19-man squad after big win over Eels. Klese Haas in extended squad (returning from leg injury). Squad stable. Brimson OUT (birth of second child). Randall OUT (calf)."
       },
       "team_list_assessment": "Warriors: Capewell復帰はプラス要因。軽傷者数名は懸念あるが主力に影響なし。Titans: 変更なし、安定継続。GO維持 (NZW PD/G+8.7 vs GCT -8.0, diff 16.7)。",
       "go_confirmed": true,
-      "odds_updated_at": "2026-04-17"
+      "odds_updated_at": "2026-04-17",
+      "result": "NZ Warriors",
+      "score": "28-20 (home-away)",
+      "prediction_hit": true,
+      "hit": true,
+      "actual_ev": 0.23,
+      "outcome_note": "Warriors 28-20 Titans @ Go Media Stadium。HT Warriors 22点リード (22点差)、後半Titans猛追も最終ラインで猛攻を止めて8点差逃げ切り。予測HIT (+0.23u)。Capewell復帰・Titans Brimson/Randall OUT が結果に反映。",
+      "verification_sources": [
+        "https://www.nrl.com/news/2026/04/18/super-saturday-warriors-v-titans-rabbitohs-v-dragons-wests-tigers-v-broncos/",
+        "https://www.nrl.com/draw/nrl-premiership/2026/round-7/warriors-v-titans/",
+        "https://www.zerotackle.com/updated-team-lists-warriors-vs-titans-10396353-232765/"
+      ]
     },
     {
       "date": "2026-04-17",
