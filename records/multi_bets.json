@@ -249,6 +249,140 @@
         "output_b_decided": 2,
         "output_b_pending_after_renegades": 3
       }
+    },
+    {
+      "date": "2026-04-20",
+      "session_id": "_44_retro",
+      "retro_note": "Session_30〜_43 で発生した新規GO推奨を遡及追加。CLAUDE.md 運用改善の一環として Session_29 以降の出力A/B更新漏れを補填。",
+      "sports_screened": [
+        "NHL_PO",
+        "NBA_PO",
+        "SL_R8",
+        "NRL_R7",
+        "ATP_QF"
+      ],
+      "total_new_go_added": 4,
+      "output_a_additions": [
+        {
+          "rank": 8,
+          "match": "Warrington Wolves @ Catalans Dragons",
+          "sport": "SL",
+          "tournament": "Super League Round 8",
+          "date": "2026-04-19",
+          "recommendation": "Warrington Wolves",
+          "win_prob": 0.83,
+          "odds": 1.64,
+          "ev": 0.361,
+          "tier_category": "basic",
+          "reason": "Warrington PD/G +8.4 vs Catalans -12.2。Tanginoa復帰確認。ホーム遠征だがロードフォーム良好。EV+36.1%。",
+          "result": "miss",
+          "actual": "Catalans 38-22 Warrington UPSET (Dodd hat-trick, A020候補) -1.0u",
+          "prediction_hit": false
+        },
+        {
+          "rank": 9,
+          "match": "Huddersfield Giants @ Leeds Rhinos",
+          "sport": "SL",
+          "tournament": "Super League Round 8",
+          "date": "2026-04-17",
+          "recommendation": "Leeds Rhinos",
+          "win_prob": 0.80,
+          "odds": 1.23,
+          "ev": 0.0,
+          "tier_category": "basic",
+          "reason": "Leeds PD/G +14.2 vs Huddersfield -9.8。Brad Arthur 50試合記念。ホーム優位。EV borderline だが Basic 閾値クリア。",
+          "result": "hit",
+          "actual": "Leeds 56-22 Huddersfield blowout (10 tries, Croft 4 tries) +0.23u",
+          "prediction_hit": true
+        },
+        {
+          "rank": 10,
+          "match": "Gold Coast Titans @ New Zealand Warriors",
+          "sport": "NRL",
+          "tournament": "NRL Round 7",
+          "date": "2026-04-18",
+          "recommendation": "New Zealand Warriors",
+          "win_prob": 0.83,
+          "odds": 1.23,
+          "ev": 0.021,
+          "tier_category": "basic",
+          "reason": "Warriors PD/G +7.5 vs Titans -8.2。Titans Brimson欠場+Randall(calf)欠場で弱体化。Capewell復帰。",
+          "result": "hit",
+          "actual": "Warriors 28-20 Titans (HT 22pt lead, 後半猛追も逃げ切り) +0.23u",
+          "prediction_hit": true
+        },
+        {
+          "rank": 11,
+          "match": "Portland Trail Blazers @ San Antonio Spurs",
+          "sport": "NBA",
+          "tournament": "NBA Playoffs R1 G1",
+          "date": "2026-04-20",
+          "recommendation": "San Antonio Spurs",
+          "win_prob": 0.87,
+          "odds": 1.18,
+          "ev": 0.026,
+          "tier_category": "advanced",
+          "reason": "Spurs #2シード 62-20 vs Blazers #7。NRtg +5pt超。Wembanyama 100% ACTIVE、Lillard OUT。地元。",
+          "result": "pending",
+          "actual": "試合途中（4/20 JST）",
+          "prediction_hit": null
+        }
+      ],
+      "output_b_new_combos": [
+        {
+          "rank": 1,
+          "label": "Leeds x Warriors (2連複 HIT確定)",
+          "matches": ["Leeds Rhinos", "New Zealand Warriors"],
+          "count": 2,
+          "total_win_prob": 0.664,
+          "multi_odds": 1.5129,
+          "multi_ev": 0.0046,
+          "calc_note": "prob=0.664 | odds=1.5129 | EV=+0.46%",
+          "result": "hit",
+          "leg_status": "Leeds HIT / Warriors HIT",
+          "pnl": "+0.5129u per 1u stake"
+        },
+        {
+          "rank": 2,
+          "label": "Leeds x Warriors x Warrington (3連複)",
+          "matches": ["Leeds Rhinos", "New Zealand Warriors", "Warrington Wolves"],
+          "count": 3,
+          "total_win_prob": 0.551,
+          "multi_odds": 2.4812,
+          "multi_ev": 0.367,
+          "calc_note": "prob=0.551 | odds=2.4812 | EV=+36.7%",
+          "result": "miss",
+          "leg_status": "Leeds HIT / Warriors HIT / Warrington MISS",
+          "pnl": "-1.0u"
+        },
+        {
+          "rank": 3,
+          "label": "Leeds x Warriors x SAS (3連複 pending)",
+          "matches": ["Leeds Rhinos", "New Zealand Warriors", "San Antonio Spurs"],
+          "count": 3,
+          "total_win_prob": 0.578,
+          "multi_odds": 1.7852,
+          "multi_ev": 0.032,
+          "calc_note": "prob=0.578 | odds=1.7852 | EV=+3.2%",
+          "result": "pending",
+          "leg_status": "Leeds HIT / Warriors HIT / SAS pending(4/20)"
+        }
+      ],
+      "retro_notes": {
+        "why_retroactive": "CLAUDE.md の『スクリーニング完了後・毎回必須』の出力A/B更新プロトコルが Session_30〜43 で運用されず。ユーザー指摘により Session_44 で遡及補填。",
+        "improvement_measures": [
+          "CLAUDE.md の『ダッシュボード同期プロトコル』に multi_bets.json 追記を明示",
+          "pending_actions.md に常設タスクPA-PERM01を追加",
+          "毎セッション終了時に『最新 session date == 本日』を必須チェック"
+        ],
+        "summary_added": {
+          "new_go_added": 4,
+          "hit": 2,
+          "miss": 1,
+          "pending": 1,
+          "ev_total": "-0.54u (Warrington MISS -1.0u / Leeds +0.23u / Warriors +0.23u / SAS pending)"
+        }
+      }
     }
   ]
 }

@@ -18,44 +18,49 @@
 
 ## 未完了・作業中（次回セッション最優先）
 
-### 🎯 次回セッション開始時の行動順序（Session_44）
+### 🎯 次回セッション開始時の行動順序（Session_45）
 
 **STEP 1: CLAUDE.md 起動時チェック（自動実行）**
 - BACKLOG / user_feedback_log / pending_actions / claude_error_log / rule_pipeline / framework 全読み込み
-- Phase2移行済み。rule_pipeline トリガー確認（P013=3/3, P010=2/2で実装判断対象）
+- Phase2移行済み。実装済みルール 7件（R017/R020 追加）。rule_pipeline トリガー: P007 2/3, P014 1/3, P016 1/2 など watching 状態
 
-**STEP 2: 結果確認フェーズ（一次ソース2つ+WebFetch必須・CE013プロトコル）**
-1. **NHL TBL vs MTL G1** (4/19 live 2-2 2ndブレイク時点で進行中) — PA014
-   → ESPN gameId 401869718 / NHL.com gamecenter mtl-vs-tbl で最終スコア確認
-2. **NBA SAS vs POR G1** (4/20 10:00 JST = 4/19 21:00 ET) — PA017 **既GO @1.18 conf87% EV+5.6%**
-   → NBA.com / ESPN で結果 + Wembanyama 出場確認
-3. **NHL BUF vs BOS G1** (4/19 live 0-0 1st 52') — 参考
-4. **NHL PO G1 4/21開催5試合**: VGK@UTA / PIT@PHI / CAR@OTT / DAL@MIN / EDM@ANA — PA041
-5. **NHL PO G2 COL@LAK** (4/22) — PA041
+**STEP 2: PA017 NBA SAS-POR G1 結果確認（最優先）**
+- ユーザー情報: 試合途中（Session_44時点）
+- 結果確定次第 records/nba/2025-26.json + multi_bets.json output_a #11 + ダッシュボード同期
+- Wembanyama 出場確認必須
 
-**STEP 3: Rule Pipeline 実装判断（evidence閾値到達）**
-1. **R020 実装判断** (PA042): P013 「R1 upsetter R2 momentum +5%」 3/3到達
-   - Evidence: Molcan/Altmaier, Kopriva/Darderi, Molcan/Shapovalov
-   - 判断事項: L4補正 +5% の適用条件 (セット数・勝因タイプで差別化要)
-2. **R017 実装判断** (PA043): P010 「WC home + 連続ラウンドモメンタム +5%」 2/2到達
-   - Evidence: Vacherot d. de Minaur MC QF / Jodar d. Norrie Barcelona QF
-   - 判断事項: R009既存WC+2% との整合（重複防止）
-3. **P016 新規候補**: SL Catalans仏国ホーム補正 -5%→-7〜-10%（evidence A020のみ、2件目待ち）
+**STEP 3: NHL PO 結果確認（4/21-22開催）**
+- PA041: G1残5試合 (VGK@UTA / PIT@PHI / CAR@OTT / DAL@MIN / EDM@ANA)
+- PA041: G2 COL@LAK (4/22)
+- BUF-BOS G1 (4/20 JST 確定分) 結果確認
 
-**STEP 4: 新規試合データ受領時**
-- ユーザーが 2026-04-20.json 等を提供したら GEN004（既分析オッズ変化再計算）+ 新規スクリーニング
-- Premiership/Top14/Pro D2 の PD/G 本格取得も同タイミング可
+**STEP 4: 遡及補填タスク**
+- PA047: upset_patterns.json A014-A020 本体登録漏れ補填
+- PA033: AHL Calder Cup Playoffs R1 (4/22〜) スクリーニング
+- PA028-030: Premiership/Top14/Pro D2 PD/G 本格取得
 
-**STEP 5: セッション終了時**
-- 出力A/B 結果反映（SAS-POR GO結果が出れば Output A #3 or #8 位置で反映）
-- cumulative.json / dashboard_stats.json / dashboard.html 同期
+**STEP 5: 新規試合データ受領時**
+- ユーザーが 2026-04-20.json / 2026-04-21.json 等を提供したら GEN004 + 新規スクリーニング
+- スクリーニング完了時は **毎回 multi_bets.json に session エントリ追記**（CLAUDE.md 同期プロトコル5ステップ遵守）
+
+**STEP 6: セッション終了時**
+- cumulative.json / dashboard_stats.json / multi_bets.json / dashboard.html 5ステップ同期
+- 予測精度タブ・成長分析タブの末尾数値を dashboard_stats.json と突き合わせる（PA-PERM02 必須）
+
+### 🔧 Session_44 で実装した運用改善
+- ダッシュボード同期プロトコル: **3ステップ → 5ステップ** 拡張 (CLAUDE.md)
+  - multi_bets.json 追記 + 予測精度/成長分析タブ同期を必須化
+- 常設タスク PA-PERM01 / PA-PERM02 追加（毎セッション末尾チェック）
+- rules_tennis.json v2.2: R017 (WCホーム+seed撃破 +5%) + R020 (非seed R1アップセット勝者 +5%)
 
 ### その他未完了
 - [ ] 【新リーグ】Premiership/Top 14/Pro D2 の全チームPD/G標準データ取得 → pending_data試合の本格L1スクリーニング（Exeter-Northampton/Sale-Saracens/Bayonne-Pau/Castres-Toulouse/Racing-StadeFrancais/Stade Montois-Dax/Nevers-Valence/Beziers-Provence/Grenoble-Oyonnax 計9試合） — PA028-030
 - [ ] 【AHL PO】Calder Cup Playoffs R1 (4/22〜best-of-3) 再スクリーニング — PA033
+- [ ] 【upset_patterns補填】A014-A020 本体登録漏れ — PA047
 - [x] 【Session_41 完了】ダッシュボード大規模改修（Phase 1-3全項目完了）
 - [x] 【Session_42 完了】CE013/CE014/CE015 発生・訂正・全体整合性検証
 - [x] 【Session_43 完了 2026-04-20】過去分スコア未検証訂正 + Pending キュー処理 + 2026-04-19.json スクリーニング + ダッシュボード完全同期
+- [x] 【Session_44 完了 2026-04-20】PA014 NHL G1 MISS記録 + R017/R020 実装 + 出力A/B Session_30-43遡及補填 + CLAUDE.md運用改善（5ステップ同期）
 - [x] 【Session_43結果確認完了】Munich QF / Barcelona QF / Stuttgart QF + R2残 / Rouen QF + R2 計20試合結果反映
 - [x] 【最優先①】新規試合・オッズ情報のスクリーニング 2026-04-19.json (Session_43: 全SKIP確定)
 - [x] 【Session_43結果確認完了】Munich QF (Shelton d. Fonseca / Cobolli d. Kopriva / Zverev d. Cerundolo / Molcan d. Shapovalov) / Barcelona QF (Fils d. Musetti / Rublev d. Machac / Medjedovic d. Borges / Jodar d. Norrie) / Stuttgart QF (Andreeva d. Swiatek / Muchova d. Gauff / Rybakina d. Fernandez / Svitolina d. Noskova) / Rouen QF (Podrez d. Boulter / Shymanovich d. Maria / Cirstea d. Bondar / Kostyuk d. Li)

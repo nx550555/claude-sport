@@ -64,6 +64,12 @@
 | PA042 | P013実装判断 | Molcan/Shapovalov(MISS) + Kopriva/Darderi + Molcan/Altmaier で evidence 3件到達 → R020 「R1 upsetter R2 momentum +5%」実装判断 | PENDING | 中 | 次セッション |
 | PA043 | P010実装判断 | Jodar d. Norrie (A019候補) 追加で evidence 2件到達 → R017 「WC home + 連続ラウンドモメンタム +5%」実装判断 | PENDING | 中 | 次セッション |
 | PA036 | NRL | R7 Warriors @1.23 GO 結果確認 — **DONE 4/18 Warriors 28-20 Titans HIT +0.23u** (HT 22pt lead, Titans後半猛追も Warriors が最終ラインで止めて8点差逃げ切り) | DONE | 中 | 完了 2026-04-18 |
+| PA-PERM01 | 常設 | **毎セッション終了時に multi_bets.json の最新 session date が本日か確認し、古ければ session エントリを追記する**（全SKIPでも「候補なし」として記録）— 2026-04-20 Session_44 運用改善で追加 | PENDING | 最高 | 毎セッション末尾 |
+| PA-PERM02 | 常設 | **毎セッション終了時に dashboard.html の予測精度タブ・成長分析タブの数値を dashboard_stats.json と突き合わせる** — Session_44 で Session_42/43 の訂正が未反映と発覚したため追加 | PENDING | 最高 | 毎セッション末尾 |
+| PA044 | NHL | PA014 TBL-MTL G1 **MTL 4-3 OT 予測MISS 記録 DONE Session_44** (Slafkovsky hat trick + OT 1:22 PP). Type A A021 upset登録。CAUTION no-bet のため P&L影響なし | DONE | 高 | 完了 2026-04-20 |
+| PA045 | Rule Pipeline | **R020/R017 実装 DONE Session_44** (rules_tennis.json v2.2). P013/P010 implemented_rulesへ移動。GEN005衝突解消: R017 vs R020 同時成立時はR017優先 | DONE | 中 | 完了 2026-04-20 |
+| PA046 | 出力A/B | **Session_30-43 新規GO遡及追加 DONE Session_44** (multi_bets.json + dashboard同期). Leeds/Warriors/Warrington/SAS を追加。累計 11件・6HIT・3MISS・1VOID・1PENDING | DONE | 最高 | 完了 2026-04-20 |
+| PA047 | upset_patterns | **A014-A020 upset_patterns.json 本体への登録漏れ補填**。BACKLOG/records には記録されているが confirmed_upsets 配列に未入力（A021 は Session_44 で追加済）| PENDING | 中 | 次セッション |
 
 ---
 

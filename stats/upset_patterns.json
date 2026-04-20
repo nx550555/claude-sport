@@ -714,6 +714,39 @@
         "wtatennis.com: Maria vs. Jacquemot Round of 32 Open Capfinances Rouen Metropole 2026 (score page)",
         "tennistonic.com: H2H Tatjana Maria vs Dominika Salkova in Rouen - includes Maria stats"
       ]
+    },
+    {
+      "id": "A021",
+      "type": "type_a",
+      "type_note": "Type A: CAUTION no-bet だった試合でアップセット発生（本命予測MISS）。L1+L2補正モデルの検証用。",
+      "date": "2026-04-19",
+      "sport": "nhl",
+      "series": "Stanley Cup Playoffs R1 E2 Game 1",
+      "round": "PO R1 G1",
+      "our_verdict": "CAUTION (conf 76% / EV +16.28% / 予測TBL)",
+      "favorite_market": "Tampa Bay Lightning @1.53 (home A2 seed, Vasilevskiy confirmed)",
+      "underdog_market": "Montreal Canadiens @2.46 (A3 seed, young core)",
+      "result_score": "MTL 4-3 OT",
+      "actual_winner": "Montreal Canadiens",
+      "upset_factors": [
+        "UF02",
+        "UFH04",
+        "UF06"
+      ],
+      "factor_notes": {
+        "UF02": "Slafkovsky hat trick (3G, OT 1:22 PP GWG). MTL young core (Suzuki 101pts career high, Slafkovsky 7pts RS vs TBL) が市場評価を上回った。",
+        "UFH04": "PO G1 の home advantage をTBLが活かせず。TBL PDO over-index の regression 予測は外れ、むしろ MTL が期待値通りの結果に近づいた。",
+        "UF06": "TBL veteran core の intensity 不足（PO経験あり = 序盤流す傾向）vs MTL 若手 core の aggressive approach。"
+      },
+      "screening_decision_review": "CAUTION(no bet) 正しかった（goalie確認前）。もしGO昇格していたら -1u。L1 xGF% 6.11pp差は妥当だがhome PO +7%補正とMTL PDO regression +2%合計+9%が今回はworked against us。",
+      "what_signal_could_detect": "MTL side の 'young core peaking' パターン（Suzuki career high year + Slafkovsky emergence）は cElo系統指標では反映が遅い。若手急成長パターンを PO 開始前の L2 チェックに組み込む検討。",
+      "rule_candidate": "N_P_new1: NHL PO R1 G1で若手コア(23歳以下)の 40G+ scorer が underdog 側に 2名以上いる場合、本命信頼度を -3% 補正 (UF02拡張)。",
+      "miss_layer": "L4_External",
+      "sources": [
+        "https://www.espn.com/nhl/game/_/gameId/401869718/canadiens-lightning",
+        "https://www.nhl.com/gamecenter/mtl-vs-tbl/2026/04/19/2025030121",
+        "https://www.tsn.ca/nhl/article/habs-lightning-headed-to-overtime-in-game-1/"
+      ]
     }
   ],
   "upset_pick_candidates": {
@@ -803,8 +836,8 @@
     ]
   },
   "pattern_summary": {
-    "total_upsets_tracked": 21,
-    "last_updated": "2026-04-18",
+    "total_upsets_tracked": 22,
+    "last_updated": "2026-04-20",
     "gamble_bet_results": {
       "total": 1,
       "hits": 0,

@@ -11,9 +11,9 @@
     "ev_total": 1.863,
     "prediction_total": 17,
     "prediction_hit": 7,
-    "prediction_hit_rate": 0.778,
-    "prediction_pending": 8,
-    "note": "bet実績(GO tier): 2/2 100% +1.863u。予測精度: PO R1 G1 COL 2-1 LAK HIT追加、TBL-MTL/BUF-BOS in_progress。予測確定 7/9 77.8%。"
+    "prediction_hit_rate": 0.7,
+    "prediction_pending": 7,
+    "note": "bet実績(GO tier): 2/2 100% +1.863u。予測精度: PA014 TBL-MTL G1 MTL 4-3 OT 予測MISS (A021 Type A)。予測確定 7/10 70%。BUF-BOS/その他G1残 pending 7。"
   },
   "games": [
     {
@@ -531,7 +531,13 @@
         "status": "CAUTION -> GO upgrade pending: goalie confirm + odds confirm (need odds >= 1.38)"
       },
       "hit": null,
-      "result": null,
+      "result": "Montreal Canadiens",
+      "score": "4-3 OT",
+      "prediction_hit": false,
+      "actual_date": "2026-04-19",
+      "type_a_upset_id": "A021",
+      "miss_layer": "L4_External",
+      "miss_analysis": "予測MISS (Slafkovsky hat trick + OT GWG 1:22 PP). CAUTION no-bet のため P&L 影響なし。L1 xGF% 6.11pp差・TBL home PO +7%補正が MTL young core explosion (Slafkovsky 3G / Suzuki assists) に覆された。Type A A021アップセット候補。",
       "odds_data_2026_04_17": {
         "home_odds": 1.53,
         "away_odds": 2.46,
@@ -539,7 +545,8 @@
       },
       "rec_odds_calculated": 1.53,
       "ev_calculated": 16.28,
-      "caution_reason": "Confidence 76% >= 75, EV +16.28% > +5%, min odds 1.53 > 1.38 (PASSED). CAUTION maintained until goalie confirmed (Vasilevskiy/Dobes expected dailyfaceoff 4/18 morning). If confirmed: upgrade to GO."
+      "caution_reason": "Confidence 76% >= 75, EV +16.28% > +5%, min odds 1.53 > 1.38 (PASSED). CAUTION maintained until goalie confirmed (Vasilevskiy/Dobes expected dailyfaceoff 4/18 morning). If confirmed: upgrade to GO.",
+      "date_note": "date=2026-04-18 は古いラベル。実際のG1は4/19開催。line 879-909のエントリが最終結果を保持。"
     },
     {
       "series": "PO_R1_E3",
@@ -888,7 +895,7 @@
       "predicted_winner": "Tampa Bay Lightning",
       "prediction_confidence": 76,
       "prediction_basis": "xGF% TBL 55.4 / MTL 49.3, diff 6.11pp. Vasilevskiy(TBL) 4-2 2.19 .912 / Dobes(MTL) 29-10-4 2.78 .901. TBL home advantage + playoff experience.",
-      "prediction_hit": null,
+      "prediction_hit": false,
       "rec": null,
       "rec_odds": 1.53,
       "ev": null,
@@ -899,12 +906,20 @@
         "diff": 6.11,
         "l1_pass": true
       },
-      "result": null,
-      "score": "live: 2-2 2nd period at fetch time",
+      "result": "Montreal Canadiens",
+      "score": "4-3 OT",
       "hit": null,
       "actual_ev": null,
-      "status": "in_progress",
-      "note": "PA014/PA022 4/19 5:45pm ET試合。手動データ 2026-04-19.json で 'live 2-2 2ndブレイク' 確認。結果未確定 → 次セッションで最終スコア確認必須。min odds 1.38 passed (@1.53)。予測HIT/MISS 判定は完了後。",
+      "status": "complete",
+      "miss_layer": "L4_External",
+      "miss_analysis": "Slafkovsky hat trick (3G)+ OT 1:22 PP game-winner. MTL Suzuki line dominated expected. TBL PDO/home PO advantage を上回る MTL young core explosion. PA014アップセット → Type A A021候補（CAUTION no-bet のため actual_ev=null、ただし予測外れは記録）。",
+      "type_a_upset_id": "A021",
+      "verification_sources": [
+        "https://www.espn.com/nhl/game/_/gameId/401869718/canadiens-lightning",
+        "https://www.nhl.com/gamecenter/mtl-vs-tbl/2026/04/19/2025030121",
+        "https://www.tsn.ca/nhl/article/habs-lightning-headed-to-overtime-in-game-1/"
+      ],
+      "note": "PA014 4/19 5:45pm ET試合。MTL 4-3 OT勝利（Slafkovsky ハットトリック・OT 1:22 PP）。予測MISS・CAUTION no bet のため P&L 影響なし。A021 Type A アップセット。",
       "squad_note": "Vasilevskiy/Dobes confirmed via dailyfaceoff. Min odds criteria met @1.53."
     },
     {

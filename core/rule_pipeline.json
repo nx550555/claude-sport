@@ -226,26 +226,38 @@
     },
     {
       "candidate_id": "P010",
-      "status": "watching",
+      "status": "implemented",
       "target_rule_file": "core/rules_tennis.json",
       "proposed_rule_id": "R017",
       "title": "WCホームプレイヤーの連続ラウンドモメンタム加算",
       "description": "地元大会WCが前ラウンドでシード選手を撃破した場合、次ラウンドの信頼度に+5%モメンタムボーナスを加算。現在R009はWC+2%だが、連続格上撃破後はホームコートの雰囲気効果が最大化する。+5%追加で信頼度70% → 75%移行により将来的なGO判断に貢献。",
       "trigger_threshold": 2,
-      "current_count": 1,
+      "current_count": 2,
+      "implemented_date": "2026-04-20",
+      "implemented_in": "rules_tennis.json v2.2 R017",
       "evidence": [
         {
           "id": "A004",
           "match": "Vacherot d. de Minaur MC2026 QF",
           "pattern": "Vacherot(WC, Monaco) がR2 Musetti(4) + R3 Hurkacz + QF de Minaur(5)を連続撃破。初のモナコ人MCセミファイナリスト。QF前conf=70%→+5%なら75%でGO。",
           "tag": "atp_wc_home_consecutive_momentum"
+        },
+        {
+          "id": "A019",
+          "match": "Jodar R. d. Norrie C. Barcelona 2026 QF",
+          "pattern": "Jodar(WC, Spain, 19歳) Barcelona R2 d. Bergs → QF d. Norrie 最終5ゲーム連取。19歳初ATP500 SF進出。home WC + R1/R2連勝モメンタムで実力上の差を埋めた。",
+          "tag": "atp_wc_home_consecutive_momentum",
+          "sources": [
+            "puntodebreak.com schedule-jodars-match",
+            "tennismajors.com Jodar first ATP 500 SF at 19"
+          ]
         }
       ],
       "tag_matches": [
         "atp_wc_home_consecutive_momentum",
         "wta_wc_home_consecutive_momentum"
       ],
-      "note": "2件揃ったら: 前ラウンドでシード撃破したホームWCに対するR009強化版+5%モメンタムボーナスルールを実装。Source: tennismajors.com, atptour.com (A004)"
+      "note": "2件揃ったら: 前ラウンドでシード撃破したホームWCに対するR009強化版+5%モメンタムボーナスルールを実装。Source: tennismajors.com, atptour.com (A004) + puntodebreak.com (A019)。【実装完了 2026-04-20】R017 として rules_tennis.json に追加（home WC要件+seed撃破条件・GEN005衝突解消: R017とR020は同時成立時R017優先）。"
     },
     {
       "candidate_id": "P011",
@@ -316,13 +328,15 @@
     },
     {
       "candidate_id": "P013",
-      "status": "watching",
+      "status": "implemented",
       "target_rule_file": "core/rules_tennis.json",
       "proposed_rule_id": "R020",
       "title": "R1アップセット勝者（Q/WC/LL/seed外）のR2モメンタム継続補正 +5%",
       "description": "R1でseed選手を破った/高オッズで勝利したunderdog（qualifier・WC・LL・seed圏外）がR2でseededと対戦する場合、L4の信頼度に+5%モメンタムボーナスを適用。P010（WC home + 連続ラウンド）と類似だがこちらはqualifier等ホーム外でも発動。",
       "trigger_threshold": 3,
-      "current_count": 2,
+      "current_count": 3,
+      "implemented_date": "2026-04-20",
+      "implemented_in": "rules_tennis.json v2.2 R020",
       "evidence": [
         {
           "id": "U006_R2",
@@ -344,13 +358,23 @@
             "en.tennistemple.com/match/kopriva-darderi-munich-2026",
             "x.com/Probahis/status/2044250268397633677"
           ]
+        },
+        {
+          "id": "A018",
+          "match": "Molcan A. d. Shapovalov D. Munich 2026 QF",
+          "pattern": "Molcan(Q) 3連続本命撃破完遂: R1 Bublik(3seed) 6-4 6-2 → R2 Altmaier(独ホーム) 84% 1stSrvPts → QF Shapovalov(4-match winstreak) ストレート。Slovak qualifier 初ATP500 SF到達。P013 decisive evidence。Shapovalov の Griekspoor R1 3セット消耗（反発型）よりもMolcan の純粋なモメンタムが上回った。",
+          "tag": "atp_r1_upsetter_r2_momentum",
+          "sources": [
+            "atptour.com/en/news/munich-2026-results",
+            "tennisuptodate.com/munich-open-round-up-quarterfinals"
+          ]
         }
       ],
       "tag_matches": [
         "atp_r1_upsetter_r2_momentum",
         "wta_r1_upsetter_r2_momentum"
       ],
-      "note": "3件揃ったら R020として「R1でseed/本命破った非seed選手のR2モメンタム+5%補正」を実装。P010と違い home要件なし。 深掘り完了(Session_39): 両evidence共通「非seed選手のR1勝利→R2で本命(seed/高オッズ本命)を破る」。具体補正値提案: L4 +5%モメンタム、ただしR1試合セット数・勝因タイプ(tight 3セットか dominant 2セットか)で差別化検討。"
+      "note": "3件揃ったら R020として「R1でseed/本命破った非seed選手のR2モメンタム+5%補正」を実装。P010と違い home要件なし。 【実装完了 2026-04-20】A018 Molcan 3連続撃破完遂でevidence3件到達 → R020 として rules_tennis.json v2.2 に実装。R1勝因タイプによる差別化（ストレート+75% 1stSrvPts=+7%強化 / 3セット接戦2h30min+=補正なし）を盛り込み。GEN005衝突解消: R017(home WC+seed撃破)と同時成立時はR017優先。"
     },
     {
       "candidate_id": "P014",
@@ -459,6 +483,26 @@
       "trigger_event": "A009 (Storm d. Louisville OT W3) + A010 (Battlehawks d. Stallions 34-30 W3): W3時点75%信頼度が過大評価",
       "evidence_count": 2,
       "note": "U008のWeek3-4 cap → Week3-6 capに拡大。NFLシーズン序盤サンプル問題と同様の設計。"
+    },
+    {
+      "candidate_id": "P010",
+      "implemented_date": "2026-04-20",
+      "target_rule_file": "core/rules_tennis.json",
+      "rule_id": "R017",
+      "title": "WCホームプレイヤー連続ラウンドモメンタム +5%",
+      "trigger_event": "A004 (Vacherot MC QF) + A019 (Jodar Barcelona QF) = 2件 threshold到達",
+      "evidence_count": 2,
+      "note": "home WC + 前ラウンドseed撃破 → L4 +5% モメンタム。R009(WC基本+2%)の上位互換、重複適用せずR017優先。GEN005衝突解消: R020と同時成立時はR017優先。"
+    },
+    {
+      "candidate_id": "P013",
+      "implemented_date": "2026-04-20",
+      "target_rule_file": "core/rules_tennis.json",
+      "rule_id": "R020",
+      "title": "R1アップセット勝者（非seed）のR2/QFモメンタム +5%",
+      "trigger_event": "U006_R2 (Molcan/Altmaier R2) + A014 (Kopriva/Darderi R2) + A018 (Molcan/Shapovalov QF) = 3件 threshold到達",
+      "evidence_count": 3,
+      "note": "非seed(Q/WC/LL/unseeded)がR1で seed/本命を撃破 → R2以降の本命対戦で L4 +5% 補正。R1勝因タイプで差別化（ストレート+75% 1stSrvPts=+7% / 3セット接戦2h30min+=補正なし）。P010と違い home要件なし。GEN005衝突解消: R017と同時成立時はR017優先。"
     }
   ]
 }

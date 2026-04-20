@@ -1,7 +1,7 @@
 {
   "sport": "tennis",
-  "version": "v2.1",
-  "updated": "2026-04-17",
+  "version": "v2.2",
+  "updated": "2026-04-20",
   "surface_note": "現在はクレーシーズン。サーフェス変更時はcEloソースを切り替える",
   "screening": {
     "L1_source": "Tennis Abstract cElo (tennisabstract.com)",
@@ -130,6 +130,42 @@
       "version": "v1.0",
       "r2_reversion_note": "【R2 Reversion Watch 2026-04-17】Munich 2026 R2 Shapovalov d. Marozsan 7-6(7) 6-2。Marozsan R1 d. Tsitsipas(MC QF) という \"career-worst-exit opponent\" での大upset winner だったが、R2では感情ピークが引いて実力通り。逆にShapovalov(直前3連敗)がR1 3セット消耗後の反発でR2勝利。【示唆】R1 upset winnerをR2で安易に本命視しない。特に感情的インパクトが大きいR1勝利後はvolatile。rule_pipeline P014 (R021) として追跡中。current 1/3 evidence.",
       "r2_reversion_updated": "2026-04-17"
+    },
+    {
+      "id": "R017",
+      "type": "learned",
+      "source": "P010 (A004 Vacherot + A019 Jodar)",
+      "title": "WCホームプレイヤーの連続ラウンドモメンタム補正 +5%",
+      "body": "地元大会のWC（wild card）プレイヤーが前ラウンドでシード選手を撃破した場合、次ラウンドの信頼度に L4 +5% モメンタムボーナスを加算。R009（WC基本+2%）に対する上位互換補正で、重複適用せずR017優先。【適用条件】(1) WC選手、(2) 地元ナショナリティまたは地元大会、(3) 前ラウンドで seed/本命を撃破、(4) 次ラウンドで新たな本命（seed）と対戦。【非適用】WC以外、ホーム外大会、前ラウンドがunderdog相手の場合。",
+      "evidence": "A004: Vacherot(WC, Monaco) MC2026 R2 d. Musetti(4) → R3 Hurkacz → QF de Minaur(5) 連続撃破。A019: Jodar(WC, Spain) Barcelona 2026 R2 d. Bergs → QF d. Norrie 最終5ゲーム連取。両者とも home advantage + momentum が市場ベースラインより信頼度 +5% 相当を発揮。",
+      "application": "L4チェックリスト追加項目: WCホームプレイヤーが対戦相手の場合、(a) 前ラウンドで seed/本命を撃破したか→(b) 次ラウンドの対戦相手の信頼度を-5%減（裏面でWC選手の勝率を+5%と同等）。",
+      "related_rules": [
+        "R009",
+        "R015"
+      ],
+      "added": "2026-04-20",
+      "version": "v1.0"
+    },
+    {
+      "id": "R020",
+      "type": "learned",
+      "source": "P013 (U006_R2 Molcan + A014 Kopriva + Molcan/Shapovalov QF)",
+      "title": "R1アップセット勝者（Q/WC/LL/非seed）のR2/QF モメンタム継続補正 +5%",
+      "body": "R1で seed または本命（高オッズ側）を撃破した非seed選手（qualifier・WC・LL・seed圏外）が、R2以降で新たなseed/本命と対戦する場合、L4 に +5% モメンタムボーナスを適用。【適用条件】(1) R1勝者が非seed（Q/WC/LL/unseeded）、(2) R1で seed または市場本命（オッズ<1.50）を撃破、(3) 次ラウンドでも seed/本命との対戦。【補強条件】R1勝利がストレートセットかつ 1stSrvPts 75%以上なら+7%に強化。R1勝利が3セット接戦かつ試合時間2h30min超なら補正なし（疲労相殺）。【非適用】Q/WC/LL でない、R1相手がunseeded、次ラウンドも同格相手。P010（WC home条件あり）とはhome要件の有無で排他。",
+      "evidence": [
+        "U006_R2: Molcan(Q) Munich R1 d. Bublik(3seed) 6-4 6-2 → R2 d. Altmaier 84% 1stSrvPts 総得点73-63",
+        "A014: Kopriva(#77) Munich R1 d. Engel(WC) → R2 d. Darderi(クレー13-4) 0-2ビハインドから逆転",
+        "QF conclusive: Molcan R2 d. Altmaier → QF d. Shapovalov 3連続seed撃破完遂 (Slovak qualifier 初ATP500 SF到達、予測MISS だが P013 decisive evidence)"
+      ],
+      "application": "スクリーニング時 L4チェック: 次ラウンド対戦相手が『前ラウンドのseed/本命撃破を含む非seed選手』か → YES: 対戦相手（元本命）の信頼度を -5% 減算。GO閾値75%未達によるSKIP/CAUTIONシフトが期待できる。",
+      "exclusion_with_r017": "R017（WC home + seed撃破）が同時成立する場合はR017を優先適用（補正値同じ+5%だが適用条件がhome限定なので具体性が高い）。R020はhome要件なしで適用範囲が広い。",
+      "related_rules": [
+        "R001",
+        "R002",
+        "R017"
+      ],
+      "added": "2026-04-20",
+      "version": "v1.0"
     }
   ],
   "accuracy_tier": "advanced",

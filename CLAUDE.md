@@ -123,10 +123,17 @@
 1. `core/dashboard_stats.json` を更新する（各sport の go_count / confirmed_count / hit_count / hit_rate / ev_total / pending_count を再計算）
 2. `python sync_sport_cards.py` を実行してダッシュボードに反映する
 3. dashboard.html の「アクティブ推奨」タブから完了した試合を削除する
-4. 更新後に概要big-stat・各スポーツカードの全数値を目視で確認し、不整合があれば即修正する
+4. **【2026-04-20 追加】** `records/multi_bets.json` の `sessions` 配列末尾の日付が本日 or 最新セッションか確認し、古ければ新規sessionエントリを追記する（output_a/output_b / GOが出なくても「該当なし」として記録）
+5. **【2026-04-20 追加】** dashboard.html の「予測精度」タブ・「成長分析」タブの末尾数値（big-stat / 累積EV / 種目別正答率）を dashboard_stats.json と突き合わせて更新する
+6. 更新後に概要big-stat・各スポーツカード・予測精度タブ・成長分析タブ・高確率予想タブ・マルチベットタブの全数値を目視で確認し、不整合があれば即修正する
 
-⚠️ **records更新 → dashboard_stats.json更新 → sync実行 の3ステップを必ずセットで行うこと。**
+⚠️ **records更新 → dashboard_stats.json更新 → multi_bets.json更新 → sync実行 → 予測精度/成長分析タブ更新 の5ステップを必ずセットで行うこと（2026-04-20改訂）。**
 ⚠️ **この手順を省略してダッシュボードの数字がずれることは絶対に禁止。**
+
+**【運用改善 2026-04-20 Session_44】** Session_30〜43で multi_bets.json 更新が抜け、ダッシュボードの高確率予想・マルチベットタブが Session_29 のまま停滞していた事故の再発防止策:
+- 毎セッション終了時に「multi_bets.json の最新 session date == 本日 or 直近スクリーニング日か？」を必須チェック
+- 全SKIPのセッションでも「候補なし」session エントリを追記し、スクリーニング実施痕跡を残す
+- pending_actions.md に常設タスク `PA-PERM01: 出力A/B 最新化確認` を追加（毎セッション冒頭でOPEN→終了時にDONE）
 
 **【会話終了時】セッション終了手順（③の要件）：**
 ユーザーが「会話を終了する」「終わり」「終了」「記録して」などと言ったら：
