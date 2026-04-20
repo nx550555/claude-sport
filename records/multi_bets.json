@@ -920,7 +920,172 @@
         ],
         "overall_verdict": "0/11 triggered UPSET_PICK. UF factor walkthrough confirms Session_45 tentative read. UPSET_PICK extremely rare under strict UF>=3+div>=15pp rule.",
         "rule_observation": "UPSET_PICK threshold (UF>=3+div>=15pp) may be too strict. Future rule review: consider loosening to UF>=2+div>=20pp for tier-adjusted stake (0.5u) UPSET_PICK-Lite category."
-      }
+      },
+      "output_b_top_by_prob": [
+        {
+          "rank": 1,
+          "size": 2,
+          "matches": [
+            "US Montalbanaise vs レーシング92",
+            "ルス・ロウラ ラベリアス vs サルコバ・ドミニカ"
+          ],
+          "names": [
+            "レーシング92",
+            "サルコバ・ドミニカ"
+          ],
+          "total_prob": 0.893,
+          "multi_odds": 1.01,
+          "ev": -0.0981,
+          "note": "総合勝率順（参考情報・EV負）"
+        },
+        {
+          "rank": 2,
+          "size": 2,
+          "matches": [
+            "US Montalbanaise vs レーシング92",
+            "Milana Ivantsiv vs プリダンキナ・エレナ"
+          ],
+          "names": [
+            "レーシング92",
+            "プリダンキナ・エレナ"
+          ],
+          "total_prob": 0.893,
+          "multi_odds": 1.01,
+          "ev": -0.0981,
+          "note": "総合勝率順（参考情報・EV負）"
+        },
+        {
+          "rank": 3,
+          "size": 2,
+          "matches": [
+            "US Montalbanaise vs レーシング92",
+            "Miroslava Medvedeva vs ハワリンスカ・マヤ"
+          ],
+          "names": [
+            "レーシング92",
+            "ハワリンスカ・マヤ"
+          ],
+          "total_prob": 0.893,
+          "multi_odds": 1.01,
+          "ev": -0.0981,
+          "note": "総合勝率順（参考情報・EV負）"
+        },
+        {
+          "rank": 4,
+          "size": 2,
+          "matches": [
+            "ルス・ロウラ ラベリアス vs サルコバ・ドミニカ",
+            "Milana Ivantsiv vs プリダンキナ・エレナ"
+          ],
+          "names": [
+            "サルコバ・ドミニカ",
+            "プリダンキナ・エレナ"
+          ],
+          "total_prob": 0.8836,
+          "multi_odds": 1.0201,
+          "ev": -0.0986,
+          "note": "総合勝率順（参考情報・EV負）"
+        },
+        {
+          "rank": 5,
+          "size": 2,
+          "matches": [
+            "ルス・ロウラ ラベリアス vs サルコバ・ドミニカ",
+            "Miroslava Medvedeva vs ハワリンスカ・マヤ"
+          ],
+          "names": [
+            "サルコバ・ドミニカ",
+            "ハワリンスカ・マヤ"
+          ],
+          "total_prob": 0.8836,
+          "multi_odds": 1.0201,
+          "ev": -0.0986,
+          "note": "総合勝率順（参考情報・EV負）"
+        }
+      ],
+      "output_b_top_by_ev": [
+        {
+          "rank": 1,
+          "size": 2,
+          "matches": [
+            "ボストン セルティックス vs フィラデルフィア・セブンティーシクサーズ",
+            "セントジョージイラワラ vs シドニー・ルースターズ"
+          ],
+          "names": [
+            "ボストン セルティックス",
+            "シドニー・ルースターズ"
+          ],
+          "total_prob": 0.7396,
+          "multi_odds": 1.2321,
+          "ev": -0.0887,
+          "note": "EV最大順（参考情報・全てEV負）"
+        },
+        {
+          "rank": 2,
+          "size": 2,
+          "matches": [
+            "RCタウロナイズ vs バイヨンヌ",
+            "ボストン セルティックス vs フィラデルフィア・セブンティーシクサーズ"
+          ],
+          "names": [
+            "RCタウロナイズ",
+            "ボストン セルティックス"
+          ],
+          "total_prob": 0.774,
+          "multi_odds": 1.1766,
+          "ev": -0.0893,
+          "note": "EV最大順（参考情報・全てEV負）"
+        },
+        {
+          "rank": 3,
+          "size": 2,
+          "matches": [
+            "RCタウロナイズ vs バイヨンヌ",
+            "セントジョージイラワラ vs シドニー・ルースターズ"
+          ],
+          "names": [
+            "RCタウロナイズ",
+            "シドニー・ルースターズ"
+          ],
+          "total_prob": 0.774,
+          "multi_odds": 1.1766,
+          "ev": -0.0893,
+          "note": "EV最大順（参考情報・全てEV負）"
+        },
+        {
+          "rank": 4,
+          "size": 2,
+          "matches": [
+            "スタロドゥプツェワ・ユリア vs ステファニーニ・ルクレツィア",
+            "ボストン セルティックス vs フィラデルフィア・セブンティーシクサーズ"
+          ],
+          "names": [
+            "スタロドゥプツェワ・ユリア",
+            "ボストン セルティックス"
+          ],
+          "total_prob": 0.7654,
+          "multi_odds": 1.1877,
+          "ev": -0.0909,
+          "note": "EV最大順（参考情報・全てEV負）"
+        },
+        {
+          "rank": 5,
+          "size": 2,
+          "matches": [
+            "スタロドゥプツェワ・ユリア vs ステファニーニ・ルクレツィア",
+            "セントジョージイラワラ vs シドニー・ルースターズ"
+          ],
+          "names": [
+            "スタロドゥプツェワ・ユリア",
+            "シドニー・ルースターズ"
+          ],
+          "total_prob": 0.7654,
+          "multi_odds": 1.1877,
+          "ev": -0.0909,
+          "note": "EV最大順（参考情報・全てEV負）"
+        }
+      ],
+      "output_b_revision_note": "Session_45 初版は『EV+組み合わせなし』のみ記録だったが、ユーザー指摘を受けて『総合勝率順/EV最大順の各TOP5』を参考情報として追記。EV-だが高確率マルチとしての情報価値を担保。CLAUDE.md 仕様の誤解釈（EV+のみ表示→EV-でも上位列挙）を訂正。"
     }
   ],
   "last_updated": "2026-04-20"

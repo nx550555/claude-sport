@@ -3897,14 +3897,54 @@ body.lang-en .name-en { display: inline; }
     <p style="color:var(--text2);font-size:12px;margin-bottom:14px;line-height:1.7;">
       現時点のアクティブ候補（出力A）が<strong style="color:var(--text);">2件以上</strong>ある場合のみマルチ構成可能。
     </p>
-    <div style="background:var(--surface);border:1px solid #d2992240;border-radius:10px;padding:14px 18px;margin-bottom:14px;">
-      <div style="display:flex;gap:10px;align-items:center;margin-bottom:8px;">
-        <div style="font-size:13px;font-weight:700;color:#d29922;">⚠️ マルチ構成不可</div>
-        <div style="font-size:11px;color:var(--text2);">アクティブ候補 1件のみ (SAS @1.18)</div>
+    <div style="background:var(--surface);border:1px solid #58a6ff40;border-radius:10px;padding:14px 18px;margin-bottom:14px;">
+      <div style="display:flex;gap:10px;align-items:center;margin-bottom:10px;flex-wrap:wrap;">
+        <div style="font-size:13px;font-weight:700;color:#58a6ff;">Session_45 マルチ構成計算結果</div>
+        <div style="font-size:11px;color:var(--text2);">出力A 18件 × 組合せ総数 12,597通り</div>
       </div>
-      <div style="font-size:11px;color:var(--text2);line-height:1.7;padding:8px 12px;background:var(--surface2);border-radius:6px;">
-        マルチ組成には最低2件のアクティブ候補が必要です。新規GO推奨が増えれば即座にマルチEVを計算し、このセクションに反映します。<br>
-        <strong style="color:var(--text);">次の供給待ち:</strong> NHL PO G1残5試合 (4/21) / G2 COL-LAK (4/22) / 本日分JSON受領。
+      <div style="background:#2d1014;border:1px solid #f8514940;border-radius:6px;padding:10px 14px;margin-bottom:12px;font-size:12px;color:var(--text);line-height:1.7;">
+        🔴 <strong style="color:#f85149;">EV+組み合わせ: 0件</strong> — 12,597通り全てEV負。margin-adj proxy（conf = 1/odds × 0.95）使用のため数学的必然：マルチEV = 0.95ⁿ − 1（n=2で-9.75%、n=3で-14.3%）。<br>
+        📌 <strong style="color:#58a6ff;">参考情報</strong>として総合勝率 TOP5 と EV最大 TOP5 を下記に掲載。本物のEV+マルチ生成には GO_CANDIDATE 19件の L1-L4 深掘りで独自conf > 市場implied の試合を2件以上確保する必要あり（Session_29 Musetti+Louisville+Renegades が実例）。
+      </div>
+
+      <div style="font-size:12px;font-weight:700;color:#4ade80;margin-bottom:6px;">📊 総合勝率 TOP 5（高確率順・参考）</div>
+      <div class="table-wrap" style="margin-bottom:14px;">
+        <table class="data-table" style="font-size:11px;">
+          <thead>
+            <tr>
+              <th>#</th><th>組み合わせ</th><th>勝率</th><th>マルチodds</th><th>EV</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Racing 92 × Salkova</td><td style="text-align:center;color:#4ade80;font-weight:700;">89.3%</td><td style="text-align:center;color:#e3b341;">@1.010</td><td style="text-align:center;color:#f85149;">-9.8%</td></tr>
+            <tr><td>2</td><td>Racing 92 × Pridankina</td><td style="text-align:center;color:#4ade80;font-weight:700;">89.3%</td><td style="text-align:center;color:#e3b341;">@1.010</td><td style="text-align:center;color:#f85149;">-9.8%</td></tr>
+            <tr><td>3</td><td>Racing 92 × Hawalinska</td><td style="text-align:center;color:#4ade80;font-weight:700;">89.3%</td><td style="text-align:center;color:#e3b341;">@1.010</td><td style="text-align:center;color:#f85149;">-9.8%</td></tr>
+            <tr><td>4</td><td>Salkova × Pridankina</td><td style="text-align:center;color:#4ade80;font-weight:700;">88.4%</td><td style="text-align:center;color:#e3b341;">@1.020</td><td style="text-align:center;color:#f85149;">-9.9%</td></tr>
+            <tr><td>5</td><td>Salkova × Hawalinska</td><td style="text-align:center;color:#4ade80;font-weight:700;">88.4%</td><td style="text-align:center;color:#e3b341;">@1.020</td><td style="text-align:center;color:#f85149;">-9.9%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="font-size:12px;font-weight:700;color:#e3b341;margin-bottom:6px;">💰 EV最大 TOP 5（損失幅が最も小さい・参考）</div>
+      <div class="table-wrap" style="margin-bottom:14px;">
+        <table class="data-table" style="font-size:11px;">
+          <thead>
+            <tr>
+              <th>#</th><th>組み合わせ</th><th>勝率</th><th>マルチodds</th><th>EV</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>NBA BOS × NRL Roosters</td><td style="text-align:center;">74.0%</td><td style="text-align:center;color:#e3b341;">@1.232</td><td style="text-align:center;color:#f85149;">-8.9%</td></tr>
+            <tr><td>2</td><td>Top14 Toulon × NBA BOS</td><td style="text-align:center;">77.4%</td><td style="text-align:center;color:#e3b341;">@1.177</td><td style="text-align:center;color:#f85149;">-8.9%</td></tr>
+            <tr><td>3</td><td>Top14 Toulon × NRL Roosters</td><td style="text-align:center;">77.4%</td><td style="text-align:center;color:#e3b341;">@1.177</td><td style="text-align:center;color:#f85149;">-8.9%</td></tr>
+            <tr><td>4</td><td>WTA Starodubtseva × BOS</td><td style="text-align:center;">76.5%</td><td style="text-align:center;color:#e3b341;">@1.188</td><td style="text-align:center;color:#f85149;">-9.1%</td></tr>
+            <tr><td>5</td><td>WTA Starodubtseva × Roosters</td><td style="text-align:center;">76.5%</td><td style="text-align:center;color:#e3b341;">@1.188</td><td style="text-align:center;color:#f85149;">-9.1%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="background:var(--surface2);border-radius:6px;padding:10px 14px;font-size:11px;color:var(--text2);line-height:1.7;">
+        📝 <strong style="color:var(--text);">仕様訂正メモ:</strong> CLAUDE.md 初版の「全組み合わせがEV-なら『EV+の組み合わせなし』と出力」仕様を Session_45 ユーザー指摘で訂正。EV-でも「総合勝率順」「EV最大順」の各TOP5 を参考情報として列挙する運用に変更（multi_bets.json session_45 に記録済）。
       </div>
     </div>
   </div>
