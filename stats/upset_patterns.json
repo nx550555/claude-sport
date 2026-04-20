@@ -971,6 +971,67 @@
       "market_divergence_pp": 12,
       "upset_pick_feasibility": "UF1 + 12pp - below UPSET_PICK. Possibly Top100 Q-match motivation crisis rule worth tracking (P017 candidate).",
       "rule_linked": "P017-candidate"
+    },
+    {
+      "upset_id": "A026",
+      "date": "2026-04-19",
+      "sport": "nba",
+      "tournament": "NBA Playoffs R1",
+      "round": "G1",
+      "match": "Orlando Magic @ Detroit Pistons",
+      "market_favorite": "Detroit Pistons",
+      "fav_odds": 1.22,
+      "dog_odds": 4.2,
+      "result": "Orlando 112-101 Detroit (only road G1 win of that day)",
+      "uf_count": 2,
+      "uf_factors": {
+        "UF02": "Orlando Banchero 23pts 9reb Paolo breakout",
+        "UFA02": "Detroit young playoff inexperience vs Orlando previous R1 experience"
+      },
+      "market_divergence_pp": 35,
+      "upset_pick_feasibility": "UF2 + 35pp - borderline UPSET_PICK (UF不足だが乖離大きい). DEToverrated / ORL underrated gap.",
+      "rule_linked": null
+    },
+    {
+      "upset_id": "A027",
+      "date": "2026-04-20",
+      "sport": "nhl",
+      "tournament": "Stanley Cup Playoffs R1",
+      "round": "G1",
+      "match": "Philadelphia Flyers @ Pittsburgh Penguins",
+      "market_favorite": "Pittsburgh Penguins",
+      "fav_odds": 1.68,
+      "dog_odds": 2.25,
+      "result": "Philadelphia 3-2 Pittsburgh",
+      "uf_count": 2,
+      "uf_factors": {
+        "UFH04": "PIT regular season late slump (Crosby age)",
+        "UFA02": "PHI young energy + rivalry motivation"
+      },
+      "market_divergence_pp": 16,
+      "upset_pick_feasibility": "UF2 + 16pp - borderline. CAUTION no-bet would have been right.",
+      "rule_linked": null
+    },
+    {
+      "upset_id": "A028",
+      "date": "2026-04-20",
+      "sport": "nhl",
+      "tournament": "Stanley Cup Playoffs R1",
+      "round": "G1",
+      "match": "Minnesota Wild @ Dallas Stars",
+      "market_favorite": "Dallas Stars",
+      "fav_odds": 1.79,
+      "dog_odds": 2.08,
+      "result": "Minnesota 6-1 Dallas (BLOWOUT UPSET)",
+      "uf_count": 3,
+      "uf_factors": {
+        "UF02": "MIN 5v5 xGF% advantage (MoneyPuck data noted in Session_32)",
+        "UFH04": "DAL regular season fade / goaltending injury?",
+        "UFA03": "MIN goalie hot start (6-1 score suggests complete domination)"
+      },
+      "market_divergence_pp": 9,
+      "upset_pick_feasibility": "UF3 + 9pp < 15pp. Below UPSET_PICK but MIN high-xGF% noted in advance. CAUTION格妥当。",
+      "rule_linked": null
     }
   ],
   "upset_pick_candidates": {
@@ -1190,6 +1251,6 @@
       }
     }
   ],
-  "last_updated": "2026-04-20",
+  "last_updated": "2026-04-20 Session_45",
   "updated_by": "Session_45 case-C retro + Madrid Q R1 upsets"
 }
