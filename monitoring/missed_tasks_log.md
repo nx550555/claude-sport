@@ -55,5 +55,10 @@
 - GO 生成には L1-L4 全層の深掘り + 市場乖離の発見が必須（今後の重点）
 - UPSET_PICK 閾値（UF≥3 + div≥15pp）は実運用で極めて稀発動。UPSET_PICK_Lite (UF≥2 + div≥20pp / stake 0.5u) の追加検討候補
 - 出力A候補は「EV負でも確実性高い予測」として継続記録し、予測精度指標を別軸で追跡すべき
+- **[Session_45末尾 補遺]** ユーザー指摘で Super Rugby R10 Chiefs vs Hurricanes (4/18 golden point OT) の記録漏れ発覚 → 補填済。
+  - **構造的問題**: 提供JSONが upcoming 中心のため、JSON提供期間外の完了試合が記録から抜け落ちる
+  - **改善案**: health_check.py に「主要稼働リーグの直近3日間の完了試合 WebSearch スキャン」項目を追加
+  - **対象リーグ**: Super Rugby, Top14, NRL, Premiership (毎週末ラウンド試合あり)
+  - **次セッション実装候補**: health_check.py 項目7「不在ラウンド検出」
 
 ---
