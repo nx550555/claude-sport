@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-18",
+  "updated": "2026-04-20",
   "tennis_atp": {
     "total_predictions": 14,
     "confirmed": 14,
@@ -33,7 +33,8 @@
         "note": "R1 GO3件全HIT + R2 Musetti@1.37 HIT(+0.37u)。4/4 100% EV+1.21u。"
       }
     ],
-    "tier": "advanced"
+    "tier": "advanced",
+    "note_qf_screening": "2026-04-17 QF: Barcelona (Rublev/Medjedovic/Fils/Jodar HIT 3/4, Musetti MISS SKIP) / Munich (Zverev/Cobolli HIT 2/4, Fonseca/Shapovalov MISS SKIP). 予測精度 5/8 62.5% (SKIP予測のため bet_performance影響なし)."
   },
   "tennis_wta": {
     "total_predictions": 3,
@@ -68,7 +69,8 @@
         "note": "Bondar d. Tan 6-2 4-6 6-0 (GO推奨Bondar HIT +0.21u)."
       }
     ],
-    "tier": "advanced"
+    "tier": "advanced",
+    "note_qf_screening": "2026-04-18 QF: Stuttgart (Rybakina/Svitolina HIT 2/4, Swiatek/Gauff MISS - Andreeva stuns Swiatek + Muchova d. Gauff), Rouen (Cirstea/Kostyuk HIT 2/4, Maria/Boulter MISS). Stuttgart R2残: Noskova/Fernandez HIT. Parks vs Andreeva draw error invalidated."
   },
   "nhl": {
     "total_predictions": 2,
@@ -77,7 +79,7 @@
     "ev_total": 1.863,
     "pending": 0,
     "status": "in_progress",
-    "note": "COL 3-1 HIT(+0.333) / OTT 3-2 NYI HIT(+1.53)。2/2 100%。",
+    "note": "COL 3-1 HIT(+0.333) / OTT 3-2 NYI HIT(+1.53) = 2/2 100%. 予測精度追加(CAUTION): COL-LAK G1 HIT (COL 2-1 4/19). TBL-MTL G1 / BUF-BOS G1 pending 4/19-20.",
     "tier": "advanced"
   },
   "ufl": {
@@ -185,14 +187,14 @@
   },
   "super_league": {
     "total_predictions": 2,
-    "confirmed": 1,
+    "confirmed": 2,
     "hits": 1,
-    "hit_rate": 1.0,
-    "ev_total": 0.23,
-    "pending": 1,
+    "hit_rate": 0.5,
+    "ev_total": -0.77,
+    "pending": 0,
     "tier": "basic",
-    "status": "in_progress",
-    "note": "R8 Leeds HIT(+0.23u Leeds 56-22 Huddersfield 4/17・Brodie Croft 4 tries・Brad Arthur 50th match)。Warrington @ Catalans 4/19 pending (GO @1.64 conf 83%)。"
+    "status": "r8_complete",
+    "note": "R8 Leeds HIT(+0.23u 56-22 Huddersfield 4/17). R8 Warrington @ Catalans MISS(-1.0u Catalans 38-22 4/19 Dodd hat-trick). 1/2 50% -0.77u."
   },
   "by_tier": {
     "advanced": {
@@ -213,10 +215,10 @@
     },
     "basic": {
       "total_predictions": 8,
-      "confirmed": 7,
+      "confirmed": 8,
       "hits": 5,
-      "ev_total": -0.03,
-      "pending": 1,
+      "ev_total": -1.03,
+      "pending": 0,
       "sports_included": [
         "ufl",
         "cfl",
@@ -228,17 +230,18 @@
         "ahl",
         "super_league"
       ],
-      "note": "Basic Tier集計: PD/G等counting statsのみ使用スポーツ合計。4/17-18完了分3件: UFL Renegades MISS(-1.0u) / NRL Warriors HIT(+0.23u) / SL Leeds HIT(+0.23u)",
-      "hit_rate": 0.7143
+      "note": "Basic Tier集計。Session_43 (2026-04-20) 追加: SL Warrington MISS(-1.0u Catalans 38-22 Perpignan home). 通算 5/8 62.5% -1.03u.",
+      "hit_rate": 0.625
     }
   },
   "overall_combined": {
     "total_predictions": 29,
-    "confirmed": 27,
+    "confirmed": 28,
     "hits": 20,
-    "pending": 2,
-    "ev_total": 2.733,
-    "note": "Advanced + Basic 合算。ただし精度が異なるため個別参照を推奨（「機能が別」扱い）。2026-04-18更新: CE013(UFL Renegades真逆報告) + CE014(GB001 Ostapenko真逆遡及発覚) + CE015(MC SF対戦相手誤記) 計3件訂正後の値。",
-    "hit_rate": 0.7407
-  }
+    "pending": 1,
+    "ev_total": 1.733,
+    "note": "Advanced + Basic 合算。Session_43 (2026-04-20): SL Warrington MISS追加。通算 20/28 71.4% +1.733u (Advanced 15/20 75.0% +2.763u / Basic 5/8 62.5% -1.03u).",
+    "hit_rate": 0.7143
+  },
+  "session_43_note": "Session_43 (2026-04-20) 終了時snapshot。更新内容: (1)SL Warrington MISS追加 (2)2026-MC CE015波及訂正 (3)NHL COL-LAK G1 HIT予測反映 (4)ATP/WTA QF結果記録 (5)手動データ 2026-04-19.json スクリーニング（NHL/NBA/NRL/Top14 全SKIP; WTA Oeiras+Madrid Q + ATP Challenger は out-of-scope）."
 }

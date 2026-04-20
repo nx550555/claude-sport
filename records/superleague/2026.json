@@ -7,11 +7,15 @@
   "note": "Super League (英国ラグビーリーグ) 2026シーズン。NRL rules準拠。PD/G L1指標。",
   "summary": {
     "total": 2,
-    "confirmed": 1,
+    "confirmed": 2,
     "hit": 1,
-    "hit_rate": 1.0,
-    "ev_total": 0.23,
-    "pending": 1
+    "hit_rate": 0.5,
+    "ev_total": -0.77,
+    "pending": 0,
+    "prediction_total": 2,
+    "prediction_hit": 1,
+    "prediction_hit_rate": 0.5,
+    "note": "2026-04-19 SL-002 Warrington MISS -1.0u 更新後。Phase2 Basic Tier 運用中の初期実績。1/2 50% -0.77u。"
   },
   "games": [
     {
@@ -107,15 +111,28 @@
       ],
       "translation_note": "JSON上は「バルサドラゴンズ vs ウェリントンウルフス」。バルサドラゴンズ=Catalans Dragons、ウェリントンウルフス=Warrington Wolves（Wellington誤訳）と特定。",
       "note": "Warrington Wolves リーグ1位（PD/G +21.17）。Catalans Dragons 6位でPDマイナス。差23.9ptで圧倒的。Catalans仏国ホームは-5%考慮済み。それでもEV+40.3%は非常に高い。lineup未確認 → 試合前スクワッド要確認。",
-      "result": null,
-      "score": null,
-      "hit": null,
-      "actual_ev": null,
-      "status": "pending",
+      "predicted_winner": "Warrington Wolves",
+      "prediction_confidence": 83,
+      "prediction_hit": false,
+      "result": "Catalans Dragons",
+      "score": "38-22 (Catalans home win)",
+      "hit": false,
+      "actual_ev": -1.0,
+      "status": "completed",
       "ev_calc": "(0.83 × 1.64) - 1 = +36.12%",
       "squad_note": "2026-04-17 UPDATE (GEN003): Tanginoa RETURNED (groin recovered) per Yahoo Sports + seriousaboutrl. Luke Yates STILL OUT (neck). Net injury penalty reduced from -5% to -2%. Confidence 80 -> 83.",
       "odds_updated_at": "2026-04-17",
-      "odds_update_note": "2026-04-17: @1.65 -> @1.64. Confidence 85->80->83 after Tanginoa return. EV 32%->31.2%->36.1%. GO tier maintained."
+      "odds_update_note": "2026-04-17: @1.65 -> @1.64. Confidence 85->80->83 after Tanginoa return. EV 32%->31.2%->36.1%. GO tier maintained.",
+      "outcome_note": "Catalans 38-22 Warrington UPSET (Catalans home). Lewis Dodd's first Super League hat-trick. Warrington led 16-10 just after halftime but Catalans ran in five unanswered tries in the second half. Warrington missed chance to go joint-top.",
+      "verification_sources": [
+        "https://uk.sports.yahoo.com/news/catalans-38-wire-22-story-184000209.html",
+        "https://ca.sports.yahoo.com/news/dodd-hat-trick-dragons-sinks-191010677.html",
+        "https://www.seriousaboutrl.com/warrington-wolves-second-best-in-most-aspects-against-catalans-dragons-as-boss-gives-verdict-114466",
+        "https://www.skysports.com/rugby-league/news/12196/13533386/super-league-wakefield-run-10-tries-past-bradford-as-warrington-miss-out-on-going-joint-top-after-catalans-defeat"
+      ],
+      "miss_layer": "L4_home_advantage_underestimated / L3_second_half_collapse",
+      "miss_analysis": "Catalans仏国ホーム補正-5%では不足。ペルピニャンの天候・観客・芝質の累積的優位が Catalans 2ndハーフ5トライ連取を生み出した。Warrington 1st halfでリードしていた（16-10）のに後半で崩壊 = 単なる『移動疲労』以上の構造的 away disadvantage。Superleague Basic Tier では 仏国ホーム補正を -7〜-10% に強化検討。また、Lewis Dodd は2026 breakout year で過去の PD/G 平均値を既に超えている選手（Catalans の実質 PD は直近で改善）。過去7試合平均では PD/G 差23.88ptの妥当性に疑問。",
+      "rule_candidate_sl_catalans_home": "P016 候補: Super League Catalans仏国ホームでは standard -5% が不足 → -7〜-10% 補正検討。証拠 A020 として記録。"
     }
   ],
   "screening_log": [

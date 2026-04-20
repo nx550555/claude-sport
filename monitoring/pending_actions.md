@@ -28,9 +28,9 @@
 | PA004 | WTA | Stuttgart R2 + Rouen R2 スクリーニング完了（全試合SKIP/EV負） | DONE | 高 | 完了 2026-04-16 |
 | PA005 | NHL | 4/15 CAUTION2件ゴーリー確認完了: CAR@NYI=Andersen確認(N006解消)試合進行中 / COL@CGY=Blackwood起用→N016発動→SKIP推奨 | DONE | 高 | 完了 4/15 |
 | PA006 | NHL | PO R1 スクリーニング（RS終了4/16後、ブラケット確定→MoneyPuck xGF%起点） | DONE | 高 | 完了 4/16 |
-| PA014 | NHL | PO R1 TBL vs MTL CAUTION→GO確認（**G1=4/19 5:45pm ET** GEN003 4/17日付修正。TBL: Vasilevskiy確認済4-2 2.19GAA .912sv%。MTL: Dobes(29-10-4 2.78GAA .901sv%)。オッズ確認+min 1.38要） | PENDING | 高 | 4/19試合当日 |
-| PA015 | NHL | PO R1 COL vs LAK CAUTION（**G1=4/19 3pm ET** GEN003 4/17日付修正。Manson OUT(上半身)/Bednar返答済→playoff復帰見込。Kadri復帰見込。Blackwood 22-10-2 2.55GAA .901sv%。オッズ確認要） | PENDING | 中 | 4/19試合当日 |
-| PA017 | NBA | PO R1 SAS vs POR GO @1.18 結果確認（G1=4/20 JST。Wembanyama ACTIVE確認済。Lillard OUT全季。EV+5.6%） | WAITING | 高 | 4/20試合後 |
+| PA014 | NHL | PO R1 TBL vs MTL G1 (4/19 5:45pm ET) 結果確認 - 手動データで live 2-2 2ndブレイク進行中確認。次セッションで最終スコア一次確認必須 | WAITING | 高 | 4/20 JST朝 |
+| PA015 | NHL | PO R1 COL vs LAK G1 (4/19 3pm ET) **DONE Session_43**: COL 2-1 LAK (Wedgewood 24 saves debut). CAUTION no bet. 予測HIT | DONE | 中 | 完了 2026-04-19 |
+| PA017 | NBA | PO R1 SAS vs POR GO @1.18 結果確認（G1=4/20 JST 10:00）Session_43時点で試合未確定。次セッションで結果確認 | WAITING | 高 | 4/20試合後 |
 | PA007 | NRL | R7 Broncos@Tigers オッズ確認（REVOKED済→odds discrepancy無効） | SKIP | 中 | Broncos REVOKED済 |
 | PA008 | NRL | R7 GO2件（Warriors 4/18/Broncos 4/18）・CAUTION2件の結果確認 | WAITING | 中 | 4/18〜19試合後 |
 | PA009 | NBA | Play-in（4/15-16）・PO R1（4/19〜）全SKIP確認済み。結果モニタリングのみ | WAITING | 低 | 継続 |
@@ -55,7 +55,14 @@
 | PA032 | AHL | 初回スクリーニング完了 (27試合 RS最終週4/18-19 全SKIP)。Basic Tier厳格閾値 + AHL固有補正で全試合conf<78%/EV<+7%。プレーオフ(4/22〜)で再評価 | DONE | 中 | 完了 2026-04-17 |
 | PA033 | AHL | Calder Cup Playoffs R1 (4/22〜) スクリーニング - best-of-3シリーズ。ラインナップ安定期でGO/CAUTION候補期待 | PENDING | 中 | 4/22以降 |
 | PA034 | SL | R8 Leeds vs Huddersfield @1.23 GO 結果確認 — **DONE 4/17 Leeds 56-22 HIT +0.23u** (10 tries, Brodie Croft 4 tries, Brad Arthur 50th match celebration) | DONE | 高 | 完了 2026-04-17 |
-| PA035 | SL | R8 Warrington @Catalans GEN003アップグレード: Tanginoa復帰確認 → conf 80→83%, EV 32→+36.1% / 4/19試合後結果確認 | WAITING | 高 | 4/19試合後 |
+| PA035 | SL | R8 Warrington @Catalans **DONE Session_43** — Catalans 38-22 Warrington UPSET (Dodd hat-trick). GO @1.64 MISS -1.0u. P016候補 (Catalans仏国ホーム補正-5%→-7/-10%検討) 記録 | DONE | 高 | 完了 2026-04-19 |
+| PA037 | ATP | Barcelona/Munich QF 8試合結果確認 **DONE Session_43**: Barcelona (Rublev/Medjedovic/Fils/Jodar HIT 3/4, Musetti MISS SKIP) / Munich (Cobolli/Zverev HIT 2/4, Fonseca/Shapovalov MISS SKIP). 予測精度 5/8. P013+1 P010+1 evidence | DONE | 高 | 完了 2026-04-20 |
+| PA038 | WTA | Stuttgart QF+R2残3 / Rouen QF+R2 結果確認 **DONE Session_43**: Stuttgart QF (Rybakina/Svitolina HIT 2/4), Rouen QF (Cirstea/Kostyuk HIT 2/4). Stuttgart R2残 Noskova/Fernandez HIT. Output A 4/7 HIT確定 (Swiatek/Gauff/Paolini MISS + Alcaraz VOID + Renegades MISS). | DONE | 高 | 完了 2026-04-20 |
+| PA039 | Tennis | 2026-MC.json CE015波及訂正 **DONE Session_43**: SF Alcaraz vs de Minaur → Alcaraz vs Vacherot (6-4 6-4) 訂正 / Marozsan vs Hurkacz スコア 6-2 6-3 確認 / QF draw_structure/screening_log 訂正 | DONE | 高 | 完了 2026-04-20 |
+| PA040 | スクリーニング | 2026-04-19.json スクリーニング **DONE Session_43**: NHL PO G1残5+G2 全SKIP / NBA PO G1残7 全SKIP / NRL R9 全SKIP / Top14 R22 全SKIP / WTA Oeiras+Madrid Q + ATP Challenger (out-of-scope, cElo取得不可) ログのみ | DONE | 中 | 完了 2026-04-20 |
+| PA041 | NHL | PO R1 G1 残5試合 (VGK/PIT/CAR/DAL/EDM) + G2 COL-LAK 結果確認 | WAITING | 中 | 4/21-22試合後 |
+| PA042 | P013実装判断 | Molcan/Shapovalov(MISS) + Kopriva/Darderi + Molcan/Altmaier で evidence 3件到達 → R020 「R1 upsetter R2 momentum +5%」実装判断 | PENDING | 中 | 次セッション |
+| PA043 | P010実装判断 | Jodar d. Norrie (A019候補) 追加で evidence 2件到達 → R017 「WC home + 連続ラウンドモメンタム +5%」実装判断 | PENDING | 中 | 次セッション |
 | PA036 | NRL | R7 Warriors @1.23 GO 結果確認 — **DONE 4/18 Warriors 28-20 Titans HIT +0.23u** (HT 22pt lead, Titans後半猛追も Warriors が最終ラインで止めて8点差逃げ切り) | DONE | 中 | 完了 2026-04-18 |
 
 ---
@@ -145,6 +152,16 @@
 - UFL Renegades: 怪我情報なし、推奨維持
 - NBA SAS: Wembanyama 100%近い、推奨維持
 - ダッシュボード更新: 予測精度タブ (19/24 79.2% / Tier分離表示)、ルール変更インパクト表 (R013/U008拡張/GEN004/Tier分類/AHL復活の5行追加)、アクティブ推奨 Warringtonカード (83%/+36.1%)、AHL sport-card pending 0→27 更新
+
+---
+**Session_43 更新 (2026-04-20):**
+- 過去分スコア未検証訂正: 2026-MC.json の Marozsan vs Hurkacz 「未確認」→「6-2 6-3」、SF 対戦相手 de Minaur→Vacherot (CE015波及)、QF draw_structure 訂正
+- 結果確認完了: NHL COL-LAK G1 HIT / SL Warrington MISS / ATP Barcelona+Munich QF 8件 / WTA Stuttgart QF+R2残3 + Rouen QF+R2 結果反映
+- 2026-04-19.json 全試合スクリーニング: NHL PO G1残+G2 全SKIP / NBA PO G1残 全SKIP / NRL R9 全SKIP / Top14 R22 全SKIP / WTA 125K+Q・ATP Challenger out-of-scope
+- Rule pipeline evidence 増加: P013 3/3到達 (R020実装判断要), P010 2/2到達 (R017実装判断要), P014 1/3, P007 2/3
+- SL P016候補記録: Catalans仏国ホーム補正-5%→-7%〜-10%強化検討 (evidence A020)
+- cumulative/dashboard_stats/dashboard.html 全同期完了: 通算 20/28 71.4% +1.733u (Advanced 15/20 75.0% / Basic 5/8 62.5%)
+- 未解決: PA014 TBL-MTL G1 (live 2-2進行中) / PA017 SAS-POR G1 (未開始) / PA041 NHL PO G1残5+G2 結果 / PA042 P013実装判断 / PA043 P010実装判断
 
 ---
 **Session_42 更新 (2026-04-18 CE013発生・訂正・全体整合性検証):**

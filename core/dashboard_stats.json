@@ -1,7 +1,7 @@
 {
   "_comment": "Sport card の唯一の真実ソース。記録更新後は必ずここを更新してから sync_sport_cards.py を実行すること",
-  "last_updated": "2026-04-18",
-  "session": "_42",
+  "last_updated": "2026-04-20",
+  "session": "_43",
   "sports": {
     "atp": {
       "go_count": 14,
@@ -61,11 +61,11 @@
     },
     "superleague": {
       "go_count": 2,
-      "confirmed_count": 1,
+      "confirmed_count": 2,
       "hit_count": 1,
-      "hit_rate": 1.0,
-      "pnl": 0.23,
-      "pending_count": 1
+      "hit_rate": 0.5,
+      "pnl": -0.77,
+      "pending_count": 0
     },
     "premiership": {
       "go_count": 0,
@@ -102,12 +102,12 @@
   },
   "overview": {
     "total_go": 29,
-    "total_confirmed": 27,
+    "total_confirmed": 28,
     "total_hits": 20,
-    "hit_rate": 0.741,
-    "total_pnl": 2.7,
-    "total_pending": 2,
-    "pending_breakdown": "NBA x1 + SL x1"
+    "hit_rate": 0.714,
+    "total_pnl": 1.7,
+    "total_pending": 1,
+    "pending_breakdown": "NBA x1"
   },
   "by_tier": {
     "advanced": {
@@ -127,10 +127,10 @@
     },
     "basic": {
       "go_count": 8,
-      "confirmed_count": 7,
+      "confirmed_count": 8,
       "hit_count": 5,
-      "pnl": -0.03,
-      "pending_count": 1,
+      "pnl": -1.03,
+      "pending_count": 0,
       "sports": [
         "ufl",
         "nrl",
@@ -141,8 +141,8 @@
         "prod2",
         "ahl"
       ],
-      "hit_rate": 0.7143,
-      "note": "AHL 27件はスクリーニング済・全SKIPのためpendingに含まない（スクリーニング定義を厳格化: pending = GO/CAUTION の未確定のみ）"
+      "hit_rate": 0.625,
+      "note": "Session_43 (2026-04-20) 追加: SL Warrington MISS(-1.0u). 通算 5/8 62.5% -1.03u."
     }
   }
 }

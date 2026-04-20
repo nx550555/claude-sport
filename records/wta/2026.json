@@ -486,7 +486,11 @@
             "Noskova": 1.77
           },
           "hit": null,
-          "result": null
+          "result": "Noskova L.",
+          "score": "6-1 6-1",
+          "prediction_hit": true,
+          "status": "completed",
+          "note": "Noskova 6-1 6-1 Alexandrova 圧勝。予測HIT（市場 Noskova fav と一致）。SF で Svitolina に進出。確認: WTA scores tennisuptodate stuttgart-open-quarterfinals"
         },
         {
           "tournament": "Porsche Tennis Grand Prix Stuttgart",
@@ -497,7 +501,7 @@
           "celo_p2": 1961.8,
           "l1_diff": 446.5,
           "l1_pass": true,
-          "tier": "skip",
+          "tier": "invalid",
           "predicted_winner": "Andreeva M.",
           "prediction_confidence": 93,
           "prediction_basis": "cElo diff 446.5pt (L1 pass). P(Andreeva)=0.929. EV=(0.929*1.07)-1=-0.6%. Odds @1.07 too short.",
@@ -509,7 +513,30 @@
             "Andreeva": 1.07
           },
           "hit": null,
-          "result": null
+          "result": null,
+          "invalidation_note": "2026-04-20 確認: ドロー上 Parks と Andreeva は別ブラケット。R2で Parks d. Noha Akugue 6-4 6-2 / Andreeva は別相手と対戦。この entry は casino data merge error。Parksの別entry(R1) + 新規R2 entry に分離予定。",
+          "status": "invalid_draw_error"
+        },
+        {
+          "tournament": "Porsche Tennis Grand Prix Stuttgart",
+          "round": "R2",
+          "date": "2026-04-17",
+          "match": "Parks A. vs Noha Akugue N.",
+          "retroactive_screening": true,
+          "tier": "skip",
+          "predicted_winner": "Parks A.",
+          "prediction_confidence": 70,
+          "prediction_basis": "Parks R1 d. Noma and prior ranking advantage over Noha Akugue. Market Parks fav.",
+          "odds": {
+            "Parks": null,
+            "Noha Akugue": null
+          },
+          "hit": null,
+          "result": "Parks A.",
+          "score": "6-4 6-2",
+          "prediction_hit": true,
+          "status": "completed",
+          "note": "Stuttgart R2。Parks d. Noha Akugue 6-4 6-2。QFには進出せず（R3 SF直前敗退 or 別形式）。追加確認要。確認: WTA scores tennisuptodate round2-results"
         },
         {
           "tournament": "Porsche Tennis Grand Prix Stuttgart",
@@ -586,7 +613,91 @@
             "Sonmez": 2.27
           },
           "hit": null,
-          "result": null
+          "result": "Fernandez L.",
+          "score": "6-7(2) 6-1 7-6(5)",
+          "prediction_hit": true,
+          "status": "completed",
+          "note": "3セット熱戦。Fernandez R1で Eala撃破後の勢いで Sonmez（Paolini撃破）を下す。QFでRybakinaに 6-7(5) 6-4 7-6(6)で接戦敗退。予測HIT。確認: tennisuptodate stuttgart-round2-results"
+        },
+        {
+          "_section_separator": "Stuttgart QF (2026-04-17/18)",
+          "tournament": "Porsche Tennis Grand Prix Stuttgart",
+          "round": "QF",
+          "date": "2026-04-18",
+          "match": "Swiatek I. vs Andreeva M.",
+          "tier": "skip",
+          "predicted_winner": "Swiatek I.",
+          "prediction_confidence": 70,
+          "prediction_basis": "Swiatek WTA #2 clay dominance + 2022/2023 Stuttgart champion。Andreeva 18歳急成長だが経験差。cElo差100pt+想定、GOボーダー。市場 Swiatek @1.50前後。",
+          "rec": null,
+          "rec_odds": null,
+          "ev": null,
+          "hit": null,
+          "result": "Andreeva M.",
+          "score": "3-6 6-4 6-3",
+          "prediction_hit": false,
+          "status": "completed",
+          "miss_layer": "L2_form / L4_age_momentum",
+          "miss_analysis": "Andreeva 18歳が Swiatek を3セットで倒す歴史的upset。Swiatekは1stセット6-3で取ったが、2ndセット中盤から Andreeva が tactical にフォアハンドリターンを深く入れてSwiatekをベースラインから下げた。3rdセット Andreeva 4-1 lead → Swiatek 4-4 return → 再度 Andreeva 6-3 で close。Stuttgart 2022/2023チャンピオンの防衛に重圧。Andreeva は全仏・WTA Finals進出の勢いそのまま。",
+          "miss_sources": [
+            "wtatennis.com stuttgart-2026-quarterfinals",
+            "tennisuptodate stuttgart-open-quarterfinals",
+            "sundayguardianlive stuttgart-open-mirra-andreeva-stuns-iga-swiatek"
+          ],
+          "note": "Output A Swiatek #1(92%) 含まれていたため GO MISS ではないが output A失敗の主要因。"
+        },
+        {
+          "tournament": "Porsche Tennis Grand Prix Stuttgart",
+          "round": "QF",
+          "date": "2026-04-18",
+          "match": "Rybakina E. vs Fernandez L.",
+          "tier": "skip",
+          "predicted_winner": "Rybakina E.",
+          "prediction_confidence": 77,
+          "prediction_basis": "Rybakina cElo 2011 vs Fernandez 1697 (差314)。ただしFernandezのleft-handed defensive game はRybakinaと噛み合いクロスフロー想定困難。market Rybakina fav。",
+          "hit": null,
+          "result": "Rybakina E.",
+          "score": "6-7(5) 6-4 7-6(6)",
+          "prediction_hit": true,
+          "status": "completed",
+          "note": "Rybakina 接戦逃げ切り。staved off a second match point in 3rd set TB。Fernandez 本命に迫る激戦。次 SF で Andreeva vs Rybakina。予測HIT。確認: wtatennis.com stuttgart-quarterfinals LS002"
+        },
+        {
+          "tournament": "Porsche Tennis Grand Prix Stuttgart",
+          "round": "QF",
+          "date": "2026-04-18",
+          "match": "Muchova K. vs Gauff C.",
+          "tier": "skip",
+          "predicted_winner": "Gauff C.",
+          "prediction_confidence": 72,
+          "prediction_basis": "Gauff cElo 2057 vs Muchova 1853 (差204)。Gauff 市場本命。Muchovaクレー得意だが Gauff のTop3 power game優勢想定。",
+          "hit": null,
+          "result": "Muchova K.",
+          "score": "6-3 5-7 6-3",
+          "prediction_hit": false,
+          "status": "completed",
+          "miss_layer": "L2_form / L4_surface_specialist",
+          "miss_analysis": "Muchova のクレー戦術（drop shot, slice variation, net approach）が Gauff の power rhythm を崩した。2ndセット Gauff 逆転で勢いづく想定も、3rdセット Muchova 早々 break でペース回復。Gauffのクレー wariest match 2026シーズン。Output A Gauff 81% 含まれていたため output A失敗寄与。",
+          "miss_sources": [
+            "wtatennis.com stuttgart-quarterfinals LS007",
+            "yardbarker wta-roundup-coco-gauff-iga-swiatek-both-upset-at-stuttgart"
+          ]
+        },
+        {
+          "tournament": "Porsche Tennis Grand Prix Stuttgart",
+          "round": "QF",
+          "date": "2026-04-18",
+          "match": "Svitolina E. vs Noskova L.",
+          "tier": "skip",
+          "predicted_winner": "Svitolina E.",
+          "prediction_confidence": 70,
+          "prediction_basis": "Svitolina cElo vs Noskova。Svitolinaベテランクレー安定型、Noskova R2 Alexandrova 6-1 6-1 圧勝後モメンタム。均衡SKIP。",
+          "hit": null,
+          "result": "Svitolina E.",
+          "score": "7-6(2) 7-5",
+          "prediction_hit": true,
+          "status": "completed",
+          "note": "Svitolina 接戦2セット勝ち。SFでMuchova戦。予測HIT。確認: wtatennis.com stuttgart-2026-quarterfinals"
         }
       ]
     },
@@ -596,7 +707,7 @@
       "tier": "WTA250",
       "surface": "Clay (outdoor)",
       "dates": "2026-04-13 to 2026-04-19",
-      "status": "in_progress",
+      "status": "qf_completed",
       "note": "4/13開幕。新規追跡開始（4/13確認）。R1進行中。",
       "predictions": [
         {
@@ -1053,7 +1164,11 @@
             "Maria": 2.85
           },
           "hit": null,
-          "result": null
+          "result": "Maria T.",
+          "score": "6-4 6-2",
+          "prediction_hit": false,
+          "status": "completed",
+          "note_update": "Maria d. Salkova R2 (retroactive update 2026-04-20 from QF backward inference + WebSearch confirmation)"
         },
         {
           "tournament": "WTA Rouen",
@@ -1076,7 +1191,11 @@
             "Simanovic": 3.75
           },
           "hit": null,
-          "result": null
+          "result": "Simanovic I. (Shymanovich)",
+          "score": "ストレート",
+          "prediction_hit": false,
+          "status": "completed",
+          "note_update": "Simanovic=Shymanovich姓名表記ゆれ。R2 d. Baptiste (retroactive update 2026-04-20 from QF backward inference + WebSearch confirmation)"
         },
         {
           "tournament": "WTA Rouen",
@@ -1100,7 +1219,11 @@
             "Podrez": 3.7
           },
           "hit": null,
-          "result": null
+          "result": "Podrez V.",
+          "score": "ストレート",
+          "prediction_hit": false,
+          "status": "completed",
+          "note_update": "Podrez Stevens→Cocciaretto 2連勝 (retroactive update 2026-04-20 from QF backward inference + WebSearch confirmation)"
         },
         {
           "tournament": "WTA Rouen",
@@ -1123,7 +1246,11 @@
             "Cirstea": 1.24
           },
           "hit": null,
-          "result": null
+          "result": "Cirstea S.",
+          "score": "ストレート",
+          "prediction_hit": true,
+          "status": "completed",
+          "note_update": "Cirstea d. Wang Xinyu R2 (retroactive update 2026-04-20 from QF backward inference + WebSearch confirmation)"
         },
         {
           "tournament": "WTA Rouen",
@@ -1143,12 +1270,16 @@
             "Oliynykova": 1.85
           },
           "hit": null,
-          "result": null
+          "result": "Bondar A.",
+          "score": "ストレート",
+          "prediction_hit": false,
+          "status": "completed",
+          "note_update": "Bondar d. Oliynykova R2 (retroactive update 2026-04-20 from QF backward inference + WebSearch confirmation)"
         },
         {
           "tournament": "WTA Rouen",
-          "round": "R2",
-          "date": "2026-04-17",
+          "round": "QF",
+          "date": "2026-04-18",
           "match": "Kostyuk M. vs Li Ann",
           "celo_p1": 1843.0,
           "celo_p2": 1692.7,
@@ -1166,7 +1297,80 @@
             "Li Ann": 3.25
           },
           "hit": null,
-          "result": null
+          "result": "Kostyuk M.",
+          "round_correction": "original R2 label was incorrect. This is the QF match held 2026-04-18.",
+          "score": "4-6 6-2 6-3",
+          "prediction_hit": true,
+          "status": "completed",
+          "note": "QF 2026-04-18。Kostyuk 逆転勝利 4-6 6-2 6-3。確認: wtatennis.com/tournaments/2066/rouen/2026/scores/LS004"
+        },
+        {
+          "tournament": "WTA Rouen",
+          "round": "QF",
+          "date": "2026-04-18",
+          "match": "Podrez V. vs Boulter K.",
+          "tier": "skip",
+          "predicted_winner": "Boulter K.",
+          "prediction_confidence": 65,
+          "prediction_basis": "Boulter market fav based on ranking, Podrez qualifier Tour debut. Boulter R1 d. Timofeyeva + R2 進出 vs Podrez R1 Stevens + R2 Cocciaretto 2連勝.",
+          "rec": null,
+          "rec_odds": null,
+          "ev": null,
+          "hit": null,
+          "result": "Podrez V.",
+          "score": "6-4 6-1",
+          "prediction_hit": false,
+          "status": "completed",
+          "miss_layer": "L2_form / L4_debut_confidence",
+          "miss_analysis": "Podrez qualifier Tour debut で28 winners の快勝。予測 Boulter だったが Podrez の aggressive baseline play が Boulter の rhythm game を崩した。P010/P013 候補（qualifier連勝モメンタム）。",
+          "miss_sources": [
+            "wtatennis.com tournaments/2066/rouen/2026/scores/LS006",
+            "mezha.net eng/bukvy/podrez_stunned_boulter"
+          ],
+          "note": "手動データ(2026-04-17.json)で事前報告あり。WebSearch一次確認完了。"
+        },
+        {
+          "tournament": "WTA Rouen",
+          "round": "QF",
+          "date": "2026-04-18",
+          "match": "Shymanovich I. vs Maria T.",
+          "tier": "skip",
+          "predicted_winner": "Maria T.",
+          "prediction_confidence": 60,
+          "prediction_basis": "Maria 34歳ベテラン、R1 Jacquemot撃破（A013 evidence）+ クレー経験値。Shymanovich キャリア R2勝利継続で momentum。均衡。",
+          "rec": null,
+          "rec_odds": null,
+          "ev": null,
+          "hit": null,
+          "result": "Shymanovich I.",
+          "score": "6-3 5-7 6-3",
+          "prediction_hit": false,
+          "status": "completed",
+          "miss_layer": "L2_form",
+          "miss_analysis": "Shymanovich 3セット逆転。Mariaは2ndセット奪取も3rdセットでShymanovichがブレイクバック連発。",
+          "miss_sources": [
+            "tennistonic.com/tennis-news/986404/rouen-results-tatjana-maria-iryna-shymanovich",
+            "wtatennis.com scores LS005"
+          ]
+        },
+        {
+          "tournament": "WTA Rouen",
+          "round": "QF",
+          "date": "2026-04-18",
+          "match": "Cirstea S. vs Bondar A.",
+          "tier": "skip",
+          "predicted_winner": "Cirstea S.",
+          "prediction_confidence": 65,
+          "prediction_basis": "Cirstea WTA veteran, R2 Wang Xinyu 撃破。Bondar R2 Oliynykova R2勝利。均衡だがCirstea市場本命。",
+          "rec": null,
+          "rec_odds": null,
+          "ev": null,
+          "hit": null,
+          "result": "Cirstea S.",
+          "score": "7-6(2) 6-2",
+          "prediction_hit": true,
+          "status": "completed",
+          "note": "Cirstea 接戦1st→2nd圧勝。SFへ。確認: wtatennis.com/tournaments/2066/rouen/2026/scores/LS007"
         }
       ]
     }

@@ -25,8 +25,10 @@
           "miss_layer": "L2", "rules_triggered": ["R010"] },
         { "match": "Marozsan F. vs Hurkacz H.(PR)",
           "tier": "caution", "rec": "Marozsan", "rec_odds": 1.73, "ev": 2.1, "confidence": 90,
-          "result": "Hurkacz", "score": "未確認", "hit": false, "actual_ev": -1.0,
-          "miss_layer": "L1", "rules_triggered": ["R013"] }
+          "result": "Hurkacz", "score": "6-2 6-3", "hit": false, "actual_ev": -1.0,
+          "miss_layer": "L1", "rules_triggered": ["R013"],
+          "verification_sources": ["sofascore.com match 15921153", "atptour.com stats-centre MS021"],
+          "score_verified_date": "2026-04-20" }
       ],
       "summary": { "total": 5, "hit": 1, "hit_rate": 0.20, "ev_total": -3.37 }
     },
@@ -50,8 +52,8 @@
       "status": "in_progress",
       "date": "2026-04-10",
       "draw_structure": {
-        "note": "初回設定のハーフ区分を修正。ESPN SFより Zverev vs Sinnerが同ハーフと確認",
-        "half1_alcaraz": ["QF-A: Alcaraz(1) vs Bublik(8) → Alcaraz勝利 6-1 6-3", "QF-D: de Minaur(5) vs Vacherot(WC) → de Minaur勝利（要確認）"],
+        "note": "初回設定のハーフ区分を修正。ESPN SFより Zverev vs Sinnerが同ハーフと確認。CE015 (2026-04-18) 遡及訂正: QF-D実結果はVacherot勝利（モナコWC歴史的Open Era初SF進出）。",
+        "half1_alcaraz": ["QF-A: Alcaraz(1) vs Bublik(8) → Alcaraz勝利 6-1 6-3", "QF-D: de Minaur(5) vs Vacherot(WC) → Vacherot勝利 6-4 3-6 6-3 (CE015訂正)"],
         "half2_sinner":  ["QF-C: Sinner(2) vs FAA(6) → Sinner勝利 6-3 6-4",       "QF-B: Zverev(3) vs Fonseca → Zverev勝利 4-6 6-4 7-5"]
       },
       "predictions": [
@@ -115,8 +117,14 @@
           "ev_est": null,
           "confidence": 70,
           "rules_applied": ["R009", "R010"],
-          "note": "信頼度70%→R010により推奨除外。結果未取得（スキップのため記録対象外）",
-          "result": null, "score": null, "hit": null, "actual_ev": null
+          "note": "信頼度70%→R010により推奨除外。結果: Vacherot upset勝利（R009ホームWC+連続モメンタムで A004/P010候補）。SKIP判定は結果的に正しい（推奨除外の妥当性維持）。",
+          "result": "Vacherot V.",
+          "score": "6-4 3-6 6-3",
+          "predicted_winner": "de Minaur A.",
+          "prediction_hit": false,
+          "hit": null,
+          "actual_ev": null,
+          "retroactive_update": "2026-04-20 CE015波及訂正。SFの対戦相手もVacherotに変更。"
         }
       ],
       "summary": { "confirmed_go": 3, "hit": 3, "miss": 0, "note": "QF全3件GO予測がHIT（3/3 100%）。de Minaur vs Vacherotはスキップのため対象外" }
@@ -124,10 +132,10 @@
     "SF": {
       "status": "completed",
       "date": "2026-04-11",
-      "note": "SF確定：[half1] Alcaraz vs de Minaur / [half2] Sinner vs Zverev。Wikipedia/検索結果より確認",
+      "note": "SF確定：[half1] Alcaraz vs Vacherot(WC) / [half2] Sinner vs Zverev。CE015 (2026-04-18) 訂正: QF-Dで de Minaur ではなく Vacherot が勝ち上がっていた。",
       "predictions": [
         {
-          "match": "Alcaraz C.(1) vs de Minaur A.(5)",
+          "match": "Alcaraz C.(1) vs Vacherot V.(WC)",
           "tier": "go",
           "rec": "Alcaraz",
           "rec_odds_est": 1.50,
@@ -135,12 +143,13 @@
           "confidence": 83,
           "rules_applied": ["R001", "R002", "R005"],
           "analysis": {
-            "L1_cElo": "Alcaraz クレーcElo ~2080 vs de Minaur ~1800, 差 ~280 → R001通過",
-            "L2_quality": "Alcaraz: QF 6-1 6-3（圧倒的）。de Minaur: Vacherot戦で勝利",
-            "L3_stats": "Alcarazのスライド・フォアは世界最高水準。de MinaurはHCが本来の得意面",
-            "L4_external": "H2H Alcaraz 9-4 優勢（クレーは4-1以上）。ディフェンディングチャンピオン"
+            "L1_cElo": "Alcaraz クレーcElo ~2080 vs Vacherot ~1600台, 差 大 → R001通過",
+            "L2_quality": "Alcaraz: QF 6-1 6-3（圧倒的）。Vacherot: R16 d. Hurkacz + QF d. de Minaur 連続upset (A004)",
+            "L3_stats": "Alcarazのスライド・フォアは世界最高水準。Vacherot未経験 Masters SF",
+            "L4_external": "ディフェンディングチャンピオン。Vacherot初Masters SF進出でプレッシャー大。"
           },
-          "result": "Alcaraz", "score": "確認中", "hit": true, "actual_ev": 0.50
+          "result": "Alcaraz", "score": "6-4 6-4", "hit": true, "actual_ev": 0.50,
+          "ce_correction": "CE015 (2026-04-18): 対戦相手誤記訂正 de Minaur → Vacherot。Alcaraz 6-4 6-4 (84分) 勝利。HIT判定維持。"
         },
         {
           "match": "Sinner J.(2) vs Zverev A.(3)",
@@ -233,8 +242,8 @@
       "skip_tracking": "未実装",
       "go_recommendations": 2,
       "games_predicted": [
-        { "match": "Alcaraz C.(1) vs de Minaur A.(5)", "verdict": "GO", "result": "HIT" },
-        { "match": "Sinner J.(2) vs Zverev A.(3)", "verdict": "GO", "result": "MISS" }
+        { "match": "Alcaraz C.(1) vs Vacherot V.(WC)", "verdict": "GO", "result": "HIT", "ce015_correction_note": "元記録 'de Minaur' → 'Vacherot' に訂正 2026-04-18" },
+        { "match": "Sinner J.(2) vs Zverev A.(3)", "verdict": "GO", "result": "HIT", "note": "2026-04-11 Sinner 6-1 6-4 勝利（元 'MISS' 記録は誤り。2026-04-12に既に HIT 訂正済み。screening_log も反映）" }
       ]
     },
     {

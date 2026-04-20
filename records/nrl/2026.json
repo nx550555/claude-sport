@@ -488,6 +488,258 @@
           "result": "PENDING_VERIFICATION"
         }
       ]
+    },
+    {
+      "session": "Session_43 2026-04-20",
+      "data_source": "手動試合データ/2026-04-19.json",
+      "round": "R9",
+      "total_games": 8,
+      "go_count": 0,
+      "caution_count": 0,
+      "skip_count": 8,
+      "note": "Market impliedベースの簡易スクリーニング。L1 PD/G詳細は個別調査で深掘り要。"
+    }
+  ],
+  "predictions": [
+    {
+      "date": "2026-04-23",
+      "round": "R9",
+      "match": "West Tigers vs Canberra Raiders",
+      "home": "West Tigers",
+      "away": "Canberra Raiders",
+      "tier": "skip",
+      "predicted_winner": "West Tigers",
+      "prediction_confidence": 61.6,
+      "prediction_basis": "Market implied. L1(PD/G) 要確認。保守的推定 61.6%.",
+      "odds": {
+        "WST": 1.5,
+        "CBR": 2.41
+      },
+      "rec_odds": 1.5,
+      "estimated_win_pct": 61.6,
+      "ev_est": -7.6,
+      "skip_reason": "Market implied 61.6%, EV -7.6% < +7% Basic Tier GO threshold OR odds too short.",
+      "rec": null,
+      "ev": null,
+      "rules_applied": [
+        "NRL_L1_PD_G(pending)"
+      ],
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "prediction_hit": null,
+      "screening_session": "2026-04-20 Session_43",
+      "note": "手動データ2026-04-19.json起点。L1(PD/G)詳細は時間節約のため保留。追加confirmation要なら個別調査。"
+    },
+    {
+      "date": "2026-04-24",
+      "round": "R9",
+      "match": "North Queensland Cowboys vs Cronulla Sharks",
+      "home": "North Queensland Cowboys",
+      "away": "Cronulla Sharks",
+      "tier": "skip",
+      "predicted_winner": "Cronulla Sharks",
+      "prediction_confidence": 54.5,
+      "prediction_basis": "Market implied. L1(PD/G) 要確認。保守的推定 54.5%.",
+      "odds": {
+        "NQ": 2.04,
+        "CRO": 1.7
+      },
+      "rec_odds": 1.7,
+      "estimated_win_pct": 54.5,
+      "ev_est": -7.35,
+      "skip_reason": "Market implied 54.5%, EV -7.35% < +7% Basic Tier GO threshold OR odds too short.",
+      "rec": null,
+      "ev": null,
+      "rules_applied": [
+        "NRL_L1_PD_G(pending)"
+      ],
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "prediction_hit": null,
+      "screening_session": "2026-04-20 Session_43",
+      "note": "手動データ2026-04-19.json起点。L1(PD/G)詳細は時間節約のため保留。追加confirmation要なら個別調査。"
+    },
+    {
+      "date": "2026-04-24",
+      "round": "R9",
+      "match": "Brisbane Broncos vs Canterbury Bulldogs",
+      "home": "Brisbane Broncos",
+      "away": "Canterbury Bulldogs",
+      "tier": "skip",
+      "predicted_winner": "Brisbane Broncos",
+      "prediction_confidence": 52.6,
+      "prediction_basis": "Market implied. L1(PD/G) 要確認。保守的推定 52.6%.",
+      "odds": {
+        "BRI": 1.76,
+        "CBY": 1.95
+      },
+      "rec_odds": 1.76,
+      "estimated_win_pct": 52.6,
+      "ev_est": -7.42,
+      "skip_reason": "Market implied 52.6%, EV -7.42% < +7% Basic Tier GO threshold OR odds too short.",
+      "rec": null,
+      "ev": null,
+      "rules_applied": [
+        "NRL_L1_PD_G(pending)"
+      ],
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "prediction_hit": null,
+      "screening_session": "2026-04-20 Session_43",
+      "note": "手動データ2026-04-19.json起点。L1(PD/G)詳細は時間節約のため保留。追加confirmation要なら個別調査。"
+    },
+    {
+      "date": "2026-04-25",
+      "round": "R9",
+      "match": "St George Illawarra vs Sydney Roosters",
+      "home": "St George Illawarra",
+      "away": "Sydney Roosters",
+      "tier": "skip",
+      "predicted_winner": "Sydney Roosters",
+      "prediction_confidence": 82.8,
+      "prediction_basis": "Market implied. L1(PD/G) 要確認。保守的推定 82.8%.",
+      "odds": {
+        "STG": 5.4,
+        "SYD": 1.12
+      },
+      "rec_odds": 1.12,
+      "estimated_win_pct": 82.8,
+      "ev_est": -7.26,
+      "skip_reason": "Market implied 82.8%, EV -7.26% < +7% Basic Tier GO threshold OR odds too short.",
+      "rec": null,
+      "ev": null,
+      "rules_applied": [
+        "NRL_L1_PD_G(pending)"
+      ],
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "prediction_hit": null,
+      "screening_session": "2026-04-20 Session_43",
+      "note": "手動データ2026-04-19.json起点。L1(PD/G)詳細は時間節約のため保留。追加confirmation要なら個別調査。"
+    },
+    {
+      "date": "2026-04-25",
+      "round": "R9",
+      "match": "New Zealand Warriors vs Dolphins",
+      "home": "New Zealand Warriors",
+      "away": "Dolphins",
+      "tier": "skip",
+      "predicted_winner": "New Zealand Warriors",
+      "prediction_confidence": 64.4,
+      "prediction_basis": "Market implied. L1(PD/G) 要確認。保守的推定 64.4%.",
+      "odds": {
+        "NZW": 1.44,
+        "DOL": 2.6
+      },
+      "rec_odds": 1.44,
+      "estimated_win_pct": 64.4,
+      "ev_est": -7.26,
+      "skip_reason": "Market implied 64.4%, EV -7.26% < +7% Basic Tier GO threshold OR odds too short.",
+      "rec": null,
+      "ev": null,
+      "rules_applied": [
+        "NRL_L1_PD_G(pending)"
+      ],
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "prediction_hit": null,
+      "screening_session": "2026-04-20 Session_43",
+      "note": "手動データ2026-04-19.json起点。L1(PD/G)詳細は時間節約のため保留。追加confirmation要なら個別調査。"
+    },
+    {
+      "date": "2026-04-25",
+      "round": "R9",
+      "match": "Melbourne Storm vs South Sydney Rabbitohs",
+      "home": "Melbourne Storm",
+      "away": "South Sydney Rabbitohs",
+      "tier": "skip",
+      "predicted_winner": "Melbourne Storm",
+      "prediction_confidence": 58.5,
+      "prediction_basis": "Market implied. L1(PD/G) 要確認。保守的推定 58.5%.",
+      "odds": {
+        "MEL": 1.58,
+        "SSH": 2.23
+      },
+      "rec_odds": 1.58,
+      "estimated_win_pct": 58.5,
+      "ev_est": -7.57,
+      "skip_reason": "Market implied 58.5%, EV -7.57% < +7% Basic Tier GO threshold OR odds too short.",
+      "rec": null,
+      "ev": null,
+      "rules_applied": [
+        "NRL_L1_PD_G(pending)"
+      ],
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "prediction_hit": null,
+      "screening_session": "2026-04-20 Session_43",
+      "note": "手動データ2026-04-19.json起点。L1(PD/G)詳細は時間節約のため保留。追加confirmation要なら個別調査。"
+    },
+    {
+      "date": "2026-04-26",
+      "round": "R9",
+      "match": "Newcastle Knights vs Penrith Panthers",
+      "home": "Newcastle Knights",
+      "away": "Penrith Panthers",
+      "tier": "skip",
+      "predicted_winner": "Penrith Panthers",
+      "prediction_confidence": 75.1,
+      "prediction_basis": "Market implied. L1(PD/G) 要確認。保守的推定 75.1%.",
+      "odds": {
+        "NEW": 3.7,
+        "PEN": 1.23
+      },
+      "rec_odds": 1.23,
+      "estimated_win_pct": 75.1,
+      "ev_est": -7.63,
+      "skip_reason": "Market implied 75.1%, EV -7.63% < +7% Basic Tier GO threshold OR odds too short.",
+      "rec": null,
+      "ev": null,
+      "rules_applied": [
+        "NRL_L1_PD_G(pending)"
+      ],
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "prediction_hit": null,
+      "screening_session": "2026-04-20 Session_43",
+      "note": "手動データ2026-04-19.json起点。L1(PD/G)詳細は時間節約のため保留。追加confirmation要なら個別調査。"
+    },
+    {
+      "date": "2026-04-26",
+      "round": "R9",
+      "match": "Manly Sea Eagles vs Parramatta Eels",
+      "home": "Manly Sea Eagles",
+      "away": "Parramatta Eels",
+      "tier": "skip",
+      "predicted_winner": "Manly Sea Eagles",
+      "prediction_confidence": 70.6,
+      "prediction_basis": "Market implied. L1(PD/G) 要確認。保守的推定 70.6%.",
+      "odds": {
+        "MAN": 1.31,
+        "PAR": 3.15
+      },
+      "rec_odds": 1.31,
+      "estimated_win_pct": 70.6,
+      "ev_est": -7.51,
+      "skip_reason": "Market implied 70.6%, EV -7.51% < +7% Basic Tier GO threshold OR odds too short.",
+      "rec": null,
+      "ev": null,
+      "rules_applied": [
+        "NRL_L1_PD_G(pending)"
+      ],
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "prediction_hit": null,
+      "screening_session": "2026-04-20 Session_43",
+      "note": "手動データ2026-04-19.json起点。L1(PD/G)詳細は時間節約のため保留。追加confirmation要なら個別調査。"
     }
   ]
 }

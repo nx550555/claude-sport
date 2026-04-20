@@ -503,6 +503,216 @@
       },
       "result": null,
       "hit": null
+    },
+    {
+      "date": "2026-04-21",
+      "match": "Cleveland Cavaliers vs Toronto Raptors (G1 R1)",
+      "home": "CLE",
+      "away": "TOR",
+      "round": "PO R1 G1 or RS",
+      "tier": "skip",
+      "predicted_winner": "CLE",
+      "prediction_confidence": 75.0,
+      "prediction_basis": "Market implied 75.0%; L1(NRtg) 未検証。",
+      "odds": {
+        "CLE": 1.27,
+        "TOR": 3.8
+      },
+      "rec_odds": null,
+      "estimated_win_pct": 75.0,
+      "ev_est": -4.75,
+      "skip_reason": "Market implied 75.0%, EV -4.75%. L1(NRtg)未検証 or EV不足。",
+      "rec": null,
+      "ev": null,
+      "rules_applied": [
+        "NBA_L1_NetRating_pending"
+      ],
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "prediction_hit": null,
+      "screening_session": "2026-04-20 Session_43",
+      "note": "手動データ2026-04-19.json起点。"
+    },
+    {
+      "date": "2026-04-21",
+      "match": "New York Knicks vs Atlanta Hawks (G1 R1)",
+      "home": "NYK",
+      "away": "ATL",
+      "round": "PO R1 G1 or RS",
+      "tier": "skip",
+      "predicted_winner": "NYK",
+      "prediction_confidence": 65.9,
+      "prediction_basis": "Market implied 65.9%; L1(NRtg) 未検証。",
+      "odds": {
+        "NYK": 1.45,
+        "ATL": 2.8
+      },
+      "rec_odds": null,
+      "estimated_win_pct": 65.9,
+      "ev_est": -4.44,
+      "skip_reason": "Market implied 65.9%, EV -4.44%. L1(NRtg)未検証 or EV不足。",
+      "rec": null,
+      "ev": null,
+      "rules_applied": [
+        "NBA_L1_NetRating_pending"
+      ],
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "prediction_hit": null,
+      "screening_session": "2026-04-20 Session_43",
+      "note": "手動データ2026-04-19.json起点。"
+    },
+    {
+      "date": "2026-04-21",
+      "match": "Denver Nuggets vs Minnesota Timberwolves (G1 R1)",
+      "home": "DEN",
+      "away": "MIN",
+      "round": "PO R1 G1 or RS",
+      "tier": "skip",
+      "predicted_winner": "DEN",
+      "prediction_confidence": 68.7,
+      "prediction_basis": "Market implied 68.7%; L1(NRtg) 未検証。",
+      "odds": {
+        "DEN": 1.39,
+        "MIN": 3.05
+      },
+      "rec_odds": null,
+      "estimated_win_pct": 68.7,
+      "ev_est": -4.51,
+      "skip_reason": "Market implied 68.7%, EV -4.51%. L1(NRtg)未検証 or EV不足。",
+      "rec": null,
+      "ev": null,
+      "rules_applied": [
+        "NBA_L1_NetRating_pending"
+      ],
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "prediction_hit": null,
+      "screening_session": "2026-04-20 Session_43",
+      "note": "手動データ2026-04-19.json起点。"
+    },
+    {
+      "date": "2026-04-22",
+      "match": "Boston Celtics vs Philadelphia 76ers (G1 R1)",
+      "home": "BOS",
+      "away": "PHI",
+      "round": "PO R1 G1 or RS",
+      "tier": "skip",
+      "predicted_winner": "BOS",
+      "prediction_confidence": 85.2,
+      "prediction_basis": "Market implied 85.2%; L1(NRtg) 未検証。",
+      "odds": {
+        "BOS": 1.11,
+        "PHI": 6.4
+      },
+      "rec_odds": null,
+      "estimated_win_pct": 85.2,
+      "ev_est": -5.43,
+      "skip_reason": "Market implied 85.2%, EV -5.43%. L1(NRtg)未検証 or EV不足。",
+      "rec": null,
+      "ev": null,
+      "rules_applied": [
+        "NBA_L1_NetRating_pending"
+      ],
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "prediction_hit": null,
+      "screening_session": "2026-04-20 Session_43",
+      "note": "手動データ2026-04-19.json起点。"
+    },
+    {
+      "date": "2026-04-22",
+      "match": "Los Angeles Lakers @ Houston Rockets (G1 R1)",
+      "home": "HOU",
+      "away": "LAL",
+      "round": "PO R1 G1 or RS",
+      "tier": "skip",
+      "predicted_winner": "HOU",
+      "prediction_confidence": 62.3,
+      "prediction_basis": "Market implied 62.3%; L1(NRtg) 未検証。",
+      "odds": {
+        "LAL": 2.5,
+        "HOU": 1.51
+      },
+      "rec_odds": null,
+      "estimated_win_pct": 62.3,
+      "ev_est": -5.93,
+      "skip_reason": "Market implied 62.3%, EV -5.93%. L1(NRtg)未検証 or EV不足。",
+      "rec": null,
+      "ev": null,
+      "rules_applied": [
+        "NBA_L1_NetRating_pending"
+      ],
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "prediction_hit": null,
+      "screening_session": "2026-04-20 Session_43",
+      "note": "手動データ2026-04-19.json起点。"
+    },
+    {
+      "date": "2026-04-23",
+      "match": "Oklahoma City Thunder vs Phoenix Suns (G1 R1)",
+      "home": "OKC",
+      "away": "PHX",
+      "round": "PO R1 G1 or RS",
+      "tier": "skip",
+      "predicted_winner": "OKC",
+      "prediction_confidence": 90.6,
+      "prediction_basis": "Market implied 90.6%; L1(NRtg) 未検証。",
+      "odds": {
+        "OKC": 1.04,
+        "PHX": 10.0
+      },
+      "rec_odds": null,
+      "estimated_win_pct": 90.6,
+      "ev_est": -5.78,
+      "skip_reason": "Market implied 90.6%, EV -5.78%. L1(NRtg)未検証 or EV不足。",
+      "rec": null,
+      "ev": null,
+      "rules_applied": [
+        "NBA_L1_NetRating_pending"
+      ],
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "prediction_hit": null,
+      "screening_session": "2026-04-20 Session_43",
+      "note": "手動データ2026-04-19.json起点。"
+    },
+    {
+      "date": "2026-04-20",
+      "match": "Detroit Pistons vs Orlando Magic (RS live)",
+      "home": "DET",
+      "away": "ORL",
+      "round": "PO R1 G1 or RS",
+      "tier": "skip",
+      "predicted_winner": "DET",
+      "prediction_confidence": 63.4,
+      "prediction_basis": "Market implied 63.4%; L1(NRtg) 未検証。",
+      "odds": {
+        "DET": 1.5,
+        "ORL": 2.6
+      },
+      "rec_odds": null,
+      "estimated_win_pct": 63.4,
+      "ev_est": -4.9,
+      "skip_reason": "Market implied 63.4%, EV -4.9%. L1(NRtg)未検証 or EV不足。",
+      "rec": null,
+      "ev": null,
+      "rules_applied": [
+        "NBA_L1_NetRating_pending"
+      ],
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "prediction_hit": null,
+      "screening_session": "2026-04-20 Session_43",
+      "note": "live 51-55 2ndブレイク"
     }
   ],
   "screening_log": [
@@ -728,6 +938,16 @@
           "reason": "NRtg差1.6pt未達。両チームとも現シーズン低調（W8/W10）。ホームはClippers。差1.6ptでエッジなし。"
         }
       ]
+    },
+    {
+      "session": "Session_43 2026-04-20",
+      "data_source": "手動試合データ/2026-04-19.json",
+      "round": "PO R1 G1 + RS",
+      "total_games_added": 7,
+      "go_count": 0,
+      "caution_count": 0,
+      "skip_count": 7,
+      "note": "SAS-POR既存GO維持。他はL1未検証のため pending。"
     }
   ]
 }

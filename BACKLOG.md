@@ -20,15 +20,17 @@
 
 - [x] 【Session_41 完了】ダッシュボード大規模改修（Phase 1-3全項目完了）
 - [x] 【Session_42 完了】CE013/CE014/CE015 発生・訂正・全体整合性検証（詳細は session_logs/2026-04-20_42.md）
+- [x] 【Session_43 完了 2026-04-20】過去分スコア未検証訂正 + Pending キュー処理 + 2026-04-19.json スクリーニング + ダッシュボード完全同期
 - [ ] 【新リーグ】Premiership/Top 14/Pro D2 の全チームPD/G標準データ取得 → pending_data試合の本格L1スクリーニング（Exeter-Northampton/Sale-Saracens/Bayonne-Pau/Castres-Toulouse/Racing-StadeFrancais/Stade Montois-Dax/Nevers-Valence/Beziers-Provence/Grenoble-Oyonnax 計9試合）
-- [ ] 【次セッション最優先】4/19-20 結果確認（新プロトコル一次ソース2つ+WebFetch必須）:
-  - NHL PO G1: TBL vs MTL（4/19 5:45pm ET）結果確認（PA014/PA022）
-  - NHL PO G1: COL vs LAK（4/19 3pm ET）結果確認（PA015）
-  - NBA PO R1 G1: SAS vs POR（4/20 JST）結果確認（PA017）
-  - SL R8: Warrington @ Catalans（4/19）結果確認（PA035）
-- [ ] 【結果確認】Munich QF (Fonseca/Shelton, Shapovalov/Molcan, Zverev/Cerundolo) / Stuttgart QF (Swiatek/Andreeva, Rybakina/Fernandez, Muchova/Gauff) / Rouen QF (Podrez/Boulter, Shymanovich/Maria) — WebSearchインデックス後一次確認して記録
+- [ ] 【次セッション最優先】4/19-20結果未確定試合:
+  - NHL PO G1: TBL vs MTL（4/19 live 2-2 2ndブレイク時点で進行中）最終スコア一次確認（PA014）
+  - NBA PO R1 G1: SAS vs POR GO @1.18（4/20 JST 10:00）結果確認（PA017）
+  - NHL PO G1 4/21開催分: VGK@UTA, PIT@PHI, CAR@OTT, DAL@MIN, EDM@ANA + G2 COL@LAK 4/22（PA041）
+- [ ] 【Rule Pipeline実装判断】P013 3/3到達 → R020 "R1 upsetter R2 momentum +5%" 実装判断（PA042）
+- [ ] 【Rule Pipeline実装判断】P010 2/2到達 → R017 "WC home + 連続ラウンドモメンタム +5%" 実装判断（PA043）
+- [x] 【Session_43結果確認完了】Munich QF (Shelton d. Fonseca / Cobolli d. Kopriva / Zverev d. Cerundolo / Molcan d. Shapovalov) / Barcelona QF (Fils d. Musetti / Rublev d. Machac / Medjedovic d. Borges / Jodar d. Norrie) / Stuttgart QF (Andreeva d. Swiatek / Muchova d. Gauff / Rybakina d. Fernandez / Svitolina d. Noskova) / Rouen QF (Podrez d. Boulter / Shymanovich d. Maria / Cirstea d. Bondar / Kostyuk d. Li)
 - [ ] 【AHL PO】Calder Cup Playoffs R1 (4/22〜best-of-3) 再スクリーニング
-- [ ] 【最優先①】新規試合・オッズ情報のスクリーニング（ユーザー提供データ起点・重複除外）
+- [x] 【最優先①】新規試合・オッズ情報のスクリーニング 2026-04-19.json (Session_43: 全SKIP確定)
 - [x] 【優先②】アクティブGO推奨の最新情報確認（GEN003） — 4/17-18結果分実施済み（Session_42）
   - [x] ATP: Musetti vs Moutet R2 → DONE 4/17（Musetti 6-3 6-4 GO @1.37 HIT +0.37u）
   - [x] UFL W4: Louisville Kings GO（4/17）→ DONE（Louisville 24-22 OT GO @1.65 HIT +0.65u）

@@ -209,5 +209,174 @@
       "note": "Initial screening 2026-04-17. Requires full PD/G standings.",
       "source": "手動試合データ/2026-04-17.json"
     }
+  ],
+  "predictions": [
+    {
+      "date": "2026-04-25",
+      "round": "R22",
+      "match": "Stade Francais vs Pau",
+      "home": "Stade Francais",
+      "away": "Pau",
+      "tier": "skip",
+      "predicted_winner": "SFP",
+      "prediction_confidence": 79.0,
+      "prediction_basis": "Market implied only. L1 PD/G未取得 (Basic Tier).",
+      "odds": {
+        "SFP": 1.17,
+        "PAU": 4.4
+      },
+      "rec_odds": 1.17,
+      "ev_est": -7.57,
+      "skip_reason": "Market implied 79.0%, fav EV -7.57%. Basic Tier GO (conf>=78 AND EV>+7) 未達 or L1 unconfirmed.",
+      "rec": null,
+      "ev": null,
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "prediction_hit": null,
+      "screening_session": "2026-04-20 Session_43",
+      "note": "手動データ起点。Basic Tier L1(PD/G) depth probe 要。"
+    },
+    {
+      "date": "2026-04-25",
+      "round": "R22",
+      "match": "Perpignan vs La Rochelle",
+      "home": "Perpignan",
+      "away": "La Rochelle",
+      "tier": "skip",
+      "predicted_winner": "LAR",
+      "prediction_confidence": 60.8,
+      "prediction_basis": "Market implied only. L1 PD/G未取得 (Basic Tier).",
+      "odds": {
+        "PER": 2.36,
+        "LAR": 1.52
+      },
+      "rec_odds": 1.52,
+      "ev_est": -7.58,
+      "skip_reason": "Market implied 60.8%, fav EV -7.58%. Basic Tier GO (conf>=78 AND EV>+7) 未達 or L1 unconfirmed.",
+      "rec": null,
+      "ev": null,
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "prediction_hit": null,
+      "screening_session": "2026-04-20 Session_43",
+      "note": "手動データ起点。Basic Tier L1(PD/G) depth probe 要。"
+    },
+    {
+      "date": "2026-04-25",
+      "round": "R22",
+      "match": "Toulouse vs Bayonne",
+      "home": "Toulouse",
+      "away": "Bayonne",
+      "tier": "skip",
+      "predicted_winner": "TOU",
+      "prediction_confidence": 87.5,
+      "prediction_basis": "Market implied only. L1 PD/G未取得 (Basic Tier).",
+      "odds": {
+        "TOU": 1.06,
+        "BAY": 7.4
+      },
+      "rec_odds": 1.06,
+      "ev_est": -7.25,
+      "skip_reason": "Market implied 87.5%, fav EV -7.25%. Basic Tier GO (conf>=78 AND EV>+7) 未達 or L1 unconfirmed.",
+      "rec": null,
+      "ev": null,
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "prediction_hit": null,
+      "screening_session": "2026-04-20 Session_43",
+      "note": "手動データ起点。Basic Tier L1(PD/G) depth probe 要。"
+    },
+    {
+      "date": "2026-04-25",
+      "round": "R22",
+      "match": "Lyon (LOU) vs Castres",
+      "home": "Lyon",
+      "away": "Castres",
+      "tier": "skip",
+      "predicted_winner": "LOU",
+      "prediction_confidence": 74.4,
+      "prediction_basis": "Market implied only. L1 PD/G未取得 (Basic Tier).",
+      "odds": {
+        "LOU": 1.24,
+        "CAS": 3.6
+      },
+      "rec_odds": 1.24,
+      "ev_est": -7.74,
+      "skip_reason": "Market implied 74.4%, fav EV -7.74%. Basic Tier GO (conf>=78 AND EV>+7) 未達 or L1 unconfirmed.",
+      "rec": null,
+      "ev": null,
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "prediction_hit": null,
+      "screening_session": "2026-04-20 Session_43",
+      "note": "手動データ起点。Basic Tier L1(PD/G) depth probe 要。"
+    },
+    {
+      "date": "2026-04-25",
+      "round": "R22",
+      "match": "Montauban vs Racing 92",
+      "home": "Montauban",
+      "away": "Racing 92",
+      "tier": "skip",
+      "predicted_winner": "R92",
+      "prediction_confidence": 92.3,
+      "prediction_basis": "Market implied only. L1 PD/G未取得 (Basic Tier).",
+      "odds": {
+        "MTB": 12.0,
+        "R92": 1.0
+      },
+      "rec_odds": 1.0,
+      "ev_est": -7.7,
+      "skip_reason": "Market implied 92.3%, fav EV -7.7%. Basic Tier GO (conf>=78 AND EV>+7) 未達 or L1 unconfirmed.",
+      "rec": null,
+      "ev": null,
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "prediction_hit": null,
+      "screening_session": "2026-04-20 Session_43",
+      "note": "Racing92 @1.00 suspicious; data input error suspected. SKIP unconditional."
+    },
+    {
+      "date": "2026-04-26",
+      "round": "R22",
+      "match": "Bordeaux (UBB) vs Montpellier",
+      "home": "Bordeaux",
+      "away": "Montpellier",
+      "tier": "skip",
+      "predicted_winner": "UBB",
+      "prediction_confidence": 82.3,
+      "prediction_basis": "Market implied only. L1 PD/G未取得 (Basic Tier).",
+      "odds": {
+        "UBB": 1.12,
+        "MHR": 5.2
+      },
+      "rec_odds": 1.12,
+      "ev_est": -7.82,
+      "skip_reason": "Market implied 82.3%, fav EV -7.82%. Basic Tier GO (conf>=78 AND EV>+7) 未達 or L1 unconfirmed.",
+      "rec": null,
+      "ev": null,
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "prediction_hit": null,
+      "screening_session": "2026-04-20 Session_43",
+      "note": "手動データ起点。Basic Tier L1(PD/G) depth probe 要。"
+    }
+  ],
+  "screening_log": [
+    {
+      "session": "Session_43 2026-04-20",
+      "round": "R22",
+      "total_games": 6,
+      "go_count": 0,
+      "caution_count": 0,
+      "skip_count": 6,
+      "note": "Basic Tier厳格閾値 + L1未取得 → 大半SKIP."
+    }
   ]
 }
