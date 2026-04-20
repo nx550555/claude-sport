@@ -151,44 +151,6 @@
       "actual_ev": 0.54,
       "miss_layer": null,
       "note": "ラインナップ確認完了でSKIP→GO昇格。Crusaders H2H圧倒的優位、Suncorp 5連勝。Reds HOME補正を上回るH2H優位性。EV+17.0%、信頼度76%。【結果】Crusaders 32-12 Reds。大差でHIT。ホームセミファイナル確定。"
-    },
-    {
-      "match": "Chiefs vs Hurricanes",
-      "date": "2026-04-18",
-      "round": "R10",
-      "venue": "FMG Stadium Waikato (Chiefs home)",
-      "tier": "skip",
-      "tier_category": "basic",
-      "l1_metric": "market_implied_probability + PD/G context",
-      "l1_data": "Chiefs @1.72 (market 58% / margin-adj 55%) vs Hurricanes @2.05 (market 49% / margin-adj 46%). Div ≈ 9pp",
-      "predicted_winner": "Chiefs",
-      "prediction_confidence": 55,
-      "prediction_basis": "市場 Chiefs pickem-favorite (@1.72). Chiefs home + 過去5戦でHurricanes 3勝2敗の中で、Hurricanes 5連勝+成績6-1でupset候補扱いもあったが market は Chiefs 有利評価。pickem 帯 55% confidence.",
-      "quadrant": "skip",
-      "rules_applied": [
-        "market_implied_only",
-        "no_L1_depth (scope: SRP record限定記録漏れ補填)"
-      ],
-      "adjustments": "事前分析記録漏れ → 結果確認時(Session_45補遺)に後追い記録。",
-      "rec": null,
-      "rec_odds": null,
-      "ev": null,
-      "result": "Chiefs",
-      "score": "22-17 (Golden point OT)",
-      "prediction_hit": true,
-      "hit": null,
-      "actual_ev": null,
-      "outcome_note": "Chiefs 22-17 Hurricanes. 経過: HT Hurricanes 12-3 (Lakai/Moorby tries) → 72分 Hurricanes 17-10 → Chiefs late try (Carter offload → Sinkinson) → 17-17 FT → OT 5分 Wallace Sititi が Damian McKenzie の charged-down drop-kick を拾ってtry. Chiefs captain Luke Jacobson の100試合記念。",
-      "key_observations": {
-        "fav_prediction_hit": true,
-        "late_game_pattern": "Hurricanes 9pt lead from HT → blown in late 8min. 終盤の momentum shift パターン。",
-        "ot_decision_point": "Golden point OT で決着。5分未満で結論 → L4 external factor (個人プレーの一閃) が結果を左右",
-        "home_advantage_note": "Chiefs home FMG Waikato での接戦勝利. home advantage + 5連勝Hurricanesのroad streak終焉",
-        "market_verdict": "Pickem @1.72 vs @2.05 の評価は正しかった。fav HIT.",
-        "no_upset": "UPSET ではない (本命 Chiefs勝利). upset_patterns への登録不要."
-      },
-      "session_added": "_45",
-      "session_note": "Super Rugby R10 (4/18) が 2026-04-19.json / 2026-04-20.json のどちらにも含まれておらず、Session_43/44/45 で記録漏れ。ユーザー指摘(Session_45末尾)で発覚・補填。"
     }
   ],
   "screening_log": [
@@ -254,11 +216,9 @@
     },
     {
       "date": "2026-04-20",
-      "session": "_45_supplement",
-      "scope": "Session_45 補遺: R10 Chiefs vs Hurricanes (4/18) 記録漏れ補填",
-      "issue": "2026-04-19.json / 2026-04-20.json で Super Rugby R10 試合は upcoming に含まれておらず (R11 4/24-26 からの記載のみ)。ユーザー自然観戦で認識していた 4/18 Hurricanes 負けが分析記録に未存在と発覚。",
-      "action": "WebSearch で一次情報確認 (rugbyisthegame / rnz / super.rugby) → 事後記録として games に追加。fav予測 HIT 確定。",
-      "improvement": "補遺: 主要リーグの完了試合 (R10 等) が JSON に含まれていない場合、定期的に WebSearch でレビュー → records 追加する運用改善案。rule_pipeline / health_check.py の新チェック項目候補として記録。"
+      "session": "_45_scope_correction",
+      "note": "Session_45末尾でユーザー発言『ウェリントンの負け分析』を Hurricanes (Super Rugby) と誤解。提供JSON対象外の Chiefs vs Hurricanes (4/18 R10) を自動追加してしまった → ユーザー再指摘『調べる必要もなかった試合では？』で誤認識発覚 → revert (本エントリ)。真の指摘対象は Warrington Wolves (Super League R8) であり Session_42 で既に完全分析済 (A020/P016)。",
+      "lesson_hardened": "ユーザーから『XXは分析した？』と聞かれた際、(1) チーム名の正確な特定 (略称・別名をユーザーに確認) (2) 提供JSONにあるか確認 (3) なければ追加分析するかユーザーに確認 — の順で対応する。勝手に自動追加しない。"
     }
   ],
   "last_updated": "2026-04-20"

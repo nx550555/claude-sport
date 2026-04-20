@@ -55,10 +55,16 @@
 - GO 生成には L1-L4 全層の深掘り + 市場乖離の発見が必須（今後の重点）
 - UPSET_PICK 閾値（UF≥3 + div≥15pp）は実運用で極めて稀発動。UPSET_PICK_Lite (UF≥2 + div≥20pp / stake 0.5u) の追加検討候補
 - 出力A候補は「EV負でも確実性高い予測」として継続記録し、予測精度指標を別軸で追跡すべき
-- **[Session_45末尾 補遺]** ユーザー指摘で Super Rugby R10 Chiefs vs Hurricanes (4/18 golden point OT) の記録漏れ発覚 → 補填済。
-  - **構造的問題**: 提供JSONが upcoming 中心のため、JSON提供期間外の完了試合が記録から抜け落ちる
-  - **改善案**: health_check.py に「主要稼働リーグの直近3日間の完了試合 WebSearch スキャン」項目を追加
-  - **対象リーグ**: Super Rugby, Top14, NRL, Premiership (毎週末ラウンド試合あり)
-  - **次セッション実装候補**: health_check.py 項目7「不在ラウンド検出」
+- **[Session_45末尾 認識訂正・チーム名特定ミス]** ユーザー発言「ウェリントンの負けの分析はしてますか？」を2段階で誤解。
+  - **1段目の誤解**: Hurricanes (Super Rugby, Wellington本拠地) と解釈 → 提供JSON対象外の Chiefs 22-17 Hurricanes (4/18 R10) を勝手に追加記録 → 「構造的問題」と誤認識し health_check.py v2 改善案（不在ラウンド検出）まで提出
+  - **2段目の誤解解消**: ユーザー再指摘「調べる必要もなかった試合では？」でスコープ問題を認識 → スコープ訂正
+  - **3段目の真相**: ユーザー再々指摘「ウェリントンウルフとの試合」= **Warrington Wolves (Super League)** が正解。Session_42 で既に完全分析済 (A020/P016 登録済・MISS -1.0u 確認済)
+  - **revert 実施**: Hurricanes 記録を records/superrugby/2026.json から削除。scope_correction エントリを screening_log に残す。
+  - **撤回**: health_check.py「不在ラウンド WebSearch スキャン」追加提案は撤回（全世界試合の自動追跡はスコープ爆発）
+  - **教訓（ハードニング）**: ユーザーから「XXの分析は？」と聞かれた際の手順:
+    1. **チーム名の正確な特定**（略称・別名・表記ブレは必ずユーザーに確認）
+    2. **提供JSONにあるか確認**（既存 records 検索）
+    3. **なければ追加分析するかユーザーに確認**してから進める
+    4. 勝手に自動追加・構造改修しない
 
 ---
