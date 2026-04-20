@@ -1871,7 +1871,8 @@
       "hit": null,
       "actual_ev": null,
       "upset_flag": false,
-      "outcome_note": "ガリン・クリスティアン wins. favorite win"
+      "outcome_note": "ガリン・クリスティアン wins. favorite win",
+      "quadrant": "skip"
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -1902,7 +1903,8 @@
       "upset_flag": true,
       "outcome_note": "スヴァイダ・ザカリー wins. UPSET",
       "miss_layer": "L1_market_evaluation_error",
-      "miss_analysis": "市場は坂本・麗(1.59)本命扱いだったが、スヴァイダ・ザカリー(2.27)勝利。ATP Q R1のvolatility高さ・深掘り時間制約のため個別要因は未分析。確定UPSET例として記録。"
+      "miss_analysis": "市場は坂本・麗(1.59)本命扱いだったが、スヴァイダ・ザカリー(2.27)勝利。ATP Q R1のvolatility高さ・深掘り時間制約のため個別要因は未分析。確定UPSET例として記録。",
+      "quadrant": "skip"
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -1931,7 +1933,8 @@
       "hit": null,
       "actual_ev": null,
       "upset_flag": false,
-      "outcome_note": "ペレグリーノ・アンドレア wins. pickem"
+      "outcome_note": "ペレグリーノ・アンドレア wins. pickem",
+      "quadrant": "skip"
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -1962,7 +1965,8 @@
       "upset_flag": true,
       "outcome_note": "Gea Arthur wins. UPSET",
       "miss_layer": "L1_market_evaluation_error",
-      "miss_analysis": "市場はガウバス・ヴィリウス(1.72)本命扱いだったが、Gea Arthur(2.05)勝利。ATP Q R1のvolatility高さ・深掘り時間制約のため個別要因は未分析。確定UPSET例として記録。"
+      "miss_analysis": "市場はガウバス・ヴィリウス(1.72)本命扱いだったが、Gea Arthur(2.05)勝利。ATP Q R1のvolatility高さ・深掘り時間制約のため個別要因は未分析。確定UPSET例として記録。",
+      "quadrant": "skip"
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -1991,7 +1995,8 @@
       "hit": null,
       "actual_ev": null,
       "upset_flag": false,
-      "outcome_note": "ウー・イービン wins. favorite win"
+      "outcome_note": "ウー・イービン wins. favorite win",
+      "quadrant": "skip"
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -2022,7 +2027,8 @@
       "upset_flag": true,
       "outcome_note": "ヴィルタネン・オットー wins. UPSET",
       "miss_layer": "L1_market_evaluation_error",
-      "miss_analysis": "市場はドロゲ・ティトゥアン(1.72)本命扱いだったが、ヴィルタネン・オットー(2.05)勝利。ATP Q R1のvolatility高さ・深掘り時間制約のため個別要因は未分析。確定UPSET例として記録。"
+      "miss_analysis": "市場はドロゲ・ティトゥアン(1.72)本命扱いだったが、ヴィルタネン・オットー(2.05)勝利。ATP Q R1のvolatility高さ・深掘り時間制約のため個別要因は未分析。確定UPSET例として記録。",
+      "quadrant": "skip"
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -2051,7 +2057,8 @@
       "hit": null,
       "actual_ev": null,
       "upset_flag": false,
-      "outcome_note": "ジャマス・ルイス・パブロ wins. favorite win"
+      "outcome_note": "ジャマス・ルイス・パブロ wins. favorite win",
+      "quadrant": "skip"
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -2080,7 +2087,8 @@
       "hit": null,
       "actual_ev": null,
       "upset_flag": false,
-      "outcome_note": "ガストン・ウーゴ wins. favorite win"
+      "outcome_note": "ガストン・ウーゴ wins. favorite win",
+      "quadrant": "skip"
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -2109,7 +2117,8 @@
       "hit": null,
       "actual_ev": null,
       "upset_flag": false,
-      "outcome_note": "メリダ・ダニエル wins. favorite win"
+      "outcome_note": "メリダ・ダニエル wins. favorite win",
+      "quadrant": "skip"
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -2138,7 +2147,8 @@
       "hit": null,
       "actual_ev": null,
       "upset_flag": false,
-      "outcome_note": "トルンジェリティ・マルコ wins. pickem"
+      "outcome_note": "トルンジェリティ・マルコ wins. pickem",
+      "quadrant": "skip"
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -2167,7 +2177,8 @@
       "hit": null,
       "actual_ev": null,
       "upset_flag": false,
-      "outcome_note": "アリス・クエンティン wins. favorite win"
+      "outcome_note": "アリス・クエンティン wins. favorite win",
+      "quadrant": "skip"
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -2196,7 +2207,8 @@
       "hit": null,
       "actual_ev": null,
       "upset_flag": false,
-      "outcome_note": "ハリス・ロイド wins. favorite win"
+      "outcome_note": "ハリス・ロイド wins. favorite win",
+      "quadrant": "skip"
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -2227,7 +2239,8 @@
       "upset_flag": true,
       "outcome_note": "ダーウィン・ブランチ wins. UPSET",
       "miss_layer": "L1_market_evaluation_error",
-      "miss_analysis": "市場はボンジ・ベンジャミン(1.61)本命扱いだったが、ダーウィン・ブランチ(2.22)勝利。ATP Q R1のvolatility高さ・深掘り時間制約のため個別要因は未分析。確定UPSET例として記録。"
+      "miss_analysis": "市場はボンジ・ベンジャミン(1.61)本命扱いだったが、ダーウィン・ブランチ(2.22)勝利。ATP Q R1のvolatility高さ・深掘り時間制約のため個別要因は未分析。確定UPSET例として記録。",
+      "quadrant": "skip"
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -2256,7 +2269,8 @@
       "hit": null,
       "actual_ev": null,
       "upset_flag": false,
-      "outcome_note": "バジェホ・アドルフォ・ダニエル wins. favorite win"
+      "outcome_note": "バジェホ・アドルフォ・ダニエル wins. favorite win",
+      "quadrant": "skip"
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -2285,7 +2299,8 @@
       "hit": null,
       "actual_ev": null,
       "upset_flag": false,
-      "outcome_note": "ロシャ・エンリケ wins. favorite win"
+      "outcome_note": "ロシャ・エンリケ wins. favorite win",
+      "quadrant": "skip"
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -2314,7 +2329,8 @@
       "hit": null,
       "actual_ev": null,
       "upset_flag": false,
-      "outcome_note": "ヴァン・アッシェ・ルカ wins. favorite win"
+      "outcome_note": "ヴァン・アッシェ・ルカ wins. favorite win",
+      "quadrant": "skip"
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -2343,7 +2359,8 @@
       "hit": null,
       "actual_ev": null,
       "upset_flag": false,
-      "outcome_note": "Budkov Kjaer Nicolai wins. favorite win"
+      "outcome_note": "Budkov Kjaer Nicolai wins. favorite win",
+      "quadrant": "skip"
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -2372,7 +2389,8 @@
       "hit": null,
       "actual_ev": null,
       "upset_flag": false,
-      "outcome_note": "コヴァチェビッチ・アレクサンダル wins. favorite win"
+      "outcome_note": "コヴァチェビッチ・アレクサンダル wins. favorite win",
+      "quadrant": "skip"
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -2401,7 +2419,8 @@
       "hit": null,
       "actual_ev": null,
       "upset_flag": false,
-      "outcome_note": "土方・凛希 wins. pickem"
+      "outcome_note": "土方・凛希 wins. pickem",
+      "quadrant": "skip"
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -2430,7 +2449,8 @@
       "hit": null,
       "actual_ev": null,
       "upset_flag": false,
-      "outcome_note": "アルナルディ・マッテオ wins. favorite win"
+      "outcome_note": "アルナルディ・マッテオ wins. favorite win",
+      "quadrant": "skip"
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -2459,7 +2479,8 @@
       "hit": null,
       "actual_ev": null,
       "upset_flag": false,
-      "outcome_note": "ピロス・ジョンボール wins. favorite win"
+      "outcome_note": "ピロス・ジョンボール wins. favorite win",
+      "quadrant": "skip"
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -2488,7 +2509,8 @@
       "hit": null,
       "actual_ev": null,
       "upset_flag": false,
-      "outcome_note": "プリズミック・ディノ wins. favorite win"
+      "outcome_note": "プリズミック・ディノ wins. favorite win",
+      "quadrant": "skip"
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -2517,7 +2539,8 @@
       "hit": null,
       "actual_ev": null,
       "upset_flag": false,
-      "outcome_note": "トラバグリア・ステファノ wins. favorite win"
+      "outcome_note": "トラバグリア・ステファノ wins. favorite win",
+      "quadrant": "skip"
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -2546,7 +2569,8 @@
       "hit": null,
       "actual_ev": null,
       "upset_flag": false,
-      "outcome_note": "キプソン・パトリック wins. favorite win"
+      "outcome_note": "キプソン・パトリック wins. favorite win",
+      "quadrant": "skip"
     }
   ],
   "screening_log": [

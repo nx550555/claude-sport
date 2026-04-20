@@ -1124,7 +1124,8 @@
       "ev": null,
       "hit": null,
       "actual_ev": null,
-      "source": "Session_45 WebSearch (NHL.com) 一次確認"
+      "source": "Session_45 WebSearch (NHL.com) 一次確認",
+      "quadrant": "skip"
     },
     {
       "match": "CAR vs OTT G1",
@@ -1146,7 +1147,8 @@
       "ev": null,
       "hit": null,
       "actual_ev": null,
-      "source": "Session_45 WebSearch (NHL.com) 一次確認"
+      "source": "Session_45 WebSearch (NHL.com) 一次確認",
+      "quadrant": "skip"
     },
     {
       "match": "PIT vs PHI G1",
@@ -1168,7 +1170,8 @@
       "ev": null,
       "hit": null,
       "actual_ev": null,
-      "source": "Session_45 WebSearch (NHL.com) 一次確認"
+      "source": "Session_45 WebSearch (NHL.com) 一次確認",
+      "quadrant": "Q4_upset_watch"
     },
     {
       "match": "DAL vs MIN G1",
@@ -1190,7 +1193,8 @@
       "ev": null,
       "hit": null,
       "actual_ev": null,
-      "source": "Session_45 WebSearch (NHL.com) 一次確認"
+      "source": "Session_45 WebSearch (NHL.com) 一次確認",
+      "quadrant": "Q4_upset_watch"
     },
     {
       "match": "VGK vs UTA G1",
@@ -1212,7 +1216,8 @@
       "ev": null,
       "hit": null,
       "actual_ev": null,
-      "source": "Session_45 WebSearch (NHL.com) 一次確認"
+      "source": "Session_45 WebSearch (NHL.com) 一次確認",
+      "quadrant": "skip"
     },
     {
       "match": "EDM vs ANA G1",
@@ -1234,7 +1239,8 @@
       "ev": null,
       "hit": null,
       "actual_ev": null,
-      "source": "Session_45 WebSearch (NHL.com) 一次確認"
+      "source": "Session_45 WebSearch (NHL.com) 一次確認",
+      "quadrant": "skip"
     }
   ],
   "pending_games": [],

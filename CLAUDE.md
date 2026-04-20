@@ -7,7 +7,19 @@
 
 このファイルを読んだら、以下を実行してください：
 
-**【毎回必須】最初に必ず読む：**
+**【毎回必須】STEP 0: システム健全性スキャン（Session_45で新設）**
+他の何より先に以下を実行：
+1. `python C:\Users\ohwada\Desktop\claude_sport\monitoring\health_check.py` を実行
+2. 出力結果を確認:
+   - `[OK] システム健全` → STEP 1 に進む
+   - `[WARN] 警告` → STEP 1 に進むが、警告項目は今セッション中に対処する
+   - `[ALERT] 異常` → STEP 1 に進む前に必ず異常を対処する
+3. 終了コード: 0=正常 / 1=警告 / 2=異常
+4. `C:\Users\ohwada\Desktop\claude_sport\monitoring\missed_tasks_log.md` を読み込み、前セッション未実施項目を次に優先対処する候補リストに加える
+
+---
+
+**【毎回必須】STEP 1: 最初に必ず読む：**
 1. `C:\Users\ohwada\Desktop\claude_sport\BACKLOG.md` を読み込む
    - `[~]` 作業中の項目があれば「前回途中になっています」と報告する
    - `[ ]` 未着手の項目があれば一覧を表示する
@@ -274,6 +286,35 @@ tier=skip であっても予測勝者は必ず記入する。試合後に `predi
 ### MISSの扱い
 MISSは損失ではなく学習の機会。`miss_analysis` に「なぜ実際の勝者がモデル予測を上回ったか」を書き、
 その知見を `rules_{sport}.json` に追記する。この積み重ねが予測精度の向上につながる。
+
+### 🧭 スクリーニング4象限フレームワーク（Session_45 正式化）
+
+ユーザー構想の ①-1〜①-4 を運用仕様として明文化。**全試合は必ず以下4象限のいずれかに分類してタグ付け**する。
+
+|  | **EV+（ベット推奨）** | **EV-（ベットしないが予測）** |
+|---|---|---|
+| **本命側（Favorite）** | **Q1_go**<br>conf≥75% AND EV>+5% | **Q3_output_a**<br>conf≥85%（EV問わず） |
+| **アップセット側（Dog）** | **Q2_upset_pick**<br>UF≥3 AND div≥15pp | **Q4_upset_watch**<br>dog odds≥3.0 AND UF≥2 |
+| **（どれも該当しない）** | → **skip**（L1差なし・UF因子なし・確実性低） | → **skip** |
+
+**4象限の運用ルール（必須遵守）：**
+1. **全試合に `quadrant` フィールドを付与**（Q1_go / Q2_upset_pick / Q3_output_a / Q4_upset_watch / skip のいずれか）
+2. **Q1〜Q4 すべて深掘り対象**：Q1だけでなく Q2/Q3/Q4 も ②深掘り分析（WebSearch・スタッツ・怪我・フォーム等）を実施する
+3. **③検証は全象限で実施**：GO hit/miss だけでなく、Q3出力A・Q2/Q4 アップセット予測の精度も `stats/cumulative.json` の `by_quadrant` で追跡
+4. **④ルール強化は全象限の知見から**：Q3のMISS/Q4でのUPSET発生などもrule_pipelineに登録
+
+**分類手順（GEN005+Q3/Q4拡張）：**
+1. L1-L4 で本命側の confidence を算出
+2. UF因子（UF01〜UFA06）を**機械的に全件walkthrough**し、該当数を記録
+3. 市場乖離（div pp = fav_implied - dog_implied）を計算
+4. 以下のテーブルで4象限分類：
+   - UF 0-1個 + conf<85% + EV<+5% → **skip**
+   - UF 0-1個 + conf<85% + EV>+5% → **Q1_go**
+   - UF 0-1個 + conf≥85% → **Q3_output_a**
+   - UF 2個 + div 10-15pp → **Q4_upset_watch**（CAUTION相当）
+   - UF 3個以上 + div≥15pp → **Q2_upset_pick**
+5. Q1 と Q2 は同一試合で排他（同時成立禁止）
+6. Q3 と Q4 は共存可（本命側高確実 + アップセット観察値）
 
 ### Phase1 → Phase2 移行（2026-04-18実施）
 Phase1最終成績 **19/24 (79.2%) / +4.10u** でT3達成 → Phase2に移行。Phase2では **UPSET_PICK**（旧GAMBLE_BETから改名）を正式運用。

@@ -243,5 +243,55 @@
     "note": "Advanced + Basic 合算。Session_43 (2026-04-20): SL Warrington MISS追加。通算 20/28 71.4% +1.733u (Advanced 15/20 75.0% +2.763u / Basic 5/8 62.5% -1.03u).",
     "hit_rate": 0.7143
   },
-  "session_43_note": "Session_43 (2026-04-20) 終了時snapshot。更新内容: (1)SL Warrington MISS追加 (2)2026-MC CE015波及訂正 (3)NHL COL-LAK G1 HIT予測反映 (4)ATP/WTA QF結果記録 (5)手動データ 2026-04-19.json スクリーニング（NHL/NBA/NRL/Top14 全SKIP; WTA Oeiras+Madrid Q + ATP Challenger は out-of-scope）."
+  "session_43_note": "Session_43 (2026-04-20) 終了時snapshot。更新内容: (1)SL Warrington MISS追加 (2)2026-MC CE015波及訂正 (3)NHL COL-LAK G1 HIT予測反映 (4)ATP/WTA QF結果記録 (5)手動データ 2026-04-19.json スクリーニング（NHL/NBA/NRL/Top14 全SKIP; WTA Oeiras+Madrid Q + ATP Challenger は out-of-scope）.",
+  "by_quadrant": {
+    "_description": "Session_45 (2026-04-20) 新設。4象限別の予測精度・ベット成績を追跡",
+    "_formula": "hit_rate = hits / confirmed / ev_total = sum of actual_ev for GO-tier only",
+    "_frame": "Q1_go=GO推奨(conf>=75 AND EV>+5) / Q2_upset_pick=UPSET_PICK(UF>=3 AND div>=15pp) / Q3_output_a=高確率予想(conf>=85 EV問わず) / Q4_upset_watch=アップセット観察(dog>=3.0 AND UF>=2)",
+    "Q1_go": {
+      "total": 29,
+      "confirmed": 28,
+      "hit": 20,
+      "hit_rate": 0.714,
+      "ev_total": 1.7,
+      "note": "既存GO推奨累計。Session_30-43のGO+Session_44遡及4件+過去全件"
+    },
+    "Q2_upset_pick": {
+      "total": 0,
+      "confirmed": 0,
+      "hit": 0,
+      "hit_rate": null,
+      "ev_total": 0,
+      "note": "Phase2移行(2026-04-18)以降発動0件。閾値UF>=3+div>=15ppは実運用で極めて稀"
+    },
+    "Q3_output_a": {
+      "total": 18,
+      "confirmed": 3,
+      "hit": 3,
+      "hit_rate": 1.0,
+      "ev_total": null,
+      "note": "Session_45で正式運用開始。NBA G1 3/3 HIT (BOS blowout / SAS Wemby record / OKC 119-84). 残15件は4/21-27決着待ち。EVは計算しない（EV負でも確実性抽出が目的）"
+    },
+    "Q4_upset_watch": {
+      "total": 11,
+      "confirmed": 0,
+      "hit": 0,
+      "hit_rate": null,
+      "ev_total": null,
+      "note": "Session_45 UPSET_PICK_CHECK 候補11件。全件UF walkthrough後 Q2昇格なし。観察対象として継続追跡"
+    },
+    "skip": {
+      "total": "N/A (既存 tier=skip records数)",
+      "note": "L1差なし・UF因子なし・確実性低。予測精度追跡は prediction_hit ベース"
+    },
+    "last_updated": "2026-04-20 Session_45"
+  },
+  "last_updated": "2026-04-20",
+  "schema_versions": [
+    {
+      "version": "v3.1",
+      "date": "2026-04-20",
+      "change": "4象限フレームワーク正式運用開始。全予測に quadrant field 必須。cumulative.by_quadrant セクション新設"
+    }
+  ]
 }

@@ -736,7 +736,8 @@
       "hit": null,
       "actual_ev": null,
       "source": "Session_45 WebSearch (NBA.com/ESPN) 一次確認",
-      "notes": "DET MISS = UPSET (Orlando upset Detroit fav @1.22). Others all fav HIT. Output-A candidates (BOS/SAS/OKC) 3/3 HIT confirmed."
+      "notes": "DET MISS = UPSET (Orlando upset Detroit fav @1.22). Others all fav HIT. Output-A candidates (BOS/SAS/OKC) 3/3 HIT confirmed.",
+      "quadrant": "skip"
     },
     {
       "match": "BOS vs PHI G1",
@@ -760,7 +761,8 @@
       "actual_ev": null,
       "source": "Session_45 WebSearch (NBA.com/ESPN) 一次確認",
       "notes": "DET MISS = UPSET (Orlando upset Detroit fav @1.22). Others all fav HIT. Output-A candidates (BOS/SAS/OKC) 3/3 HIT confirmed.",
-      "output_a_rank": 9
+      "output_a_rank": 9,
+      "quadrant": "Q3_output_a"
     },
     {
       "match": "SAS vs POR G1",
@@ -783,7 +785,8 @@
       "hit": null,
       "actual_ev": null,
       "source": "Session_45 WebSearch (NBA.com/ESPN) 一次確認",
-      "notes": "DET MISS = UPSET (Orlando upset Detroit fav @1.22). Others all fav HIT. Output-A candidates (BOS/SAS/OKC) 3/3 HIT confirmed."
+      "notes": "DET MISS = UPSET (Orlando upset Detroit fav @1.22). Others all fav HIT. Output-A candidates (BOS/SAS/OKC) 3/3 HIT confirmed.",
+      "quadrant": "Q1_go"
     },
     {
       "match": "DEN vs MIN G1",
@@ -806,7 +809,8 @@
       "hit": null,
       "actual_ev": null,
       "source": "Session_45 WebSearch (NBA.com/ESPN) 一次確認",
-      "notes": "DET MISS = UPSET (Orlando upset Detroit fav @1.22). Others all fav HIT. Output-A candidates (BOS/SAS/OKC) 3/3 HIT confirmed."
+      "notes": "DET MISS = UPSET (Orlando upset Detroit fav @1.22). Others all fav HIT. Output-A candidates (BOS/SAS/OKC) 3/3 HIT confirmed.",
+      "quadrant": "skip"
     },
     {
       "match": "NYK vs ATL G1",
@@ -829,7 +833,8 @@
       "hit": null,
       "actual_ev": null,
       "source": "Session_45 WebSearch (NBA.com/ESPN) 一次確認",
-      "notes": "DET MISS = UPSET (Orlando upset Detroit fav @1.22). Others all fav HIT. Output-A candidates (BOS/SAS/OKC) 3/3 HIT confirmed."
+      "notes": "DET MISS = UPSET (Orlando upset Detroit fav @1.22). Others all fav HIT. Output-A candidates (BOS/SAS/OKC) 3/3 HIT confirmed.",
+      "quadrant": "skip"
     },
     {
       "match": "DET vs ORL G1",
@@ -852,7 +857,8 @@
       "hit": null,
       "actual_ev": null,
       "source": "Session_45 WebSearch (NBA.com/ESPN) 一次確認",
-      "notes": "DET MISS = UPSET (Orlando upset Detroit fav @1.22). Others all fav HIT. Output-A candidates (BOS/SAS/OKC) 3/3 HIT confirmed."
+      "notes": "DET MISS = UPSET (Orlando upset Detroit fav @1.22). Others all fav HIT. Output-A candidates (BOS/SAS/OKC) 3/3 HIT confirmed.",
+      "quadrant": "Q4_upset_watch"
     },
     {
       "match": "OKC vs PHX G1",
@@ -876,7 +882,8 @@
       "actual_ev": null,
       "source": "Session_45 WebSearch (NBA.com/ESPN) 一次確認",
       "notes": "DET MISS = UPSET (Orlando upset Detroit fav @1.22). Others all fav HIT. Output-A candidates (BOS/SAS/OKC) 3/3 HIT confirmed.",
-      "output_a_rank": 11
+      "output_a_rank": 11,
+      "quadrant": "Q3_output_a"
     },
     {
       "match": "LAL vs HOU G1",
@@ -899,7 +906,8 @@
       "hit": null,
       "actual_ev": null,
       "source": "Session_45 WebSearch (NBA.com/ESPN) 一次確認",
-      "notes": "DET MISS = UPSET (Orlando upset Detroit fav @1.22). Others all fav HIT. Output-A candidates (BOS/SAS/OKC) 3/3 HIT confirmed."
+      "notes": "DET MISS = UPSET (Orlando upset Detroit fav @1.22). Others all fav HIT. Output-A candidates (BOS/SAS/OKC) 3/3 HIT confirmed.",
+      "quadrant": "skip"
     }
   ],
   "screening_log": [
