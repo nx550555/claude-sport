@@ -3523,6 +3523,47 @@ body.lang-en .name-en { display: inline; }
 
 <!-- ===== 高確率予想 (Output A) ===== -->
 <div class="tab-content" id="content-highprob">
+
+  <!-- 🎯 アクティブ候補セクション（ベット対象） -->
+  <div class="section">
+    <div class="section-title" style="color:#3fb950;border-bottom-color:#2ea043;">🎯 アクティブ候補（これから試合・ベット対象）</div>
+    <p style="color:var(--text2);font-size:12px;margin-bottom:14px;line-height:1.7;">
+      現時点で<strong style="color:var(--text);">試合未確定</strong>の高確率予想。ベット対象としてのみ表示。確定後は下の累計履歴へ自動移動。
+    </p>
+    <div style="background:var(--surface);border:1px solid #3fb95040;border-radius:10px;padding:14px 18px;margin-bottom:14px;">
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:10px;">
+        <div style="font-size:11px;color:#3fb950;font-weight:700;text-transform:uppercase;letter-spacing:.05em;">現在アクティブ:</div>
+        <div style="font-size:11px;color:var(--text2);">1件 (NBA SAS)</div>
+        <div style="font-size:11px;color:var(--text2);margin-left:auto;">最終更新: 2026-04-20</div>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>試合</th><th>種目/ラウンド</th><th>推奨</th><th>推定勝率</th><th>オッズ</th><th>EV</th><th>Tier</th><th>状態</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:rgba(46,160,67,.08);">
+              <td style="font-weight:600;"><span class="name-ja">ポートランド・トレイルブレイザーズ</span><span class="name-en">POR Trail Blazers</span> @<br><strong><span class="name-ja">サンアントニオ・スパーズ</span><span class="name-en">SA Spurs</span></strong></td>
+              <td>NBA Playoffs R1 G1<br><span style="font-size:10px;color:var(--text2);">2026-04-20</span></td>
+              <td><span class="badge badge-go"><span class="name-ja">スパーズ</span><span class="name-en">Spurs</span></span></td>
+              <td style="text-align:center;font-weight:700;color:#4ade80;">87%</td>
+              <td style="text-align:center;color:#e3b341;">@1.18</td>
+              <td style="text-align:center;color:#3fb950;">+5.6%</td>
+              <td style="text-align:center;"><span class="tier-badge tier-adv">Adv</span></td>
+              <td><span class="badge badge-pending">LIVE</span><br><span style="font-size:10px;color:var(--text2);">試合進行中</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-top:12px;padding:10px 14px;background:var(--surface2);border-radius:6px;font-size:11px;color:var(--text2);line-height:1.7;">
+        📌 <strong style="color:var(--text);">候補が少ない理由:</strong> Session_43 (2026-04-19.json) で NHL PO G1残5試合 / G2 COL-LAK / NRL R9 / Top14 R22 は全SKIP判定。本日4/20分の試合データ受領後に追加スクリーニング予定。<br>
+        🔄 <strong style="color:var(--text);">次の供給タイミング:</strong> NHL PO G1残 (4/21) / G2 COL-LAK (4/22) / AHL Calder Cup R1 (4/22〜) / 本日分JSON受領時。
+      </div>
+    </div>
+  </div>
+
   <div class="section">
     <div class="section-title">高確率予想リスト（出力A）— 累計履歴</div>
     <p style="color:var(--text2);font-size:12px;margin-bottom:16px;line-height:1.7;">
@@ -3734,6 +3775,25 @@ body.lang-en .name-en { display: inline; }
 
 <!-- ===== マルチベット (Output B) ===== -->
 <div class="tab-content" id="content-multi">
+
+  <!-- 🎯 アクティブマルチ候補セクション -->
+  <div class="section">
+    <div class="section-title" style="color:#3fb950;border-bottom-color:#2ea043;">🎯 アクティブマルチ候補（組み立て可能）</div>
+    <p style="color:var(--text2);font-size:12px;margin-bottom:14px;line-height:1.7;">
+      現時点のアクティブ候補（出力A）が<strong style="color:var(--text);">2件以上</strong>ある場合のみマルチ構成可能。
+    </p>
+    <div style="background:var(--surface);border:1px solid #d2992240;border-radius:10px;padding:14px 18px;margin-bottom:14px;">
+      <div style="display:flex;gap:10px;align-items:center;margin-bottom:8px;">
+        <div style="font-size:13px;font-weight:700;color:#d29922;">⚠️ マルチ構成不可</div>
+        <div style="font-size:11px;color:var(--text2);">アクティブ候補 1件のみ (SAS @1.18)</div>
+      </div>
+      <div style="font-size:11px;color:var(--text2);line-height:1.7;padding:8px 12px;background:var(--surface2);border-radius:6px;">
+        マルチ組成には最低2件のアクティブ候補が必要です。新規GO推奨が増えれば即座にマルチEVを計算し、このセクションに反映します。<br>
+        <strong style="color:var(--text);">次の供給待ち:</strong> NHL PO G1残5試合 (4/21) / G2 COL-LAK (4/22) / 本日分JSON受領。
+      </div>
+    </div>
+  </div>
+
   <div class="section">
     <div class="section-title">高確率マルチベット（出力B）— 累計履歴 + 単体収支</div>
     <p style="color:var(--text2);font-size:12px;margin-bottom:16px;line-height:1.7;">
