@@ -18,7 +18,30 @@
 
 ## 未完了・作業中（次回セッション最優先）
 
-### 🎯 次回セッション開始時の行動順序（Session_45）
+### 🎯 次回セッション開始時の行動順序（Session_46）
+
+**STEP 0: システム健全性スキャン（Session_45で新設）**
+- `python monitoring/health_check.py` を必ず実行
+- `monitoring/missed_tasks_log.md` を読む（Session_45未実施項目5件を確認）
+
+**STEP 1: 通常読み込み（CLAUDE.md STEP 1）**
+- BACKLOG / user_feedback / pending_actions / claude_error_log / rule_pipeline / framework
+
+**STEP 2: 結果確認（最優先）**
+- NBA G2 (CLE/NYK/DEN @ 4/21, BOS @ 4/23, SAS @ 4/22)
+- NHL G1 EDM-ANA (4/20深夜) + G2全7試合 (4/22)
+- NBA G1 LAL-HOU (4/20深夜 未決着)
+- WTA Madrid Q 40件結果 + WTA Oeiras 17件結果 (4/20-21)
+- ATP Madrid Q R2 (4/21)
+
+**STEP 3: Madrid本戦開幕データ受領時**
+- ATP Madrid 1000 本戦R1 (4/22〜) + WTA Madrid 1000 本戦R1 (4/22〜)
+- Top30級選手の cElo深掘り → GO推奨3件以上を目指す（missed_tasks_log #1）
+- 全試合に quadrant field 付与必須
+
+---
+
+### 🎯 Session_45 以前の行動順序（参照用）
 
 **STEP 1: CLAUDE.md 起動時チェック（自動実行）**
 - BACKLOG / user_feedback_log / pending_actions / claude_error_log / rule_pipeline / framework 全読み込み
