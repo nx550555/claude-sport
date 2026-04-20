@@ -455,6 +455,33 @@
         "wta_veteran_qualifying_motivation_dip"
       ],
       "note": "3件揃ったら R022 として『Top100 vet の Masters Q R1 での-5%補正』を実装。ATP Madrid Q・Rome Q・Cincinnati Q 等の各大会で継続観察。"
+    },
+    {
+      "candidate_id": "P016",
+      "status": "watching",
+      "target_rule_file": "core/rules_superleague.json (新設) / core/rules_nrl.json (暫定準拠)",
+      "proposed_rule_id": "SL002",
+      "title": "Super League: Catalans 仏国ホーム補正強化 (-5% → -7〜-10%)",
+      "description": "Super League の Catalans Dragons (仏国 Perpignan ベース) のホーム試合で、英国チームが遠征する場合、現行 Basic Tier のdefault home advantage (+3%) では不足。観客・移動疲労・芝質・天候など複合要因で仏国ホーム補正を -7%〜-10% に強化。対象: 英国本拠地チーム (Leeds, Warrington, Wigan, St Helens 等) が Stade Gilbert Brutus に遠征するケース。",
+      "trigger_threshold": 2,
+      "current_count": 1,
+      "evidence": [
+        {
+          "id": "A020",
+          "match": "Warrington Wolves at Catalans Dragons SL R8 2026-04-19",
+          "pattern": "Warrington GO @1.64 (conf 83% / EV +36.1%) → MISS. Catalans 38-22 勝利 (Dodd hat-trick). 1st half Warrington 16-10 リード → 2nd half Catalans 5トライ連取で崩壊. UF3 (UF01 France home / UF02 Dodd個人爆発 / UFA04 travel fatigue) + div 10pp. UPSET_PICK閾値(UF≥3+div≥15pp)未達だが CAUTION格下げが妥当だった",
+          "tag": "superleague_catalans_home_uk_visitor_upset",
+          "sources": [
+            "records/superleague/2026.json games[1]",
+            "stats/upset_patterns.json A020"
+          ]
+        }
+      ],
+      "tag_matches": [
+        "superleague_catalans_home_uk_visitor_upset",
+        "rugby_continental_crossing_home"
+      ],
+      "note": "2件目 evidence が揃ったら SL002 として実装。実装時は rules_superleague.json を新設し、英国チーム vs Catalans (Stade Gilbert Brutus 開催) 時に fav confidence から -7% 減点、2nd half崩壊リスク factor を追加。evidence 2件目候補: Catalans vs Wigan (スケジュール確認要), Catalans vs St Helens 等。"
     }
   ],
   "implemented_rules": [

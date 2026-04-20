@@ -171,7 +171,7 @@
     "premiership": "core/rules_premiership.json",
     "top14": "core/rules_top14.json",
     "prod2": "core/rules_prod2.json",
-    "super_league": "core/rules_superleague.json (暫定・NRL準拠)",
+    "super_league": "core/rules_superleague.json (v1.0 新設・NRL準拠 + SL独自補正)",
     "ahl": "core/rules_ahl.json"
   },
   "records_files": {
@@ -367,5 +367,6 @@
     "top14": "basic",
     "prod2": "basic",
     "ahl": "basic"
-  }
+  },
+  "last_updated": "2026-04-20"
 }
