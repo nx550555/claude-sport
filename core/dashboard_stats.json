@@ -1,7 +1,7 @@
 {
   "_comment": "Sport card の唯一の真実ソース。記録更新後は必ずここを更新してから sync_sport_cards.py を実行すること",
   "last_updated": "2026-04-20",
-  "session": "_45",
+  "session": "_46",
   "sports": {
     "atp": {
       "go_count": 14,
@@ -53,11 +53,11 @@
     },
     "nba": {
       "go_count": 2,
-      "confirmed_count": 1,
-      "hit_count": 1,
+      "confirmed_count": 2,
+      "hit_count": 2,
       "hit_rate": 1.0,
-      "pnl": 0.2,
-      "pending_count": 1
+      "pnl": 0.38,
+      "pending_count": 0
     },
     "superleague": {
       "go_count": 2,
@@ -102,28 +102,28 @@
   },
   "overview": {
     "total_go": 29,
-    "total_confirmed": 28,
-    "total_hits": 20,
-    "hit_rate": 0.714,
-    "total_pnl": 1.7,
-    "total_pending": 1,
-    "pending_breakdown": "NBA x1"
+    "total_confirmed": 29,
+    "total_hits": 21,
+    "hit_rate": 0.724,
+    "total_pnl": 1.9,
+    "total_pending": 0,
+    "pending_breakdown": ""
   },
   "by_tier": {
     "advanced": {
       "go_count": 21,
-      "confirmed_count": 20,
-      "hit_count": 15,
-      "pnl": 2.763,
-      "pending_count": 1,
+      "confirmed_count": 21,
+      "hit_count": 16,
+      "pnl": 2.943,
+      "pending_count": 0,
       "sports": [
         "atp",
         "wta",
         "nhl",
         "nba"
       ],
-      "hit_rate": 0.75,
-      "note": "CE014訂正後 2026-04-18: WTA GB001 Ostapenko MISS 確定で hit 16→15, pnl 3.5505→2.763"
+      "hit_rate": 0.762,
+      "note": "Session_46 (2026-04-20): NBA SAS-POR G1 HIT +0.18u (Wembanyama 35pts debut). Advanced 16/21 76.2% +2.943u."
     },
     "basic": {
       "go_count": 8,

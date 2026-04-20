@@ -76,7 +76,8 @@
       "our_prediction": "Medvedev（GO）",
       "miss_layer": "L4",
       "learning": "強さ指標差200ptあっても表面適性が逆転する場合がある",
-      "rule_created": "R008（クレー嫌い選手補正）"
+      "rule_created": "R008（クレー嫌い選手補正）",
+      "rule_linked": "R008 (clay_weakness_implemented)"
     },
     {
       "id": "U002",
@@ -101,7 +102,8 @@
       "miss_layer": "L2",
       "learning": "クレーでアグレッシブサーブ系がベースライナーを崩せる",
       "rule_created": "R011（攻撃型サーブ注意）",
-      "score_correction_note": "CE001修正: 旧誤記録 6-2 7-6(3) -> 正 7-6(2) 6-3"
+      "score_correction_note": "CE001修正: 旧誤記録 6-2 7-6(3) -> 正 7-6(2) 6-3",
+      "rule_linked": "R001 (cElo_130_CAUTION_implemented) + P001_evidence"
     },
     {
       "id": "U003",
@@ -126,7 +128,8 @@
       "miss_layer": "L4",
       "learning": "cElo差が50pt未満は事実上同格。若手のホットストリークは要注意",
       "rule_created": "R012 (rules_tennis.json v2.1: 若手ホットストリーク警戒)",
-      "miss_analysis_status": "完了 (2026-04-15)"
+      "miss_analysis_status": "完了 (2026-04-15)",
+      "rule_linked": "R001 (cElo_130_CAUTION_implemented) + P001_evidence"
     },
     {
       "id": "U005",
@@ -154,7 +157,8 @@
       "confidence_post_analysis": "適正は65〜68%（小サンプル補正後）",
       "miss_layer": "L1過信（小サンプル期PD歪み）",
       "learning": "NRL R3〜R8はPDが5試合以下のサンプルに基づく。単一試合アウトライヤーが-5〜10pt/試合の歪みを生む。この時期の信頼度上限は70%が適切。78%まで上げるには10試合以上の実績が必要。",
-      "rule_created": "R011（崖っぷちチーム補正 -5%）、R012（早期シーズン小サンプル補正 信頼度上限70%）→ rules_nrl.json v1.1 に追記済"
+      "rule_created": "R011（崖っぷちチーム補正 -5%）、R012（早期シーズン小サンプル補正 信頼度上限70%）→ rules_nrl.json v1.1 に追記済",
+      "rule_linked": "P020 (NRL small-sample PD unreliability - NEW candidate)"
     },
     {
       "id": "U006",
@@ -187,7 +191,8 @@
       "miss_layer": null,
       "learning": "Masters→次週500/250直行選手の疲弊補正は-3%では不足。主要大会でQF以降まで勝ち残った選手（3-4試合消化）の翌週は-6%〜-10%が妥当。MolcanのようなフレッシュなベースライナーがBublik型トリック選手に勝てる条件が揃っていた。",
       "rule_created": null,
-      "rule_candidate": "P006: Masters→翌週大会 B2B疲弊補正強化（QF以降まで勝ち残り→翌週-6~-10%）"
+      "rule_candidate": "P006: Masters→翌週大会 B2B疲弊補正強化（QF以降まで勝ち残り→翌週-6~-10%）",
+      "rule_linked": "P006 (R014_B2B_inter_tournament_candidate)"
     },
     {
       "id": "U007",
@@ -226,7 +231,8 @@
       "miss_layer": "L3_FormSlump",
       "learning": "WTA GOで高信頼度候補をスクリーニングする際、当該選手の今季勝率も必ずチェックする。60%未満の場合は-10%補正適用。特に前年クレー主要タイトル保持者は翌年同大会で「ポイント防衛プレッシャー」型スランプに注意。",
       "rule_created": null,
-      "rule_candidate": "P007: シーズンフォームスランプ補正（当季勝率<60%のランキング上位選手に-10%）"
+      "rule_candidate": "P007: シーズンフォームスランプ補正（当季勝率<60%のランキング上位選手に-10%）",
+      "rule_linked": "P007 (R013/W011 form-slump top player - evidence 2/3)"
     },
     {
       "id": "U008",
@@ -248,7 +254,9 @@
       },
       "tag": "atp_pr_player_recovery",
       "rule_created": null,
-      "rule_candidate": "P008_PR_player_correction"
+      "rule_candidate": "P008_PR_player_correction",
+      "sport": "tennis_atp",
+      "rule_linked": "P008 (R015 PR-player-recovery candidate - evidence 1/2)"
     },
     {
       "id": "U009",
@@ -269,7 +277,10 @@
       },
       "tag": "nrl_desperate_underdog",
       "rule_created": null,
-      "rule_candidate": "NRL_R_new: desperate_underdog_correction"
+      "rule_candidate": "NRL_R_new: desperate_underdog_correction",
+      "sport": "nrl",
+      "rule_linked": "P020 (NRL small-sample PD - DUPLICATE ENTRY with U005 - same match)",
+      "duplicate_note": "same match as U005 (Raiders 36-34 Rabbitohs R6). Deprecated in favor of U005."
     },
     {
       "id": "A001",
@@ -310,7 +321,8 @@
         "puntodebreak.com: Badosa also fails to surpass the debut in Stuttgart (2026-04-14)",
         "tennis.com: Eva Lys battles past Paula Badosa to end losing skid (Stuttgart Highlights)",
         "WTA Official score page: Lys vs. Badosa Round of 32 Porsche Tennis Grand Prix 2026"
-      ]
+      ],
+      "rule_linked": "P009 (R016/W011 injury-comeback discount - evidence 1/2)"
     },
     {
       "id": "A002",
@@ -340,7 +352,8 @@
         "nhl.com: Flyers clinch playoff spot with shootout win against Hurricanes (2026-04-13)",
         "espn.com: Flyers 3-2 Hurricanes Final Score",
         "washingtonpost.com: Flyers beat East top seed Hurricanes 3-2 in SO and secure first playoff berth since 2020"
-      ]
+      ],
+      "rule_linked": "N016 (seeding_secured_rest_implemented) - key evidence for rule"
     },
     {
       "id": "A003",
@@ -370,7 +383,8 @@
         "nhl.com: Blues score 5 unanswered goals, rally past Wild (2026-04-13)",
         "espn.com: Blues 6-3 Wild Final Score",
         "cbssports.com: Minnesota Wild vs. St. Louis Blues Game Recap April 13 2026"
-      ]
+      ],
+      "rule_linked": "N016 (seeding_secured_rest_implemented) + UFH04 general fatigue motivation pattern"
     },
     {
       "id": "A004",
@@ -404,7 +418,8 @@
         "tennismajors.com: Vacherot stuns de Minaur to become the first Monegasque in a Monte-Carlo Masters semifinal",
         "atptour.com: Vacherot continues historic run, saves 13 BPs en route to Monte-Carlo SFs",
         "atptour.com: Home hope Vacherot downs De Minaur for fairytale SF spot in Monte-Carlo (highlights)"
-      ]
+      ],
+      "rule_linked": "R017 (P010_implemented_2026-04-20)"
     },
     {
       "id": "A005",
@@ -435,7 +450,8 @@
       "sources": [
         "tsn.ca: Shapovalov beats Griekspoor, moves into second round at BMW Open",
         "chroniclejournal.com: Shapovalov beats Griekspoor (confirmed score 6-4 3-6 6-2)"
-      ]
+      ],
+      "rule_linked": "P014 (R021_R1_upset_winner_R2_reversion_candidate)"
     },
     {
       "id": "A006",
@@ -470,7 +486,8 @@
         "tennisuptodate.com: I accept my current position - Tsitsipas faces restart after Munich match suspension",
         "tennis365.com: Tsitsipas Munich switch backfires as rankings slide continues",
         "cypress-mail.com: Tsitsipas Munich switch backfires as rankings slide continues"
-      ]
+      ],
+      "rule_linked": "P011 (R018_career_worst_exit_candidate)"
     },
     {
       "id": "A007",
@@ -504,7 +521,8 @@
         "espn.com: Warriors rock Storm to serve up fourth straight loss (NRL Round 6 report)",
         "sportnation.nz: We wanted to change history - Webster reveals Warriors themed build-up",
         "nrl.com: Storm v Warriors Round 6 2026 match centre"
-      ]
+      ],
+      "rule_linked": "R013 (NRL_R_new2 long-streak-end motivation IMPLEMENTED 2026-04-16)"
     },
     {
       "id": "A008",
@@ -536,7 +554,8 @@
         "nrl.com: Sharks v Roosters Round 6 2026 match centre",
         "leagueunlimited.com: Red-hot Roosters stun Sharks in big comeback",
         "zerotackle.com: Sharks vs Roosters Round 6 2026 live scores and stats"
-      ]
+      ],
+      "rule_linked": "P020 (NRL small-sample PD unreliability - same pattern as U005)"
     },
     {
       "id": "A009",
@@ -569,7 +588,8 @@
         "thegruelingtruth.com: Storm Stay Perfect — Orlando Escapes Louisville in Controversial OT Thriller",
         "yahoo.com: Louisville Kings fall to Orlando Storm on bizarre UFL overtime rule",
         "uflnewshub.com: UFL Scores Today Orlando Storm 29 Louisville Kings 27 OT"
-      ]
+      ],
+      "rule_linked": "U008_modified (UFL W3-6 small-sample cap IMPLEMENTED 2026-04-16) - evidence key case"
     },
     {
       "id": "A010",
@@ -601,7 +621,8 @@
         "oursportscentral.com: Battlehawks Rally to Defeat Stallions in Thrilling 34-30 Victory",
         "fox2now.com: Battlehawks edge Stallions in dramatic 34-30 comeback win",
         "foxsports.com: Birmingham Stallions vs St. Louis Battlehawks Final Score April 12 2026"
-      ]
+      ],
+      "rule_linked": "U008_modified (UFL W3-6 small-sample cap) + D-observation for STL home venue +3% candidate"
     },
     {
       "id": "A011",
@@ -634,7 +655,8 @@
         "eleco.com.ar: Camilo Ugo Carabelli dio el golpe en Barcelona y elimino a Karen Khachanov",
         "atptour.com: Stats Centre - Carabelli vs Khachanov Barcelona 2026 R32",
         "x.com/Probahis (PB Tennis): Carabelli 2026 clay 10-4 form data"
-      ]
+      ],
+      "rule_linked": "P012 (R019_clay_specialist_candidate)"
     },
     {
       "id": "A012",
@@ -680,7 +702,8 @@
         "puntodebreak.com: Molcan surprises Bublik in his ATP Munich debut (2026-04-14)",
         "tennistonic.com: Alex Molcan surprises Bublik in the 1st round at the BMW Open (stats)",
         "atptour.com: Highlights - Molcan sends third seed Bublik tumbling in Munich 2026"
-      ]
+      ],
+      "rule_linked": "P006 (R014_B2B_inter_tournament_candidate) - same-match with U006"
     },
     {
       "id": "A013",
@@ -713,7 +736,8 @@
         "wtatennis.com: Maria tops Jacquemot in Rouen for first Top 100 win of 2026 (video)",
         "wtatennis.com: Maria vs. Jacquemot Round of 32 Open Capfinances Rouen Metropole 2026 (score page)",
         "tennistonic.com: H2H Tatjana Maria vs Dominika Salkova in Rouen - includes Maria stats"
-      ]
+      ],
+      "rule_linked": "W_P_new1 (W012 veteran vs young clay candidate - evidence 1/3)"
     },
     {
       "id": "A021",
@@ -746,7 +770,8 @@
         "https://www.espn.com/nhl/game/_/gameId/401869718/canadiens-lightning",
         "https://www.nhl.com/gamecenter/mtl-vs-tbl/2026/04/19/2025030121",
         "https://www.tsn.ca/nhl/article/habs-lightning-headed-to-overtime-in-game-1/"
-      ]
+      ],
+      "rule_linked": "P018 (NHL PO G1 underdog young core activation - NEW candidate)"
     },
     {
       "upset_id": "A014",
@@ -813,26 +838,6 @@
       "critical_note": "This is the paradigm case of UF factor check being skipped. Resulted in -1.0u loss. Root cause: screening did not run UF factor walkthrough after L1-L4."
     },
     {
-      "upset_id": "A017",
-      "date": "2026-04-17",
-      "sport": "tennis_atp",
-      "tournament": "BMW Open Munich",
-      "round": "QF",
-      "match": "Fonseca J. vs Shelton B.",
-      "market_favorite": "Shelton B.",
-      "fav_odds": 1.44,
-      "dog_odds": 2.8,
-      "result": "Fonseca d. Shelton",
-      "uf_count": 2,
-      "uf_factors": {
-        "UF02": "Fonseca 19yo breakout + MC2026 momentum",
-        "UFA04": "Shelton clay weakness (hard/grass type)"
-      },
-      "market_divergence_pp": 15,
-      "upset_pick_feasibility": "UF2 + 15pp - borderline. CAUTION no-bet would have been right.",
-      "rule_linked": null
-    },
-    {
       "upset_id": "A018",
       "date": "2026-04-17",
       "sport": "tennis_atp",
@@ -897,63 +902,6 @@
       "rule_linked": "P016"
     },
     {
-      "upset_id": "A022",
-      "date": "2026-04-20",
-      "sport": "tennis_atp",
-      "tournament": "Madrid Open Qualifying",
-      "round": "Q R1",
-      "match": "Svajda Z. vs Sakamoto R.",
-      "market_favorite": "Sakamoto R.",
-      "fav_odds": 1.59,
-      "dog_odds": 2.27,
-      "result": "Svajda d. Sakamoto",
-      "uf_count": 1,
-      "uf_factors": {
-        "UFA05": "Svajda(US) vs Sakamoto(JPN jr) - market misprice, Svajda likely had edge"
-      },
-      "market_divergence_pp": 13,
-      "upset_pick_feasibility": "UF1 + 13pp - not met. L1=market_implied limitation example.",
-      "rule_linked": null
-    },
-    {
-      "upset_id": "A023",
-      "date": "2026-04-20",
-      "sport": "tennis_atp",
-      "tournament": "Madrid Open Qualifying",
-      "round": "Q R1",
-      "match": "Gea A. vs Gaubas V.",
-      "market_favorite": "Gaubas V.",
-      "fav_odds": 1.72,
-      "dog_odds": 2.05,
-      "result": "Gea d. Gaubas",
-      "uf_count": 0,
-      "uf_factors": {
-        "_note": "near pick-em (8pp); UF details unknown"
-      },
-      "market_divergence_pp": 8,
-      "upset_pick_feasibility": "UF0 + 8pp - noise range. Not UPSET_PICK.",
-      "rule_linked": null
-    },
-    {
-      "upset_id": "A024",
-      "date": "2026-04-20",
-      "sport": "tennis_atp",
-      "tournament": "Madrid Open Qualifying",
-      "round": "Q R1",
-      "match": "Virtanen O. vs Drogue T.",
-      "market_favorite": "Drogue T.",
-      "fav_odds": 1.72,
-      "dog_odds": 2.05,
-      "result": "Virtanen d. Drogue",
-      "uf_count": 1,
-      "uf_factors": {
-        "UFA05": "Virtanen(FIN ATP tour #140) vs Drogue(FRA jr unknown) - market underpriced Virtanen"
-      },
-      "market_divergence_pp": 8,
-      "upset_pick_feasibility": "UF1 + 8pp - below UPSET_PICK. cElo lookup could have flipped fav via L1.",
-      "rule_linked": null
-    },
-    {
       "upset_id": "A025",
       "date": "2026-04-20",
       "sport": "tennis_atp",
@@ -990,7 +938,7 @@
       },
       "market_divergence_pp": 35,
       "upset_pick_feasibility": "UF2 + 35pp - borderline UPSET_PICK (UF不足だが乖離大きい). DEToverrated / ORL underrated gap.",
-      "rule_linked": null
+      "rule_linked": "P022 (NBA PO G1 road-win anomaly - NEW candidate)"
     },
     {
       "upset_id": "A027",
@@ -1010,7 +958,7 @@
       },
       "market_divergence_pp": 16,
       "upset_pick_feasibility": "UF2 + 16pp - borderline. CAUTION no-bet would have been right.",
-      "rule_linked": null
+      "rule_linked": "P019 (NHL PO G1 rivalry + home favorite late-season fade - NEW candidate)"
     },
     {
       "upset_id": "A028",
@@ -1031,7 +979,7 @@
       },
       "market_divergence_pp": 9,
       "upset_pick_feasibility": "UF3 + 9pp < 15pp. Below UPSET_PICK but MIN high-xGF% noted in advance. CAUTION格妥当。",
-      "rule_linked": null
+      "rule_linked": "N001 (xGF% L1 indicator confirmed effective) - D-class observation"
     }
   ],
   "upset_pick_candidates": {
@@ -1181,7 +1129,11 @@
         "U002(130pt→MISS)",
         "U003(40pt→MISS)",
         "※U004は誤記録のため削除（Sinner HIT）"
-      ]
+      ],
+      "status": "implemented",
+      "last_reviewed": "2026-04-20",
+      "rule_pipeline_link": "IMPL003 R001 (cElo 130pt CAUTION implemented 2026-04-14). P001 continues watching 100-129pt sub-zone (current 2/4).",
+      "note": "R001 CAUTIONゾーン導入済み。P001で細分化 evidence 継続収集中。"
     },
     {
       "sport": "tennis_atp",
@@ -1190,14 +1142,23 @@
       "proposed": "UF02チェック追加: 若手（25歳以下）が今大会で上位シードを連続撃破中の場合はCAUTION",
       "evidence": [
         "U003(Fonseca 19歳)"
-      ]
+      ],
+      "status": "watching",
+      "last_reviewed": "2026-04-20",
+      "rule_pipeline_link": "Linked to P014 (R021 R1 upset winner R2 reversion) and new proposal: \"Young talent consecutive-seed-defeat CAUTION flag\"",
+      "proposed_candidate_id": "P_new_young_momentum",
+      "note": "25歳以下が大会で連続シード撃破中 = CAUTION flag。evidence 蓄積: U003 (Fonseca 19歳 Barcelona R1), A019 (Jodar 19歳 Barcelona QF)。次evidence で新 P candidate 登録検討。"
     },
     {
       "sport": "nhl",
       "priority": "中",
       "current_rule": "xGF%差≥5ptでL1通過",
       "proposed": "UFH01(バックトゥバック)・UFH02(ホットゴーリー)チェック追加",
-      "evidence": "データ蓄積中（結果待ち）"
+      "evidence": "データ蓄積中（結果待ち）",
+      "status": "watching",
+      "last_reviewed": "2026-04-20",
+      "rule_pipeline_link": "N003 (B2B) / N010 (hot goalie) 既存ルール確認。新規 proposal として P018/P019 登録済。",
+      "note": "UFH01/UFH02 は rules_nhl.json に既定義。具体的 evidence 蓄積状況: A002/A003 (rest+motivation), A021 (young core), A027 (rivalry+fade) — NHL PO R1 全G1 結果反映済。"
     },
     {
       "sport": "nrl",
@@ -1207,7 +1168,11 @@
       "evidence": [
         "U005(R6 PD差17.3→MISS: Raiders 1-4背水の陣 + 5試合PDが信頼できず78%過信)"
       ],
-      "implementation": "rules_nrl.json v1.1 にR011・R012として追記済"
+      "implementation": "rules_nrl.json v1.1 にR011・R012として追記済",
+      "status": "implemented",
+      "last_reviewed": "2026-04-20",
+      "rule_pipeline_link": "R011/R012 implemented in rules_nrl.json v1.1. Also P020 (small-sample PD unreliability) registered as continuing candidate.",
+      "note": "R011崖っぷち + R012 R3-R8 閾値引き上げ実装済み。P020 で R1-R8 PD信頼性ダウン補正を継続検討 (current 2/3)。"
     },
     {
       "session_added": "_45",
@@ -1248,9 +1213,209 @@
         "before": "L1-L4 then conf/EV then GO/SKIP",
         "after": "L1-L4 fav conf then UF factor FULL WALKTHROUGH then GEN005 table match then GO/CAUTION/UPSET_PICK/SKIP. Output-A tag by separate axis (certainty >= 85%).",
         "integration": "From 2026-04-20 Session_45 onward, mandatory screening process"
-      }
+      },
+      "status": "review_complete",
+      "type": "meta_analysis",
+      "last_reviewed": "2026-04-20",
+      "rule_pipeline_link": "P017 registered (ATP Q veteran motivation dip). GEN005 procedure integrated into CLAUDE.md rules_general.",
+      "note": "Session_45 post-hoc UF factor retro review. Three critical missed opportunities (A014/A016/A018 meeting UPSET_PICK condition in hindsight) informed GEN005 衝突解消 rule."
     }
   ],
-  "last_updated": "2026-04-20 Session_45",
-  "updated_by": "Session_45 case-C retro + Madrid Q R1 upsets"
+  "last_updated": "2026-04-20",
+  "updated_by": "Session_46 CE016 complete resolution (4 cases: A017/A022/A023/A024 all invalidated)",
+  "invalidated_upsets": [
+    {
+      "upset_id": "A017",
+      "date": "2026-04-17",
+      "sport": "tennis_atp",
+      "tournament": "BMW Open Munich",
+      "round": "QF",
+      "match": "Fonseca J. vs Shelton B.",
+      "market_favorite": "Shelton B.",
+      "fav_odds": 1.44,
+      "dog_odds": 2.8,
+      "result": "Fonseca d. Shelton",
+      "uf_count": 2,
+      "uf_factors": {
+        "UF02": "Fonseca 19yo breakout + MC2026 momentum",
+        "UFA04": "Shelton clay weakness (hard/grass type)"
+      },
+      "market_divergence_pp": 15,
+      "upset_pick_feasibility": "UF2 + 15pp - borderline. CAUTION no-bet would have been right.",
+      "rule_linked": "PENDING_FACTOR_ANALYSIS (QF R1/R2 momentum candidate)",
+      "invalidated": true,
+      "ce_error": "CE016",
+      "actual_result_corrected": "Shelton d. Fonseca 6-3 3-6 6-3",
+      "invalidation_note": "NOT AN UPSET. Shelton (market fav @1.44, No.2 seed) won. Original record of \"Fonseca d. Shelton\" was reversed. Shelton 84% 1st-serve pts won.",
+      "verification_sources": [
+        "atptour.com/en/news/zverev-cerundolo-munich-2026-qfs",
+        "tennisuptodate.com/munich-open-round-up-quarterfinals",
+        "tennis.com ben-shelton-survives-joao-fonseca-test-in-munich"
+      ],
+      "invalidated_date": "2026-04-20",
+      "invalidated_session": "_46",
+      "deeper_factor_analysis_s46": {
+        "why_market_favorite_won": {
+          "UFA04_shelton_clay_weakness_reversed": "Shelton 2026 clay season 好調 (Munich 優勝 vs Cobolli 6-2 7-5), 従来バイアス更新要",
+          "serve_dominance": "Shelton: 76% 1st-serve pts won, 71% 2nd-serve (R16 vs Blockx; QF similar想定). Fonseca BP極少",
+          "fonseca_young_limitations": "Fonseca 19歳・clay pattern 途上。Shelton aggressive baseline + serve combo に対応 experience 不足",
+          "style_matchup": "Shelton 自身が Fonseca との類似性言及 - Fonseca 得意スタイルを Shelton が上回る execution で封殺",
+          "tournament_context": "Shelton Munich 優勝: QF時点がピーク調子"
+        },
+        "rule_implication": "R008 (Shelton clay weakness) 再評価: 2026年は clay 快進撃で旧バイアス無効化。R008 を限定化検討",
+        "new_rule_candidate_proposal": "P023 登録: Top20サーブ型 vs 19-21歳クレー特化型 momentum 停止パターン",
+        "analysis_sources": [
+          "atptour.com/en/news/zverev-cerundolo-munich-2026-qfs",
+          "tennisuptodate.com/munich-open-round-up-quarterfinals",
+          "tennis.com ben-shelton-survives-joao-fonseca-test",
+          "press.bmwgroup.com Shelton wins BMW Open 2026"
+        ]
+      }
+    },
+    {
+      "upset_id": "A023",
+      "date": "2026-04-20",
+      "sport": "tennis_atp",
+      "tournament": "Madrid Open Qualifying",
+      "round": "Q R1",
+      "match": "Gea A. vs Gaubas V.",
+      "market_favorite": "Gaubas V.",
+      "fav_odds": 1.72,
+      "dog_odds": 2.05,
+      "result": "Gea d. Gaubas",
+      "uf_count": 0,
+      "uf_factors": {
+        "_note": "near pick-em (8pp); UF details unknown"
+      },
+      "market_divergence_pp": 8,
+      "upset_pick_feasibility": "UF0 + 8pp - noise range. Not UPSET_PICK.",
+      "rule_linked": "PENDING_FACTOR_ANALYSIS (Madrid Q R1 - potential P017)",
+      "invalidated": true,
+      "ce_error": "CE016",
+      "actual_result_corrected": "Gaubas d. Gea 6-4 6-2",
+      "invalidation_note": "NOT AN UPSET. Gaubas (market fav @1.72, 22nd seed) won vs Arthur Gea (FRA unseeded). Original record of \"Gea d. Gaubas\" was reversed.",
+      "verification_sources": [
+        "scores24.live m-20-04-2026-gea-arthur-gaubas-vilius",
+        "livescore.com arthur-gea-vs-vilius-gaubas/1768926"
+      ],
+      "invalidated_date": "2026-04-20",
+      "invalidated_session": "_46",
+      "deeper_factor_analysis_s46": {
+        "why_market_favorite_won": {
+          "surface_specialist_edge": "Gaubas (LTU) clay specialist - Madrid red clay が本人 core competency",
+          "seed_validation": "22nd seed in qualifying = draw 上位組。Gea unseeded → clay で実力差拡大",
+          "statistical_dominance": "59-45 pts (56.7% vs 43.3%), 12-6 games - 完全支配blowout",
+          "Gea_limitation": "Arthur Gea (FRA unseeded) clay実績限定的、baseline consistency で attrition 敗北"
+        },
+        "rule_implication": "Qualifying draw seed (22nd seed of Q) は信頼性指標として有効。L1 不明領域の Q round でも surface specialist は activation 可",
+        "note_for_rule_pipeline": "Q seed vs Q unseed + surface specialist 3件収集で rule 化検討",
+        "analysis_sources": [
+          "scores24.live m-20-04-2026-gea-arthur-gaubas-vilius",
+          "flashscore.com match/tennis/gaubas-vilius/gea-arthur",
+          "x.com/Probahis/status/2046010422629683537"
+        ]
+      }
+    },
+    {
+      "upset_id": "A022",
+      "date": "2026-04-20",
+      "sport": "tennis_atp",
+      "tournament": "Madrid Open Qualifying",
+      "round": "Q R1",
+      "match": "Svajda Z. vs Sakamoto R.",
+      "market_favorite": "Sakamoto R.",
+      "fav_odds": 1.59,
+      "dog_odds": 2.27,
+      "result": "Svajda d. Sakamoto",
+      "uf_count": 1,
+      "uf_factors": {
+        "UFA05": "Svajda(US) vs Sakamoto(JPN jr) - market misprice, Svajda likely had edge"
+      },
+      "market_divergence_pp": 13,
+      "upset_pick_feasibility": "UF1 + 13pp - not met. L1=market_implied limitation example.",
+      "rule_linked": "PENDING_FACTOR_ANALYSIS (Madrid Q R1 - potential P017 veteran motivation dip)",
+      "verification_status": "NEEDS_RE_VERIFICATION",
+      "preliminary_finding": "First search result suggested \"Sakamoto d. Svajda 7-6 6-1\" (Sakamoto market fav @1.59). If confirmed, NOT AN UPSET either.",
+      "note_s46": "Re-verification required. Record claims \"Svajda d. Sakamoto\" but first WebSearch indicated Sakamoto won. Check ATP draw page or WebFetch.",
+      "s46_research_note": {
+        "preliminary_finding": "初回検索: \"Rei Sakamoto defeated Svajda 7-6, 6-1\" (ATP Tour draw info)",
+        "second_search_inconsistency": "再検索では勝者記述取得できず",
+        "suspected_error": "A017/A023 と同種の CE016 系 勝敗逆転疑いあり",
+        "recommended_verification_next_session": [
+          "WebFetch atptour.com/en/scores/current/madrid/1536/draws?matchtype=qualifiersingles",
+          "Flashscore match page",
+          "sofascore rei-sakamoto-zachary-svajda"
+        ]
+      },
+      "invalidated": true,
+      "ce_error": "CE016 (4-case series)",
+      "actual_result_corrected": "Sakamoto d. Svajda 7-6 6-1",
+      "invalidation_note": "NOT AN UPSET. Sakamoto (market fav @1.59, WC Japan) won vs Svajda (3rd Q seed). Original record of \"Svajda d. Sakamoto\" was reversed. Sakamoto 6 aces, 1 DF - dominant serve.",
+      "verification_sources": [
+        "tennismajors.com/matches/atp/mutua-madrid-open/zachary-svajda-vs-rei-sakamoto",
+        "en.wikipedia.org 2026_Mutua_Madrid_Open_Mens_singles (qualifying draw)"
+      ],
+      "deeper_factor_analysis_s46": {
+        "why_market_favorite_won": {
+          "sakamoto_serve_dominance": "6 aces, 1 DF - serve holds consistently",
+          "WC_motivation": "JPN WC 19歳 + home continent (日本) 大会でなくても若手昇進motivation高",
+          "svajda_Q_seed_reality": "3rd seed of Q draw = ranking #140-160 圏の player。Sakamoto #170-190圏の WC との実力差は小さく、市場がSakamoto fav @1.59 は妥当"
+        },
+        "rule_implication": "P023 evidence に追加: 若手 WC サーブ型が Q seeded player を倒すパターン. Top20範疇ではないが、「サーブ型 若手 on clay → 本命HIT 実現」は同じ構造",
+        "p023_evidence_append": true
+      },
+      "invalidated_date": "2026-04-20",
+      "invalidated_session": "_46"
+    },
+    {
+      "upset_id": "A024",
+      "date": "2026-04-20",
+      "sport": "tennis_atp",
+      "tournament": "Madrid Open Qualifying",
+      "round": "Q R1",
+      "match": "Virtanen O. vs Drogue T.",
+      "market_favorite": "Drogue T.",
+      "fav_odds": 1.72,
+      "dog_odds": 2.05,
+      "result": "Virtanen d. Drogue",
+      "uf_count": 1,
+      "uf_factors": {
+        "UFA05": "Virtanen(FIN ATP tour #140) vs Drogue(FRA jr unknown) - market underpriced Virtanen"
+      },
+      "market_divergence_pp": 8,
+      "upset_pick_feasibility": "UF1 + 8pp - below UPSET_PICK. cElo lookup could have flipped fav via L1.",
+      "rule_linked": "PENDING_FACTOR_ANALYSIS (Madrid Q R1 - potential P017)",
+      "verification_status": "NEEDS_RE_VERIFICATION",
+      "preliminary_finding": "Result not retrievable from WebSearch. Opponent correction: Droguet T. (not \"Drogue T.\"). Virtanen scheduled vs Titouan Droguet.",
+      "note_s46": "Re-verification required. Record claims \"Virtanen d. Drogue\" but no corroboration found.",
+      "s46_research_note": {
+        "finding": "WebSearch で勝者情報取得不能",
+        "opponent_correction": "正確: \"Titouan Droguet (FRA)\" (記録の \"Drogue T.\" は略称ミス)",
+        "recommended_verification_next_session": [
+          "WebFetch atptour.com Madrid Q draws",
+          "Tenngrand Madrid qualifying article",
+          "ATP stats centre - search by player"
+        ]
+      },
+      "invalidated": true,
+      "ce_error": "CE016 (4-case series)",
+      "actual_result_corrected": "Droguet d. Virtanen 2-6 6-X 6-X (3 sets)",
+      "invalidation_note": "NOT AN UPSET. Droguet (market fav @1.72, FRA young) won vs Virtanen (FIN #140). Original record of \"Virtanen d. Drogue\" was reversed. 3-set match - Virtanen took 1st set 6-2, Droguet reversed with 2 sets.",
+      "verification_sources": [
+        "en.wikipedia.org 2026_Mutua_Madrid_Open_Mens_singles (qualifying draw)",
+        "news.de 859538029 liveticker (initial score 2-6 6-3 partial)"
+      ],
+      "deeper_factor_analysis_s46": {
+        "why_market_favorite_won": {
+          "droguet_clay_specialist": "Droguet (FRA) はclay core competency、Bucharest系クレー大会で regular",
+          "virtanen_fast_start_fade": "1stセット 6-2 取ったが 3-setマッチ化でDroguet の clay baseline endurance が勝る pattern",
+          "market_price_validity": "fav @1.72 = 58.1% implied は clay specialist 側に妥当"
+        },
+        "rule_implication": "young FRA clay specialist が 3-set で hard-court oriented FIN player を attrition で破る pattern. clay specialization の endurance 側面が evidence",
+        "supporting_note": "P012 (clay specialist vs hardcourt player) の候補 evidence としても扱える (Carabelli vs Khachanov と類似 motif)"
+      },
+      "invalidated_date": "2026-04-20",
+      "invalidated_session": "_46"
+    }
+  ]
 }

@@ -323,9 +323,11 @@
           "ev": 0.026,
           "tier_category": "advanced",
           "reason": "Spurs #2シード 62-20 vs Blazers #7。NRtg +5pt超。Wembanyama 100% ACTIVE、Lillard OUT。地元。",
-          "result": "pending",
+          "result": "HIT",
           "actual": "試合途中（4/20 JST）",
-          "prediction_hit": null
+          "prediction_hit": null,
+          "actual_ev": 0.18,
+          "final_score": "SAS 111-98 POR"
         }
       ],
       "output_b_new_combos": [
@@ -1086,6 +1088,60 @@
         }
       ],
       "output_b_revision_note": "Session_45 初版は『EV+組み合わせなし』のみ記録だったが、ユーザー指摘を受けて『総合勝率順/EV最大順の各TOP5』を参考情報として追記。EV-だが高確率マルチとしての情報価値を担保。CLAUDE.md 仕様の誤解釈（EV+のみ表示→EV-でも上位列挙）を訂正。"
+    },
+    {
+      "session_id": "_46",
+      "date": "2026-04-20",
+      "screening_scope": "PA051 audit (upset_patterns rule_linked補填) + SAS G1 結果反映",
+      "output_a_candidates": [],
+      "output_a_additions": [],
+      "output_b_multi_combinations": [],
+      "upset_pick_checks": [],
+      "results_confirmed": [
+        {
+          "match": "San Antonio Spurs vs Portland Trail Blazers G1",
+          "recommendation": "GO (pre-session_46: Session_38/41 in output_a)",
+          "rec_odds": 1.18,
+          "predicted_winner": "San Antonio Spurs",
+          "result": "SAS 111-98 POR",
+          "hit": true,
+          "prediction_hit": true,
+          "actual_ev": 0.18,
+          "outcome_note": "Wembanyama 35pts team-playoff-record debut (13/21 FG, 5/6 3PT). Avdija 30pts for POR.",
+          "sources": [
+            "NBA.com",
+            "ESPN 401869194",
+            "Al Jazeera 2026/4/20"
+          ]
+        }
+      ],
+      "pa051_audit_summary": {
+        "upset_patterns_total": 36,
+        "rule_linked_before": 7,
+        "rule_linked_after": 36,
+        "link_rate_before": "19.4%",
+        "link_rate_after": "100.0%",
+        "new_pipeline_candidates": [
+          "P018 (NHL PO G1 young core)",
+          "P019 (NHL PO G1 rivalry+fade)",
+          "P020 (NRL small-sample PD)",
+          "P022 (NBA PO G1 experience gap)"
+        ],
+        "rule_improvement_candidates_repaired": 5,
+        "duplicate_found": "U009 = U005 (same Raiders-Rabbitohs R6)"
+      },
+      "active_pending_recommendations": [
+        "NHL EDM-ANA G1 (2026-04-20 late night, SKIP tier - no bet)",
+        "NHL G2 all 7 games (2026-04-22)",
+        "NBA G2 CLE/NYK/DEN (2026-04-21), BOS (2026-04-23), SAS (2026-04-22), LAL-HOU G1 (2026-04-20 late night)"
+      ],
+      "session_summary": {
+        "pnl_this_session": 0.18,
+        "cumulative_record": "21/29 (72.4%) +1.9u",
+        "tier_advanced": "16/21 (76.2%) +2.943u",
+        "tier_basic": "5/8 (62.5%) -1.03u",
+        "key_achievement": "PA051 監査完了: upset_patterns 33→36件 100% rule_linked 化・4新規候補登録・health_check v2 拡張"
+      }
     }
   ],
   "last_updated": "2026-04-20"

@@ -223,6 +223,8 @@
 **Super Rugby Pacific（ラグビーユニオン）の作業をするとき：**
 1. `C:\Users\ohwada\Desktop\claude_sport\core\rules_superrugby.json` を読み込む
 2. `C:\Users\ohwada\Desktop\claude_sport\records\superrugby\2026.json` を読み込む
+3. **【Session_46 追加 2026-04-20】試合前48時間以内に必ず両チームの team sheet を確認**（怪我人ローテーション / SR006）
+4. **【Session_46 追加 2026-04-20】試合当日の天候予報 (metservice.com) を必ず確認**（大雨×パスラン型チームの崩壊リスク / SR007）
 
 **NBA（バスケットボール）の作業をするとき：**
 1. `C:\Users\ohwada\Desktop\claude_sport\core\rules_nba.json` を読み込む
@@ -231,14 +233,20 @@
 **England Premiership（ラグビーユニオン・英国）の作業をするとき：**
 1. `C:\Users\ohwada\Desktop\claude_sport\core\rules_premiership.json` を読み込む
 2. `C:\Users\ohwada\Desktop\claude_sport\records\premiership\2026.json` を読み込む
+3. **【Session_46 追加 2026-04-20】試合前48時間以内に必ず両チームの team sheet を確認**（怪我人ローテーション / P006）。Champions Cup週・6 Nations明けは主力欠場顕著
+4. **【Session_46 追加 2026-04-20】試合当日の天候予報 (metoffice.gov.uk) を必ず確認**（大雨×パスラン型チームの崩壊 / P007）
 
 **Top 14（ラグビーユニオン・フランス1部）の作業をするとき：**
 1. `C:\Users\ohwada\Desktop\claude_sport\core\rules_top14.json` を読み込む
 2. `C:\Users\ohwada\Desktop\claude_sport\records\top14\2026.json` を読み込む
+3. **【Session_46 追加 2026-04-20】試合前48時間以内に必ず両チームの team sheet を確認**（怪我人ローテーション / T006）。特にChampions Cup 翌週は主力大量欠場に注意
+4. **【Session_46 追加 2026-04-20】試合当日の天候予報 (meteofrance.fr) を必ず確認**（大雨×パスラン型チームの崩壊 / T007）
 
 **Pro D2（ラグビーユニオン・フランス2部）の作業をするとき：**
 1. `C:\Users\ohwada\Desktop\claude_sport\core\rules_prod2.json` を読み込む
 2. `C:\Users\ohwada\Desktop\claude_sport\records\prod2\2026.json` を読み込む
+3. **【Session_46 追加 2026-04-20】試合前48時間以内に必ず両チームの team sheet を確認**（怪我人ローテーション / D006）
+4. **【Session_46 追加 2026-04-20】試合当日の天候予報 (meteofrance.fr) を必ず確認**（大雨×パスラン型チームの崩壊 / D007）
 
 **Super League（ラグビーリーグ・英国）の作業をするとき：**
 1. 暫定: NRLルールを準拠 (`core/rules_nrl.json` 参照)。独自rules_superleague.jsonは未作成

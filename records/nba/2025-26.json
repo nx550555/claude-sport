@@ -6,11 +6,12 @@
   "started": "2026-04-11",
   "summary": {
     "total": 2,
-    "hit": 1,
+    "hit": 2,
     "hit_rate": 1.0,
-    "ev_total": 0.2,
+    "ev_total": 0.38,
     "note": "NBA-001 Rockets HIT(+0.20) / NBA-002 Cavaliers SKIP / NBA-003 Spurs vs Blazers GO(pending) / NBA-004~010 SKIP (NRtg<5pt or EV-)",
-    "last_updated": "2026-04-20 Session_45"
+    "last_updated": "2026-04-20 Session_45",
+    "go_count": 0
   },
   "net_rating_snapshot": {
     "as_of": "2026-04-11",
@@ -332,7 +333,7 @@
       "rec_odds": 1.18,
       "ev": 5.6,
       "confidence": 81,
-      "status": "pending",
+      "status": "confirmed",
       "predicted_winner": "San Antonio Spurs",
       "prediction_confidence": 81,
       "prediction_basis": "NRtg diff 8.9pt (SAS 8.5 vs POR -0.4). L1 PASS. Wembanyama ACTIVE (confirmed heavy.com 2026-04-16). Lillard OUT entire season (Achilles). SAS HCA (W2 seed). PO B011: HCA +5%.",
@@ -351,9 +352,17 @@
         },
         "ev_calc": "(0.81 * 1.18) - 1 = +5.6%"
       },
-      "result": null,
-      "hit": null,
-      "actual_ev": null
+      "result": "San Antonio Spurs 111-98 Portland Trail Blazers",
+      "hit": true,
+      "actual_ev": 0.18,
+      "score": "SAS 111-98 POR",
+      "prediction_hit": true,
+      "verification_sources": [
+        "NBA.com trail-blazers-spurs-2026-playoffs-game-1-takeaways",
+        "ESPN 401869194 recap",
+        "Al Jazeera 2026/4/20 wembanyama-makes-history"
+      ],
+      "outcome_note": "Wembanyama 35pts (team playoff-record debut), 13/21 FG, 5/6 3PT, 5 reb, 2 blk. Avdija 30pts 10reb for POR. GO @1.18 HIT +0.18u."
     },
     {
       "id": "NBA-004",

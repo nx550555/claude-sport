@@ -71,7 +71,11 @@
 | PA048 | GO候補深掘り | Session_45 GO_CANDIDATE 19件のうち L1深掘り（cElo/NRtg/xGF%/PD/G）で市場乖離3件以上特定 → アクティブ GO推奨化を次セッション試行 | PENDING | 高 | 次セッション |
 | PA049 | P017監視 | ATP Masters Q R1 で Top100 vet 対 無名選手のupsetを継続収集。evidence 3件到達で R022 実装 | PENDING | 中 | 継続 |
 | PA050 | UPSET_PICK監視 | GEN005 衝突解消テーブルの UF≥3+div≥15pp を満たす試合を継続観察。2026-04-20 Session_45 時点で発動 0件 | PENDING | 中 | 継続 |
-| PA051 | 🚨最優先 | **upset_patterns 28件 ③→④反映監査**。Session_45末尾ユーザー指摘で発覚: 33件中rule_pipeline連動済は5件のみ、28件が④強化未反映。詳細: `monitoring/s46_audit_target.md`。rule_pipeline 新規候補10-15件追加・rules実装2-3件昇格見込み。次セッション最優先で実行。| PENDING | 最高 | 次セッションSTEP 1 |
+| PA051 | 🚨最優先 | **upset_patterns 全件③→④反映監査 DONE Session_46 2026-04-20**。結果: 36→32件confirmed + 4件 invalidated(CE016 A017/A022/A023/A024)、rule_linked率 19.4%→100%、新規候補 5件追加 (P018/P019/P020/P022/P023)。Deep factor analysis 完了 (A017/A023: 4ソース検証, A022/A024: Wikipedia+TennisMajors 再検証で CE016 系確定) | DONE | 最高 | 完了 2026-04-20 |
+| PA052 | CE016再発防止 | **データ取込時 winner vs market_favorite 整合性自動チェック** DONE Session_46: health_check.py v3 項目9 追加 | DONE | 最高 | 完了 2026-04-20 |
+| PA053 | rule_pipeline | P023 (Top20サーブ型 vs 若手クレーモメンタム停止) evidence 3件目収集 (現在 2/3) で implement 判断 | PENDING | 中 | 継続 |
+| PA054 | rule_pipeline | P012 (clay specialist vs hardcourt) evidence 3件目収集 (現在 2/3) で R019 implement 判断 | PENDING | 中 | 継続 |
+| PA055 | upset_patterns 反映 | A026 (NBA ORL-DET G1) / A021 (NHL TBL-MTL G1) / A027 (NHL PHI-PIT G1) / A028 (NHL MIN-DAL G1) の records/{sport}/*.json 反映確認 | PENDING | 高 | 次セッション |
 | PA044 | NHL | PA014 TBL-MTL G1 **MTL 4-3 OT 予測MISS 記録 DONE Session_44** (Slafkovsky hat trick + OT 1:22 PP). Type A A021 upset登録。CAUTION no-bet のため P&L影響なし | DONE | 高 | 完了 2026-04-20 |
 | PA045 | Rule Pipeline | **R020/R017 実装 DONE Session_44** (rules_tennis.json v2.2). P013/P010 implemented_rulesへ移動。GEN005衝突解消: R017 vs R020 同時成立時はR017優先 | DONE | 中 | 完了 2026-04-20 |
 | PA046 | 出力A/B | **Session_30-43 新規GO遡及追加 DONE Session_44** (multi_bets.json + dashboard同期). Leeds/Warriors/Warrington/SAS を追加。累計 11件・6HIT・3MISS・1VOID・1PENDING | DONE | 最高 | 完了 2026-04-20 |

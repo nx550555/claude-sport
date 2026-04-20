@@ -18,35 +18,45 @@
 
 ## 未完了・作業中（次回セッション最優先）
 
-### 🎯 次回セッション開始時の行動順序（Session_46）
+### 🎯 次回セッション開始時の行動順序（Session_47）
 
-**STEP 0: システム健全性スキャン（Session_45で新設）**
-- `python monitoring/health_check.py` を必ず実行
-- `monitoring/missed_tasks_log.md` を読む（Session_45未実施項目6件を確認）
-- **`monitoring/s46_audit_target.md` を読む**（Session_45末尾で発覚した最重要監査タスク）
+**STEP 0: システム健全性スキャン**
+- `python monitoring/health_check.py` を必ず実行（v3: 9項目チェック）
+- `monitoring/missed_tasks_log.md` を読む
 
-**STEP 1: 🚨 最優先: upset_patterns 28件 ③→④反映監査**
-Session_45 末尾でユーザー指摘により発覚した重大課題:
-- upset_patterns.json 33件中、rule_pipeline 連動済は 5件のみ
-- **28件が ④強化 未反映**（MISS分析が次回予測に活かされていない断絶）
-- 詳細手順: `monitoring/s46_audit_target.md` 参照
-- 完了見込み: rule_pipeline 新規候補 10-15件追加・rules実装 2-3件昇格
-- これが完了するまで他の新規スクリーニングに進まない（ユーザー承認済み）
+**STEP 1: 結果確認（優先）**
+- NHL EDM-ANA G1 (4/20 深夜・試合後判明見込み)
+- NBA LAL-HOU G1 (4/20 深夜・試合後判明見込み)
+- NBA G2 (CLE/NYK/DEN @ 4/21, SAS @ 4/22, BOS @ 4/23)
+- NHL G1残5試合 + G2全7試合 (4/21-22)
+- ORL-DET G1 結果の records/nba/2025-26.json 反映確認（A026 upset_patterns にあるが records 側未検証）
+- NHL A021(TBL-MTL)/A027(PHI-PIT)/A028(MIN-DAL) の records/nhl/2025-26.json 反映確認
 
-**STEP 2: 通常読み込み（CLAUDE.md STEP 1）**
-- BACKLOG / user_feedback / pending_actions / claude_error_log / rule_pipeline / framework
-
-**STEP 3: 結果確認**
-- NBA G2 (CLE/NYK/DEN @ 4/21, BOS @ 4/23, SAS @ 4/22)
-- NHL G1 EDM-ANA (4/20深夜) + G2全7試合 (4/22)
-- NBA G1 LAL-HOU (4/20深夜 未決着)
-- WTA Madrid Q 40件結果 + WTA Oeiras 17件結果 (4/20-21)
-- ATP Madrid Q R2 (4/21)
-
-**STEP 4: Madrid本戦開幕データ受領時**
-- ATP Madrid 1000 本戦R1 (4/22〜) + WTA Madrid 1000 本戦R1 (4/22〜)
-- Top30級選手の cElo深掘り → GO推奨3件以上を目指す（missed_tasks_log #1）
+**STEP 2: Madrid 本戦 R1 スクリーニング**（ユーザーJSON提供時）
+- ATP Madrid 1000 + WTA Madrid 1000 本戦 R1 (4/22〜)
 - 全試合に quadrant field 付与必須
+- Top30級選手の cElo 深掘り → GO推奨3件以上を目指す
+
+**STEP 3: 通常読み込み（CLAUDE.md STEP 1）**
+
+**STEP 4: Session_46 残タスク**
+- P023 evidence 3件目 (現在 2/3) で implement 判断
+- P012 evidence 3件目 (現在 2/3) で implement 判断
+- P018/P019/P020/P022 の evidence 追加収集
+
+### 🚨 Session_46 完了報告
+- **PA051 upset_patterns 監査 100% 完了**（32件 confirmed + 4件 invalidated, rule_linked率 19.4%→100%）
+- **CE016 発見・全4件解消**（A017/A022/A023/A024 勝敗逆転記録）
+- **新規 rule 候補 5件追加** (P018/P019/P020/P022/P023)
+- **ラグビーユニオン ルール 8件追加** (T006/T007/D006/D007/P006/P007/SR006/SR007)
+- **health_check v3** 拡張（項目7-9 追加、CE016整合性自動チェック）
+- **NBA SAS-POR G1 HIT** (+0.18u) → 通算 21/29 (72.4%) +1.9u
+
+### 🔧 Session_46 実装改善
+- 4ラグビーユニオンルールに怪我人ローテーション補正 (欠場数別 -3/-7/-12%)
+- 4ラグビーユニオンルールに天候×スタイル補正 (大雨: パスラン型-7%/FW型+5%)
+- CLAUDE.md 4ラグビーセクションに「team sheet 48h前確認 + 天候確認」必須化
+- health_check.py に CE016再発防止の winner vs market_favorite 整合性チェック追加
 
 ---
 

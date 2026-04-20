@@ -1,7 +1,7 @@
 {
   "sport": "rugby_union_premiership",
   "league_name": "English Premiership Rugby (Gallagher Premiership)",
-  "rule_version": "v1.0",
+  "rule_version": "v1.2",
   "created": "2026-04-17",
   "derived_from": "core/rules_superrugby.json (template baseline)",
   "season_context": "2025-26 season. Regular season ~R14-15 by mid-April.",
@@ -15,7 +15,7 @@
     },
     "L2_form": "直近3試合の勝敗＋対戦相手強度",
     "L3_stats": "Try-scoring rate, defensive metrics",
-    "L4_factors": "Injury reports, European fixture fatigue, home/away history"
+    "L4_factors": "Injury reports, European fixture fatigue, home/away history | **Injury rotation / team sheet (MANDATORY 試合前48h確認)**"
   },
   "thresholds": {
     "go": "confidence >= 78% AND EV > +7% AND L1 PASS AND 主力欠場なし",
@@ -47,6 +47,78 @@
     "P004_small_sample_early_season": {
       "rule": "R5 以下の試合は信頼度上限70%",
       "note": "SuperRugby/UFL と同じ"
+    },
+    "P006_injury_rotation": {
+      "rule": "先発XV・ベンチのローテーション/主力欠場状況を必ず確認し補正適用",
+      "evaluation": "先発XVの代表クラス(Tier1 int'l or club core)選手の欠場数で補正:",
+      "adjustments": {
+        "0名欠場": "補正なし（Full strength）",
+        "1-2名欠場": "-3% 信頼度（軽度 rotation）",
+        "3-4名欠場": "-7% 信頼度（中度 rotation / 実質B team近い）",
+        "5名以上欠場": "-12% 信頼度 + L1PASSでもCAUTION格下げ検討（B team / 若手テスト）"
+      },
+      "rotation_triggers": [
+        "欧州杯 (Champions Cup / Challenge Cup) との daily overlap → 主力温存 (Top14/Premiership 特に顕著)",
+        "6 Nations / Autumn Internationals 明け → 代表招集組の rest 期間",
+        "プレーオフ進出/順位確定後 → 終盤戦 rotation (レギュラーシーズン終盤)",
+        "連戦の2戦目 (back-to-back weeks) → 主力 rotation 検討",
+        "long-term injury recovery → 段階的復帰（bench起用→先発）の tracking"
+      ],
+      "verification_sources": [
+        "team_sheet_release (通常試合前48h): rugbypass.com / ESPN Scrum / club official X(Twitter)",
+        "beaten injured list: 各クラブ公式サイトの'injury update'ページ",
+        "L'Equipe / Midi Olympique (French) for Top14/Pro D2",
+        "The Rugby Paper / BBC Sport rugby for Premiership"
+      ],
+      "key_positions_priority": [
+        "10 (fly-half/demi d'ouverture) — チーム攻撃の核。欠場時-5% 単独で追加",
+        "9 (scrum-half) — ゲームコントロール",
+        "captain / leadership group — mental & tactical anchor",
+        "front row (1/2/3 numbers) — set-piece (scrum/lineout) 直結"
+      ],
+      "note": "Top 14 / Pro D2 は特にクラブ間でローテーション戦略の差が大きい。フランスクラブはsquad size大で頻繁 rotation 文化あり。Premiership は欧州杯との bye-week 併用、SuperRugby は Test window 影響大。必ず試合前48h以内に team sheet を確認し、欠場リストと主力rotation tagging を記録する。",
+      "rule_id": "P006_injury_rotation",
+      "league_specific_note": "Premiership: Champions Cup/Challenge Cup 進出組（Bath/Northampton/Saracens 等）は 12月-1月・4月 の欧州杯週に主力大量欠場。England 代表 window (6 Nations/Autumn) 明けも rotation mode。salary cap の関係で squad depth が Top14 より薄い → rotation 時の落差が大きい。"
+    },
+    "P007_weather_style": {
+      "rule": "天候（特に大雨・強風）による試合スタイル適性の優劣補正",
+      "evaluation": "試合当日の天候予報+試合開始時実況を確認し、両チームのプレースタイルと照合",
+      "weather_categories": {
+        "heavy_rain_storm": {
+          "definition": "土砂降り (10mm/h+) / 強風 20kt+ / グラウンド水浸し",
+          "effects": {
+            "pass_run_oriented_team": "-7% 信頼度（ハンドリングミス増・ランレーン消失・ラインアタック機能不全）",
+            "fw_dominant_kick_oriented_team": "+5% 信頼度（set-piece/rolling maul/kick-chaseが優位）",
+            "balanced_team": "補正なし（天候対応力高い想定）"
+          }
+        },
+        "moderate_rain_or_wind": {
+          "definition": "普通の雨 (3-10mm/h) / 中程度の風 10-20kt",
+          "effects": {
+            "pass_run_oriented_team": "-3% 信頼度",
+            "fw_dominant_kick_oriented_team": "+2% 信頼度"
+          }
+        },
+        "extreme_heat": {
+          "definition": "気温30度以上・湿度80%+（フランス南部・豪州夏場・Fiji 等）",
+          "effects": {
+            "high_tempo_run_team": "+3% (hot-weather adapted locals) / -3% (cold-weather visitors)",
+            "power_fw_team": "-3% (体力消耗大)"
+          }
+        }
+      },
+      "team_style_classification_guide": [
+        "Pass/Run oriented (展開型・back-heavy): Bordeaux, Racing 92, Crusaders, Hurricanes, Fijian Drua, Quins, Bath",
+        "FW-dominant/Kick-oriented (set-piece/territory型): La Rochelle, Toulouse (balanced), Saracens, Stade Francais (physical), Bulls (SA style - relevant if in comp), Blues (power game)",
+        "Balanced: Toulouse, Leinster, Exeter (但し英Prem外), Chiefs"
+      ],
+      "verification_sources": [
+        "weather.com / meteofrance.fr / metservice.com (NZ) 試合前24h以内確認",
+        "試合開始前 press pitch report (commentators 実況)",
+        "team style: 直近10試合のtry_distribution (forward tries vs back tries), avg_pass_per_match, kick_rate"
+      ],
+      "rule_id": "P007_weather_style",
+      "league_specific_note": "Premiership: 英国冬季降雨・風多. Northampton/Leicester はpower FW系 雨で-優位. Bath/Quins はhanding系 雨で-. Bristol/Saracens はbalanced."
     }
   },
   "tournament_context": {
@@ -69,8 +141,19 @@
       "version": "v1.1",
       "date": "2026-04-17",
       "change": "Basic Tier threshold raise: GO条件 conf>=75%/EV>+5% → conf>=78%/EV>+7%. CAUTION: conf>=70% → conf>=72%/EV>+5%."
+    },
+    {
+      "version": "v1.0 + injury rotation",
+      "date": "2026-04-20",
+      "change": "Added P006_injury_rotation (Rugby union injury/rotation correction): 欠場数で信頼度補正(-3/-7/-12%), rotation triggers 明記, team sheet 試合前48h確認を必須化. Session_46 user request."
+    },
+    {
+      "version": "v1.2",
+      "date": "2026-04-20",
+      "change": "Added P007_weather_style (weather-style matchup): heavy rain → pass/run team -7%, FW dominant team +5%. Session_46 user request."
     }
   ],
   "accuracy_tier": "basic",
-  "tier_note": "Basic Tier: 基本統計（PD/G等counting stats）のみ。高度な調整指標は業界標準として存在しないため構造的精度上限あり。L4依存度が高くGO判定は保守的に扱う。均衡試合では根拠が薄いことを前提に運用。"
+  "tier_note": "Basic Tier: 基本統計（PD/G等counting stats）のみ。高度な調整指標は業界標準として存在しないため構造的精度上限あり。L4依存度が高くGO判定は保守的に扱う。均衡試合では根拠が薄いことを前提に運用。",
+  "last_updated": "2026-04-20"
 }

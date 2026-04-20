@@ -1,8 +1,8 @@
 {
   "sport": "superrugby",
   "league": "Super Rugby Pacific",
-  "version": "1.0",
-  "updated": "2026-04-10",
+  "version": "v1.1",
+  "updated": "2026-04-20",
   "bet_type": "Head-to-Head (H2H) のみ",
   "target": "Super Rugby Pacific レギュラーシーズン・ファイナルズ全試合",
   "important_note": "ラグビーユニオン（15人制）。NRL（ラグビーリーグ13人制）とは別競技。ルール・戦術・指標が異なる。",
@@ -126,6 +126,76 @@
       "type": "initial",
       "title": "NZチーム優位補正（歴史的）",
       "body": "Super Rugby Pacific はNZチームが歴史的に豪州チームを上回る。同程度の得失点差の場合、NZチームにわずかな優位があるが、過信は禁物。cElo差・フォームで判断を優先し、この補正は+1%程度にとどめる。"
+    },
+    {
+      "rule": "先発XV・ベンチのローテーション/主力欠場状況を必ず確認し補正適用",
+      "evaluation": "先発XVの代表クラス(Tier1 int'l or club core)選手の欠場数で補正",
+      "adjustments": {
+        "0名欠場": "補正なし（Full strength）",
+        "1-2名欠場": "-3% 信頼度",
+        "3-4名欠場": "-7% 信頼度",
+        "5名以上欠場": "-12% + L1PASSでもCAUTION格下げ"
+      },
+      "rotation_triggers": [
+        "欧州杯 (Champions Cup / Challenge Cup) との daily overlap",
+        "Test window (6 Nations / Autumn / Rugby Championship) 明け",
+        "プレーオフ進出/順位確定後の終盤戦 rotation",
+        "back-to-back weeks 連戦の2戦目",
+        "long-term injury 段階的復帰"
+      ],
+      "key_positions_priority": [
+        "10 (fly-half) — 欠場時-5% 単独追加",
+        "9 (scrum-half) — ゲームコントロール",
+        "captain / leadership group",
+        "front row (1/2/3) — set-piece直結"
+      ],
+      "verification_sources": [
+        "team sheet 試合前48h (rugbypass/club公式X)",
+        "injury update pages",
+        "L'Equipe/Midi Olympique (Top14/ProD2), The Rugby Paper/BBC (Premiership), stuff.co.nz/news.com.au (SuperRugby)"
+      ],
+      "id": "SR006_injury_rotation",
+      "league_specific_note": "Super Rugby Pacific: Test window (July Rugby Championship等)+プレーオフ直前終盤の主力rest / Fijian Drua等のsquad depth薄さ注意"
+    },
+    {
+      "rule": "天候（特に大雨・強風）による試合スタイル適性の優劣補正",
+      "evaluation": "試合当日の天候予報+試合開始時実況を確認し、両チームのプレースタイルと照合",
+      "weather_categories": {
+        "heavy_rain_storm": {
+          "definition": "土砂降り (10mm/h+) / 強風 20kt+ / グラウンド水浸し",
+          "effects": {
+            "pass_run_oriented_team": "-7% 信頼度（ハンドリングミス増・ランレーン消失・ラインアタック機能不全）",
+            "fw_dominant_kick_oriented_team": "+5% 信頼度（set-piece/rolling maul/kick-chaseが優位）",
+            "balanced_team": "補正なし（天候対応力高い想定）"
+          }
+        },
+        "moderate_rain_or_wind": {
+          "definition": "普通の雨 (3-10mm/h) / 中程度の風 10-20kt",
+          "effects": {
+            "pass_run_oriented_team": "-3% 信頼度",
+            "fw_dominant_kick_oriented_team": "+2% 信頼度"
+          }
+        },
+        "extreme_heat": {
+          "definition": "気温30度以上・湿度80%+（フランス南部・豪州夏場・Fiji 等）",
+          "effects": {
+            "high_tempo_run_team": "+3% (hot-weather adapted locals) / -3% (cold-weather visitors)",
+            "power_fw_team": "-3% (体力消耗大)"
+          }
+        }
+      },
+      "team_style_classification_guide": [
+        "Pass/Run oriented (展開型・back-heavy): Bordeaux, Racing 92, Crusaders, Hurricanes, Fijian Drua, Quins, Bath",
+        "FW-dominant/Kick-oriented (set-piece/territory型): La Rochelle, Toulouse (balanced), Saracens, Stade Francais (physical), Bulls (SA style - relevant if in comp), Blues (power game)",
+        "Balanced: Toulouse, Leinster, Exeter (但し英Prem外), Chiefs"
+      ],
+      "verification_sources": [
+        "weather.com / meteofrance.fr / metservice.com (NZ) 試合前24h以内確認",
+        "試合開始前 press pitch report (commentators 実況)",
+        "team style: 直近10試合のtry_distribution (forward tries vs back tries), avg_pass_per_match, kick_rate"
+      ],
+      "id": "SR007_weather_style",
+      "league_specific_note": "Super Rugby: NZ 湿潤気候でrain試合頻発. Hurricanes/Crusaders ホームはpassラン型で雨に弱い傾向. Fiji Drua はhigh-tempo runに特化 → 雨で著しく-."
     }
   ],
   "accuracy_tier": "basic",
@@ -135,6 +205,11 @@
       "version": "v1.1",
       "date": "2026-04-17",
       "change": "Basic Tier threshold raise: GO条件 conf>=75%/EV>+5% → conf>=78%/EV>+7%. CAUTION: conf>=70% → conf>=72%/EV>+5%."
+    },
+    {
+      "version": "v1.1",
+      "date": "2026-04-20",
+      "change": "Added SR006_injury_rotation (injury rotation) + SR007_weather_style (weather-style matchup). Session_46 user requests."
     }
   ]
 }

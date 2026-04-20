@@ -291,19 +291,28 @@
       "title": "クレースペシャリスト（南米/スペイン）対ハードコーター: L1差縮小補正",
       "description": "アルゼンチン・スペイン等南米/欧州クレースペシャリストがクレーで'名声ランキング高め'のハードコーターと対戦する場合、実質cElo差を縮小して評価すべき。L1差<120ptのケースでは+15ptクレー補正（スペシャリスト側cEloを実態に近づける）。",
       "trigger_threshold": 3,
-      "current_count": 1,
+      "current_count": 2,
       "evidence": [
         {
           "id": "A011",
           "match": "Carabelli d. Khachanov Barcelona 2026 R1",
           "pattern": "Carabelli(ARG, クレー10-4) vs Khachanov(主にハード). cElo差82pt→実質的に同格以下かも。Carabelli初Top20勝利。Khachanov MC R1も敗退。",
           "tag": "atp_clay_specialist_vs_hardcourt_player"
+        },
+        {
+          "id": "A024_corrected",
+          "match": "Droguet d. Virtanen Madrid Q R1 2026-04-20 (3sets)",
+          "pattern": "Droguet (FRA clay specialist) d. Virtanen (FIN hard-court tendency). Virtanen 1st set 6-2 lead後, Droguet が後半2セット回収. clay attrition power + baseline endurance が Virtanen の fast-start を上回る. fav @1.72 HIT.",
+          "tag": "atp_clay_specialist_vs_hardcourt_player",
+          "sources": [
+            "en.wikipedia.org 2026_Mutua_Madrid_Open_Mens_singles"
+          ]
         }
       ],
       "tag_matches": [
         "atp_clay_specialist_vs_hardcourt_player"
       ],
-      "note": "3件揃ったら: アルゼンチン/スペイン選手のクレーcElo補正値を定量化しR019として実装。Source: eleco.com.ar, ATP Stats Centre (A011)"
+      "note": "3件揃ったら: アルゼンチン/スペイン選手のクレーcElo補正値を定量化しR019として実装。Source: eleco.com.ar, ATP Stats Centre (A011) [Session_46]: A024 evidence 追加 (本命HIT経由 - clay specialist endurance pattern)."
     },
     {
       "candidate_id": "W_P_new1",
@@ -482,6 +491,145 @@
         "rugby_continental_crossing_home"
       ],
       "note": "2件目 evidence が揃ったら SL002 として実装。実装時は rules_superleague.json を新設し、英国チーム vs Catalans (Stade Gilbert Brutus 開催) 時に fav confidence から -7% 減点、2nd half崩壊リスク factor を追加。evidence 2件目候補: Catalans vs Wigan (スケジュール確認要), Catalans vs St Helens 等。"
+    },
+    {
+      "candidate_id": "P018",
+      "status": "watching",
+      "target_rule_file": "core/rules_nhl.json",
+      "proposed_rule_id": "N019",
+      "title": "NHL PO R1 G1 underdog 若手コア活性化補正",
+      "description": "NHL Stanley Cup Playoffs R1 G1 で、underdog 側に 23歳以下かつ RS 40G+/PPG>0.7 の scorer が 1名以上いる場合、本命信頼度を -3%〜-5% 補正。PO G1 は home favorite の重圧 + underdog 若手選手の感情爆発が典型パターン。",
+      "trigger_threshold": 3,
+      "current_count": 1,
+      "evidence": [
+        {
+          "id": "A021",
+          "match": "Montreal Canadiens d. Tampa Bay Lightning PO R1 G1 2026-04-19",
+          "pattern": "MTL Slafkovsky(21歳) hat trick + OT 1:22 PP GWG。Suzuki(25歳) 101pts career high。TBL @1.53 home A2 seed + Vasilevskiy confirmed でも若手コア爆発で 4-3 OT loss。CAUTION no-bet で P&L影響なし。",
+          "tag": "nhl_po_g1_young_core_activation",
+          "sources": [
+            "records/nhl/2025-26.json PA044",
+            "CLAUDE.md Session_44 update"
+          ]
+        }
+      ],
+      "tag_matches": [
+        "nhl_po_g1_young_core_activation",
+        "nhl_po_g1_home_favorite_upset"
+      ],
+      "note": "3件揃ったら N019 として実装。Slafkovsky (21歳, 40G+ RS scorer) が key driver。類似パターン候補: NYI Hutson, MTL Caufield, BUF Quinn, DET Raymond 等。"
+    },
+    {
+      "candidate_id": "P019",
+      "status": "watching",
+      "target_rule_file": "core/rules_nhl.json",
+      "proposed_rule_id": "N020",
+      "title": "NHL PO R1 rivalry + home favorite late-season fade 補正",
+      "description": "地区内 rivalry カード (PHI-PIT, NYR-NYI, MTL-TOR, CGY-EDM 等) の PO G1 で、home favorite が RS 最終20試合で xGF% 低下傾向 (52%→49% 等) かつ main scorer が 30歳以上 veteran-heavy の場合、本命信頼度を -4% 補正。",
+      "trigger_threshold": 3,
+      "current_count": 1,
+      "evidence": [
+        {
+          "id": "A027",
+          "match": "Philadelphia Flyers d. Pittsburgh Penguins PO R1 G1 2026-04-20",
+          "pattern": "PIT @1.68 home favorite, Crosby veteran-heavy + RS late slump。PHI young energy + rivalry motivation。PHI 3-2 勝利。UF2 + 16pp (borderline)。CAUTION no-bet would have been right.",
+          "tag": "nhl_po_g1_rivalry_home_fade"
+        }
+      ],
+      "tag_matches": [
+        "nhl_po_g1_rivalry_home_fade",
+        "nhl_veteran_heavy_late_slump"
+      ],
+      "note": "3件揃ったら N020 として実装。CGY-EDM, NYR-NYI等の地区rivalry PO シリーズで類似パターン観察。"
+    },
+    {
+      "candidate_id": "P020",
+      "status": "watching",
+      "target_rule_file": "core/rules_nrl.json",
+      "proposed_rule_id": "R014",
+      "title": "NRL 小サンプル期 (R1-R8) PD/G 信頼性ダウン補正",
+      "description": "NRL の Round 1-8 において、PD/G ベースの L1 indicator は 1-2試合のアウトライヤー blowout で大きく歪む可能性が高い。PD/G 差が6pt以上でも、その内訳（1試合の40点差が平均を歪めているか等）を確認する。小サンプル期には信頼度上限を 78% に制限し、CAUTION 格下げを検討。desperate team (0-4/1-4) との対戦時は追加 -5% 補正。",
+      "trigger_threshold": 3,
+      "current_count": 2,
+      "evidence": [
+        {
+          "id": "U005",
+          "match": "Canberra Raiders d. South Sydney Rabbitohs R6 2026-04-11",
+          "pattern": "L1 PD差 17.3pt (大きく見える) だが Raiders 総失点-69点のうち single game blowout が平均を歪めた可能性。Rabbitohs 4連勝中の 'fav側', Raiders 1-4 の desperate team。36-34 Raiders 逆転勝利。",
+          "tag": "nrl_small_sample_pd_unreliable"
+        },
+        {
+          "id": "A008",
+          "match": "Sydney Roosters d. Cronulla Sharks R6 2026-04-11",
+          "pattern": "Sharks PD advantage が 'first 5 rounds' outlier で過大評価。Optus Stadium Perth (neutral venue) で 22-13 から Roosters が後半22点逆転。小サンプル期 PD + neutral venue の重ね合わせ。",
+          "tag": "nrl_small_sample_pd_unreliable"
+        }
+      ],
+      "tag_matches": [
+        "nrl_small_sample_pd_unreliable",
+        "rugby_league_early_season_pd_overrate"
+      ],
+      "note": "2件到達済。3件目evidence で R014 として実装: 'Round 1-8 NRL 試合 + PD差6pt以上 + desperate team (0-4/1-4) との対戦 → 信頼度上限 78%・追加-5%'. 類似: U008_modified (UFL W3-6 cap) と同じ設計思想。"
+    },
+    {
+      "candidate_id": "P022",
+      "status": "watching",
+      "target_rule_file": "core/rules_nba.json",
+      "proposed_rule_id": "N_NBA_new1",
+      "title": "NBA PO R1 G1 playoff experience gap 補正",
+      "description": "NBA Playoffs R1 G1 で、home favorite が PO inexperienced 若手中心（過去2年 PO 出場 0-1回）で、visitor が PO 経験豊富（2年以上 PO R1突破経験）の場合、home favorite 信頼度 -4% 補正。PO G1 では 'playoff poise' の差が初心者home chokeを誘発するパターン。",
+      "trigger_threshold": 3,
+      "current_count": 1,
+      "evidence": [
+        {
+          "id": "A026",
+          "match": "Orlando Magic d. Detroit Pistons PO R1 G1 2026-04-19 (road win)",
+          "pattern": "Only road G1 win of that day (4/19). Magic: previous R1 PO experience (2024). Pistons: young core (Cunningham 24歳) playoff inexperience. Banchero 23pts 9reb breakout. 112-101 Orlando.",
+          "tag": "nba_po_g1_experience_gap"
+        }
+      ],
+      "tag_matches": [
+        "nba_po_g1_experience_gap",
+        "nba_veteran_vs_rookie_playoff_home"
+      ],
+      "note": "3件揃ったら実装。類似ケース候補: IND vs MIL G1 (Haliburton inexperience), MEM vs GSW G1 等を継続観察。"
+    },
+    {
+      "candidate_id": "P023",
+      "status": "watching",
+      "target_rule_file": "core/rules_tennis.json",
+      "proposed_rule_id": "R023",
+      "title": "Top20サーブ型 vs 19-21歳クレー特化型 momentum 停止",
+      "description": "Top 20 のサーブ型 (1st serve 75%+) が 19-21歳の clay momentum phase 若手と対戦する場合、市場が若手の連勝モメンタムを過大評価しがちだが serve holds + aggressive baseline で若手のリズム破壊が可能。市場 odds 1.40-1.60 範囲で fav 保持が実力通り。若手アップセットモメンタムは通常 1-2 ラウンドで収束。",
+      "trigger_threshold": 3,
+      "current_count": 2,
+      "evidence": [
+        {
+          "id": "A017_corrected",
+          "match": "Shelton d. Fonseca Munich QF 2026-04-17 6-3 3-6 6-3",
+          "pattern": "Shelton No.2 seed fav @1.44 で予測通り勝利。Fonseca 19歳 clay momentum (Rinderknech 撃破) でも Shelton serve dominance (76% 1st / 71% 2nd) + aggressive baseline で封殺。若手モメンタムが Top20 サーブ型に stalled.",
+          "tag": "top20_serve_vs_young_clay_momentum",
+          "sources": [
+            "atptour.com/en/news/zverev-cerundolo-munich-2026-qfs",
+            "tennisuptodate.com munich-open-round-up-quarterfinals"
+          ]
+        },
+        {
+          "id": "A022_corrected",
+          "match": "Sakamoto d. Svajda Madrid Q R1 2026-04-20 7-6 6-1",
+          "pattern": "Sakamoto (JPN WC 19歳 サーブ型, fav @1.59) d. Svajda (3rd Q seed). 6 aces / 1 DF で serve dominance. 市場fav HIT. '若手サーブ型 on clay, dominant serve' 系として P023 evidence 扱い (Top20 範疇ではないが構造類似).",
+          "tag": "young_server_clay_hold_pattern",
+          "sources": [
+            "tennismajors.com/matches/atp/mutua-madrid-open/zachary-svajda-vs-rei-sakamoto",
+            "en.wikipedia.org 2026_Mutua_Madrid_Open_Mens_singles"
+          ]
+        }
+      ],
+      "tag_matches": [
+        "top20_serve_vs_young_clay_momentum",
+        "serve_dominance_vs_clay_specialist_young"
+      ],
+      "note": "3件揃ったら R023 として実装。Alcaraz/Sinner 型 Top10 vs Mensik/Menendez 型若手 clay momentum 対戦で類似 pattern 観察継続。 [Session_46 update]: A022 evidence 追加, 2/3 到達."
     }
   ],
   "implemented_rules": [
@@ -557,5 +705,5 @@
     }
   ],
   "last_updated": "2026-04-20",
-  "updated_session": "_45"
+  "updated_session": "_46"
 }

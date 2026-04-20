@@ -175,6 +175,73 @@ def main():
     except Exception as e:
         warnings.append(f"pending_actions チェック失敗: {e}")
 
+    # ---- 7. upset_patterns rule_linked 存在率 (Session_46 追加) ----
+    try:
+        up = load(BASE / "stats" / "upset_patterns.json")
+        cu = up.get("confirmed_upsets", [])
+        total = len(cu)
+        linked = sum(1 for e in cu if e.get("rule_linked"))
+        rate = (linked / total * 100) if total else 0
+        if rate < 80:
+            anomalies.append(f"upset_patterns rule_linked 存在率 {rate:.1f}% < 80% (linked={linked}/{total}). MISS分析→ルール反映の断絶")
+        elif rate < 95:
+            warnings.append(f"upset_patterns rule_linked 存在率 {rate:.1f}% (linked={linked}/{total})")
+        else:
+            goods.append(f"upset_patterns rule_linked 存在率 {rate:.1f}% (linked={linked}/{total})")
+    except Exception as e:
+        warnings.append(f"rule_linked チェック失敗: {e}")
+
+    # ---- 8. rule_improvement_candidates 空/無status エントリ検出 (Session_46 追加) ----
+    try:
+        up = load(BASE / "stats" / "upset_patterns.json")
+        ric = up.get("rule_improvement_candidates", [])
+        empty_entries = [i for i, c in enumerate(ric) if not c.get("title") and not c.get("proposed") and not c.get("current_rule")]
+        no_status = [i for i, c in enumerate(ric) if not c.get("status") and not c.get("type")]
+        if empty_entries:
+            warnings.append(f"rule_improvement_candidates 空エントリ index: {empty_entries}")
+        if no_status:
+            warnings.append(f"rule_improvement_candidates status 未設定 index: {no_status}")
+        if not empty_entries and not no_status:
+            goods.append(f"rule_improvement_candidates 全{len(ric)}件 status 設定済")
+    except Exception as e:
+        warnings.append(f"rule_improvement_candidates チェック失敗: {e}")
+
+    # ---- 9. CE016 再発防止: confirmed_upsets 全件の winner vs market_favorite 整合性 (Session_46 追加) ----
+    # UPSET の定義: 結果の勝者 != market_favorite。両者が一致している場合は UPSET ではない = 誤記録の疑い
+    try:
+        up = load(BASE / "stats" / "upset_patterns.json")
+        cu = up.get("confirmed_upsets", [])
+        suspect = []
+        for e in cu:
+            uid = e.get("upset_id") or e.get("id", "?")
+            mf = e.get("market_favorite", "") or e.get("favorite_market", "") or e.get("favorite", "")
+            result = e.get("result", "") or e.get("result_score", "") or e.get("actual_winner", "")
+            if not mf or not result:
+                continue
+            # Extract the winner name from "X d. Y" or just the first token. Simple match: market_favorite substring appears in result before "d."
+            result_lower = result.lower()
+            mf_lower = str(mf).lower()
+            # Take first token of mf (family name)
+            mf_key = mf_lower.split()[0] if mf_lower else ""
+            if not mf_key:
+                continue
+            # Find "d." position
+            if " d. " in result_lower:
+                winner_part = result_lower.split(" d. ")[0]
+            elif " defeated " in result_lower:
+                winner_part = result_lower.split(" defeated ")[0]
+            else:
+                continue
+            # If market favorite family name appears in the winner part, it's NOT a real upset
+            if mf_key in winner_part:
+                suspect.append(f"{uid} (winner={winner_part.strip()[:30]}, fav={mf_key})")
+        if suspect:
+            anomalies.append(f"CE016系疑い: confirmed_upsets で winner==market_favorite のケース {len(suspect)}件: {', '.join(suspect[:5])}")
+        else:
+            goods.append(f"CE016整合性: confirmed_upsets {len(cu)}件全てで winner!=market_favorite (UPSET 成立確認)")
+    except Exception as e:
+        warnings.append(f"CE016整合性チェック失敗: {e}")
+
     # === 結果出力 ===
     print(f"{BOLD}--- [OK] 正常項目 ---{RESET}")
     for g in goods:
