@@ -498,6 +498,17 @@
       "caution_count": 0,
       "skip_count": 8,
       "note": "Market impliedベースの簡易スクリーニング。L1 PD/G詳細は個別調査で深掘り要。"
+    },
+    {
+      "date": "2026-04-20",
+      "session": "_45",
+      "scope": "Session_45 case-C full screening with new procedure (L1-L4 + UF factor walkthrough + output-A tag)",
+      "note": "2026-04-20.json + 114 upcoming matches screened. See records/multi_bets.json session_45 for output-A (18) and UPSET_PICK checks (11, none triggered).",
+      "matches_screened_this_sport": 8,
+      "output_a_candidates_this_sport": 1,
+      "go_candidates_this_sport": 1,
+      "upset_pick_checks_this_sport": 1,
+      "screening_note": "All GO_CANDIDATE entries are market-only classification; L1 depth required to confirm EV+ -> GO. Output-A candidates captured for first time via new procedure."
     }
   ],
   "predictions": [

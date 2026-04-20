@@ -6,7 +6,8 @@
     "セッション開始時にこのファイルを読み、current_count >= trigger_threshold を満たした候補がないか確認する",
     "閾値に達した候補は即時ルールファイルへ追加し、このファイルのstatusをimplementedに更新する",
     "新しいアップセット・MISS事例が追加されたら、該当する候補のevidenceとcurrent_countを更新する",
-    "実装済みルールはimplemented_rulesセクションへ移動し、candidatesからは削除しない（履歴として残す）"
+    "実装済みルールはimplemented_rulesセクションへ移動し、candidatesからは削除しない（履歴として残す）",
+    "(Session_45 2026-04-20 追加) GEN005 UF因子チェックは、L1-L4確信度算出直後の**必須手順**。UF因子を機械的に全件 walkthrough (UF01〜UFA06) し、該当数と市場乖離を記録。UPSET_PICK条件未達でも UF因子数>=2 であれば CAUTION 格下げを検討。"
   ],
   "trigger_check_protocol": {
     "when": "upset_patterns.jsonにU00x IDで新規エントリ追加時 / BACKLOG.md更新時",
@@ -431,6 +432,29 @@
         "ufl_small_sample_pd_g_overrate"
       ],
       "note": "2件揃ったら U009 として実装: 「expansion team (シーズン2年目以内) の home game vs PD/G優位チーム = 信頼度上限75%」+ 前週road lossが10点差以内だった場合は -3% 追加補正。3件揃ったら PD/G base の弱点が確定。"
+    },
+    {
+      "candidate_id": "P017",
+      "status": "watching",
+      "target_rule_file": "core/rules_tennis.json",
+      "proposed_rule_id": "R022",
+      "title": "ベテラン Top100 選手の Masters Qualifying R1 モチベ危機補正",
+      "description": "Top100のATPベテラン選手がMasters 1000 Qualifying R1で低ランク・無名選手と対戦する場合、『本戦出場権のみの副次大会』というステージでの相対的モチベ低下により、-5%〜-7%補正が妥当な可能性。Bonzi(Top100 vet) vs Darwin (unknown) で先に発生 (A025)。",
+      "trigger_threshold": 3,
+      "current_count": 1,
+      "evidence": [
+        {
+          "id": "A025",
+          "match": "Darwin B. d. Bonzi B. Madrid Open Qualifying R1",
+          "pattern": "Bonzi Top100 vet が fav @1.61 で負ける。低ランク無名選手 Darwin 勝利 @2.22。market divergence 12pp。",
+          "tag": "atp_veteran_qualifying_motivation_dip"
+        }
+      ],
+      "tag_matches": [
+        "atp_veteran_qualifying_motivation_dip",
+        "wta_veteran_qualifying_motivation_dip"
+      ],
+      "note": "3件揃ったら R022 として『Top100 vet の Masters Q R1 での-5%補正』を実装。ATP Madrid Q・Rome Q・Cincinnati Q 等の各大会で継続観察。"
     }
   ],
   "implemented_rules": [
@@ -504,5 +528,7 @@
       "evidence_count": 3,
       "note": "非seed(Q/WC/LL/unseeded)がR1で seed/本命を撃破 → R2以降の本命対戦で L4 +5% 補正。R1勝因タイプで差別化（ストレート+75% 1stSrvPts=+7% / 3セット接戦2h30min+=補正なし）。P010と違い home要件なし。GEN005衝突解消: R017と同時成立時はR017優先。"
     }
-  ]
+  ],
+  "last_updated": "2026-04-20",
+  "updated_session": "_45"
 }

@@ -1726,6 +1726,17 @@
         "市場オッズから推定: 全て信頼度75%未達またはEV<5%",
         "R2全試合SKIP"
       ]
+    },
+    {
+      "date": "2026-04-20",
+      "session": "_45",
+      "scope": "Session_45 case-C full screening with new procedure (L1-L4 + UF factor walkthrough + output-A tag)",
+      "note": "2026-04-20.json + 114 upcoming matches screened. See records/multi_bets.json session_45 for output-A (18) and UPSET_PICK checks (11, none triggered).",
+      "matches_screened_this_sport": 61,
+      "output_a_candidates_this_sport": 7,
+      "go_candidates_this_sport": 10,
+      "upset_pick_checks_this_sport": 8,
+      "screening_note": "All GO_CANDIDATE entries are market-only classification; L1 depth required to confirm EV+ -> GO. Output-A candidates captured for first time via new procedure."
     }
   ]
 }

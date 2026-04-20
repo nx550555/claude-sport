@@ -66,6 +66,11 @@
 | PA036 | NRL | R7 Warriors @1.23 GO 結果確認 — **DONE 4/18 Warriors 28-20 Titans HIT +0.23u** (HT 22pt lead, Titans後半猛追も Warriors が最終ラインで止めて8点差逃げ切り) | DONE | 中 | 完了 2026-04-18 |
 | PA-PERM01 | 常設 | **毎セッション終了時に multi_bets.json の最新 session date が本日か確認し、古ければ session エントリを追記する**（全SKIPでも「候補なし」として記録）— 2026-04-20 Session_44 運用改善で追加 | PENDING | 最高 | 毎セッション末尾 |
 | PA-PERM02 | 常設 | **毎セッション終了時に dashboard.html の予測精度タブ・成長分析タブの数値を dashboard_stats.json と突き合わせる** — Session_44 で Session_42/43 の訂正が未反映と発覚したため追加 | PENDING | 最高 | 毎セッション末尾 |
+| PA-PERM03 | 常設 | **スクリーニング時に UF因子（UF01〜UFA06）全件 walkthrough を必須実施**し、該当数+市場乖離を記録。UF≥3+div≥15pp で UPSET_PICK 候補化。CAUTION/SKIPでもUF≥2 なら注意記録 — Session_45 GEN005 運用改善 | PENDING | 最高 | 各試合スクリーニング時 |
+| PA-PERM04 | 常設 | **出力A候補（fav conf≥85%）は EV負でも独立タグ付けで抽出し multi_bets.json に記録**。GO推奨とは別軸で管理（CLAUDE.md指示通り） — Session_45 case-C で運用漏れ発覚 | PENDING | 最高 | 各セッション末尾 |
+| PA048 | GO候補深掘り | Session_45 GO_CANDIDATE 19件のうち L1深掘り（cElo/NRtg/xGF%/PD/G）で市場乖離3件以上特定 → アクティブ GO推奨化を次セッション試行 | PENDING | 高 | 次セッション |
+| PA049 | P017監視 | ATP Masters Q R1 で Top100 vet 対 無名選手のupsetを継続収集。evidence 3件到達で R022 実装 | PENDING | 中 | 継続 |
+| PA050 | UPSET_PICK監視 | GEN005 衝突解消テーブルの UF≥3+div≥15pp を満たす試合を継続観察。2026-04-20 Session_45 時点で発動 0件 | PENDING | 中 | 継続 |
 | PA044 | NHL | PA014 TBL-MTL G1 **MTL 4-3 OT 予測MISS 記録 DONE Session_44** (Slafkovsky hat trick + OT 1:22 PP). Type A A021 upset登録。CAUTION no-bet のため P&L影響なし | DONE | 高 | 完了 2026-04-20 |
 | PA045 | Rule Pipeline | **R020/R017 実装 DONE Session_44** (rules_tennis.json v2.2). P013/P010 implemented_rulesへ移動。GEN005衝突解消: R017 vs R020 同時成立時はR017優先 | DONE | 中 | 完了 2026-04-20 |
 | PA046 | 出力A/B | **Session_30-43 新規GO遡及追加 DONE Session_44** (multi_bets.json + dashboard同期). Leeds/Warriors/Warrington/SAS を追加。累計 11件・6HIT・3MISS・1VOID・1PENDING | DONE | 最高 | 完了 2026-04-20 |

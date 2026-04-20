@@ -3561,6 +3561,16 @@ body.lang-en .name-en { display: inline; }
         📌 <strong style="color:var(--text);">候補が少ない理由:</strong> Session_43 (2026-04-19.json) で NHL PO G1残5試合 / G2 COL-LAK / NRL R9 / Top14 R22 は全SKIP判定。本日4/20分の試合データ受領後に追加スクリーニング予定。<br>
         🔄 <strong style="color:var(--text);">次の供給タイミング:</strong> NHL PO G1残 (4/21) / G2 COL-LAK (4/22) / AHL Calder Cup R1 (4/22〜) / 本日分JSON受領時。
       </div>
+      <div style="margin-top:12px;padding:12px 16px;background:#1a2640;border:1px solid #1f6feb60;border-radius:6px;font-size:12px;color:var(--text);line-height:1.8;">
+        🔍 <strong style="color:#58a6ff;">Session_45 (2026-04-20) case-C 構造調査の発見:</strong><br>
+        ユーザー指摘「出力A/UPSET_PICKが最近出ない」の原因を特定。2026-04-20.json 114試合を新手順（UF因子全件walkthrough + 出力A独立タグ付け）でスクリーニング結果：<br>
+        <span style="color:#4ade80;">• 出力A候補 18件</span>（fav conf≥85%の確実性高試合。例: Top14 Toulouse @1.02、NBA OKC @1.04、Super Rugby Chiefs @1.04、NBA BOS @1.11、NBA SAS @1.12 等）<br>
+        <span style="color:#f9a8d4;">• GO候補 19件</span>（conf 75-84%。市場オッズベースでは全てEV≈-5%のため本ダッシュに反映なし。L1深掘り次第で GO 昇格可能性あり）<br>
+        <span style="color:#d29922;">• UPSET_PICK_CHECK 11件</span>（全件 UF因子 walkthrough 結果、UF≥3+乖離≥15pp の閾値に未到達。UPSET_PICK 発動なし）<br>
+        <br>
+        💡 <strong style="color:#58a6ff;">構造的知見:</strong> 市場効率性のため margin-adj proxy のみでは EV+ 試合はほぼ発生しない。Session_30〜43 で GO が実質ゼロだった原因はこれ。本来の出力A は EVゼロ許容で「確実性高い試合」を独立タグ付けで抽出する仕様（CLAUDE.md準拠）。本dashboard には反映未済だが records/multi_bets.json session _45 に全18件登録済。<br>
+        📝 <strong style="color:#58a6ff;">次セッション反映予定:</strong> GO_CANDIDATE 19件のうち L1 (cElo/NRtg/xGF%/PD/G) 深掘りで市場乖離が確認できた3件程度を アクティブ GO候補に追加。UPSET_PICK は UF因子walkthrough を継続監視。
+      </div>
     </div>
   </div>
 
