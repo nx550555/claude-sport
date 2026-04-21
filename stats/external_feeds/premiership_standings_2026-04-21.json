@@ -1,0 +1,125 @@
+{
+  "league": "premiership",
+  "source": "https://en.wikipedia.org/wiki/2025%E2%80%9326_Premiership_Rugby",
+  "strategy": "wikipedia_table",
+  "fetched_at": "2026-04-21T22:48:01.334554+09:00",
+  "team_count": 10,
+  "teams": [
+    {
+      "team": "Northampton Saints",
+      "gp": 12,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 439,
+      "pa": 326,
+      "pd": 113,
+      "pts": 52,
+      "pd_per_game": 9.42
+    },
+    {
+      "team": "Bath",
+      "gp": 12,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 436,
+      "pa": 278,
+      "pd": 158,
+      "pts": 51,
+      "pd_per_game": 13.17
+    },
+    {
+      "team": "Leicester Tigers",
+      "gp": 12,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 370,
+      "pa": 274,
+      "pd": 96,
+      "pts": 46,
+      "pd_per_game": 8.0
+    },
+    {
+      "team": "Exeter Chiefs",
+      "gp": 12,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 336,
+      "pa": 207,
+      "pd": 129,
+      "pts": 45,
+      "pd_per_game": 10.75
+    },
+    {
+      "team": "Bristol Bears",
+      "gp": 12,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 323,
+      "pa": 286,
+      "pd": 37,
+      "pts": 38,
+      "pd_per_game": 3.08
+    },
+    {
+      "team": "Saracens",
+      "gp": 12,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 415,
+      "pa": 331,
+      "pd": 84,
+      "pts": 33,
+      "pd_per_game": 7.0
+    },
+    {
+      "team": "Sale Sharks",
+      "gp": 12,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 325,
+      "pa": 354,
+      "pd": "−29",
+      "pts": 22
+    },
+    {
+      "team": "Gloucester",
+      "gp": 12,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 257,
+      "pa": 390,
+      "pd": "−133",
+      "pts": 16
+    },
+    {
+      "team": "Harlequins",
+      "gp": 12,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 233,
+      "pa": 391,
+      "pd": "−158",
+      "pts": 15
+    },
+    {
+      "team": "Newcastle Red Bulls",
+      "gp": 12,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 208,
+      "pa": 505,
+      "pd": "−297",
+      "pts": 7
+    }
+  ]
+}

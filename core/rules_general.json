@@ -1,6 +1,6 @@
 {
   "description": "全スポーツ共通ルール — データ整合性・プロセス品質",
-  "version": "v1.0",
+  "version": "1.2",
   "created": "2026-04-14",
   "rules": [
     {
@@ -36,8 +36,8 @@
         "ホームアドバンテージの過小/過大評価",
         "モデル未対応の要因（懸賞、地域性等）"
       ]
-    }
-    ,{
+    },
+    {
       "id": "GEN003",
       "name": "セッション開始時アクティブ推奨再確認（Pre-Session Pending Check）",
       "version": "v1.0",
@@ -54,7 +54,13 @@
         "会場・日程変更",
         "その他当初分析を覆す重大ファクター"
       ],
-      "search_sources": ["公式チームSNS(X/Twitter)", "ESPN", "BBC Sport", "公式リーグサイト", "地元スポーツ記者Xアカウント"],
+      "search_sources": [
+        "公式チームSNS(X/Twitter)",
+        "ESPN",
+        "BBC Sport",
+        "公式リーグサイト",
+        "地元スポーツ記者Xアカウント"
+      ],
       "decision_tree": {
         "重大情報あり（先発変更・主力怪我）": "元推奨を見直し → GO→CAUTION or CAUTION→SKIP or 推奨チーム変更",
         "軽微な情報あり（控え選手の欠場等）": "影響度を評価してconfidence調整 → 必要ならCAUTION格下げ",
@@ -139,6 +145,115 @@
         "怪我・出場停止（UF08）が重大な場合は単独で2因子相当扱いOK"
       ],
       "impact": "GO推奨数は減る可能性があるが、精度は向上する。アップセット予測の学習サイクルが回り始める。"
+    },
+    {
+      "id": "GEN006",
+      "category": "stats_feed_management",
+      "title": "外部スタッツフィード取得 (全スポーツ) + GEN006 ユーザー依頼プロトコル",
+      "created": "2026-04-21",
+      "updated": "2026-04-21",
+      "version": "2.0 (全スポーツ対応)",
+      "applies_to": [
+        "nhl",
+        "nba",
+        "tennis_atp",
+        "tennis_wta",
+        "nrl",
+        "superrugby",
+        "premiership",
+        "top14",
+        "prod2",
+        "superleague",
+        "ufl",
+        "cfl"
+      ],
+      "purpose": "全スポーツの team-level + player-level 高度指標を自動取得し、失敗時のみユーザーに依頼する",
+      "automation_stack": {
+        "A_local_playwright_plus_curl": {
+          "scripts": [
+            "scripts/fetch_moneypuck.py (NHL team xGF%)",
+            "scripts/fetch_nhl_players.py (skaters + goalies)",
+            "scripts/fetch_basketball_reference.py (NBA team NRtg)",
+            "scripts/fetch_nba_players.py (per_game + advanced)",
+            "scripts/fetch_tennis_elo.py (ATP/WTA cElo)",
+            "scripts/fetch_tennis_player_stats.py (serve/return/rally last52)",
+            "scripts/fetch_rugby_football.py (NRL/SR/Prem/Top14/ProD2/SL/UFL/CFL standings)",
+            "scripts/fetch_injuries.py (NHL/NBA injuries + NHL starting goalies)"
+          ],
+          "trigger": "Claude STEP 0.5 で各 fetcher を --days-stale 3 付きで実行"
+        },
+        "D_github_actions": {
+          "workflow": ".github/workflows/fetch_stats.yml",
+          "schedule": "JST 09:00 + 21:00",
+          "scope": "上記 8 fetcher すべて",
+          "commit_behavior": "変化があれば auto-commit/push"
+        }
+      },
+      "feed_catalog": {
+        "nhl_team": "stats/external_feeds/nhl_moneypuck_YYYY-MM-DD.json",
+        "nhl_skaters": "stats/external_feeds/nhl_skaters_YYYY-MM-DD.json",
+        "nhl_goalies": "stats/external_feeds/nhl_goalies_YYYY-MM-DD.json",
+        "nhl_injuries": "stats/external_feeds/nhl_injuries_YYYY-MM-DD.json",
+        "nba_team": "stats/external_feeds/nba_bbref_YYYY-MM-DD.json",
+        "nba_per_game": "stats/external_feeds/nba_players_per_game_YYYY-MM-DD.json",
+        "nba_advanced": "stats/external_feeds/nba_players_advanced_YYYY-MM-DD.json",
+        "nba_injuries": "stats/external_feeds/nba_injuries_YYYY-MM-DD.json",
+        "tennis_atp_elo": "stats/external_feeds/tennis_atp_elo_YYYY-MM-DD.json",
+        "tennis_wta_elo": "stats/external_feeds/tennis_wta_elo_YYYY-MM-DD.json",
+        "tennis_atp_stats": "stats/external_feeds/tennis_atp_player_stats_YYYY-MM-DD.json",
+        "tennis_wta_stats": "stats/external_feeds/tennis_wta_player_stats_YYYY-MM-DD.json",
+        "tennis_withdrawals": "stats/external_feeds/tennis_withdrawals_YYYY-MM-DD.json (placeholder)",
+        "nrl_standings": "stats/external_feeds/nrl_standings_YYYY-MM-DD.json",
+        "superrugby": "stats/external_feeds/superrugby_standings_YYYY-MM-DD.json",
+        "premiership": "stats/external_feeds/premiership_standings_YYYY-MM-DD.json",
+        "top14": "stats/external_feeds/top14_standings_YYYY-MM-DD.json",
+        "prod2": "stats/external_feeds/prod2_standings_YYYY-MM-DD.json",
+        "superleague": "stats/external_feeds/superleague_standings_YYYY-MM-DD.json",
+        "ufl": "stats/external_feeds/ufl_standings_YYYY-MM-DD.json",
+        "cfl": "stats/external_feeds/cfl_standings_YYYY-MM-DD.json (off-season期は粗データ)"
+      },
+      "staleness_policy": {
+        "default_threshold_days": 3,
+        "injury_threshold_days": 1,
+        "tennis_player_stats_threshold_days": 7,
+        "action_if_stale": "まず scripts/fetch_*.py を再実行 → それでも失敗したら GEN006 依頼発動"
+      },
+      "user_request_protocol": {
+        "when_to_invoke": [
+          "fetcher exit code 2 (fetch failed / parse failed)",
+          "feed_status() で stale=True のフィードが存在",
+          "当日スクリーニング対象試合があるのに該当フィードが欠落"
+        ],
+        "message_template": [
+          "【GEN006 スタッツ更新依頼】",
+          "対象: {league_or_sport} / {source_url}",
+          "理由: {reason}",
+          "希望形式: CSV/TSV 貼付 または JSON",
+          "保存先: stats/external_feeds/{league}_manual_YYYY-MM-DD.json"
+        ]
+      },
+      "reader_api": {
+        "module": "scripts/stats_feed_reader.py",
+        "functions": [
+          "feed_status() -> dict[feed_name: {age_days, stale, message}]",
+          "stale_feeds() -> list[str] (GEN006 対象)",
+          "get_team_xgf(team, score_adj=False, situation='all') -> NHL チームxGF%",
+          "get_nrtg(team, adj=True) -> NBA チームNRtg",
+          "get_nhl_skater(name, situation='all') -> NHL 選手統計",
+          "get_nhl_goalie(name) -> NHL ゴーリー統計",
+          "get_nhl_injuries_for_team(team) -> NHL 怪我人リスト",
+          "get_nhl_starting_goalies() -> 先発ゴーリー",
+          "get_nba_player_stats(name, kind='advanced') -> NBA 選手 PER/BPM/VORP等",
+          "get_nba_injuries_for_team(team) -> NBA 怪我人リスト",
+          "get_tennis_elo(player, tour='atp') -> cElo/hElo/gElo",
+          "get_tennis_serve_stats(player, tour) -> サーブ統計",
+          "get_tennis_return_stats(player, tour) -> リターン統計",
+          "get_league_standings(league) -> standings 全件",
+          "get_league_team(league, team) -> 特定チーム standings"
+        ]
+      },
+      "health_check_integration": "monitoring/health_check.py v4 で feed_status() を呼び、stale フィードを WARN に昇格させる (v4 task7 で実装予定)"
     }
-  ]
+  ],
+  "last_updated": "2026-04-21"
 }

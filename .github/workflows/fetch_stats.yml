@@ -1,0 +1,69 @@
+name: Fetch External Stats (D案 全スポーツ)
+
+on:
+  schedule:
+    # JST 09:00 / 21:00 (= UTC 00:00 / 12:00) の 1 日 2 回
+    - cron: '0 0,12 * * *'
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright
+          playwright install --with-deps chromium
+
+      - name: NHL team (MoneyPuck CSV - lightweight)
+        run: python scripts/fetch_moneypuck.py --days-stale 0
+        continue-on-error: true
+
+      - name: NHL skaters + goalies
+        run: python scripts/fetch_nhl_players.py --days-stale 0
+        continue-on-error: true
+
+      - name: NBA team ratings (Basketball-Reference)
+        run: python scripts/fetch_basketball_reference.py --days-stale 0
+        continue-on-error: true
+
+      - name: NBA per_game + advanced players
+        run: python scripts/fetch_nba_players.py --days-stale 0
+        continue-on-error: true
+
+      - name: Tennis ATP/WTA elo (tennisabstract)
+        run: python scripts/fetch_tennis_elo.py --days-stale 0
+        continue-on-error: true
+
+      - name: Tennis player stats (serve/return/rally)
+        run: python scripts/fetch_tennis_player_stats.py --days-stale 0
+        continue-on-error: true
+
+      - name: Rugby/Football standings (all leagues)
+        run: python scripts/fetch_rugby_football.py --days-stale 0 --league all
+        continue-on-error: true
+
+      - name: Injuries (NHL/NBA/Tennis)
+        run: python scripts/fetch_injuries.py --days-stale 0 --sport all
+        continue-on-error: true
+
+      - name: Commit fresh feeds
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add stats/external_feeds/*.json
+          if git diff --cached --quiet; then
+            echo "[INFO] no changes"
+          else
+            git commit -m "chore(stats): auto-fetch external feeds ($(date -u +'%Y-%m-%dT%H:%MZ'))"
+            git push
+          fi

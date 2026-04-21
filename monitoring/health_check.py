@@ -242,6 +242,29 @@ def main():
     except Exception as e:
         warnings.append(f"CE016整合性チェック失敗: {e}")
 
+    # === v4 追加: 外部スタッツフィード (GEN006) ===
+    try:
+        import sys as _sys
+        from pathlib import Path as _P
+        _sys.path.insert(0, str(_P(__file__).resolve().parent.parent))
+        from scripts.stats_feed_reader import feed_status, stale_feeds
+        fs = feed_status()
+        stale = stale_feeds()
+        ok_count = sum(1 for v in fs.values() if v.get("available") and not v.get("stale"))
+        total = len(fs)
+        if not stale:
+            goods.append(f"外部スタッツフィード (GEN006): {ok_count}/{total} OK・全フィード fresh")
+        else:
+            # unavailable vs stale を分けて報告
+            unavail = [k for k in stale if not fs[k].get("available")]
+            stale_only = [k for k in stale if fs[k].get("available") and fs[k].get("stale")]
+            if unavail:
+                warnings.append(f"GEN006: 未取得フィード {len(unavail)}件 - {', '.join(unavail[:5])}。scripts/fetch_*.py 実行 or ユーザー依頼。")
+            if stale_only:
+                warnings.append(f"GEN006: 古いフィード {len(stale_only)}件 - {', '.join(stale_only[:5])}。再取得推奨。")
+    except Exception as e:
+        warnings.append(f"GEN006 feed_status チェック失敗: {e}")
+
     # === 結果出力 ===
     print(f"{BOLD}--- [OK] 正常項目 ---{RESET}")
     for g in goods:

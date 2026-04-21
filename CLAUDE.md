@@ -17,6 +17,32 @@
 3. 終了コード: 0=正常 / 1=警告 / 2=異常
 4. `C:\Users\ohwada\Desktop\claude_sport\monitoring\missed_tasks_log.md` を読み込み、前セッション未実施項目を次に優先対処する候補リストに加える
 
+**【STEP 0.5 Session_47追加 2026-04-21 / v2.0 で全スポーツ対応】外部スタッツフィード更新 (GEN006)**
+以下の fetcher を順に実行（--days-stale 3 なら 3日以上古ければ再取得、新しければ SKIP）:
+```
+python scripts/fetch_moneypuck.py --days-stale 3              # NHL team xGF%
+python scripts/fetch_nhl_players.py --days-stale 3            # NHL skaters + goalies
+python scripts/fetch_basketball_reference.py --days-stale 3   # NBA team NRtg
+python scripts/fetch_nba_players.py --days-stale 3            # NBA per_game + advanced
+python scripts/fetch_tennis_elo.py --days-stale 3             # ATP/WTA cElo
+python scripts/fetch_tennis_player_stats.py --days-stale 7    # テニス serve/return last52
+python scripts/fetch_rugby_football.py --days-stale 3 --league all   # 8リーグ standings
+python scripts/fetch_injuries.py --days-stale 1 --sport all   # NHL/NBA 怪我情報
+```
+- exit code 0 or [SKIP] なら問題なし。exit code 2 (fetch failed) なら GEN006 ユーザー依頼発動
+- `python scripts/stats_feed_reader.py` で feed_status() 全件を確認（health_check v4 で自動チェック済）
+- Claude 分析内で:
+  ```python
+  from scripts.stats_feed_reader import (
+    feed_status, stale_feeds,
+    get_team_xgf, get_nrtg, get_tennis_elo,
+    get_nhl_skater, get_nhl_goalie, get_nba_player_stats,
+    get_nhl_injuries_for_team, get_nba_injuries_for_team,
+    get_tennis_serve_stats, get_tennis_return_stats,
+    get_league_standings, get_league_team
+  )
+  ```
+
 ---
 
 **【毎回必須】STEP 1: 最初に必ず読む：**
