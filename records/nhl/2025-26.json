@@ -482,7 +482,7 @@
         "l1_pass": false
       },
       "hit": null,
-      "result": null,
+      "result": "Buffalo Sabres",
       "odds_data_2026_04_17": {
         "home_odds": 1.61,
         "away_odds": 2.28,
@@ -490,7 +490,15 @@
       },
       "rec_odds_calculated": 1.61,
       "ev_calculated": -11.45,
-      "skip_note_odds": "Odds for predicted winner (Buffalo Sabres): 1.61. EV = -11.45%. Below thresholds."
+      "skip_note_odds": "Odds for predicted winner (Buffalo Sabres): 1.61. EV = -11.45%. Below thresholds.",
+      "score": "4-3",
+      "prediction_hit": true,
+      "actual_date": "2026-04-20",
+      "sources": [
+        "NHL.com 2026 playoffs first round schedule results",
+        "ESPN Stanley Cup Playoffs 2026 bracket"
+      ],
+      "outcome_note": "BUF 4-3 BOS G1. 予測HIT (SKIP no-bet). L1 diff 2.66pp で skip 判断だが home +7% が効いた。BOS PDO 102 / Goals%>xGF% over-index (luck-driven) の PO regression 想定通り。"
     },
     {
       "series": "PO_R1_E2",
@@ -569,7 +577,7 @@
       },
       "series_note": "Both xGF%55%+ elite. If OTT wins series = NOT an xGF%-based upset.",
       "hit": null,
-      "result": null,
+      "result": "Carolina Hurricanes",
       "odds_data_2026_04_17": {
         "home_odds": 1.65,
         "away_odds": 2.2,
@@ -577,7 +585,15 @@
       },
       "rec_odds_calculated": 1.65,
       "ev_calculated": -12.55,
-      "skip_note_odds": "Odds for predicted winner (Carolina Hurricanes): 1.65. EV = -12.55%. Below thresholds."
+      "skip_note_odds": "Odds for predicted winner (Carolina Hurricanes): 1.65. EV = -12.55%. Below thresholds.",
+      "score": "2-0",
+      "prediction_hit": true,
+      "actual_date": "2026-04-21",
+      "sources": [
+        "NHL.com 2026 playoffs first round results",
+        "ESPN bracket"
+      ],
+      "outcome_note": "CAR 2-0 OTT G1 shutout. 予測HIT (SKIP no-bet). 両チーム elite xGF% だが home +7% と完封試合で CAR が優位を確実化。"
     },
     {
       "series": "PO_R1_E4",
@@ -599,7 +615,7 @@
         "l1_pass": false
       },
       "hit": null,
-      "result": null,
+      "result": "Philadelphia Flyers",
       "odds_data_2026_04_17": {
         "home_odds": 1.67,
         "away_odds": 2.17,
@@ -607,7 +623,19 @@
       },
       "rec_odds_calculated": 1.67,
       "ev_calculated": -13.16,
-      "skip_note_odds": "Odds for predicted winner (Pittsburgh Penguins): 1.67. EV = -13.16%. Below thresholds."
+      "skip_note_odds": "Odds for predicted winner (Pittsburgh Penguins): 1.67. EV = -13.16%. Below thresholds.",
+      "score": "3-2",
+      "prediction_hit": false,
+      "actual_date": "2026-04-19",
+      "type_a_upset_id": "A027",
+      "miss_layer": "L4_External",
+      "miss_analysis": "PHI 3-2 PIT UPSET (Drysdale/Sanheim/Martone 各1G, Rust 2G PIT)。Konecny 1A, Crosby 0pt held off stat sheet。 L1 xGF% 0.40pp coin flip で SKIP 判断自体は妥当。home PIT +7% が外れた要因: (1) Crosby/Malkin veteran core が PHI young energy (Drysdale/Martone) に追いつかず、(2) RS 最終20G で PIT xGF% 低下傾向・PHI rivalry モチベーション、(3) Vladar (PHI G) の save work。P019 候補 evidence として適合。",
+      "sources": [
+        "ESPN gameId 401869717 Flyers 3-2 Penguins Apr 18 2026",
+        "PensBurgh Penguins/Flyers Game 1 Recap sloppy-pens-bottled-up-lose-3-2",
+        "Broad Street Hockey takeaways-flyers-snatch-game-1-in-gutsy-3-2-win"
+      ],
+      "outcome_note": "PHI young energy outpaced PIT veteran core. Sloppy Pens bottled up."
     },
     {
       "series": "PO_R1_W1",
@@ -676,7 +704,7 @@
       },
       "type_a_watch": "MIN(C3) higher 5v5 xGF% than DAL(C2). MIN win would NOT be xGF%-based upset.",
       "hit": null,
-      "result": null,
+      "result": "Minnesota Wild",
       "odds_data_2026_04_17": {
         "home_odds": 1.82,
         "away_odds": 1.96,
@@ -684,7 +712,19 @@
       },
       "rec_odds_calculated": 1.82,
       "ev_calculated": -7.18,
-      "skip_note_odds": "Odds for predicted winner (Dallas Stars): 1.82. EV = -7.18%. Below thresholds."
+      "skip_note_odds": "Odds for predicted winner (Dallas Stars): 1.82. EV = -7.18%. Below thresholds.",
+      "score": "6-1",
+      "prediction_hit": false,
+      "actual_date": "2026-04-19",
+      "type_a_upset_id": "A028",
+      "miss_layer": "L1_xGF",
+      "miss_analysis": "MIN 6-1 DAL BLOWOUT UPSET (seed upset: C3 > C2 home). L1 xGF% では MIN 51.50% が DAL 50.79% より 0.71pp 高く、lower seed だが process で上回っていた (type_a_watch に記録済み)。home DAL +7% を MIN の圧倒的攻勢が覆した: Kaprizov 1G2A, Boldy 1G1A, Eriksson Ek 2G (PP), Zuccarello 3A, Hartman 1G + PA to Kaprizov。前半6分半で 4-0 lead, Oettinger 23 saves. Wallstedt (MIN) 27 saves Playoff debut。→ \"seed順位よりxGF%順位を優先すべし\" 教訓。L1ラベル「SKIP」自体は妥当だが predicted_winner を DAL にしたのが誤り（L1 higher xGF% team = MIN を予測すべき）。",
+      "sources": [
+        "ESPN gameId 401869716 Wild 6-1 Stars Apr 18 2026",
+        "NHL.com wild news minnesota-wild-dallas-stars-game-1-recap",
+        "The Hockey Writers 3-takeaways-from-stars-stunning-6-1-loss"
+      ],
+      "outcome_note": "MIN 6-1 blowout. Kaprizov+Boldy 40G teammates explosion. Wallstedt PO debut 27sv. type_a_watch が事前に示唆していた seed vs xGF% の矛盾が顕在化。"
     },
     {
       "series": "PO_R1_W3",
@@ -706,7 +746,7 @@
         "l1_pass": false
       },
       "hit": null,
-      "result": null,
+      "result": "Vegas Golden Knights",
       "odds_data_2026_04_17": {
         "home_odds": 1.64,
         "away_odds": 2.22,
@@ -714,7 +754,15 @@
       },
       "rec_odds_calculated": 1.64,
       "ev_calculated": -8.16,
-      "skip_note_odds": "Odds for predicted winner (Vegas Golden Knights): 1.64. EV = -8.16%. Below thresholds."
+      "skip_note_odds": "Odds for predicted winner (Vegas Golden Knights): 1.64. EV = -8.16%. Below thresholds.",
+      "score": "4-2",
+      "prediction_hit": true,
+      "actual_date": "2026-04-21",
+      "sources": [
+        "NHL.com 2026 playoffs first round results",
+        "ESPN bracket"
+      ],
+      "outcome_note": "VGK 4-2 UTA G1. 予測HIT (SKIP no-bet, conf 56%)。home +7% が効いた。UTA P1 seed 挑戦成らず。"
     },
     {
       "series": "PO_R1_W4",
@@ -738,7 +786,7 @@
       },
       "type_a_watch": "ANA(P3) marginally higher 5v5 xGF% than EDM(P2). ANA win would NOT be xGF%-based upset.",
       "hit": null,
-      "result": null,
+      "result": "Edmonton Oilers",
       "odds_data_2026_04_17": {
         "home_odds": 1.6,
         "away_odds": 2.3,
@@ -746,7 +794,16 @@
       },
       "rec_odds_calculated": 1.6,
       "ev_calculated": -18.4,
-      "skip_note_odds": "Odds for predicted winner (Edmonton Oilers): 1.6. EV = -18.40%. Below thresholds."
+      "skip_note_odds": "Odds for predicted winner (Edmonton Oilers): 1.6. EV = -18.40%. Below thresholds.",
+      "score": "4-3",
+      "prediction_hit": true,
+      "actual_date": "2026-04-21",
+      "sources": [
+        "ESPN gameId 401869722 Oilers 4-3 Ducks Apr 20 2026",
+        "NHL.com anaheim-ducks-edmonton-oilers-game-1-recap-april-20-2026",
+        "FOX Sports nhl playoffs round 1 game 1 boxscore"
+      ],
+      "outcome_note": "EDM 4-3 ANA G1 (Kapanen 2G incl. late winner 1:54 remaining 3rd, Dickinson 2G)。予測HIT (SKIP no-bet, conf 51%)。type_a_watch が ANA xGF% marginally higher を警戒していたが home +7% + McDavid/Draisaitl impact で EDM 逃げ切り。late rally で決着: 3rd period まで僅差 → Kapanen 2nd goal が decisive。"
     },
     {
       "_comment": "=== NHL RS Final Day 2026-04-16 ET (2026-04-17 JST) - 6 games SKIP (xGF% unavailable) ===",

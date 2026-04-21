@@ -18,19 +18,23 @@
 
 ## 未完了・作業中（次回セッション最優先）
 
-### 🎯 次回セッション開始時の行動順序（Session_47）
+### 🎯 次回セッション開始時の行動順序（Session_48）
 
 **STEP 0: システム健全性スキャン**
 - `python monitoring/health_check.py` を必ず実行（v3: 9項目チェック）
 - `monitoring/missed_tasks_log.md` を読む
 
-**STEP 1: 結果確認（優先）**
-- NHL EDM-ANA G1 (4/20 深夜・試合後判明見込み)
-- NBA LAL-HOU G1 (4/20 深夜・試合後判明見込み)
-- NBA G2 (CLE/NYK/DEN @ 4/21, SAS @ 4/22, BOS @ 4/23)
-- NHL G1残5試合 + G2全7試合 (4/21-22)
-- ORL-DET G1 結果の records/nba/2025-26.json 反映確認（A026 upset_patterns にあるが records 側未検証）
-- NHL A021(TBL-MTL)/A027(PHI-PIT)/A028(MIN-DAL) の records/nhl/2025-26.json 反映確認
+**STEP 1: 結果確認（Session_47 完了済）**
+- ✅ NHL PO R1 G1 全8試合 結果反映完了 (5HIT/3MISS - TBL/PIT/DAL UPSET)
+- ✅ NBA PO R1 G1 全8試合 結果反映完了 (6HIT/2MISS - DET/HOU UPSET)
+- ✅ NBA Play-in 2件 結果反映完了 (ORL/PHX 8 seed)
+- ✅ A026/A027/A028 records 反映 + A029 新規 LAL-HOU (KD欠場) 登録
+- ✅ rule_pipeline P018 evidence +1 (2/3到達), P024/P025 新規候補登録
+
+**Session_48 最優先タスク:**
+- NHL PO R1 G2 全8試合 結果確認 (4/22-23 JST = 4/21-22 ET)
+- NBA PO R1 G2 全8試合 結果確認 (4/22-25 JST)
+- Madrid 本戦 R1 ATP24試合 + WTA19試合 スクリーニング (2026-04-21.json 起点, 4/22〜)
 
 **STEP 2: Madrid 本戦 R1 スクリーニング**（ユーザーJSON提供時）
 - ATP Madrid 1000 + WTA Madrid 1000 本戦 R1 (4/22〜)
@@ -43,6 +47,34 @@
 - P023 evidence 3件目 (現在 2/3) で implement 判断
 - P012 evidence 3件目 (現在 2/3) で implement 判断
 - P018/P019/P020/P022 の evidence 追加収集
+
+### 🚨 Session_47 完了報告 (2026-04-21)
+
+**前半: 結果確認・アップセット深掘り**
+- NHL PO R1 G1 全8試合 結果反映完了: 5HIT / 3MISS (TBL/PIT/DAL UPSET)
+- NBA PO R1 G1 全8試合 結果反映完了: 6HIT / 2MISS (DET/HOU UPSET)
+- NBA Play-in 2件反映完了: ORL/PHX 8 seed
+- 新規 A029 LAL-HOU UPSET 登録: Kevin Durant 欠場 (patellar tendon contusion) 決定的要因
+- upset_patterns id修正: A014/A015/A016/A018/A019/A020/A025/A026/A027/A028 (10件 id:NONE→A0xx付与)
+- factor_notes 強化: A026 (experience gap) / A027 (rivalry+vet fade) / A028 (xGF priority over seed)
+- rule_pipeline 新候補 2件: P024 (NBA PO star scorer absence) / P025 (NHL xGF% priority over seed)
+- P018 evidence 2/3 到達: A021 MTL + A027 PHI young core activation
+
+**後半: 外部スタッツフィード全スポーツ自動化 (GEN006 v2.0)**
+- **8 fetcher 実装**: fetch_moneypuck / nhl_players / basketball_reference / nba_players / tennis_elo / tennis_player_stats / rugby_football / injuries
+- **21フィード取得成功**: NHL/NBA チーム・選手・怪我 + ATP/WTA cElo & serve/return + Rugby 8リーグ standings
+- **reader API 15関数実装**: scripts/stats_feed_reader.py
+- **GitHub Actions**: .github/workflows/fetch_stats.yml で JST 09:00/21:00 自動取得
+- **health_check v4**: feed_status() 自動チェック追加
+- **CLAUDE.md STEP 0.5**: 8 fetcher 自動実行プロトコル追加
+- **Commit c896596 push 成功** (39 files, +200,974 行)
+
+### 🎯 Session_48 行動計画 (次回)
+**STEP 0:** health_check v4 (21フィード fresh 確認)
+**STEP 0.5:** GitHub Actions 稼働確認 (権限設定済なら pull で最新フィード取得)
+**最優先 A:** Madrid 本戦 R1 スクリーニング (ATP 24 + WTA 19, 新 reader API 活用)
+**最優先 B:** NHL G2 + NBA G2 全16試合 結果確認 (PA060/PA061)
+**最優先 C:** P018 evidence 3件目監視 → N019 実装判断 (G2 で candidate)
 
 ### 🚨 Session_46 完了報告
 - **PA051 upset_patterns 監査 100% 完了**（32件 confirmed + 4件 invalidated, rule_linked率 19.4%→100%）

@@ -60,7 +60,7 @@
 | PA038 | WTA | Stuttgart QF+R2残3 / Rouen QF+R2 結果確認 **DONE Session_43**: Stuttgart QF (Rybakina/Svitolina HIT 2/4), Rouen QF (Cirstea/Kostyuk HIT 2/4). Stuttgart R2残 Noskova/Fernandez HIT. Output A 4/7 HIT確定 (Swiatek/Gauff/Paolini MISS + Alcaraz VOID + Renegades MISS). | DONE | 高 | 完了 2026-04-20 |
 | PA039 | Tennis | 2026-MC.json CE015波及訂正 **DONE Session_43**: SF Alcaraz vs de Minaur → Alcaraz vs Vacherot (6-4 6-4) 訂正 / Marozsan vs Hurkacz スコア 6-2 6-3 確認 / QF draw_structure/screening_log 訂正 | DONE | 高 | 完了 2026-04-20 |
 | PA040 | スクリーニング | 2026-04-19.json スクリーニング **DONE Session_43**: NHL PO G1残5+G2 全SKIP / NBA PO G1残7 全SKIP / NRL R9 全SKIP / Top14 R22 全SKIP / WTA Oeiras+Madrid Q + ATP Challenger (out-of-scope, cElo取得不可) ログのみ | DONE | 中 | 完了 2026-04-20 |
-| PA041 | NHL | PO R1 G1 残5試合 (VGK/PIT/CAR/DAL/EDM) + G2 COL-LAK 結果確認 | WAITING | 中 | 4/21-22試合後 |
+| PA041 | NHL | PO R1 G1 全8試合 結果反映 **DONE Session_47**: BUF/CAR/VGK/EDM HIT, TBL/PIT/DAL MISS(A021/A027/A028), COL HIT(Session_46). 5/8 62.5% all SKIP/CAUTION no-bet | DONE | 中 | 完了 2026-04-21 |
 | PA042 | P013実装判断 | Molcan/Shapovalov(MISS) + Kopriva/Darderi + Molcan/Altmaier で evidence 3件到達 → R020 「R1 upsetter R2 momentum +5%」実装判断 | PENDING | 中 | 次セッション |
 | PA043 | P010実装判断 | Jodar d. Norrie (A019候補) 追加で evidence 2件到達 → R017 「WC home + 連続ラウンドモメンタム +5%」実装判断 | PENDING | 中 | 次セッション |
 | PA036 | NRL | R7 Warriors @1.23 GO 結果確認 — **DONE 4/18 Warriors 28-20 Titans HIT +0.23u** (HT 22pt lead, Titans後半猛追も Warriors が最終ラインで止めて8点差逃げ切り) | DONE | 中 | 完了 2026-04-18 |
@@ -75,7 +75,14 @@
 | PA052 | CE016再発防止 | **データ取込時 winner vs market_favorite 整合性自動チェック** DONE Session_46: health_check.py v3 項目9 追加 | DONE | 最高 | 完了 2026-04-20 |
 | PA053 | rule_pipeline | P023 (Top20サーブ型 vs 若手クレーモメンタム停止) evidence 3件目収集 (現在 2/3) で implement 判断 | PENDING | 中 | 継続 |
 | PA054 | rule_pipeline | P012 (clay specialist vs hardcourt) evidence 3件目収集 (現在 2/3) で R019 implement 判断 | PENDING | 中 | 継続 |
-| PA055 | upset_patterns 反映 | A026 (NBA ORL-DET G1) / A021 (NHL TBL-MTL G1) / A027 (NHL PHI-PIT G1) / A028 (NHL MIN-DAL G1) の records/{sport}/*.json 反映確認 | PENDING | 高 | 次セッション |
+| PA055 | upset_patterns 反映 | **DONE Session_47**: A021/A026/A027/A028 全件 records 反映 + factor_notes 強化 + rule_linked 付与完了。A014-A028 の id割当修正済(NONE→A0xx). | DONE | 高 | 完了 2026-04-21 |
+| PA056 | NEW 新規候補 P024 | NBA PO G1 star scorer (>25ppg RS) 欠場時の -8〜-10% 信頼度補正 (A029 LAL-HOU KD欠場で発足 1/3). evidence 収集継続 | PENDING | 中 | 継続 |
+| PA057 | NEW 新規候補 P025 | NHL PO type_a_watch 発動時 xGF% higher team を predicted_winner に優先設定 (A028 MIN/DAL で実証 1/3). evidence 収集継続 | PENDING | 中 | 継続 |
+| PA058 | NEW Session_47 | NBA PO R1 G1 全8試合結果反映 DONE. LAL-HOU UPSET(A029)登録・KD欠場系ルール候補P024発足 | DONE | 高 | 完了 2026-04-21 |
+| PA059 | NEW P018実装判断 | NHL PO G1 underdog young core activation (A021 MTL + A027 PHI) evidence 2/3 到達. あと1件で N019 実装判断 | PENDING | 中 | 継続 |
+| PA060 | NEW NHL PO G2 | 4/21-22 G2 全8試合結果確認 (BUF/BOS, MTL/TBL, CAR/OTT, PHI/PIT, COL/LAK, DAL/MIN, VGK/UTA, EDM/ANA) | WAITING | 高 | 4/22-23試合後 |
+| PA061 | NEW NBA PO G2 | 4/21-24 G2 全8試合結果確認 (ORL/DET, CLE/TOR, NYK/ATL, BOS/PHI, OKC/PHX, HOU/LAL, DEN/MIN, SAS/POR) | WAITING | 高 | 4/22-25試合後 |
+| PA062 | Madrid 本戦 R1 | 2026-04-21.json 受領済. ATP 24試合 + WTA 19試合 本戦R1 (4/22〜) スクリーニング | PENDING | 高 | 4/22試合前 |
 | PA044 | NHL | PA014 TBL-MTL G1 **MTL 4-3 OT 予測MISS 記録 DONE Session_44** (Slafkovsky hat trick + OT 1:22 PP). Type A A021 upset登録。CAUTION no-bet のため P&L影響なし | DONE | 高 | 完了 2026-04-20 |
 | PA045 | Rule Pipeline | **R020/R017 実装 DONE Session_44** (rules_tennis.json v2.2). P013/P010 implemented_rulesへ移動。GEN005衝突解消: R017 vs R020 同時成立時はR017優先 | DONE | 中 | 完了 2026-04-20 |
 | PA046 | 出力A/B | **Session_30-43 新規GO遡及追加 DONE Session_44** (multi_bets.json + dashboard同期). Leeds/Warriors/Warrington/SAS を追加。累計 11件・6HIT・3MISS・1VOID・1PENDING | DONE | 最高 | 完了 2026-04-20 |

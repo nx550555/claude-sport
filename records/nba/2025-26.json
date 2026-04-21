@@ -382,8 +382,19 @@
         "Hornets": 1.58,
         "Magic": 2.34
       },
-      "result": null,
-      "hit": null
+      "result": "Orlando Magic",
+      "hit": null,
+      "score": "ORL 121-90 CHA",
+      "prediction_hit": false,
+      "actual_date": "2026-04-18",
+      "miss_layer": "L1_NRtg_small_edge",
+      "miss_analysis": "Play-in East Final: ORL 121-90 CHA blowout。予測CHA(L1 NRtg diff 4.2pt) が外れ: (1) ORL が Banchero/Wagner breakout で圧倒、(2) Play-in は RS平均よりプレーオフモチベ・チーム集中度が効く試合構造。L1 NRtg差が4-5pt 以下の場合、Play-inゲームで home-court意識より個人ブレイクアウト依存度が高い可能性。",
+      "round_correction": "Play-in Final (East 9v10). records 上は \"4/18\" だが ET 4/17 Fri 開催。",
+      "sources": [
+        "NBA.com recap 2026 sofi play-in magic suns earn eight seeds",
+        "Yahoo Sports hornets magic warriors suns wrap-up play-in"
+      ],
+      "outcome_note": "ORL earned 8 seed to face DET R1 (later UPSET G1 A026)。"
     },
     {
       "id": "NBA-005",
@@ -403,8 +414,17 @@
         "Suns": 1.75,
         "Warriors": 2.05
       },
-      "result": null,
-      "hit": null
+      "result": "Phoenix Suns",
+      "hit": null,
+      "score": "PHX 111-96 GSW",
+      "prediction_hit": true,
+      "actual_date": "2026-04-18",
+      "round_correction": "Play-in Final (West 9v10). records 上は \"4/18\" だが ET 4/17 Fri 開催。",
+      "sources": [
+        "NBA.com suns-warriors-play-in-recap Jalen Green 36pts",
+        "Yahoo nba play-in 2026 suns emphatically end warriors"
+      ],
+      "outcome_note": "PHX 111-96 GSW. Jalen Green 36pts led all scorers. PHX earned 8 seed to face OKC R1 (後に G1 119-84 OKC blowout HIT)。"
     },
     {
       "id": "NBA-006",
@@ -424,8 +444,16 @@
         "Cavaliers": 1.27,
         "Raptors": 3.65
       },
-      "result": null,
-      "hit": null
+      "result": "Cleveland Cavaliers",
+      "hit": null,
+      "score": "CLE 126-113 TOR",
+      "prediction_hit": true,
+      "actual_date": "2026-04-18",
+      "outcome_note": "CLE 126-113 TOR G1 HIT (Session_45 WebSearch 既確認)。NRtg 1.5pt diff でも home + +PO experience で CLE 完勝。",
+      "sources": [
+        "NBA.com cavaliers/videos/cavs-vs-raptors-game-1-highlights-04-18-2026",
+        "CBS Sports 2026 nba playoff bracket"
+      ]
     },
     {
       "id": "NBA-007",
@@ -445,8 +473,16 @@
         "Nuggets": 1.35,
         "Timberwolves": 3.1
       },
-      "result": null,
-      "hit": null
+      "result": "Denver Nuggets",
+      "hit": null,
+      "score": "DEN 116-105 MIN",
+      "prediction_hit": true,
+      "actual_date": "2026-04-19",
+      "sources": [
+        "NBA.com live-updates-2026-nba-playoffs-r1 hawks-timberwolves",
+        "ESPN nba playoffs 2026 western conference first-round takeaways"
+      ],
+      "outcome_note": "DEN 116-105 MIN G1. 予測HIT (SKIP: conf 52% / EV -4.5%)。NRtg 差小さく coin flip でも home DEN 逃げ切り。"
     },
     {
       "id": "NBA-008",
@@ -466,8 +502,16 @@
         "Knicks": 1.46,
         "Hawks": 2.65
       },
-      "result": null,
-      "hit": null
+      "result": "New York Knicks",
+      "hit": null,
+      "score": "NYK 112-102 ATL",
+      "prediction_hit": true,
+      "actual_date": "2026-04-19",
+      "sources": [
+        "NBA.com live-updates-2026-nba-playoffs-r1 cavaliers knicks",
+        "ESPN NBA 2026 playoffs bracket"
+      ],
+      "outcome_note": "NYK 112-102 ATL G1. 予測HIT (SKIP: conf 57% / EV -4.4%)。10pt差は NYK NRtg優位と home +2-3% のみで達成。"
     },
     {
       "id": "NBA-009",
@@ -487,8 +531,22 @@
         "Lakers": 2.75,
         "Rockets": 1.43
       },
-      "result": null,
-      "hit": null
+      "result": "Los Angeles Lakers",
+      "hit": null,
+      "score": "LAL 107-98 HOU",
+      "prediction_hit": false,
+      "actual_date": "2026-04-18",
+      "date_correction": "ET 4/18 Sat (records 記載 4/19 を修正)。Crypto.com Arena LA。",
+      "type_a_upset_id": "A029",
+      "miss_layer": "L4_External",
+      "miss_analysis": "**LAL 107-98 HOU UPSET (A029新規登録候補)**。L4要因が絶対的: Kevin Durant (HOU) G1 欠場 (right knee contusion/patellar tendon deep bruise, 火曜日の練習で負傷, ESPN/CBS/Yahoo複数確認)。Durant RS 26.0ppg の絶対主力欠場で HOU は \"shell of itself\" (CBS)。LAL は short-handed でも Luke Kennard playoff career-high 27pts 爆発。L1 NRtg 3.5pt 差は HOU の Durant 前提値、Durant 欠場で NRtg 実質 -3〜-4pt 下方修正すべきだった。pre-game warmup で ruled out 確認情報は game-day dailyfaceoff 相当の NBA injury report で取得可能だった。",
+      "sources": [
+        "ESPN gameId 401869190 Lakers 107-98 Rockets Apr 18 2026",
+        "ESPN rockets kevin-durant-g1-vs-lakers-knee-contusion",
+        "NBA.com rockets-lakers-2026-playoffs-game-1-takeaways Kennard monster",
+        "CBS Sports kevin-durant-injury-rockets-lakers-nba-playoffs"
+      ],
+      "outcome_note": "KD G1 absence決定的。Udoka \"nothing major\", G2 game-time decision。ルール化候補: NBA PO G1 star scorer (>25ppg RS) 欠場時の -8〜-10% 補正。"
     },
     {
       "id": "NBA-010",
@@ -511,8 +569,16 @@
         "76ers": 5.8,
         "Celtics": 1.13
       },
-      "result": null,
-      "hit": null
+      "result": "Boston Celtics",
+      "hit": null,
+      "score": "BOS 123-91 PHI",
+      "prediction_hit": true,
+      "actual_date": "2026-04-20",
+      "sources": [
+        "NBA.com 76ers-celtics-2026-playoffs-game-1-takeaways",
+        "CBS Sports 2026 nba playoff bracket"
+      ],
+      "outcome_note": "BOS 123-91 PHI G1 (+32 margin, franchise PO opener record)。Tatum 25/11/7, Brown 26pts。予測HIT but SKIP (EV -1.7%@1.13)。L1 NRtg 8.5pt diff + Embiid OUT が予測通りblowout。"
     },
     {
       "date": "2026-04-21",
@@ -537,12 +603,15 @@
       "rules_applied": [
         "NBA_L1_NetRating_pending"
       ],
-      "status": "pending",
+      "status": "completed",
       "hit": null,
-      "result": null,
-      "prediction_hit": null,
+      "result": "Cleveland Cavaliers",
+      "prediction_hit": true,
       "screening_session": "2026-04-20 Session_43",
-      "note": "手動データ2026-04-19.json起点。"
+      "note": "手動データ2026-04-19.json起点。",
+      "score": "CLE 126-113 TOR",
+      "actual_date": "2026-04-18",
+      "outcome_note": "CLE 126-113 TOR G1 HIT (Session_45 既確認)。"
     },
     {
       "date": "2026-04-21",
@@ -567,12 +636,15 @@
       "rules_applied": [
         "NBA_L1_NetRating_pending"
       ],
-      "status": "pending",
+      "status": "completed",
       "hit": null,
-      "result": null,
-      "prediction_hit": null,
+      "result": "New York Knicks",
+      "prediction_hit": true,
       "screening_session": "2026-04-20 Session_43",
-      "note": "手動データ2026-04-19.json起点。"
+      "note": "手動データ2026-04-19.json起点。",
+      "score": "NYK 112-102 ATL",
+      "actual_date": "2026-04-19",
+      "outcome_note": "NYK 112-102 ATL G1 HIT。"
     },
     {
       "date": "2026-04-21",
@@ -597,12 +669,15 @@
       "rules_applied": [
         "NBA_L1_NetRating_pending"
       ],
-      "status": "pending",
+      "status": "completed",
       "hit": null,
-      "result": null,
-      "prediction_hit": null,
+      "result": "Denver Nuggets",
+      "prediction_hit": true,
       "screening_session": "2026-04-20 Session_43",
-      "note": "手動データ2026-04-19.json起点。"
+      "note": "手動データ2026-04-19.json起点。",
+      "score": "DEN 116-105 MIN",
+      "actual_date": "2026-04-19",
+      "outcome_note": "DEN 116-105 MIN G1 HIT。"
     },
     {
       "date": "2026-04-22",
@@ -627,12 +702,15 @@
       "rules_applied": [
         "NBA_L1_NetRating_pending"
       ],
-      "status": "pending",
+      "status": "completed",
       "hit": null,
-      "result": null,
-      "prediction_hit": null,
+      "result": "Boston Celtics",
+      "prediction_hit": true,
       "screening_session": "2026-04-20 Session_43",
-      "note": "手動データ2026-04-19.json起点。"
+      "note": "手動データ2026-04-19.json起点。",
+      "score": "BOS 123-91 PHI",
+      "actual_date": "2026-04-20",
+      "outcome_note": "BOS 123-91 PHI G1 HIT (+32 blowout)。"
     },
     {
       "date": "2026-04-22",
@@ -657,12 +735,17 @@
       "rules_applied": [
         "NBA_L1_NetRating_pending"
       ],
-      "status": "pending",
+      "status": "completed",
       "hit": null,
-      "result": null,
-      "prediction_hit": null,
+      "result": "Los Angeles Lakers",
+      "prediction_hit": false,
       "screening_session": "2026-04-20 Session_43",
-      "note": "手動データ2026-04-19.json起点。"
+      "note": "手動データ2026-04-19.json起点。",
+      "score": "LAL 107-98 HOU",
+      "actual_date": "2026-04-18",
+      "type_a_upset_id": "A029",
+      "miss_layer": "L4_External",
+      "outcome_note": "HOU UPSET MISS。KD G1 欠場 (patellar tendon contusion)。A029登録。"
     },
     {
       "date": "2026-04-23",
@@ -687,12 +770,15 @@
       "rules_applied": [
         "NBA_L1_NetRating_pending"
       ],
-      "status": "pending",
+      "status": "completed",
       "hit": null,
-      "result": null,
-      "prediction_hit": null,
+      "result": "Oklahoma City Thunder",
+      "prediction_hit": true,
       "screening_session": "2026-04-20 Session_43",
-      "note": "手動データ2026-04-19.json起点。"
+      "note": "手動データ2026-04-19.json起点。",
+      "score": "OKC 119-84 PHX",
+      "actual_date": "2026-04-19",
+      "outcome_note": "OKC 119-84 PHX G1 HIT (+35 blowout, #1 seed dominance)。"
     },
     {
       "date": "2026-04-20",
@@ -717,12 +803,17 @@
       "rules_applied": [
         "NBA_L1_NetRating_pending"
       ],
-      "status": "pending",
+      "status": "completed",
       "hit": null,
-      "result": null,
-      "prediction_hit": null,
+      "result": "Orlando Magic",
+      "prediction_hit": false,
       "screening_session": "2026-04-20 Session_43",
-      "note": "live 51-55 2ndブレイク"
+      "note": "live 51-55 2ndブレイク",
+      "score": "ORL 112-101 DET",
+      "actual_date": "2026-04-19",
+      "type_a_upset_id": "A026",
+      "miss_layer": "L4_External",
+      "outcome_note": "ORL UPSET (A026既登録)。"
     },
     {
       "match": "CLE vs TOR G1",

@@ -792,7 +792,8 @@
       },
       "market_divergence_pp": 20,
       "upset_pick_feasibility": "UF3 + 20pp > 15pp -> UPSET_PICK condition met. R020 (R1 upsetter R2 momentum) not yet implemented at time of match.",
-      "rule_linked": "R020"
+      "rule_linked": "R020",
+      "id": "A014"
     },
     {
       "upset_id": "A015",
@@ -812,7 +813,8 @@
       },
       "market_divergence_pp": 10,
       "upset_pick_feasibility": "UF2 + 10pp < 15pp. UPSET_PICK not met. CAUTION (no bet) would have been appropriate.",
-      "rule_linked": "P014 (R021 candidate)"
+      "rule_linked": "P014 (R021 candidate)",
+      "id": "A015"
     },
     {
       "upset_id": "A016",
@@ -835,7 +837,8 @@
       "market_divergence_pp": 25,
       "upset_pick_feasibility": "UF4 + 25pp - UPSET_PICK condition FULLY MET. Week3 narrow loss to home rematch is P015 textbook case. Should have been UPSET_PICK at 3.0 instead of fav GO at 1.36. This is the CRITICAL screening miss.",
       "rule_linked": "P015 / U008_modified",
-      "critical_note": "This is the paradigm case of UF factor check being skipped. Resulted in -1.0u loss. Root cause: screening did not run UF factor walkthrough after L1-L4."
+      "critical_note": "This is the paradigm case of UF factor check being skipped. Resulted in -1.0u loss. Root cause: screening did not run UF factor walkthrough after L1-L4.",
+      "id": "A016"
     },
     {
       "upset_id": "A018",
@@ -857,7 +860,8 @@
       },
       "market_divergence_pp": 16,
       "upset_pick_feasibility": "UF4 + 16pp - UPSET_PICK met. Molcan momentum (P013=R020 source) recognized but not extracted as UPSET_PICK.",
-      "rule_linked": "R020"
+      "rule_linked": "R020",
+      "id": "A018"
     },
     {
       "upset_id": "A019",
@@ -878,7 +882,8 @@
       },
       "market_divergence_pp": 13,
       "upset_pick_feasibility": "UF3 + 13pp < 15pp - borderline below. CAUTION with contrarian lean. R017 (P010) source.",
-      "rule_linked": "R017"
+      "rule_linked": "R017",
+      "id": "A019"
     },
     {
       "upset_id": "A020",
@@ -899,7 +904,8 @@
       },
       "market_divergence_pp": 10,
       "upset_pick_feasibility": "UF3 + 10pp < 15pp - below. Catalans home correction -5% to -7/-10% would have dropped to CAUTION (P016 candidate).",
-      "rule_linked": "P016"
+      "rule_linked": "P016",
+      "id": "A020"
     },
     {
       "upset_id": "A025",
@@ -918,7 +924,8 @@
       },
       "market_divergence_pp": 12,
       "upset_pick_feasibility": "UF1 + 12pp - below UPSET_PICK. Possibly Top100 Q-match motivation crisis rule worth tracking (P017 candidate).",
-      "rule_linked": "P017-candidate"
+      "rule_linked": "P017-candidate",
+      "id": "A025"
     },
     {
       "upset_id": "A026",
@@ -938,14 +945,34 @@
       },
       "market_divergence_pp": 35,
       "upset_pick_feasibility": "UF2 + 35pp - borderline UPSET_PICK (UF不足だが乖離大きい). DEToverrated / ORL underrated gap.",
-      "rule_linked": "P022 (NBA PO G1 road-win anomaly - NEW candidate)"
+      "rule_linked": "P022 (NBA PO G1 road-win anomaly - NEW candidate)",
+      "id": "A026",
+      "result_score": "ORL 112-101 DET",
+      "actual_winner": "Orlando Magic",
+      "favorite_market": "Detroit Pistons @1.22 (home #1 seed E)",
+      "underdog_market": "Orlando Magic @4.60",
+      "upset_factors": [
+        "UF02",
+        "UF06",
+        "UFA03"
+      ],
+      "factor_notes": {
+        "UF02": "Banchero 23/9 breakout (P022 evidence). Wagner efficient scoring.",
+        "UF06": "DET young core (Cunningham 24yo) PO inexperience vs ORL prior R1 PO (2024) experience.",
+        "UFA03": "Only road G1 win across NBA 4/19 slate - isolated game situation."
+      },
+      "sources": [
+        "NBA.com live-updates playoffs R1",
+        "Tucson.com winners-losers Magic stun top-seeded"
+      ],
+      "miss_layer": "L4_External"
     },
     {
       "upset_id": "A027",
-      "date": "2026-04-20",
+      "date": "2026-04-19",
       "sport": "nhl",
       "tournament": "Stanley Cup Playoffs R1",
-      "round": "G1",
+      "round": "PO R1 G1",
       "match": "Philadelphia Flyers @ Pittsburgh Penguins",
       "market_favorite": "Pittsburgh Penguins",
       "fav_odds": 1.68,
@@ -958,14 +985,35 @@
       },
       "market_divergence_pp": 16,
       "upset_pick_feasibility": "UF2 + 16pp - borderline. CAUTION no-bet would have been right.",
-      "rule_linked": "P019 (NHL PO G1 rivalry + home favorite late-season fade - NEW candidate)"
+      "rule_linked": "P019 NHL PO G1 rivalry + home favorite late-season fade",
+      "id": "A027",
+      "result_score": "PHI 3-2 PIT",
+      "actual_winner": "Philadelphia Flyers",
+      "favorite_market": "Pittsburgh Penguins @1.67 (home M2)",
+      "underdog_market": "Philadelphia Flyers @2.17",
+      "upset_factors": [
+        "UF02",
+        "UF06",
+        "UFH01"
+      ],
+      "factor_notes": {
+        "UF02": "PHI young energy (Drysdale 1G, Martone 1G) + Vladar G work vs PIT veteran core (Crosby 0pt, Malkin 1G).",
+        "UF06": "PIT RS late 20G xGF down-trend + Crosby/Malkin veteran-heavy fatigue。PHI rivalry momentum + road PO first game energy。",
+        "UFH01": "Rivalry PO G1 where home favorite veteran core historically fades (Metropolitan div)."
+      },
+      "sources": [
+        "ESPN gameId 401869717 Flyers 3-2 Penguins",
+        "PensBurgh Penguins/Flyers Game 1 Recap",
+        "Broad Street Hockey takeaways"
+      ],
+      "miss_layer": "L4_External"
     },
     {
       "upset_id": "A028",
-      "date": "2026-04-20",
+      "date": "2026-04-19",
       "sport": "nhl",
       "tournament": "Stanley Cup Playoffs R1",
-      "round": "G1",
+      "round": "PO R1 G1",
       "match": "Minnesota Wild @ Dallas Stars",
       "market_favorite": "Dallas Stars",
       "fav_odds": 1.79,
@@ -979,7 +1027,63 @@
       },
       "market_divergence_pp": 9,
       "upset_pick_feasibility": "UF3 + 9pp < 15pp. Below UPSET_PICK but MIN high-xGF% noted in advance. CAUTION格妥当。",
-      "rule_linked": "N001 (xGF% L1 indicator confirmed effective) - D-class observation"
+      "rule_linked": "N001 xGF% L1 signal type_a_watch 警告の有効性確認",
+      "id": "A028",
+      "result_score": "MIN 6-1 DAL",
+      "actual_winner": "Minnesota Wild",
+      "favorite_market": "Dallas Stars @1.82 (home C2)",
+      "underdog_market": "Minnesota Wild @1.96",
+      "upset_factors": [
+        "UF01",
+        "UF02",
+        "UFH02"
+      ],
+      "factor_notes": {
+        "UF01": "MIN xGF% 51.50 > DAL 50.79 (lower seed process advantage - type_a_watch 事前警告 adequate).",
+        "UF02": "Kaprizov+Boldy 40G teammates explosion + Eriksson Ek 2G PP + Hartman 1G + Zuccarello 3A。2nd P 6.5min で 4-0。",
+        "UFH02": "DAL home が MIN 特殊攻勢構造 (PP強 + forward depth) に崩壊。Wallstedt PO debut 27sv 完敗。"
+      },
+      "sources": [
+        "ESPN gameId 401869716 Wild 6-1 Stars",
+        "NHL.com wild minnesota-wild-dallas-stars-game-1-recap",
+        "The Hockey Writers 3-takeaways-from-stars-stunning-6-1-loss"
+      ],
+      "miss_layer": "L1_xGF",
+      "type_a_insight": "seed順位より xGF% 順位を優先すべし。type_a_watch 事前警告が正しかった - predicted_winner 選択時のルール改善が必要 (下記 rule_candidate)。",
+      "rule_candidate": "N_new_xgf_priority: L1 xGF% higher team > seed ranking。type_a_watch 発動時は higher xGF% team を predicted_winner に自動設定。"
+    },
+    {
+      "id": "A029",
+      "type": "type_a",
+      "type_note": "Type A: SKIP no-bet のアップセット。star選手G1欠場がL1/L4に反映されず MISS。",
+      "date": "2026-04-18",
+      "sport": "nba",
+      "round": "PO R1 G1",
+      "our_verdict": "SKIP (conf 56% / EV -5.93% / 予測 HOU)",
+      "favorite_market": "Houston Rockets @1.43 (home W2, Durant RS 26.0ppg)",
+      "underdog_market": "Los Angeles Lakers @2.75 (W7)",
+      "result_score": "LAL 107-98 HOU",
+      "actual_winner": "Los Angeles Lakers",
+      "upset_factors": [
+        "UF05",
+        "UFA02",
+        "UFA04"
+      ],
+      "factor_notes": {
+        "UF05": "Kevin Durant (HOU star RS 26.0ppg) G1 欠場 (right knee patellar tendon contusion, 火曜練習負傷)。pre-game warmup 後 ruled out。",
+        "UFA02": "Luke Kennard playoff career-high 27pts 爆発で short-handed LAL でも十分。",
+        "UFA04": "L1 NRtg 3.5pt diff は Durant 前提値 → 欠場で実質 -3〜-4pt 下方修正 → coin flip に変化。"
+      },
+      "screening_decision_review": "SKIP 判断 OK (EV-5.93%) だが predicted_winner を HOU にしたのが誤り。Durant 欠場情報は NBA injury report / ESPN で game-day 取得可能だった。",
+      "rule_candidate": "N_NBA_new2: NBA PO G1 star scorer (>25ppg RS) 欠場時、star-heavy チーム信頼度 -8〜-10% 補正。Durant級欠場は実質 NRtg 1-4pt 下方修正。",
+      "miss_layer": "L4_External",
+      "sources": [
+        "ESPN gameId 401869190 Lakers 107-98 Rockets",
+        "ESPN rockets kevin-durant-g1-vs-lakers-knee-contusion",
+        "NBA.com rockets-lakers-2026-playoffs-game-1-takeaways",
+        "CBS Sports kevin-durant-injury-rockets-lakers-analysis"
+      ],
+      "rule_linked": "P024 NEW (NBA PO star scorer absence L4 correction)"
     }
   ],
   "upset_pick_candidates": {
@@ -1221,7 +1325,7 @@
       "note": "Session_45 post-hoc UF factor retro review. Three critical missed opportunities (A014/A016/A018 meeting UPSET_PICK condition in hindsight) informed GEN005 衝突解消 rule."
     }
   ],
-  "last_updated": "2026-04-20",
+  "last_updated": "2026-04-21",
   "updated_by": "Session_46 CE016 complete resolution (4 cases: A017/A022/A023/A024 all invalidated)",
   "invalidated_upsets": [
     {
@@ -1417,5 +1521,16 @@
       "invalidated_date": "2026-04-20",
       "invalidated_session": "_46"
     }
-  ]
+  ],
+  "confirmed_count": 33,
+  "updated_session": "_47",
+  "sport_breakdown": {
+    "tennis_atp": 15,
+    "nrl": 4,
+    "tennis_wta": 3,
+    "nhl": 5,
+    "ufl": 3,
+    "super_league": 1,
+    "nba": 2
+  }
 }

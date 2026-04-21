@@ -1,7 +1,7 @@
 {
   "_comment": "Sport card の唯一の真実ソース。記録更新後は必ずここを更新してから sync_sport_cards.py を実行すること",
-  "last_updated": "2026-04-20",
-  "session": "_46",
+  "last_updated": "2026-04-21",
+  "session": "_47",
   "sports": {
     "atp": {
       "go_count": 14,
@@ -150,5 +150,8 @@
       "note": "Session_45 case-C screening: 114 matches, 18 output-A candidates, 0 UPSET_PICK, 19 GO candidates (market-only=0 EV+)",
       "structural_finding": "Market-only screening produces ~0 EV+ GO. L1 depth required."
     }
-  ]
+  ],
+  "session_47_notes": {
+    "result_reflection": "NHL PO R1 G1 全8試合 + NBA PO R1 G1 全8試合 + NBA Play-in 2件 結果反映完了. prediction_accuracy: NHL 5/8 62.5%, NBA 6/8 75%, Play-in 1/2 50%. 全 SKIP/CAUTION no-bet のため bet_performance 変化なし. 新規 A029 LAL-HOU UPSET (KD欠場) 登録, P024/P025 rule候補発足."
+  }
 }

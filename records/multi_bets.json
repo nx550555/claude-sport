@@ -1142,7 +1142,86 @@
         "tier_basic": "5/8 (62.5%) -1.03u",
         "key_achievement": "PA051 監査完了: upset_patterns 33→36件 100% rule_linked 化・4新規候補登録・health_check v2 拡張"
       }
+    },
+    {
+      "session_id": "_47",
+      "date": "2026-04-21",
+      "screening_scope": "結果確認・アップセット分析セッション（Madrid本戦はR1未開催のため次セッション）",
+      "results_confirmed_session_47": {
+        "nhl_po_r1_g1": {
+          "total": 8,
+          "hit": 5,
+          "miss": 3,
+          "hit_rate": 0.625,
+          "hit_list": [
+            "BUF 4-3 BOS",
+            "CAR 2-0 OTT",
+            "COL 2-1 LAK (Session_46)",
+            "VGK 4-2 UTA",
+            "EDM 4-3 ANA"
+          ],
+          "miss_list": [
+            "TBL→MTL 4-3 OT (A021)",
+            "PIT→PHI 3-2 (A027)",
+            "DAL→MIN 6-1 (A028)"
+          ],
+          "bet_impact_u": 0,
+          "note": "全SKIP/CAUTION no-bet (TBL G1 only was CAUTION/no-bet). 予測精度 5/8 62.5%."
+        },
+        "nba_play_in": {
+          "total": 2,
+          "hit": 1,
+          "miss": 1,
+          "results": [
+            "ORL 121-90 CHA (pred CHA MISS)",
+            "PHX 111-96 GSW (pred PHX HIT)"
+          ],
+          "bet_impact_u": 0
+        },
+        "nba_po_r1_g1": {
+          "total": 8,
+          "hit": 6,
+          "miss": 2,
+          "hit_rate": 0.75,
+          "hit_list": [
+            "CLE 126-113 TOR",
+            "NYK 112-102 ATL",
+            "BOS 123-91 PHI",
+            "OKC 119-84 PHX",
+            "DEN 116-105 MIN",
+            "SAS 111-98 POR (Session_46)"
+          ],
+          "miss_list": [
+            "DET→ORL 112-101 (A026)",
+            "HOU→LAL 107-98 (A029 NEW: KD欠場)"
+          ],
+          "bet_impact_u": 0.18,
+          "note": "全試合 tier=skip または go_candidate_market_only. SAS GO HIT +0.18u のみ bet_performance 影響."
+        }
+      },
+      "output_a_candidates": [],
+      "output_a_note": "Session_47 はスクリーニングなし（結果確認専念）. 新規 output_a 候補登録なし.",
+      "output_b_multi_combinations": [],
+      "output_b_note": "Session_47 マルチ構成不可（output_a 新規 0件）.",
+      "upset_pick_checks": [],
+      "new_upset_pattern_a029": {
+        "id": "A029",
+        "sport": "nba",
+        "match": "LAL d. HOU PO R1 G1 2026-04-18 107-98",
+        "key_factor": "Kevin Durant (HOU主力 RS 26.0ppg) G1 欠場 patellar tendon contusion",
+        "rule_candidate_p024": "NBA PO star scorer (>25ppg) 欠場時の -8〜-10% L4 信頼度補正"
+      },
+      "rule_pipeline_progress": {
+        "P018_nhl_po_g1_young_core": "1/3 → 2/3 (A027 PHI evidence 追加)",
+        "P024_nba_star_absence": "新規 1/3 (A029)",
+        "P025_nhl_xgf_priority_over_seed": "新規 1/3 (A028 MIN/DAL type_a_watch 的中実証)"
+      },
+      "active_pending_recommendations": {
+        "nhl_g2": "全8試合 4/22-23 WAITING (PA060)",
+        "nba_g2": "全8試合 4/22-25 WAITING (PA061)"
+      },
+      "session_summary": "Session_47: 結果確認専念。NHL/NBA PO R1 G1 全16試合 + Play-in 2件 を一次ソース2つ以上 (ESPN/NHL.com/NBA.com/CBS) で確認し records に反映。特に LAL-HOU は KD欠場という新規 factor で A029 登録・P024 ルール候補発足。A026/A027/A028 の factor_notes を深掘り強化し rule_linked 付与完了 (PA055 DONE)。予測精度: NHL 62.5% / NBA 75%. bet_performance 影響なし (全 SKIP/CAUTION no-bet、SAS HIT +0.18u は Session_46 で計上済)。"
     }
   ],
-  "last_updated": "2026-04-20"
+  "last_updated": "2026-04-21"
 }
