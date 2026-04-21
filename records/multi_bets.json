@@ -1221,6 +1221,201 @@
         "nba_g2": "全8試合 4/22-25 WAITING (PA061)"
       },
       "session_summary": "Session_47: 結果確認専念。NHL/NBA PO R1 G1 全16試合 + Play-in 2件 を一次ソース2つ以上 (ESPN/NHL.com/NBA.com/CBS) で確認し records に反映。特に LAL-HOU は KD欠場という新規 factor で A029 登録・P024 ルール候補発足。A026/A027/A028 の factor_notes を深掘り強化し rule_linked 付与完了 (PA055 DONE)。予測精度: NHL 62.5% / NBA 75%. bet_performance 影響なし (全 SKIP/CAUTION no-bet、SAS HIT +0.18u は Session_46 で計上済)。"
+    },
+    {
+      "session": "_48",
+      "date": "2026-04-21",
+      "screening_scope": "Madrid R1(ATP24+WTA18) + NHL G2(8) + NBA G2(5)+残G1(3) + AHL PO R1(6) = 64試合",
+      "output_a": {
+        "description": "高確率予想（conf>=85%・EV問わず）",
+        "candidates": [
+          {
+            "no": 1,
+            "match": "Sonmez Z. vs Martinez Cires C.",
+            "sport": "WTA Madrid",
+            "round": "Q Final",
+            "rec": "Sonmez",
+            "conf": 88,
+            "odds": 1.06,
+            "basis": "cElo差+350pt(推定)"
+          },
+          {
+            "no": 2,
+            "match": "OKC vs PHX G2",
+            "sport": "NBA",
+            "round": "R1 G2",
+            "rec": "OKC",
+            "conf": 88,
+            "odds": 1.04,
+            "basis": "NRtg+9.24pt G1 blowout"
+          },
+          {
+            "no": 3,
+            "match": "BOS vs PHI G2",
+            "sport": "NBA",
+            "round": "R1 G2",
+            "rec": "BOS",
+            "conf": 85,
+            "odds": 1.09,
+            "basis": "NRtg+8.06pt G1 blowout"
+          },
+          {
+            "no": 4,
+            "match": "SAS vs POR G2",
+            "sport": "NBA",
+            "round": "R1 G2",
+            "rec": "SAS",
+            "conf": 85,
+            "odds": 1.18,
+            "basis": "NRtg+8.40pt Wemby fit"
+          }
+        ]
+      },
+      "output_b": {
+        "description": "高確率マルチベット(出力A 4件)",
+        "combos_all": {
+          "2-leg_max_prob": [
+            {
+              "rank": 1,
+              "legs": [
+                "Sonmez",
+                "OKC"
+              ],
+              "total_odds": 1.1024,
+              "total_prob": 0.7744,
+              "ev": -0.14630144
+            },
+            {
+              "rank": 2,
+              "legs": [
+                "Sonmez",
+                "BOS"
+              ],
+              "total_odds": 1.1554000000000002,
+              "total_prob": 0.748,
+              "ev": -0.1357607999999999
+            },
+            {
+              "rank": 3,
+              "legs": [
+                "Sonmez",
+                "SAS"
+              ],
+              "total_odds": 1.2508,
+              "total_prob": 0.748,
+              "ev": -0.06440160000000006
+            },
+            {
+              "rank": 4,
+              "legs": [
+                "OKC",
+                "BOS"
+              ],
+              "total_odds": 1.1336000000000002,
+              "total_prob": 0.748,
+              "ev": -0.15206719999999985
+            },
+            {
+              "rank": 5,
+              "legs": [
+                "OKC",
+                "SAS"
+              ],
+              "total_odds": 1.2272,
+              "total_prob": 0.748,
+              "ev": -0.08205439999999997
+            }
+          ],
+          "3-leg": [
+            {
+              "legs": [
+                "Sonmez",
+                "OKC",
+                "BOS"
+              ],
+              "total_odds": 1.2016160000000002,
+              "total_prob": 0.6582399999999999,
+              "ev": -0.20904828415999988
+            },
+            {
+              "legs": [
+                "Sonmez",
+                "OKC",
+                "SAS"
+              ],
+              "total_odds": 1.300832,
+              "total_prob": 0.6582399999999999,
+              "ev": -0.14374034432000005
+            }
+          ],
+          "4-leg_full": [
+            {
+              "legs": [
+                "Sonmez",
+                "OKC",
+                "BOS",
+                "SAS"
+              ],
+              "total_odds": 1.4179068800000003,
+              "total_prob": 0.5595039999999999,
+              "ev": -0.20667542901247993
+            }
+          ]
+        },
+        "note": "全コンボ EV negative (全leg mkt expensive). 参考情報として掲載. 損失幅最小は 2-leg rank1 Sonmez+OKC."
+      },
+      "go_list": {
+        "description": "通常 GO 推奨 (conf>=75% AND EV>+5%)",
+        "recommendations": [
+          {
+            "no": 1,
+            "match": "Galfi D. vs Vidmanova D.",
+            "sport": "WTA Madrid",
+            "round": "Q Final",
+            "rec": "Galfi",
+            "conf": 78,
+            "odds": 1.54,
+            "ev": 0.203,
+            "tier_badge": "Advanced",
+            "note": "cElo clay +220.9pt (Vidmanova rank 271). Galfi Q1 d. Gormaz 6-1 6-3. Mkt @1.54 = 64.9% div +13.2pp. 単独GO."
+          }
+        ]
+      },
+      "caution_list": [
+        {
+          "match": "Jodar R. vs de Jong J.",
+          "sport": "ATP Madrid R1",
+          "conf": 82,
+          "odds": 1.21,
+          "ev": -0.048,
+          "note": "Home WC momentum strong / EV marginal negative"
+        },
+        {
+          "match": "LAK vs COL G2",
+          "sport": "NHL",
+          "conf": 70,
+          "odds": 1.39,
+          "ev": -0.027,
+          "note": "L1_PASS xGF+6pt / goalie status pending"
+        },
+        {
+          "match": "Osorio vs Zakharova",
+          "sport": "WTA Madrid R1",
+          "conf": 72,
+          "odds": 1.4,
+          "ev": 0.015,
+          "note": "Marginal EV+"
+        },
+        {
+          "match": "Lys vs Zhang Sh.",
+          "sport": "WTA Madrid R1",
+          "conf": 70,
+          "odds": 1.47,
+          "ev": 0.023,
+          "note": "Marginal EV+"
+        }
+      ],
+      "multi_result": "pending"
     }
   ],
   "last_updated": "2026-04-21"

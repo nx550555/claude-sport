@@ -209,7 +209,26 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 .ll-desc{font-size:10px;color:var(--text2);margin-top:3px;line-height:1.5;}
 .rule-impact-table .before{color:#f85149;font-weight:600;}
 .rule-impact-table .after{color:#3fb950;font-weight:600;}
-@media(max-width:768px){.pred-compare{grid-template-columns:1fr;}.learn-loop{flex-wrap:wrap;gap:8px;}.ll-arrow{display:none;}}
+@media(max-width:768px){
+  .pred-compare{grid-template-columns:1fr;}
+  .learn-loop{flex-wrap:wrap;gap:8px;}
+  .ll-arrow{display:none;}
+  /* 予測精度タブのスマホ全画面化（ルール変更インパクトtable幅オーバー対策） */
+  #content-accuracy{width:100%;max-width:100vw;overflow-x:hidden;box-sizing:border-box;}
+  #content-accuracy .section{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  #content-accuracy .rule-impact-table{min-width:640px;}
+  #content-accuracy .pred-panel{padding:14px;}
+}
+@media(max-width:600px){
+  #content-accuracy{padding:12px 10px;}
+  #content-accuracy .pred-pct{font-size:32px;}
+  #content-accuracy .pred-count{font-size:11px;}
+  #content-accuracy .pred-rows{gap:4px;}
+  #content-accuracy .pred-row{font-size:11px;padding:5px 8px;}
+  #content-accuracy .rule-impact-table{font-size:10.5px;}
+  #content-accuracy .rule-impact-table td,
+  #content-accuracy .rule-impact-table th{padding:6px 6px;}
+}
 
 /* ── lang toggle ── */
 .name-en { display: none; }
@@ -328,12 +347,12 @@ body.lang-en .name-en { display: inline; }
       <div class="sport-card">
         <div class="sport-card-header" style="color:#f9a8d4;">🎾 WTA Tennis <span class="tier-badge tier-adv">🅰 Advanced</span> <span class="rule-ver">v1.0</span></div>
         <div class="sport-metrics">
-          <div class="sm"><div class="sm-label">GB推奨</div><div class="sm-val">3</div></div>
+          <div class="sm"><div class="sm-label">GB推奨</div><div class="sm-val">4</div></div>
           <div class="sm"><div class="sm-label">結果済</div><div class="sm-val">3</div></div>
           <div class="sm"><div class="sm-label">的中</div><div class="sm-val">1</div></div>
           <div class="sm"><div class="sm-label">正答率</div><div class="sm-val" style="color:#f85149;">33.3%</div></div>
           <div class="sm"><div class="sm-label">通算損益</div><div class="sm-val" style="color:#f85149;">-1.0u</div></div>
-          <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#8b949e;">0</div></div>
+          <div class="sm"><div class="sm-label">待機中</div><div class="sm-val" style="color:#d29922;">1</div></div>
         </div>
       </div>
       <div class="sport-card">
@@ -465,47 +484,49 @@ body.lang-en .name-en { display: inline; }
 
     <!-- ===== 🎾 テニス ===== -->
     <div class="active-league-hdr">
-      <span>&#x1F3BE; テニス <span style="color:var(--text2);font-weight:400;font-size:11px;">ATP</span></span>
-      <span class="alh-count">0&#x4EF6;</span>
+      <span>&#x1F3BE; テニス <span style="color:var(--text2);font-weight:400;font-size:11px;">WTA Madrid</span></span>
+      <span class="alh-count">1件</span>
     </div>
 
-        <!-- ===== 🏈 アメフト ===== -->
+    <!-- WTA Madrid Q Final (2026-04-22) Galfi GO -->
+    <div class="active-card" style="border-color:#f9a8d460;background:linear-gradient(135deg,#f9a8d408,transparent);">
+      <div class="ac-sport">🎾 WTA — Madrid Open Q Final 2026 <span class="badge badge-go">GO</span> <span class="tier-badge tier-adv">Adv</span></div>
+      <div class="ac-match"><span class="name-ja">ガルフィ D. vs ヴィドマノヴァ D.</span><span class="name-en">Galfi D. vs Vidmanova D.</span></div>
+      <div class="ac-rec">推奨: <strong style="color:#3fb950;"><span class="name-ja">ガルフィ D.</span><span class="name-en">Galfi D.</span></strong></div>
+      <div class="ac-metrics">
+        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">1.54</div></div>
+        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">+20.3%</div></div>
+        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">78%</div></div>
+        <div class="acm"><div class="acm-l">cElo差</div><div class="acm-v rule">+220.9pt</div></div>
+      </div>
+      <div class="ac-note">Galfi clay_elo 1642.8 (rank 104) vs Vidmanova 1421.9 (rank 271)。Galfi Q1 d. Gormaz 6-1 6-3 で快勝。市場 @1.54 = 64.9% / L1 78% で div +13.2pp。UF 0個、単独 GO。</div>
+      <div class="ac-date">📅 2026-04-22 JST — WTA Madrid Q Final</div>
+    </div>
+
+    <!-- ===== 🏈 アメフト ===== -->
     <div class="active-league-hdr">
       <span>&#x1F3C8; &#x30A2;&#x30E1;&#x30EA;&#x30AB;&#x30F3;&#x30D5;&#x30C3;&#x30C8;&#x30DC;&#x30FC;&#x30EB; <span style="color:var(--text2);font-weight:400;font-size:11px;">UFL</span></span>
-      <span class="alh-count">0&#x4EF6;</span>
+      <span class="alh-count">0件</span>
     </div>
-
-    <!-- UFL W4 Renegades: 4/17 結果確定 (Aviators 28-14 UPSET MISS) → 全履歴タブへ移動 -->
+    <!-- UFL W4 結果確定 → 全履歴タブへ移動 -->
 
     <!-- ===== 🏉 ラグビー ===== -->
-    <!-- NRL Warriors R7: 4/18 結果確定 (Warriors 28-20 Titans HIT) → 全履歴タブへ移動 -->
-    <!-- SL Leeds R8: 4/17 結果確定 (Leeds 56-22 Huddersfield HIT) → 全履歴タブへ移動 -->
-    <!-- SL Warrington R8: 4/19 結果確定 (Catalans 38-22 Warrington UPSET MISS -1.0u) → 全履歴タブへ移動 Session_43 -->
-    <!-- ラグビーのアクティブ推奨 0件 -->
-
+    <!-- ラグビーのアクティブ推奨 0件 (全結果確定済) -->
 
     <!-- ===== 🏀 バスケットボール ===== -->
     <div class="active-league-hdr">
       <span>🏀 バスケットボール <span style="color:var(--text2);font-weight:400;font-size:11px;">NBA</span></span>
-      <span class="alh-count">1件</span>
+      <span class="alh-count">0件 (SAS G1 HIT +0.18u → 履歴)</span>
     </div>
-
-    <!-- NBA PO R1 G1: SAS vs POR (4/20) -->
-    <div class="active-card" style="border-color:#d8b4fe60;background:linear-gradient(135deg,#d8b4fe08,transparent);">
-      <div class="ac-sport">🏀 NBA — PO Round 1 Game 1 2026 <span class="badge badge-go">GO</span></div>
-      <div class="ac-match"><span class="name-ja">サンアントニオ・スパーズ vs ポートランド・トレイルブレイザーズ</span><span class="name-en">San Antonio Spurs vs Portland Trail Blazers</span></div>
-      <div class="ac-rec">推奨: <strong style="color:#3fb950;"><span class="name-ja">サンアントニオ・スパーズ</span><span class="name-en">San Antonio Spurs</span></strong></div>
-      <div class="ac-metrics">
-        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">1.18</div></div>
-        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">+5.6%</div></div>
-        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">81%</div></div>
-        <div class="acm"><div class="acm-l">NRtg差</div><div class="acm-v rule">+8.9pt</div></div>
-      </div>
-      <div class="ac-note">スパーズ NRtg +8.5 (W2) / ブレイザーズ NRtg -0.4。差+8.9pt > 閾値5pt。Wembanyama ACTIVE確認済。Lillard OUT全季（アキレス腱断裂）。</div>
-      <div class="ac-date">📅 2026-04-20 JST — NBA PO R1 G1</div>
-    </div>
+    <!-- Session_47 (2026-04-21): SAS G1 HIT確定 → 履歴タブへ移動 -->
 
   </div></div>
+  <div style="margin-top:14px;padding:10px 14px;background:var(--surface2);border-radius:6px;font-size:12px;color:var(--text2);line-height:1.7;">
+    <strong style="color:var(--text);">Session_48 (2026-04-21) 更新:</strong><br>
+    • Madrid R1 スクリーニング完了 (ATP 29 + WTA 18 = 47試合)。Galfi @1.54 単独 GO。<br>
+    • NBA G2 3件 (OKC/BOS/SAS) + WTA 1件 (Sonmez) が Q3 output_a 候補。高確率予想タブ参照。<br>
+    • NHL COL-LAK G2 は L1_PASS (xGF+6pt) だが EV- で CAUTION (goalie 確認要)。
+  </div>
 </div>
 <!-- ===== 全履歴 ===== -->
 <div class="tab-content" id="content-history">
@@ -3533,8 +3554,8 @@ body.lang-en .name-en { display: inline; }
     <div style="background:var(--surface);border:1px solid #3fb95040;border-radius:10px;padding:14px 18px;margin-bottom:14px;">
       <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:10px;">
         <div style="font-size:11px;color:#3fb950;font-weight:700;text-transform:uppercase;letter-spacing:.05em;">現在アクティブ:</div>
-        <div style="font-size:11px;color:var(--text2);">Session_45 出力A候補 14件 pending + NBA SAS G1 HIT確定</div>
-        <div style="font-size:11px;color:var(--text2);margin-left:auto;">最終更新: 2026-04-20 Session_45</div>
+        <div style="font-size:11px;color:var(--text2);">Session_48 追加: Sonmez WTA Madrid Q + Galfi GO / NBA G2 3件継続 pending / Rugby 6件 pending</div>
+        <div style="font-size:11px;color:var(--text2);margin-left:auto;">最終更新: 2026-04-21 Session_48</div>
       </div>
       <div class="table-wrap">
         <table class="data-table">
@@ -3544,15 +3565,37 @@ body.lang-en .name-en { display: inline; }
             </tr>
           </thead>
           <tbody>
+            <!-- Session_48 新規追加: Galfi GO + Sonmez Q3 output_a -->
             <tr style="background:rgba(46,160,67,.12);">
-              <td style="font-weight:600;">POR @ <strong>SAS</strong></td>
+              <td style="font-weight:600;">Galfi D. vs Vidmanova D.</td>
+              <td>WTA Madrid Q Final<br><span style="font-size:10px;color:var(--text2);">2026-04-22</span></td>
+              <td><span class="badge badge-go">Galfi</span></td>
+              <td style="text-align:center;font-weight:700;color:#4ade80;">78%</td>
+              <td style="text-align:center;color:#e3b341;">@1.54</td>
+              <td style="text-align:center;color:#3fb950;">+20.3%</td>
+              <td style="text-align:center;"><span class="tier-badge tier-adv">Adv</span></td>
+              <td><span class="badge badge-pending">pending</span><br><span style="font-size:10px;color:var(--text2);">GO単独 / cElo +220.9pt / Vidmanova clay rank 271</span></td>
+            </tr>
+            <tr style="background:rgba(88,166,255,.06);">
+              <td style="font-weight:600;">Sonmez Z. vs Martinez Cires C.</td>
+              <td>WTA Madrid Q Final<br><span style="font-size:10px;color:var(--text2);">2026-04-22</span></td>
+              <td><span class="badge" style="background:#1a2640;color:#58a6ff;">Sonmez</span></td>
+              <td style="text-align:center;font-weight:700;color:#4ade80;">88%</td>
+              <td style="text-align:center;color:#e3b341;">@1.06</td>
+              <td style="text-align:center;color:#f85149;">-6.5%</td>
+              <td style="text-align:center;"><span class="tier-badge tier-adv">Adv</span></td>
+              <td><span class="badge badge-pending">pending</span><br><span style="font-size:10px;color:var(--text2);">出力A (EV負 / Cires低ランク)</span></td>
+            </tr>
+            <!-- Session_47完了: SAS G1 HIT → 履歴移動 -->
+            <tr style="background:rgba(46,160,67,.08);opacity:.7;">
+              <td style="font-weight:600;">POR @ <strong>SAS</strong> G1</td>
               <td>NBA PO R1 G1<br><span style="font-size:10px;color:var(--text2);">2026-04-20</span></td>
               <td><span class="badge badge-go">Spurs</span></td>
               <td style="text-align:center;font-weight:700;color:#4ade80;">87%</td>
               <td style="text-align:center;color:#e3b341;">@1.18</td>
               <td style="text-align:center;color:#3fb950;">+5.6%</td>
               <td style="text-align:center;"><span class="tier-badge tier-adv">Adv</span></td>
-              <td><span class="badge" style="background:#0f2c1a;color:#3fb950;">HIT ✓</span><br><span style="font-size:10px;color:var(--text2);">Wemby 35pts franchise record</span></td>
+              <td><span class="badge" style="background:#0f2c1a;color:#3fb950;">HIT ✓</span><br><span style="font-size:10px;color:var(--text2);">Wemby 35pts / +0.18u 履歴済</span></td>
             </tr>
             <tr style="background:rgba(88,166,255,.06);">
               <td style="font-weight:600;">BOS @ PHI G2</td>
@@ -3978,9 +4021,54 @@ body.lang-en .name-en { display: inline; }
     <p style="color:var(--text2);font-size:12px;margin-bottom:14px;line-height:1.7;">
       現時点のアクティブ候補（出力A）が<strong style="color:var(--text);">2件以上</strong>ある場合のみマルチ構成可能。
     </p>
+    <!-- Session_48 (2026-04-21) マルチ構成計算 -->
     <div style="background:var(--surface);border:1px solid #58a6ff40;border-radius:10px;padding:14px 18px;margin-bottom:14px;">
       <div style="display:flex;gap:10px;align-items:center;margin-bottom:10px;flex-wrap:wrap;">
-        <div style="font-size:13px;font-weight:700;color:#58a6ff;">Session_45 マルチ構成計算結果</div>
+        <div style="font-size:13px;font-weight:700;color:#3fb950;">Session_48 マルチ構成計算結果 (2026-04-21)</div>
+        <div style="font-size:11px;color:var(--text2);">出力A 4件 (Sonmez/OKC G2/BOS G2/SAS G2) × 組合せ 11通り</div>
+      </div>
+      <div style="background:#2d1014;border:1px solid #f8514940;border-radius:6px;padding:10px 14px;margin-bottom:12px;font-size:12px;color:var(--text);line-height:1.7;">
+        🔴 <strong style="color:#f85149;">EV+組み合わせ: 0件</strong> — 全11通り EV負（全leg 低オッズ・高確率で mkt expensive）。参考として 2-leg/3-leg/4-leg 全展開。
+      </div>
+      <div style="font-size:12px;font-weight:700;color:#4ade80;margin-bottom:6px;">📊 総合勝率 TOP 5（参考）</div>
+      <div class="table-wrap" style="margin-bottom:12px;">
+        <table class="data-table" style="font-size:11px;">
+          <thead>
+            <tr><th>#</th><th>組み合わせ</th><th>勝率</th><th>マルチodds</th><th>EV</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Sonmez × OKC G2</td><td style="text-align:center;color:#4ade80;font-weight:700;">77.4%</td><td style="text-align:center;color:#e3b341;">@1.102</td><td style="text-align:center;color:#f85149;">-14.6%</td></tr>
+            <tr><td>2</td><td>Sonmez × BOS G2</td><td style="text-align:center;color:#4ade80;font-weight:700;">74.8%</td><td style="text-align:center;color:#e3b341;">@1.155</td><td style="text-align:center;color:#f85149;">-13.6%</td></tr>
+            <tr><td>3</td><td>Sonmez × SAS G2</td><td style="text-align:center;color:#4ade80;font-weight:700;">74.8%</td><td style="text-align:center;color:#e3b341;">@1.251</td><td style="text-align:center;color:#f85149;">-6.4%</td></tr>
+            <tr><td>4</td><td>OKC G2 × BOS G2</td><td style="text-align:center;color:#4ade80;font-weight:700;">74.8%</td><td style="text-align:center;color:#e3b341;">@1.134</td><td style="text-align:center;color:#f85149;">-15.2%</td></tr>
+            <tr><td>5</td><td>BOS × SAS G2</td><td style="text-align:center;color:#4ade80;font-weight:700;">72.3%</td><td style="text-align:center;color:#e3b341;">@1.286</td><td style="text-align:center;color:#f85149;">-7.1%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="font-size:12px;font-weight:700;color:#e3b341;margin-bottom:6px;">💰 EV最大 TOP 5（損失幅最小・参考）</div>
+      <div class="table-wrap" style="margin-bottom:12px;">
+        <table class="data-table" style="font-size:11px;">
+          <thead>
+            <tr><th>#</th><th>組み合わせ</th><th>勝率</th><th>マルチodds</th><th>EV</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Sonmez × SAS G2</td><td style="text-align:center;">74.8%</td><td style="text-align:center;color:#e3b341;">@1.251</td><td style="text-align:center;color:#f85149;">-6.4%</td></tr>
+            <tr><td>2</td><td>BOS × SAS G2</td><td style="text-align:center;">72.3%</td><td style="text-align:center;color:#e3b341;">@1.286</td><td style="text-align:center;color:#f85149;">-7.1%</td></tr>
+            <tr><td>3</td><td>OKC × SAS G2</td><td style="text-align:center;">74.8%</td><td style="text-align:center;color:#e3b341;">@1.227</td><td style="text-align:center;color:#f85149;">-8.2%</td></tr>
+            <tr><td>4</td><td>Sonmez × BOS G2</td><td style="text-align:center;">74.8%</td><td style="text-align:center;color:#e3b341;">@1.155</td><td style="text-align:center;color:#f85149;">-13.6%</td></tr>
+            <tr><td>5</td><td>Sonmez × BOS × SAS (3-leg)</td><td style="text-align:center;">63.6%</td><td style="text-align:center;color:#e3b341;">@1.363</td><td style="text-align:center;color:#f85149;">-13.4%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="font-size:11px;color:var(--text2);padding:8px 10px;background:var(--surface2);border-radius:4px;">
+        📝 <strong style="color:var(--text);">Session_48 注意:</strong> Sonmez × SAS G2 が損失最小（-6.4%）。GO 推奨は Galfi 単独 (@1.54 EV+20.3%) のみ。Galfi は conf<85% のため出力A除外・output B 組込なし。
+      </div>
+    </div>
+
+    <!-- Session_45 (過去ログ) -->
+    <div style="background:var(--surface);border:1px solid #58a6ff40;border-radius:10px;padding:14px 18px;margin-bottom:14px;opacity:.75;">
+      <div style="display:flex;gap:10px;align-items:center;margin-bottom:10px;flex-wrap:wrap;">
+        <div style="font-size:13px;font-weight:700;color:#58a6ff;">Session_45 マルチ構成計算結果 (2026-04-20・過去ログ)</div>
         <div style="font-size:11px;color:var(--text2);">出力A 18件 × 組合せ総数 12,597通り</div>
       </div>
       <div style="background:#2d1014;border:1px solid #f8514940;border-radius:6px;padding:10px 14px;margin-bottom:12px;font-size:12px;color:var(--text);line-height:1.7;">
