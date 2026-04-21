@@ -6,6 +6,10 @@ on:
     - cron: '0 0,12 * * *'
   workflow_dispatch:
 
+# Node.js 24 への先行移行（2026-06-02 強制移行前の警告回避）
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   fetch:
     runs-on: ubuntu-latest
