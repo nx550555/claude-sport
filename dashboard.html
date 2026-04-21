@@ -324,10 +324,17 @@ body.lang-en .name-en { display: inline; }
         <div class="bs-val" style="color:#f85149;">-0.03u</div>
         <div class="bs-sub">対象: ufl, nrl, superrugby, superleague, premiership, top14, prod2, ahl</div>
       </div>
+      <div class="big-stat tier-stat" style="border-color:#58a6ff60;background:linear-gradient(135deg,#58a6ff08,transparent);">
+        <span class="tier-corner tier-badge" style="background:#1a2640;color:#58a6ff;">🎯 Q3 Output_A</span>
+        <div class="bs-label">高確率予想 正答率</div>
+        <div class="bs-val" style="color:#58a6ff;">100%</div>
+        <div class="bs-sub">3 HIT / 3 確定 | 待機4 (Sonmez/BOS G2/SAS G2/OKC G2)</div>
+      </div>
     </div>
     <div style="margin-bottom:16px;padding:10px 14px;background:var(--surface2);border-radius:6px;font-size:12px;color:var(--text2);">
       <strong style="color:var(--text);">⚖️ Tier別管理:</strong> 高精度指標（Advanced）と基本統計のみ（Basic）では予測精度に構造的差があるため、正答率・損益を別枠で集計。Basic TierはGO閾値を厳格化（conf≥78% AND EV>+7%）。ステークは両Tier同額（1u基準）。
-      <br>総合: 20/27 (74.1%) | +2.73u <span style="color:#f85149;font-size:10px;">※CE013+CE014+CE015訂正反映 (2026-04-18)</span>
+      <br><strong style="color:var(--text);">🟢 ベット推奨 (GO/CAUTION) 総合:</strong> 20/28 (71.4%) | +1.73u | Pending 1 (Galfi @1.54 EV+20.3%)
+      <br><strong style="color:#58a6ff;">🎯 Q3 高確率予想 (conf≥85 / EV問わず):</strong> 3/3 (100%) | Pending 4 (Session_48 の 4件確定後に 7/7 = 100% 可能性)
     </div>
 
     <div class="section-title">種目別成績</div>
@@ -3385,18 +3392,26 @@ body.lang-en .name-en { display: inline; }
       </div>
     </div>
     <div class="pred-panel all-games">
-      <div class="pred-panel-title">🔵 全試合予測（v3.0〜 2026-04-13〜）</div>
-      <div class="pred-main-stat"><span class="pred-pct" style="color:#58a6ff;">集計中</span><span class="pred-count">予測データ拡大中</span></div>
+      <div class="pred-panel-title">🔵 全試合予測 / Q3 高確率予想（v3.0〜 2026-04-13〜）</div>
+      <div class="pred-main-stat"><span class="pred-pct" style="color:#58a6ff;">100%</span><span class="pred-count">Q3 output_a 3 / 3 確定 <span style="color:#f0a519;">(pending 4)</span></span></div>
       <div class="pred-rows">
-        <div class="pred-row"><span>ATP Barcelona/Munich R1-R2 (予測済)</span><span>~32試合</span><span style="color:var(--text2);">集計中</span></div>
-        <div class="pred-row"><span>WTA Stuttgart/Rouen R1-R2 (予測済)</span><span>~24試合</span><span style="color:var(--text2);">集計中</span></div>
-        <div class="pred-row"><span>NHL PO R1 (予測済 × 8シリーズ)</span><span>8試合</span><span style="color:var(--text2);">4/19〜</span></div>
-        <div class="pred-row"><span>AHL RS最終週 (初回予測済)</span><span>27試合</span><span style="color:var(--text2);">4/18〜</span></div>
-        <div class="pred-row"><span>新リーグ (Prem/Top14/Pro D2)</span><span>19試合</span><span style="color:var(--text2);">4/18〜</span></div>
+        <div class="pred-row" style="background:rgba(88,166,255,.12);"><strong>🎯 Q3 output_a (conf≥85% / EV問わず)</strong><span><strong>3 / 3</strong></span><span style="color:#3fb950;"><strong>100%</strong></span></div>
+        <div class="pred-row"><span style="padding-left:12px;">└ NBA BOS G1 (Session_47)</span><span>HIT</span><span style="color:#3fb950;">✓</span></div>
+        <div class="pred-row"><span style="padding-left:12px;">└ NBA SAS G1 (Session_47・GO重複)</span><span>HIT</span><span style="color:#3fb950;">✓ +0.18u</span></div>
+        <div class="pred-row"><span style="padding-left:12px;">└ NBA OKC G1 (Session_47)</span><span>HIT</span><span style="color:#3fb950;">✓</span></div>
+        <div class="pred-row" style="background:rgba(240,165,25,.08);"><strong>⏳ pending (Session_48 / 4/22〜)</strong><span>4 件</span><span style="color:#f0a519;">—</span></div>
+        <div class="pred-row"><span style="padding-left:12px;">└ WTA Madrid Q Final Sonmez</span><span>4/22</span><span style="color:var(--text2);">88%</span></div>
+        <div class="pred-row"><span style="padding-left:12px;">└ NBA BOS G2</span><span>4/22</span><span style="color:var(--text2);">85%</span></div>
+        <div class="pred-row"><span style="padding-left:12px;">└ NBA SAS G2</span><span>4/22</span><span style="color:var(--text2);">85%</span></div>
+        <div class="pred-row"><span style="padding-left:12px;">└ NBA OKC G2</span><span>4/23</span><span style="color:var(--text2);">88%</span></div>
+        <div class="pred-row" style="border-top:1px dashed var(--border);margin-top:6px;padding-top:6px;opacity:.85;"><span>📈 他 prediction_accuracy (SKIP含む)</span><span>集計中</span><span style="color:var(--text2);">—</span></div>
+        <div class="pred-row"><span style="padding-left:12px;">NHL PO G1 全8試合</span><span>5 / 8</span><span style="color:#e3b341;">62.5%</span></div>
+        <div class="pred-row"><span style="padding-left:12px;">NBA PO G1 全8試合</span><span>6 / 8</span><span style="color:#3fb950;">75%</span></div>
       </div>
       <div style="font-size:11px;color:var(--text2);margin-top:10px;padding-top:8px;border-top:1px solid var(--border);">
-        ※ ベット有無問わず全試合の勝者予測精度。モデル品質を測定するトラック。<br>
-        ※ 次Phaseで predicted_hit を集計スクリプト化予定。現状は手動確認中。
+        ※ Q3 output_a = conf≥85% の「ほぼ確実」予測（EV問わず）。ベット推奨外でも正答率を別トラックで追跡。<br>
+        ※ 現在 3/3 HIT (100%)。Session_48 の 4件が全 HIT なら 7/7 (100%) に更新。仮に 1 MISS でも 6/7 (85.7%) 維持。<br>
+        ※ Source: stats/cumulative.json by_quadrant.Q3_output_a.
       </div>
     </div>
   </div>
