@@ -33,6 +33,22 @@ BASE = Path(__file__).parent
 STATS_PATH = BASE / "core" / "dashboard_stats.json"
 CUMUL_PATH = BASE / "stats" / "cumulative.json"
 DASH_PATH = BASE / "dashboard.html"
+MB_PATH = BASE / "records" / "multi_bets.json"
+
+RECORDS_BY_SPORT = {
+    "atp":         (BASE / "records/tennis/2026-ATP.json", "🎾", "テニス", "ATP"),
+    "wta":         (BASE / "records/wta/2026.json",         "🎾", "テニス", "WTA"),
+    "nhl":         (BASE / "records/nhl/2025-26.json",      "🏒", "アイスホッケー", "NHL"),
+    "ufl":         (BASE / "records/ufl/2026.json",         "🏈", "アメフト", "UFL"),
+    "nrl":         (BASE / "records/nrl/2026.json",         "🏉", "ラグビー", "NRL"),
+    "superrugby":  (BASE / "records/superrugby/2026.json",  "🏉", "ラグビー", "Super Rugby"),
+    "nba":         (BASE / "records/nba/2025-26.json",      "🏀", "バスケ", "NBA"),
+    "superleague": (BASE / "records/superleague/2026.json", "🏉", "ラグビー", "Super League"),
+    "premiership": (BASE / "records/premiership/2026.json", "🏉", "ラグビー", "Premiership"),
+    "top14":       (BASE / "records/top14/2026.json",       "🏉", "ラグビー", "Top 14"),
+    "prod2":       (BASE / "records/prod2/2026.json",       "🏉", "ラグビー", "Pro D2"),
+    "ahl":         (BASE / "records/ahl/2025-26.json",      "🏒", "アイスホッケー", "AHL"),
+}
 
 
 def load_json(path):
@@ -308,6 +324,316 @@ def build_q3_panel(cumul, stats):
 
 
 # ─────────────────────────────────────
+# (E) アクティブ推奨タブ (pending GO/CAUTION 一覧)
+# ─────────────────────────────────────
+def collect_pending_entries(sport_key):
+    """records/*.json から tier=go/caution かつ hit=null のエントリを収集"""
+    path, emoji, group, label = RECORDS_BY_SPORT[sport_key]
+    if not path.exists():
+        return []
+    data = load_json(path)
+
+    entries = []
+    def gather(lst):
+        for e in lst:
+            if e.get("tier") not in ("go", "caution"):
+                continue
+            if e.get("hit") is not None:
+                continue
+            if e.get("result") is not None:
+                continue
+            entries.append(e)
+
+    gather(data.get("predictions", []))
+    gather(data.get("games", []))
+    gather(data.get("pending_games", []))
+    for t in data.get("tournaments", []):
+        gather(t.get("predictions", []))
+
+    return entries
+
+
+def fmt_date(v):
+    return v or "—"
+
+
+def build_active_tab(stats):
+    tier_by_sport = {
+        "atp": "adv", "wta": "adv", "nhl": "adv", "nba": "adv",
+        "ufl": "basic", "nrl": "basic", "superrugby": "basic", "superleague": "basic",
+        "premiership": "basic", "top14": "basic", "prod2": "basic", "ahl": "basic",
+    }
+    group_order = [
+        ("🎾 テニス", ["atp", "wta"]),
+        ("🏒 アイスホッケー", ["nhl", "ahl"]),
+        ("🏀 バスケットボール", ["nba"]),
+        ("🏈 アメフト", ["ufl"]),
+        ("🏉 ラグビー", ["nrl", "superrugby", "superleague", "premiership", "top14", "prod2"]),
+    ]
+
+    blocks = []
+    total_pending = 0
+    for group_label, keys in group_order:
+        # collect pending entries for each sport in group
+        group_items = []
+        for k in keys:
+            items = collect_pending_entries(k)
+            for it in items:
+                group_items.append((k, it))
+        count = len(group_items)
+        total_pending += count
+
+        _, _, _, sport_label = RECORDS_BY_SPORT[keys[0]]
+        sub_labels = "/".join(RECORDS_BY_SPORT[k][3] for k in keys if RECORDS_BY_SPORT[k][0].exists())
+
+        blocks.append(
+            f'    <div class="active-league-hdr">\n'
+            f'      <span>{group_label} <span style="color:var(--text2);font-weight:400;font-size:11px;">{sub_labels}</span></span>\n'
+            f'      <span class="alh-count">{count}件</span>\n'
+            f'    </div>'
+        )
+
+        for sport_key, e in group_items:
+            _, emoji, _, sport_label = RECORDS_BY_SPORT[sport_key]
+            tier_tag = tier_by_sport.get(sport_key, "basic")
+            tier_label = "Adv" if tier_tag == "adv" else "Basic"
+            tier_cls = "tier-adv" if tier_tag == "adv" else "tier-basic"
+
+            tier_badge = (
+                '<span class="badge badge-go">GO</span>'
+                if e.get("tier") == "go"
+                else '<span class="badge" style="background:#3a2a0a;color:#e3b341;">CAUTION</span>'
+            )
+
+            match = e.get("match", "?")
+            rec = e.get("rec") or e.get("predicted_winner") or "?"
+            odds = e.get("rec_odds") or e.get("fav_odds") or "—"
+            ev = e.get("ev")
+            ev_str = f"{ev*100:+.1f}%" if isinstance(ev, (int, float)) else "—"
+            conf = e.get("prediction_confidence", "—")
+            round_ = e.get("round", "")
+            tourney = e.get("tournament", sport_label)
+            date_ = e.get("date", "—")
+            basis = e.get("prediction_basis") or e.get("note") or ""
+
+            l1_data_raw = e.get("l1_data", "")
+            l1_data = l1_data_raw if isinstance(l1_data_raw, str) else json.dumps(l1_data_raw, ensure_ascii=False)[:80]
+            l1_short = l1_data[:60] + ("…" if len(l1_data) > 60 else "") if l1_data else ""
+
+            blocks.append(
+                f'    <div class="active-card">\n'
+                f'      <div class="ac-sport">{emoji} {sport_label} — {tourney} {round_} {tier_badge} <span class="tier-badge {tier_cls}">{tier_label}</span></div>\n'
+                f'      <div class="ac-match">{match}</div>\n'
+                f'      <div class="ac-rec">推奨: <strong style="color:#3fb950;">{rec}</strong></div>\n'
+                f'      <div class="ac-metrics">\n'
+                f'        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">{odds}</div></div>\n'
+                f'        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">{ev_str}</div></div>\n'
+                f'        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">{conf}%</div></div>\n'
+                f'        <div class="acm"><div class="acm-l">L1</div><div class="acm-v rule">{l1_short}</div></div>\n'
+                f'      </div>\n'
+                f'      <div class="ac-note">{basis}</div>\n'
+                f'      <div class="ac-date">📅 {date_} — {tourney} {round_}</div>\n'
+                f'    </div>'
+            )
+
+    blocks_html = "\n\n".join(blocks)
+
+    footer = (
+        f'  <div style="margin-top:14px;padding:10px 14px;background:var(--surface2);border-radius:6px;font-size:12px;color:var(--text2);line-height:1.7;">\n'
+        f'    <strong style="color:var(--text);">🔄 自動同期:</strong> records/*.json から tier=go/caution かつ hit=null のエントリを動的抽出。結果確定後は自動的に履歴へ移動します。<br>\n'
+        f'    最終 sync: {datetime.datetime.now().strftime("%Y-%m-%d %H:%M")} | Pending 総数: {total_pending}件\n'
+        f'  </div>'
+    )
+
+    html = f"""<!-- AUTO:ACTIVE_TAB START -->
+  <div class="section-title">アクティブ GO / CAUTION 推奨 — PENDING のみ（結果確定後は全履歴タブへ移動）</div>
+  <div class="section"><div class="active-grid">
+
+{blocks_html}
+
+  </div></div>
+{footer}
+</div>
+<!-- AUTO:ACTIVE_TAB END -->"""
+    return html
+
+
+# ─────────────────────────────────────
+# (F) 高確率予想タブ アクティブ候補 (output A)
+# ─────────────────────────────────────
+def build_highprob_active(cumul):
+    """multi_bets.sessions[-1].output_a を根拠にテーブル生成"""
+    if not MB_PATH.exists():
+        return None
+    mb = load_json(MB_PATH)
+    if not mb.get("sessions"):
+        return None
+    last = mb["sessions"][-1]
+    session_id = last.get("session", "?").lstrip("_")
+    session_date = last.get("date", "?")
+    candidates = last.get("output_a", {}).get("candidates", [])
+
+    # Also pull Galfi GO if it's in go_list
+    go_items = last.get("go_list", {}).get("recommendations", [])
+
+    rows = []
+
+    # GO 推奨（GO重複）先頭
+    for g in go_items:
+        odds = g.get("odds", "—")
+        ev = g.get("ev")
+        ev_str = f"{ev*100:+.1f}%" if isinstance(ev, (int, float)) else "—"
+        ev_color = "#3fb950" if isinstance(ev, (int, float)) and ev > 0 else "#f85149"
+        rows.append(
+            f'            <tr style="background:rgba(46,160,67,.12);">\n'
+            f'              <td style="font-weight:600;">{g.get("match", "?")}</td>\n'
+            f'              <td>{g.get("sport","?")} {g.get("round","")}<br><span style="font-size:10px;color:var(--text2);">Session_{session_id} {session_date}</span></td>\n'
+            f'              <td><span class="badge badge-go">{g.get("rec","?")}</span></td>\n'
+            f'              <td style="text-align:center;font-weight:700;color:#4ade80;">{g.get("conf","?")}%</td>\n'
+            f'              <td style="text-align:center;color:#e3b341;">@{odds}</td>\n'
+            f'              <td style="text-align:center;color:{ev_color};">{ev_str}</td>\n'
+            f'              <td style="text-align:center;"><span class="tier-badge tier-adv">Adv</span></td>\n'
+            f'              <td><span class="badge badge-pending">pending</span><br><span style="font-size:10px;color:var(--text2);">GO (EV+{ev_str} 重複掲載)</span></td>\n'
+            f'            </tr>'
+        )
+
+    # Output A candidates
+    for c in candidates:
+        rows.append(
+            f'            <tr style="background:rgba(88,166,255,.06);">\n'
+            f'              <td style="font-weight:600;">{c.get("match","?")}</td>\n'
+            f'              <td>{c.get("sport","?")} {c.get("round","")}<br><span style="font-size:10px;color:var(--text2);">Session_{session_id} {session_date}</span></td>\n'
+            f'              <td><span class="badge" style="background:#1a2640;color:#58a6ff;">{c.get("rec","?")}</span></td>\n'
+            f'              <td style="text-align:center;font-weight:700;color:#4ade80;">{c.get("conf","?")}%</td>\n'
+            f'              <td style="text-align:center;color:#e3b341;">@{c.get("odds","—")}</td>\n'
+            f'              <td style="text-align:center;color:#f85149;">EV-</td>\n'
+            f'              <td style="text-align:center;"><span class="tier-badge tier-adv">Adv</span></td>\n'
+            f'              <td><span class="badge badge-pending">pending</span><br><span style="font-size:10px;color:var(--text2);">出力A (高確率・EV-)</span></td>\n'
+            f'            </tr>'
+        )
+
+    rows_html = "\n".join(rows) if rows else "            <tr><td colspan='8' style='text-align:center;color:var(--text2);padding:20px;'>現在アクティブな候補なし</td></tr>"
+
+    html = f"""<!-- AUTO:HIGHPROB_ACTIVE START -->
+  <div class="section">
+    <div class="section-title" style="color:#3fb950;border-bottom-color:#2ea043;">🎯 アクティブ候補（これから試合・ベット対象）</div>
+    <p style="color:var(--text2);font-size:12px;margin-bottom:14px;line-height:1.7;">
+      最新セッション (Session_{session_id} {session_date}) の出力A候補を <strong>multi_bets.json から自動抽出</strong>。結果確定後は下の累計履歴へ移動。
+    </p>
+    <div style="background:var(--surface);border:1px solid #3fb95040;border-radius:10px;padding:14px 18px;margin-bottom:14px;">
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:10px;">
+        <div style="font-size:11px;color:#3fb950;font-weight:700;text-transform:uppercase;letter-spacing:.05em;">現在アクティブ:</div>
+        <div style="font-size:11px;color:var(--text2);">GO {len(go_items)}件 + 出力A {len(candidates)}件 (Session_{session_id})</div>
+        <div style="font-size:11px;color:var(--text2);margin-left:auto;">最終同期: {datetime.datetime.now().strftime("%Y-%m-%d %H:%M")}</div>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>試合</th><th>種目/ラウンド</th><th>推奨</th><th>勝率</th><th>オッズ</th><th>EV</th><th>Tier</th><th>状態</th>
+            </tr>
+          </thead>
+          <tbody>
+{rows_html}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- AUTO:HIGHPROB_ACTIVE END -->"""
+    return html
+
+
+# ─────────────────────────────────────
+# (G) マルチベットタブ アクティブマルチ
+# ─────────────────────────────────────
+def build_multi_active(cumul):
+    if not MB_PATH.exists():
+        return None
+    mb = load_json(MB_PATH)
+    if not mb.get("sessions"):
+        return None
+    last = mb["sessions"][-1]
+    session_id = last.get("session", "?").lstrip("_")
+    session_date = last.get("date", "?")
+
+    output_a_candidates = last.get("output_a", {}).get("candidates", [])
+    output_b = last.get("output_b", {})
+    combos_all = output_b.get("combos_all", {}) if isinstance(output_b, dict) else {}
+
+    if len(output_a_candidates) < 2:
+        content = f"""
+    <div style="background:var(--surface);border:1px solid #f0a51940;border-radius:10px;padding:14px 18px;margin-bottom:14px;">
+      <div style="color:#f0a519;font-size:13px;">⚠️ アクティブ出力A候補が2件未満のためマルチ構成不可 (現在 {len(output_a_candidates)}件)</div>
+    </div>"""
+    else:
+        # Build tables from combos_all
+        two_leg = combos_all.get("2-leg_max_prob", [])
+        def fmt_row(i, combo):
+            legs = " × ".join(combo.get("legs", []))
+            prob = combo.get("total_prob", 0)
+            odds = combo.get("total_odds", 0)
+            ev = combo.get("ev", 0)
+            ev_color = "#3fb950" if ev > 0 else "#f85149"
+            return (f'            <tr><td>{i}</td><td>{legs}</td>'
+                    f'<td style="text-align:center;color:#4ade80;font-weight:700;">{prob*100:.1f}%</td>'
+                    f'<td style="text-align:center;color:#e3b341;">@{odds:.3f}</td>'
+                    f'<td style="text-align:center;color:{ev_color};">{ev*100:+.1f}%</td></tr>')
+
+        # Sort by prob desc
+        two_leg_by_prob = sorted(two_leg, key=lambda x: -x.get("total_prob", 0))[:5]
+        # Sort by ev desc
+        all_combos = list(two_leg) + list(combos_all.get("3-leg", [])) + list(combos_all.get("4-leg_full", []))
+        all_combos_by_ev = sorted(all_combos, key=lambda x: -x.get("ev", 0))[:5]
+
+        prob_rows = "\n".join(fmt_row(i+1, c) for i, c in enumerate(two_leg_by_prob))
+        ev_rows = "\n".join(fmt_row(i+1, c) for i, c in enumerate(all_combos_by_ev))
+
+        ev_plus = sum(1 for c in all_combos if c.get("ev", 0) > 0)
+        note = output_b.get("note", "")
+
+        content = f"""
+    <div style="background:var(--surface);border:1px solid #58a6ff40;border-radius:10px;padding:14px 18px;margin-bottom:14px;">
+      <div style="display:flex;gap:10px;align-items:center;margin-bottom:10px;flex-wrap:wrap;">
+        <div style="font-size:13px;font-weight:700;color:#3fb950;">Session_{session_id} マルチ構成計算結果 ({session_date})</div>
+        <div style="font-size:11px;color:var(--text2);">出力A {len(output_a_candidates)}件 × 組合せ {len(all_combos)}通り</div>
+      </div>
+      <div style="background:{"#0f2c1a" if ev_plus else "#2d1014"};border:1px solid {"#23863640" if ev_plus else "#f8514940"};border-radius:6px;padding:10px 14px;margin-bottom:12px;font-size:12px;color:var(--text);line-height:1.7;">
+        {"🟢" if ev_plus else "🔴"} <strong style="color:{"#3fb950" if ev_plus else "#f85149"};">EV+組み合わせ: {ev_plus}件</strong> — {note}
+      </div>
+      <div style="font-size:12px;font-weight:700;color:#4ade80;margin-bottom:6px;">📊 総合勝率 TOP 5（2-leg / 参考）</div>
+      <div class="table-wrap" style="margin-bottom:12px;">
+        <table class="data-table" style="font-size:11px;">
+          <thead><tr><th>#</th><th>組み合わせ</th><th>勝率</th><th>マルチodds</th><th>EV</th></tr></thead>
+          <tbody>
+{prob_rows}
+          </tbody>
+        </table>
+      </div>
+      <div style="font-size:12px;font-weight:700;color:#e3b341;margin-bottom:6px;">💰 EV最大 TOP 5（損失幅最小・参考）</div>
+      <div class="table-wrap" style="margin-bottom:12px;">
+        <table class="data-table" style="font-size:11px;">
+          <thead><tr><th>#</th><th>組み合わせ</th><th>勝率</th><th>マルチodds</th><th>EV</th></tr></thead>
+          <tbody>
+{ev_rows}
+          </tbody>
+        </table>
+      </div>
+    </div>"""
+
+    html = f"""<!-- AUTO:MULTI_ACTIVE START -->
+  <div class="section">
+    <div class="section-title" style="color:#3fb950;border-bottom-color:#2ea043;">🎯 アクティブマルチ候補（自動算出）</div>
+    <p style="color:var(--text2);font-size:12px;margin-bottom:14px;line-height:1.7;">
+      最新セッション (Session_{session_id} {session_date}) の output_b を <strong>multi_bets.json から自動抽出</strong>。出力A 2件以上でマルチ構成可。
+    </p>
+{content}
+  </div>
+  <!-- AUTO:MULTI_ACTIVE END -->"""
+    return html
+
+
+# ─────────────────────────────────────
 # マーカー差し替え
 # ─────────────────────────────────────
 def replace_marker(content, marker_name, new_html):
@@ -379,6 +705,76 @@ def ensure_markers(content):
                 content = content[:start] + "<!-- AUTO:PRED_Q3 START -->\nPLACEHOLDER_Q3\n<!-- AUTO:PRED_Q3 END -->" + content[abs_end:]
                 changes.append("PRED_Q3 marker inserted")
 
+    # ACTIVE_TAB: replace entire content-active body
+    if "<!-- AUTO:ACTIVE_TAB START -->" not in content:
+        m = re.search(r'<div class="tab-content" id="content-active">', content)
+        if m:
+            start = m.end()
+            # content-active closes with `</div>\n<!-- ===== 全履歴 ===== -->` pattern
+            end_m = re.search(r'</div>\s*<!-- ===== (?:\S+ )?全履歴 ===== -->', content[start:])
+            if end_m:
+                abs_end = start + end_m.start() + len("</div>")
+                content = content[:start] + "\n<!-- AUTO:ACTIVE_TAB START -->\nPLACEHOLDER_ACTIVE\n<!-- AUTO:ACTIVE_TAB END -->\n" + content[abs_end:]
+                changes.append("ACTIVE_TAB marker inserted")
+
+    # HIGHPROB_ACTIVE: replaces the wrapper <div class="section"> containing 🎯 アクティブ候補セクション
+    if "<!-- AUTO:HIGHPROB_ACTIVE START -->" not in content:
+        m = re.search(r'<!-- 🎯 アクティブ候補セクション.*?-->', content, re.DOTALL)
+        if m:
+            # find the <div class="section"> wrapper start (BEFORE or AFTER the comment)
+            # scan back to find <div class="section"> just before this comment
+            wrap_start = content.rfind('<div class="section">', 0, m.start() + 200)
+            # then find the matching closing </div> for that section wrapper
+            # use depth counter starting from wrap_start + 1
+            if wrap_start > 0:
+                depth = 0
+                pos = wrap_start
+                close_pos = None
+                while pos < len(content):
+                    open_m = content.find('<div', pos)
+                    close_m = content.find('</div>', pos)
+                    if close_m == -1:
+                        break
+                    if open_m != -1 and open_m < close_m:
+                        depth += 1
+                        pos = open_m + 4
+                    else:
+                        depth -= 1
+                        if depth == 0:
+                            close_pos = close_m + len('</div>')
+                            break
+                        pos = close_m + len('</div>')
+                if close_pos:
+                    content = content[:wrap_start] + "<!-- AUTO:HIGHPROB_ACTIVE START -->\nPLACEHOLDER_HIGHPROB\n<!-- AUTO:HIGHPROB_ACTIVE END -->" + content[close_pos:]
+                    changes.append("HIGHPROB_ACTIVE marker inserted")
+
+    # MULTI_ACTIVE: replaces the wrapper <div class="section"> containing 🎯 アクティブマルチ候補
+    if "<!-- AUTO:MULTI_ACTIVE START -->" not in content:
+        m = re.search(r'<!-- 🎯 アクティブマルチ候補', content)
+        if m:
+            wrap_start = content.rfind('<div class="section">', 0, m.start() + 200)
+            if wrap_start > 0:
+                depth = 0
+                pos = wrap_start
+                close_pos = None
+                while pos < len(content):
+                    open_m = content.find('<div', pos)
+                    close_m = content.find('</div>', pos)
+                    if close_m == -1:
+                        break
+                    if open_m != -1 and open_m < close_m:
+                        depth += 1
+                        pos = open_m + 4
+                    else:
+                        depth -= 1
+                        if depth == 0:
+                            close_pos = close_m + len('</div>')
+                            break
+                        pos = close_m + len('</div>')
+                if close_pos:
+                    content = content[:wrap_start] + "<!-- AUTO:MULTI_ACTIVE START -->\nPLACEHOLDER_MULTI\n<!-- AUTO:MULTI_ACTIVE END -->" + content[close_pos:]
+                    changes.append("MULTI_ACTIVE marker inserted")
+
     return content, changes
 
 
@@ -399,14 +795,24 @@ def main():
     summary_html = build_summary(stats, cumul)
     bet_only_html = build_bet_only_panel(stats)
     q3_html = build_q3_panel(cumul, stats)
+    active_html = build_active_tab(stats)
+    highprob_html = build_highprob_active(cumul)
+    multi_html = build_multi_active(cumul)
 
     # Step 2: replace
-    for name, html in [
+    sections = [
         ("BIG_STAT", big_stat_html),
         ("SUMMARY", summary_html),
         ("PRED_BET_ONLY", bet_only_html),
         ("PRED_Q3", q3_html),
-    ]:
+        ("ACTIVE_TAB", active_html),
+        ("HIGHPROB_ACTIVE", highprob_html),
+        ("MULTI_ACTIVE", multi_html),
+    ]
+    for name, html in sections:
+        if html is None:
+            print(f"  [SKIP] {name} (no data)")
+            continue
         content, ok = replace_marker(content, name, html)
         print(f"  [{'OK' if ok else 'MISS'}] {name}")
 
