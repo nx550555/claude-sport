@@ -1,6 +1,6 @@
 {
   "source": "https://www.basketball-reference.com/leagues/NBA_2026_ratings.html",
-  "fetched_at": "2026-04-21T22:29:51.687399+09:00",
+  "fetched_at": "2026-04-21T23:08:05.634181+09:00",
   "note": "NRtg = possession-adjusted net rating. *_adj = SOS adjusted values (preferred for L1 screening).",
   "teams": [
     {
@@ -331,12 +331,12 @@
       "losses": "L",
       "win_pct": "W/L%",
       "mov": "MOV",
-      "ortg": "Offensive RatingAn estimate of points produced (players) or scored (teams) per 100 possessions\">ORtg",
-      "drtg": "Defensive RatingAn estimate of points allowed per 100 possessions\">DRtg",
+      "ortg": "ORtg",
+      "drtg": "DRtg",
       "nrtg": "NRtg",
       "mov_adj": "MOV/A",
-      "ortg_adj": "Adjusted Offensive RatingAn estimate of points scored per 100 possessions adjusted for strength of opponent defense.\">ORtg/A",
-      "drtg_adj": "Adjusted Defensive RatingAn estimate of points allowed per 100 possessions adjusted for strength of opponent offense.\">DRtg/A",
+      "ortg_adj": "ORtg/A",
+      "drtg_adj": "DRtg/A",
       "nrtg_adj": "NRtg/A"
     },
     {
