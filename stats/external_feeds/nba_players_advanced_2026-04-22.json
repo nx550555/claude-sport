@@ -1,6 +1,6 @@
 {
   "source": "https://www.basketball-reference.com/leagues/NBA_2026_advanced.html",
-  "fetched_at": "2026-04-22T12:34:16.442589+09:00",
+  "fetched_at": "2026-04-22T23:03:30.470905+09:00",
   "kind": "advanced",
   "player_count": 763,
   "players": [
@@ -33,7 +33,7 @@
       "dbpm": 1.0,
       "bpm": 2.6,
       "vorp": 3.4,
-      "awards": null
+      "awards": "DPOY-8"
     },
     {
       "player": "Kevin Durant",
@@ -219,7 +219,7 @@
       "dbpm": 2.3,
       "bpm": 4.2,
       "vorp": 4.2,
-      "awards": "AS"
+      "awards": "DPOY-5,AS"
     },
     {
       "player": "Tyrese Maxey",
@@ -312,7 +312,7 @@
       "dbpm": 1.0,
       "bpm": 3.2,
       "vorp": 3.5,
-      "awards": null
+      "awards": "DPOY-6"
     },
     {
       "player": "VJ Edgecombe",
@@ -591,7 +591,7 @@
       "dbpm": 1.8,
       "bpm": 1.3,
       "vorp": 2.1,
-      "awards": null
+      "awards": "DPOY-9"
     },
     {
       "player": "Paolo Banchero",
@@ -932,7 +932,7 @@
       "dbpm": 0.9,
       "bpm": 1.0,
       "vorp": 1.8,
-      "awards": null
+      "awards": "DPOY-4"
     },
     {
       "player": "Ryan Rollins",
@@ -994,7 +994,7 @@
       "dbpm": 0.4,
       "bpm": 2.0,
       "vorp": 2.4,
-      "awards": null
+      "awards": "DPOY-11"
     },
     {
       "player": "Cooper Flagg",
@@ -1800,7 +1800,7 @@
       "dbpm": 1.1,
       "bpm": 2.0,
       "vorp": 2.3,
-      "awards": null
+      "awards": "DPOY-10"
     },
     {
       "player": "Royce O'Neale",
@@ -2389,7 +2389,7 @@
       "dbpm": 3.3,
       "bpm": 1.2,
       "vorp": 1.7,
-      "awards": null
+      "awards": "DPOY-7"
     },
     {
       "player": "Player",
@@ -2668,7 +2668,7 @@
       "dbpm": 1.9,
       "bpm": 4.2,
       "vorp": 3.1,
-      "awards": "AS"
+      "awards": "DPOY-2,AS"
     },
     {
       "player": "Josh Hart",
@@ -2823,7 +2823,7 @@
       "dbpm": 0.5,
       "bpm": 5.0,
       "vorp": 3.5,
-      "awards": "AS"
+      "awards": "DPOY-11,AS"
     },
     {
       "player": "Brandon Miller",
@@ -3288,7 +3288,7 @@
       "dbpm": 3.6,
       "bpm": 3.1,
       "vorp": 2.4,
-      "awards": null
+      "awards": "DPOY-3"
     },
     {
       "player": "Nique Clifford",
@@ -3474,7 +3474,7 @@
       "dbpm": 1.0,
       "bpm": -1.4,
       "vorp": 0.3,
-      "awards": null
+      "awards": "DPOY-11"
     },
     {
       "player": "Victor Wembanyama",
@@ -3505,7 +3505,7 @@
       "dbpm": 4.2,
       "bpm": 10.7,
       "vorp": 6.0,
-      "awards": "AS"
+      "awards": "DPOY-1,AS"
     },
     {
       "player": "Russell Westbrook",

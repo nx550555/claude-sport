@@ -1,6 +1,6 @@
 {
   "source": "https://www.basketball-reference.com/leagues/NBA_2026_per_game.html",
-  "fetched_at": "2026-04-22T12:34:12.715608+09:00",
+  "fetched_at": "2026-04-22T23:02:57.971549+09:00",
   "kind": "per_game",
   "player_count": 763,
   "players": [
@@ -563,7 +563,7 @@
       "tov_per_g": 2.4,
       "pf_per_g": 2.4,
       "pts_per_g": 25.0,
-      "awards": "AS"
+      "awards": "DPOY-1,AS"
     },
     {
       "player": "Deni Avdija",
@@ -1520,7 +1520,7 @@
       "tov_per_g": 1.6,
       "pf_per_g": 1.7,
       "pts_per_g": 20.1,
-      "awards": null
+      "awards": "DPOY-11"
     },
     {
       "player": "LaMelo Ball",
@@ -1751,7 +1751,7 @@
       "tov_per_g": 1.9,
       "pf_per_g": 2.8,
       "pts_per_g": 19.5,
-      "awards": "AS"
+      "awards": "DPOY-11,AS"
     },
     {
       "player": "Ja Morant",
@@ -2312,7 +2312,7 @@
       "tov_per_g": 2.4,
       "pf_per_g": 2.2,
       "pts_per_g": 18.3,
-      "awards": null
+      "awards": "DPOY-8"
     },
     {
       "player": "Evan Mobley",
@@ -2378,7 +2378,7 @@
       "tov_per_g": 2.6,
       "pf_per_g": 2.6,
       "pts_per_g": 18.1,
-      "awards": "AS"
+      "awards": "DPOY-5,AS"
     },
     {
       "player": "Trae Young",
@@ -2939,7 +2939,7 @@
       "tov_per_g": 1.6,
       "pf_per_g": 2.3,
       "pts_per_g": 17.1,
-      "awards": "AS"
+      "awards": "DPOY-2,AS"
     },
     {
       "player": "Jalen Williams",
@@ -3203,7 +3203,7 @@
       "tov_per_g": 1.8,
       "pf_per_g": 2.4,
       "pts_per_g": 16.7,
-      "awards": null
+      "awards": "DPOY-10"
     },
     {
       "player": "Stephon Castle",
@@ -3335,7 +3335,7 @@
       "tov_per_g": 1.7,
       "pf_per_g": 1.5,
       "pts_per_g": 16.5,
-      "awards": null
+      "awards": "DPOY-6"
     },
     {
       "player": "Immanuel Quickley",
@@ -6668,7 +6668,7 @@
       "tov_per_g": 1.8,
       "pf_per_g": 2.2,
       "pts_per_g": 11.9,
-      "awards": null
+      "awards": "DPOY-9"
     },
     {
       "player": "Blake Hinson",
@@ -7526,7 +7526,7 @@
       "tov_per_g": 1.4,
       "pf_per_g": 2.6,
       "pts_per_g": 10.9,
-      "awards": null
+      "awards": "DPOY-4"
     },
     {
       "player": "Jusuf Nurkić",
@@ -8945,7 +8945,7 @@
       "tov_per_g": 1.5,
       "pf_per_g": 2.7,
       "pts_per_g": 9.9,
-      "awards": null
+      "awards": "DPOY-3"
     },
     {
       "player": "Royce O'Neale",
@@ -10397,7 +10397,7 @@
       "tov_per_g": 0.9,
       "pf_per_g": 2.0,
       "pts_per_g": 8.6,
-      "awards": null
+      "awards": "DPOY-7"
     },
     {
       "player": "Jaden Ivey",
@@ -10892,7 +10892,7 @@
       "tov_per_g": 2.7,
       "pf_per_g": 2.9,
       "pts_per_g": 8.4,
-      "awards": null
+      "awards": "DPOY-11"
     },
     {
       "player": "Jared McCain",

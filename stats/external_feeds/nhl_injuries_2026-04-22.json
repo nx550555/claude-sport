@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-04-22T12:34:30.801754+09:00",
+  "fetched_at": "2026-04-22T23:03:46.917559+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -115,14 +115,6 @@
       "estimated_return": "Sep 15",
       "status": "Injured Reserve",
       "comment": "Sep 30: ir-lt"
-    },
-    {
-      "player": "Victor Hedman",
-      "team": null,
-      "position": "D",
-      "estimated_return": "May 4",
-      "status": "Injured Reserve",
-      "comment": "Apr 21: Hedman (personal) is not expected to play during the first-round series after head coach Jon Cooper told reporters the blueliner was on \"the doubtful side for this series,\" Pierre LeBrun of TSN reports."
     },
     {
       "player": "Derek Forbort",
