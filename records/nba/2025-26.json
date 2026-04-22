@@ -553,7 +553,7 @@
       "date": "2026-04-20",
       "match": "Philadelphia 76ers @ Boston Celtics",
       "venue": "TD Garden, Boston (HOME: Celtics)",
-      "tier": "skip",
+      "tier": "superseded",
       "predicted_winner": "Boston Celtics",
       "prediction_confidence": 87,
       "prediction_basis": "NRtg diff 8.5pt (BOS 8.1 vs PHI -0.4). L1 PASS (>5pt). Embiid OUT appendicitis. High confidence but odds @1.13 too short: EV = (0.87 * 1.13) - 1 = -1.7%. SKIP.",
@@ -572,13 +572,15 @@
       "result": "Boston Celtics",
       "hit": null,
       "score": "BOS 123-91 PHI",
-      "prediction_hit": true,
+      "prediction_hit": null,
       "actual_date": "2026-04-20",
       "sources": [
         "NBA.com 76ers-celtics-2026-playoffs-game-1-takeaways",
         "CBS Sports 2026 nba playoff bracket"
       ],
-      "outcome_note": "BOS 123-91 PHI G1 (+32 margin, franchise PO opener record)。Tatum 25/11/7, Brown 26pts。予測HIT but SKIP (EV -1.7%@1.13)。L1 NRtg 8.5pt diff + Embiid OUT が予測通りblowout。"
+      "outcome_note": "BOS 123-91 PHI G1 (+32 margin, franchise PO opener record)。Tatum 25/11/7, Brown 26pts。予測HIT but SKIP (EV -1.7%@1.13)。L1 NRtg 8.5pt diff + Embiid OUT が予測通りblowout。",
+      "quadrant": "superseded",
+      "note_repair": "DEDUP 2026-04-22: canonical is 'BOS vs PHI G1' (Session_47)"
     },
     {
       "date": "2026-04-21",
@@ -685,7 +687,7 @@
       "home": "BOS",
       "away": "PHI",
       "round": "PO R1 G1 or RS",
-      "tier": "skip",
+      "tier": "superseded",
       "predicted_winner": "BOS",
       "prediction_confidence": 85.2,
       "prediction_basis": "Market implied 85.2%; L1(NRtg) 未検証。",
@@ -705,12 +707,14 @@
       "status": "completed",
       "hit": null,
       "result": "Boston Celtics",
-      "prediction_hit": true,
+      "prediction_hit": null,
       "screening_session": "2026-04-20 Session_43",
       "note": "手動データ2026-04-19.json起点。",
       "score": "BOS 123-91 PHI",
       "actual_date": "2026-04-20",
-      "outcome_note": "BOS 123-91 PHI G1 HIT (+32 blowout)。"
+      "outcome_note": "BOS 123-91 PHI G1 HIT (+32 blowout)。",
+      "quadrant": "superseded",
+      "note_repair": "DEDUP 2026-04-22: canonical is 'BOS vs PHI G1' (Session_47)"
     },
     {
       "date": "2026-04-22",
@@ -753,7 +757,7 @@
       "home": "OKC",
       "away": "PHX",
       "round": "PO R1 G1 or RS",
-      "tier": "skip",
+      "tier": "superseded",
       "predicted_winner": "OKC",
       "prediction_confidence": 90.6,
       "prediction_basis": "Market implied 90.6%; L1(NRtg) 未検証。",
@@ -773,12 +777,14 @@
       "status": "completed",
       "hit": null,
       "result": "Oklahoma City Thunder",
-      "prediction_hit": true,
+      "prediction_hit": null,
       "screening_session": "2026-04-20 Session_43",
       "note": "手動データ2026-04-19.json起点。",
       "score": "OKC 119-84 PHX",
       "actual_date": "2026-04-19",
-      "outcome_note": "OKC 119-84 PHX G1 HIT (+35 blowout, #1 seed dominance)。"
+      "outcome_note": "OKC 119-84 PHX G1 HIT (+35 blowout, #1 seed dominance)。",
+      "quadrant": "superseded",
+      "note_repair": "DEDUP 2026-04-22: canonical is 'OKC vs PHX G1' (Session_47)"
     },
     {
       "date": "2026-04-20",

@@ -171,7 +171,7 @@
       "match": "DC Defenders @ St. Louis Battlehawks",
       "home": "St. Louis Battlehawks",
       "away": "DC Defenders",
-      "tier": "caution",
+      "tier": "superseded",
       "rec": null,
       "rec_odds": null,
       "odds_dc": 1.44,
@@ -180,7 +180,7 @@
       "confidence": 78,
       "caution_reason": "conf 78% < Week4 threshold 80% (U008). L1 PASS: PD/G diff 18.7 (DC+16.7 vs STL-2.0). DC away -4% (U004). Ta'amu confirmed (W3 active). EV+12.3% (market 1.44). STL at home + Week3 comeback ability. Upgrade from 'QB unconfirmed' CAUTION to 'analyzed CAUTION'.",
       "status": "caution",
-      "result": null,
+      "result": "stale pre-screening CAUTION (Session_30 era); closed during audit 2026-04-22",
       "score": null,
       "hit": null,
       "actual_ev": null,
@@ -207,7 +207,8 @@
         "DC": "Jordan Ta'amu confirmed (W3: 15/27 173yd 1TD, 45-7 blowout win)。MVP of 2025 UFL Championship。",
         "STL": "Harrison Frost (came off bench W3: 9/15 148yd 3TD comeback 34-30 vs Stallions)"
       },
-      "ev_calc": "(0.78 x 1.44) - 1 = +12.3%"
+      "ev_calc": "(0.78 x 1.44) - 1 = +12.3%",
+      "note_repair": "AUDIT CLOSE 2026-04-22 (no odds/conf, no-bet)"
     },
     {
       "week": 4,

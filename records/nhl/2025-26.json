@@ -645,7 +645,7 @@
       "home": "Colorado Avalanche",
       "away": "Los Angeles Kings",
       "seeding": "C1 COL vs WC2 LAK",
-      "tier": "caution",
+      "tier": "superseded",
       "predicted_winner": "Colorado Avalanche",
       "prediction_confidence": 66,
       "prediction_basis": "5v5 xGF% COL 56.67% vs LAK 51.97%, raw diff 4.70pp (below 5pt threshold). Score-adjusted 5v5: COL 57.48% vs LAK 51.75% = diff 5.73pp (passes threshold). COL Presidents Trophy, Makar healthy, home +7%.",
@@ -670,7 +670,7 @@
       "goalie_confirmed": false,
       "caution_reason": "Score-adj 5.73pp PASSED L1. Home +7%. But conf 66% < 75 AND EV -5.62% < +5%. No GO upgrade even with goalie confirm. Effectively SKIP for bet purposes.",
       "hit": null,
-      "result": null,
+      "result": "See newer entry 'Colorado Avalanche @ Los Angeles Kings (G1)'",
       "odds_data_2026_04_17": {
         "home_odds": 1.43,
         "away_odds": 2.75,
@@ -680,7 +680,10 @@
       "ev_calculated": -5.62,
       "rec": "Colorado Avalanche",
       "rec_odds": 1.43,
-      "ev": -5.62
+      "ev": null,
+      "score": "Duplicate pre-G1 preview from Session_30/31; closed during audit 2026-04-22",
+      "prediction_hit": null,
+      "note_repair": "DUPLICATE / AUDIT CLOSE 2026-04-22"
     },
     {
       "series": "PO_R1_W2",
@@ -1391,9 +1394,9 @@
       "result": null,
       "score": null,
       "prediction_hit": null,
-      "rec": null,
-      "rec_odds": null,
-      "ev": null,
+      "rec": "Colorado Avalanche",
+      "rec_odds": 1.39,
+      "ev": -0.027,
       "hit": null,
       "actual_ev": null,
       "source": "2026-04-21.json",

@@ -407,10 +407,19 @@ def build_active_tab(stats):
 
             match = e.get("match", "?")
             rec = e.get("rec") or e.get("predicted_winner") or "?"
-            odds = e.get("rec_odds") or e.get("fav_odds") or "—"
+            odds_raw = e.get("rec_odds") or e.get("fav_odds")
+            odds = f"{odds_raw}" if isinstance(odds_raw, (int, float)) else "—"
             ev = e.get("ev")
-            ev_str = f"{ev*100:+.1f}%" if isinstance(ev, (int, float)) else "—"
-            conf = e.get("prediction_confidence", "—")
+            if isinstance(ev, (int, float)):
+                # Guard against percentage unit mistakes (>1 or <-1)
+                if abs(ev) > 1.5:
+                    ev_str = f"({ev:.2f} ←要修正)"
+                else:
+                    ev_str = f"{ev*100:+.1f}%"
+            else:
+                ev_str = "—"
+            conf_raw = e.get("prediction_confidence")
+            conf = f"{conf_raw}%" if isinstance(conf_raw, (int, float)) else "—"
             round_ = e.get("round", "")
             tourney = e.get("tournament", sport_label)
             date_ = e.get("date", "—")
@@ -428,7 +437,7 @@ def build_active_tab(stats):
                 f'      <div class="ac-metrics">\n'
                 f'        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">{odds}</div></div>\n'
                 f'        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">{ev_str}</div></div>\n'
-                f'        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">{conf}%</div></div>\n'
+                f'        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">{conf}</div></div>\n'
                 f'        <div class="acm"><div class="acm-l">L1</div><div class="acm-v rule">{l1_short}</div></div>\n'
                 f'      </div>\n'
                 f'      <div class="ac-note">{basis}</div>\n'

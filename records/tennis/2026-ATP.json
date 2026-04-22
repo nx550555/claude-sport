@@ -2590,9 +2590,9 @@
         "R009(WC +2%)"
       ],
       "adjustments": "L4: home WC +2%, momentum +2%",
-      "rec": null,
-      "rec_odds": null,
-      "ev": null,
+      "rec": "Jodar R.",
+      "rec_odds": 1.21,
+      "ev": -0.0078,
       "hit": null,
       "result": null,
       "score": null,

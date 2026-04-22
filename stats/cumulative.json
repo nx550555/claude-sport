@@ -265,12 +265,16 @@
       "note": "Phase2移行(2026-04-18)以降発動0件。閾値UF>=3+div>=15ppは実運用で極めて稀"
     },
     "Q3_output_a": {
-      "total": 18,
-      "confirmed": 3,
-      "hit": 3,
+      "total": 11,
+      "confirmed": 7,
+      "hit": 7,
       "hit_rate": 1.0,
-      "ev_total": null,
-      "note": "Session_45で正式運用開始。NBA G1 3/3 HIT (BOS blowout / SAS Wemby record / OKC 119-84). 残15件は4/21-27決着待ち。EVは計算しない（EV負でも確実性抽出が目的）"
+      "ev_total": 0,
+      "void_excluded": 1,
+      "void_matches": [
+        "Alcaraz C. vs Machac T."
+      ],
+      "note": "Session_48 audit 2026-04-22: NBA dedup + walkover除外後の実測。Q3 = quadrant==Q3_output_a OR (conf>=85 AND tier in skip/caution/output_a). 旧値 15/10/10."
     },
     "Q4_upset_watch": {
       "total": 11,
@@ -286,7 +290,7 @@
     },
     "last_updated": "2026-04-20 Session_45"
   },
-  "last_updated": "2026-04-20",
+  "last_updated": "2026-04-22",
   "schema_versions": [
     {
       "version": "v3.1",
