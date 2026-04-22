@@ -1,0 +1,136 @@
+{
+  "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
+  "source_injuries": "https://www.espn.com/nhl/injuries",
+  "fetched_at": "2026-04-22T12:34:30.801754+09:00",
+  "starting_goalies": [],
+  "injuries": [
+    {
+      "player": "Ross Johnston",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Apr 22",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Shea Weber",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Jul 1",
+      "status": "Injured Reserve",
+      "comment": "Sep 30: ir-lt"
+    },
+    {
+      "player": "Mats Zuccarello",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Apr 22",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Yakov Trenin",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Apr 22",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Brett Pesce",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": "Apr 13: ir-lt"
+    },
+    {
+      "player": "Semyon Varlamov",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": "Apr 19: Varlamov (knee) has been returned from his conditioning role with AHL Bridgeport, per the AHL transaction log."
+    },
+    {
+      "player": "Kyle Palmieri",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": "Apr 15: Palmieri (knee) told reporters Wednesday that he should be ready to go for the start of training camp, Stefen Rosner of NHL.com reports."
+    },
+    {
+      "player": "Alexander Romanov",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": "Apr 12: Romanov (shoulder) will miss the final two games of the regular season, according to Stefen Rosner of NHL.com on Sunday."
+    },
+    {
+      "player": "Artem Zub",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Apr 23",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Tyler Kleven",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Apr 23",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Nick Jensen",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": "Apr 14: Head coach Travis Green said Tuesday that Jensen (knee) is a long shot to play again this year, Bruce Garrioch of Postmedia reports."
+    },
+    {
+      "player": "Emil Andrae",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Apr 22",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Rodrigo Abols",
+      "team": null,
+      "position": "C",
+      "estimated_return": "May 2",
+      "status": "Injured Reserve",
+      "comment": "Jan 21: Abols' injury is a fractured right ankle, Kevin Kurz of The Athletic reports Wednesday."
+    },
+    {
+      "player": "Logan Couture",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": "Sep 30: ir-lt"
+    },
+    {
+      "player": "Victor Hedman",
+      "team": null,
+      "position": "D",
+      "estimated_return": "May 4",
+      "status": "Injured Reserve",
+      "comment": "Apr 21: Hedman (personal) is not expected to play during the first-round series after head coach Jon Cooper told reporters the blueliner was on \"the doubtful side for this series,\" Pierre LeBrun of TSN reports."
+    },
+    {
+      "player": "Derek Forbort",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": "Oct 28: Forbort (undisclosed) was placed on long-term injured reserve Tuesday."
+    }
+  ]
+}
