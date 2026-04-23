@@ -129,6 +129,31 @@
 **中優先:** P018 evidence 3件目監視 → N019 implement 判断
 **インフラ:** cumulative.json と dashboard_stats.json の自動整合性チェックを health_check に追加検討
 
+### 🚨 Session_50 完了報告 (2026-04-23)
+
+**主要成果:**
+- [x] **PA065 EDM-ANA G2** MISS 反映 (ANA 6-4 UPSET / type_a_watch 的中 / P025 2/3)
+- [x] **PA066 OKC-PHX G2** HIT (OKC 120-107 SGA 37pts) → Q3 9/11 → 修正後 9/14
+- [x] **PA062 2026-04-23.json 69試合スクリーニング**: GO 5件新規 / Q3 7 / Q4 13 / SKIP 44
+- [x] **ダッシュボード整合性修正 (ユーザー指摘 #1)**: 66.7% vs 81.8% 乖離を 64.3% に統一
+- [x] **Feedback loop 根本改善 (ユーザー指摘 #2)**: Q3 MISS 5件 miss_analysis 完全補填 / P026 新候補 / health_check v5
+
+**数値 (Session_50 終了時):**
+- 🟢 ベット推奨 22/30 (73.3%) +2.453u | Pending 5 (Madrid GO)
+- 🎯 Q3 output_a 9/14 (64.3%) | Pending 8
+- health_check v5: MISS 欠損 58件アラート (PA071)
+
+**Git commits:** eddeb9f / 72f895e / 2c2e466 / 495a6ef
+
+### 🎯 Session_51 行動計画 (次回)
+**最優先 A:** PA071 既存 MISS miss_analysis 欠損 58件漸進補填 (毎 STEP 0 で進捗可視化)
+**最優先 B:** PA068 Madrid GO 5件結果 (Tsitsipas/Paul/Musetti/Keys/Mertens 4/24-25)
+**最優先 C:** PA069 Q3 output_a 7件結果追跡 (Sinner/Swiatek/Gauff/Sabalenka/Andreeva/Bencic/Rybakina)
+**最優先 D:** PA070 Q4 upset_watch (特に Osaka vs Osorio UPSET 観察)
+**中優先:** P024 evidence 3件目 → N_NBA_new2 実装 (star scorer 欠場補正)
+**中優先:** P026 evidence 継続 (NBA G1 blowout 後 G2 home fade)
+**インフラ:** CLAUDE.md に「結果反映時 miss_analysis 同時記入必須」明文化
+
 ### 🚨 Session_46 完了報告
 - **PA051 upset_patterns 監査 100% 完了**（32件 confirmed + 4件 invalidated, rule_linked率 19.4%→100%）
 - **CE016 発見・全4件解消**（A017/A022/A023/A024 勝敗逆転記録）
