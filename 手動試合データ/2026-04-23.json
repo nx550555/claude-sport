@@ -1,0 +1,865 @@
+{
+  "date": "2026-04-23",
+  "updated_at": "2026-04-23T04:04:42.105Z",
+  "tournaments": [
+    {
+      "tournament": "ATP マドリッド",
+      "category": "男子シングルス",
+      "sport": "tennis",
+      "date": "2024-04-23",
+      "matches": {
+        "live": [],
+        "completed": [],
+        "upcoming": [
+          {
+            "date": "2024-04-23",
+            "start_time": "18:00",
+            "player1": "ハンフマン・ヤニック",
+            "player2": "ギロン・マルコス",
+            "odds": {
+              "player1": 1.37,
+              "player2": 3.2
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "18:00",
+            "player1": "ガリン・クリスティアン",
+            "player2": "ブロックス・アレクサンダー",
+            "odds": {
+              "player1": 2.8,
+              "player2": 1.47
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "18:00",
+            "player1": "アトマン・テレンス",
+            "player2": "ケッマノビッチ・ミオミル",
+            "odds": {
+              "player1": 2.16,
+              "player2": 1.74
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "18:00",
+            "player1": "カレーニョ・ブスタ・パブロ",
+            "player2": "フチョヴィクス・マルトン",
+            "odds": {
+              "player1": 1.89,
+              "player2": 1.96
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "19:10",
+            "player1": "ムナル・ハウメ",
+            "player2": "シェフチェンコ・アレクサンドル",
+            "odds": {
+              "player1": 1.61,
+              "player2": 2.34
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "19:10",
+            "player1": "マロジャン・ファビアン",
+            "player2": "クイン・イーサン",
+            "odds": {
+              "player1": 1.74,
+              "player2": 2.11
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "19:10",
+            "player1": "ボルジェス・ヌーノ",
+            "player2": "ナボーネ・マリアーノ",
+            "odds": {
+              "player1": 2.42,
+              "player2": 1.57
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "19:10",
+            "player1": "ポピリン・アレクセイ",
+            "player2": "ダム・マルティン",
+            "odds": {
+              "player1": 1.46,
+              "player2": 2.75
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "20:20",
+            "player1": "キプソン・パトリック",
+            "player2": "ツィツィパス・ステファノス",
+            "odds": {
+              "player1": 3.25,
+              "player2": 1.35
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "20:20",
+            "player1": "ガウバス・ヴィリウス",
+            "player2": "バエス・セバスチャン",
+            "odds": {
+              "player1": 3.05,
+              "player2": 1.38
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "20:20",
+            "player1": "バジェホ・アドルフォ・ダニエル",
+            "player2": "ディミトロフ・グリゴール",
+            "odds": {
+              "player1": 1.88,
+              "player2": 1.93
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "21:30",
+            "player1": "トルンジェリティ・マルコ",
+            "player2": "メリダ・ダニエル",
+            "odds": {
+              "player1": 2.12,
+              "player2": 1.73
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "21:30",
+            "player1": "アルトマイアー・ダニエル",
+            "player2": "セルンドロ・フアン・マヌエル",
+            "odds": {
+              "player1": 2.13,
+              "player2": 1.72
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "22:20",
+            "player1": "カラベッリ・ウーゴ・カミロ",
+            "player2": "モンフィルス・ガエル",
+            "odds": {
+              "player1": 1.56,
+              "player2": 2.44
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "22:40",
+            "player1": "ブドコフ・キャア・ニコライ",
+            "player2": "オペルカ・ライリー",
+            "odds": {
+              "player1": 2.02,
+              "player2": 1.8
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "01:10",
+            "player1": "ランダルセ・マルティン",
+            "player2": "ウォルトン・アダム",
+            "odds": {
+              "player1": 1.23,
+              "player2": 4.2
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "17:00",
+            "player1": "オフナー・セバスチャン",
+            "player2": "エチェベリ・トマス・マルティン",
+            "odds": {
+              "player1": 2.65,
+              "player2": 1.48
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "17:00",
+            "player1": "ラヨビッチ・ドゥシャン",
+            "player2": "リンダーネック・アルトゥール",
+            "odds": {
+              "player1": 2.39,
+              "player2": 1.58
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "17:00",
+            "player1": "シナー・ヤニック",
+            "player2": "ボンジ・ベンジャミン",
+            "odds": {
+              "player1": 1.01,
+              "player2": 18
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "17:00",
+            "player1": "シェルトン・ベン",
+            "player2": "プリズミック・ディノ",
+            "odds": {
+              "player1": 1.46,
+              "player2": 2.75
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "17:00",
+            "player1": "ノリー・キャメロン",
+            "player2": "マハッチ・トマス",
+            "odds": {
+              "player1": 2.12,
+              "player2": 1.73
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "17:00",
+            "player1": "ホダル・ラファエル",
+            "player2": "ド・ミナー・アレックス",
+            "odds": {
+              "player1": 1.99,
+              "player2": 1.82
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "17:00",
+            "player1": "ティランテ・ティアゴ・アグスティン",
+            "player2": "ポール・トミー",
+            "odds": {
+              "player1": 3,
+              "player2": 1.4
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "17:00",
+            "player1": "フォンセカ・ジョアン",
+            "player2": "チリッチ・マリン",
+            "odds": {
+              "player1": 1.28,
+              "player2": 3.75
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "17:00",
+            "player1": "フルカッチ・フベルト",
+            "player2": "ムセッティ・ロレンツォ",
+            "odds": {
+              "player1": 2.9,
+              "player2": 1.42
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "17:00",
+            "player1": "レヘッカ・イジー",
+            "player2": "タビロ・アレハンドロ",
+            "odds": {
+              "player1": 1.67,
+              "player2": 2.22
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "17:00",
+            "player1": "シュトルフ・ヤン=レナルド",
+            "player2": "ミケルセン・アレックス",
+            "odds": {
+              "player1": 2.13,
+              "player2": 1.73
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "17:00",
+            "player1": "モラー・エルマー",
+            "player2": "ディアロ・ガブリエル",
+            "odds": {
+              "player1": 2.19,
+              "player2": 1.69
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "17:00",
+            "player1": "フィル・アートゥ",
+            "player2": "イグナシオ・ブセ",
+            "odds": {
+              "player1": 1.17,
+              "player2": 5.2
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "17:00",
+            "player1": "ルブレフ・アンドレイ",
+            "player2": "コプジバ・ヴィト",
+            "odds": {
+              "player1": 1.24,
+              "player2": 4.1
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "17:00",
+            "player1": "グリークスプール・タロン",
+            "player2": "ジュムフル・ダミル",
+            "odds": {
+              "player1": 1.62,
+              "player2": 2.3
+            },
+            "markets": [
+              "勝者"
+            ]
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "17:00",
+            "player1": "ナバ・エミリオ",
+            "player2": "ヴァシュロ・ヴァランタン",
+            "odds": {
+              "player1": 2.9,
+              "player2": 1.42
+            },
+            "markets": [
+              "勝者"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tournament": "WTA マドリッド",
+      "category": "女子シングルス",
+      "sport": "tennis",
+      "date": "2024-04-23",
+      "matches": {
+        "live": [],
+        "completed": [],
+        "upcoming": [
+          {
+            "date": "2024-04-23",
+            "start_time": "18:00",
+            "player1": "ボンダル・アンナ",
+            "player2": "スヴィトリナ・エリナ",
+            "odds": {
+              "player1": 5.2,
+              "player2": 1.18
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "18:00",
+            "player1": "スタロドゥプツェワ・ユリア",
+            "player2": "クリスティアン・ジャクリーン",
+            "odds": {
+              "player1": 1.63,
+              "player2": 2.35
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "18:00",
+            "player1": "ベンチッチ・ベリンダ",
+            "player2": "マルチンコ・ペトラ",
+            "odds": {
+              "player1": 1.19,
+              "player2": 4.9
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "19:10",
+            "player1": "ワン・シンユー",
+            "player2": "サムソン・ローラ",
+            "odds": {
+              "player1": 1.75,
+              "player2": 2.09
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "19:10",
+            "player1": "ボウザス・マネイロ・ジェシカ",
+            "player2": "シュナイダー・ディアナ",
+            "odds": {
+              "player1": 3.4,
+              "player2": 1.32
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "20:00",
+            "player1": "ガルフィ・ダルマ",
+            "player2": "カリンスカヤ・アンナ",
+            "odds": {
+              "player1": 2.65,
+              "player2": 1.48
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "20:00",
+            "player1": "シフィアテク・イガ",
+            "player2": "スニグル・ダリア",
+            "odds": {
+              "player1": 1.02,
+              "player2": 15
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "20:20",
+            "player1": "ジーゲムント・ラウラ",
+            "player2": "パオリーニ・ジャスミン",
+            "odds": {
+              "player1": 3.5,
+              "player2": 1.31
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "20:20",
+            "player1": "ボウズコバ・マリエ",
+            "player2": "カリニナ・アンゲリーナ",
+            "odds": {
+              "player1": 1.77,
+              "player2": 2.06
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "21:10",
+            "player1": "パークス・アリシア",
+            "player2": "リー・アン",
+            "odds": {
+              "player1": 2.08,
+              "player2": 1.76
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "21:10",
+            "player1": "サバレンカ・アリーナ",
+            "player2": "スターンズ・ペイトン",
+            "odds": {
+              "player1": 1.05,
+              "player2": 11
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "21:30",
+            "player1": "リネッテ・マグダ",
+            "player2": "ジョヴィッチ・イヴァ",
+            "odds": {
+              "player1": 2.65,
+              "player2": 1.49
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "22:20",
+            "player1": "フェルナンデス・レイラ",
+            "player2": "グラバー・ユリア",
+            "odds": {
+              "player1": 1.16,
+              "player2": 5.4
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "22:40",
+            "player1": "バプティスト・ヘイリー",
+            "player2": "ケベド・ケイトリン",
+            "odds": {
+              "player1": 1.46,
+              "player2": 2.75
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "00:00",
+            "player1": "オソリオ・カミラ",
+            "player2": "大坂・なおみ",
+            "odds": {
+              "player1": 1.93,
+              "player2": 1.88
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "02:00",
+            "player1": "アンドレーバ・ミッラ",
+            "player2": "ウドヴァルディ・パンナ",
+            "odds": {
+              "player1": 1.04,
+              "player2": 11
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "18:00",
+            "player1": "フレッハ・マグダレナ",
+            "player2": "シエラ・ソラナ",
+            "odds": {
+              "player1": 1.65,
+              "player2": 2.25
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "18:00",
+            "player1": "ジャンジャン・レオリア",
+            "player2": "ゴーフ・ココ",
+            "odds": {
+              "player1": 9,
+              "player2": 1.06
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "18:00",
+            "player1": "ルセ・エレナ=ガブリエラ",
+            "player2": "リバキナ・エレナ",
+            "odds": {
+              "player1": 11,
+              "player2": 1.05
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "18:00",
+            "player1": "プリスコバ・カロリナ",
+            "player2": "サッカリ・マリア",
+            "odds": {
+              "player1": 2.55,
+              "player2": 1.52
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "18:00",
+            "player1": "ツェン・シンウェン",
+            "player2": "ケニン・ソフィア",
+            "odds": {
+              "player1": 1.38,
+              "player2": 3.05
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "18:00",
+            "player1": "ソンメズ・ゼイネップ",
+            "player2": "ブクサ・クリスティナ",
+            "odds": {
+              "player1": 1.66,
+              "player2": 2.23
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "18:00",
+            "player1": "マクナリー・ケイティ",
+            "player2": "ムボコ・ビクトリア",
+            "odds": {
+              "player1": 3.75,
+              "player2": 1.28
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "18:00",
+            "player1": "プチンツェワ・ユリア",
+            "player2": "コスチューク・マルタ",
+            "odds": {
+              "player1": 3.1,
+              "player2": 1.37
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "18:00",
+            "player1": "ノスコバ・リンダ",
+            "player2": "アランゴ・エミリアナ",
+            "odds": {
+              "player1": 1.15,
+              "player2": 5.6
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "18:00",
+            "player1": "チルステア・ソラナ",
+            "player2": "グラント タイラ カテリナ",
+            "odds": {
+              "player1": 1.25,
+              "player2": 4
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "18:00",
+            "player1": "ペグラ・ジェシカ",
+            "player2": "ボルター・ケイティ",
+            "odds": {
+              "player1": 1.18,
+              "player2": 5
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "18:00",
+            "player1": "キーズ・マディソン",
+            "player2": "ザン・シュアイ",
+            "odds": {
+              "player1": 1.23,
+              "player2": 4.2
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "18:00",
+            "player1": "ワルテルト・シモナ",
+            "player2": "オスタペンコ・イェレーナ",
+            "odds": {
+              "player1": 2.8,
+              "player2": 1.45
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "18:00",
+            "player1": "テン・ジャニス",
+            "player2": "サムソノワ・リュドミラ",
+            "odds": {
+              "player1": 2.45,
+              "player2": 1.56
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "18:00",
+            "player1": "タウソン・クララ",
+            "player2": "シニアコバ・カテリーナ",
+            "odds": {
+              "player1": 1.81,
+              "player2": 2
+            },
+            "markets": "勝者"
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "18:00",
+            "player1": "メルテンス・エリーズ",
+            "player2": "エアラ・アレクサンドラ",
+            "odds": {
+              "player1": 1.37,
+              "player2": 3.15
+            },
+            "markets": "勝者"
+          }
+        ]
+      }
+    },
+    {
+      "tournament": "WTA 125K Oeiras 4, Portugal Women Singles",
+      "category": "WTA",
+      "sport": "tennis",
+      "date": "2024-04-23",
+      "matches": {
+        "live": [],
+        "completed": [],
+        "upcoming": [
+          {
+            "date": "2024-04-23",
+            "start_time": "18:30",
+            "player1": "オスイグウェ・ホイットニー",
+            "player2": "アクリ アヤナ",
+            "odds": {
+              "player1": 1.2,
+              "player2": 4.1
+            },
+            "markets": "+11"
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "21:00",
+            "player1": "モナ・バーテル",
+            "player2": "クリモヴィコヴァ・リンダ",
+            "odds": {
+              "player1": 1.87,
+              "player2": 1.83
+            },
+            "markets": "+11"
+          },
+          {
+            "date": "2024-04-23",
+            "start_time": "23:20",
+            "player1": "ハブリチュコワ ルチエ",
+            "player2": "フェロ・フィオナ",
+            "odds": {
+              "player1": 2,
+              "player2": 1.72
+            },
+            "markets": "+11"
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "19:00",
+            "player1": "セメニスタヤ・ダルヤ",
+            "player2": "モネ・カロル",
+            "odds": {
+              "player1": 1.3,
+              "player2": 3.2
+            },
+            "markets": "+10"
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "19:00",
+            "player1": "クデルメトワ・ポリーナ",
+            "player2": "ブロンゼッティ・ルチア",
+            "odds": {
+              "player1": 1.37,
+              "player2": 2.85
+            },
+            "markets": "+5"
+          }
+        ]
+      }
+    }
+  ]
+}

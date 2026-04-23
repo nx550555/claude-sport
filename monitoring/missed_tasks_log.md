@@ -68,3 +68,37 @@
     4. 勝手に自動追加・構造改修しない
 
 ---
+
+## Session _48 (2026-04-21 〜 2026-04-23)
+
+### 実施済み
+- CLAUDE.md STEP 0 health_check (WARN 2件) → STEP 1-5 必須ファイル全読み込み
+- **PA062 Madrid R1 スクリーニング完了**: ATP 29 + WTA 18 + NHL G2 8 + NBA G2/G1 8 + AHL 6 = 69 試合
+  - GO 1件 (Galfi @1.54 EV+20.3%)
+  - Q3 output_a 4件 (Sonmez / BOS G2 / SAS G2 / OKC G2)
+  - CAUTION 5件 (Jodar / LAK-COL G2 / Osorio / Lys + 旧 NRL stale)
+- **GEN003 確認**: Galfi / Jodar / KD status WebSearch 実施
+- records/wta/2026.json / 2026-ATP.json / nhl/2025-26.json / nba/2025-26.json / multi_bets.json 全更新
+- **sync_dashboard.py 新設**: 真実源駆動 7セクション自動同期インフラ
+- **包括データ整合性監査 + 修復**: cumulative Q3 3/3→7/7 訂正 / NRL EV 単位修正 / NHL LAK-COL 重複閉鎖 / UFL DC stale 閉鎖
+- **CAUTION 3分類実装**: WAITING/MARGIN/TRACK (records caution_type / framework.json taxonomy)
+- **UI 改善**: GO/CAUTION 視覚分離 / CAUTION 4サブセクション / スマホ予測精度タブ全画面修正
+
+### 未実施・漏れ
+- [次セッション対応] **PA060 NHL G2 全8試合 結果確認** (4/22-23 JST 以降決着)
+- [次セッション対応] **PA061 NBA G2 全8試合 結果確認** (4/22-25 JST 以降決着)
+- [次セッション対応] **Galfi 結果確認** (4/22) → HIT ならベット成績更新
+- [次セッション対応] **Q3 output_a 4件結果確認** (→ 7/7 →11/11 or 変動)
+- [次セッション対応] **COL G2 WAITING → goalie確認で GO昇格検討**
+- [次セッション対応] **KD G2 出場判定**待ち
+- [保留] **sync_dashboard.py 拡張** (累計履歴 / 成長分析タブ / ルール変更インパクト) — 低優先
+- [保留] **PA028-030 Premiership/Top14/Pro D2 PD/G 取得** — 中優先継続
+- [保留] **PA033 AHL Calder Cup PO スクリーニング** — 4/22 開幕済み
+
+### 気付き
+- **ダッシュボード連動の未実装セクションに気付いた**: ユーザー指摘「個々に更新して連動してないのでは？」で初めて sync_dashboard.py を作る決定 → 7 セクション真実源駆動化
+- **複数タイプの問題が「CAUTION」1 つに混在していた**: ユーザー質問「監視とはどういう定義か」で気付き、WAITING/MARGIN/TRACK 3 分類に分解。今後の screening で caution_type を意識的に選ぶ指針が明確化
+- **EV 単位混在 (percent vs fraction)** は records 書込時に検証されていなかったため、+9.2 と +0.092 が混在していた。sync_dashboard.py に `abs(ev) > 1.5` の警告表示は入れたが、**書込時バリデーション hook** が次の防衛線
+- **NBA G1 3重記録**: Session_45/47/47' で異なる命名 ("Philadelphia 76ers @ Boston Celtics" / "Boston Celtics vs Philadelphia 76ers (G1 R1)" / "BOS vs PHI G1") で同じ試合を記録していた。命名規約の統一 or dedup 機構が必要
+- **ユーザー指摘ベースの UX バグ検出**: 「EV- なのに推奨？」「個々のダッシュボード連動してない」「Q3 100% は正しいか？」「監視とは？」など、自己監査で検出できなかった UX/データ問題を 4 件発見。ユーザー視点を常に意識する必要
+- **cumulative.json 数値の推移管理が甘い**: Session_45 時点の Q3 total=18 が Session_48 まで更新されず誤表示。BACKLOG/CLAUDE.md に「cumulative 再計算を各セッション末尾に実行」の項目追加を検討
