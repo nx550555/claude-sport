@@ -1456,6 +1456,207 @@
         "basic": "5/8 62.5% -1.03u",
         "q3_output_a": "8/10 80.0%"
       }
+    },
+    {
+      "date": "2026-04-23",
+      "session_id": "_50",
+      "sports_screened": [
+        "ATP_Madrid",
+        "WTA_Madrid",
+        "WTA_125K_Oeiras"
+      ],
+      "total_matches_screened": 69,
+      "note": "Session_50 結果反映 + 2026-04-23.json 69試合スクリーニング。GO 5件新規、Q3 7件、Q4 13件。EDM-ANA G2 予測MISS / OKC-PHX G2 予測HIT (SKIP no-bet)。",
+      "output_a": {
+        "description": "Session_50 高確率予想 (conf>=85 EV問わず)",
+        "candidates": [
+          {
+            "rank": 1,
+            "match": "Sinner vs Bonzi",
+            "sport": "ATP",
+            "rec": "Sinner",
+            "conf": 97,
+            "odds": 1.01,
+            "ev": -2.0,
+            "date": "2026-04-24",
+            "note": "#1 seed dominant"
+          },
+          {
+            "rank": 2,
+            "match": "Swiatek vs Snigur",
+            "sport": "WTA",
+            "rec": "Swiatek",
+            "conf": 95,
+            "odds": 1.02,
+            "ev": -3.5,
+            "date": "2026-04-23"
+          },
+          {
+            "rank": 3,
+            "match": "Gauff vs Jeanjean",
+            "sport": "WTA",
+            "rec": "Gauff",
+            "conf": 93,
+            "odds": 1.06,
+            "ev": -1.3,
+            "date": "2026-04-24"
+          },
+          {
+            "rank": 4,
+            "match": "Sabalenka vs Stearns",
+            "sport": "WTA",
+            "rec": "Sabalenka",
+            "conf": 90,
+            "odds": 1.05,
+            "ev": -5.5,
+            "date": "2026-04-23"
+          },
+          {
+            "rank": 5,
+            "match": "Andreeva vs Udvardy",
+            "sport": "WTA",
+            "rec": "Andreeva",
+            "conf": 90,
+            "odds": 1.04,
+            "ev": -6.7,
+            "date": "2026-04-24"
+          },
+          {
+            "rank": 6,
+            "match": "Bencic vs Martincova",
+            "sport": "WTA",
+            "rec": "Bencic",
+            "conf": 88,
+            "odds": 1.19,
+            "ev": 4.5,
+            "date": "2026-04-23",
+            "note": "Q3 borderline GO (EV+4.5<+5)"
+          },
+          {
+            "rank": 7,
+            "match": "Rybakina vs Ruse",
+            "sport": "WTA",
+            "rec": "Rybakina",
+            "conf": 85,
+            "odds": 1.05,
+            "ev": -10.3,
+            "date": "2026-04-24"
+          }
+        ]
+      },
+      "output_b": {
+        "description": "Session_50 高確率マルチベット",
+        "combos": [
+          {
+            "type": "A_total_prob_top5",
+            "legs": [
+              "Sinner @1.01",
+              "Swiatek @1.02",
+              "Gauff @1.06",
+              "Sabalenka @1.05",
+              "Andreeva @1.04"
+            ],
+            "total_prob": 69.4,
+            "total_odds": 1.1925,
+            "ev": -17.2,
+            "recommend": false,
+            "note": "総合勝率 Top 5 (参考情報)"
+          },
+          {
+            "type": "B_ev_max_top5",
+            "legs": [
+              "Bencic @1.19 (EV+4.5%)",
+              "Gauff @1.06 (EV-1.3%)",
+              "Sinner @1.01 (EV-2.0%)",
+              "Swiatek @1.02 (EV-3.5%)",
+              "Sabalenka @1.05 (EV-5.5%)"
+            ],
+            "total_prob": 67.9,
+            "total_odds": 1.3645,
+            "ev": -7.4,
+            "recommend": false,
+            "note": "EV最大 Top 5"
+          }
+        ]
+      },
+      "closed_results": {
+        "go_hit": [],
+        "go_miss": [],
+        "q3_output_a": {
+          "hit": [
+            "OKC 120-107 PHX G2 (SGA 37pts/9ast)"
+          ],
+          "miss": [],
+          "pending": []
+        },
+        "prediction_only": {
+          "hit": [],
+          "miss": [
+            "EDM-ANA G2 予測 EDM → 実 ANA 6-4 EDM (Gauthier 決勝点 残り4:52 / type_a_watch 的中, P025 evidence 2/3)"
+          ]
+        }
+      },
+      "cumulative_after": {
+        "overall_bet": "22/30 73.3% +2.453u (pending +5 GO)",
+        "advanced": "17/22 77.3% +3.483u (pending 5)",
+        "basic": "5/8 62.5% -1.03u",
+        "q3_output_a": "9/11 81.8% (pending +7 = total 18)",
+        "q4_upset_watch": "0/0 (pending +13 = total 24)",
+        "q1_go": "22/30 73.3% (pending +5 = total 35)"
+      },
+      "go_recommendations": [
+        {
+          "sport": "ATP",
+          "match": "Tsitsipas S. vs Kypson P.",
+          "rec": "Tsitsipas",
+          "odds": 1.35,
+          "conf": 86,
+          "ev": 16.1,
+          "date": "2026-04-23",
+          "round": "R1"
+        },
+        {
+          "sport": "ATP",
+          "match": "Paul T. vs Tirante T.A.",
+          "rec": "Tommy Paul",
+          "odds": 1.4,
+          "conf": 80,
+          "ev": 12.3,
+          "date": "2026-04-24",
+          "round": "R2"
+        },
+        {
+          "sport": "ATP",
+          "match": "Musetti L. vs Hurkacz H.",
+          "rec": "Musetti",
+          "odds": 1.42,
+          "conf": 76,
+          "ev": 8.2,
+          "date": "2026-04-24",
+          "round": "R2"
+        },
+        {
+          "sport": "WTA",
+          "match": "Keys M. vs Zhang Sh.",
+          "rec": "Keys",
+          "odds": 1.23,
+          "conf": 86,
+          "ev": 5.5,
+          "date": "2026-04-24",
+          "round": "R2"
+        },
+        {
+          "sport": "WTA",
+          "match": "Mertens E. vs Eala A.",
+          "rec": "Mertens",
+          "odds": 1.37,
+          "conf": 78,
+          "ev": 7.1,
+          "date": "2026-04-24",
+          "round": "R2"
+        }
+      ],
+      "session": "_50"
     }
   ],
   "last_updated": "2026-04-21"

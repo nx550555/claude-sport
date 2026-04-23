@@ -674,10 +674,10 @@
       "status": "watching",
       "target_rule_file": "core/rules_nhl.json",
       "proposed_rule_id": "N021",
-      "title": "NHL PO G1 predicted_winner 選択ルール: xGF% higher team 優先",
-      "description": "records PO_R1_W2/W4 で type_a_watch として事前に警告されていた \"lower seed xGF% higher\" パターンで MIN/ANA が higher xGF% を有した。MIN 6-1 DAL UPSET で実証 (A028)。今後 type_a_watch 発動時は seed より xGF% higher team を predicted_winner に自動設定する。ANA/EDM では EDM 勝利だが僅差で ANA の方がxGFわずか上位 → 継続観察。",
+      "title": "NHL PO G1/G2 predicted_winner 選択ルール: xGF% higher team 優先",
+      "description": "records PO_R1_W2/W4 で type_a_watch として事前に警告されていた \"lower seed xGF% higher\" パターンで MIN/ANA が higher xGF% を有した。MIN 6-1 DAL UPSET G1 で実証 (A028)。ANA 6-4 EDM UPSET G2 で追加実証 (A030)。今後 type_a_watch 発動時は seed より xGF% higher team を predicted_winner に自動設定する。",
       "trigger_threshold": 3,
-      "current_count": 1,
+      "current_count": 2,
       "evidence": [
         {
           "id": "A028",
@@ -688,13 +688,23 @@
             "ESPN gameId 401869716",
             "NHL.com wild minnesota-wild-dallas-stars-game-1-recap"
           ]
+        },
+        {
+          "id": "A030",
+          "match": "Anaheim Ducks d. Edmonton Oilers PO R1 G2 2026-04-22 6-4",
+          "pattern": "ANA 5v5 xGF% 51.76 > EDM 51.54 (marginal lower seed edge)。type_a_watch 事前警告 PASS → ANA が 6-4 UPSET で実証 (Gauthier 決勝点 残り4:52)。EDM home +7% + McDavid/Draisaitl impact だけでは ANA structural 5v5 優位を覆せず。シリーズ 1-1 タイ。",
+          "tag": "nhl_po_xgf_priority_over_seed",
+          "sources": [
+            "ESPN gameId 401869768",
+            "TSN game recap"
+          ]
         }
       ],
       "tag_matches": [
         "nhl_po_xgf_priority_over_seed",
         "nhl_type_a_watch_realized"
       ],
-      "note": "3件揃ったら N021 として実装。predicted_winner 選択アルゴリズムの改定: type_a_watch (lower seed xGF higher) 発動 → xGF higher team を予測。ANA-EDM G2 以降で実地確認継続。"
+      "note": "2/3 到達 (2026-04-23 Session_50 A030 追加)。3件目 evidence で N021 として実装: predicted_winner 選択アルゴリズムの改定 (type_a_watch 発動 → xGF higher team を予測)。"
     }
   ],
   "implemented_rules": [
@@ -769,6 +779,6 @@
       "note": "非seed(Q/WC/LL/unseeded)がR1で seed/本命を撃破 → R2以降の本命対戦で L4 +5% 補正。R1勝因タイプで差別化（ストレート+75% 1stSrvPts=+7% / 3セット接戦2h30min+=補正なし）。P010と違い home要件なし。GEN005衝突解消: R017と同時成立時はR017優先。"
     }
   ],
-  "last_updated": "2026-04-21",
-  "updated_session": "_47"
+  "last_updated": "2026-04-23",
+  "updated_session": "_50"
 }

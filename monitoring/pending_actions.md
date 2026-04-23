@@ -84,10 +84,13 @@
 | PA061 | NEW NBA PO G2 | **DONE Session_49** 4/21-22 G2 7/8試合結果確認: PHI 111-97 BOS / POR 106-103 SAS / LAL 101-94 HOU / DET 98-83 ORL / ATL d. NYK / CLE 115-105 TOR / MIN 119-114 DEN. OKC-PHX G2 のみ pending (4/22 進行中) | DONE | 高 | 完了 2026-04-23 |
 | PA062 | Madrid 本戦 R1 | 2026-04-21.json 受領済. ATP 24試合 + WTA 19試合 本戦R1 (4/22〜) スクリーニング **Session_48 で完了** | DONE | 高 | 完了 2026-04-22 |
 | PA063 | Galfi GO 結果 | **DONE Session_49**: Galfi D. d. Vidmanova D. 7-5 6-3 GO @1.54 HIT +0.54u (Madrid Q Final 4/21) | DONE | 最高 | 完了 2026-04-23 |
-| PA064 | Q3 output_a 4件 | **3/4 closed Session_49**: Sonmez HIT (d. Martinez Cires 7-5 6-2) / BOS G2 MISS (PHI 111-97) / SAS G2 MISS (POR 106-103) / OKC G2 pending. Q3 通算 8/10 80.0% | IN_PROGRESS | 高 | OKC 4/23 結果後 |
-| PA065 | EDM-ANA G2 | NHL 4/22 進行中 (1stP 1-1) → 4/23 JST 早朝結果確認 | WAITING | 高 | 4/23 朝 |
-| PA066 | OKC-PHX G2 | NBA 4/22 21:30 ET 進行中 → 4/23 JST 確認 | WAITING | 高 | 4/23 朝 |
+| PA064 | Q3 output_a 4件 | **DONE Session_50**: Sonmez HIT / BOS G2 MISS / SAS G2 MISS / OKC G2 HIT (OKC 120-107 PHX SGA 37pts)。Q3 通算 9/11 81.8% | DONE | 高 | 完了 2026-04-23 |
+| PA065 | EDM-ANA G2 | **DONE Session_50**: ANA 6-4 EDM UPSET (Gauthier 決勝点 残り4:52)。予測MISS。SKIP no-bet (P&L 0)。type_a_watch 的中で P025 evidence 2/3 到達 | DONE | 高 | 完了 2026-04-23 |
+| PA066 | OKC-PHX G2 | **DONE Session_50**: OKC 120-107 PHX HIT (SGA 37pts/9ast)。シリーズ 2-0 OKC。Q3 output_a HIT | DONE | 高 | 完了 2026-04-23 |
 | PA067 | NBA records dedup | [10][17] CLE-TOR G1 / [11][21][30] NYK-ATL / [12][20][32] DEN-MIN / [13][18] BOS-PHI G1 / [14][24] LAL-HOU / [15][23] OKC-PHX / [16][22] DET-ORL G1 等 重複登録の整理 (Session_48 import + 既存命名のずれ) | PENDING | 中 | 次セッション |
+| PA068 | Madrid GO 5件 結果 | Session_50 新規: Tsitsipas @1.35 (4/23) / Paul @1.40 (4/24) / Musetti @1.42 (4/24) / Keys @1.23 (4/24) / Mertens @1.37 (4/24) 結果確認 | WAITING | 最高 | 4/24-25 |
+| PA069 | Q3 output_a 7件 結果 | Session_50: Sinner/Bencic/Swiatek/Sabalenka/Andreeva/Gauff/Rybakina 予測精度追跡 | WAITING | 高 | 4/23-24 |
+| PA070 | Q4 upset_watch 13件 | Session_50: Osaka-Osorio UPSET濃厚 + Popyrin/Opelka/Rinderknech/Shelton/Diallo/Grant/Samsonova 等観察 | WAITING | 中 | 4/23-24 |
 | PA044 | NHL | PA014 TBL-MTL G1 **MTL 4-3 OT 予測MISS 記録 DONE Session_44** (Slafkovsky hat trick + OT 1:22 PP). Type A A021 upset登録。CAUTION no-bet のため P&L影響なし | DONE | 高 | 完了 2026-04-20 |
 | PA045 | Rule Pipeline | **R020/R017 実装 DONE Session_44** (rules_tennis.json v2.2). P013/P010 implemented_rulesへ移動。GEN005衝突解消: R017 vs R020 同時成立時はR017優先 | DONE | 中 | 完了 2026-04-20 |
 | PA046 | 出力A/B | **Session_30-43 新規GO遡及追加 DONE Session_44** (multi_bets.json + dashboard同期). Leeds/Warriors/Warrington/SAS を追加。累計 11件・6HIT・3MISS・1VOID・1PENDING | DONE | 最高 | 完了 2026-04-20 |

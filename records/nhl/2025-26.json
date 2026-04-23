@@ -1503,17 +1503,24 @@
       "prediction_confidence": 58,
       "tier": "skip",
       "quadrant": "skip",
-      "note": "EDM G1 OT HIT. xGF%+1pt SKIP. | Session_49: 4/22 試合進行中 (1stP 1-1)、結果未確定。次セッション確認。",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "note": "EDM G1 OT HIT. xGF%+1pt SKIP. | Session_50: ANA 6-4 EDM UPSET (Gauthier 決勝点 残り4:52). 予測MISS. SKIP no-bet (P&L 0). type_a_watch 警告(ANA xGF% marginally higher)が的中、lower seed process edge が EDM home +7% を上回った。シリーズ 1-1 タイ。",
+      "result": "Anaheim Ducks",
+      "score": "ANA 6-4 EDM",
+      "prediction_hit": false,
       "rec": null,
       "rec_odds": null,
       "ev": null,
       "hit": null,
       "actual_ev": null,
+      "miss_layer": "L1",
+      "miss_analysis": "type_a_watch で事前警告していた ANA 5v5 xGF% 51.76% > EDM 51.54% (lower seed marginal process edge) が実際の UPSET に転化。EDM home +7% + McDavid/Draisaitl impact だけでは ANA の structural 5v5 優位を覆せなかった。Gauthier 決勝点 4:52 残り。P025 (NHL PO type_a_watch 発動時 xGF% higher team 優先) の evidence 2/3 到達候補。",
       "source": "2026-04-21.json",
-      "screened_session": "_48"
+      "screened_session": "_48",
+      "closed_session": "_50",
+      "verification_sources": [
+        "ESPN gameId 401869768 Ducks 6-4 Oilers Apr 22 2026",
+        "TSN game recap"
+      ]
     },
     {
       "match": "OTT vs CAR G2",

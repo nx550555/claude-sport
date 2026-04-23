@@ -1,12 +1,12 @@
 {
-  "updated": "2026-04-20",
+  "updated": "2026-04-23",
   "tennis_atp": {
     "total_predictions": 14,
     "confirmed": 14,
     "hits": 11,
     "hit_rate": 0.786,
     "ev_total": 1.74,
-    "pending": 0,
+    "pending": 3,
     "note_hit_rate": "hit_rate = hits / confirmed (pending除外)。GO tierのみ集計（CAUTION除外）",
     "correction_note": "4/12: SF Sinner vs Zverev の結果を修正（MISS→HIT: Sinner 6-1 6-4）。旧セッションで誤記録。delta +1.65",
     "tournaments": [
@@ -42,7 +42,7 @@
     "hits": 2,
     "hit_rate": 0.5,
     "ev_total": -0.5,
-    "pending": 0,
+    "pending": 2,
     "status": "Galfi Madrid Q Final HIT (Session_49)",
     "note": "【CE014訂正 2026-04-18】GB001 Ostapenko は実は MISS (Andreeva 5-7 6-2 6-4) -0.25u. Sonmez d. Paolini(4) MISS Stuttgart R1(-1.0u). Bondar d. Tan Rouen R1 HIT(+0.21u 6-2 4-6 6-0). 1/3 33.3% EV-1.04u. | Session_49 update: Galfi D. d. Vidmanova D. 7-5 6-3 GO HIT +0.54u (Madrid Q Final). Sonmez Q3 output_a HIT (Madrid R1 d. Martinez Cires 7-5 6-2). 通算 2/4 50% -0.50u",
     "tournaments": [
@@ -89,8 +89,8 @@
     "hit_rate": 1.0,
     "ev_total": 1.863,
     "pending": 0,
-    "status": "PO R1 G2 7/8 closed (EDM-ANA pending). 4 series 2-0, 4 series 1-1.",
-    "note": "COL 3-1 HIT(+0.333) / OTT 3-2 NYI HIT(+1.53) = 2/2 100%. 予測精度追加(CAUTION): COL-LAK G1 HIT (COL 2-1 4/19). TBL-MTL G1 / BUF-BOS G1 pending 4/19-20. | Session_49: G2 7/8 closed (EDM-ANA pending). prediction G2: BOS HIT (BOS 4-2 BUF), TBL HIT (TBL 3-2 MTL OT), CAR HIT (CAR 3-2 OTT 2OT), PHI HIT (PHI 3-0 PIT), COL HIT (COL 2-1 LAK OT, both [38][48]). MISS: predicted_winner 不一致 [45][46][47][50][52]では prediction_winner 設定/不設定混在. 全 SKIP/CAUTION no-bet (P&L 0).",
+    "status": "PO R1 G2 8/8 closed (EDM-ANA 完了). 4 series 2-0, 4 series 1-1.",
+    "note": "COL 3-1 HIT(+0.333) / OTT 3-2 NYI HIT(+1.53) = 2/2 100%. 予測精度追加(CAUTION): COL-LAK G1 HIT (COL 2-1 4/19). TBL-MTL G1 / BUF-BOS G1 pending 4/19-20. | Session_49: G2 7/8 closed (EDM-ANA pending). prediction G2: BOS HIT (BOS 4-2 BUF), TBL HIT (TBL 3-2 MTL OT), CAR HIT (CAR 3-2 OTT 2OT), PHI HIT (PHI 3-0 PIT), COL HIT (COL 2-1 LAK OT, both [38][48]). | Session_50 (2026-04-23): EDM-ANA G2 ANA 6-4 EDM UPSET 予測MISS (type_a_watch 的中: ANA 5v5 xGF% marginally higher). 全 SKIP/CAUTION no-bet (P&L 0). P025 evidence +1 候補 (2/3).",
     "tier": "advanced"
   },
   "ufl": {
@@ -148,8 +148,8 @@
     "hit_rate": 1.0,
     "ev_total": 0.38,
     "pending": 1,
-    "status": "PO R1 G2 7/8 closed (OKC-PHX pending).",
-    "note": "NBA-002は参考記録のみ（Cavaliers 130-126 Mitchell 48pts）。オッズ未確認のためカウント外。 | Session_49: G2 7/8 closed (OKC-PHX pending). Q3 output_a: BOS G2 MISS (PHI 111-97), SAS G2 MISS (POR 106-103), Sonmez WTA HIT, OKC G2 pending. BOS-PHI tied, SAS-POR tied, ATL-NYK tied, MIN-DEN tied. LAL-HOU 2-0, CLE-TOR 2-0, ORL-DET tied (Pistons G2 HIT 98-83). | Session_49 fix: NBA-003 SAS G1 HIT +0.18u 反映漏れ訂正 (Session_46 で発生したが cumulative 未更新だった).",
+    "status": "PO R1 G2 8/8 closed (OKC-PHX 完了).",
+    "note": "NBA-002は参考記録のみ（Cavaliers 130-126 Mitchell 48pts）。オッズ未確認のためカウント外。 | Session_49: G2 7/8 closed (OKC-PHX pending). Q3 output_a: BOS G2 MISS (PHI 111-97), SAS G2 MISS (POR 106-103), Sonmez WTA HIT, OKC G2 pending. | Session_50 (2026-04-23): OKC-PHX G2 OKC 120-107 PHX HIT (SGA 37pts 9ast). Q3 output_a OKC HIT. シリーズ 2-0 OKC. Q3 通算 9/11 81.8%. | Session_49 fix: NBA-003 SAS G1 HIT +0.18u 反映漏れ訂正 (Session_46 で発生したが cumulative 未更新だった).",
     "tier": "advanced"
   },
   "premiership": {
@@ -213,7 +213,7 @@
       "confirmed": 22,
       "hits": 17,
       "ev_total": 3.483,
-      "pending": 0,
+      "pending": 5,
       "sports_included": [
         "tennis_atp",
         "tennis_wta",
@@ -221,7 +221,7 @@
         "nba",
         "nfl"
       ],
-      "note": "高精度Tier集計: cElo/xGF%/NRtg/DVOA使用スポーツ合計。CE014訂正後: GB001 MISS 確定で hits 16→15, pnl 3.5505→2.763 | Session_49: Galfi WTA Madrid Q HIT +0.54u 反映. 16/22 72.7% +3.303u. | NBA SAS G1 HIT +0.18u 追加修正で 17/22 77.3% +3.483u.",
+      "note": "高精度Tier集計: cElo/xGF%/NRtg/DVOA使用スポーツ合計。CE014訂正後: GB001 MISS 確定で hits 16→15, pnl 3.5505→2.763 | Session_49: Galfi WTA Madrid Q HIT +0.54u 反映. 16/22 72.7% +3.303u. | NBA SAS G1 HIT +0.18u 追加修正で 17/22 77.3% +3.483u. | Session_50: pending 5 (ATP 3 / WTA 2).",
       "hit_rate": 0.773
     },
     "basic": {
@@ -260,12 +260,12 @@
     "_formula": "hit_rate = hits / confirmed / ev_total = sum of actual_ev for GO-tier only",
     "_frame": "Q1_go=GO推奨(conf>=75 AND EV>+5) / Q2_upset_pick=UPSET_PICK(UF>=3 AND div>=15pp) / Q3_output_a=高確率予想(conf>=85 EV問わず) / Q4_upset_watch=アップセット観察(dog>=3.0 AND UF>=2)",
     "Q1_go": {
-      "total": 30,
+      "total": 35,
       "confirmed": 30,
       "hit": 22,
       "hit_rate": 0.733,
       "ev_total": 2.453,
-      "note": "既存GO推奨累計。Session_30-43のGO+Session_44遡及4件+過去全件 | Session_49: Galfi GO HIT +0.54u 反映 | NBA SAS G1 反映訂正: 22/30 73.3%"
+      "note": "既存GO推奨累計。Session_30-43のGO+Session_44遡及4件+過去全件 | Session_49: Galfi GO HIT +0.54u 反映 | NBA SAS G1 反映訂正: 22/30 73.3% | Session_50: +5 GO pending (Tsitsipas @1.35 / Paul @1.40 / Musetti @1.42 / Keys @1.23 / Mertens @1.37)."
     },
     "Q2_upset_pick": {
       "total": 0,
@@ -276,24 +276,24 @@
       "note": "Phase2移行(2026-04-18)以降発動0件。閾値UF>=3+div>=15ppは実運用で極めて稀"
     },
     "Q3_output_a": {
-      "total": 11,
-      "confirmed": 10,
-      "hit": 8,
-      "hit_rate": 0.8,
+      "total": 18,
+      "confirmed": 11,
+      "hit": 9,
+      "hit_rate": 0.818,
       "ev_total": 0,
       "void_excluded": 1,
       "void_matches": [
         "Alcaraz C. vs Machac T."
       ],
-      "note": "Session_48 audit 2026-04-22: NBA dedup + walkover除外後の実測。Q3 = quadrant==Q3_output_a OR (conf>=85 AND tier in skip/caution/output_a). 旧値 15/10/10. | Session_49: Sonmez HIT, BOS G2 MISS (PHI 111-97), SAS G2 MISS (POR 106-103). OKC G2 pending. 8/10 80.0%."
+      "note": "Session_48 audit 2026-04-22: NBA dedup + walkover除外後の実測。Q3 = quadrant==Q3_output_a OR (conf>=85 AND tier in skip/caution/output_a). 旧値 15/10/10. | Session_49: Sonmez HIT, BOS G2 MISS (PHI 111-97), SAS G2 MISS (POR 106-103). OKC G2 pending. 8/10 80.0%. | Session_50 (2026-04-23): OKC G2 HIT (OKC 120-107 PHX). Q3 9/11 81.8%. | Session_50 (2026-04-23): Q3 new pending 7件 (Sinner/Bencic/Swiatek/Sabalenka/Andreeva/Gauff/Rybakina). Q3 total 18 / confirmed 11 / hit 9 (81.8%)."
     },
     "Q4_upset_watch": {
-      "total": 11,
+      "total": 24,
       "confirmed": 0,
       "hit": 0,
       "hit_rate": null,
       "ev_total": null,
-      "note": "Session_45 UPSET_PICK_CHECK 候補11件。全件UF walkthrough後 Q2昇格なし。観察対象として継続追跡"
+      "note": "Session_45 UPSET_PICK_CHECK 候補11件。全件UF walkthrough後 Q2昇格なし。観察対象として継続追跡 | Session_50 (2026-04-23): +13 Q4 pending (Popyrin/Opelka/Rinderknech/Shelton/de Minaur/Diallo/Griekspoor/Vacherot ATP + Wang/Kalinskaya/Paolini/Li/Osaka/Cirstea/Samsonova WTA)."
     },
     "skip": {
       "total": "N/A (既存 tier=skip records数)",
@@ -312,6 +312,16 @@
       "version": "v3.1.1",
       "date": "2026-04-23",
       "change": "Session_49: Galfi GO HIT +0.54u + NHL G2 7/8 + NBA G2 7/8 + Q3 output_a 3/4 closed反映"
+    },
+    {
+      "version": "v3.1.2",
+      "date": "2026-04-23",
+      "change": "Session_50: EDM-ANA G2 予測MISS (ANA 6-4 type_a_watch 的中) + OKC-PHX G2 予測HIT (OKC 120-107) Q3 9/11 81.8%。GO bet totals 変化なし (両 SKIP)"
+    },
+    {
+      "version": "v3.1.3",
+      "date": "2026-04-23",
+      "change": "Session_50 screening: 69試合スクリーニング (GO 5件 + Q3 7件 + Q4 13件 追加)"
     }
   ]
 }

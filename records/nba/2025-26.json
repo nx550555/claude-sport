@@ -1152,17 +1152,24 @@
       "prediction_confidence": 88,
       "tier": "skip",
       "quadrant": "Q3_output_a",
-      "note": "G1 OKC blowout HIT. NRtg+9.24pt max. conf88/mkt96.2/EV-8.5%. Q3 output_a高確率. | Session_49: 4/22 21:30 ET 進行中、結果未確定。次セッション確認。",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "note": "G1 OKC blowout HIT. NRtg+9.24pt max. conf88/mkt96.2/EV-8.5%. Q3 output_a高確率. | Session_50: OKC 120-107 PHX HIT (SGA 37pts 9ast). Q3 output_a HIT. シリーズ 2-0 OKC リード。",
+      "result": "Oklahoma City Thunder",
+      "score": "OKC 120-107 PHX",
+      "prediction_hit": true,
       "rec": null,
       "rec_odds": null,
       "ev": null,
       "hit": null,
       "actual_ev": null,
       "source": "2026-04-21.json",
-      "screened_session": "_48"
+      "screened_session": "_48",
+      "closed_session": "_50",
+      "verification_sources": [
+        "CBS Sports boxscore NBA_20260422_PHO@OKC",
+        "NBA.com game 0042500142",
+        "Bright Side of the Sun recap"
+      ],
+      "outcome_note": "SGA 37pts/9ast led all scorers. Dillon Brooks/Jalen Green/Devin Booker combined 73. OKC 26pt 4th lead → PHX 20-4 run cut to 10 but OKC cruised. Q3 output_a 通算 9/11 81.8%。"
     },
     {
       "match": "ATL vs NYK G2",
