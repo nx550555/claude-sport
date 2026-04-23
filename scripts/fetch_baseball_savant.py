@@ -37,8 +37,8 @@ UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
 
 CSV_URLS = {
-    "expected_batting":  "https://baseballsavant.mlb.com/leaderboard/expected_statistics?type=team&year={year}&position=&team=&filter=&min=q&csv=true",
-    "expected_pitching": "https://baseballsavant.mlb.com/leaderboard/expected_statistics?type=teamPitchers&year={year}&position=&team=&filter=&min=q&csv=true",
+    "expected_batting":  "https://baseballsavant.mlb.com/leaderboard/expected_statistics?type=batter-team&year={year}&position=&team=&filter=&min=q&csv=true",
+    "expected_pitching": "https://baseballsavant.mlb.com/leaderboard/expected_statistics?type=pitcher-team&year={year}&position=&team=&filter=&min=q&csv=true",
 }
 
 
@@ -81,9 +81,9 @@ def process_mode(mode: str, year: str) -> list[dict]:
 
 
 def merge(batting: list[dict], pitching: list[dict]) -> list[dict]:
-    """Baseball Savant は team name 表記が1系統。"entity_name" や "team_name" カラムに入っている"""
+    """Baseball Savant team CSV は "team" (例: "Astros") + "team_id" (例: "HOU") カラムを持つ。"""
     def _team_key(row: dict) -> str:
-        return (row.get("entity_name") or row.get("team_name") or row.get("Team") or "").strip()
+        return (row.get("team") or row.get("team_id") or row.get("entity_name") or row.get("Team") or "").strip()
 
     by_team: dict[str, dict] = {}
     for b in batting:
@@ -91,10 +91,11 @@ def merge(batting: list[dict], pitching: list[dict]) -> list[dict]:
         if not t:
             continue
         by_team[t] = {
-            "team": t,
-            "xBA": _num(b.get("xba")),
-            "xSLG": _num(b.get("xslg")),
-            "xwOBA": _num(b.get("xwoba")),
+            "team": b.get("team") or t,
+            "team_id": b.get("team_id"),
+            "xBA": _num(b.get("est_ba")),
+            "xSLG": _num(b.get("est_slg")),
+            "xwOBA": _num(b.get("est_woba")),
             "BA": _num(b.get("ba")),
             "SLG": _num(b.get("slg")),
             "wOBA": _num(b.get("woba")),
@@ -105,13 +106,11 @@ def merge(batting: list[dict], pitching: list[dict]) -> list[dict]:
         t = _team_key(p)
         if not t:
             continue
-        entry = by_team.setdefault(t, {"team": t})
+        entry = by_team.setdefault(t, {"team": p.get("team") or t, "team_id": p.get("team_id")})
         entry.update({
-            "p_xERA": _num(p.get("xera")),
-            "p_ERA": _num(p.get("era")),
-            "p_xBA": _num(p.get("xba")),
-            "p_xSLG": _num(p.get("xslg")),
-            "p_xwOBA": _num(p.get("xwoba")),
+            "p_xBA": _num(p.get("est_ba")),
+            "p_xSLG": _num(p.get("est_slg")),
+            "p_xwOBA": _num(p.get("est_woba")),
             "p_BA": _num(p.get("ba")),
             "p_SLG": _num(p.get("slg")),
             "p_wOBA": _num(p.get("woba")),

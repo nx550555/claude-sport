@@ -1,0 +1,15 @@
+{
+  "source_group": "understat.com",
+  "fetched_at": "2026-04-23T22:08:03.112374+09:00",
+  "season": "2025-2026",
+  "leagues": {
+    "Premier League": {
+      "source": "https://understat.com/league/EPL/2025",
+      "league_key": "EPL",
+      "league_display": "Premier League",
+      "season": "2025-2026",
+      "teams": [],
+      "team_count": 0
+    }
+  }
+}

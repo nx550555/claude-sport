@@ -61,20 +61,28 @@ def age_days(p: Path) -> float:
 
 
 def fetch_html(url: str) -> str:
+    """understat.com は Cloudflare で bot 防御している。curl で返る HTML には
+    JS データ (teamsData) が埋め込まれていない場合が多い。返り値に teamsData が
+    含まれていることを curl 成功の条件にする。含まれなければ Playwright にフォールバック。"""
     if shutil.which("curl"):
         r = subprocess.run(
             ["curl", "-sL", "--compressed", "-A", UA, "--max-time", "30", url],
             capture_output=True, text=True, encoding="utf-8", errors="replace"
         )
-        if r.returncode == 0 and r.stdout:
+        if r.returncode == 0 and r.stdout and "teamsData" in r.stdout:
             return r.stdout
-    # Playwright fallback
+    # Playwright fallback (Cloudflare challenge を解ける可能性あり)
     from playwright.sync_api import sync_playwright
     with sync_playwright() as pw:
         browser = pw.chromium.launch(headless=True)
         ctx = browser.new_context(user_agent=UA)
         page = ctx.new_page()
         page.goto(url, wait_until="domcontentloaded", timeout=60000)
+        # teamsData が script tag に埋め込まれるまで短時間待機
+        try:
+            page.wait_for_function("() => document.documentElement.innerHTML.includes('teamsData')", timeout=20000)
+        except Exception:
+            pass
         content = page.content()
         browser.close()
     return content

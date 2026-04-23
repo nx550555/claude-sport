@@ -107,6 +107,9 @@
 | PA082 | Top14 | R23 Toulouse vs Clermont (4/27) Q3_output_a 予測精度追跡 | WAITING | 中 | 4/27 |
 | PA083 | AHL | Calder Cup PO 8試合結果追跡。全 Basic Tier SKIP 予測精度。PA033 partial 完了 | WAITING | 低 | 4/24-26 |
 | PA084 | CE018 発見 | Top14 RCT Toulon vs Stade Toulousain 表記混同。Session_53 訂正済. 将来の France rugby 取込時に類似 RCT/Stade Toulousain 区別チェックを入れる | PENDING | 中 | 次フランスデータ受領時 |
+| PA085 | GEN007 Understat 修復 | Session_55: understat.com の HTML 構造が変わり `teamsData` 変数自体が消滅 (curl 18KB / Playwright 172KB いずれも 0件)。AJAX endpoint (例 `/league/get_season_teams`) に移行した可能性大。Network トレース→AJAX URL 特定→JSON fetch に parser 書き直し必要 | PENDING | 中 | 次セッション以降 |
+| PA086 | GEN007 FanGraphs 修復 | Session_55: fangraphs.com が Cloudflare challenge (`Just a moment...`) を headless Playwright でも突破不可。回避策候補: (a) playwright-stealth 導入 (b) cloudscraper 使用 (c) undetected-chromedriver への切替 (d) 公式手動 CSV ダウンロード運用。MLB L1 は Savant のみで当面運用 | PENDING | 中 | 次セッション以降 |
+| PA087 | Session_55 修復 DONE | fetch_baseball_savant.py URL 修正 (batter-team/pitcher-team) で 30 teams 取得。fetch_lineups.py 全面書き直しで NBA 6/MLB 18/soccer 14 取得。fetch_understat.py curl shortcut 修正 (teamsData 検査)。health_check v7 parse=0 空フィード検知追加 | DONE | 最高 | 完了 2026-04-23 |
 | PA044 | NHL | PA014 TBL-MTL G1 **MTL 4-3 OT 予測MISS 記録 DONE Session_44** (Slafkovsky hat trick + OT 1:22 PP). Type A A021 upset登録。CAUTION no-bet のため P&L影響なし | DONE | 高 | 完了 2026-04-20 |
 | PA045 | Rule Pipeline | **R020/R017 実装 DONE Session_44** (rules_tennis.json v2.2). P013/P010 implemented_rulesへ移動。GEN005衝突解消: R017 vs R020 同時成立時はR017優先 | DONE | 中 | 完了 2026-04-20 |
 | PA046 | 出力A/B | **Session_30-43 新規GO遡及追加 DONE Session_44** (multi_bets.json + dashboard同期). Leeds/Warriors/Warrington/SAS を追加。累計 11件・6HIT・3MISS・1VOID・1PENDING | DONE | 最高 | 完了 2026-04-20 |

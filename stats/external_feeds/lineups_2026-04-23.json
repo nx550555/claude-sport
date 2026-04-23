@@ -1,0 +1,2480 @@
+{
+  "fetched_at": "2026-04-23T22:12:23.288576+09:00",
+  "date": "2026-04-23",
+  "sports_covered": [
+    "nba",
+    "nfl",
+    "mlb",
+    "soccer",
+    "rugby"
+  ],
+  "rugby_note": "Rugby lineups: 公式 team sheets or ESPN scrum. Currently returns empty skeleton (user can feed manually).",
+  "nba": {
+    "Knicks": {
+      "status": "Expected Lineup",
+      "starters": [
+        {
+          "pos": "PG",
+          "name": "Jalen Brunson",
+          "display_name": "Jalen Brunson",
+          "hand": ""
+        },
+        {
+          "pos": "SG",
+          "name": "Josh Hart",
+          "display_name": "Josh Hart",
+          "hand": ""
+        },
+        {
+          "pos": "SF",
+          "name": "Mikal Bridges",
+          "display_name": "Mikal Bridges",
+          "hand": ""
+        },
+        {
+          "pos": "PF",
+          "name": "OG Anunoby",
+          "display_name": "OG Anunoby",
+          "hand": ""
+        },
+        {
+          "pos": "C",
+          "name": "Karl-Anthony Towns",
+          "display_name": "K. Towns",
+          "hand": ""
+        }
+      ],
+      "abbr": "NYK",
+      "side": "visit",
+      "opponent": "Hawks"
+    },
+    "Hawks": {
+      "status": "Expected Lineup",
+      "starters": [
+        {
+          "pos": "PG",
+          "name": "CJ McCollum",
+          "display_name": "CJ McCollum",
+          "hand": ""
+        },
+        {
+          "pos": "SG",
+          "name": "Nickeil Alexander-Walker",
+          "display_name": "N. Alexander-Walker",
+          "hand": ""
+        },
+        {
+          "pos": "SF",
+          "name": "Dyson Daniels",
+          "display_name": "Dyson Daniels",
+          "hand": ""
+        },
+        {
+          "pos": "PF",
+          "name": "Jalen Johnson",
+          "display_name": "Jalen Johnson",
+          "hand": ""
+        },
+        {
+          "pos": "C",
+          "name": "Onyeka Okongwu",
+          "display_name": "O. Okongwu",
+          "hand": ""
+        },
+        {
+          "pos": "C",
+          "name": "Jock Landale",
+          "display_name": "J. Landale",
+          "hand": ""
+        }
+      ],
+      "abbr": "ATL",
+      "side": "home",
+      "opponent": "Knicks"
+    },
+    "Cavaliers": {
+      "status": "Expected Lineup",
+      "starters": [
+        {
+          "pos": "PG",
+          "name": "James Harden",
+          "display_name": "James Harden",
+          "hand": ""
+        },
+        {
+          "pos": "SG",
+          "name": "Donovan Mitchell",
+          "display_name": "D. Mitchell",
+          "hand": ""
+        },
+        {
+          "pos": "SF",
+          "name": "Dean Wade",
+          "display_name": "Dean Wade",
+          "hand": ""
+        },
+        {
+          "pos": "PF",
+          "name": "Evan Mobley",
+          "display_name": "Evan Mobley",
+          "hand": ""
+        },
+        {
+          "pos": "C",
+          "name": "Jarrett Allen",
+          "display_name": "Jarrett Allen",
+          "hand": ""
+        },
+        {
+          "pos": "C",
+          "name": "Thomas Bryant",
+          "display_name": "T. Bryant",
+          "hand": ""
+        }
+      ],
+      "abbr": "CLE",
+      "side": "visit",
+      "opponent": "Raptors"
+    },
+    "Raptors": {
+      "status": "Expected Lineup",
+      "starters": [
+        {
+          "pos": "PG",
+          "name": "Immanuel Quickley",
+          "display_name": "I. Quickley",
+          "hand": ""
+        },
+        {
+          "pos": "SG",
+          "name": "Brandon Ingram",
+          "display_name": "B. Ingram",
+          "hand": ""
+        },
+        {
+          "pos": "SF",
+          "name": "RJ Barrett",
+          "display_name": "RJ Barrett",
+          "hand": ""
+        },
+        {
+          "pos": "PF",
+          "name": "Scottie Barnes",
+          "display_name": "S. Barnes",
+          "hand": ""
+        },
+        {
+          "pos": "C",
+          "name": "Jakob Poeltl",
+          "display_name": "Jakob Poeltl",
+          "hand": ""
+        },
+        {
+          "pos": "G",
+          "name": "Chucky Hepburn",
+          "display_name": "C. Hepburn",
+          "hand": ""
+        },
+        {
+          "pos": "G",
+          "name": "Immanuel Quickley",
+          "display_name": "I. Quickley",
+          "hand": ""
+        },
+        {
+          "pos": "G",
+          "name": "Ja'Kobe Walter",
+          "display_name": "J. Walter",
+          "hand": ""
+        }
+      ],
+      "abbr": "TOR",
+      "side": "home",
+      "opponent": "Cavaliers"
+    },
+    "Nuggets": {
+      "status": "Expected Lineup",
+      "starters": [
+        {
+          "pos": "PG",
+          "name": "Jamal Murray",
+          "display_name": "Jamal Murray",
+          "hand": ""
+        },
+        {
+          "pos": "SG",
+          "name": "Christian Braun",
+          "display_name": "C. Braun",
+          "hand": ""
+        },
+        {
+          "pos": "SF",
+          "name": "Cameron Johnson",
+          "display_name": "C. Johnson",
+          "hand": ""
+        },
+        {
+          "pos": "PF",
+          "name": "Aaron Gordon",
+          "display_name": "A. Gordon",
+          "hand": ""
+        },
+        {
+          "pos": "C",
+          "name": "Nikola Jokic",
+          "display_name": "Nikola Jokic",
+          "hand": ""
+        },
+        {
+          "pos": "F",
+          "name": "Aaron Gordon",
+          "display_name": "A. Gordon",
+          "hand": ""
+        },
+        {
+          "pos": "F",
+          "name": "Peyton Watson",
+          "display_name": "P. Watson",
+          "hand": ""
+        }
+      ],
+      "abbr": "DEN",
+      "side": "visit",
+      "opponent": "Timberwolves"
+    },
+    "Timberwolves": {
+      "status": "Expected Lineup",
+      "starters": [
+        {
+          "pos": "PG",
+          "name": "Donte DiVincenzo",
+          "display_name": "D. DiVincenzo",
+          "hand": ""
+        },
+        {
+          "pos": "SG",
+          "name": "Anthony Edwards",
+          "display_name": "A. Edwards",
+          "hand": ""
+        },
+        {
+          "pos": "SF",
+          "name": "Jaden McDaniels",
+          "display_name": "J. McDaniels",
+          "hand": ""
+        },
+        {
+          "pos": "PF",
+          "name": "Julius Randle",
+          "display_name": "Julius Randle",
+          "hand": ""
+        },
+        {
+          "pos": "C",
+          "name": "Rudy Gobert",
+          "display_name": "Rudy Gobert",
+          "hand": ""
+        },
+        {
+          "pos": "G",
+          "name": "Anthony Edwards",
+          "display_name": "A. Edwards",
+          "hand": ""
+        }
+      ],
+      "abbr": "MIN",
+      "side": "home",
+      "opponent": "Nuggets"
+    }
+  },
+  "nfl": {},
+  "mlb": {
+    "Braves": {
+      "status": "Expected Lineup",
+      "starters": [
+        {
+          "pos": "RF",
+          "name": "Ronald Acuna",
+          "display_name": "Ronald Acuna",
+          "hand": "R"
+        },
+        {
+          "pos": "C",
+          "name": "Drake Baldwin",
+          "display_name": "D. Baldwin",
+          "hand": "L"
+        },
+        {
+          "pos": "1B",
+          "name": "Matt Olson",
+          "display_name": "Matt Olson",
+          "hand": "L"
+        },
+        {
+          "pos": "3B",
+          "name": "Austin Riley",
+          "display_name": "Austin Riley",
+          "hand": "R"
+        },
+        {
+          "pos": "2B",
+          "name": "Ozzie Albies",
+          "display_name": "Ozzie Albies",
+          "hand": "S"
+        },
+        {
+          "pos": "CF",
+          "name": "Michael Harris",
+          "display_name": "M. Harris",
+          "hand": "L"
+        },
+        {
+          "pos": "DH",
+          "name": "Dominic Smith",
+          "display_name": "D. Smith",
+          "hand": "L"
+        },
+        {
+          "pos": "SS",
+          "name": "Mauricio Dubon",
+          "display_name": "M. Dubon",
+          "hand": "R"
+        },
+        {
+          "pos": "LF",
+          "name": "Mike Yastrzemski",
+          "display_name": "M. Yastrzemski",
+          "hand": "L"
+        }
+      ],
+      "starting_pitcher": "JR Ritchie",
+      "abbr": "ATL",
+      "side": "visit",
+      "opponent": "Nationals"
+    },
+    "Nationals": {
+      "status": "Expected Lineup",
+      "starters": [
+        {
+          "pos": "RF",
+          "name": "James Wood",
+          "display_name": "James Wood",
+          "hand": "L"
+        },
+        {
+          "pos": "1B",
+          "name": "Curtis Mead",
+          "display_name": "Curtis Mead",
+          "hand": "R"
+        },
+        {
+          "pos": "DH",
+          "name": "Daylen Lile",
+          "display_name": "Daylen Lile",
+          "hand": "L"
+        },
+        {
+          "pos": "3B",
+          "name": "Brady House",
+          "display_name": "Brady House",
+          "hand": "R"
+        },
+        {
+          "pos": "SS",
+          "name": "CJ Abrams",
+          "display_name": "CJ Abrams",
+          "hand": "L"
+        },
+        {
+          "pos": "CF",
+          "name": "Jacob Young",
+          "display_name": "Jacob Young",
+          "hand": "R"
+        },
+        {
+          "pos": "LF",
+          "name": "Joey Wiemer",
+          "display_name": "Joey Wiemer",
+          "hand": "R"
+        },
+        {
+          "pos": "2B",
+          "name": "Nasim Nunez",
+          "display_name": "Nasim Nunez",
+          "hand": "S"
+        },
+        {
+          "pos": "C",
+          "name": "Drew Millas",
+          "display_name": "Drew Millas",
+          "hand": "S"
+        }
+      ],
+      "starting_pitcher": "Cade Cavalli",
+      "abbr": "WSH",
+      "side": "home",
+      "opponent": "Braves"
+    },
+    "Brewers": {
+      "status": "Expected Lineup",
+      "starters": [
+        {
+          "pos": "LF",
+          "name": "Brandon Lockridge",
+          "display_name": "B. Lockridge",
+          "hand": "R"
+        },
+        {
+          "pos": "2B",
+          "name": "Brice Turang",
+          "display_name": "Brice Turang",
+          "hand": "L"
+        },
+        {
+          "pos": "C",
+          "name": "William Contreras",
+          "display_name": "W. Contreras",
+          "hand": "R"
+        },
+        {
+          "pos": "1B",
+          "name": "Gary Sanchez",
+          "display_name": "Gary Sanchez",
+          "hand": "R"
+        },
+        {
+          "pos": "3B",
+          "name": "Luis Rengifo",
+          "display_name": "Luis Rengifo",
+          "hand": "S"
+        },
+        {
+          "pos": "DH",
+          "name": "Luis Matos",
+          "display_name": "Luis Matos",
+          "hand": "R"
+        },
+        {
+          "pos": "RF",
+          "name": "Sal Frelick",
+          "display_name": "Sal Frelick",
+          "hand": "L"
+        },
+        {
+          "pos": "CF",
+          "name": "Blake Perkins",
+          "display_name": "B. Perkins",
+          "hand": "S"
+        },
+        {
+          "pos": "SS",
+          "name": "Joey Ortiz",
+          "display_name": "Joey Ortiz",
+          "hand": "R"
+        }
+      ],
+      "starting_pitcher": "Brandon Sproat",
+      "abbr": "MIL",
+      "side": "visit",
+      "opponent": "Tigers"
+    },
+    "Tigers": {
+      "status": "Expected Lineup",
+      "starters": [
+        {
+          "pos": "3B",
+          "name": "Kevin McGonigle",
+          "display_name": "K. McGonigle",
+          "hand": "L"
+        },
+        {
+          "pos": "2B",
+          "name": "Gleyber Torres",
+          "display_name": "G. Torres",
+          "hand": "R"
+        },
+        {
+          "pos": "DH",
+          "name": "Colt Keith",
+          "display_name": "Colt Keith",
+          "hand": "L"
+        },
+        {
+          "pos": "LF",
+          "name": "Riley Greene",
+          "display_name": "Riley Greene",
+          "hand": "L"
+        },
+        {
+          "pos": "C",
+          "name": "Dillon Dingler",
+          "display_name": "D. Dingler",
+          "hand": "R"
+        },
+        {
+          "pos": "RF",
+          "name": "Kerry Carpenter",
+          "display_name": "K. Carpenter",
+          "hand": "L"
+        },
+        {
+          "pos": "1B",
+          "name": "Spencer Torkelson",
+          "display_name": "S. Torkelson",
+          "hand": "R"
+        },
+        {
+          "pos": "CF",
+          "name": "Wenceel Perez",
+          "display_name": "W. Perez",
+          "hand": "S"
+        },
+        {
+          "pos": "SS",
+          "name": "Javier Baez",
+          "display_name": "Javier Baez",
+          "hand": "R"
+        }
+      ],
+      "starting_pitcher": "Tarik Skubal",
+      "abbr": "DET",
+      "side": "home",
+      "opponent": "Brewers"
+    },
+    "Phillies": {
+      "status": "Expected Lineup",
+      "starters": [
+        {
+          "pos": "SS",
+          "name": "Trea Turner",
+          "display_name": "Trea Turner",
+          "hand": "R"
+        },
+        {
+          "pos": "DH",
+          "name": "Kyle Schwarber",
+          "display_name": "K. Schwarber",
+          "hand": "L"
+        },
+        {
+          "pos": "1B",
+          "name": "Bryce Harper",
+          "display_name": "Bryce Harper",
+          "hand": "L"
+        },
+        {
+          "pos": "RF",
+          "name": "Adolis Garcia",
+          "display_name": "A. Garcia",
+          "hand": "R"
+        },
+        {
+          "pos": "LF",
+          "name": "Brandon Marsh",
+          "display_name": "B. Marsh",
+          "hand": "L"
+        },
+        {
+          "pos": "3B",
+          "name": "Alec Bohm",
+          "display_name": "Alec Bohm",
+          "hand": "R"
+        },
+        {
+          "pos": "2B",
+          "name": "Bryson Stott",
+          "display_name": "Bryson Stott",
+          "hand": "L"
+        },
+        {
+          "pos": "CF",
+          "name": "Justin Crawford",
+          "display_name": "J. Crawford",
+          "hand": "L"
+        },
+        {
+          "pos": "C",
+          "name": "Rafael Marchan",
+          "display_name": "R. Marchan",
+          "hand": "S"
+        }
+      ],
+      "starting_pitcher": "C. Sanchez",
+      "abbr": "PHI",
+      "side": "visit",
+      "opponent": "Cubs"
+    },
+    "Cubs": {
+      "status": "Expected Lineup",
+      "starters": [
+        {
+          "pos": "2B",
+          "name": "Nico Hoerner",
+          "display_name": "Nico Hoerner",
+          "hand": "R"
+        },
+        {
+          "pos": "3B",
+          "name": "Alex Bregman",
+          "display_name": "Alex Bregman",
+          "hand": "R"
+        },
+        {
+          "pos": "DH",
+          "name": "Seiya Suzuki",
+          "display_name": "Seiya Suzuki",
+          "hand": "R"
+        },
+        {
+          "pos": "LF",
+          "name": "Ian Happ",
+          "display_name": "Ian Happ",
+          "hand": "S"
+        },
+        {
+          "pos": "C",
+          "name": "Carson Kelly",
+          "display_name": "Carson Kelly",
+          "hand": "R"
+        },
+        {
+          "pos": "1B",
+          "name": "Michael Busch",
+          "display_name": "M. Busch",
+          "hand": "L"
+        },
+        {
+          "pos": "SS",
+          "name": "Dansby Swanson",
+          "display_name": "D. Swanson",
+          "hand": "R"
+        },
+        {
+          "pos": "CF",
+          "name": "Pete Crow-Armstrong",
+          "display_name": "P. Crow-Armstrong",
+          "hand": "L"
+        },
+        {
+          "pos": "RF",
+          "name": "Matt Shaw",
+          "display_name": "Matt Shaw",
+          "hand": "R"
+        }
+      ],
+      "starting_pitcher": "Edward Cabrera",
+      "abbr": "CHC",
+      "side": "home",
+      "opponent": "Phillies"
+    },
+    "Padres": {
+      "status": "Expected Lineup",
+      "starters": [
+        {
+          "pos": "LF",
+          "name": "Ramon Laureano",
+          "display_name": "R. Laureano",
+          "hand": "R"
+        },
+        {
+          "pos": "RF",
+          "name": "Fernando Tatis",
+          "display_name": "F. Tatis",
+          "hand": "R"
+        },
+        {
+          "pos": "CF",
+          "name": "Jackson Merrill",
+          "display_name": "J. Merrill",
+          "hand": "L"
+        },
+        {
+          "pos": "3B",
+          "name": "Manny Machado",
+          "display_name": "M. Machado",
+          "hand": "R"
+        },
+        {
+          "pos": "SS",
+          "name": "Xander Bogaerts",
+          "display_name": "X. Bogaerts",
+          "hand": "R"
+        },
+        {
+          "pos": "1B",
+          "name": "Gavin Sheets",
+          "display_name": "Gavin Sheets",
+          "hand": "L"
+        },
+        {
+          "pos": "DH",
+          "name": "Miguel Andujar",
+          "display_name": "M. Andujar",
+          "hand": "R"
+        },
+        {
+          "pos": "C",
+          "name": "Freddy Fermin",
+          "display_name": "F. Fermin",
+          "hand": "R"
+        },
+        {
+          "pos": "2B",
+          "name": "Jake Cronenworth",
+          "display_name": "J. Cronenworth",
+          "hand": "L"
+        }
+      ],
+      "starting_pitcher": "Matt Waldron",
+      "abbr": "SD",
+      "side": "visit",
+      "opponent": "Rockies"
+    },
+    "Rockies": {
+      "status": "Expected Lineup",
+      "starters": [
+        {
+          "pos": "DH",
+          "name": "Edouard Julien",
+          "display_name": "E. Julien",
+          "hand": "L"
+        },
+        {
+          "pos": "LF",
+          "name": "Mickey Moniak",
+          "display_name": "M. Moniak",
+          "hand": "L"
+        },
+        {
+          "pos": "C",
+          "name": "Hunter Goodman",
+          "display_name": "H. Goodman",
+          "hand": "R"
+        },
+        {
+          "pos": "1B",
+          "name": "TJ Rumfield",
+          "display_name": "TJ Rumfield",
+          "hand": "L"
+        },
+        {
+          "pos": "RF",
+          "name": "Troy Johnston",
+          "display_name": "T. Johnston",
+          "hand": "L"
+        },
+        {
+          "pos": "SS",
+          "name": "Ezequiel Tovar",
+          "display_name": "E. Tovar",
+          "hand": "R"
+        },
+        {
+          "pos": "3B",
+          "name": "Kyle Karros",
+          "display_name": "Kyle Karros",
+          "hand": "R"
+        },
+        {
+          "pos": "2B",
+          "name": "Willi Castro",
+          "display_name": "Willi Castro",
+          "hand": "S"
+        },
+        {
+          "pos": "CF",
+          "name": "Brenton Doyle",
+          "display_name": "B. Doyle",
+          "hand": "R"
+        }
+      ],
+      "starting_pitcher": "Ryan Feltner",
+      "abbr": "COL",
+      "side": "home",
+      "opponent": "Padres"
+    },
+    "White Sox": {
+      "status": "Expected Lineup",
+      "starters": [
+        {
+          "pos": "DH",
+          "name": "Andrew Benintendi",
+          "display_name": "A. Benintendi",
+          "hand": "L"
+        },
+        {
+          "pos": "1B",
+          "name": "Munetaka Murakami",
+          "display_name": "M. Murakami",
+          "hand": "L"
+        },
+        {
+          "pos": "3B",
+          "name": "Miguel Vargas",
+          "display_name": "M. Vargas",
+          "hand": "R"
+        },
+        {
+          "pos": "SS",
+          "name": "Colson Montgomery",
+          "display_name": "C. Montgomery",
+          "hand": "L"
+        },
+        {
+          "pos": "RF",
+          "name": "Everson Pereira",
+          "display_name": "E. Pereira",
+          "hand": "R"
+        },
+        {
+          "pos": "LF",
+          "name": "Sam Antonacci",
+          "display_name": "S. Antonacci",
+          "hand": "L"
+        },
+        {
+          "pos": "C",
+          "name": "Edgar Quero",
+          "display_name": "Edgar Quero",
+          "hand": "S"
+        },
+        {
+          "pos": "2B",
+          "name": "Chase Meidroth",
+          "display_name": "C. Meidroth",
+          "hand": "R"
+        },
+        {
+          "pos": "CF",
+          "name": "Luisangel Acuna",
+          "display_name": "L. Acuna",
+          "hand": "R"
+        }
+      ],
+      "starting_pitcher": "Davis Martin",
+      "abbr": "CWS",
+      "side": "visit",
+      "opponent": "Diamondbacks"
+    },
+    "Diamondbacks": {
+      "status": "Expected Lineup",
+      "starters": [
+        {
+          "pos": "2B",
+          "name": "Ketel Marte",
+          "display_name": "Ketel Marte",
+          "hand": "S"
+        },
+        {
+          "pos": "RF",
+          "name": "Corbin Carroll",
+          "display_name": "C. Carroll",
+          "hand": "L"
+        },
+        {
+          "pos": "SS",
+          "name": "Geraldo Perdomo",
+          "display_name": "G. Perdomo",
+          "hand": "S"
+        },
+        {
+          "pos": "LF",
+          "name": "Lourdes Gurriel",
+          "display_name": "L. Gurriel",
+          "hand": "R"
+        },
+        {
+          "pos": "C",
+          "name": "Adrian Del Castillo",
+          "display_name": "A. Del Castillo",
+          "hand": "L"
+        },
+        {
+          "pos": "DH",
+          "name": "Jose Fernandez",
+          "display_name": "J. Fernandez",
+          "hand": "R"
+        },
+        {
+          "pos": "3B",
+          "name": "Nolan Arenado",
+          "display_name": "N. Arenado",
+          "hand": "R"
+        },
+        {
+          "pos": "1B",
+          "name": "Ildemaro Vargas",
+          "display_name": "I. Vargas",
+          "hand": "S"
+        },
+        {
+          "pos": "CF",
+          "name": "Alek Thomas",
+          "display_name": "Alek Thomas",
+          "hand": "L"
+        }
+      ],
+      "starting_pitcher": "Michael Soroka",
+      "abbr": "ARI",
+      "side": "home",
+      "opponent": "White Sox"
+    },
+    "Dodgers": {
+      "status": "Expected Lineup",
+      "starters": [
+        {
+          "pos": "DH",
+          "name": "Shohei Ohtani",
+          "display_name": "S. Ohtani",
+          "hand": "L"
+        },
+        {
+          "pos": "RF",
+          "name": "Kyle Tucker",
+          "display_name": "Kyle Tucker",
+          "hand": "L"
+        },
+        {
+          "pos": "C",
+          "name": "Will Smith",
+          "display_name": "Will Smith",
+          "hand": "R"
+        },
+        {
+          "pos": "1B",
+          "name": "Freddie Freeman",
+          "display_name": "F. Freeman",
+          "hand": "L"
+        },
+        {
+          "pos": "3B",
+          "name": "Max Muncy",
+          "display_name": "Max Muncy",
+          "hand": "L"
+        },
+        {
+          "pos": "LF",
+          "name": "Teoscar Hernandez",
+          "display_name": "T. Hernandez",
+          "hand": "R"
+        },
+        {
+          "pos": "CF",
+          "name": "Andy Pages",
+          "display_name": "Andy Pages",
+          "hand": "R"
+        },
+        {
+          "pos": "SS",
+          "name": "Hyeseong Kim",
+          "display_name": "Hyeseong Kim",
+          "hand": "L"
+        },
+        {
+          "pos": "2B",
+          "name": "Alex Freeland",
+          "display_name": "A. Freeland",
+          "hand": "S"
+        }
+      ],
+      "starting_pitcher": "Tyler Glasnow",
+      "abbr": "LAD",
+      "side": "visit",
+      "opponent": "Giants"
+    },
+    "Giants": {
+      "status": "Expected Lineup",
+      "starters": [
+        {
+          "pos": "SS",
+          "name": "Willy Adames",
+          "display_name": "Willy Adames",
+          "hand": "R"
+        },
+        {
+          "pos": "2B",
+          "name": "Luis Arraez",
+          "display_name": "Luis Arraez",
+          "hand": "L"
+        },
+        {
+          "pos": "3B",
+          "name": "Matt Chapman",
+          "display_name": "Matt Chapman",
+          "hand": "R"
+        },
+        {
+          "pos": "1B",
+          "name": "Rafael Devers",
+          "display_name": "R. Devers",
+          "hand": "L"
+        },
+        {
+          "pos": "DH",
+          "name": "Casey Schmitt",
+          "display_name": "C. Schmitt",
+          "hand": "R"
+        },
+        {
+          "pos": "RF",
+          "name": "Jung Hoo Lee",
+          "display_name": "Jung Hoo Lee",
+          "hand": "L"
+        },
+        {
+          "pos": "LF",
+          "name": "Heliot Ramos",
+          "display_name": "Heliot Ramos",
+          "hand": "R"
+        },
+        {
+          "pos": "CF",
+          "name": "Drew Gilbert",
+          "display_name": "Drew Gilbert",
+          "hand": "L"
+        },
+        {
+          "pos": "C",
+          "name": "Patrick Bailey",
+          "display_name": "P. Bailey",
+          "hand": "S"
+        }
+      ],
+      "starting_pitcher": "Logan Webb",
+      "abbr": "SF",
+      "side": "home",
+      "opponent": "Dodgers"
+    },
+    "Yankees": {
+      "status": "Expected Lineup",
+      "starters": [
+        {
+          "pos": "CF",
+          "name": "Trent Grisham",
+          "display_name": "T. Grisham",
+          "hand": "L"
+        },
+        {
+          "pos": "1B",
+          "name": "Ben Rice",
+          "display_name": "Ben Rice",
+          "hand": "L"
+        },
+        {
+          "pos": "RF",
+          "name": "Aaron Judge",
+          "display_name": "Aaron Judge",
+          "hand": "R"
+        },
+        {
+          "pos": "LF",
+          "name": "Cody Bellinger",
+          "display_name": "C. Bellinger",
+          "hand": "L"
+        },
+        {
+          "pos": "DH",
+          "name": "Giancarlo Stanton",
+          "display_name": "G. Stanton",
+          "hand": "R"
+        },
+        {
+          "pos": "2B",
+          "name": "Jazz Chisholm",
+          "display_name": "J. Chisholm",
+          "hand": "L"
+        },
+        {
+          "pos": "C",
+          "name": "Austin Wells",
+          "display_name": "Austin Wells",
+          "hand": "L"
+        },
+        {
+          "pos": "SS",
+          "name": "Jose Caballero",
+          "display_name": "J. Caballero",
+          "hand": "R"
+        },
+        {
+          "pos": "3B",
+          "name": "Ryan McMahon",
+          "display_name": "Ryan McMahon",
+          "hand": "L"
+        }
+      ],
+      "starting_pitcher": "Cam Schlittler",
+      "abbr": "NYY",
+      "side": "visit",
+      "opponent": "Red Sox"
+    },
+    "Red Sox": {
+      "status": "Expected Lineup",
+      "starters": [
+        {
+          "pos": "DH",
+          "name": "Roman Anthony",
+          "display_name": "R. Anthony",
+          "hand": "L"
+        },
+        {
+          "pos": "1B",
+          "name": "Willson Contreras",
+          "display_name": "W. Contreras",
+          "hand": "R"
+        },
+        {
+          "pos": "RF",
+          "name": "Wilyer Abreu",
+          "display_name": "Wilyer Abreu",
+          "hand": "L"
+        },
+        {
+          "pos": "SS",
+          "name": "Trevor Story",
+          "display_name": "Trevor Story",
+          "hand": "R"
+        },
+        {
+          "pos": "LF",
+          "name": "Jarren Duran",
+          "display_name": "Jarren Duran",
+          "hand": "L"
+        },
+        {
+          "pos": "CF",
+          "name": "Ceddanne Rafaela",
+          "display_name": "C. Rafaela",
+          "hand": "R"
+        },
+        {
+          "pos": "2B",
+          "name": "Marcelo Mayer",
+          "display_name": "M. Mayer",
+          "hand": "L"
+        },
+        {
+          "pos": "3B",
+          "name": "Caleb Durbin",
+          "display_name": "Caleb Durbin",
+          "hand": "R"
+        },
+        {
+          "pos": "C",
+          "name": "Carlos Narvaez",
+          "display_name": "C. Narvaez",
+          "hand": "R"
+        }
+      ],
+      "starting_pitcher": "Payton Tolle",
+      "abbr": "BOS",
+      "side": "home",
+      "opponent": "Yankees"
+    },
+    "Twins": {
+      "status": "Expected Lineup",
+      "starters": [
+        {
+          "pos": "CF",
+          "name": "Byron Buxton",
+          "display_name": "Byron Buxton",
+          "hand": "R"
+        },
+        {
+          "pos": "LF",
+          "name": "Trevor Larnach",
+          "display_name": "T. Larnach",
+          "hand": "L"
+        },
+        {
+          "pos": "DH",
+          "name": "Josh Bell",
+          "display_name": "Josh Bell",
+          "hand": "S"
+        },
+        {
+          "pos": "C",
+          "name": "Ryan Jeffers",
+          "display_name": "Ryan Jeffers",
+          "hand": "R"
+        },
+        {
+          "pos": "1B",
+          "name": "Kody Clemens",
+          "display_name": "Kody Clemens",
+          "hand": "L"
+        },
+        {
+          "pos": "2B",
+          "name": "Luke Keaschall",
+          "display_name": "L. Keaschall",
+          "hand": "R"
+        },
+        {
+          "pos": "RF",
+          "name": "Matt Wallner",
+          "display_name": "Matt Wallner",
+          "hand": "L"
+        },
+        {
+          "pos": "3B",
+          "name": "Royce Lewis",
+          "display_name": "Royce Lewis",
+          "hand": "R"
+        },
+        {
+          "pos": "SS",
+          "name": "Brooks Lee",
+          "display_name": "Brooks Lee",
+          "hand": "S"
+        }
+      ],
+      "starting_pitcher": "Joe Ryan",
+      "abbr": "MIN",
+      "side": "visit",
+      "opponent": "Mets"
+    },
+    "Mets": {
+      "status": "Expected Lineup",
+      "starters": [
+        {
+          "pos": "SS",
+          "name": "Francisco Lindor",
+          "display_name": "F. Lindor",
+          "hand": "S"
+        },
+        {
+          "pos": "LF",
+          "name": "Juan Soto",
+          "display_name": "Juan Soto",
+          "hand": "L"
+        },
+        {
+          "pos": "CF",
+          "name": "Luis Robert",
+          "display_name": "Luis Robert",
+          "hand": "R"
+        },
+        {
+          "pos": "3B",
+          "name": "Bo Bichette",
+          "display_name": "Bo Bichette",
+          "hand": "R"
+        },
+        {
+          "pos": "DH",
+          "name": "MJ Melendez",
+          "display_name": "MJ Melendez",
+          "hand": "L"
+        },
+        {
+          "pos": "C",
+          "name": "Francisco Alvarez",
+          "display_name": "F. Alvarez",
+          "hand": "R"
+        },
+        {
+          "pos": "1B",
+          "name": "Mark Vientos",
+          "display_name": "Mark Vientos",
+          "hand": "R"
+        },
+        {
+          "pos": "2B",
+          "name": "Marcus Semien",
+          "display_name": "M. Semien",
+          "hand": "R"
+        },
+        {
+          "pos": "RF",
+          "name": "Carson Benge",
+          "display_name": "Carson Benge",
+          "hand": "L"
+        }
+      ],
+      "starting_pitcher": "Christian Scott",
+      "abbr": "NYM",
+      "side": "home",
+      "opponent": "Twins"
+    },
+    "Pirates": {
+      "status": "Expected Lineup",
+      "starters": [
+        {
+          "pos": "CF",
+          "name": "Oneil Cruz",
+          "display_name": "Oneil Cruz",
+          "hand": "L"
+        },
+        {
+          "pos": "2B",
+          "name": "Brandon Lowe",
+          "display_name": "Brandon Lowe",
+          "hand": "L"
+        },
+        {
+          "pos": "LF",
+          "name": "Bryan Reynolds",
+          "display_name": "B. Reynolds",
+          "hand": "S"
+        },
+        {
+          "pos": "RF",
+          "name": "Ryan O'Hearn",
+          "display_name": "Ryan O'Hearn",
+          "hand": "L"
+        },
+        {
+          "pos": "3B",
+          "name": "Nick Yorke",
+          "display_name": "Nick Yorke",
+          "hand": "R"
+        },
+        {
+          "pos": "DH",
+          "name": "Marcell Ozuna",
+          "display_name": "M. Ozuna",
+          "hand": "R"
+        },
+        {
+          "pos": "1B",
+          "name": "Spencer Horwitz",
+          "display_name": "S. Horwitz",
+          "hand": "L"
+        },
+        {
+          "pos": "SS",
+          "name": "Konnor Griffin",
+          "display_name": "K. Griffin",
+          "hand": "R"
+        },
+        {
+          "pos": "C",
+          "name": "Joey Bart",
+          "display_name": "Joey Bart",
+          "hand": "R"
+        }
+      ],
+      "starting_pitcher": "Bubba Chandler",
+      "abbr": "PIT",
+      "side": "visit",
+      "opponent": "Rangers"
+    },
+    "Rangers": {
+      "status": "Expected Lineup",
+      "starters": [
+        {
+          "pos": "RF",
+          "name": "Brandon Nimmo",
+          "display_name": "B. Nimmo",
+          "hand": "L"
+        },
+        {
+          "pos": "SS",
+          "name": "Corey Seager",
+          "display_name": "Corey Seager",
+          "hand": "L"
+        },
+        {
+          "pos": "1B",
+          "name": "Jake Burger",
+          "display_name": "Jake Burger",
+          "hand": "R"
+        },
+        {
+          "pos": "DH",
+          "name": "Joc Pederson",
+          "display_name": "Joc Pederson",
+          "hand": "L"
+        },
+        {
+          "pos": "3B",
+          "name": "Josh Jung",
+          "display_name": "Josh Jung",
+          "hand": "R"
+        },
+        {
+          "pos": "CF",
+          "name": "Evan Carter",
+          "display_name": "Evan Carter",
+          "hand": "L"
+        },
+        {
+          "pos": "C",
+          "name": "Kyle Higashioka",
+          "display_name": "K. Higashioka",
+          "hand": "R"
+        },
+        {
+          "pos": "2B",
+          "name": "Josh Smith",
+          "display_name": "Josh Smith",
+          "hand": "L"
+        },
+        {
+          "pos": "LF",
+          "name": "Ezequiel Duran",
+          "display_name": "E. Duran",
+          "hand": "R"
+        }
+      ],
+      "starting_pitcher": "Jacob deGrom",
+      "abbr": "TEX",
+      "side": "home",
+      "opponent": "Pirates"
+    }
+  },
+  "soccer": {
+    "Sunderland": {
+      "status": "Predicted Lineup",
+      "starters": [
+        {
+          "pos": "GK",
+          "name": "Matz Sels",
+          "display_name": "Matz Sels",
+          "hand": ""
+        },
+        {
+          "pos": "DL",
+          "name": "Neco Williams",
+          "display_name": "N. Williams",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "Nikola Milenkovic",
+          "display_name": "N. Milenkovic",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "Murillo",
+          "display_name": "Murillo",
+          "hand": ""
+        },
+        {
+          "pos": "DR",
+          "name": "Ola Aina",
+          "display_name": "Ola Aina",
+          "hand": ""
+        },
+        {
+          "pos": "ML",
+          "name": "Morgan Gibbs-White",
+          "display_name": "M. Gibbs-White",
+          "hand": ""
+        },
+        {
+          "pos": "MC",
+          "name": "Ibrahim Sangare",
+          "display_name": "I. Sangare",
+          "hand": ""
+        },
+        {
+          "pos": "MC",
+          "name": "Elliot Anderson",
+          "display_name": "E. Anderson",
+          "hand": ""
+        },
+        {
+          "pos": "MR",
+          "name": "Omari Hutchinson",
+          "display_name": "O. Hutchinson",
+          "hand": ""
+        },
+        {
+          "pos": "FW",
+          "name": "Chris Wood",
+          "display_name": "Chris Wood",
+          "hand": ""
+        },
+        {
+          "pos": "FW",
+          "name": "Igor Jesus",
+          "display_name": "Igor Jesus",
+          "hand": ""
+        }
+      ],
+      "abbr": "SUN",
+      "side": "visit",
+      "opponent": "Nottingham Forest",
+      "gk": "Matz Sels"
+    },
+    "Nottingham Forest": {
+      "status": "Predicted Lineup",
+      "starters": [
+        {
+          "pos": "GK",
+          "name": "Robin Roefs",
+          "display_name": "Robin Roefs",
+          "hand": ""
+        },
+        {
+          "pos": "DL",
+          "name": "Reinildo",
+          "display_name": "Reinildo",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "Daniel Ballard",
+          "display_name": "D. Ballard",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "Nordi Mukiele",
+          "display_name": "N. Mukiele",
+          "hand": ""
+        },
+        {
+          "pos": "DR",
+          "name": "Trai Hume",
+          "display_name": "Trai Hume",
+          "hand": ""
+        },
+        {
+          "pos": "DMC",
+          "name": "Granit Xhaka",
+          "display_name": "Granit Xhaka",
+          "hand": ""
+        },
+        {
+          "pos": "DMC",
+          "name": "Noah Sadiki",
+          "display_name": "Noah Sadiki",
+          "hand": ""
+        },
+        {
+          "pos": "AML",
+          "name": "Enzo Le Fee",
+          "display_name": "Enzo Le Fee",
+          "hand": ""
+        },
+        {
+          "pos": "AMC",
+          "name": "Habib Diarra",
+          "display_name": "Habib Diarra",
+          "hand": ""
+        },
+        {
+          "pos": "AMR",
+          "name": "Chris Rigg",
+          "display_name": "Chris Rigg",
+          "hand": ""
+        },
+        {
+          "pos": "FW",
+          "name": "Brian Brobbey",
+          "display_name": "B. Brobbey",
+          "hand": ""
+        }
+      ],
+      "abbr": "NOT",
+      "side": "home",
+      "opponent": "Sunderland",
+      "gk": "Robin Roefs"
+    },
+    "Fulham": {
+      "status": "Predicted Lineup",
+      "starters": [
+        {
+          "pos": "GK",
+          "name": "Emiliano Martinez",
+          "display_name": "E. Martinez",
+          "hand": ""
+        },
+        {
+          "pos": "DL",
+          "name": "Lucas Digne",
+          "display_name": "Lucas Digne",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "Pau Torres",
+          "display_name": "Pau Torres",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "Ezri Konsa",
+          "display_name": "Ezri Konsa",
+          "hand": ""
+        },
+        {
+          "pos": "DR",
+          "name": "Matty Cash",
+          "display_name": "Matty Cash",
+          "hand": ""
+        },
+        {
+          "pos": "DMC",
+          "name": "Amadou Onana",
+          "display_name": "Amadou Onana",
+          "hand": ""
+        },
+        {
+          "pos": "DMC",
+          "name": "Youri Tielemans",
+          "display_name": "Y. Tielemans",
+          "hand": ""
+        },
+        {
+          "pos": "AML",
+          "name": "Emiliano Buendia",
+          "display_name": "E. Buendia",
+          "hand": ""
+        },
+        {
+          "pos": "AMC",
+          "name": "Morgan Rogers",
+          "display_name": "M. Rogers",
+          "hand": ""
+        },
+        {
+          "pos": "AMR",
+          "name": "John McGinn",
+          "display_name": "John McGinn",
+          "hand": ""
+        },
+        {
+          "pos": "FW",
+          "name": "Ollie Watkins",
+          "display_name": "O. Watkins",
+          "hand": ""
+        }
+      ],
+      "abbr": "FUL",
+      "side": "visit",
+      "opponent": "Aston Villa",
+      "gk": "Emiliano Martinez"
+    },
+    "Aston Villa": {
+      "status": "Predicted Lineup",
+      "starters": [
+        {
+          "pos": "GK",
+          "name": "Bernd Leno",
+          "display_name": "Bernd Leno",
+          "hand": ""
+        },
+        {
+          "pos": "DL",
+          "name": "Antonee Robinson",
+          "display_name": "A. Robinson",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "Joachim Andersen",
+          "display_name": "J. Andersen",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "Calvin Bassey",
+          "display_name": "C. Bassey",
+          "hand": ""
+        },
+        {
+          "pos": "DR",
+          "name": "Timothy Castagne",
+          "display_name": "T. Castagne",
+          "hand": ""
+        },
+        {
+          "pos": "DMC",
+          "name": "Tom Cairney",
+          "display_name": "Tom Cairney",
+          "hand": ""
+        },
+        {
+          "pos": "DMC",
+          "name": "Sasa Lukic",
+          "display_name": "Sasa Lukic",
+          "hand": ""
+        },
+        {
+          "pos": "AML",
+          "name": "Samuel Chukwueze",
+          "display_name": "S. Chukwueze",
+          "hand": ""
+        },
+        {
+          "pos": "AMC",
+          "name": "Emile Smith Rowe",
+          "display_name": "E. Smith Rowe",
+          "hand": ""
+        },
+        {
+          "pos": "AMR",
+          "name": "Harry Wilson",
+          "display_name": "Harry Wilson",
+          "hand": ""
+        },
+        {
+          "pos": "FW",
+          "name": "Rodrigo Muniz",
+          "display_name": "Rodrigo Muniz",
+          "hand": ""
+        }
+      ],
+      "abbr": "AVL",
+      "side": "home",
+      "opponent": "Fulham",
+      "gk": "Bernd Leno"
+    },
+    "Wolverhampton": {
+      "status": "Predicted Lineup",
+      "starters": [
+        {
+          "pos": "GK",
+          "name": "Antonin Kinsky",
+          "display_name": "A. Kinsky",
+          "hand": ""
+        },
+        {
+          "pos": "DL",
+          "name": "Djed Spence",
+          "display_name": "Djed Spence",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "Micky van de Ven",
+          "display_name": "M. van de Ven",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "Kevin Danso",
+          "display_name": "Kevin Danso",
+          "hand": ""
+        },
+        {
+          "pos": "DR",
+          "name": "Pedro Porro",
+          "display_name": "Pedro Porro",
+          "hand": ""
+        },
+        {
+          "pos": "MC",
+          "name": "Rodrigo Bentancur",
+          "display_name": "R. Bentancur",
+          "hand": ""
+        },
+        {
+          "pos": "MC",
+          "name": "Conor Gallagher",
+          "display_name": "C. Gallagher",
+          "hand": ""
+        },
+        {
+          "pos": "MC",
+          "name": "Yves Bissouma",
+          "display_name": "Y. Bissouma",
+          "hand": ""
+        },
+        {
+          "pos": "FWL",
+          "name": "Xavi Simons",
+          "display_name": "Xavi Simons",
+          "hand": ""
+        },
+        {
+          "pos": "FWR",
+          "name": "Mathys Tel",
+          "display_name": "Mathys Tel",
+          "hand": ""
+        },
+        {
+          "pos": "FW",
+          "name": "Dominic Solanke",
+          "display_name": "D. Solanke",
+          "hand": ""
+        }
+      ],
+      "abbr": "WOL",
+      "side": "visit",
+      "opponent": "Tottenham Hotspur",
+      "gk": "Antonin Kinsky"
+    },
+    "Tottenham Hotspur": {
+      "status": "Predicted Lineup",
+      "starters": [
+        {
+          "pos": "GK",
+          "name": "Jose Sa",
+          "display_name": "Jose Sa",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "Santi Bueno",
+          "display_name": "Santi Bueno",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "Ladislav Krejci",
+          "display_name": "L. Krejci",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "Toti Gomes",
+          "display_name": "Toti Gomes",
+          "hand": ""
+        },
+        {
+          "pos": "ML",
+          "name": "Hugo Bueno",
+          "display_name": "Hugo Bueno",
+          "hand": ""
+        },
+        {
+          "pos": "MC",
+          "name": "Andre",
+          "display_name": "Andre",
+          "hand": ""
+        },
+        {
+          "pos": "MC",
+          "name": "Joao Gomes",
+          "display_name": "Joao Gomes",
+          "hand": ""
+        },
+        {
+          "pos": "MR",
+          "name": "Jackson Tchatchoua",
+          "display_name": "J. Tchatchoua",
+          "hand": ""
+        },
+        {
+          "pos": "AMC",
+          "name": "Rodrigo Gomes",
+          "display_name": "Rodrigo Gomes",
+          "hand": ""
+        },
+        {
+          "pos": "AMC",
+          "name": "Mateus Mane",
+          "display_name": "Mateus Mane",
+          "hand": ""
+        },
+        {
+          "pos": "FW",
+          "name": "Adam Armstrong",
+          "display_name": "A. Armstrong",
+          "hand": ""
+        }
+      ],
+      "abbr": "TOT",
+      "side": "home",
+      "opponent": "Wolverhampton",
+      "gk": "Jose Sa"
+    },
+    "West Ham United": {
+      "status": "Predicted Lineup",
+      "starters": [
+        {
+          "pos": "GK",
+          "name": "Jordan Pickford",
+          "display_name": "J. Pickford",
+          "hand": ""
+        },
+        {
+          "pos": "DL",
+          "name": "Vitaliy Mykolenko",
+          "display_name": "V. Mykolenko",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "James Tarkowski",
+          "display_name": "J. Tarkowski",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "Michael Keane",
+          "display_name": "M. Keane",
+          "hand": ""
+        },
+        {
+          "pos": "DR",
+          "name": "Jake O'Brien",
+          "display_name": "Jake O'Brien",
+          "hand": ""
+        },
+        {
+          "pos": "DMC",
+          "name": "James Garner",
+          "display_name": "James Garner",
+          "hand": ""
+        },
+        {
+          "pos": "DMC",
+          "name": "Idrissa Gueye",
+          "display_name": "I. Gueye",
+          "hand": ""
+        },
+        {
+          "pos": "AML",
+          "name": "Iliman Ndiaye",
+          "display_name": "I. Ndiaye",
+          "hand": ""
+        },
+        {
+          "pos": "AMC",
+          "name": "Kiernan Dewsbury-Hall",
+          "display_name": "K. Dewsbury-Hall",
+          "hand": ""
+        },
+        {
+          "pos": "AMR",
+          "name": "Dwight McNeil",
+          "display_name": "D. McNeil",
+          "hand": ""
+        },
+        {
+          "pos": "FW",
+          "name": "Beto",
+          "display_name": "Beto",
+          "hand": ""
+        }
+      ],
+      "abbr": "WHU",
+      "side": "visit",
+      "opponent": "Everton",
+      "gk": "Jordan Pickford"
+    },
+    "Everton": {
+      "status": "Predicted Lineup",
+      "starters": [
+        {
+          "pos": "GK",
+          "name": "Mads Hermansen",
+          "display_name": "M. Hermansen",
+          "hand": ""
+        },
+        {
+          "pos": "DL",
+          "name": "El Hadji Malick Diouf",
+          "display_name": "E. Diouf",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "Axel Disasi",
+          "display_name": "Axel Disasi",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "Konstantinos Mavropanos",
+          "display_name": "K. Mavropanos",
+          "hand": ""
+        },
+        {
+          "pos": "DR",
+          "name": "Kyle Walker-Peters",
+          "display_name": "K. Walker-Peters",
+          "hand": ""
+        },
+        {
+          "pos": "ML",
+          "name": "Crysencio Summerville",
+          "display_name": "C. Summerville",
+          "hand": ""
+        },
+        {
+          "pos": "MC",
+          "name": "Tomas Soucek",
+          "display_name": "Tomas Soucek",
+          "hand": ""
+        },
+        {
+          "pos": "MC",
+          "name": "Mateus Fernandes",
+          "display_name": "Mateus Fernandes",
+          "hand": ""
+        },
+        {
+          "pos": "MR",
+          "name": "Jarrod Bowen",
+          "display_name": "Jarrod Bowen",
+          "hand": ""
+        },
+        {
+          "pos": "AMC",
+          "name": "Pablo Felipe",
+          "display_name": "Pablo Felipe",
+          "hand": ""
+        },
+        {
+          "pos": "FW",
+          "name": "Taty Castellanos",
+          "display_name": "Taty Castellanos",
+          "hand": ""
+        }
+      ],
+      "abbr": "EVE",
+      "side": "home",
+      "opponent": "West Ham United",
+      "gk": "Mads Hermansen"
+    },
+    "Liverpool": {
+      "status": "Predicted Lineup",
+      "starters": [
+        {
+          "pos": "GK",
+          "name": "Dean Henderson",
+          "display_name": "D. Henderson",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "Chris Richards",
+          "display_name": "C. Richards",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "Jaydee Canvot",
+          "display_name": "J. Canvot",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "Maxence Lacroix",
+          "display_name": "M. Lacroix",
+          "hand": ""
+        },
+        {
+          "pos": "ML",
+          "name": "Tyrick Mitchell",
+          "display_name": "T. Mitchell",
+          "hand": ""
+        },
+        {
+          "pos": "MC",
+          "name": "Daichi Kamada",
+          "display_name": "D. Kamada",
+          "hand": ""
+        },
+        {
+          "pos": "MC",
+          "name": "Jefferson Lerma",
+          "display_name": "J. Lerma",
+          "hand": ""
+        },
+        {
+          "pos": "MR",
+          "name": "Daniel Munoz",
+          "display_name": "Daniel Munoz",
+          "hand": ""
+        },
+        {
+          "pos": "AMC",
+          "name": "Yeremy Pino",
+          "display_name": "Yeremy Pino",
+          "hand": ""
+        },
+        {
+          "pos": "AMC",
+          "name": "Ismaila Sarr",
+          "display_name": "Ismaila Sarr",
+          "hand": ""
+        },
+        {
+          "pos": "FW",
+          "name": "Jean-Philippe Mateta",
+          "display_name": "J. Mateta",
+          "hand": ""
+        }
+      ],
+      "abbr": "LIV",
+      "side": "visit",
+      "opponent": "Crystal Palace",
+      "gk": "Dean Henderson"
+    },
+    "Crystal Palace": {
+      "status": "Predicted Lineup",
+      "starters": [
+        {
+          "pos": "GK",
+          "name": "Freddie Woodman",
+          "display_name": "F. Woodman",
+          "hand": ""
+        },
+        {
+          "pos": "DL",
+          "name": "Milos Kerkez",
+          "display_name": "Milos Kerkez",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "Virgil van Dijk",
+          "display_name": "V. van Dijk",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "Ibrahima Konate",
+          "display_name": "I. Konate",
+          "hand": ""
+        },
+        {
+          "pos": "DR",
+          "name": "Jeremie Frimpong",
+          "display_name": "J. Frimpong",
+          "hand": ""
+        },
+        {
+          "pos": "DMC",
+          "name": "Alexis Mac Allister",
+          "display_name": "A. Mac Allister",
+          "hand": ""
+        },
+        {
+          "pos": "DMC",
+          "name": "Ryan Gravenberch",
+          "display_name": "R. Gravenberch",
+          "hand": ""
+        },
+        {
+          "pos": "AML",
+          "name": "Florian Wirtz",
+          "display_name": "F. Wirtz",
+          "hand": ""
+        },
+        {
+          "pos": "AMC",
+          "name": "Dominik Szoboszlai",
+          "display_name": "D. Szoboszlai",
+          "hand": ""
+        },
+        {
+          "pos": "AMR",
+          "name": "Mohamed Salah",
+          "display_name": "M. Salah",
+          "hand": ""
+        },
+        {
+          "pos": "FW",
+          "name": "Alexander Isak",
+          "display_name": "A. Isak",
+          "hand": ""
+        }
+      ],
+      "abbr": "CRY",
+      "side": "home",
+      "opponent": "Liverpool",
+      "gk": "Freddie Woodman"
+    },
+    "Arsenal": {
+      "status": "Predicted Lineup",
+      "starters": [
+        {
+          "pos": "GK",
+          "name": "Aaron Ramsdale",
+          "display_name": "A. Ramsdale",
+          "hand": ""
+        },
+        {
+          "pos": "DL",
+          "name": "Lewis Hall",
+          "display_name": "Lewis Hall",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "Malick Thiaw",
+          "display_name": "Malick Thiaw",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "Sven Botman",
+          "display_name": "Sven Botman",
+          "hand": ""
+        },
+        {
+          "pos": "DR",
+          "name": "Kieran Trippier",
+          "display_name": "K. Trippier",
+          "hand": ""
+        },
+        {
+          "pos": "MC",
+          "name": "Bruno Guimaraes",
+          "display_name": "Bruno Guimaraes",
+          "hand": ""
+        },
+        {
+          "pos": "MC",
+          "name": "Sandro Tonali",
+          "display_name": "S. Tonali",
+          "hand": ""
+        },
+        {
+          "pos": "MC",
+          "name": "Lewis Miley",
+          "display_name": "Lewis Miley",
+          "hand": ""
+        },
+        {
+          "pos": "FWL",
+          "name": "Harvey Barnes",
+          "display_name": "H. Barnes",
+          "hand": ""
+        },
+        {
+          "pos": "FWR",
+          "name": "Jacob Murphy",
+          "display_name": "Jacob Murphy",
+          "hand": ""
+        },
+        {
+          "pos": "FW",
+          "name": "Will Osula",
+          "display_name": "Will Osula",
+          "hand": ""
+        }
+      ],
+      "abbr": "ARS",
+      "side": "visit",
+      "opponent": "Newcastle United",
+      "gk": "Aaron Ramsdale"
+    },
+    "Newcastle United": {
+      "status": "Predicted Lineup",
+      "starters": [
+        {
+          "pos": "GK",
+          "name": "David Raya",
+          "display_name": "David Raya",
+          "hand": ""
+        },
+        {
+          "pos": "DL",
+          "name": "Piero Hincapie",
+          "display_name": "P. Hincapie",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "Gabriel",
+          "display_name": "Gabriel",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "William Saliba",
+          "display_name": "W. Saliba",
+          "hand": ""
+        },
+        {
+          "pos": "DR",
+          "name": "Ben White",
+          "display_name": "Ben White",
+          "hand": ""
+        },
+        {
+          "pos": "DMC",
+          "name": "Martin Zubimendi",
+          "display_name": "M. Zubimendi",
+          "hand": ""
+        },
+        {
+          "pos": "DMC",
+          "name": "Declan Rice",
+          "display_name": "Declan Rice",
+          "hand": ""
+        },
+        {
+          "pos": "AML",
+          "name": "Eberechi Eze",
+          "display_name": "Eberechi Eze",
+          "hand": ""
+        },
+        {
+          "pos": "AMC",
+          "name": "Martin Odegaard",
+          "display_name": "M. Odegaard",
+          "hand": ""
+        },
+        {
+          "pos": "AMR",
+          "name": "Noni Madueke",
+          "display_name": "Noni Madueke",
+          "hand": ""
+        },
+        {
+          "pos": "FW",
+          "name": "Kai Havertz",
+          "display_name": "Kai Havertz",
+          "hand": ""
+        }
+      ],
+      "abbr": "NEW",
+      "side": "home",
+      "opponent": "Arsenal",
+      "gk": "David Raya"
+    },
+    "Manchester United": {
+      "status": "Predicted Lineup",
+      "starters": [
+        {
+          "pos": "GK",
+          "name": "Caoimhin Kelleher",
+          "display_name": "C. Kelleher",
+          "hand": ""
+        },
+        {
+          "pos": "DL",
+          "name": "Keane Lewis-Potter",
+          "display_name": "K. Lewis-Potter",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "Nathan Collins",
+          "display_name": "N. Collins",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "Sepp van den Berg",
+          "display_name": "S. van den Berg",
+          "hand": ""
+        },
+        {
+          "pos": "DR",
+          "name": "Michael Kayode",
+          "display_name": "M. Kayode",
+          "hand": ""
+        },
+        {
+          "pos": "DMC",
+          "name": "Yehor Yarmolyuk",
+          "display_name": "Y. Yarmolyuk",
+          "hand": ""
+        },
+        {
+          "pos": "DMC",
+          "name": "Mathias Jensen",
+          "display_name": "M. Jensen",
+          "hand": ""
+        },
+        {
+          "pos": "AML",
+          "name": "Kevin Schade",
+          "display_name": "Kevin Schade",
+          "hand": ""
+        },
+        {
+          "pos": "AMC",
+          "name": "Mikkel Damsgaard",
+          "display_name": "M. Damsgaard",
+          "hand": ""
+        },
+        {
+          "pos": "AMR",
+          "name": "Dango Ouattara",
+          "display_name": "D. Ouattara",
+          "hand": ""
+        },
+        {
+          "pos": "FW",
+          "name": "Igor Thiago",
+          "display_name": "Igor Thiago",
+          "hand": ""
+        }
+      ],
+      "abbr": "MUN",
+      "side": "visit",
+      "opponent": "Brentford",
+      "gk": "Caoimhin Kelleher"
+    },
+    "Brentford": {
+      "status": "Predicted Lineup",
+      "starters": [
+        {
+          "pos": "GK",
+          "name": "Senne Lammens",
+          "display_name": "S. Lammens",
+          "hand": ""
+        },
+        {
+          "pos": "DL",
+          "name": "Luke Shaw",
+          "display_name": "Luke Shaw",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "Harry Maguire",
+          "display_name": "H. Maguire",
+          "hand": ""
+        },
+        {
+          "pos": "DC",
+          "name": "Ayden Heaven",
+          "display_name": "Ayden Heaven",
+          "hand": ""
+        },
+        {
+          "pos": "DR",
+          "name": "Diogo Dalot",
+          "display_name": "Diogo Dalot",
+          "hand": ""
+        },
+        {
+          "pos": "DMC",
+          "name": "Casemiro",
+          "display_name": "Casemiro",
+          "hand": ""
+        },
+        {
+          "pos": "DMC",
+          "name": "Kobbie Mainoo",
+          "display_name": "K. Mainoo",
+          "hand": ""
+        },
+        {
+          "pos": "AML",
+          "name": "Matheus Cunha",
+          "display_name": "Matheus Cunha",
+          "hand": ""
+        },
+        {
+          "pos": "AMC",
+          "name": "Bruno Fernandes",
+          "display_name": "Bruno Fernandes",
+          "hand": ""
+        },
+        {
+          "pos": "AMR",
+          "name": "Amad Diallo",
+          "display_name": "Amad Diallo",
+          "hand": ""
+        },
+        {
+          "pos": "FW",
+          "name": "Benjamin Sesko",
+          "display_name": "B. Sesko",
+          "hand": ""
+        }
+      ],
+      "abbr": "BRE",
+      "side": "home",
+      "opponent": "Manchester United",
+      "gk": "Senne Lammens"
+    }
+  },
+  "rugby": {}
+}

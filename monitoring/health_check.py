@@ -354,6 +354,61 @@ def main():
     except Exception as e:
         warnings.append(f"GEN006 feed_status チェック失敗: {e}")
 
+    # === v7 追加: parse=0 空フィード検知 (Session_55 2026-04-23 GEN007) ===
+    # Fetcher が HTTP fetch に成功しても parser が 0件抽出で saved されている
+    # ケースを検知。file 存在しても内容が空 = L1 データ欠損。
+    try:
+        from pathlib import Path as _P
+        feeds_dir = BASE / "stats" / "external_feeds"
+        today_iso = today.isoformat()
+        empty = []
+        # 本日日付の新規保存ファイルのみチェック (過去分まで遡ると誤検知増える)
+        for f in sorted(feeds_dir.glob(f"*_{today_iso}.json")):
+            try:
+                j = json.load(open(f, encoding="utf-8-sig"))
+            except Exception:
+                continue
+            # 各 fetcher が格納する件数 key を試行
+            counts = []
+            for key in ("teams", "team_count", "total_teams", "club_count"):
+                v = j.get(key)
+                if isinstance(v, int):
+                    counts.append((key, v))
+                elif isinstance(v, list):
+                    counts.append((key, len(v)))
+            # clubs (clubelo 形式)
+            clubs = j.get("clubs")
+            if isinstance(clubs, list):
+                counts.append(("clubs", len(clubs)))
+            # lineup 形式 (sport 別に dict)
+            for sport_key in ("nba", "nfl", "mlb", "soccer", "rugby"):
+                sv = j.get(sport_key)
+                if isinstance(sv, dict):
+                    counts.append((sport_key, len(sv)))
+            # leagues (understat / clubelo 形式)
+            lgs = j.get("leagues")
+            if isinstance(lgs, dict):
+                def _league_size(v):
+                    if isinstance(v, dict):
+                        return v.get("team_count", len(v.get("teams", [])))
+                    if isinstance(v, list):
+                        return len(v)
+                    return 0
+                tot = sum(_league_size(v) for v in lgs.values())
+                counts.append(("leagues_teams_total", tot))
+            # 判定: すべて 0 なら空フィード
+            if counts and all(v == 0 for _, v in counts):
+                empty.append(f.name)
+        if empty:
+            anomalies.append(
+                f"parse=0 空フィード {len(empty)}件: {', '.join(empty)}。"
+                "HTTP fetch 成功も parser が 0件抽出。該当 fetcher の parser を確認要。"
+            )
+        else:
+            goods.append("本日分 fetcher 保存: parse=0 空フィード未検知")
+    except Exception as e:
+        warnings.append(f"空フィード検知チェック失敗: {e}")
+
     # === 結果出力 ===
     print(f"{BOLD}--- [OK] 正常項目 ---{RESET}")
     for g in goods:

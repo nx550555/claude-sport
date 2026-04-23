@@ -1,0 +1,8 @@
+{
+  "source_batting": "https://www.fangraphs.com/leaders/major-league?pos=all&stats=bat&lg=all&type=8&season=2026&month=0&ind=0&team=0,ts&rost=0&age=&filter=&players=0",
+  "source_pitching": "https://www.fangraphs.com/leaders/major-league?pos=all&stats=pit&lg=all&type=8&season=2026&month=0&ind=0&team=0,ts&rost=0&age=&filter=&players=0",
+  "fetched_at": "2026-04-23T21:54:11.645298+09:00",
+  "season": "2026",
+  "teams": [],
+  "team_count": 0
+}

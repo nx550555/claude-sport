@@ -36,6 +36,10 @@ python scripts/fetch_lineups.py --days-stale 0.5 --sport all  # スタメン (12
 ```
 - exit code 0 or [SKIP] なら問題なし。exit code 2 (fetch failed) なら GEN006 ユーザー依頼発動
 - `python scripts/stats_feed_reader.py` で feed_status() 全件を確認（health_check v4 で自動チェック済）
+- **【Session_55 2026-04-23 修復メモ】** fetch_lineups.py (rotowire 全4スポーツ) / fetch_baseball_savant.py の parser 修復完了。fetch_understat.py / fetch_fangraphs.py は **サイト側構造変更 or Cloudflare 強化** により取得不能 (PA085 / PA086 で追跡)。対応策:
+  - **soccer L1**: clubelo Elo のみで判定（understat xG クロスチェック無効化）— S001 は Elo 単独運用
+  - **MLB L1**: Baseball Savant xwOBA/xERA (Advanced Tier) を主、FanGraphs wRC+/FIP はオフライン。修復まで **MLB GO 判定は Savant + スタメン確認のみ** で進行
+  - parse=0 空フィードは health_check v7 が ALERT 判定する
 - Claude 分析内で:
   ```python
   from scripts.stats_feed_reader import (

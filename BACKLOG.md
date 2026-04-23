@@ -241,7 +241,42 @@
 
 **Git commits**: af56ec8 (Session_54 メイン) / 次 commit (GEN007)
 
-### 🎯 Session_55 行動計画 (次回最優先)
+### 🚨 Session_55 完了報告 (2026-04-23)
+
+**主題: GEN007 改善 — Session_54 新規 fetcher 4本の parse=0 空保存問題修復**
+
+**修復完了 (2/4):**
+- [x] **fetch_baseball_savant.py**: URL `type=team` → `type=batter-team`/`pitcher-team` + CSV カラム名修正 → **30 teams 取得**
+- [x] **fetch_lineups.py**: parser 全面書き直し (NBA `data-lnum` / `is-pct-play-100` / `<a class="lineup__mteam">` 対応) → **NBA 6 / MLB 18 / soccer 14 teams**
+- [x] **monitoring/health_check.py v7**: parse=0 空フィード検知を追加
+- [x] **CLAUDE.md STEP 0.5**: 修復メモ + soccer/MLB L1 暫定ガード追加
+
+**未解消 → 次セッション繰越 (PA085/086):**
+- [ ] **PA085 Understat 修復**: `teamsData` 変数自体が HTML から消失。AJAX endpoint 特定→JSON fetch 方式に書き直し
+- [ ] **PA086 FanGraphs 修復**: Cloudflare challenge 突破に playwright-stealth / cloudscraper 導入、または手動 CSV 運用
+
+**運用影響:**
+- soccer L1: clubelo Elo 単独運用 (xG クロスチェック無効)
+- MLB L1: Savant xwOBA/xERA 単独運用 (FanGraphs wRC+/FIP オフライン)
+- スタメン: rotowire 38 teams で STEP 4.5 稼働可能
+
+**Git commit**: (次セッションで実施)
+
+### 🎯 Session_56 行動計画 (次回最優先)
+
+**最優先 A: PA085 / PA086 修復**
+- Understat Network トレース→AJAX endpoint 特定→parser 書き直し
+- FanGraphs playwright-stealth 導入検証 / 失敗時は手動 CSV 運用切替の提案
+
+**最優先 B: pending 結果確認 (Session_54 積み残し)**
+- PA068 Madrid GO 残 3件 / PA076 CAUTION 追跡 / PA078-083 試合結果
+
+**最優先 C: Session_54 新規インフラ検証**
+- lineup_watch.yml / notify_digest.yml 初回実行ログ確認
+
+---
+
+### 🎯 Session_55 行動計画 (旧・参考用)
 
 **【最優先 A: GEN007 即適用テスト】**
 - ユーザーから新スポーツ試合データ受領予定 (サッカー or MLB)
