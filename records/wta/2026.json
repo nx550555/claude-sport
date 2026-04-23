@@ -1452,7 +1452,8 @@
           "prediction_hit": null,
           "status": "pending",
           "screened_at": "2026-04-21",
-          "screened_session": "_48"
+          "screened_session": "_48",
+          "caution_type": "margin"
         },
         {
           "tournament": "WTA Madrid",
@@ -1475,7 +1476,8 @@
           "prediction_hit": null,
           "status": "pending",
           "screened_at": "2026-04-21",
-          "screened_session": "_48"
+          "screened_session": "_48",
+          "caution_type": "margin"
         }
       ]
     }

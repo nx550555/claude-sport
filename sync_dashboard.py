@@ -371,23 +371,60 @@ def build_active_tab(stats):
         ("🏉 ラグビー", ["nrl", "superrugby", "superleague", "premiership", "top14", "prod2"]),
     ]
 
-    # Split into GO (bet推奨) and CAUTION (観察 no-bet)
+    # Split into GO (bet推奨) and CAUTION 3サブタイプ (waiting/margin/track)
     go_blocks = []
-    caution_blocks = []
+    caution_waiting_blocks = []
+    caution_margin_blocks = []
+    caution_track_blocks = []
     go_count = 0
-    caution_count = 0
+    cw_count = 0
+    cm_count = 0
+    ct_count = 0
 
-    def render_card(sport_key, e, is_go):
+    CAUTION_META = {
+        "waiting": {
+            "label": "CAUTION-WAITING (情報確定待ち)",
+            "badge_bg": "#1a2d3a", "badge_fg": "#58a6ff",
+            "border_color": "#58a6ff",
+            "action": "情報確定次第 GO昇格/SKIP降格",
+            "section_header": "🔵 CAUTION-WAITING (情報確定待ち)",
+            "section_color": "#58a6ff",
+            "section_border": "#1f6feb",
+            "section_note": "goalie・怪我・出場情報が未確定。<strong>試合前に情報が揃えば GO昇格 or SKIP降格 を判定</strong>する文字通りの「監視」対象。",
+        },
+        "margin": {
+            "label": "CAUTION-MARGIN (閾値境界)",
+            "badge_bg": "#2d2d0a", "badge_fg": "#e3b341",
+            "border_color": "#e3b341",
+            "action": "結果確認でルール閾値検証に寄与",
+            "section_header": "🟡 CAUTION-MARGIN (閾値境界・ルール検証データ)",
+            "section_color": "#e3b341",
+            "section_border": "#d29922",
+            "section_note": "conf・EV が GO 閾値 (conf≥75% AND EV>+5%) に<strong>僅かに届かない</strong>ボーダーライン。ベットはしないが、結果積上で <strong>GO 閾値の妥当性検証データ</strong> として使う。",
+        },
+        "track": {
+            "label": "CAUTION-TRACK (構造的EV-)",
+            "badge_bg": "#2a2a2a", "badge_fg": "#8b949e",
+            "border_color": "#8b949e",
+            "action": "予測精度追跡 no-bet",
+            "section_header": "⚪ CAUTION-TRACK (構造的EV- / 予測追跡のみ)",
+            "section_color": "#8b949e",
+            "section_border": "#6e7681",
+            "section_note": "本命確信度は高いが市場が既に織り込んでおり EV が負。<strong>ベットする理由は一切なく</strong>、純粋に予測精度 (prediction_accuracy) データとして残すのみ。cElo/xGF%/NRtg モデルの妥当性裏付けに使用。",
+        },
+    }
+
+    def render_card(sport_key, e, is_go, caution_type=None):
         _, emoji, _, sport_label = RECORDS_BY_SPORT[sport_key]
         tier_tag = tier_by_sport.get(sport_key, "basic")
         tier_label = "Adv" if tier_tag == "adv" else "Basic"
         tier_cls = "tier-adv" if tier_tag == "adv" else "tier-basic"
 
-        tier_badge = (
-            '<span class="badge badge-go">GO (ベット推奨)</span>'
-            if is_go
-            else '<span class="badge" style="background:#3a2a0a;color:#e3b341;">CAUTION (監視・ベット無し)</span>'
-        )
+        if is_go:
+            tier_badge = '<span class="badge badge-go">GO (ベット推奨)</span>'
+        else:
+            meta = CAUTION_META.get(caution_type or "margin", CAUTION_META["margin"])
+            tier_badge = f'<span class="badge" style="background:{meta["badge_bg"]};color:{meta["badge_fg"]};">{meta["label"]}</span>'
 
         match = e.get("match", "?")
         rec = e.get("rec") or e.get("predicted_winner") or "?"
@@ -415,17 +452,16 @@ def build_active_tab(stats):
         l1_data = l1_data_raw if isinstance(l1_data_raw, str) else json.dumps(l1_data_raw, ensure_ascii=False)[:80]
         l1_short = l1_data[:60] + ("…" if len(l1_data) > 60 else "") if l1_data else ""
 
-        action_label = (
-            "ベット推奨"
-            if is_go
-            else "観察のみ (ベット無し)"
-        )
-        rec_color = "#3fb950" if is_go else "#e3b341"
-        card_style = (
-            ''
-            if is_go
-            else ' style="opacity:.85;border-left:3px solid #e3b341;"'
-        )
+        if is_go:
+            action_label = "ベット推奨"
+            rec_color = "#3fb950"
+            card_style = ""
+        else:
+            meta = CAUTION_META.get(caution_type or "margin", CAUTION_META["margin"])
+            action_label = f"{meta['action']} (ベット無し)"
+            rec_color = meta["badge_fg"]
+            border_color = meta["border_color"]
+            card_style = f' style="opacity:.85;border-left:3px solid {border_color};"'
 
         return (
             f'    <div class="active-card"{card_style}>\n'
@@ -443,46 +479,69 @@ def build_active_tab(stats):
             f'    </div>'
         )
 
-    # Group entries by group + tier
+    # Group entries by group + tier/caution_type
     for group_label, keys in group_order:
         group_go = []
-        group_caution = []
+        group_waiting = []
+        group_margin = []
+        group_track = []
         for k in keys:
             for e in collect_pending_entries(k):
                 if e.get("tier") == "go":
                     group_go.append((k, e))
                 else:
-                    group_caution.append((k, e))
+                    ct = e.get("caution_type") or "margin"
+                    if ct == "waiting":
+                        group_waiting.append((k, e))
+                    elif ct == "track":
+                        group_track.append((k, e))
+                    else:
+                        group_margin.append((k, e))
 
-        _, _, _, _ = RECORDS_BY_SPORT[keys[0]]
         sub_labels = "/".join(RECORDS_BY_SPORT[k][3] for k in keys if RECORDS_BY_SPORT[k][0].exists())
 
-        if group_go:
-            go_blocks.append(
+        def add_group(blocks, items, ct=None):
+            if not items:
+                return 0
+            blocks.append(
                 f'    <div class="active-league-hdr">\n'
                 f'      <span>{group_label} <span style="color:var(--text2);font-weight:400;font-size:11px;">{sub_labels}</span></span>\n'
-                f'      <span class="alh-count">{len(group_go)}件</span>\n'
+                f'      <span class="alh-count">{len(items)}件</span>\n'
                 f'    </div>'
             )
-            for sk, e in group_go:
-                go_blocks.append(render_card(sk, e, is_go=True))
-            go_count += len(group_go)
+            for sk, e in items:
+                blocks.append(render_card(sk, e, is_go=(ct is None), caution_type=ct))
+            return len(items)
 
-        if group_caution:
-            caution_blocks.append(
-                f'    <div class="active-league-hdr">\n'
-                f'      <span>{group_label} <span style="color:var(--text2);font-weight:400;font-size:11px;">{sub_labels}</span></span>\n'
-                f'      <span class="alh-count">{len(group_caution)}件</span>\n'
-                f'    </div>'
-            )
-            for sk, e in group_caution:
-                caution_blocks.append(render_card(sk, e, is_go=False))
-            caution_count += len(group_caution)
+        go_count += add_group(go_blocks, group_go, None)
+        cw_count += add_group(caution_waiting_blocks, group_waiting, "waiting")
+        cm_count += add_group(caution_margin_blocks, group_margin, "margin")
+        ct_count += add_group(caution_track_blocks, group_track, "track")
 
-    go_html = "\n\n".join(go_blocks) if go_blocks else '    <div style="padding:16px;text-align:center;color:var(--text2);font-size:12px;">現在アクティブな GO 推奨はありません（スクリーニングで conf≥75% AND EV>+5% 満たす試合なし）</div>'
-    caution_html = "\n\n".join(caution_blocks) if caution_blocks else '    <div style="padding:12px;text-align:center;color:var(--text2);font-size:11px;">観察対象の CAUTION エントリはありません</div>'
+    def empty_msg(kind):
+        return f'    <div style="padding:16px;text-align:center;color:var(--text2);font-size:12px;">現在このカテゴリのエントリなし</div>'
 
-    total_pending = go_count + caution_count
+    go_html = "\n\n".join(go_blocks) if go_blocks else empty_msg("GO")
+    cw_html = "\n\n".join(caution_waiting_blocks) if caution_waiting_blocks else empty_msg("waiting")
+    cm_html = "\n\n".join(caution_margin_blocks) if caution_margin_blocks else empty_msg("margin")
+    ct_html = "\n\n".join(caution_track_blocks) if caution_track_blocks else empty_msg("track")
+
+    total_pending = go_count + cw_count + cm_count + ct_count
+
+    def caution_section(ct_key, html_body, count):
+        m = CAUTION_META[ct_key]
+        return f"""
+  <div class="section-title" style="margin-top:20px;color:{m['section_color']};border-bottom-color:{m['section_border']};">{m['section_header']}</div>
+  <div style="background:var(--surface);border:1px solid {m['section_border']}40;border-radius:10px;padding:12px 16px;margin-bottom:14px;font-size:12px;color:var(--text2);line-height:1.7;">
+    {m['section_note']}<br>
+    <strong style="color:{m['section_color']};">運用方針:</strong> {m['action']}。ベットは行いません。<br>
+    現在 <strong style="color:var(--text);">{count}件</strong>
+  </div>
+  <div class="section"><div class="active-grid">
+
+{html_body}
+
+  </div></div>"""
 
     html = f"""<!-- AUTO:ACTIVE_TAB START -->
   <div class="section-title" style="color:#3fb950;border-bottom-color:#2ea043;">🟢 GO 推奨（ベット対象 / conf≥75% AND EV&gt;+5%）</div>
@@ -495,21 +554,13 @@ def build_active_tab(stats):
 {go_html}
 
   </div></div>
-
-  <div class="section-title" style="margin-top:20px;color:#e3b341;border-bottom-color:#d29922;">🟡 CAUTION 監視（予測のみ・ベット無し）</div>
-  <div style="background:var(--surface);border:1px solid #d2992240;border-radius:10px;padding:12px 16px;margin-bottom:14px;font-size:12px;color:var(--text2);line-height:1.7;">
-    <strong style="color:#e3b341;">CAUTION = 予測精度 tracking のみの監視対象</strong>。GO閾値未達（conf&lt;75% / EV&lt;+5%）または goalie/injury 要確認で <strong>ベットは行いません</strong>。<br>
-    EV がマイナス表示でも推奨ではなく「予測が当たったかを追跡するだけ」の意味です。<br>
-    現在 <strong style="color:var(--text);">{caution_count}件</strong>
-  </div>
-  <div class="section"><div class="active-grid">
-
-{caution_html}
-
-  </div></div>
+{caution_section("waiting", cw_html, cw_count)}
+{caution_section("margin", cm_html, cm_count)}
+{caution_section("track", ct_html, ct_count)}
 
   <div style="margin-top:14px;padding:10px 14px;background:var(--surface2);border-radius:6px;font-size:12px;color:var(--text2);line-height:1.7;">
-    <strong style="color:var(--text);">🔄 自動同期:</strong> records/*.json から tier=go/caution かつ hit=null のエントリを動的抽出。最終 sync: {datetime.datetime.now().strftime("%Y-%m-%d %H:%M")} | Pending 総数: {total_pending}件 (GO {go_count} + CAUTION {caution_count})
+    <strong style="color:var(--text);">🔄 自動同期:</strong> records/*.json から tier=go/caution かつ hit=null のエントリを動的抽出。最終 sync: {datetime.datetime.now().strftime("%Y-%m-%d %H:%M")}<br>
+    Pending 総数: <strong>{total_pending}件</strong> — 内訳: GO {go_count} / WAITING {cw_count} / MARGIN {cm_count} / TRACK {ct_count}
   </div>
 </div>
 <!-- AUTO:ACTIVE_TAB END -->"""

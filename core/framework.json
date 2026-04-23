@@ -110,6 +110,35 @@
     "recommend_bet": "信頼度≥75% AND EV>+5%",
     "skip_bet": "上記以外（予測はするが、ベットは推奨しない）"
   },
+  "caution_taxonomy": {
+    "_description": "Session_48 (2026-04-23) 導入: 従来の tier=caution を 3 サブタイプに分解。caution_type フィールドで識別。ベットは一切行わないが、それぞれ異なる運用目的を持つ。",
+    "waiting": {
+      "label": "CAUTION-WAITING (情報確定待ち)",
+      "definition": "L1/L2 は通過しているが、試合直前情報 (goalie / 怪我 / 出場停止 / team sheet) が未確定。試合前に情報が揃えば GO 昇格 or SKIP 降格を判定する。",
+      "action": "試合前に再判定: 情報確定次第 GO/SKIP",
+      "ui_color": "#58a6ff",
+      "examples": "NHL goalie unconfirmed, rugby injury list pending"
+    },
+    "margin": {
+      "label": "CAUTION-MARGIN (閾値境界)",
+      "definition": "conf・EV が GO 閾値 (conf≥75% AND EV>+5% / Basic は conf≥78% AND EV>+7%) に僅かに届かない。予測としては本命寄りだが GO 条件未達。",
+      "action": "結果積上で GO 閾値妥当性を検証するデータ源。CAUTION MARGIN HIT が蓄積すればルール緩和 or 閾値微調整を検討。",
+      "ui_color": "#e3b341",
+      "examples": "conf 72% EV +0.8%, conf 70% EV +2.9%"
+    },
+    "track": {
+      "label": "CAUTION-TRACK (構造的EV-)",
+      "definition": "本命確信度は高いが市場が既に織り込んでおり EV が負 (または 0)。ベットする理由は一切なし。",
+      "action": "予測精度 (prediction_accuracy) データとしてのみ残す。cElo/xGF%/NRtg モデルの妥当性裏付けに使用。",
+      "ui_color": "#8b949e",
+      "examples": "Jodar home WC conf 82 EV -0.8%, LAK-COL xGF+6 EV -2.7%"
+    },
+    "data_field": {
+      "tier": "caution (全サブタイプ共通)",
+      "caution_type": "waiting | margin | track",
+      "backward_compat": "既存 tier=caution エントリで caution_type が無い場合は margin にフォールバック (分類スクリプト _reclassify_caution.py で一括付与可)"
+    }
+  },
   "ev_formula": "(推定勝率 × オッズ) - 1",
   "record_schema": {
     "_description": "v3.0以降の標準レコード構造。全試合にprediction fieldsを記録する",

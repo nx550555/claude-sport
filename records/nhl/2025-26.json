@@ -1400,7 +1400,8 @@
       "hit": null,
       "actual_ev": null,
       "source": "2026-04-21.json",
-      "screened_session": "_48"
+      "screened_session": "_48",
+      "caution_type": "waiting"
     },
     {
       "match": "PHI vs PIT G2",

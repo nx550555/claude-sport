@@ -169,7 +169,8 @@
       },
       "caution_reason": "odds_too_short — 1.14でリターンが薄い",
       "status": "skip",
-      "skip_reason": "odds_too_short_final: 1.14 EV+9.2% insufficient return. Originally CAUTION, formally SKIP after 2026-04-15 review."
+      "skip_reason": "odds_too_short_final: 1.14 EV+9.2% insufficient return. Originally CAUTION, formally SKIP after 2026-04-15 review.",
+      "caution_type": "margin"
     },
     {
       "date": "2026-04-18",
@@ -189,7 +190,8 @@
       },
       "caution_reason": "odds_short — 1.18でEV+6.8%は閾値ギリギリ",
       "status": "skip",
-      "skip_reason": "odds_short_final: 1.18 EV+6.8% at threshold limit, no margin for error. Originally CAUTION, formally SKIP after 2026-04-15 review."
+      "skip_reason": "odds_short_final: 1.18 EV+6.8% at threshold limit, no margin for error. Originally CAUTION, formally SKIP after 2026-04-15 review.",
+      "caution_type": "margin"
     },
     {
       "date": "2026-04-17",
@@ -334,7 +336,8 @@
         "R001_PD_per_game_6pt_threshold",
         "R005_home_advantage"
       ],
-      "note": "R8 first match (4/23 Leichhardt). Data: 手動試合データ/2026-04-17.json. Tigers home, 2-match win streak (d. Storm R5, d. Broncos R7 assumed). Raiders struggling."
+      "note": "R8 first match (4/23 Leichhardt). Data: 手動試合データ/2026-04-17.json. Tigers home, 2-match win streak (d. Storm R5, d. Broncos R7 assumed). Raiders struggling.",
+      "caution_type": "margin"
     },
     {
       "date": "2026-04-24",
@@ -408,7 +411,8 @@
         "R001_PD_per_game_6pt_threshold",
         "R005_home_advantage"
       ],
-      "note": "R8 match (4/24 Suncorp). Data: 手動試合データ/2026-04-17.json. Broncos strong form. Carrigan suspension status to verify."
+      "note": "R8 match (4/24 Suncorp). Data: 手動試合データ/2026-04-17.json. Broncos strong form. Carrigan suspension status to verify.",
+      "caution_type": "margin"
     }
   ],
   "screening_log": [
