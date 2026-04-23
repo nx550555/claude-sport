@@ -154,6 +154,46 @@
 **中優先:** P026 evidence 継続 (NBA G1 blowout 後 G2 home fade)
 **インフラ:** CLAUDE.md に「結果反映時 miss_analysis 同時記入必須」明文化
 
+### 🚨 Session_51 完了報告 (2026-04-23)
+
+**主要成果:**
+- [x] **PA071 完全達成**: MISS miss_analysis 欠損 58件→0件 (53件補填 / health_check ALERT 完全消失)
+- [x] **CE017 発見・訂正**: Madrid Q R1 4/20 records 4件勝敗逆転 (#73 Sakamoto / #75 Gaubas / #77 Droguet / #94 Basilashvili) → 一次ソース2件以上で再検証訂正
+- [x] **health_check v6 拡張**: outcome_note 表記 vs prediction_hit / market_favorite 論理整合性自動検証 (CE013-017 同根パターン未検知状態達成)
+- [x] **dashboard.html 予測精度タブ拡充**: ATP 全試合 43/59 (72.9%) + WTA 23/37 (62.2%) 行追加
+- [x] **PA075 NBA records dedup**: 6件 duplicate_closed 化 + 命名規約明文化 (33件→27件 active)
+- [x] **rule_pipeline P027 新規登録**: NHL G1 UPSET 後 G2 fav home rebound (BOS G2 / DAL G2 evidence 2/3 即到達)
+- [x] **副産物 outcome_note クリーンアップ**: CE006/CE007/CE009 訂正済残骸 3件 (Cerundolo/Shnaider/Fernandez)
+
+**数値 (Session_51 終了時):**
+- 🟢 ベット推奨 22/30 (73.3%) +2.453u | Pending 5 (Madrid GO)
+- 🎯 Q3 output_a 9/14 (64.3%) | Pending 7
+- 📈 ATP 全試合予測精度 43/59 (72.9%) | WTA 23/37 (62.2%)
+- 📊 health_check: ALERT 0件 / WARN 2件
+
+### 🎯 Session_52 行動計画 (次回優先タスク = Session_51 残課題)
+
+**最優先 A: 残課題 (今回の宿題)**
+- [ ] **PA073 NBA G2 詳細スタッツ補填** (#30 ATL-NYK G2 / #32 MIN-DEN G2 を WebSearch で具体化 → rule_linked 確定)
+- [ ] **WTA 旧分 miss_analysis 深掘り** (Session_51 テンプレ補填 14件を WebSearch で実調査ベースへ精緻化)
+- [ ] **Session_50 4象限分類 WARN の解消** (health_check WARN 継続中)
+- [ ] **UFL 13日 screening_log 更新なし WARN** (W6 4/24-26 開幕予定の確認)
+- [ ] **dashboard.html 累計履歴 / 成長分析タブ sync_dashboard.py 拡張** (低優先継続)
+
+**最優先 B: 通常運用継続**
+- [ ] **PA068 Madrid GO 5件結果** (Tsitsipas 4/23 → Paul/Musetti/Keys/Mertens 4/24-25)
+- [ ] **PA069 Q3 output_a 7件結果追跡** (Sinner/Swiatek/Gauff/Sabalenka/Andreeva/Bencic/Rybakina)
+- [ ] **PA070 Q4 upset_watch 13件** (Osaka-Osorio UPSET 観察など)
+- [ ] **NHL/NBA G3 スクリーニング** (4/24-26 開催)
+
+**最優先 C: ルール実装判断 (evidence 接近中・G3 で決着可能性高)**
+- [ ] **P018 N019 implement 判断** (NHL PO G1 underdog 若手活性化 - evidence 2/3)
+- [ ] **P024 N_NBA_new2 implement 判断** (NBA PO G1 star scorer 欠場 - evidence 2/3)
+- [ ] **P025 N021 implement 判断** (NHL PO type_a_watch xGF higher 優先 - evidence 2/3)
+- [ ] **P027 N_NHL_new1 implement 判断** (NHL G1 UPSET 後 G2 fav home rebound - evidence 2/3)
+
+**中優先:** PA047 (upset_patterns A014-A020 補填継続) / PA053 P023 / PA054 P012 evidence 継続
+
 ### 🚨 Session_46 完了報告
 - **PA051 upset_patterns 監査 100% 完了**（32件 confirmed + 4件 invalidated, rule_linked率 19.4%→100%）
 - **CE016 発見・全4件解消**（A017/A022/A023/A024 勝敗逆転記録）

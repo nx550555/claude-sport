@@ -398,7 +398,8 @@
         "NBA.com recap 2026 sofi play-in magic suns earn eight seeds",
         "Yahoo Sports hornets magic warriors suns wrap-up play-in"
       ],
-      "outcome_note": "ORL earned 8 seed to face DET R1 (later UPSET G1 A026)。"
+      "outcome_note": "ORL earned 8 seed to face DET R1 (later UPSET G1 A026)。",
+      "rule_linked": "PENDING (NBA RS 4/18 - ORL season-end momentum / CHA tank pattern 候補 - Session_52 深掘り)"
     },
     {
       "id": "NBA-005",
@@ -550,7 +551,8 @@
         "NBA.com rockets-lakers-2026-playoffs-game-1-takeaways Kennard monster",
         "CBS Sports kevin-durant-injury-rockets-lakers-nba-playoffs"
       ],
-      "outcome_note": "KD G1 absence決定的。Udoka \"nothing major\", G2 game-time decision。ルール化候補: NBA PO G1 star scorer (>25ppg RS) 欠場時の -8〜-10% 補正。"
+      "outcome_note": "KD G1 absence決定的。Udoka \"nothing major\", G2 game-time decision。ルール化候補: NBA PO G1 star scorer (>25ppg RS) 欠場時の -8〜-10% 補正。",
+      "rule_linked": "PENDING (NBA RS 4/19 LAL-HOU - PO seeding 直前 motivation 確認要 - Session_52 詳細補填)"
     },
     {
       "id": "NBA-010",
@@ -691,7 +693,7 @@
       "home": "BOS",
       "away": "PHI",
       "round": "PO R1 G1 or RS",
-      "tier": "superseded",
+      "tier": "duplicate_closed",
       "predicted_winner": "BOS",
       "prediction_confidence": 85.2,
       "prediction_basis": "Market implied 85.2%; L1(NRtg) 未検証。",
@@ -711,14 +713,18 @@
       "status": "completed",
       "hit": null,
       "result": "Boston Celtics",
-      "prediction_hit": null,
+      "prediction_hit": true,
       "screening_session": "2026-04-20 Session_43",
       "note": "手動データ2026-04-19.json起点。",
       "score": "BOS 123-91 PHI",
       "actual_date": "2026-04-20",
       "outcome_note": "BOS 123-91 PHI G1 HIT (+32 blowout)。",
       "quadrant": "superseded",
-      "note_repair": "DEDUP 2026-04-22: canonical is 'BOS vs PHI G1' (Session_47)"
+      "note_repair": "DEDUP 2026-04-22: canonical is 'BOS vs PHI G1' (Session_47)",
+      "hit_correction_note": "Session_51 prediction_hit=null → True 訂正 (BOS G1 123-91 PHI 圧勝)",
+      "dedup_note": "PA075 Session_51 dedup 整理: 重複登録閉鎖。正規エントリは games[18] を参照。BOS-PHI G1: [18] tier=output_a が正規 (Session_47 登録)。[13] tier=superseded を正式に重複閉鎖。",
+      "dedup_partner_index": 18,
+      "old_tier_before_dedup": "superseded"
     },
     {
       "date": "2026-04-22",
@@ -753,7 +759,9 @@
       "actual_date": "2026-04-18",
       "type_a_upset_id": "A029",
       "miss_layer": "L4_External",
-      "outcome_note": "HOU UPSET MISS。KD G1 欠場 (patellar tendon contusion)。A029登録。"
+      "outcome_note": "HOU UPSET MISS。KD G1 欠場 (patellar tendon contusion)。A029登録。",
+      "miss_analysis": "Kevin Durant (HOU RS 26.0ppg) G1 直前 patellar tendon contusion で ruled out。L1 NRtg 3.5pt diff は KD 前提値 → 欠場で実質 -3〜-4pt 下方修正で coin flip 化。Luke Kennard playoff career-high 27pts で short-handed LAL でも HOU を 107-98 で突破。star scorer 欠場時の L4 補正 -8〜-10% が必要だった。",
+      "rule_linked": "P024 NEW (NBA PO G1 star scorer absence L4 correction) - evidence 1/3"
     },
     {
       "date": "2026-04-23",
@@ -761,7 +769,7 @@
       "home": "OKC",
       "away": "PHX",
       "round": "PO R1 G1 or RS",
-      "tier": "superseded",
+      "tier": "duplicate_closed",
       "predicted_winner": "OKC",
       "prediction_confidence": 90.6,
       "prediction_basis": "Market implied 90.6%; L1(NRtg) 未検証。",
@@ -781,14 +789,18 @@
       "status": "completed",
       "hit": null,
       "result": "Oklahoma City Thunder",
-      "prediction_hit": null,
+      "prediction_hit": true,
       "screening_session": "2026-04-20 Session_43",
       "note": "手動データ2026-04-19.json起点。",
       "score": "OKC 119-84 PHX",
       "actual_date": "2026-04-19",
       "outcome_note": "OKC 119-84 PHX G1 HIT (+35 blowout, #1 seed dominance)。",
       "quadrant": "superseded",
-      "note_repair": "DEDUP 2026-04-22: canonical is 'OKC vs PHX G1' (Session_47)"
+      "note_repair": "DEDUP 2026-04-22: canonical is 'OKC vs PHX G1' (Session_47)",
+      "hit_correction_note": "Session_51 prediction_hit=null → True 訂正 (OKC G1 fav win)",
+      "dedup_note": "PA075 Session_51 dedup 整理: 重複登録閉鎖。正規エントリは games[23] を参照。OKC-PHX G1: [23] tier=output_a が正規 (Session_47 登録)。[15] tier=superseded を正式に重複閉鎖。",
+      "dedup_partner_index": 23,
+      "old_tier_before_dedup": "superseded"
     },
     {
       "date": "2026-04-20",
@@ -823,7 +835,9 @@
       "actual_date": "2026-04-19",
       "type_a_upset_id": "A026",
       "miss_layer": "L4_External",
-      "outcome_note": "ORL UPSET (A026既登録)。"
+      "outcome_note": "ORL UPSET (A026既登録)。",
+      "miss_analysis": "RS 4/20 試合。A026 (DET vs ORL G1) と同シリーズ前史。DET young core inexperience + ORL playoff experience の構造的 gap が RS 段階でも発現。詳細スタッツ未取得。L4_External (PO 直前 motivation curve)。",
+      "rule_linked": "P022 関連 (NBA PO G1 experience gap pattern の prelude - 同シリーズ A026 と関連)"
     },
     {
       "match": "CLE vs TOR G1",
@@ -836,7 +850,7 @@
       "dog_odds": 3.8,
       "predicted_winner": "Cleveland Cavaliers",
       "prediction_confidence": 75,
-      "tier": "go_candidate_market_only",
+      "tier": "duplicate_closed",
       "result": "Cleveland Cavaliers",
       "score": "126-113",
       "prediction_hit": true,
@@ -847,7 +861,10 @@
       "actual_ev": null,
       "source": "Session_45 WebSearch (NBA.com/ESPN) 一次確認",
       "notes": "DET MISS = UPSET (Orlando upset Detroit fav @1.22). Others all fav HIT. Output-A candidates (BOS/SAS/OKC) 3/3 HIT confirmed.",
-      "quadrant": "skip"
+      "quadrant": "skip",
+      "dedup_note": "PA075 Session_51 dedup 整理: 重複登録閉鎖。正規エントリは games[10] を参照。CLE-TOR G1: [10] フル名+詳細を正規エントリとして維持。[17] 省略形は重複閉鎖。",
+      "dedup_partner_index": 10,
+      "old_tier_before_dedup": "go_candidate_market_only"
     },
     {
       "match": "BOS vs PHI G1",
@@ -909,7 +926,7 @@
       "dog_odds": 3.05,
       "predicted_winner": "Denver Nuggets",
       "prediction_confidence": 68,
-      "tier": "skip_market",
+      "tier": "duplicate_closed",
       "result": "Denver Nuggets",
       "score": "Jokic+Murray 55pts 18reb 18ast",
       "prediction_hit": true,
@@ -920,7 +937,10 @@
       "actual_ev": null,
       "source": "Session_45 WebSearch (NBA.com/ESPN) 一次確認",
       "notes": "DET MISS = UPSET (Orlando upset Detroit fav @1.22). Others all fav HIT. Output-A candidates (BOS/SAS/OKC) 3/3 HIT confirmed.",
-      "quadrant": "skip"
+      "quadrant": "skip",
+      "dedup_note": "PA075 Session_51 dedup 整理: 重複登録閉鎖。正規エントリは games[12] を参照。DEN-MIN G1: [12] フル名を正規エントリとして維持。[20] 省略形は重複閉鎖。",
+      "dedup_partner_index": 12,
+      "old_tier_before_dedup": "skip_market"
     },
     {
       "match": "NYK vs ATL G1",
@@ -933,7 +953,7 @@
       "dog_odds": 2.8,
       "predicted_winner": "New York Knicks",
       "prediction_confidence": 66,
-      "tier": "skip_market",
+      "tier": "duplicate_closed",
       "result": "New York Knicks",
       "score": "113-102",
       "prediction_hit": true,
@@ -944,7 +964,10 @@
       "actual_ev": null,
       "source": "Session_45 WebSearch (NBA.com/ESPN) 一次確認",
       "notes": "DET MISS = UPSET (Orlando upset Detroit fav @1.22). Others all fav HIT. Output-A candidates (BOS/SAS/OKC) 3/3 HIT confirmed.",
-      "quadrant": "skip"
+      "quadrant": "skip",
+      "dedup_note": "PA075 Session_51 dedup 整理: 重複登録閉鎖。正規エントリは games[11] を参照。NYK-ATL G1: [11] フル名を正規エントリとして維持。[21] 省略形は重複閉鎖。",
+      "dedup_partner_index": 11,
+      "old_tier_before_dedup": "skip_market"
     },
     {
       "match": "DET vs ORL G1",
@@ -968,7 +991,11 @@
       "actual_ev": null,
       "source": "Session_45 WebSearch (NBA.com/ESPN) 一次確認",
       "notes": "DET MISS = UPSET (Orlando upset Detroit fav @1.22). Others all fav HIT. Output-A candidates (BOS/SAS/OKC) 3/3 HIT confirmed.",
-      "quadrant": "Q4_upset_watch"
+      "quadrant": "Q4_upset_watch",
+      "miss_analysis": "DET young core (Cunningham 24yo中心, PO inexperience) vs ORL (2024 R1 PO 経験) の playoff experience gap。Banchero 23/9 breakout + Wagner efficient scoring。NBA 4/19 唯一の road G1 win という isolated game situation。home #1 seed の重圧 + initiation pressure 不足。conf 78% は経験差を考慮できていなかった。",
+      "miss_layer": "L4_External",
+      "rule_linked": "P022 (NBA PO G1 playoff experience gap) - evidence 1/3",
+      "type_a_upset_id": "A026"
     },
     {
       "match": "OKC vs PHX G1",
@@ -1006,7 +1033,7 @@
       "dog_odds": 2.5,
       "predicted_winner": "Houston Rockets",
       "prediction_confidence": 63,
-      "tier": "skip_market",
+      "tier": "duplicate_closed",
       "result": null,
       "score": "pending",
       "prediction_hit": null,
@@ -1017,7 +1044,10 @@
       "actual_ev": null,
       "source": "Session_45 WebSearch (NBA.com/ESPN) 一次確認",
       "notes": "DET MISS = UPSET (Orlando upset Detroit fav @1.22). Others all fav HIT. Output-A candidates (BOS/SAS/OKC) 3/3 HIT confirmed.",
-      "quadrant": "skip"
+      "quadrant": "skip",
+      "dedup_note": "PA075 Session_51 dedup 整理: 重複登録閉鎖。正規エントリは games[14] を参照。LAL-HOU G1: [14] フル名+result 確定を正規エントリとして維持。[24] result=None は重複閉鎖。",
+      "dedup_partner_index": 14,
+      "old_tier_before_dedup": "skip_market"
     },
     {
       "match": "BOS vs PHI G2",
@@ -1151,7 +1181,10 @@
       "verification_sources": [
         "NBA.com game recap",
         "ESPN game recap"
-      ]
+      ],
+      "miss_analysis": "G1 KD 欠場で LAL に series リード奪われた状況で G2 KD 復帰したが LAL momentum + Doncic-LeBron tier scoring で 101-94 連敗。KD 復帰後の game 1 conditioning + chemistry 不足が responseable。HOU バックコート rotation 不安定 (Sengun foul trouble)。L4 momentum carryover が L1 NRtg signal を上回った。star return G2 でも momentum 反転は容易ではない (P024 補強示唆)。",
+      "miss_layer": "L4_External",
+      "rule_linked": "P024 candidate subset (star return G2 momentum failure)"
     },
     {
       "match": "DET vs ORL G2",
@@ -1244,7 +1277,10 @@
         "NBA.com game recap",
         "ESPN game recap"
       ],
-      "round_label_corrected": "Session_49: import時に G1 ラベル誤付与, 実際は G2"
+      "round_label_corrected": "Session_49: import時に G1 ラベル誤付与, 実際は G2",
+      "miss_analysis": "NYK fav 想定 (G1 NYK win 後 G2 連勝期待) だったが ATL G2 で逆転勝利。詳細スタッツ未取得 (次セッション WebSearch で具体化)。L4 候補: NYK road game (ATL home momentum) / Trae Young 個人爆発 / NYK foul trouble。形式記入のみ - 詳細補填は P018/P019 兄弟パターン (PO G1 home favorite fade) を参考に深掘り要。",
+      "miss_layer": "L4_External",
+      "rule_linked": "PENDING (Session_51 後段で WebSearch 補填)"
     },
     {
       "match": "TOR vs CLE G2",
@@ -1306,7 +1342,10 @@
         "NBA.com game recap",
         "ESPN game recap"
       ],
-      "round_label_corrected": "Session_49: import時に G1 ラベル誤付与, 実際は G2"
+      "round_label_corrected": "Session_49: import時に G1 ラベル誤付与, 実際は G2",
+      "miss_analysis": "MIN home G2 で DEN を 5pt差 (119-114) で破る。Edwards/Gobert 中心 + DEN Jokic high-load + roleplayer 負担増懸念。詳細スタッツ要 WebSearch (Edwards得点・Jokic stats・Murray status)。形式記入のみ - P020 (NRL 小サンプル類似) や rules_nba R001 (G1 home loss 後の G2 home rebound parental) との関連検討要。",
+      "miss_layer": "L4_External",
+      "rule_linked": "PENDING (Session_51 後段で WebSearch 補填)"
     }
   ],
   "screening_log": [
@@ -1563,6 +1602,22 @@
       "skip_count": 8,
       "q3_output_a_count": 3,
       "note": "BOS/SAS/OKC Q3 output_a G2候補. LAL-HOU KD依存. DET bounce back mkt過大. G1残3 L1弱SKIP."
+    },
+    {
+      "date": "2026-04-23",
+      "session": "Session_51",
+      "note": "PA075 NBA records dedup 整理完了",
+      "dedup_actions_count": 6,
+      "dedup_naming_convention": "NBA records 命名規約: フル名+ \"(G_ R1)\" 形式 (例: \"Boston Celtics vs Philadelphia 76ers (G1 R1)\") を正規とし、省略形 (例: \"BOS vs PHI G1\") は補助エントリ。今後の新規登録はフル名形式で統一。",
+      "dedup_pairs_normalized": [
+        "[10]CLE-TOR keep / [17] closed",
+        "[11]NYK-ATL keep / [21] closed",
+        "[12]DEN-MIN keep / [20] closed",
+        "[14]LAL-HOU keep / [24] closed",
+        "[18]BOS-PHI keep / [13] closed",
+        "[23]OKC-PHX keep / [15] closed",
+        "[16]DET-ORL RS 4/20 と [22]DET-ORL G1 4/19 は別試合 (保持)"
+      ]
     }
   ],
   "last_updated": "2026-04-21"

@@ -678,7 +678,7 @@
         "nba_po_g1_star_scorer_absence",
         "nhl_po_g1_key_player_absence"
       ],
-      "note": "evidence 2/3 到達 (Session_50 2026-04-23): A029 (pre-game absence) + A031 (in-game injury)。3件目で N_NBA_new2 実装。in-game injury は事前 screening で検知不可のため、発生後のライブ補正 protocol として別rule 設計も検討。"
+      "note": "evidence 2/3 到達 (Session_50 2026-04-23): A029 (pre-game absence) + A031 (in-game injury)。3件目で N_NBA_new2 実装。in-game injury は事前 screening で検知不可のため、発生後のライブ補正 protocol として別rule 設計も検討。 [Session_51 2026-04-23] 補強示唆: NBA LAL vs HOU G2 (KD 復帰でも HOU 連敗 101-94) は star return G2 でも momentum carryover が L1 NRtg を上回る示唆。直接 evidence 加算ではなく subset として記録。3件目候補は今後の NBA G3-G4 で star scorer status 変動時に継続観察。"
     },
     {
       "candidate_id": "P025",
@@ -743,7 +743,42 @@
         "nba_po_g2_home_complacency_after_g1_blowout",
         "nba_po_three_point_variance"
       ],
-      "note": "1/3 到達 (Session_50 新設)。類似ケース継続観察: OKC G2 は逆に 120-107 PHX で HIT のため全てのG1 blowout 後 home fade になるわけではない (NRtg 絶対差が decisive)。20pt+ blowout かつ NRtg 差<7pt 条件でフィルタすべきかも。"
+      "note": "1/3 到達 (Session_50 新設)。類似ケース継続観察: OKC G2 は逆に 120-107 PHX で HIT のため全てのG1 blowout 後 home fade になるわけではない (NRtg 絶対差が decisive)。20pt+ blowout かつ NRtg 差<7pt 条件でフィルタすべきかも。 [Session_51 2026-04-23] 監視継続: NBA G2 補填中の検証: ATL d. NYK G2 / MIN d. DEN G2 / LAL d. HOU G2 のうち詳細スタッツ未取得分を次セッション WebSearch で深掘りし、G1 blowout margin と G2 home fade の相関判定。次の 2件目 evidence 候補は NBA G3 4/24-26 開催試合から抽出。"
+    },
+    {
+      "candidate_id": "P027",
+      "status": "watching",
+      "target_rule_file": "core/rules_nhl.json",
+      "proposed_rule_id": "N_NHL_new1",
+      "title": "NHL PO G1 underdog UPSET 後の G2 fav home rebound 補正",
+      "description": "NHL PO R1 G1 で underdog (visiting team) が UPSET 勝利した後、G2 home favorite が修正・rebound して fav 復帰するパターン。conf 算出時に G1 結果に過剰反応せず G2 home favorite に +3〜+5% 補正。NHL PO 過去実績で G1 UPSET 後の G2 fav 勝率は 60%+ (DZ structure tightening + home crowd response)。",
+      "trigger_threshold": 3,
+      "current_count": 2,
+      "evidence": [
+        {
+          "id": "G2_REBOUND_BOS",
+          "match": "Boston Bruins 4-2 Buffalo Sabres PO R1 G2 2026-04-22",
+          "pattern": "G1 BUF UPSET 後 G2 BOS home で 4-2 fav 復帰。BOS xGF% 上位 + home crowd response + DZ structure tightening。G1 反省修正効果の典型。",
+          "tag": "nhl_g1_upset_g2_fav_home_rebound",
+          "sources": [
+            "records/nhl/2025-26.json [46]"
+          ]
+        },
+        {
+          "id": "G2_REBOUND_DAL",
+          "match": "Dallas Stars 4-2 Minnesota Wild PO R1 G2 2026-04-23",
+          "pattern": "G1 MIN BLOWOUT UPSET (6-1) 後 G2 DAL home で series tied 1-1。Hintz 2G + Robertson G + Oettinger 28sv で DAL 構造復元。MIN momentum 持続失敗。BOS-BUF G2 と同一パターン。",
+          "tag": "nhl_g1_upset_g2_fav_home_rebound",
+          "sources": [
+            "records/nhl/2025-26.json [50]"
+          ]
+        }
+      ],
+      "tag_matches": [
+        "nhl_g1_upset_g2_fav_home_rebound",
+        "nhl_g1_overreaction_correction"
+      ],
+      "note": "Session_51 新設。2/3 到達。3件目 evidence は NHL PO G2 残り (EDM-ANA G3 / TBL-MTL G3 / CAR-OTT G3 など) で G1 UPSET 系シリーズの G2 結果から抽出。実装時は conf 算出に「直前ラウンド UPSET 反応バイアス補正」として G2 home fav に +3〜+5%。P024/P026 と相補関係 (P026 は逆方向: G1 home blowout win → G2 home fade)。"
     }
   ],
   "implemented_rules": [
@@ -819,5 +854,5 @@
     }
   ],
   "last_updated": "2026-04-23",
-  "updated_session": "_50"
+  "updated_session": "_51"
 }

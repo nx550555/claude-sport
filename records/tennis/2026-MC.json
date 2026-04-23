@@ -7,54 +7,156 @@
     "R32": {
       "status": "completed",
       "predictions": [
-        { "match": "Medvedev D.(7) vs Berrettini M.(WC)",
-          "tier": "go", "rec": "Medvedev", "rec_odds": 1.90, "ev": 15.0, "confidence": 90,
-          "result": "Berrettini", "score": "6-0 6-0", "hit": false, "actual_ev": -1.0,
-          "miss_layer": "L4", "rules_triggered": ["R008", "R009"] },
-        { "match": "Cerundolo F.(16) vs Machac T.",
-          "tier": "go", "rec": "Cerundolo", "rec_odds": 1.53, "ev": 14.8, "confidence": 93,
-          "result": "Machac", "score": "7-6 6-2", "hit": false, "actual_ev": -1.0,
-          "miss_layer": "L2", "rules_triggered": ["R011"] },
-        { "match": "Auger-Aliassime F.(6) vs Cilic M.",
-          "tier": "go", "rec": "Auger-Aliassime", "rec_odds": 1.63, "ev": 7.6, "confidence": 85,
-          "result": "Auger-Aliassime", "score": "7-6 7-6 6-3", "hit": true, "actual_ev": 0.63,
-          "miss_layer": null, "rules_triggered": [] },
-        { "match": "Fonseca J. vs Rinderknech A.",
-          "tier": "caution", "rec": "Rinderknech", "rec_odds": 3.50, "ev": 43.5, "confidence": 72,
-          "result": "Fonseca", "score": "7-5 4-6 6-3", "hit": false, "actual_ev": -1.0,
-          "miss_layer": "L2", "rules_triggered": ["R010"] },
-        { "match": "Marozsan F. vs Hurkacz H.(PR)",
-          "tier": "caution", "rec": "Marozsan", "rec_odds": 1.73, "ev": 2.1, "confidence": 90,
-          "result": "Hurkacz", "score": "6-2 6-3", "hit": false, "actual_ev": -1.0,
-          "miss_layer": "L1", "rules_triggered": ["R013"],
-          "verification_sources": ["sofascore.com match 15921153", "atptour.com stats-centre MS021"],
-          "score_verified_date": "2026-04-20" }
+        {
+          "match": "Medvedev D.(7) vs Berrettini M.(WC)",
+          "tier": "go",
+          "rec": "Medvedev",
+          "rec_odds": 1.9,
+          "ev": 15.0,
+          "confidence": 90,
+          "result": "Berrettini",
+          "score": "6-0 6-0",
+          "hit": false,
+          "actual_ev": -1.0,
+          "miss_layer": "L4",
+          "rules_triggered": [
+            "R008",
+            "R009"
+          ]
+        },
+        {
+          "match": "Cerundolo F.(16) vs Machac T.",
+          "tier": "go",
+          "rec": "Cerundolo",
+          "rec_odds": 1.53,
+          "ev": 14.8,
+          "confidence": 93,
+          "result": "Machac",
+          "score": "7-6 6-2",
+          "hit": false,
+          "actual_ev": -1.0,
+          "miss_layer": "L2",
+          "rules_triggered": [
+            "R011"
+          ]
+        },
+        {
+          "match": "Auger-Aliassime F.(6) vs Cilic M.",
+          "tier": "go",
+          "rec": "Auger-Aliassime",
+          "rec_odds": 1.63,
+          "ev": 7.6,
+          "confidence": 85,
+          "result": "Auger-Aliassime",
+          "score": "7-6 7-6 6-3",
+          "hit": true,
+          "actual_ev": 0.63,
+          "miss_layer": null,
+          "rules_triggered": []
+        },
+        {
+          "match": "Fonseca J. vs Rinderknech A.",
+          "tier": "caution",
+          "rec": "Rinderknech",
+          "rec_odds": 3.5,
+          "ev": 43.5,
+          "confidence": 72,
+          "result": "Fonseca",
+          "score": "7-5 4-6 6-3",
+          "hit": false,
+          "actual_ev": -1.0,
+          "miss_layer": "L2",
+          "rules_triggered": [
+            "R010"
+          ]
+        },
+        {
+          "match": "Marozsan F. vs Hurkacz H.(PR)",
+          "tier": "caution",
+          "rec": "Marozsan",
+          "rec_odds": 1.73,
+          "ev": 2.1,
+          "confidence": 90,
+          "result": "Hurkacz",
+          "score": "6-2 6-3",
+          "hit": false,
+          "actual_ev": -1.0,
+          "miss_layer": "L1",
+          "rules_triggered": [
+            "R013"
+          ],
+          "verification_sources": [
+            "sofascore.com match 15921153",
+            "atptour.com stats-centre MS021"
+          ],
+          "score_verified_date": "2026-04-20"
+        }
       ],
-      "summary": { "total": 5, "hit": 1, "hit_rate": 0.20, "ev_total": -3.37 }
+      "summary": {
+        "total": 5,
+        "hit": 1,
+        "hit_rate": 0.2,
+        "ev_total": -3.37
+      }
     },
     "R16": {
       "status": "completed",
       "predictions": [
-        { "match": "Berrettini M.(WC) vs Fonseca J.",
-          "tier": "go", "rec": "Berrettini", "rec_odds": 1.72, "ev": 8.4, "confidence": 77,
-          "rules_applied": ["R009"],
-          "result": "Fonseca", "score": "6-3 6-2", "hit": false, "actual_ev": -1.0,
-          "miss_layer": "L4", "note": "Fonsecaがサービス・アグレッシブプレーで圧倒。Berrettiniのホームコートアドバンテージを上回った" },
-        { "match": "Vacherot V.(WC) vs Hurkacz H.(PR)",
-          "tier": "go", "rec": "Vacherot", "rec_odds": 1.57, "ev": 11.2, "confidence": 78,
-          "rules_applied": ["R009", "R013"],
-          "result": "Vacherot", "score": "6-7(4) 6-3 6-4", "hit": true, "actual_ev": 0.57,
-          "note": "歴史的勝利。Vacherotがモナコ人として初めてMC QF進出（Open Era）。R009ホームコートが機能" }
+        {
+          "match": "Berrettini M.(WC) vs Fonseca J.",
+          "tier": "go",
+          "rec": "Berrettini",
+          "rec_odds": 1.72,
+          "ev": 8.4,
+          "confidence": 77,
+          "rules_applied": [
+            "R009"
+          ],
+          "result": "Fonseca",
+          "score": "6-3 6-2",
+          "hit": false,
+          "actual_ev": -1.0,
+          "miss_layer": "L4",
+          "note": "Fonsecaがサービス・アグレッシブプレーで圧倒。Berrettiniのホームコートアドバンテージを上回った"
+        },
+        {
+          "match": "Vacherot V.(WC) vs Hurkacz H.(PR)",
+          "tier": "go",
+          "rec": "Vacherot",
+          "rec_odds": 1.57,
+          "ev": 11.2,
+          "confidence": 78,
+          "rules_applied": [
+            "R009",
+            "R013"
+          ],
+          "result": "Vacherot",
+          "score": "6-7(4) 6-3 6-4",
+          "hit": true,
+          "actual_ev": 0.57,
+          "note": "歴史的勝利。Vacherotがモナコ人として初めてMC QF進出（Open Era）。R009ホームコートが機能"
+        }
       ],
-      "summary": { "total": 2, "hit": 1, "hit_rate": 0.50, "ev_total": -0.43 }
+      "summary": {
+        "total": 2,
+        "hit": 1,
+        "hit_rate": 0.5,
+        "ev_total": -0.43
+      }
     },
     "QF": {
       "status": "in_progress",
       "date": "2026-04-10",
       "draw_structure": {
         "note": "初回設定のハーフ区分を修正。ESPN SFより Zverev vs Sinnerが同ハーフと確認。CE015 (2026-04-18) 遡及訂正: QF-D実結果はVacherot勝利（モナコWC歴史的Open Era初SF進出）。",
-        "half1_alcaraz": ["QF-A: Alcaraz(1) vs Bublik(8) → Alcaraz勝利 6-1 6-3", "QF-D: de Minaur(5) vs Vacherot(WC) → Vacherot勝利 6-4 3-6 6-3 (CE015訂正)"],
-        "half2_sinner":  ["QF-C: Sinner(2) vs FAA(6) → Sinner勝利 6-3 6-4",       "QF-B: Zverev(3) vs Fonseca → Zverev勝利 4-6 6-4 7-5"]
+        "half1_alcaraz": [
+          "QF-A: Alcaraz(1) vs Bublik(8) → Alcaraz勝利 6-1 6-3",
+          "QF-D: de Minaur(5) vs Vacherot(WC) → Vacherot勝利 6-4 3-6 6-3 (CE015訂正)"
+        ],
+        "half2_sinner": [
+          "QF-C: Sinner(2) vs FAA(6) → Sinner勝利 6-3 6-4",
+          "QF-B: Zverev(3) vs Fonseca → Zverev勝利 4-6 6-4 7-5"
+        ]
       },
       "predictions": [
         {
@@ -64,7 +166,10 @@
           "rec_odds_est": 1.55,
           "ev_est": 19.4,
           "confidence": 77,
-          "rules_applied": ["R001", "R005"],
+          "rules_applied": [
+            "R001",
+            "R005"
+          ],
           "analysis": {
             "L1_cElo": "Zverev クレーcElo ~1950 vs Fonseca ~1700, 差 ~250 → R001通過",
             "L2_quality": "Zverev: Garin(3set)+Bergs(2set)。Fonseca: Berrettini(WC)を6-3 6-2で圧倒（驚異的）",
@@ -72,7 +177,10 @@
             "L4_external": "Fonsecaは初の Masters1000 QF（19歳）、プレッシャー大。ZverevはMC QF経験あり"
           },
           "note": "Fonsecaの今大会のフォームは警戒要。オッズ≥1.45なら推奨維持",
-          "result": "Zverev", "score": "4-6 6-4 7-5", "hit": true, "actual_ev": 0.55
+          "result": "Zverev",
+          "score": "4-6 6-4 7-5",
+          "hit": true,
+          "actual_ev": 0.55
         },
         {
           "match": "Sinner J.(2) vs Auger-Aliassime F.(6)  ※FAA R16勝利の場合",
@@ -81,7 +189,11 @@
           "rec_odds_est": 1.38,
           "ev_est": 17.4,
           "confidence": 82,
-          "rules_applied": ["R001", "R005", "R007"],
+          "rules_applied": [
+            "R001",
+            "R005",
+            "R007"
+          ],
           "analysis": {
             "L1_cElo": "Sinner クレーcElo ~2050 vs FAA ~1780, 差 ~270 → R001通過",
             "L2_quality": "Sinner: 10連勝中。FAA: 2026シーズン初クレー試合",
@@ -90,7 +202,10 @@
           },
           "condition": "FAA が R16でRuudを破った場合のみ有効（→ FAA R16勝利確認済）",
           "note": "FAA Ruud戦でRuud途中棄権→FAA条件クリア。Sinner優位変わらず",
-          "result": "Sinner", "score": "6-3 6-4", "hit": true, "actual_ev": 0.38
+          "result": "Sinner",
+          "score": "6-3 6-4",
+          "hit": true,
+          "actual_ev": 0.38
         },
         {
           "match": "Alcaraz C.(1) vs Bublik A.(8)",
@@ -99,7 +214,10 @@
           "rec_odds_est": 1.25,
           "ev_est": 11.3,
           "confidence": 85,
-          "rules_applied": ["R001", "R005"],
+          "rules_applied": [
+            "R001",
+            "R005"
+          ],
           "analysis": {
             "L1_cElo": "Alcaraz クレーcElo ~2080 (No.1クレー), 差 ~280-300 → R001通過",
             "L2_quality": "Alcaraz: ディフェンディングチャンピオン、今大会好調",
@@ -107,7 +225,10 @@
             "L4_external": "ホームに近いMC、タイトル防衛のモチベーション最高"
           },
           "note": "Alcaraz圧勝。ディフェンディングチャンピオンの貫禄。SFはde Minaur戦へ",
-          "result": "Alcaraz", "score": "6-1 6-3", "hit": true, "actual_ev": 0.25
+          "result": "Alcaraz",
+          "score": "6-1 6-3",
+          "hit": true,
+          "actual_ev": 0.25
         },
         {
           "match": "de Minaur A.(5) vs Vacherot V.(WC)",
@@ -116,7 +237,10 @@
           "rec_odds_est": null,
           "ev_est": null,
           "confidence": 70,
-          "rules_applied": ["R009", "R010"],
+          "rules_applied": [
+            "R009",
+            "R010"
+          ],
           "note": "信頼度70%→R010により推奨除外。結果: Vacherot upset勝利（R009ホームWC+連続モメンタムで A004/P010候補）。SKIP判定は結果的に正しい（推奨除外の妥当性維持）。",
           "result": "Vacherot V.",
           "score": "6-4 3-6 6-3",
@@ -124,10 +248,19 @@
           "prediction_hit": false,
           "hit": null,
           "actual_ev": null,
-          "retroactive_update": "2026-04-20 CE015波及訂正。SFの対戦相手もVacherotに変更。"
+          "retroactive_update": "2026-04-20 CE015波及訂正。SFの対戦相手もVacherotに変更。",
+          "miss_analysis": "Vacherot (WC, Monaco home) が de Minaur(5) を撃破して 初の Monaco 人 MC SEMI-FINAL 進出 (Open Era)。home WC + 連続シード撃破モメンタム (R2 Hurkacz 撃破からの2連続)。crowd familiarity mental freedom of underdog with nothing to lose 全要因揃う。conf 算出時に R009 WC+2% のみで stop していた。R017 (P010 implemented) 候補となった decisive evidence。",
+          "miss_layer": "L4_External",
+          "rule_linked": "R017 (P010 implemented 2026-04-20: WC home + 連続seed撃破モメンタム +5%)",
+          "type_a_upset_id": "A004"
         }
       ],
-      "summary": { "confirmed_go": 3, "hit": 3, "miss": 0, "note": "QF全3件GO予測がHIT（3/3 100%）。de Minaur vs Vacherotはスキップのため対象外" }
+      "summary": {
+        "confirmed_go": 3,
+        "hit": 3,
+        "miss": 0,
+        "note": "QF全3件GO予測がHIT（3/3 100%）。de Minaur vs Vacherotはスキップのため対象外"
+      }
     },
     "SF": {
       "status": "completed",
@@ -138,17 +271,24 @@
           "match": "Alcaraz C.(1) vs Vacherot V.(WC)",
           "tier": "go",
           "rec": "Alcaraz",
-          "rec_odds_est": 1.50,
+          "rec_odds_est": 1.5,
           "ev_est": 24.5,
           "confidence": 83,
-          "rules_applied": ["R001", "R002", "R005"],
+          "rules_applied": [
+            "R001",
+            "R002",
+            "R005"
+          ],
           "analysis": {
             "L1_cElo": "Alcaraz クレーcElo ~2080 vs Vacherot ~1600台, 差 大 → R001通過",
             "L2_quality": "Alcaraz: QF 6-1 6-3（圧倒的）。Vacherot: R16 d. Hurkacz + QF d. de Minaur 連続upset (A004)",
             "L3_stats": "Alcarazのスライド・フォアは世界最高水準。Vacherot未経験 Masters SF",
             "L4_external": "ディフェンディングチャンピオン。Vacherot初Masters SF進出でプレッシャー大。"
           },
-          "result": "Alcaraz", "score": "6-4 6-4", "hit": true, "actual_ev": 0.50,
+          "result": "Alcaraz",
+          "score": "6-4 6-4",
+          "hit": true,
+          "actual_ev": 0.5,
           "ce_correction": "CE015 (2026-04-18): 対戦相手誤記訂正 de Minaur → Vacherot。Alcaraz 6-4 6-4 (84分) 勝利。HIT判定維持。"
         },
         {
@@ -158,7 +298,11 @@
           "rec_odds_est": 1.65,
           "ev_est": 27.1,
           "confidence": 77,
-          "rules_applied": ["R001", "R002", "R005"],
+          "rules_applied": [
+            "R001",
+            "R002",
+            "R005"
+          ],
           "analysis": {
             "L1_cElo": "Sinner クレーcElo ~2060 vs Zverev ~1950, 差 ~110 → R001通過（ボーダー）",
             "L2_quality": "Sinner: FAA戦6-3 6-4（支配的）。Zverev: Fonseca戦4-6 6-4 7-5（3セット消耗）",
@@ -166,10 +310,19 @@
             "L4_external": "Sinner10連勝中。Zverev QFで消耗。H2H近年Sinner優勢（クレー）"
           },
           "note": "Sinnerが6-1 6-4で圧倒。消耗していたZverevに対してサービスゲームを完璧にキープし1時間22分で勝利。予測どおりHIT。",
-          "result": "Sinner", "score": "6-1 6-4", "hit": true, "actual_ev": 0.65
+          "result": "Sinner",
+          "score": "6-1 6-4",
+          "hit": true,
+          "actual_ev": 0.65
         }
       ],
-      "summary": { "confirmed_go": 2, "hit": 2, "miss": 0, "hit_rate": 1.0, "ev_total": 1.15 }
+      "summary": {
+        "confirmed_go": 2,
+        "hit": 2,
+        "miss": 0,
+        "hit_rate": 1.0,
+        "ev_total": 1.15
+      }
     },
     "F": {
       "status": "scheduled",
@@ -183,7 +336,9 @@
           "rec_odds_est": null,
           "ev_est": null,
           "confidence": 50,
-          "rules_applied": ["R001"],
+          "rules_applied": [
+            "R001"
+          ],
           "analysis": {
             "L1_cElo": "Alcaraz クレーcElo ~2080 vs Sinner ~2060, 差 ~20pt → R001不通過（閾値100pt必要）。実質50/50",
             "L2_quality": "両者ともSFを支配的に勝利。Alcaraz: de Minaur戦6-?。Sinner: Zverev戦6-1 6-4（圧倒）",
@@ -208,11 +363,31 @@
       "go_recommendations": 5,
       "skip_tracking": "未実装 — 2026-04-05時点でscreening_log形式未導入",
       "games_predicted": [
-        { "match": "Medvedev D.(7) vs Berrettini M.(WC)", "verdict": "GO", "result": "MISS" },
-        { "match": "Cerundolo F.(16) vs Machac T.", "verdict": "GO", "result": "MISS" },
-        { "match": "Auger-Aliassime F.(6) vs Cilic M.", "verdict": "GO", "result": "HIT" },
-        { "match": "Fonseca J. vs Rinderknech A.", "verdict": "CAUTION", "result": "MISS" },
-        { "match": "Marozsan F. vs Hurkacz H.(PR)", "verdict": "CAUTION", "result": "MISS" }
+        {
+          "match": "Medvedev D.(7) vs Berrettini M.(WC)",
+          "verdict": "GO",
+          "result": "MISS"
+        },
+        {
+          "match": "Cerundolo F.(16) vs Machac T.",
+          "verdict": "GO",
+          "result": "MISS"
+        },
+        {
+          "match": "Auger-Aliassime F.(6) vs Cilic M.",
+          "verdict": "GO",
+          "result": "HIT"
+        },
+        {
+          "match": "Fonseca J. vs Rinderknech A.",
+          "verdict": "CAUTION",
+          "result": "MISS"
+        },
+        {
+          "match": "Marozsan F. vs Hurkacz H.(PR)",
+          "verdict": "CAUTION",
+          "result": "MISS"
+        }
       ]
     },
     {
@@ -221,8 +396,16 @@
       "skip_tracking": "未実装",
       "go_recommendations": 2,
       "games_predicted": [
-        { "match": "Berrettini M.(WC) vs Fonseca J.", "verdict": "GO", "result": "MISS" },
-        { "match": "Vacherot V.(WC) vs Hurkacz H.(PR)", "verdict": "GO", "result": "HIT" }
+        {
+          "match": "Berrettini M.(WC) vs Fonseca J.",
+          "verdict": "GO",
+          "result": "MISS"
+        },
+        {
+          "match": "Vacherot V.(WC) vs Hurkacz H.(PR)",
+          "verdict": "GO",
+          "result": "HIT"
+        }
       ]
     },
     {
@@ -231,9 +414,21 @@
       "skip_tracking": "未実装",
       "go_recommendations": 3,
       "games_predicted": [
-        { "match": "Alcaraz C.(1) vs Bublik A.(8)", "verdict": "GO", "result": "HIT" },
-        { "match": "Sinner J.(2) vs Auger-Aliassime F.(6)", "verdict": "GO", "result": "HIT" },
-        { "match": "Zverev A.(3) vs Fonseca J.", "verdict": "GO", "result": "HIT" }
+        {
+          "match": "Alcaraz C.(1) vs Bublik A.(8)",
+          "verdict": "GO",
+          "result": "HIT"
+        },
+        {
+          "match": "Sinner J.(2) vs Auger-Aliassime F.(6)",
+          "verdict": "GO",
+          "result": "HIT"
+        },
+        {
+          "match": "Zverev A.(3) vs Fonseca J.",
+          "verdict": "GO",
+          "result": "HIT"
+        }
       ]
     },
     {
@@ -242,8 +437,18 @@
       "skip_tracking": "未実装",
       "go_recommendations": 2,
       "games_predicted": [
-        { "match": "Alcaraz C.(1) vs Vacherot V.(WC)", "verdict": "GO", "result": "HIT", "ce015_correction_note": "元記録 'de Minaur' → 'Vacherot' に訂正 2026-04-18" },
-        { "match": "Sinner J.(2) vs Zverev A.(3)", "verdict": "GO", "result": "HIT", "note": "2026-04-11 Sinner 6-1 6-4 勝利（元 'MISS' 記録は誤り。2026-04-12に既に HIT 訂正済み。screening_log も反映）" }
+        {
+          "match": "Alcaraz C.(1) vs Vacherot V.(WC)",
+          "verdict": "GO",
+          "result": "HIT",
+          "ce015_correction_note": "元記録 'de Minaur' → 'Vacherot' に訂正 2026-04-18"
+        },
+        {
+          "match": "Sinner J.(2) vs Zverev A.(3)",
+          "verdict": "GO",
+          "result": "HIT",
+          "note": "2026-04-11 Sinner 6-1 6-4 勝利（元 'MISS' 記録は誤り。2026-04-12に既に HIT 訂正済み。screening_log も反映）"
+        }
       ]
     },
     {
@@ -252,7 +457,11 @@
       "skip_tracking": "未実装",
       "go_recommendations": 1,
       "games_predicted": [
-        { "match": "Alcaraz C.(1) vs Zverev A.(3)", "verdict": "GO", "result": "PENDING" }
+        {
+          "match": "Alcaraz C.(1) vs Zverev A.(3)",
+          "verdict": "GO",
+          "result": "PENDING"
+        }
       ]
     }
   ]

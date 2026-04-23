@@ -3813,14 +3813,17 @@ body.lang-en .name-en { display: inline; }
         <div class="pred-row"><span style="padding-left:12px;">└ Andreeva vs Udvardy</span><span></span><span style="color:var(--text2);">90%</span></div>
         <div class="pred-row"><span style="padding-left:12px;">└ Bencic vs Martincova</span><span></span><span style="color:var(--text2);">88%</span></div>
         <div class="pred-row"><span style="padding-left:12px;">└ Rybakina vs Ruse</span><span></span><span style="color:var(--text2);">85%</span></div>
-        <div class="pred-row" style="border-top:1px dashed var(--border);margin-top:6px;padding-top:6px;opacity:.85;"><span>📈 他 prediction_accuracy (SKIP含む)</span><span>集計中</span><span style="color:var(--text2);">—</span></div>
+        <div class="pred-row" style="border-top:1px dashed var(--border);margin-top:6px;padding-top:6px;opacity:.85;"><span>📈 他 prediction_accuracy (SKIP含む・全試合)</span><span>—</span><span style="color:var(--text2);">—</span></div>
+        <div class="pred-row"><span style="padding-left:12px;">ATP 全試合 <span style="font-size:9px;color:#58a6ff;">[Adv]</span></span><span>43 / 59</span><span style="color:#3fb950;">72.9%</span></div>
+        <div class="pred-row"><span style="padding-left:12px;">WTA 全試合 <span style="font-size:9px;color:#58a6ff;">[Adv]</span></span><span>23 / 37</span><span style="color:#e3b341;">62.2%</span></div>
         <div class="pred-row"><span style="padding-left:12px;">NHL PO G1 全8試合</span><span>5 / 8</span><span style="color:#e3b341;">62.5%</span></div>
         <div class="pred-row"><span style="padding-left:12px;">NBA PO G1 全8試合</span><span>6 / 8</span><span style="color:#3fb950;">75%</span></div>
       </div>
       <div style="font-size:11px;color:var(--text2);margin-top:10px;padding-top:8px;border-top:1px solid var(--border);">
         ※ Q3 output_a = conf≥85% の「ほぼ確実」予測（EV問わず）。ベット推奨外でも正答率を別トラックで追跡。<br>
         ※ 現在 9/14 (64.3%)。最新セッションの 7件が全 HIT なら 16/21 (76.2%) に更新。<br>
-        ※ Source: stats/cumulative.json by_quadrant.Q3_output_a + records/multi_bets.json (auto-synced).
+        ※ ATP 72.9% 反映 (Session_51 CE017 訂正後・Madrid Q R1 4件勝敗逆転を一次ソース2件以上で再検証して False→True)。<br>
+        ※ Source: stats/cumulative.json by_quadrant.Q3_output_a + records/multi_bets.json + records/{tennis,wta}/*.json prediction_hit 集計 (auto-synced).
       </div>
     </div>
     <!-- AUTO:PRED_Q3 END -->

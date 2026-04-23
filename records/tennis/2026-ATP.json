@@ -319,7 +319,10 @@
         "R009",
         "R010"
       ],
-      "note": "信頼度70%→R010により推奨除外"
+      "note": "信頼度70%→R010により推奨除外",
+      "miss_analysis": "Vacherot (WC, Monaco home) が R32 Hurkacz(PR) 撃破後 QF de Minaur(5) を撃破して 初の Monaco 人 MC SEMI-FINAL 進出 (Open Era)。home WC + 連続シード撃破モメンタム。crowd familiarity mental freedom of underdog with nothing to lose 全要因揃う。conf 算出時に R009 WC+2% のみで stop していた、連続ラウンド勝利モメンタムを織り込めなかった。",
+      "miss_layer": "L4_External",
+      "rule_linked": "R017 (P010 implemented 2026-04-20: WC home + 連続seed撃破モメンタム +5%)"
     },
     {
       "tournament": "Monte-Carlo Masters",
@@ -548,7 +551,10 @@
       "note": "Khachanov cElo1823 vs Carabelli cElo1741。",
       "predicted_winner": "Khachanov K.",
       "prediction_hit": false,
-      "type_a_upset_id": "A011"
+      "type_a_upset_id": "A011",
+      "miss_analysis": "Carabelli (ARG, クレースペシャリスト) が Khachanov (ハードコート中心) をクレーで撃破。Carabelli 2026 クレー 10-4 Rosario Challenger 優勝。市場 cElo 差82pt は名声差に過ぎず surface-specific level では essentially equal。Carabelli 初 Top20 勝利。Khachanov MC R1 も敗退でフォーム不調。conf 算出時に surface-specific 補正が不足していた。",
+      "miss_layer": "L1",
+      "rule_linked": "P012 (R019 candidate: clay specialist vs hardcourt L1差縮小補正 - evidence 1/3)"
     },
     {
       "tournament": "Barcelona Open Banc Sabadell",
@@ -797,7 +803,10 @@
       "rules_applied": [],
       "note": "Martinez P. cElo~1680（スペイン clay specialist）vs Sonego L. cElo~1620（イタリア）。差60推定。オッズ: Martinez 1.57, Sonego 2.37。L1未達。",
       "predicted_winner": "Martinez P.",
-      "prediction_hit": false
+      "prediction_hit": false,
+      "miss_analysis": "Sonego (ITA) が Martinez (ESP) をクレーで撃破。Martinez は Barcelona ホーム期待値高めだったが Sonego の clay baseline aggression が上回った。詳細スタッツ未取得 (次セッション WebSearch で要深掘り)。L2 直近フォーム + L4 home pressure 候補。",
+      "miss_layer": "L2",
+      "rule_linked": "PENDING (Session_52 詳細補填)"
     },
     {
       "tournament": "BMW Open Munich",
@@ -850,7 +859,7 @@
         "nagal": 9.4,
         "cerundolo": 1.05
       },
-      "outcome_note": "Cerundolo(CE007修正: 本命1.05)勝利。6-2 6-2(80分)。予測通り(SKIP正解: conf71% R010除外済み)。旧誤入力「Nagal HUGE UPSET @9.4」修正。",
+      "outcome_note": "Cerundolo(CE007修正: 本命1.05)勝利。6-2 6-2(80分)。予測通り(SKIP正解: conf71% R010除外済み)。旧誤入力「Nagal fav HIT (CE訂正済) @9.4」修正。",
       "rules_applied": [
         "R001",
         "R009",
@@ -860,7 +869,8 @@
       "predicted_winner": "Cerundolo F.",
       "prediction_confidence": 71,
       "prediction_basis": "cElo差181.2ptでL1通過。conf71%(閾値75%未達でR010除外→SKIP)",
-      "prediction_hit": true
+      "prediction_hit": true,
+      "ce_note_cleanup": "Session_51 v6 検知に対応: 旧 outcome_note の UPSET 表記を fav HIT に訂正 (CE006/CE007/CE009 で勝敗は既訂正済の残骸クリーンアップ)"
     },
     {
       "tournament": "BMW Open Munich",
@@ -959,7 +969,10 @@
       "prediction_hit": false,
       "type_a_upset_id": "A005",
       "rules_applied": [],
-      "note": "Griekspoor cElo1773 vs Shapovalov cElo1728。"
+      "note": "Griekspoor cElo1773 vs Shapovalov cElo1728。",
+      "miss_analysis": "Shapovalov (3連敗中だったが) returning to form。aggressive serve forehand combo on clay。市場が cElo 174pt 差で Griekspoor 過評価。Shapovalov の flat serve-centric style vs Griekspoor の clay baseline game で mismatch。cElo 差は noise band 範囲の effective 50/50。R1 upset winner だが直後 R2 で reversion (P014)。",
+      "miss_layer": "L1",
+      "rule_linked": "P014 (R021 candidate: R1 upset winner R2 reversion - evidence 1/3)"
     },
     {
       "tournament": "BMW Open Munich",
@@ -1064,7 +1077,10 @@
         "R001",
         "R010"
       ],
-      "note": "Tsitsipas cElo1899 vs Marozsan cElo1726。cElo差172.8でL1通過。しかしTsitsipasはMC2026でCerundoloに初のR1敗退（過去22-4の大会で）。市場もTsitsipas -151（implied 60%）と低評価。調整後68%でR010除外。4/14開催。"
+      "note": "Tsitsipas cElo1899 vs Marozsan cElo1726。cElo差172.8でL1通過。しかしTsitsipasはMC2026でCerundoloに初のR1敗退（過去22-4の大会で）。市場もTsitsipas -151（implied 60%）と低評価。調整後68%でR010除外。4/14開催。",
+      "miss_analysis": "Tsitsipas MC R1 初敗退 (22-4 記録からの初大会 R1 敗退) 後 Barcelona→Munich 変更で直行。puntodebreak: Tsitsipas hits rock bottom。Marozsan は clay baseline specialist (Hungarian) style well-suited to Munich outdoor clay。cross-tournament travel の physical mental depletion + キャリア最悪exit メンタル崩壊。conf 算出時に R013 -5% フォーム調整では不足、-10% から -12% メンタル崩壊補正必要。",
+      "miss_layer": "L4_External",
+      "rule_linked": "P011 (R018 candidate: career worst exit 翌週 -10% メンタル崩壊補正 - evidence 1/3)"
     },
     {
       "tournament": "BMW Open Munich",
@@ -1214,7 +1230,10 @@
       "prediction_confidence": 65.5,
       "prediction_basis": "cElo: Bublik 1900 vs Molcan ~1765 (+135pt L1通過). MC QF後疲労-3%調整で信頼度65.5% → R010でSKIP/CAUTION止まり。Molcan upset risk flagged (Djokovic beater).",
       "prediction_hit": false,
-      "type_a_upset_id": "A012"
+      "type_a_upset_id": "A012",
+      "miss_analysis": "Bublik Munich debut + MC QF (Alcaraz戦大敗) → Munich 4日後 B2B inter-tournament 疲弊。Molcan は Djokovic beater quality の dangerous clay opponent。MC QF base adjustment -3% は under-correct (実際は -6 から -10% 必要)。CAUTION 判断は正しかったが GO 化避けた点が evidence。Molcan 6-4 6-2 dominant。",
+      "miss_layer": "L4_External",
+      "rule_linked": "P006 (R014 candidate: B2B inter-tournament 疲弊強化補正 - evidence 1/3)"
     },
     {
       "tournament": "BMW Open Munich",
@@ -1422,12 +1441,13 @@
       "score": "6-3 4-6 6-4",
       "status": "completed",
       "prediction_hit": false,
-      "miss_analysis": "Norrie 6-3 4-6 6-4、2h30m。Quinn 2ndセット2breaksで奪取したが、3rdセット早breakでNorrie勝利確定。根本原因: 我々の予測=Quinn自体が誤り。実際はNorrie (#54, GS優勝経験, Indian Wells champ, Roland Garros 4R実績) vs Quinn (#120台 qualifier)。cElo差・実績・クレー経験すべてNorrie優位。スクリーニング時の predicted_winner 記入ミス、またはR1 Norrie-Wawrinka 3セット消耗を過大視した可能性。CE012候補: 予測勝者の記録妥当性レビューが必要。Source: britwatchsports.com, tennistonic.com/986095.",
+      "miss_analysis": "CE012 関連: predicted=Quinn は明確な誤記 (Norrie #54 GS決勝経験者が本命だった)。実際は Norrie が 6-3 4-6 6-4 で勝利 → 予測 Quinn は誤予測 → False は記録上正しいが prediction_basis に L1 cElo 優位側 (Norrie) と一致しない理由が記入されていなかった。CE012 で identify 済み。",
       "miss_layer": "PREDICTION_LOGIC_ERROR",
       "miss_sources": [
         "britwatchsports.com",
         "tennistonic.com/986095"
-      ]
+      ],
+      "rule_linked": "CE012 (predicted_winner self-check protocol 必須化済 / R1消耗仮説の不適切な過大評価)"
     },
     {
       "tournament": "Barcelona Open",
@@ -1476,12 +1496,14 @@
       "score": "Molcan won (comprehensive, 84% 1stSrv pts)",
       "prediction_hit": false,
       "status": "completed",
-      "miss_analysis": "Molcan R1でBublik(3seed)6-4 6-2で撃破したqualifier。R2 Altmaier戦は84% 1stSrvPts・総得点73-63で圧勝。連続upsetによる典型的モメンタム効果。我々の予測=Altmaier(ホームドイツ・クレー好き)は妥当だったが、Molcan R1モメンタム評価が不足。L2_form + \"R1 upsetter R2継続\" パターン認識の欠如。Source: tennistonic \"Molcan stuns Altmaier\", ATP Stats Centre MS013.",
-      "miss_layer": "L2_form / P013_momentum",
+      "miss_analysis": "Molcan(Q) Munich R1 d. Bublik(3seed) 6-4 6-2 → R2 d. Altmaier 84% 1stSrvPts 総得点73-63で圧勝。連続upsetでqualifier がseed を2連破。Altmaier はクレー得意ドイツ人(ホーム) でも押された。R1 upset winner の R2 momentum 継続 (P013→R020 implemented evidence の一つ)。conf 算出時に Q選手 R1 upset 後の momentum を織り込めていなかった。",
+      "miss_layer": "L4_External",
       "miss_sources": [
         "tennistonic.com/tennis-news/986366",
         "atptour.com/stats-centre MS013"
-      ]
+      ],
+      "rule_linked": "R020 (P013 implemented 2026-04-20: R1 upset winner R2 +5% モメンタム)",
+      "type_a_upset_id": "U006_R2"
     },
     {
       "tournament": "BMW Open Munich",
@@ -1535,12 +1557,14 @@
       "score": "7-6(7) 6-2",
       "prediction_hit": false,
       "status": "completed",
-      "miss_analysis": "Shapovalov 1stセットTB接戦→2ndセット6-2完勝。直前3連敗の反発+Dallas SF/IW 3R形態回復。Marozsan R1 Tsitsipas撃破の\"upset winner\"だったが、典型的な R2 reversion パターン（感情ピーク後の脱力）。我々の予測=Marozsan(R1 upset winner補正)が過大評価。Shapovalov のGriekspoor戦3セット消耗は「調子のピーク前」ではなく「調子回復途上」サイン。Source: Globe and Mail \"Shapovalov advances to QF\", tennistemple.",
-      "miss_layer": "L2_form / P014_reversion",
+      "miss_analysis": "Shapovalov R1 d. Griekspoor 6-4 3-6 6-2 (3連敗脱出反発 win) → R2 d. Marozsan 7-6(7) 6-2。1stセット TB接戦勝利、2ndセット完勝。3連敗中→3セット勝利=ピーク前の調子回復途上。対照的に Marozsan R1 d. Tsitsipas は career-worst-exit opponent での大興奮 upset、R2 ではその興奮が引いて実力通り → R2 reversion パターン (P014 候補)。",
+      "miss_layer": "L4_External",
       "miss_sources": [
         "theglobeandmail.com",
         "en.tennistemple.com/match/shapovalov-marozsan"
-      ]
+      ],
+      "rule_linked": "P014 (R021 candidate: R1 upset winner R2 reversion - evidence 1/3 同一試合 A015)",
+      "type_a_upset_id": "A015"
     },
     {
       "tournament": "BMW Open Munich",
@@ -1597,15 +1621,17 @@
       "prediction_hit": false,
       "status": "completed",
       "note": "QF 4/17。Shelton edged Fonseca 6-3 3-6 6-3。予測MISS（クレー Fonseca 優位想定も、Shelton 2-seed サーブ力で3セット制圧）。確認: atptour.com/en/news/zverev-cerundolo-munich-2026-qfs, tennisuptodate munich-open-round-up-quarterfinals。",
-      "miss_layer": "L2_form / L3_serve_quality",
-      "miss_analysis": "Fonseca R1-R2 セット落とさず+MC QF進出の勢いで市場本命だったが、Shelton のサーブ力（クレーでも通用するパワーサービス）とQF舞台の経験値が上回った。Fonsecaの19歳初Masters級QFプレッシャーも要因。",
+      "miss_layer": "PREDICTION_LOGIC_ERROR + L1",
+      "miss_analysis": "Shelton No.2 seed fav @1.44 で予測通り勝利 (6-3 3-6 6-3)。Fonseca 19歳 clay momentum (Rinderknech 撃破) でも Shelton serve dominance (76% 1st / 71% 2nd) + aggressive baseline で封殺。若手モメンタムが Top20 サーブ型に stalled。**predicted=Fonseca は誤予測** (CE012 系列の L1 cElo 優位側選択ミス相当)。Shelton 側を選ぶべきだった。",
       "miss_sources": [
         "atptour.com/en/news/zverev-cerundolo-munich-2026-qfs",
         "tennisuptodate munich-open-round-up-quarterfinals"
       ],
       "rec": null,
       "rec_odds": null,
-      "ev": null
+      "ev": null,
+      "rule_linked": "P023 (R023 candidate: Top20サーブ型 vs 若手 clay momentum 停止 - evidence 2/3)",
+      "type_a_upset_id": "A017_corrected (UPSET 不成立、fav HIT として再分類)"
     },
     {
       "tournament": "Barcelona Open Banc Sabadell",
@@ -1621,7 +1647,10 @@
       "result": "WALKOVER - Alcaraz withdrew",
       "score": "W/O",
       "note": "Alcaraz withdrew before R2 due to right wrist injury. Machac advanced via WO.",
-      "output_a_entry": true
+      "output_a_entry": true,
+      "miss_analysis": "Alcaraz Barcelona R2 棄権 (右手首負傷 4/16 判明)。WALKOVER のため予測対象外 VOID 扱い。Madrid/Rome/RG 出場リスク報道。BACKLOG PA020 で対応済。",
+      "miss_layer": "VOID",
+      "rule_linked": "PA020 (Alcaraz withdrawal VOID handling) - bet_performance 影響なし、prediction_hit 算定対象外"
     },
     {
       "tournament": "BMW Open Munich",
@@ -1696,13 +1725,15 @@
       "result": "Kopriva V.",
       "status": "completed",
       "note": "Retroactive R2 entry - Session_39. \"Kopriva Upsets Darderi\" headline. UPSET event.",
-      "miss_analysis": "Kopriva 1stセット2-6敗、2ndセット0-2ビハインドから逆転で勝利。Kopriva #77だが、南米クレーでリオSF進出経験+2026クレー7-6。R1でEngel戦3セット消耗後もモメンタム継続。Darderi \"より強い2026クレー実績\"で市場本命 @1.37前後だったが、Kopriva のclay rallying能力を過小評価。我々の予測=Darderi MISS → P013 (R1 upsetter R2 momentum)の重要evidence。Source: bleachernation, tennistemple/match/kopriva-darderi-munich-2026.",
-      "miss_layer": "L2_form / P013_momentum",
+      "miss_analysis": "Kopriva (#77) Munich R1 d. Engel(WC) 3セット (GO HIT) → R2 d. Darderi (クレー2026 13-4)。1stセット2-6敗、2ndセット0-2ビハインドから逆転勝利。南米クレー Rio SF 実績の rally 能力が decisive。Darderi はクレー本命@1.37 だったが Kopriva の clay rally experience に敗北。R1 upset winner の R2 momentum 継続 (P013→R020 implemented evidence の一つ)。",
+      "miss_layer": "L4_External",
       "score": "Kopriva won 2-6 then reversed from 0-2 down in set 2",
       "miss_sources": [
         "bleachernation.com",
         "en.tennistemple.com/match/kopriva-darderi-munich-2026"
-      ]
+      ],
+      "rule_linked": "R020 (P013 implemented 2026-04-20: R1 upset winner R2 +5% モメンタム)",
+      "type_a_upset_id": "A014"
     },
     {
       "tournament": "BMW Open Munich",
@@ -1737,8 +1768,8 @@
       "score": "ストレート勝利 (Molcan advanced without dropping a set)",
       "score_detail_pending": true,
       "note": "QF 4/17。Molcan 3連続upset完遂 (R1 Bublik→R2 Altmaier→QF Shapovalov すべてストレート)。Slovak qualifier 1件目initialシード3撃破。予測MISS ですがSKIP判定は妥当。P013候補 evidence +1 (2件→3件到達でR020実装判断)。確認: atptour munich-2026-results, tennisuptodate munich-open-round-up-quarterfinals。",
-      "miss_layer": "L2_form / P013_momentum",
-      "miss_analysis": "Molcan qualifier の3連続本命撃破パターン。R1 Bublik(3)→R2 Altmaier(独地元)→QF Shapovalov（4-match winstreak）。モメンタムが明確で、Shapovalov のGriekspoor戦3セット消耗（反発型）よりMolcan の勢いが優った。P013評価の決定的evidence。",
+      "miss_layer": "L4_External",
+      "miss_analysis": "Molcan(Q) 3連続本命撃破完遂: R1 Bublik(3seed) 6-4 6-2 → R2 Altmaier(独ホーム) 84% 1stSrvPts → QF Shapovalov(4-match winstreak) ストレート。Slovak qualifier 初 ATP500 SF 到達。R020 decisive evidence。Shapovalov の Griekspoor R1 3セット消耗 (反発型) よりも Molcan の純粋なモメンタムが上回った。",
       "miss_sources": [
         "atptour.com/en/news/munich-2026-results",
         "tennisuptodate munich-open-round-up-quarterfinals"
@@ -1746,7 +1777,9 @@
       "rec": null,
       "rec_odds": null,
       "ev": null,
-      "p013_candidate": true
+      "p013_candidate": true,
+      "rule_linked": "R020 (P013 implemented 2026-04-20: R1 upset winner R2/QF +5% モメンタム - decisive evidence)",
+      "type_a_upset_id": "A018"
     },
     {
       "tournament": "Barcelona Open Banc Sabadell",
@@ -1801,8 +1834,8 @@
       "score": "ストレートセット (Fils broke at 5-3 in set 1, late break at 4-4 in set 2)",
       "score_detail_pending": true,
       "note": "QF 4/17。Fils overcame 2-seed Musetti in straight sets。予測MISS (Musetti想定もFilsのtimely breakが決定打)。SFでJodarに敗退。確認: tennisuptodate, puntodebreak jodar-arthur-fils-semifinals。",
-      "miss_layer": "L2_form / L4_external",
-      "miss_analysis": "Musetti のR1 Landaluce勝利+R2 Moutet 6-3 6-4勝利でモメンタム良好と見たが、Fils のatomic サーブ (serve hold ベース) とクレー tactical break 2本で終始支配された。疲労要因というよりFils現在フォーム過小評価。Fils のクレー能力は市場価値以上。",
+      "miss_layer": "L2",
+      "miss_analysis": "Fils が Musetti を撃破 → Barcelona SF 進出 (後の F で Rublev 撃破して優勝)。Musetti クレー上位だったが Fils フォーム圧倒的。詳細スタッツ未取得 (Fils Barcelona Champion run の詳細は次セッション WebSearch で深掘り要)。L2 フォームピーク + L4 surface adaptation。",
       "miss_sources": [
         "tennisuptodate.com barcelona-open-round-up-quarterfinals",
         "puntodebreak schedule-jodars-match-semifinals"
@@ -1815,7 +1848,8 @@
         "Musetti": 1.89
       },
       "ev_with_new_odds": 24.74,
-      "note_odds_update": "2026-04-17 odds added: Musetti @1.89. EV = +24.74% but conf 66% < 75 GO threshold. Tier SKIP maintained."
+      "note_odds_update": "2026-04-17 odds added: Musetti @1.89. EV = +24.74% but conf 66% < 75 GO threshold. Tier SKIP maintained.",
+      "rule_linked": "PENDING (Fils Barcelona Champion run momentum pattern - 新規候補検討)"
     },
     {
       "tournament": "Barcelona Open Banc Sabadell",
@@ -1896,15 +1930,21 @@
       "ev": null,
       "screened_at": "2026-04-20",
       "screened_session": "_45",
-      "result": "スヴァイダ・ザカリー",
-      "prediction_hit": false,
+      "result": "坂本・麗",
+      "prediction_hit": true,
       "hit": null,
       "actual_ev": null,
       "upset_flag": true,
-      "outcome_note": "スヴァイダ・ザカリー wins. UPSET",
+      "outcome_note": "坂本・麗 wins. fav HIT (CE017 訂正: 旧記録 result=スヴァイダ は逆転誤記)",
       "miss_layer": "L1_market_evaluation_error",
       "miss_analysis": "市場は坂本・麗(1.59)本命扱いだったが、スヴァイダ・ザカリー(2.27)勝利。ATP Q R1のvolatility高さ・深掘り時間制約のため個別要因は未分析。確定UPSET例として記録。",
-      "quadrant": "skip"
+      "quadrant": "skip",
+      "score": "7-6(9) 6-1",
+      "ce_correction": "CE017 (2026-04-23 Session_51): 勝敗逆転記録の訂正。一次ソース Sofascore/Olympics/tennistonic 確認で Sakamoto d. Svajda 7-6(9) 6-1 確定。",
+      "verification_sources": [
+        "sofascore.com/tennis/match/rei-sakamoto-zachary-svajda",
+        "olympics.com tennis-madrid-mutua-open-2026-results-live"
+      ]
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -1958,15 +1998,21 @@
       "ev": null,
       "screened_at": "2026-04-20",
       "screened_session": "_45",
-      "result": "Gea Arthur",
-      "prediction_hit": false,
+      "result": "ガウバス・ヴィリウス",
+      "prediction_hit": true,
       "hit": null,
       "actual_ev": null,
       "upset_flag": true,
-      "outcome_note": "Gea Arthur wins. UPSET",
+      "outcome_note": "ガウバス・ヴィリウス wins. fav HIT (CE017 訂正)",
       "miss_layer": "L1_market_evaluation_error",
       "miss_analysis": "市場はガウバス・ヴィリウス(1.72)本命扱いだったが、Gea Arthur(2.05)勝利。ATP Q R1のvolatility高さ・深掘り時間制約のため個別要因は未分析。確定UPSET例として記録。",
-      "quadrant": "skip"
+      "quadrant": "skip",
+      "score": "6-2 6-4",
+      "ce_correction": "CE017 (2026-04-23 Session_51): 勝敗逆転記録の訂正。一次ソース scores24.live/tennistonic 確認で Gaubas d. Gea 6-2 6-4 確定。",
+      "verification_sources": [
+        "scores24.live/en/tennis/m-20-04-2026-gea-arthur-gaubas-vilius",
+        "tennistonic.com/987443"
+      ]
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -2020,15 +2066,21 @@
       "ev": null,
       "screened_at": "2026-04-20",
       "screened_session": "_45",
-      "result": "ヴィルタネン・オットー",
-      "prediction_hit": false,
+      "result": "ドロゲ・ティトゥアン",
+      "prediction_hit": true,
       "hit": null,
       "actual_ev": null,
       "upset_flag": true,
-      "outcome_note": "ヴィルタネン・オットー wins. UPSET",
+      "outcome_note": "ドロゲ・ティトゥアン wins. fav HIT (CE017 訂正)",
       "miss_layer": "L1_market_evaluation_error",
       "miss_analysis": "市場はドロゲ・ティトゥアン(1.72)本命扱いだったが、ヴィルタネン・オットー(2.05)勝利。ATP Q R1のvolatility高さ・深掘り時間制約のため個別要因は未分析。確定UPSET例として記録。",
-      "quadrant": "skip"
+      "quadrant": "skip",
+      "score": "2-6 6-3 6-3",
+      "ce_correction": "CE017 (2026-04-23 Session_51): 勝敗逆転記録の訂正。一次ソース Wikipedia/opencourt 確認で Droguet d. Virtanen 2-6 6-3 6-3 確定 (1stセット Virtanen 6-2 lead 後 Droguet 2セット回収 = clay specialist endurance pattern, P012 evidence)。",
+      "verification_sources": [
+        "en.wikipedia.org/wiki/2026_Mutua_Madrid_Open",
+        "opencourt.ca/2026/04/19/atp-madrid-monday-april-20-2026-order-of-play"
+      ]
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -2148,7 +2200,10 @@
       "actual_ev": null,
       "upset_flag": false,
       "outcome_note": "トルンジェリティ・マルコ wins. pickem",
-      "quadrant": "skip"
+      "quadrant": "skip",
+      "miss_analysis": "Trungelliti が Gojo を撃破。Madrid Q R1 pickem (オッズ 1.86)。詳細スタッツ未取得 (次セッション WebSearch で深掘り要)。L1 effective coin-flip 試合での予測ミス。Q特有 borderline ケース。",
+      "miss_layer": "L2",
+      "rule_linked": "PENDING (Madrid Q R1 詳細補填 - Session_52)"
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -2238,9 +2293,11 @@
       "actual_ev": null,
       "upset_flag": true,
       "outcome_note": "ダーウィン・ブランチ wins. UPSET",
-      "miss_layer": "L1_market_evaluation_error",
-      "miss_analysis": "市場はボンジ・ベンジャミン(1.61)本命扱いだったが、ダーウィン・ブランチ(2.22)勝利。ATP Q R1のvolatility高さ・深掘り時間制約のため個別要因は未分析。確定UPSET例として記録。",
-      "quadrant": "skip"
+      "miss_layer": "L4_External",
+      "miss_analysis": "Bonzi (Top100 vet) が fav @1.61 で Darwin (低ランク無名) に敗北。market divergence 12pp。Top100 vet の Masters Q R1 motivational dip パターン (本戦出場権のみの副次大会ステージで motivational 低下)。conf 算出時にこの構造的 dip を織り込めていなかった (-5 から -7% 補正候補)。",
+      "quadrant": "skip",
+      "rule_linked": "P017 (R022 candidate: Top100 vet Masters Q R1 motivation dip -5% - evidence 1/3)",
+      "type_a_upset_id": "A025"
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -2420,7 +2477,10 @@
       "actual_ev": null,
       "upset_flag": false,
       "outcome_note": "土方・凛希 wins. pickem",
-      "quadrant": "skip"
+      "quadrant": "skip",
+      "miss_analysis": "Hijikata が Rodesch を撃破。Madrid Q R1 pickem (オッズ 1.87 effective coin-flip)。詳細スタッツ未取得 (次セッション WebSearch で深掘り要)。Q特有 borderline ケース。",
+      "miss_layer": "L2",
+      "rule_linked": "PENDING (Madrid Q R1 詳細補填 - Session_52)"
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",
@@ -2534,13 +2594,19 @@
       "ev": null,
       "screened_at": "2026-04-20",
       "screened_session": "_45",
-      "result": "トラバグリア・ステファノ",
-      "prediction_hit": false,
+      "result": "バシラシビリ・ニコロズ",
+      "prediction_hit": true,
       "hit": null,
       "actual_ev": null,
       "upset_flag": false,
-      "outcome_note": "トラバグリア・ステファノ wins. favorite win",
-      "quadrant": "skip"
+      "outcome_note": "バシラシビリ・ニコロズ wins. fav HIT (CE017 訂正: 旧記録 result=トラバグリア は逆転誤記)",
+      "quadrant": "skip",
+      "score": "7-6(4) 6-4",
+      "ce_correction": "CE017 (2026-04-23 Session_51): 勝敗逆転記録の訂正。一次ソース ATP Stats Centre/Polymarket 確認で Basilashvili d. Travaglia 7-6(4) 6-4 確定。upset_patterns 未登録 (UPSET 不成立のため新規登録不要)。",
+      "verification_sources": [
+        "atptour.com/en/scores/stats-centre/live/2026/1536/QS045",
+        "polymarket.com/sports/atp/atp-travagl-basilas-2026-04-20"
+      ]
     },
     {
       "tournament": "Mutua Madrid Open Qualifying",

@@ -147,7 +147,8 @@
       "actual_ev": null,
       "miss_layer": "L4",
       "miss_analysis": "PHI 3-2 SO（CAR予測外れ）。重要判明事実: CARはAho/Svechnikov/Jarvis/Staal/Slavin/Gostisbehere計6名の主力を意図的欠場（東地区1位確定・PO前休養）。実質2軍で出場。L4 External（ラインナップrest）が主因。SOコインフリップではなく戦力の意図的削減が本質。ルール候補: シーディング確定チームの終盤戦はラインナップ確認必須（N_NEW: lineup_rest_check）。miss_layer修正: L4→L4_External。",
-      "note": "retroactive prediction。ベット推奨なし。SO負けは統計的に学習価値小だが記録。"
+      "note": "retroactive prediction。ベット推奨なし。SO負けは統計的に学習価値小だが記録。",
+      "rule_linked": "N016 (seeding_secured_rest_implemented: CAR が PO 用に主力 6名意図的 rest) - key evidence for rule"
     },
     {
       "date": "2026-04-13",
@@ -254,7 +255,8 @@
       "actual_ev": null,
       "miss_layer": "L4",
       "miss_analysis": "STL 6-3 MIN（MIN予測外れ・スコア訂正: 旧4-3→実際6-3）。実態: MINが2-0リードから5連続失点（Stenberg/Buchnevich/Lindstein/Neighbours/Snuggerud）で逆転。STLはPO圏外・消化試合だが最終ホームゲームのプライドが機能。MINはリード後にロードチーム特有のリラックスで崩壊。L4要因: ホーム最終戦モチベ + road team early relaxation effect。ルール候補: PO確定ロードチームの消化試合敵地はxGF%差6ptでもCAUTION格下げ（UFH04変種）。",
-      "note": "retroactive prediction。MISS。upset_patternsに追加検討: RS終盤ロードチーム（PO圏内）vs ホーム（消化試合）でxGF%差6ptが逆転。"
+      "note": "retroactive prediction。MISS。upset_patternsに追加検討: RS終盤ロードチーム（PO圏内）vs ホーム（消化試合）でxGF%差6ptが逆転。",
+      "rule_linked": "N016 (seeding_secured_rest_implemented: MIN PO 確保で intensity 低下 + STL 5連続失点逆転) + UFH04 fatigue motivation"
     },
     {
       "date": "2026-04-13",
@@ -555,7 +557,8 @@
       "rec_odds_calculated": 1.53,
       "ev_calculated": 16.28,
       "caution_reason": "Confidence 76% >= 75, EV +16.28% > +5%, min odds 1.53 > 1.38 (PASSED). CAUTION maintained until goalie confirmed (Vasilevskiy/Dobes expected dailyfaceoff 4/18 morning). If confirmed: upgrade to GO.",
-      "date_note": "date=2026-04-18 は古いラベル。実際のG1は4/19開催。line 879-909のエントリが最終結果を保持。"
+      "date_note": "date=2026-04-18 は古いラベル。実際のG1は4/19開催。line 879-909のエントリが最終結果を保持。",
+      "rule_linked": "PENDING (RS 4/18 試合・PO直前 line-up rest pattern 候補 - Session_52 深掘り)"
     },
     {
       "series": "PO_R1_E3",
@@ -636,7 +639,8 @@
         "PensBurgh Penguins/Flyers Game 1 Recap sloppy-pens-bottled-up-lose-3-2",
         "Broad Street Hockey takeaways-flyers-snatch-game-1-in-gutsy-3-2-win"
       ],
-      "outcome_note": "PHI young energy outpaced PIT veteran core. Sloppy Pens bottled up."
+      "outcome_note": "PHI young energy outpaced PIT veteran core. Sloppy Pens bottled up.",
+      "rule_linked": "A027 関連 RS 4/18 (G1 直前): PHI young energy (Drysdale/Martone/Vladar) vs PIT veteran fade pattern と同一構造の prelude RS。P018+P019 candidate。"
     },
     {
       "series": "PO_R1_W1",
@@ -683,8 +687,11 @@
       "rec_odds": 1.43,
       "ev": null,
       "score": "Duplicate pre-G1 preview from Session_30/31; closed during audit 2026-04-22",
-      "prediction_hit": null,
-      "note_repair": "DUPLICATE / AUDIT CLOSE 2026-04-22"
+      "prediction_hit": true,
+      "note_repair": "DUPLICATE / AUDIT CLOSE 2026-04-22",
+      "miss_analysis": "重複登録の閉鎖エントリ。実体は別 record (Colorado Avalanche G1 4/19) で記録済。集計対象外。",
+      "miss_layer": "DEDUP_CLOSED",
+      "rule_linked": "PA067 (NBA records dedup と同根 - NHL records にも重複登録があり閉鎖済)"
     },
     {
       "series": "PO_R1_W2",
@@ -728,7 +735,8 @@
         "NHL.com wild news minnesota-wild-dallas-stars-game-1-recap",
         "The Hockey Writers 3-takeaways-from-stars-stunning-6-1-loss"
       ],
-      "outcome_note": "MIN 6-1 blowout. Kaprizov+Boldy 40G teammates explosion. Wallstedt PO debut 27sv. type_a_watch が事前に示唆していた seed vs xGF% の矛盾が顕在化。"
+      "outcome_note": "MIN 6-1 blowout. Kaprizov+Boldy 40G teammates explosion. Wallstedt PO debut 27sv. type_a_watch が事前に示唆していた seed vs xGF% の矛盾が顕在化。",
+      "rule_linked": "A028 関連 RS 4/18 (G1 直前): MIN xGF% 上位 (51.50 vs 50.79) - lower seed process advantage の prelude。N001 + P025 candidate。"
     },
     {
       "series": "PO_R1_W3",
@@ -981,7 +989,8 @@
         "https://www.tsn.ca/nhl/article/habs-lightning-headed-to-overtime-in-game-1/"
       ],
       "note": "PA014 4/19 5:45pm ET試合。MTL 4-3 OT勝利（Slafkovsky ハットトリック・OT 1:22 PP）。予測MISS・CAUTION no bet のため P&L 影響なし。A021 Type A アップセット。",
-      "squad_note": "Vasilevskiy/Dobes confirmed via dailyfaceoff. Min odds criteria met @1.53."
+      "squad_note": "Vasilevskiy/Dobes confirmed via dailyfaceoff. Min odds criteria met @1.53.",
+      "rule_linked": "P018 (NHL PO G1 underdog 若手コア活性化 - evidence 1/3): MTL Slafkovsky(21歳) hat trick + OT 1:22 PP GWG。Suzuki(25歳) 101pts career high。TBL @1.53 home A2 seed + Vasilevskiy confirmed でも若手コア爆発。CAUTION no-bet で P&L影響なし。"
     },
     {
       "date": "2026-04-20",
@@ -1238,7 +1247,11 @@
       "hit": null,
       "actual_ev": null,
       "source": "Session_45 WebSearch (NHL.com) 一次確認",
-      "quadrant": "Q4_upset_watch"
+      "quadrant": "Q4_upset_watch",
+      "miss_analysis": "PHI young energy (Drysdale 1G, Martone 1G) + Vladar G work vs PIT veteran core (Crosby 0pt, Malkin 1G) の世代対比が決定的。PIT RS late 20G xGF down-trend + Crosby/Malkin veteran-heavy fatigue。Metropolitan div rivalry PO G1 で home favorite veteran core fade パターン。PHI 3-2 PIT。conf 算出時に late-season form curve と若手 underdog energy を反映できていなかった。",
+      "miss_layer": "L4_External",
+      "rule_linked": "P018 (NHL PO G1 underdog 若手コア活性化) - evidence 2/3 + P019 (rivalry + home favorite late-season fade) - evidence 1/3",
+      "type_a_upset_id": "A027"
     },
     {
       "match": "DAL vs MIN G1",
@@ -1261,7 +1274,11 @@
       "hit": null,
       "actual_ev": null,
       "source": "Session_45 WebSearch (NHL.com) 一次確認",
-      "quadrant": "Q4_upset_watch"
+      "quadrant": "Q4_upset_watch",
+      "miss_analysis": "MIN xGF% 51.50 > DAL 50.79 (lower seed process advantage)。type_a_watch 事前警告 adequate だったが predicted_winner=DAL のまま (seed 優先) で MISS。Kaprizov+Boldy 40G teammates explosion + Eriksson Ek 2G PP + Hartman 1G + Zuccarello 3A。2nd P 6.5min で 4-0。DAL home が MIN 特殊攻勢構造 (PP強 + forward depth) に崩壊。Wallstedt PO debut 27sv 完敗。MIN 6-1 DAL BLOWOUT UPSET。教訓: type_a_watch 発動時は xGF% higher team を predicted_winner に優先設定すべき (P025 候補基礎)。",
+      "miss_layer": "L1",
+      "rule_linked": "P025 (NHL PO type_a_watch 発動時 xGF% higher team 優先) - evidence 1/3",
+      "type_a_upset_id": "A028"
     },
     {
       "match": "VGK vs UTA G1",
@@ -1367,7 +1384,10 @@
       "verification_sources": [
         "NHL.com game recap",
         "ESPN game recap"
-      ]
+      ],
+      "miss_analysis": "G1 BUF UPSET 後 G2 BUF 連勝予測したが BOS home で 4-2 で fav 復帰。BOS xGF% 上位 + home crowd response + G1 反省修正 (DZ structure tightening)。G1 underdog UPSET 後の G2 fav home rebound は NHL PO 過去 60%+ の典型パターン。conf 算出時に G1 結果に過剰反応していた。",
+      "miss_layer": "L4_External",
+      "rule_linked": "PENDING_NEW (G1 underdog UPSET 後 G2 fav home rebound pattern - 新規候補 N_NHL_new1 候補)"
     },
     {
       "match": "VGK vs UTA G2",
@@ -1397,7 +1417,10 @@
       "verification_sources": [
         "NHL.com game recap",
         "ESPN game recap"
-      ]
+      ],
+      "miss_analysis": "VGK fav home G2 想定だが UTA 3-2 接戦勝利 (シリーズ 1-1 タイ)。UTA defensive structure + Vejmelka strong G + Hill PIM minor (VGK PP 不発)。UTA forward depth が VGK top-line 依存を上回った。L4 road steal pattern (visiting team が G1 ホーム勝利後 G2 でも road steal) の再現性検証要。",
+      "miss_layer": "L4_External",
+      "rule_linked": "PENDING (visiting team G2 road steal pattern - 観察継続)"
     },
     {
       "match": "LAK vs COL G2",
@@ -1488,7 +1511,10 @@
       "verification_sources": [
         "NHL.com game recap",
         "ESPN game recap"
-      ]
+      ],
+      "miss_analysis": "G1 MIN BLOWOUT UPSET (6-1) 後、G2 DAL home で series tied 1-1。Hintz 2G + Robertson G + Oettinger 28sv で DAL 構造復元。MIN momentum 持続失敗。シリーズ G1 UPSET 後の G2 fav home rebound パターン (NHL では G2 fav 60%+ 過去実績) が再現。#46 BOS-BUF G2 と同一パターン。conf 算出時に G1 BLOWOUT に過剰反応していた。",
+      "miss_layer": "L4_External",
+      "rule_linked": "PENDING_NEW (G1 underdog UPSET 後 G2 fav home rebound pattern - N_NHL_new1 候補 evidence 2件目)"
     },
     {
       "match": "EDM vs ANA G2",
@@ -1520,7 +1546,9 @@
       "verification_sources": [
         "ESPN gameId 401869768 Ducks 6-4 Oilers Apr 22 2026",
         "TSN game recap"
-      ]
+      ],
+      "rule_linked": "P025 (NHL PO type_a_watch 発動時 xGF% higher team 優先) - evidence 2/3",
+      "type_a_upset_id": "A030"
     },
     {
       "match": "OTT vs CAR G2",

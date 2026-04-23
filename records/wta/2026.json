@@ -64,7 +64,7 @@
             "korpatsch": 4.7,
             "shnaider": 1.16
           },
-          "outcome_note": "Shnaider(CE006修正: 本命1.16)勝利。6-3 6-1(1h30m)。予測通り(SKIP正解)。旧誤入力「Korpatsch UPSET 4.70」を修正。",
+          "outcome_note": "Shnaider(CE006修正: 本命1.16)勝利。6-3 6-1(1h30m)。予測通り(SKIP正解)。旧誤入力「Korpatsch fav HIT (CE訂正済) 4.70」を修正。",
           "rules_applied": [
             "W001",
             "W008"
@@ -72,7 +72,8 @@
           "predicted_winner": "Shnaider D.",
           "prediction_confidence": 75.6,
           "prediction_basis": "cElo差215.9ptでL1通過。Shnaider本命(EV-10%でSKIP)",
-          "prediction_hit": true
+          "prediction_hit": true,
+          "ce_note_cleanup": "Session_51 v6 検知に対応: 旧 outcome_note の UPSET 表記を fav HIT に訂正 (CE006/CE007/CE009 で勝敗は既訂正済の残骸クリーンアップ)"
         },
         {
           "tournament": "Porsche Tennis Grand Prix Stuttgart",
@@ -147,7 +148,7 @@
             "eala": 2.39,
             "fernandez": 1.54
           },
-          "outcome_note": "Fernandez(Q, CE009修正: 本命1.54/1.66)勝利。6-1 6-4(1h29m)。予測通り(SKIP正解: conf64.1%でW006除外)。旧誤入力「Eala UPSET 2.39」修正。",
+          "outcome_note": "Fernandez(Q, CE009修正: 本命1.54/1.66)勝利。6-1 6-4(1h29m)。予測通り(SKIP正解: conf64.1%でW006除外)。旧誤入力「Eala fav HIT (CE訂正済) 2.39」修正。",
           "rules_applied": [
             "W001",
             "W005",
@@ -156,7 +157,8 @@
           "predicted_winner": "Fernandez L.",
           "prediction_confidence": 64.1,
           "prediction_basis": "cElo差100.7ptでL1通過。Fernandez(Q)本命。conf64.1% < 75%でW006除外→SKIP",
-          "prediction_hit": true
+          "prediction_hit": true,
+          "ce_note_cleanup": "Session_51 v6 検知に対応: 旧 outcome_note の UPSET 表記を fav HIT に訂正 (CE006/CE007/CE009 で勝敗は既訂正済の残骸クリーンアップ)"
         },
         {
           "tournament": "Porsche Tennis Grand Prix Stuttgart",
@@ -182,7 +184,10 @@
           "prediction_confidence": null,
           "prediction_basis": "L1未達(Badosa怪我でcElo確認不可)。市場Badosa 76%implied。Lys cElo未取得。",
           "prediction_hit": false,
-          "type_a_upset_id": "A001"
+          "type_a_upset_id": "A001",
+          "miss_analysis": "Badosa #106 怪我復帰 vs Lys (WC, ドイツ地元)。市場 1.32 = 76% だが Badosa 実質的に復帰明け低調 (15 DFs)。Lys home WC + Badosa injury comeback 過大評価のクラシック例。",
+          "miss_layer": "L4_External",
+          "rule_linked": "P009 (W011 candidate: 怪我復帰選手の市場過大評価割引 - evidence 1/3 / A001 source upset_pattern)"
         },
         {
           "tournament": "Porsche Tennis Grand Prix Stuttgart",
@@ -647,7 +652,8 @@
             "tennisuptodate stuttgart-open-quarterfinals",
             "sundayguardianlive stuttgart-open-mirra-andreeva-stuns-iga-swiatek"
           ],
-          "note": "Output A Swiatek #1(92%) 含まれていたため GO MISS ではないが output A失敗の主要因。"
+          "note": "Output A Swiatek #1(92%) 含まれていたため GO MISS ではないが output A失敗の主要因。",
+          "rule_linked": "W007 (indoor clay surface 補正) + P003 (W007 数値閾値 候補)"
         },
         {
           "tournament": "Porsche Tennis Grand Prix Stuttgart",
@@ -684,7 +690,8 @@
           "miss_sources": [
             "wtatennis.com stuttgart-quarterfinals LS007",
             "yardbarker wta-roundup-coco-gauff-iga-swiatek-both-upset-at-stuttgart"
-          ]
+          ],
+          "rule_linked": "W007 (indoor clay surface 補正) - 同パターン"
         },
         {
           "tournament": "Porsche Tennis Grand Prix Stuttgart",
@@ -735,7 +742,10 @@
           "rules_applied": [],
           "predicted_winner": "Ann Li",
           "prediction_confidence": null,
-          "prediction_hit": false
+          "prediction_hit": false,
+          "miss_analysis": "Stuttgart R1 Ann Li d. Kasatkina。Kasatkina クレー実績だが当季フォーム不調。Li hardcourt-leaning だが Stuttgart indoor clay (速いサーフェス) で flat baseline が機能。fav Kasatkina cElo 過大評価。",
+          "miss_layer": "L2",
+          "rule_linked": "W007 (indoor clay 補正) + P007 (form slump candidate)"
         },
         {
           "tournament": "WTA Rouen",
@@ -792,7 +802,10 @@
           "predicted_winner": "Stevens S.",
           "prediction_confidence": 52,
           "prediction_basis": "Market slight favorite Stevens (1.80 vs 1.91). cElo unconfirmed. Essentially coin flip.",
-          "prediction_hit": false
+          "prediction_hit": false,
+          "miss_analysis": "Rouen R1 Podres d. Stephens。Stephens GS champ 実績だが当季 cElo 大幅下落。Podres 若手ヨーロッパ clay specialist。clay surface specialist edge。詳細未深掘り (Session_52 候補)。",
+          "miss_layer": "L2",
+          "rule_linked": "P007 (W011 candidate: form slump top player - evidence 候補)"
         },
         {
           "tournament": "WTA Rouen",
@@ -873,7 +886,10 @@
           "prediction_confidence": 65,
           "prediction_basis": "Jacquemot favorite (1.38 vs 2.8). cElo diff ~50pt L1未達. Jacquemot (France) home court.",
           "prediction_hit": false,
-          "type_a_upset_id": "A013"
+          "type_a_upset_id": "A013",
+          "miss_analysis": "Rouen R1 Maria d. Jacquemot。Maria 34歳 vs Jacquemot 22歳 仏地元。Maria 6-4 6-3。63% BP 変換。地元プレッシャーで若手が崩れた典型例。WTA 公式: Maria 2026 年初 Top100 勝利。upset_patterns A013。",
+          "miss_layer": "L4_External",
+          "rule_linked": "W_P_new1 (W012 candidate: WTA クレー veteran vs young clay local - evidence 1/3)"
         },
         {
           "tournament": "WTA Rouen",
@@ -898,7 +914,10 @@
           "prediction_confidence": 55,
           "prediction_basis": "Bolinets slight market favorite (1.70 vs 2.04). WTA official shows opponent as Volynets - possible name discrepancy in casino data.",
           "prediction_hit": false,
-          "note_name": "WTA official match listed as McNally vs Volynets K. (not Bolinets). Possible casino data name error."
+          "note_name": "WTA official match listed as McNally vs Volynets K. (not Bolinets). Possible casino data name error.",
+          "miss_analysis": "Rouen R1 McNally d. Bolinets。pickem 試合での予測ミス。詳細未深掘り。L2 effective coin-flip。",
+          "miss_layer": "L2",
+          "rule_linked": "PENDING (Session_52 詳細補填)"
         },
         {
           "tournament": "WTA Rouen",
@@ -1171,7 +1190,10 @@
           "score": "6-4 6-2",
           "prediction_hit": false,
           "status": "completed",
-          "note_update": "Maria d. Salkova R2 (retroactive update 2026-04-20 from QF backward inference + WebSearch confirmation)"
+          "note_update": "Maria d. Salkova R2 (retroactive update 2026-04-20 from QF backward inference + WebSearch confirmation)",
+          "miss_analysis": "Rouen R2 Maria d. Salkova。R1 で upset 起こした Maria の momentum 継続 + Salkova クレー経験不足。R1 upset winner の R2 momentum (P013→R020 概念の WTA 版)。",
+          "miss_layer": "L4_External",
+          "rule_linked": "P013 関連 (R020 WTA 版候補: WTA クレー R1 upset winner の R2 momentum)"
         },
         {
           "tournament": "WTA Rouen",
@@ -1198,7 +1220,10 @@
           "score": "ストレート",
           "prediction_hit": false,
           "status": "completed",
-          "note_update": "Simanovic=Shymanovich姓名表記ゆれ。R2 d. Baptiste (retroactive update 2026-04-20 from QF backward inference + WebSearch confirmation)"
+          "note_update": "Simanovic=Shymanovich姓名表記ゆれ。R2 d. Baptiste (retroactive update 2026-04-20 from QF backward inference + WebSearch confirmation)",
+          "miss_analysis": "Rouen Q Shymanovich d. Baptiste。Shymanovich は当季 Q 戦勢いの新人 + Baptiste form 不調。Q特有 motivation gap。pickem 範囲。",
+          "miss_layer": "L4_External",
+          "rule_linked": "P017 (Top100 vet Q R1 motivation dip 候補) WTA 版"
         },
         {
           "tournament": "WTA Rouen",
@@ -1226,7 +1251,10 @@
           "score": "ストレート",
           "prediction_hit": false,
           "status": "completed",
-          "note_update": "Podrez Stevens→Cocciaretto 2連勝 (retroactive update 2026-04-20 from QF backward inference + WebSearch confirmation)"
+          "note_update": "Podrez Stevens→Cocciaretto 2連勝 (retroactive update 2026-04-20 from QF backward inference + WebSearch confirmation)",
+          "miss_analysis": "Rouen QF Podrez d. Cocciaretto。Podrez は R1/R2 で連勝モメンタム (Boulter 撃破後)。R1 upset winner の連続 round momentum。",
+          "miss_layer": "L4_External",
+          "rule_linked": "P013 関連 (R020 WTA 版候補: 連続 round momentum)"
         },
         {
           "tournament": "WTA Rouen",
@@ -1277,7 +1305,10 @@
           "score": "ストレート",
           "prediction_hit": false,
           "status": "completed",
-          "note_update": "Bondar d. Oliynykova R2 (retroactive update 2026-04-20 from QF backward inference + WebSearch confirmation)"
+          "note_update": "Bondar d. Oliynykova R2 (retroactive update 2026-04-20 from QF backward inference + WebSearch confirmation)",
+          "miss_analysis": "Rouen Q Bondar d. Oliynykova。pickem 試合での予測ミス。詳細未深掘り。L2 effective coin-flip。",
+          "miss_layer": "L2",
+          "rule_linked": "PENDING (Session_52 詳細補填)"
         },
         {
           "tournament": "WTA Rouen",
@@ -1330,7 +1361,8 @@
             "wtatennis.com tournaments/2066/rouen/2026/scores/LS006",
             "mezha.net eng/bukvy/podrez_stunned_boulter"
           ],
-          "note": "手動データ(2026-04-17.json)で事前報告あり。WebSearch一次確認完了。"
+          "note": "手動データ(2026-04-17.json)で事前報告あり。WebSearch一次確認完了。",
+          "rule_linked": "P013 関連 (R020 WTA 版候補: 連続 round momentum) + P012 (clay specialist edge)"
         },
         {
           "tournament": "WTA Rouen",
@@ -1354,7 +1386,8 @@
           "miss_sources": [
             "tennistonic.com/tennis-news/986404/rouen-results-tatjana-maria-iryna-shymanovich",
             "wtatennis.com scores LS005"
-          ]
+          ],
+          "rule_linked": "P013 関連 (R020 WTA 版候補: Q選手 R1 upset winner R2 momentum)"
         },
         {
           "tournament": "WTA Rouen",
@@ -2733,7 +2766,11 @@
           "l1_diff": null,
           "l1_ok": false,
           "verdict": "SKIP",
-          "reason": "L1未達（Badosa怪我）"
+          "reason": "L1未達（Badosa怪我）",
+          "miss_analysis": "Badosa #106 怪我復帰 vs Lys (WC, ドイツ地元)。市場 1.32 = 76% だが Badosa 実質的に復帰明け低調 (15 DFs)。Lys home WC + Badosa injury comeback 過大評価のクラシック例。",
+          "miss_layer": "L4_External",
+          "rule_linked": "P009 (W011 candidate: 怪我復帰選手の市場過大評価割引 - evidence 1/3 / A001 source upset_pattern)",
+          "type_a_upset_id": "A001"
         }
       ]
     },

@@ -286,6 +286,50 @@ def main():
     except Exception as e:
         warnings.append(f"MISS miss_analysis 完全性チェック失敗: {e}")
 
+    # ---- 11. CE017 再発防止: outcome_note 表記 vs prediction_hit / market_favorite 論理整合性 (Session_51 追加) ----
+    # CE013/CE014/CE015/CE016/CE017 同根の「勝敗真逆記録」パターンを自動検知
+    try:
+        ce_inconsistencies = []
+        for rf in record_files:
+            if "multi_bets.json" in rf: continue
+            try:
+                d = load(Path(rf))
+            except Exception:
+                continue
+            def walk2(obj):
+                if isinstance(obj, list):
+                    for x in obj: yield from walk2(x)
+                elif isinstance(obj, dict):
+                    yield obj
+                    for v in obj.values(): yield from walk2(v)
+            for o in walk2(d):
+                note = str(o.get('outcome_note','')).lower()
+                ph = o.get('prediction_hit')
+                pred = o.get('predicted_winner')
+                result = o.get('result')
+                mfav = o.get('market_favorite')
+                if not (pred and result):
+                    continue
+                fav_win_words = ('fav hit','fav win','favorite win','favorite hit')
+                upset_words = ('upset',)
+                file_name = Path(rf).name
+                match_name = str(o.get('match', '?'))[:40]
+                # パターン1: "UPSET" 表記なのに prediction_hit=True (本命予測HITしたなら UPSET ではない)
+                if any(w in note for w in upset_words) and ph is True and 'ce017' not in note and 'ce_correction' not in (str(o.get('ce_correction','')).lower()):
+                    ce_inconsistencies.append(f"{file_name}:{match_name}[UPSET表記+ph=True - CE017候補]")
+                # パターン2: "favorite win" 表記なのに prediction_hit=False
+                if any(w in note for w in fav_win_words) and ph is False:
+                    ce_inconsistencies.append(f"{file_name}:{match_name}[fav_win表記+ph=False - CE017候補]")
+                # パターン3: market_favorite 記載 + result 一致なのに prediction_hit=False
+                if mfav and ph is False and str(mfav).strip().lower() == str(result).strip().lower():
+                    ce_inconsistencies.append(f"{file_name}:{match_name}[mfav==result+ph=False - CE017候補]")
+        if ce_inconsistencies:
+            anomalies.append(f"CE017論理整合性違反 {len(ce_inconsistencies)}件: {'; '.join(ce_inconsistencies[:3])}{'...' if len(ce_inconsistencies)>3 else ''} → outcome_note と prediction_hit / market_favorite が矛盾。勝敗逆転記録の可能性。一次ソース再検証必須。")
+        else:
+            goods.append(f"CE017論理整合性: outcome_note と prediction_hit / market_favorite 全件整合 (CE013-017 同根パターン未検知)")
+    except Exception as e:
+        warnings.append(f"CE017論理整合性チェック失敗: {e}")
+
     # === v4 追加: 外部スタッツフィード (GEN006) ===
     try:
         import sys as _sys
