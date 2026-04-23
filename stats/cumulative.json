@@ -276,16 +276,16 @@
       "note": "Phase2移行(2026-04-18)以降発動0件。閾値UF>=3+div>=15ppは実運用で極めて稀"
     },
     "Q3_output_a": {
-      "total": 18,
-      "confirmed": 11,
+      "total": 22,
+      "confirmed": 14,
       "hit": 9,
-      "hit_rate": 0.818,
+      "hit_rate": 0.643,
       "ev_total": 0,
       "void_excluded": 1,
       "void_matches": [
         "Alcaraz C. vs Machac T."
       ],
-      "note": "Session_48 audit 2026-04-22: NBA dedup + walkover除外後の実測。Q3 = quadrant==Q3_output_a OR (conf>=85 AND tier in skip/caution/output_a). 旧値 15/10/10. | Session_49: Sonmez HIT, BOS G2 MISS (PHI 111-97), SAS G2 MISS (POR 106-103). OKC G2 pending. 8/10 80.0%. | Session_50 (2026-04-23): OKC G2 HIT (OKC 120-107 PHX). Q3 9/11 81.8%. | Session_50 (2026-04-23): Q3 new pending 7件 (Sinner/Bencic/Swiatek/Sabalenka/Andreeva/Gauff/Rybakina). Q3 total 18 / confirmed 11 / hit 9 (81.8%)."
+      "note": "Session_48 audit 2026-04-22: NBA dedup + walkover除外後の実測。Q3 = quadrant==Q3_output_a OR (conf>=85 AND tier in skip/caution/output_a). 旧値 15/10/10. | Session_49: Sonmez HIT, BOS G2 MISS (PHI 111-97), SAS G2 MISS (POR 106-103). OKC G2 pending. 8/10 80.0%. | Session_50 (2026-04-23): OKC G2 HIT (OKC 120-107 PHX). Q3 9/11 81.8%. | Session_50 (2026-04-23): Q3 new pending 7件 (Sinner/Bencic/Swiatek/Sabalenka/Andreeva/Gauff/Rybakina). Q3 total 18 / confirmed 11 / hit 9 (81.8%). | Session_50 final sync: 累計履歴テーブルと一致。15 rows + 7 new pending = 22 total / confirmed 14 / hit 9 / 64.3%. 旧 Session_48 audit (11 total) は過剰フィルタだったため本セッションで破棄。"
     },
     "Q4_upset_watch": {
       "total": 24,
