@@ -1,0 +1,136 @@
+{
+  "sport": "mlb",
+  "version": "1.0",
+  "updated": "2026-04-23",
+  "bet_type": "Moneyline (ML) のみ。Run Line / Over-Under は初期運用対象外",
+  "target": "2026 MLB レギュラーシーズン〜ポストシーズン全試合",
+  "screening": {
+    "L1_priority": [
+      {
+        "rank": 1,
+        "metric": "FanGraphs チーム wRC+ + FIP",
+        "source": "FanGraphs team dashboards",
+        "threshold": "wRC+ 差 10pt以上 または FIP 差 0.4 以上で候補",
+        "note": "wRC+ は攻撃 park-adjusted 指標 (100が平均)、FIP は運を排除した投手指標。攻撃・投手の両軸で評価。"
+      },
+      {
+        "rank": 2,
+        "metric": "Baseball Savant xwOBA / xERA (Statcast expected)",
+        "source": "Baseball Savant leaderboards",
+        "threshold": "xwOBA 差 0.025以上 または xERA 差 0.5以上で候補",
+        "note": "打球速度・角度ベースの期待値。実成績と乖離がある場合は平均回帰する傾向。"
+      }
+    ],
+    "critical": "先発投手 (SP) が未確定の場合は仮GO候補に保留(STEP 4.5)。先発投手が変更(故障・調整)された場合は EV 再計算必須。",
+    "lineup_check": "試合当日朝(JST 10:00頃 = ET 21:00頃)までにスターターと打線が公式発表される。Cheatsheet: rotowire.com/baseball/daily-lineups"
+  },
+  "thresholds": {
+    "recommend_go": {
+      "confidence_min": 75,
+      "ev_min": 5
+    },
+    "skip": "信頼度75%未満 または EV+5%未満",
+    "tier_specific_note": "Advanced Tier 標準閾値 (FIP / wRC+ / xwOBA = 運除外 advanced metrics)"
+  },
+  "ev_formula": "(推定勝率 × MLオッズ) - 1",
+  "layers": {
+    "L1": "チーム wRC+ + FIP 差 (チーム地力)",
+    "L2": "直近10試合 run differential + wRC+ 差 (フォーム) ±10%",
+    "L3": "先発投手 FIP/xFIP + ブルペン ERA + 打線左右構成 ±8%",
+    "L4": "主力欠場 (IL入り) / ホーム / デイナイト連戦 / ロードトリップ疲労 / 球場効果 ±12%"
+  },
+  "data_sources": {
+    "team_fangraphs": "https://www.fangraphs.com/leaders/major-league?stats=bat&stats=pit&type=8&season={year}&team=0,ts",
+    "team_savant": "https://baseballsavant.mlb.com/leaderboard/expected_statistics?type=team&year={year}",
+    "starting_pitchers": "https://www.rotowire.com/baseball/daily-lineups.php",
+    "injuries": "https://www.fangraphs.com/roster-resource/injury-report",
+    "park_factors": "https://www.fangraphs.com/guts.aspx?type=pf",
+    "odds": "OddsPortal / Pinnacle"
+  },
+  "rules": [
+    {
+      "id": "M001",
+      "type": "initial",
+      "title": "L1 スクリーニング (wRC+ AND FIP クロスチェック)",
+      "body": "FanGraphs チーム wRC+ 差 10pt以上 AND FIP 差 0.4 以上の試合を GO 候補として進める。片方のみは CAUTION。両方未達は SKIP。",
+      "cross_check": "攻撃 (wRC+) と投手 (FIP) の両軸で優位なチームのみ高確信。片方のみの場合は先発投手マッチアップ深掘り必須。"
+    },
+    {
+      "id": "M002",
+      "type": "initial",
+      "title": "先発投手 (SP) マッチアップ補正 (最重要)",
+      "body": "先発投手の FIP / xFIP / K-BB% を比較。個別 SP の当季 FIP 差 0.8 以上なら L3 で +5〜+8% 補正。過去5登板の短期スタッツも加味。ローテーション突破は大きくEV動く最重要因子。",
+      "fetch_step": "STEP 4.5 で rotowire.com から先発投手を確認し、FanGraphs で個別 FIP をルックアップ",
+      "critical": "先発投手未確定でGO判断は禁止"
+    },
+    {
+      "id": "M003",
+      "type": "initial",
+      "title": "ホームアドバンテージ + デイナイト連戦補正",
+      "body": "ホーム勝率 MLB 平均は 54% (他リーグより若干高い)。ホーム側 +4% 基本補正。【デイナイト連戦】前日夜試合後の当日デイゲームは -3% (疲労)。【ロードトリップ7日以上】3都市以上の遠征後半 -4%。",
+      "note": "MLB は移動距離が大きいため時差疲労補正が重要"
+    },
+    {
+      "id": "M004",
+      "type": "initial",
+      "title": "打線左右構成補正 (vs LHP/RHP スプリット)",
+      "body": "相手先発が左投手(LHP)の場合、チーム打線の vs LHP wRC+ を参照 (FanGraphs splits)。L/R スプリット差 15pt 以上のチームはマッチアップ有利/不利を大きく反映。右打者多いチーム vs LHP +3%、左打者多いチーム vs LHP -3%。",
+      "data_source": "https://www.fangraphs.com/leaders/splits-leaderboards"
+    },
+    {
+      "id": "M005",
+      "type": "initial",
+      "title": "ブルペン補正 (レバレッジ指標)",
+      "body": "ブルペン WPA (Win Probability Added) + FIP で評価。ブルペン上位5チームは +2%。下位5チームは -3%。9回リード試合で特に効く。Close games (1点差試合比率 高) ではブルペン差が決定的。"
+    },
+    {
+      "id": "M006",
+      "type": "initial",
+      "title": "主力欠場 (IL入り) 補正",
+      "body": "10-day IL / 60-day IL 入りの主力選手を確認。【Star position player欠場 (WAR>3.0 per RS)】-5%。【複数欠場】累積可 (上限 -12%)。【主力 SP 欠場だが登板日以外】影響小。【Star Closer欠場】-3%。",
+      "source": "fangraphs.com/roster-resource/injury-report"
+    },
+    {
+      "id": "M007",
+      "type": "initial",
+      "title": "球場効果 (Park Factor) 補正",
+      "body": "Coors Field / Great American Ball Park / Fenway Park 等 hitter-friendly 球場では打線有利チーム +2%。Petco Park / Oakland Coliseum 等 pitcher-friendly 球場では投手有利チーム +2%。Park Factor 110 超 or 90 未満で発動。",
+      "park_factor_source": "FanGraphs Guts"
+    },
+    {
+      "id": "M008",
+      "type": "initial",
+      "title": "勝敗モメンタム補正 (直近10試合)",
+      "body": "直近10試合の勝率 65%以上のチームは+3% (momentum)。45%以下は-3% (slump)。ただし wRC+ / FIP と乖離がある場合は平均回帰を優先 (無補正)。",
+      "note": "短期 fluke hit/miss 排除のため run differential と併用"
+    },
+    {
+      "id": "M009",
+      "type": "initial",
+      "title": "天候 (風向・雨) 補正",
+      "body": "【風の方向】ホームプレートへの強風 (in) は HR 抑制 → pitcher有利 +2%。追い風 (out) は HR 増加 → hitter有利 +2%。【雨天コールド濃厚】中止/延期リスクで push 確率。疑わしい時は避ける。",
+      "source": "MLB.com 試合 weather forecast"
+    },
+    {
+      "id": "M010",
+      "type": "initial",
+      "title": "ダブルヘッダー / 長時間試合後補正",
+      "body": "前日試合が 4時間超 or 延長12回以上 or ダブルヘッダーの場合、翌日のブルペン使用可能枚数減少 → ブルペン指数 -3%。主力休養確率も上昇 → XI発表で主力欠場なら合算。"
+    },
+    {
+      "id": "M011",
+      "type": "initial",
+      "title": "L4 スタメン確認チェックリスト (STEP 4.5 準拠)",
+      "body": "試合当日 JST 10:00 頃に rotowire.com で以下を確認: (1)先発投手 (SP) 確定・直近登板からの休養日数 (2)打線 1-9番 + DH (3)捕手 (4)主力打者 (3-4-5番) の出場可否 (5)終盤リリーフのローテーション事情 (前日の登板数)。",
+      "checklist": [
+        "先発投手確定",
+        "打線左右構成",
+        "主力打者 3-4-5 番出場",
+        "Closer 連投状況",
+        "IL 更新情報"
+      ]
+    }
+  ],
+  "accuracy_tier": "advanced",
+  "tier_note": "高精度Tier: FanGraphs FIP/wRC+ (park-adjusted, luck-neutralized) + Baseball Savant Statcast をL1に使用。標準GO閾値 (conf>=75%, EV>+5%) で運用。"
+}

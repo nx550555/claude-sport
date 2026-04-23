@@ -1,0 +1,127 @@
+name: Lineup Watch (STEP 4.5)
+
+on:
+  schedule:
+    # 30分ごとに起動し、直近キックオフ試合があればスタメン取得 → 正式GO昇格 → メール
+    # cron は UTC 指定 (JST -9h)
+    - cron: '*/30 * * * *'
+  # MLB は JST 10:00 固定 (= UTC 01:00) で打線確認
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      should_fetch: ${{ steps.scan.outputs.should_fetch }}
+      sports: ${{ steps.scan.outputs.sports }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Scan upcoming games
+        id: scan
+        run: |
+          set +e
+          python scripts/check_upcoming_games.py --pretty > scan_result.json
+          code=$?
+          cat scan_result.json
+          if [ "$code" = "10" ]; then
+            echo "should_fetch=true" >> $GITHUB_OUTPUT
+            python -c "import json; d=json.load(open('scan_result.json')); print('sports=' + ','.join(d['should_fetch']))" >> $GITHUB_OUTPUT
+          else
+            echo "should_fetch=false" >> $GITHUB_OUTPUT
+            echo "sports=" >> $GITHUB_OUTPUT
+          fi
+          exit 0
+
+  fetch-lineups:
+    needs: check
+    if: needs.check.outputs.should_fetch == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright
+          playwright install --with-deps chromium
+
+      - name: Fetch lineups (detected sports)
+        run: |
+          for sp in $(echo "${{ needs.check.outputs.sports }}" | tr ',' ' '); do
+            echo "--- fetch_lineups --sport $sp ---"
+            python scripts/fetch_lineups.py --sport "$sp" --days-stale 0 || true
+          done
+
+      - name: Commit lineup feed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add stats/external_feeds/lineups_*.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "[INFO] no lineup changes"
+          else
+            git commit -m "chore(lineups): auto-fetch lineups ($(date -u +'%Y-%m-%dT%H:%MZ'))"
+            git push
+          fi
+
+      - name: Notify GO candidates (immediate)
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          NOTIFY_TO: ${{ secrets.NOTIFY_TO }}
+          NOTIFY_FROM: ${{ secrets.NOTIFY_FROM }}
+        run: |
+          python scripts/notify_go_candidate.py --scan --mark-sent || true
+
+      - name: Commit notification marks
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add records/**/*.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "[INFO] no notified flag changes"
+          else
+            git commit -m "chore(notify): mark notified=true ($(date -u +'%Y-%m-%dT%H:%MZ'))"
+            git push
+          fi
+
+  mlb-morning:
+    # MLB は JST 10:00 (UTC 01:00) 固定で先発投手・打線取得
+    if: github.event.schedule == '0 1 * * *'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright
+          playwright install --with-deps chromium
+      - name: Fetch MLB lineups
+        run: python scripts/fetch_lineups.py --sport mlb --days-stale 0 || true
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add stats/external_feeds/lineups_*.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(lineups): MLB morning fetch ($(date -u +'%Y-%m-%dT%H:%MZ'))"
+            git push
+          fi

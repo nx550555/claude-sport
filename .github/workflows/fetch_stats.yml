@@ -60,6 +60,22 @@ jobs:
         run: python scripts/fetch_injuries.py --days-stale 0 --sport all
         continue-on-error: true
 
+      - name: Soccer Club Elo (clubelo.com)
+        run: python scripts/fetch_clubelo.py --days-stale 0
+        continue-on-error: true
+
+      - name: Soccer xG (understat.com - 5 leagues)
+        run: python scripts/fetch_understat.py --days-stale 0 --league all
+        continue-on-error: true
+
+      - name: MLB FanGraphs (FIP/wRC+)
+        run: python scripts/fetch_fangraphs.py --days-stale 0
+        continue-on-error: true
+
+      - name: MLB Baseball Savant (Statcast)
+        run: python scripts/fetch_baseball_savant.py --days-stale 0
+        continue-on-error: true
+
       - name: Commit fresh feeds
         run: |
           git config user.name "github-actions[bot]"

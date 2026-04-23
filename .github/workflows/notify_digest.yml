@@ -1,0 +1,37 @@
+name: Notify Daily Digest
+
+on:
+  schedule:
+    # JST 23:00 = UTC 14:00
+    - cron: '0 14 * * *'
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'YYYY-MM-DD (空欄は今日)'
+        required: false
+        default: ''
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Send digest
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          NOTIFY_TO: ${{ secrets.NOTIFY_TO }}
+          NOTIFY_FROM: ${{ secrets.NOTIFY_FROM }}
+        run: |
+          if [ -n "${{ github.event.inputs.date }}" ]; then
+            python scripts/notify_digest.py --date "${{ github.event.inputs.date }}"
+          else
+            python scripts/notify_digest.py
+          fi

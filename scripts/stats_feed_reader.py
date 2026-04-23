@@ -76,6 +76,11 @@ FEED_CATALOG = {
     "superleague_standings":("superleague_standings_*.json",3),
     "ufl_standings":      ("ufl_standings_*.json",          3),
     "cfl_standings":      ("cfl_standings_*.json",          3),
+    "soccer_clubelo":     ("soccer_clubelo_*.json",         3),
+    "soccer_understat":   ("soccer_understat_*.json",       3),
+    "mlb_fangraphs":      ("mlb_fangraphs_*.json",          3),
+    "mlb_savant":         ("mlb_savant_*.json",             3),
+    "lineups":            ("lineups_*.json",                1),
 }
 
 
@@ -320,6 +325,161 @@ def get_league_team(league: str, team: str) -> dict | None:
         if tn == team or team in tn or tn in team:
             return t
     return None
+
+
+# ===== Soccer =====
+
+SOCCER_LEAGUE_ALIASES = {
+    "premier_league": "Premier League",
+    "epl": "Premier League",
+    "la_liga": "La Liga",
+    "laliga": "La Liga",
+    "bundesliga": "Bundesliga",
+    "serie_a": "Serie A",
+    "seriea": "Serie A",
+    "ligue_1": "Ligue 1",
+    "ligue1": "Ligue 1",
+}
+
+
+def _normalize_league(league: str) -> str:
+    key = (league or "").strip().lower().replace(" ", "_").replace("-", "_")
+    return SOCCER_LEAGUE_ALIASES.get(key, league)
+
+
+def get_club_elo(club: str) -> dict | None:
+    """clubelo.com の最新 Elo をクラブ名で取得"""
+    p = _latest("soccer_clubelo_*.json")
+    if not p:
+        return None
+    data = _load(p)
+    clubs = data.get("clubs", {})
+    if club in clubs:
+        return clubs[club]
+    # loose match
+    key = club.lower()
+    for cname, entry in clubs.items():
+        if key in cname.lower() or cname.lower() in key:
+            return entry
+    return None
+
+
+def get_league_elo_ranking(league: str) -> list[dict] | None:
+    """リーグ全クラブを Elo 降順で返す"""
+    p = _latest("soccer_clubelo_*.json")
+    if not p:
+        return None
+    data = _load(p)
+    league_name = _normalize_league(league)
+    teams = data.get("leagues", {}).get(league_name)
+    if not teams:
+        return None
+    return sorted(teams, key=lambda x: x.get("elo") or 0, reverse=True)
+
+
+def get_team_xg(team: str, league: str | None = None) -> dict | None:
+    """understat xG サマリ (累積 xG/xGA/xGD 等)"""
+    p = _latest("soccer_understat_*.json")
+    if not p:
+        return None
+    data = _load(p)
+    leagues_data = data.get("leagues", {})
+
+    candidates = []
+    if league:
+        lg = _normalize_league(league)
+        if lg in leagues_data:
+            candidates.append((lg, leagues_data[lg]))
+    else:
+        candidates = list(leagues_data.items())
+
+    key = team.lower()
+    for lg_name, lg_data in candidates:
+        for t in lg_data.get("teams", []):
+            tn = (t.get("team") or "").lower()
+            if key == tn or key in tn or tn in key:
+                return {**t, "league": lg_name}
+    return None
+
+
+def get_soccer_all_teams(league: str) -> list[dict] | None:
+    """understat 側リーグ全チーム (xG/xGA ベース)"""
+    p = _latest("soccer_understat_*.json")
+    if not p:
+        return None
+    data = _load(p)
+    lg = _normalize_league(league)
+    return (data.get("leagues", {}).get(lg) or {}).get("teams")
+
+
+# ===== MLB =====
+
+def get_mlb_team(team: str) -> dict | None:
+    """FanGraphs のチーム統計 (wRC+/FIP/xFIP/ERA/WAR 等)"""
+    p = _latest("mlb_fangraphs_*.json")
+    if not p:
+        return None
+    data = _load(p)
+    key = team.lower()
+    for entry in data.get("teams", []):
+        t = (entry.get("team") or "").lower()
+        if key == t or key in t or t in key:
+            return entry
+    return None
+
+
+def get_mlb_savant(team: str) -> dict | None:
+    """Baseball Savant (Statcast) expected 指標 (xwOBA/xERA 等)"""
+    p = _latest("mlb_savant_*.json")
+    if not p:
+        return None
+    data = _load(p)
+    key = team.lower()
+    for entry in data.get("teams", []):
+        t = (entry.get("team") or "").lower()
+        if key == t or key in t or t in key:
+            return entry
+    return None
+
+
+def get_mlb_all_teams() -> list[dict] | None:
+    p = _latest("mlb_fangraphs_*.json")
+    return _load(p).get("teams") if p else None
+
+
+# ===== Lineups (STEP 4.5) =====
+
+def get_lineup(sport: str, team: str, date: str | None = None) -> dict | None:
+    """スタメン情報取得。sport: nba / nfl / rugby / soccer / mlb
+    date: YYYY-MM-DD (省略時は最新の lineups ファイル)"""
+    if date:
+        p = FEED_DIR / f"lineups_{date}.json"
+        if not p.exists():
+            return None
+    else:
+        p = _latest("lineups_*.json")
+    if not p:
+        return None
+    data = _load(p)
+    bucket = data.get(sport, {})
+    key = team.lower()
+    for t, lineup in bucket.items():
+        if key == t.lower() or key in t.lower() or t.lower() in key:
+            return lineup
+    return None
+
+
+def get_lineup_all(sport: str, date: str | None = None) -> dict | None:
+    """指定スポーツの全チーム lineups (辞書)"""
+    if date:
+        p = FEED_DIR / f"lineups_{date}.json"
+        if not p.exists():
+            return None
+    else:
+        p = _latest("lineups_*.json")
+    if not p:
+        return None
+    return _load(p).get(sport)
 
 
 if __name__ == "__main__":

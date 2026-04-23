@@ -24,7 +24,9 @@
     "premiership",
     "top14",
     "prod2",
-    "ahl"
+    "ahl",
+    "soccer",
+    "mlb"
   ],
   "sports_preseason": [
     "nfl",
@@ -42,7 +44,9 @@
     "premiership": "English Premiership Rugby 2025-26 (R14前後・5月末プレーオフ)",
     "top14": "French Top 14 2025-26 (R20-21前後・6月プレーオフ)",
     "prod2": "French Pro D2 2025-26 (R26-27前後・5月プレーオフ)",
-    "ahl": "AHL (American Hockey League) 2025-26 reactivated 2026-04-17. Basic Tier運用・プレーオフ期試験稼働。"
+    "ahl": "AHL (American Hockey League) 2025-26 reactivated 2026-04-17. Basic Tier運用・プレーオフ期試験稼働。",
+    "soccer": "5大リーグ (EPL/La Liga/Bundesliga/Serie A/Ligue 1) Session_54 新規追加 2026-04-23. Advanced Tier. clubelo + understat L1.",
+    "mlb": "MLB 2026 レギュラーシーズン進行中. Session_54 新規追加 2026-04-23. Advanced Tier. FanGraphs + Baseball Savant L1."
   },
   "sports_preseason_note": {
     "nfl": "2026年9月開幕予定",
@@ -97,6 +101,12 @@
     ],
     "basketball": [
       "nba"
+    ],
+    "soccer": [
+      "soccer"
+    ],
+    "baseball": [
+      "mlb"
     ]
   },
   "common_layers": {
@@ -201,7 +211,9 @@
     "top14": "core/rules_top14.json",
     "prod2": "core/rules_prod2.json",
     "super_league": "core/rules_superleague.json (v1.0 新設・NRL準拠 + SL独自補正)",
-    "ahl": "core/rules_ahl.json"
+    "ahl": "core/rules_ahl.json",
+    "soccer": "core/rules_soccer.json",
+    "mlb": "core/rules_mlb.json"
   },
   "records_files": {
     "tennis_atp": "records/tennis/2026-ATP.json",
@@ -217,10 +229,44 @@
     "top14": "records/top14/2026.json",
     "prod2": "records/prod2/2026.json",
     "super_league": "records/superleague/2026.json",
-    "ahl": "records/ahl/2025-26.json"
+    "ahl": "records/ahl/2025-26.json",
+    "soccer": "records/soccer/2025-26.json",
+    "mlb": "records/mlb/2026.json"
   },
   "workflow": {
     "screening": "全試合にpredicted_winner・prediction_confidence・prediction_basisを記録してからtier(go/caution/skip)を判定する",
+    "step_4_5_lineup_check": {
+      "_description": "Session_54 (2026-04-23) 追加。L1通過した試合を『仮GO候補』として保留し、スタメン・先発情報取得後にEV再計算して『正式GO候補』に昇格させる。",
+      "sports_required": ["nba", "nfl", "soccer", "mlb", "nrl", "superrugby", "premiership", "top14", "prod2", "super_league"],
+      "procedure": [
+        "1. L1 通過試合を tier='provisional_go' で records に記録",
+        "2. scripts/fetch_lineups.py を実行しスタメン取得 (sport/team/date 指定)",
+        "3. get_lineup(sport, team, date) で stats_feed_reader から読み込み",
+        "4. 主力欠場に応じて L4 ルールを適用し conf を再計算",
+        "5. 再計算後も conf>=75% AND EV>+5% を満たせば tier='go' に昇格",
+        "6. 正式GO昇格と同時に notify_go_candidate.py をトリガしメール送信"
+      ],
+      "lineup_check_points": {
+        "nba": "欠場者 (DNP/Out) + ミニットリストリクション (Load Management)",
+        "nfl": "QB 出場可否 + 主要スキルポジション (WR1/RB1/TE1)",
+        "soccer": "GK 起用 + 主力FW (得点源) + CB + キャプテン + フォーメーション変更",
+        "mlb": "先発投手 (SP) 確定 + 打線左右構成 + 3-4-5番出場",
+        "nrl": "フロントロー (Prop/Hooker) + halves (6/7)",
+        "superrugby": "フロントロー + SO (スタンドオフ = #10)",
+        "premiership": "フロントロー + SO (#10)",
+        "top14": "フロントロー + SO (#10)",
+        "prod2": "フロントロー + SO (#10)",
+        "super_league": "フロントロー + halves (6/7)"
+      },
+      "timing": {
+        "soccer": "キックオフ75分前 (公式XI発表)",
+        "mlb": "JST 10:00 頃 (ET 21:00 前日) Rotowire daily-lineups 更新",
+        "nba": "キックオフ90分前",
+        "nfl": "キックオフ90分前 (Inactive list 発表)",
+        "nrl": "キックオフ75分前",
+        "rugby_others": "キックオフ75分前"
+      }
+    },
     "after_result": "result・prediction_hit・hit（GOのみ）・miss_analysisをrecords/{sport}/{year}.jsonに記入する",
     "rule_update": "miss_analysisから導いた新パターンをrules_{sport}.jsonに追記する",
     "stats_update": "stats/cumulative.jsonのprediction_accuracy・bet_performanceを両方更新する"
@@ -326,14 +372,18 @@
         "tennis_wta",
         "nhl",
         "nba",
-        "nfl"
+        "nfl",
+        "soccer",
+        "mlb"
       ],
       "examples": {
         "tennis_atp": "cElo (surface-specific Bayesian rating)",
         "tennis_wta": "cElo Women's",
         "nhl": "xGF% (MoneyPuck, shot quality adjusted)",
         "nba": "Net Rating (possession adjusted)",
-        "nfl": "DVOA (situation-adjusted)"
+        "nfl": "DVOA (situation-adjusted)",
+        "soccer": "clubelo Elo + understat xG (shot quality adjusted)",
+        "mlb": "FanGraphs FIP + wRC+ (park-adjusted, luck-neutralized) + Baseball Savant xwOBA"
       },
       "operational_implication": "標準の閾値 (conf>=75% AND EV>+5%) をGO条件として使用可",
       "thresholds": {
@@ -387,6 +437,8 @@
     "nhl": "advanced",
     "nba": "advanced",
     "nfl": "advanced",
+    "soccer": "advanced",
+    "mlb": "advanced",
     "ufl": "basic",
     "cfl": "basic",
     "nrl": "basic",
@@ -397,5 +449,6 @@
     "prod2": "basic",
     "ahl": "basic"
   },
-  "last_updated": "2026-04-20"
+  "last_updated": "2026-04-23",
+  "last_update_note": "Session_54: soccer (5 big leagues) + mlb 追加 / STEP 4.5 lineup check workflow 追加 / メール通知システム (C: 即時+日次) 追加"
 }

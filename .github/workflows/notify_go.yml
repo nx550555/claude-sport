@@ -1,0 +1,65 @@
+name: Notify GO Candidate
+
+on:
+  # 手動実行 (テストメール送信用)
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'test (疎通確認のみ) / scan (records走査)'
+        required: true
+        default: 'test'
+        type: choice
+        options:
+          - test
+          - scan
+  # records JSON の変更を検知して scan → 送信 (lineup_watch から分離した手動トリガ)
+  push:
+    paths:
+      - 'records/**/*.json'
+    branches:
+      - main
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Send test email
+        if: ${{ github.event.inputs.mode == 'test' }}
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          NOTIFY_TO: ${{ secrets.NOTIFY_TO }}
+          NOTIFY_FROM: ${{ secrets.NOTIFY_FROM }}
+        run: python scripts/notify_go_candidate.py --test
+
+      - name: Scan records for new GO candidates
+        if: ${{ github.event.inputs.mode == 'scan' || github.event_name == 'push' }}
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          NOTIFY_TO: ${{ secrets.NOTIFY_TO }}
+          NOTIFY_FROM: ${{ secrets.NOTIFY_FROM }}
+        run: python scripts/notify_go_candidate.py --scan --mark-sent
+
+      - name: Commit notified flags
+        if: ${{ github.event.inputs.mode == 'scan' || github.event_name == 'push' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add records/**/*.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "[INFO] no notified flag changes"
+          else
+            git commit -m "chore(notify): mark notified=true via notify_go ($(date -u +'%Y-%m-%dT%H:%MZ'))"
+            git push
+          fi

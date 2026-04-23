@@ -1,0 +1,32 @@
+{
+  "sport": "soccer",
+  "version": "1.0",
+  "season": "2025-26",
+  "created": "2026-04-23",
+  "description": "サッカー 5 大リーグ (EPL/La Liga/Bundesliga/Serie A/Ligue 1) 予測記録。ユーザー提供データ起点でスクリーニング・予測・結果を追記する。",
+  "leagues": {
+    "Premier League": {"country": "ENG", "teams_count": 20},
+    "La Liga": {"country": "ESP", "teams_count": 20},
+    "Bundesliga": {"country": "GER", "teams_count": 18},
+    "Serie A": {"country": "ITA", "teams_count": 20},
+    "Ligue 1": {"country": "FRA", "teams_count": 18}
+  },
+  "summary": {
+    "total_predictions": 0,
+    "bet_recommended": 0,
+    "hit": 0,
+    "miss": 0,
+    "pending": 0,
+    "ev_total": 0.0,
+    "prediction_hit_rate": null,
+    "bet_hit_rate": null
+  },
+  "predictions": [],
+  "screening_log": [
+    {
+      "date": "2026-04-23",
+      "event": "records skeleton created",
+      "note": "Session_54 新規追加。データ投入は次回以降のユーザー提供オッズJSON起点。"
+    }
+  ]
+}

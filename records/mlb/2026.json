@@ -1,0 +1,25 @@
+{
+  "sport": "mlb",
+  "version": "1.0",
+  "season": "2026",
+  "created": "2026-04-23",
+  "description": "MLB 2026 レギュラーシーズン〜ポストシーズン予測記録。ユーザー提供オッズデータ起点でスクリーニング・予測・結果を追記する。",
+  "summary": {
+    "total_predictions": 0,
+    "bet_recommended": 0,
+    "hit": 0,
+    "miss": 0,
+    "pending": 0,
+    "ev_total": 0.0,
+    "prediction_hit_rate": null,
+    "bet_hit_rate": null
+  },
+  "predictions": [],
+  "screening_log": [
+    {
+      "date": "2026-04-23",
+      "event": "records skeleton created",
+      "note": "Session_54 新規追加。データ投入は次回以降のユーザー提供オッズJSON起点。"
+    }
+  ]
+}

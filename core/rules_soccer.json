@@ -1,0 +1,162 @@
+{
+  "sport": "soccer",
+  "version": "1.0",
+  "updated": "2026-04-23",
+  "bet_type": "1X2 (Home/Draw/Away) または Double Chance。初期運用は 1X2 のうち Home Win / Away Win のみ対象",
+  "target_leagues": {
+    "EPL": "Premier League (England)",
+    "La Liga": "La Liga (Spain)",
+    "Bundesliga": "Bundesliga (Germany)",
+    "Serie A": "Serie A (Italy)",
+    "Ligue 1": "Ligue 1 (France)"
+  },
+  "screening": {
+    "L1_priority": [
+      {
+        "rank": 1,
+        "metric": "clubelo Elo rating",
+        "source": "clubelo.com (api.clubelo.com/{date} CSV)",
+        "threshold": "Elo差 50pt 以上で候補",
+        "note": "5大リーグ共通の国際Elo。ホーム/アウェイ補正・対戦結果・オッズではなく結果ベースで毎試合更新。"
+      },
+      {
+        "rank": 2,
+        "metric": "understat xG diff (xG - xGA per game)",
+        "source": "understat.com league pages",
+        "threshold": "xGD/G 差 0.6 以上で候補",
+        "note": "シュートの質を加味した期待得点差。実得点より運の影響が小さい。L1 Elo とのクロスチェックで精度向上。"
+      }
+    ],
+    "critical": "試合75分前のスタメン(XI)が未発表の場合は仮GO候補に保留(STEP 4.5)。GK・主力FW欠場判明で再評価する。",
+    "divergence_check": "Elo差と xG差 が同じ方向(両方ホーム優位など)なら確信度+3%。逆方向なら-5%かCAUTION格下げ。"
+  },
+  "thresholds": {
+    "recommend_go": {
+      "confidence_min": 75,
+      "ev_min": 5
+    },
+    "skip": "信頼度75%未満 または EV+5%未満",
+    "tier_specific_note": "Advanced Tier 標準閾値 (clubelo Elo = Bayesian rating, understat xG = shot quality adjusted)"
+  },
+  "ev_formula": "(推定勝率 × 1X2オッズ) - 1",
+  "layers": {
+    "L1": "clubelo Elo 差 + understat xGD/G 差 (地力)",
+    "L2": "直近6試合のフォーム (対戦相手Elo加重) ±8%",
+    "L3": "xG/PPDA/ポゼッション/セットプレー効率 ±5%",
+    "L4": "スタメン(XI)・主力欠場・ホーム・直前ターンオーバー・監督交代・ターンオーバーの疑い ±15%"
+  },
+  "data_sources": {
+    "team_elo": "http://api.clubelo.com/{YYYY-MM-DD}",
+    "team_xg": "https://understat.com/league/{EPL|La_liga|Bundesliga|Serie_A|Ligue_1}/{season}",
+    "lineups": "https://www.rotowire.com/soccer/lineups.php (75分前公式発表)",
+    "injuries": "https://www.transfermarkt.com / 各クラブ公式",
+    "odds": "OddsPortal / Pinnacle",
+    "weather": "各国気象サイト (雨影響あり)"
+  },
+  "rules": [
+    {
+      "id": "S001",
+      "type": "initial",
+      "title": "L1 スクリーニング (Elo + xG クロスチェック)",
+      "body": "clubelo Elo差が50pt以上 AND understat xGD/G差が0.6以上の試合のみ GO 候補として進める。片方のみ閾値クリアは CAUTION。両方とも未達は SKIP。",
+      "cross_check": "Elo差と xG差の方向が一致する場合のみ高確信。方向逆なら市場織り込み未完成の疑い→深掘り。"
+    },
+    {
+      "id": "S002",
+      "type": "initial",
+      "title": "ホームアドバンテージ (基本補正 +5%)",
+      "body": "5大リーグのホーム勝率は平均 45-48% でアウェイは 25-30%。ホーム側に+5%固定補正。ただし国際大会直後・長距離移動後は補正縮小(S007参照)。",
+      "league_variance": {
+        "Serie A": "ホームアドバンテージ最小 (平均 +3%)",
+        "EPL": "平均 +5%",
+        "La Liga": "平均 +5%",
+        "Bundesliga": "平均 +6% (観客熱量高)",
+        "Ligue 1": "平均 +5%"
+      }
+    },
+    {
+      "id": "S003",
+      "type": "initial",
+      "title": "L2 直近フォーム(6試合) 品質スコア",
+      "body": "直近6試合の対戦相手 Elo 加重で xGD を算出。直線回帰で上昇トレンドなら+5%、下降なら-5%。単純勝敗より xGD ベースの方がノイズ耐性高い。",
+      "formula": "weighted_xgd = Σ(match_xgd × opponent_elo) / Σ(opponent_elo)"
+    },
+    {
+      "id": "S004",
+      "type": "initial",
+      "title": "L3 セットプレー・PPDA 補正",
+      "body": "understat の PPDA (Passes per Defensive Action) で守備強度を定量化。PPDA 上位30% (プレス強度高) チームは+2%、下位30%は-2%。セットプレー得点率20%以上のチームは+1%。",
+      "ppda_note": "PPDA は低いほど強い (相手にパスを許さない)"
+    },
+    {
+      "id": "S005",
+      "type": "initial",
+      "title": "L4 GK・主力FW 欠場補正",
+      "body": "試合75分前発表のスタメン(XI)で確認する。【GK欠場】正GKが欠場・2nd GK起用時 -6%。3rd GK起用時 -10%。【主力FW】得点源(シーズン得点トップ or 直近6試合で40%以上関与)の欠場 -5〜-8%。CB主力欠場も同等扱い。複数欠場合算 (上限-15%)。",
+      "fetch_step": "STEP 4.5 lineup check で自動取得・再計算"
+    },
+    {
+      "id": "S006",
+      "type": "initial",
+      "title": "ターンオーバー・ローテーション疑い補正",
+      "body": "以下の状況では主力温存リスクが高い → -7%補正。(1)中3日以内の連戦 (CL/EL・国内杯との二重日程) (2)次節に強豪戦を控える場合 (3)監督がプレ会見で'ローテーション'を示唆。確認ソース: プレ会見記事・公式SNS・英語現地メディア。",
+      "triggers": [
+        "CL/EL 試合前後3日以内",
+        "国内杯 (FA Cup/Copa del Rey/DFB-Pokal/Coppa Italia/Coupe de France) 試合後の国内リーグ",
+        "監督プレ会見で rotation 明言"
+      ]
+    },
+    {
+      "id": "S007",
+      "type": "initial",
+      "title": "国際大会・代表ウィーク補正",
+      "body": "FIFAインターナショナルマッチ週直後 (長距離遠征の代表選手帰還時) は疲労・時差の影響で主力フル稼働できない。代表招集選手が5名以上のチームは -4%。FIFA World Cup / EURO 直後のシーズン開幕週は -5% 追加。",
+      "note": "代表招集リストはFIFAの各国協会公式発表で確認"
+    },
+    {
+      "id": "S008",
+      "type": "initial",
+      "title": "天候(大雨・強風・雪) 補正",
+      "body": "キックオフ時点の天候で判定。【大雨】パスサッカー・ポゼッション型チーム -5% / ロング直線型チーム +3%。【強風 10m/s以上】攻守ともにエラー増・低xGゲーム化 → 戦力差縮小 -3%。【雪】視界不良・パス精度低下 → Elo低い側に有利 -5%/+5%。確認ソース: weather.com / 各国気象サイト。",
+      "style_classification": {
+        "ポゼッション型": "Man City / Bayern / Barcelona / Arsenal / Brighton 等",
+        "ロング直線型": "Burnley / Leipzig (Press後) / Gasperini 系 / Bilbao 等"
+      }
+    },
+    {
+      "id": "S009",
+      "type": "initial",
+      "title": "監督交代直後(bounce) 補正",
+      "body": "監督交代直後の3試合は心理的 bounce 効果で予想外の結果が出やすい。交代直後チームが underdog の場合 +4%。逆に新監督 vs 既存強豪で新監督チームが優勢予測時は -3% (不安定期を織り込む)。",
+      "window": "監督交代後3試合以内"
+    },
+    {
+      "id": "S010",
+      "type": "initial",
+      "title": "降格圏/CL圏モチベーション補正",
+      "body": "シーズン終盤 (残り5試合以内) で勝点モチベーションに差がある場合。【降格圏 vs 消化試合】降格圏側に +5%。【CL圏争い vs 消化試合】CL圏側に +3%。【両者モチベ高】補正なし。",
+      "timing": "シーズン残り5試合以内"
+    },
+    {
+      "id": "S011",
+      "type": "initial",
+      "title": "ダービー・国内ライバル補正",
+      "body": "地元ダービー (例: North London / Madrid / Milan / Klassiker / Le Classique / Derby d'Italia) は統計的にEloが外れやすい。±8% の信頼度上限キャップ (conf上限 80%)。ホームアドバンテージも +3% に縮小 (ライバル意識で相殺)。"
+    },
+    {
+      "id": "S012",
+      "type": "initial",
+      "title": "L4 スタメン確認チェックリスト (STEP 4.5 準拠)",
+      "body": "キックオフ75分前の公式XI発表後に必ず以下を確認する: (1)正GK起用/2nd GK/3rd GK (2)得点源FW出場 (3)CB主力 (4)キャプテン出場 (5)直前フォーメーション変更 (例: 4-2-3-1 → 5-3-2)。1つでも主力欠場が判明したら S005/S006 を適用し re-calc。",
+      "checklist": [
+        "GK",
+        "主力FW(得点源)",
+        "主力CB",
+        "キャプテン",
+        "フォーメーション変更"
+      ]
+    }
+  ],
+  "accuracy_tier": "advanced",
+  "tier_note": "高精度Tier: clubelo Elo (Bayesian rating) + understat xG (shot quality adjusted) をL1に使用。標準GO閾値 (conf>=75%, EV>+5%) で運用。"
+}
