@@ -1047,6 +1047,27 @@
       "verification_sources": [
         "NBA.com game recap",
         "ESPN game recap"
+      ],
+      "miss_analysis": {
+        "summary": "G1 で BOS 123-91 PHI blowout HIT 後、G2 PHI @home away で +14pt UPSET。PHI 3P 19/39 (48.7%) vs G1 の 4本のみから劇的改善。Edgecombe 30pts+10reb (fall怪我プレイ継続) / Maxey 29pts が BOS backcourt を圧倒。BOS 3P 13/47 (27.7%) + FG 39.3% + turnover 13 で PHI に16得点献上。Jaylen Brown 36pts も焼け石。Embiid 欠場継続 (appendectomy 4/9) の中での PHI 勝利で BOS 油断要因強い。",
+        "miss_factors": [
+          "PHI 3P explosion (19/39 vs G1 4本) - shooting variance",
+          "BOS 3P regression (13/47 27.7%) + FG 39.3%",
+          "BOS turnover 13 → PHI 16pts",
+          "G1 blowout win後の home favorite mental 緩み",
+          "Edgecombe breakout (30pts young core activation)"
+        ],
+        "miss_layer": "L3_shooting_variance + L4_home_favorite_complacency",
+        "type": "G1_blowout_aftereffect"
+      },
+      "miss_layer": "L3_shooting_variance + L4_home_favorite_complacency",
+      "rule_linked": [
+        "P026_new_candidate"
+      ],
+      "verification_sources_miss": [
+        "ESPN gameId 401869396 76ers 111-97 Celtics",
+        "NBA.com 76ers-celtics-2026-playoffs-first-round-game-2-takeaways",
+        "NBC Sports Boston recap"
       ]
     },
     {
@@ -1077,6 +1098,29 @@
       "verification_sources": [
         "NBA.com game recap",
         "ESPN game recap"
+      ],
+      "miss_analysis": {
+        "summary": "SAS G2 MISS (POR 106-103 SAS) - **Wembanyama 2Q で脳震盪退場 (Holiday ファウルで face-first fall, jaw slam)** が決定要因。Wemby NBA concussion protocol 入り。SAS は Wemby なしで 4Q 序盤 14pt リードを築いたが、最後 3:37 無得点で POR に 11-2 run で逆転負け。Scoot Henderson 31pts (11/15 FG / 5/9 3P) で POR breakout。Castle 18pts/8reb / Vassell 16/12 も star scorer 不在を埋められず。**A029 (KD 欠場 LAL-HOU G1 MISS) と同じ star scorer absence パターン** - P024 decisive evidence 2件目。",
+        "miss_factors": [
+          "Wembanyama 2Q concussion退場 (face-first fall fouled by Holiday)",
+          "L1 NRtg は Wemby ON baseline → star OFF で proxy 破綻 (A029/P024 pattern)",
+          "SAS 4Q final 3:37 無得点 (offense stagnation)",
+          "Scoot Henderson 31pts POR breakout (若手 breakout pattern P022)",
+          "POR 11-2 closing run"
+        ],
+        "miss_layer": "L4_star_scorer_in_game_injury + L3_fourth_quarter_collapse",
+        "type": "in_game_star_loss",
+        "rule_pipeline_evidence": "P024 (star scorer >25ppg absence) evidence 2/3 到達 (A029 KD HOU + this)"
+      },
+      "miss_layer": "L4_star_scorer_in_game_injury + L3_fourth_quarter_collapse",
+      "rule_linked": [
+        "P024",
+        "P022_candidate"
+      ],
+      "verification_sources_miss": [
+        "ESPN gameId 401869378 Trail Blazers 106-103 Spurs",
+        "NBA.com trail-blazers-spurs-2026-playoffs-first-round-game-2-takeaways",
+        "CBS Sports Wembanyama concussion protocol"
       ]
     },
     {

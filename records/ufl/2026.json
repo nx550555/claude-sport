@@ -163,7 +163,10 @@
           "https://www.espn.com/ufl/scoreboard",
           "https://www.theufl.com/scores/100"
         ]
-      }
+      },
+      "rule_linked": [
+        "P015"
+      ]
     },
     {
       "week": 4,

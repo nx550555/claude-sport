@@ -649,7 +649,7 @@
       "title": "NBA PO G1 star scorer (>25ppg RS) 欠場時の L4 下方補正",
       "description": "star scorer (RS 25ppg+) が G1 game-time decision → ruled out になった場合、star-heavy チーム側信頼度を -8〜-10% 補正。Durant (26ppg) HOU 欠場のように実質 NRtg 1-4pt 下方修正相当。L1 NRtg は RS 全体平均で star ON ベース → star OFF では NRtg proxy が破綻。",
       "trigger_threshold": 3,
-      "current_count": 1,
+      "current_count": 2,
       "evidence": [
         {
           "id": "A029",
@@ -661,13 +661,24 @@
             "ESPN rockets kevin-durant-g1-vs-lakers-knee-contusion",
             "NBA.com rockets-lakers-2026-playoffs-game-1-takeaways"
           ]
+        },
+        {
+          "id": "A031",
+          "match": "POR d. SAS PO R1 G2 2026-04-22 106-103",
+          "pattern": "Wembanyama (SAS RS 24.3ppg) 2Q concussion 退場 (Holiday ファウル face-first fall)。Wemby OFF で L1 NRtg proxy 破綻、SAS 4Q 14pt リードから closing 3:37 無得点で逆転負け。Scoot Henderson 31pts POR breakout。A029 KD 欠場 HOU と同一構造 (star scorer in-game loss → L4 -8〜-10% 相当)。",
+          "tag": "nba_po_g1_star_scorer_absence",
+          "sources": [
+            "ESPN gameId 401869378 Trail Blazers 106-103 Spurs",
+            "NBA.com trail-blazers-spurs-2026-playoffs-first-round-game-2-takeaways",
+            "CBS Sports Wembanyama concussion protocol"
+          ]
         }
       ],
       "tag_matches": [
         "nba_po_g1_star_scorer_absence",
         "nhl_po_g1_key_player_absence"
       ],
-      "note": "3件揃ったら N_NBA_new2 として実装。pre-game injury report scraping (NBA.com injury / dailyfaceoff NHL) を screening protocol に組込検討。星級選手欠場 = L4 -8〜-10% 自動補正。"
+      "note": "evidence 2/3 到達 (Session_50 2026-04-23): A029 (pre-game absence) + A031 (in-game injury)。3件目で N_NBA_new2 実装。in-game injury は事前 screening で検知不可のため、発生後のライブ補正 protocol として別rule 設計も検討。"
     },
     {
       "candidate_id": "P025",
@@ -705,6 +716,34 @@
         "nhl_type_a_watch_realized"
       ],
       "note": "2/3 到達 (2026-04-23 Session_50 A030 追加)。3件目 evidence で N021 として実装: predicted_winner 選択アルゴリズムの改定 (type_a_watch 発動 → xGF higher team を予測)。"
+    },
+    {
+      "candidate_id": "P026",
+      "status": "watching",
+      "target_rule_file": "core/rules_nba.json",
+      "proposed_rule_id": "N_NBA_new3",
+      "title": "NBA PO G1 blowout win 後の G2 home favorite complacency 補正",
+      "description": "NBA Playoffs R1 で G1 を 20pt+ blowout で勝ったホーム favorite が G2 で 3P shooting variance + turnover 増 + 若手core breakout で逆転負けするパターン。G1 blowout 後の油断リスクとして -4〜-6% conf 補正検討。",
+      "trigger_threshold": 3,
+      "current_count": 1,
+      "evidence": [
+        {
+          "id": "A032",
+          "match": "PHI 111-97 BOS PO R1 G2 2026-04-22",
+          "pattern": "BOS G1 123-91 PHI blowout HIT → G2 home @TD Garden で 111-97 MISS。PHI 3P 19/39 (48.7%) vs G1 の 4本のみから 475% 劇的改善。BOS 3P 13/47 (27.7%) + FG 39.3% + turnover 13 → PHI 16pts 献上。Edgecombe 30pts/10reb + Maxey 29pts が BOS backcourt 圧倒。Embiid 欠場中の PHI 快勝 = BOS 油断要因強い。Q3 output_a MISS (conf 85)。",
+          "tag": "nba_po_g2_home_complacency_after_g1_blowout",
+          "sources": [
+            "ESPN gameId 401869396 76ers 111-97 Celtics",
+            "NBA.com 76ers-celtics-2026-playoffs-first-round-game-2-takeaways",
+            "NBC Sports Boston recap"
+          ]
+        }
+      ],
+      "tag_matches": [
+        "nba_po_g2_home_complacency_after_g1_blowout",
+        "nba_po_three_point_variance"
+      ],
+      "note": "1/3 到達 (Session_50 新設)。類似ケース継続観察: OKC G2 は逆に 120-107 PHX で HIT のため全てのG1 blowout 後 home fade になるわけではない (NRtg 絶対差が decisive)。20pt+ blowout かつ NRtg 差<7pt 条件でフィルタすべきかも。"
     }
   ],
   "implemented_rules": [

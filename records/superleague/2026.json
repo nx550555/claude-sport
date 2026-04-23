@@ -132,7 +132,10 @@
       ],
       "miss_layer": "L4_home_advantage_underestimated / L3_second_half_collapse",
       "miss_analysis": "Catalans仏国ホーム補正-5%では不足。ペルピニャンの天候・観客・芝質の累積的優位が Catalans 2ndハーフ5トライ連取を生み出した。Warrington 1st halfでリードしていた（16-10）のに後半で崩壊 = 単なる『移動疲労』以上の構造的 away disadvantage。Superleague Basic Tier では 仏国ホーム補正を -7〜-10% に強化検討。また、Lewis Dodd は2026 breakout year で過去の PD/G 平均値を既に超えている選手（Catalans の実質 PD は直近で改善）。過去7試合平均では PD/G 差23.88ptの妥当性に疑問。",
-      "rule_candidate_sl_catalans_home": "P016 候補: Super League Catalans仏国ホームでは standard -5% が不足 → -7〜-10% 補正検討。証拠 A020 として記録。"
+      "rule_candidate_sl_catalans_home": "P016 候補: Super League Catalans仏国ホームでは standard -5% が不足 → -7〜-10% 補正検討。証拠 A020 として記録。",
+      "rule_linked": [
+        "P016"
+      ]
     }
   ],
   "screening_log": [

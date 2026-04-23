@@ -443,7 +443,10 @@
           "predicted_winner": "Paolini J.",
           "prediction_confidence": 78,
           "prediction_basis": "cElo差300pt (Paolini 1916 vs Sonmez 1616)。Output A #7.",
-          "prediction_hit": false
+          "prediction_hit": false,
+          "rule_linked": [
+            "P007"
+          ]
         },
         {
           "tournament": "Porsche Tennis Grand Prix Stuttgart",
