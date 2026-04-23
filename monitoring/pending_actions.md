@@ -99,6 +99,7 @@
 | PA072 | NEW 新規候補 P027 N_NHL_new1 監視 | Session_51 新設。NHL PO G1 underdog UPSET 後の G2 fav home rebound 補正。evidence 2/3 到達 (BOS G2 / DAL G2)。3件目候補は EDM-ANA G3 / TBL-MTL G3 等の G1 UPSET 系シリーズの G2 結果から抽出。 | PENDING | 中 | 継続 |
 | PA073 | NEW NBA G2 詳細スタッツ補填 | **DONE Session_52 2026-04-23**: [30] ATL 107-106 NYK G2 → McCollum 32pts / ATL 4Q 72% / NYK 4Q 5-22 collapse → P028 新候補 (G1 home fav win 後 G2 home 4Q execution collapse) 1/3 evidence / [32] MIN 119-114 DEN G2 → Gobert vs Jokic 1-of-8 / MIN +17 2nd-chance → P029 新候補 (DPOY vs MVP center matchup) 1/3 evidence. 両 entry date 4/24→4/20 訂正. | DONE | 中 | 完了 2026-04-23 |
 | PA-PERM05 | 常設 | **結果反映時は miss_analysis + miss_layer + rule_linked を必ず同時記入**（Session_50 feedback loop 改善プロトコル）。health_check v5 で毎セッション STEP 0 に自動検知 | PENDING | 最高 | 毎 MISS 発生時 |
+| PA-PERM06 | 常設 | **GEN007 システム改善提案の常時義務** (Session_54 2026-04-23 制定)。データ取得失敗・MISS反復・ルール肥大化・自動化余地などを検知したら Claude 側から能動的に改善案を提案する継続契約。遠慮して提案しないことがルール違反。毎セッション冒頭に GEN007 意識を確認 | PENDING | 最高 | 毎セッション冒頭+検知時 |
 | PA078 | NHL | PO G3 結果追跡 (8試合) 4/24-26: BOS/OTT/LAK/MTL/UTA/ANA/MIN/PHI home各. CAUTION_MARGIN OTT-CAR, Q4_upset_watch ANA-EDM 注目 | WAITING | 高 | 4/24-26 |
 | PA079 | UFL | W6 結果追跡 (4試合) 4/24-27: Stallions/ORL/HOU/REN home. 全SKIP予測精度追跡 | WAITING | 中 | 4/24-27 |
 | PA080 | Super League | R9 結果追跡 (7試合): Leeds vs Catalans Q3_output_a, St Helens vs Wakefield Q4_upset_watch. Bradford-HKR odds data error未解消 | WAITING | 中 | 4/23-26 |

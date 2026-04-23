@@ -202,6 +202,76 @@
 **中優先:** rule_pipeline evidence 接近中 (P018/P024/P025/P027) の G3 での決着可能性確認
 **インフラ:** multi_bets.json output_a 形式の統一 (list vs dict) 対応スクリプト化
 
+### 🚨 Session_54 完了報告 (2026-04-23)
+
+**主要成果: 新規スポーツ 2種 + STEP 4.5 + メール通知 + GEN007 永続ルール**
+
+1. **サッカー 5大リーグ追加** (EPL/La Liga/Bundesliga/Serie A/Ligue 1)
+   - rules_soccer.json v1.0 (S001-S012) + records/soccer/2025-26.json skeleton
+   - L1: clubelo Elo + understat xG クロスチェック
+   - fetcher: fetch_clubelo.py (96クラブ検証済) + fetch_understat.py
+
+2. **MLB 2026 追加**
+   - rules_mlb.json v1.0 (M001-M011) + records/mlb/2026.json skeleton
+   - L1: FanGraphs wRC+/FIP + Baseball Savant xwOBA/xERA
+   - fetcher: fetch_fangraphs.py + fetch_baseball_savant.py
+
+3. **STEP 4.5 スタメン確認フロー**
+   - 対象: NBA/NFL/soccer/MLB/全ラグビー
+   - L1通過→provisional_go→スタメン取得→EV再計算→go昇格
+   - fetch_lineups.py (rotowire統合) + check_upcoming_games.py
+   - framework.json workflow.step_4_5_lineup_check 新設
+   - CLAUDE.md STEP 4.5 プロトコル追加
+
+4. **メール通知 (C モード: 即時 + 日次)**
+   - notify_go_candidate.py (正式GO即時) + notify_digest.py (JST 23:00)
+   - Gmail SMTP + GitHub Secrets 6件 (ユーザー登録済み・疎通テスト成功)
+   - docs/EMAIL_SETUP.md 手順書
+
+5. **GitHub Actions 改修**
+   - fetch_stats.yml: soccer/mlb fetcher 4本追加
+   - lineup_watch.yml (新): 30分ごとキックオフ直近試合検知
+   - notify_go.yml (新) / notify_digest.yml (新)
+
+6. **GEN007 制定 (ユーザー指示による永続ルール)**
+   - システム改善提案の常時義務化
+   - core/rules_general.json v1.3 / CLAUDE.md GEN007 セクション
+   - memory/feedback_proactive_improvement.md
+   - PA-PERM06 常設タスク (毎セッション冒頭確認)
+
+**Git commits**: af56ec8 (Session_54 メイン) / 次 commit (GEN007)
+
+### 🎯 Session_55 行動計画 (次回最優先)
+
+**【最優先 A: GEN007 即適用テスト】**
+- ユーザーから新スポーツ試合データ受領予定 (サッカー or MLB)
+- データ受領時:
+  1. GEN007 に従い、当初設計 (fetcher/rules) で正しくデータ取得できるか即検証
+  2. 不備発見なら分析停止 → 改善提案 (現象/影響/提案/工数感/判断依頼 5項目)
+  3. 問題なければ通常スクリーニング → STEP 4.5 → メール通知実地テスト
+  4. fetcher 失敗時は代替ソース or 手動データ受領形式を提案
+
+**【最優先 B: 既存 pending 結果確認】**
+- PA068 Madrid GO 残 3件 (Mertens 4/23 / Paul 4/24 / Keys 4/24)
+- PA076 Tsitsipas / Musetti CAUTION 予測精度追跡
+- PA078 NHL G3 全8試合 (4/24-26)
+- PA079-083 UFL W6 / SL R9 / Prem R14 / Top14 R23 / AHL PO
+
+**【最優先 C: Session_54 新規インフラ検証】**
+- lineup_watch.yml 初回自動実行ログ確認 (30分ごと cron)
+- fetch_stats.yml の新 fetcher 4本 CI 取得成否確認
+- understat / fangraphs / baseball_savant の実データ取得テスト
+- notify_digest.yml 初回実行 (JST 23:00) で events=0 時の skip 動作確認
+
+**【中優先】**
+- Q3 output_a 7件 (PA069) / Q4 upset_watch 13件 (PA070)
+- rule_pipeline evidence 接近中: P018/P024/P025/P027 の G3 決着監視
+- PA084 France rugby RCT/Stade Toulousain 区別チェック実装
+
+**【インフラ (継続)】**
+- ラグビー lineup: 現在 skeleton → 公式 team sheets 自動取得実装 (Session_54 保留)
+- check_upcoming_games.py の kickoff 時刻 field 対応拡張 (records 側フィールド名統一)
+
 ### 🎯 Session_52 行動計画 (次回優先タスク = Session_51 残課題)
 
 **最優先 A: 残課題 (今回の宿題)**
