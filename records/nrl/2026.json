@@ -513,6 +513,17 @@
       "go_candidates_this_sport": 1,
       "upset_pick_checks_this_sport": 1,
       "screening_note": "All GO_CANDIDATE entries are market-only classification; L1 depth required to confirm EV+ -> GO. Output-A candidates captured for first time via new procedure."
+    },
+    {
+      "date": "2026-04-23",
+      "session": "_53",
+      "scope": "NRL R9 GEN004 odds-shift reprice",
+      "games_repriced": 8,
+      "fav_flipped": [
+        "Brisbane Broncos vs Canterbury Bulldogs"
+      ],
+      "all_skip": true,
+      "note": "8/8 NRL R9 all EV < +7% Basic Tier threshold, SKIP continues. Broncos-Bulldogs: fav flipped BRI->CBY due to Broncos odds 1.76->2.28."
     }
   ],
   "predictions": [
@@ -524,16 +535,16 @@
       "away": "Canberra Raiders",
       "tier": "skip",
       "predicted_winner": "West Tigers",
-      "prediction_confidence": 61.6,
-      "prediction_basis": "Market implied. L1(PD/G) 要確認。保守的推定 61.6%.",
+      "prediction_confidence": 67.0,
+      "prediction_basis": "Market implied. L1(PD/G) 要確認。保守的推定 67.0%. (Session_53 GEN004 reprice)",
       "odds": {
-        "WST": 1.5,
-        "CBR": 2.41
+        "WST": 1.38,
+        "CBR": 2.8
       },
-      "rec_odds": 1.5,
-      "estimated_win_pct": 61.6,
-      "ev_est": -7.6,
-      "skip_reason": "Market implied 61.6%, EV -7.6% < +7% Basic Tier GO threshold OR odds too short.",
+      "rec_odds": 1.38,
+      "estimated_win_pct": 67.0,
+      "ev_est": -7.56,
+      "skip_reason": "Market implied 67.0%, EV -7.56% < +7% Basic Tier GO threshold OR odds too short.",
       "rec": null,
       "ev": null,
       "rules_applied": [
@@ -544,7 +555,25 @@
       "result": null,
       "prediction_hit": null,
       "screening_session": "2026-04-20 Session_43",
-      "note": "手動データ2026-04-19.json起点。L1(PD/G)詳細は時間節約のため保留。追加confirmation要なら個別調査。"
+      "note": "手動データ2026-04-19.json起点。L1(PD/G)詳細は時間節約のため保留。追加confirmation要なら個別調査。",
+      "odds_updated_at": [
+        {
+          "date": "2026-04-23",
+          "session": "_53",
+          "old": {
+            "winner": "West Tigers",
+            "odds": 1.5,
+            "conf": 61.6
+          },
+          "new": {
+            "winner": "West Tigers",
+            "odds": 1.38,
+            "conf": 67.0,
+            "ev": -7.56
+          },
+          "reason": "GEN004 odds shift >0.01 in 2026-04-23-2.json"
+        }
+      ]
     },
     {
       "date": "2026-04-24",
@@ -554,16 +583,16 @@
       "away": "Cronulla Sharks",
       "tier": "skip",
       "predicted_winner": "Cronulla Sharks",
-      "prediction_confidence": 54.5,
-      "prediction_basis": "Market implied. L1(PD/G) 要確認。保守的推定 54.5%.",
+      "prediction_confidence": 52.3,
+      "prediction_basis": "Market implied. L1(PD/G) 要確認。保守的推定 52.3%. (Session_53 GEN004 reprice)",
       "odds": {
-        "NQ": 2.04,
-        "CRO": 1.7
+        "NQ": 1.94,
+        "CRO": 1.77
       },
-      "rec_odds": 1.7,
-      "estimated_win_pct": 54.5,
-      "ev_est": -7.35,
-      "skip_reason": "Market implied 54.5%, EV -7.35% < +7% Basic Tier GO threshold OR odds too short.",
+      "rec_odds": 1.77,
+      "estimated_win_pct": 52.3,
+      "ev_est": -7.44,
+      "skip_reason": "Market implied 52.3%, EV -7.44% < +7% Basic Tier GO threshold OR odds too short.",
       "rec": null,
       "ev": null,
       "rules_applied": [
@@ -574,7 +603,25 @@
       "result": null,
       "prediction_hit": null,
       "screening_session": "2026-04-20 Session_43",
-      "note": "手動データ2026-04-19.json起点。L1(PD/G)詳細は時間節約のため保留。追加confirmation要なら個別調査。"
+      "note": "手動データ2026-04-19.json起点。L1(PD/G)詳細は時間節約のため保留。追加confirmation要なら個別調査。",
+      "odds_updated_at": [
+        {
+          "date": "2026-04-23",
+          "session": "_53",
+          "old": {
+            "winner": "Cronulla Sharks",
+            "odds": 1.7,
+            "conf": 54.5
+          },
+          "new": {
+            "winner": "Cronulla Sharks",
+            "odds": 1.77,
+            "conf": 52.3,
+            "ev": -7.44
+          },
+          "reason": "GEN004 odds shift >0.01 in 2026-04-23-2.json"
+        }
+      ]
     },
     {
       "date": "2026-04-24",
@@ -583,17 +630,17 @@
       "home": "Brisbane Broncos",
       "away": "Canterbury Bulldogs",
       "tier": "skip",
-      "predicted_winner": "Brisbane Broncos",
-      "prediction_confidence": 52.6,
-      "prediction_basis": "Market implied. L1(PD/G) 要確認。保守的推定 52.6%.",
+      "predicted_winner": "Canterbury Bulldogs",
+      "prediction_confidence": 59.4,
+      "prediction_basis": "Market implied. L1(PD/G) 要確認。保守的推定 59.4%. (Session_53 GEN004 reprice)",
       "odds": {
-        "BRI": 1.76,
-        "CBY": 1.95
+        "BRI": 2.28,
+        "CBY": 1.56
       },
-      "rec_odds": 1.76,
-      "estimated_win_pct": 52.6,
-      "ev_est": -7.42,
-      "skip_reason": "Market implied 52.6%, EV -7.42% < +7% Basic Tier GO threshold OR odds too short.",
+      "rec_odds": 1.56,
+      "estimated_win_pct": 59.4,
+      "ev_est": -7.37,
+      "skip_reason": "Market implied 59.4%, EV -7.37% < +7% Basic Tier GO threshold OR odds too short.",
       "rec": null,
       "ev": null,
       "rules_applied": [
@@ -604,7 +651,25 @@
       "result": null,
       "prediction_hit": null,
       "screening_session": "2026-04-20 Session_43",
-      "note": "手動データ2026-04-19.json起点。L1(PD/G)詳細は時間節約のため保留。追加confirmation要なら個別調査。"
+      "note": "手動データ2026-04-19.json起点。L1(PD/G)詳細は時間節約のため保留。追加confirmation要なら個別調査。",
+      "odds_updated_at": [
+        {
+          "date": "2026-04-23",
+          "session": "_53",
+          "old": {
+            "winner": "Brisbane Broncos",
+            "odds": 1.76,
+            "conf": 52.6
+          },
+          "new": {
+            "winner": "Canterbury Bulldogs",
+            "odds": 1.56,
+            "conf": 59.4,
+            "ev": -7.37
+          },
+          "reason": "GEN004 odds shift >0.01 in 2026-04-23-2.json"
+        }
+      ]
     },
     {
       "date": "2026-04-25",
@@ -614,16 +679,16 @@
       "away": "Sydney Roosters",
       "tier": "skip",
       "predicted_winner": "Sydney Roosters",
-      "prediction_confidence": 82.8,
-      "prediction_basis": "Market implied. L1(PD/G) 要確認。保守的推定 82.8%.",
+      "prediction_confidence": 82.3,
+      "prediction_basis": "Market implied. L1(PD/G) 要確認。保守的推定 82.3%. (Session_53 GEN004 reprice)",
       "odds": {
-        "STG": 5.4,
+        "STG": 5.2,
         "SYD": 1.12
       },
       "rec_odds": 1.12,
-      "estimated_win_pct": 82.8,
-      "ev_est": -7.26,
-      "skip_reason": "Market implied 82.8%, EV -7.26% < +7% Basic Tier GO threshold OR odds too short.",
+      "estimated_win_pct": 82.3,
+      "ev_est": -7.85,
+      "skip_reason": "Market implied 82.3%, EV -7.85% < +7% Basic Tier GO threshold OR odds too short.",
       "rec": null,
       "ev": null,
       "rules_applied": [
@@ -634,7 +699,25 @@
       "result": null,
       "prediction_hit": null,
       "screening_session": "2026-04-20 Session_43",
-      "note": "手動データ2026-04-19.json起点。L1(PD/G)詳細は時間節約のため保留。追加confirmation要なら個別調査。"
+      "note": "手動データ2026-04-19.json起点。L1(PD/G)詳細は時間節約のため保留。追加confirmation要なら個別調査。",
+      "odds_updated_at": [
+        {
+          "date": "2026-04-23",
+          "session": "_53",
+          "old": {
+            "winner": "Sydney Roosters",
+            "odds": 1.12,
+            "conf": 82.8
+          },
+          "new": {
+            "winner": "Sydney Roosters",
+            "odds": 1.12,
+            "conf": 82.3,
+            "ev": -7.85
+          },
+          "reason": "GEN004 odds shift >0.01 in 2026-04-23-2.json"
+        }
+      ]
     },
     {
       "date": "2026-04-25",
@@ -644,16 +727,16 @@
       "away": "Dolphins",
       "tier": "skip",
       "predicted_winner": "New Zealand Warriors",
-      "prediction_confidence": 64.4,
-      "prediction_basis": "Market implied. L1(PD/G) 要確認。保守的推定 64.4%.",
+      "prediction_confidence": 65.0,
+      "prediction_basis": "Market implied. L1(PD/G) 要確認。保守的推定 65.0%. (Session_53 GEN004 reprice)",
       "odds": {
-        "NZW": 1.44,
-        "DOL": 2.6
+        "NZW": 1.43,
+        "DOL": 2.65
       },
-      "rec_odds": 1.44,
-      "estimated_win_pct": 64.4,
-      "ev_est": -7.26,
-      "skip_reason": "Market implied 64.4%, EV -7.26% < +7% Basic Tier GO threshold OR odds too short.",
+      "rec_odds": 1.43,
+      "estimated_win_pct": 65.0,
+      "ev_est": -7.12,
+      "skip_reason": "Market implied 65.0%, EV -7.12% < +7% Basic Tier GO threshold OR odds too short.",
       "rec": null,
       "ev": null,
       "rules_applied": [
@@ -664,7 +747,25 @@
       "result": null,
       "prediction_hit": null,
       "screening_session": "2026-04-20 Session_43",
-      "note": "手動データ2026-04-19.json起点。L1(PD/G)詳細は時間節約のため保留。追加confirmation要なら個別調査。"
+      "note": "手動データ2026-04-19.json起点。L1(PD/G)詳細は時間節約のため保留。追加confirmation要なら個別調査。",
+      "odds_updated_at": [
+        {
+          "date": "2026-04-23",
+          "session": "_53",
+          "old": {
+            "winner": "New Zealand Warriors",
+            "odds": 1.44,
+            "conf": 64.4
+          },
+          "new": {
+            "winner": "New Zealand Warriors",
+            "odds": 1.43,
+            "conf": 65.0,
+            "ev": -7.12
+          },
+          "reason": "GEN004 odds shift >0.01 in 2026-04-23-2.json"
+        }
+      ]
     },
     {
       "date": "2026-04-25",
@@ -674,16 +775,16 @@
       "away": "South Sydney Rabbitohs",
       "tier": "skip",
       "predicted_winner": "Melbourne Storm",
-      "prediction_confidence": 58.5,
-      "prediction_basis": "Market implied. L1(PD/G) 要確認。保守的推定 58.5%.",
+      "prediction_confidence": 60.2,
+      "prediction_basis": "Market implied. L1(PD/G) 要確認。保守的推定 60.2%. (Session_53 GEN004 reprice)",
       "odds": {
-        "MEL": 1.58,
-        "SSH": 2.23
+        "MEL": 1.54,
+        "SSH": 2.33
       },
-      "rec_odds": 1.58,
-      "estimated_win_pct": 58.5,
-      "ev_est": -7.57,
-      "skip_reason": "Market implied 58.5%, EV -7.57% < +7% Basic Tier GO threshold OR odds too short.",
+      "rec_odds": 1.54,
+      "estimated_win_pct": 60.2,
+      "ev_est": -7.28,
+      "skip_reason": "Market implied 60.2%, EV -7.28% < +7% Basic Tier GO threshold OR odds too short.",
       "rec": null,
       "ev": null,
       "rules_applied": [
@@ -694,7 +795,25 @@
       "result": null,
       "prediction_hit": null,
       "screening_session": "2026-04-20 Session_43",
-      "note": "手動データ2026-04-19.json起点。L1(PD/G)詳細は時間節約のため保留。追加confirmation要なら個別調査。"
+      "note": "手動データ2026-04-19.json起点。L1(PD/G)詳細は時間節約のため保留。追加confirmation要なら個別調査。",
+      "odds_updated_at": [
+        {
+          "date": "2026-04-23",
+          "session": "_53",
+          "old": {
+            "winner": "Melbourne Storm",
+            "odds": 1.58,
+            "conf": 58.5
+          },
+          "new": {
+            "winner": "Melbourne Storm",
+            "odds": 1.54,
+            "conf": 60.2,
+            "ev": -7.28
+          },
+          "reason": "GEN004 odds shift >0.01 in 2026-04-23-2.json"
+        }
+      ]
     },
     {
       "date": "2026-04-26",
@@ -704,16 +823,16 @@
       "away": "Penrith Panthers",
       "tier": "skip",
       "predicted_winner": "Penrith Panthers",
-      "prediction_confidence": 75.1,
-      "prediction_basis": "Market implied. L1(PD/G) 要確認。保守的推定 75.1%.",
+      "prediction_confidence": 77.4,
+      "prediction_basis": "Market implied. L1(PD/G) 要確認。保守的推定 77.4%. (Session_53 GEN004 reprice)",
       "odds": {
-        "NEW": 3.7,
-        "PEN": 1.23
+        "NEW": 4.1,
+        "PEN": 1.2
       },
-      "rec_odds": 1.23,
-      "estimated_win_pct": 75.1,
-      "ev_est": -7.63,
-      "skip_reason": "Market implied 75.1%, EV -7.63% < +7% Basic Tier GO threshold OR odds too short.",
+      "rec_odds": 1.2,
+      "estimated_win_pct": 77.4,
+      "ev_est": -7.17,
+      "skip_reason": "Market implied 77.4%, EV -7.17% < +7% Basic Tier GO threshold OR odds too short.",
       "rec": null,
       "ev": null,
       "rules_applied": [
@@ -724,7 +843,25 @@
       "result": null,
       "prediction_hit": null,
       "screening_session": "2026-04-20 Session_43",
-      "note": "手動データ2026-04-19.json起点。L1(PD/G)詳細は時間節約のため保留。追加confirmation要なら個別調査。"
+      "note": "手動データ2026-04-19.json起点。L1(PD/G)詳細は時間節約のため保留。追加confirmation要なら個別調査。",
+      "odds_updated_at": [
+        {
+          "date": "2026-04-23",
+          "session": "_53",
+          "old": {
+            "winner": "Penrith Panthers",
+            "odds": 1.23,
+            "conf": 75.1
+          },
+          "new": {
+            "winner": "Penrith Panthers",
+            "odds": 1.2,
+            "conf": 77.4,
+            "ev": -7.17
+          },
+          "reason": "GEN004 odds shift >0.01 in 2026-04-23-2.json"
+        }
+      ]
     },
     {
       "date": "2026-04-26",
@@ -734,16 +871,16 @@
       "away": "Parramatta Eels",
       "tier": "skip",
       "predicted_winner": "Manly Sea Eagles",
-      "prediction_confidence": 70.6,
-      "prediction_basis": "Market implied. L1(PD/G) 要確認。保守的推定 70.6%.",
+      "prediction_confidence": 71.0,
+      "prediction_basis": "Market implied. L1(PD/G) 要確認。保守的推定 71.0%. (Session_53 GEN004 reprice)",
       "odds": {
         "MAN": 1.31,
-        "PAR": 3.15
+        "PAR": 3.2
       },
       "rec_odds": 1.31,
-      "estimated_win_pct": 70.6,
-      "ev_est": -7.51,
-      "skip_reason": "Market implied 70.6%, EV -7.51% < +7% Basic Tier GO threshold OR odds too short.",
+      "estimated_win_pct": 71.0,
+      "ev_est": -7.05,
+      "skip_reason": "Market implied 71.0%, EV -7.05% < +7% Basic Tier GO threshold OR odds too short.",
       "rec": null,
       "ev": null,
       "rules_applied": [
@@ -754,7 +891,25 @@
       "result": null,
       "prediction_hit": null,
       "screening_session": "2026-04-20 Session_43",
-      "note": "手動データ2026-04-19.json起点。L1(PD/G)詳細は時間節約のため保留。追加confirmation要なら個別調査。"
+      "note": "手動データ2026-04-19.json起点。L1(PD/G)詳細は時間節約のため保留。追加confirmation要なら個別調査。",
+      "odds_updated_at": [
+        {
+          "date": "2026-04-23",
+          "session": "_53",
+          "old": {
+            "winner": "Manly Sea Eagles",
+            "odds": 1.31,
+            "conf": 70.6
+          },
+          "new": {
+            "winner": "Manly Sea Eagles",
+            "odds": 1.31,
+            "conf": 71.0,
+            "ev": -7.05
+          },
+          "reason": "GEN004 odds shift >0.01 in 2026-04-23-2.json"
+        }
+      ]
     }
   ]
 }

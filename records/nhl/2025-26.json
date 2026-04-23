@@ -1579,6 +1579,318 @@
         "NHL.com game recap",
         "ESPN game recap"
       ]
+    },
+    {
+      "date": "2026-04-24",
+      "match": "Boston Bruins vs Buffalo Sabres (G3)",
+      "home": "Boston Bruins",
+      "away": "Buffalo Sabres",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "skip",
+      "predicted_winner": "Boston Bruins",
+      "prediction_confidence": 52.0,
+      "prediction_basis": "xGF% near-even (BOS 47 vs BUF 49). Market even 1.92/1.92. L4 BOS home +5% applied. G2 BOS rebound momentum minor +2%. Net micro BOS.",
+      "prediction_hit": null,
+      "l1_metric": "xGF%",
+      "l1_data": {
+        "home_xgf": 47.0,
+        "away_xgf": 49.0,
+        "diff": -2.0
+      },
+      "odds": {
+        "BOS": 1.92,
+        "BUF": 1.92
+      },
+      "rec_odds": null,
+      "ev": null,
+      "rec": null,
+      "estimated_win_pct": 52.0,
+      "uf_factors": [
+        "UFH_home_crowd"
+      ],
+      "uf_count": 0,
+      "div_pp": 0,
+      "series_state": "1-1",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "P027 evidence pattern: G1 upset->G2 home rebound already established. G3 home BOS again; G4 switches to BUF home."
+    },
+    {
+      "date": "2026-04-24",
+      "match": "Ottawa Senators vs Carolina Hurricanes (G3)",
+      "home": "Ottawa Senators",
+      "away": "Carolina Hurricanes",
+      "tier": "caution",
+      "caution_type": "margin",
+      "quadrant": "skip",
+      "predicted_winner": "Ottawa Senators",
+      "prediction_confidence": 58.0,
+      "prediction_basis": "Market OTT implied 53.1%, xGF near-even, OTT home +5%, OTT desperation (down 0-2) +3% -> conf 58%. CAUTION_MARGIN: EV +4.98% below +5% GO threshold.",
+      "prediction_hit": null,
+      "l1_metric": "xGF%",
+      "l1_data": {
+        "home_xgf": 55.0,
+        "away_xgf": 56.0,
+        "diff": -1.0
+      },
+      "odds": {
+        "OTT": 1.81,
+        "CAR": 2.05
+      },
+      "rec_odds": 1.81,
+      "ev": 4.98,
+      "rec": "Ottawa Senators",
+      "estimated_win_pct": 58.0,
+      "uf_factors": [
+        "UFH02_elimination_desperation_home",
+        "UFH_home_crowd"
+      ],
+      "uf_count": 1,
+      "div_pp": 9,
+      "series_state": "0-2 CAR leads",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "If OTT loses G3, series 0-3 sweep pace. OTT needs home crowd mobilization. Historic 0-2->0-3 base rate ~80%; home G3 provides ~55-60% rebound."
+    },
+    {
+      "date": "2026-04-24",
+      "match": "Los Angeles Kings vs Colorado Avalanche (G3)",
+      "home": "Los Angeles Kings",
+      "away": "Colorado Avalanche",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "skip",
+      "predicted_winner": "Colorado Avalanche",
+      "prediction_confidence": 57.0,
+      "prediction_basis": "COL xGF +6pp + 2-0 lead + Wedgewood emerging stopper. LAK home +5% + desperation +3% closes gap (COL 58->57). COL wins G3 prob ~57%. EV-.",
+      "prediction_hit": null,
+      "l1_metric": "xGF%",
+      "l1_data": {
+        "home_xgf": 51.0,
+        "away_xgf": 57.0,
+        "diff": -6.0
+      },
+      "odds": {
+        "LAK": 2.31,
+        "COL": 1.65
+      },
+      "rec_odds": null,
+      "ev": null,
+      "rec": null,
+      "estimated_win_pct": 57.0,
+      "uf_factors": [
+        "UFH02_elimination_desperation_home"
+      ],
+      "uf_count": 1,
+      "div_pp": 15,
+      "series_state": "0-2 COL leads",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "COL possible sweep path. LAK desperate home push possible but L1 xGF decisive."
+    },
+    {
+      "date": "2026-04-25",
+      "match": "Montreal Canadiens vs Tampa Bay Lightning (G3)",
+      "home": "Montreal Canadiens",
+      "away": "Tampa Bay Lightning",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "skip",
+      "predicted_winner": "Tampa Bay Lightning",
+      "prediction_confidence": 50.0,
+      "prediction_basis": "TBL xGF +4pp, market TBL fav 52.1%. MTL Bell Centre home +5% + Slafkovsky/Suzuki +3% vs TBL Vasilevskiy/Kucherov +3%. Near-even. Thin TBL edge by xGF.",
+      "prediction_hit": null,
+      "l1_metric": "xGF%",
+      "l1_data": {
+        "home_xgf": 50.0,
+        "away_xgf": 54.0,
+        "diff": -4.0
+      },
+      "odds": {
+        "MTL": 1.97,
+        "TBL": 1.81
+      },
+      "rec_odds": null,
+      "ev": null,
+      "rec": null,
+      "estimated_win_pct": 50.0,
+      "uf_factors": [
+        "UFH_home_crowd_bell_centre",
+        "UFH_young_core_momentum"
+      ],
+      "uf_count": 0,
+      "div_pp": 4,
+      "series_state": "1-1",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "High variance. G1/G2 both decided in OT. Slafkovsky home crowd + Suzuki pivotal."
+    },
+    {
+      "date": "2026-04-25",
+      "match": "Utah Hockey Club vs Vegas Golden Knights (G3)",
+      "home": "Utah Hockey Club",
+      "away": "Vegas Golden Knights",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "skip",
+      "predicted_winner": "Utah Hockey Club",
+      "prediction_confidence": 53.0,
+      "prediction_basis": "L1 incomplete (UTA xGF feed missing - mover franchise). Market VGK micro fav 50.9%. UTA home +5% -> UTA 53%. EV UTA +1.76%.",
+      "prediction_hit": null,
+      "l1_metric": "xGF%",
+      "l1_data": {
+        "home_xgf": null,
+        "away_xgf": 54.0,
+        "diff": null
+      },
+      "odds": {
+        "UTA": 1.92,
+        "VGK": 1.85
+      },
+      "rec_odds": null,
+      "ev": null,
+      "rec": null,
+      "estimated_win_pct": 53.0,
+      "uf_factors": [
+        "UF_L1_incomplete",
+        "UFH_home_crowd_salt_lake"
+      ],
+      "uf_count": 1,
+      "div_pp": 2,
+      "series_state": "1-1",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "UTA xGF feed gap to investigate post-session. Market near-even indicates structural parity."
+    },
+    {
+      "date": "2026-04-25",
+      "match": "Anaheim Ducks vs Edmonton Oilers (G3)",
+      "home": "Anaheim Ducks",
+      "away": "Edmonton Oilers",
+      "tier": "caution",
+      "caution_type": "margin",
+      "quadrant": "Q4_upset_watch",
+      "predicted_winner": "Anaheim Ducks",
+      "prediction_confidence": 54.0,
+      "prediction_basis": "EDM market fav 54.3%. ANA L1 xGF ~equal, G2 6-4 momentum +3%, ANA home +5% -> ANA 54%. EV ANA +11.78% market inefficiency candidate BUT conf<75% GO threshold. Q4 upset_watch: UF 2 (G2 carryover + home) div 9pp.",
+      "prediction_hit": null,
+      "l1_metric": "xGF%",
+      "l1_data": {
+        "home_xgf": 51.0,
+        "away_xgf": 52.0,
+        "diff": -1.0
+      },
+      "odds": {
+        "ANA": 2.07,
+        "EDM": 1.74
+      },
+      "rec_odds": 2.07,
+      "ev": 11.78,
+      "rec": "Anaheim Ducks",
+      "estimated_win_pct": 54.0,
+      "uf_factors": [
+        "UFH_G2_upset_carryover_ANA",
+        "UFH_home_crowd_anaheim",
+        "UFH_mcdavid_series_press"
+      ],
+      "uf_count": 2,
+      "div_pp": 9,
+      "series_state": "1-1",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "A030 P025 evidence established. Monitor Gauthier/Terry form + McDavid pressure."
+    },
+    {
+      "date": "2026-04-26",
+      "match": "Minnesota Wild vs Dallas Stars (G3)",
+      "home": "Minnesota Wild",
+      "away": "Dallas Stars",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "skip",
+      "predicted_winner": "Minnesota Wild",
+      "prediction_confidence": 59.0,
+      "prediction_basis": "xGF tied, market MIN fav 54.2%, MIN home +5% -> 59%. EV MIN +2.66%. Series 1-1 at MIN home, Hintz likely active.",
+      "prediction_hit": null,
+      "l1_metric": "xGF%",
+      "l1_data": {
+        "home_xgf": 52.0,
+        "away_xgf": 52.0,
+        "diff": 0.0
+      },
+      "odds": {
+        "MIN": 1.74,
+        "DAL": 2.06
+      },
+      "rec_odds": null,
+      "ev": null,
+      "rec": null,
+      "estimated_win_pct": 59.0,
+      "uf_factors": [
+        "UFH_home_crowd_xcel",
+        "UFH_series_pivotal_g3"
+      ],
+      "uf_count": 0,
+      "div_pp": 9,
+      "series_state": "1-1",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "Below GO threshold 75%. Pivotal G3 - either team grabbing 2-1 lead shifts series."
+    },
+    {
+      "date": "2026-04-26",
+      "match": "Philadelphia Flyers vs Pittsburgh Penguins (G3)",
+      "home": "Philadelphia Flyers",
+      "away": "Pittsburgh Penguins",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "skip",
+      "predicted_winner": "Philadelphia Flyers",
+      "prediction_confidence": 57.0,
+      "prediction_basis": "xGF tied, market PHI fav 51.6%, PHI home +5% + 2-0 momentum +3% offset by PIT desperation +3% -> PHI 57%. EV PHI +4.31%. Below GO threshold.",
+      "prediction_hit": null,
+      "l1_metric": "xGF%",
+      "l1_data": {
+        "home_xgf": 51.0,
+        "away_xgf": 51.0,
+        "diff": 0.0
+      },
+      "odds": {
+        "PHI": 1.83,
+        "PIT": 1.95
+      },
+      "rec_odds": null,
+      "ev": null,
+      "rec": null,
+      "estimated_win_pct": 57.0,
+      "uf_factors": [
+        "UFH_home_crowd",
+        "UFH02_pit_elimination_risk",
+        "UFH_young_core_drysdale_martone"
+      ],
+      "uf_count": 1,
+      "div_pp": 6,
+      "series_state": "2-0 PHI leads",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "PHI sweep attempt G3. If PHI wins series 3-0 essentially over. A027 P018/P019 evidence already."
     }
   ],
   "pending_games": [],
@@ -1802,6 +2114,17 @@
       "caution_count": 1,
       "skip_count": 7,
       "note": "COL-LAK G2 L1_PASS (diff+6pt). 他全SKIP. COL goalie確認後GO昇格可能."
+    },
+    {
+      "date": "2026-04-23",
+      "session": "_53",
+      "round": "PO R1 G3",
+      "total_games": 8,
+      "go_count": 0,
+      "caution_count": 2,
+      "skip_count": 6,
+      "q4_upset_watch": 1,
+      "note": "NHL PO R1 G3 8 games L1(xGF)+L4 + 4-quadrant screening. GO 0 (all EV<+5%). CAUTION_MARGIN: OTT-CAR (elim desperation EV+4.98%), ANA-EDM (Q4 upset watch UF2 div9pp EV+11.78%). Feed gap: UTA xGF missing."
     }
   ],
   "last_updated": "2026-04-21"

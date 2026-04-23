@@ -136,6 +136,295 @@
       "rule_linked": [
         "P016"
       ]
+    },
+    {
+      "date": "2026-04-23",
+      "round": "R9",
+      "match": "York Knights vs Toulouse Olympique",
+      "home": "York Knights",
+      "away": "Toulouse Olympique",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "skip",
+      "predicted_winner": "York Knights",
+      "prediction_confidence": 69.0,
+      "prediction_basis": "PD/G near-even (+0.37). Market YORK implied 66.0% vig-adj. YORK home +3% -> 69%. EV -3.4%. SKIP.",
+      "prediction_hit": null,
+      "l1_metric": "PD/G",
+      "l1_data": {
+        "home_pdg": -10.38,
+        "away_pdg": -10.75,
+        "diff": 0.37
+      },
+      "odds": {
+        "YORK": 1.4,
+        "TOU": 2.75
+      },
+      "rec_odds": null,
+      "ev": null,
+      "ev_est": -3.4,
+      "rec": null,
+      "estimated_win_pct": 69.0,
+      "uf_factors": [
+        "UF_L1_even",
+        "UF_YORK_home"
+      ],
+      "uf_count": 0,
+      "div_pp": 16,
+      "market_fav": "YORK",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "L1 neutral - both teams PD/G ~-10. Market-driven fav on home advantage only."
+    },
+    {
+      "date": "2026-04-23",
+      "round": "R9",
+      "match": "Leigh Leopards vs Huddersfield Giants",
+      "home": "Leigh Leopards",
+      "away": "Huddersfield Giants",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "skip",
+      "predicted_winner": "Leigh Leopards",
+      "prediction_confidence": 76.0,
+      "prediction_basis": "PD/G near-even (+0.12). Market LEI implied 73.0% vig-adj. LEI home +3% -> 76%. EV -5.8%. SKIP.",
+      "prediction_hit": null,
+      "l1_metric": "PD/G",
+      "l1_data": {
+        "home_pdg": -9.63,
+        "away_pdg": -9.75,
+        "diff": 0.12
+      },
+      "odds": {
+        "LEI": 1.24,
+        "HUD": 3.65
+      },
+      "rec_odds": null,
+      "ev": null,
+      "ev_est": -5.76,
+      "rec": null,
+      "estimated_win_pct": 76.0,
+      "uf_factors": [
+        "UF_L1_even",
+        "UF_LEI_home"
+      ],
+      "uf_count": 0,
+      "div_pp": 25,
+      "market_fav": "LEI",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "Both teams sub-.500 PD/G near equal. Leigh R8 loss to Leeds 56-22. Huddersfield bottom-3 struggle continues."
+    },
+    {
+      "date": "2026-04-24",
+      "round": "R9",
+      "match": "Warrington Wolves vs Wigan Warriors",
+      "home": "Warrington Wolves",
+      "away": "Wigan Warriors",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "skip",
+      "predicted_winner": "Warrington Wolves",
+      "prediction_confidence": 60.0,
+      "prediction_basis": "PD/G diff +6.48 (under NRL 6pt threshold, marginal edge). Market WAR 53.5% vig-adj. WAR home +3% + L1 edge +3% = 60%. EV +3.2%. SKIP.",
+      "prediction_hit": null,
+      "l1_metric": "PD/G",
+      "l1_data": {
+        "home_pdg": 15.86,
+        "away_pdg": 9.38,
+        "diff": 6.48
+      },
+      "odds": {
+        "WAR": 1.72,
+        "WIG": 2.01
+      },
+      "rec_odds": null,
+      "ev": null,
+      "ev_est": 3.2,
+      "rec": null,
+      "estimated_win_pct": 60.0,
+      "uf_factors": [
+        "UF_WAR_PDG_advantage",
+        "UF_WIG_still_competitive"
+      ],
+      "uf_count": 0,
+      "div_pp": 7,
+      "market_fav": "WAR",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "Top-of-table clash. WAR recent upset of Catalans 38-22 R8. WIG 5-3. Even matchup with WAR micro edge only."
+    },
+    {
+      "date": "2026-04-24",
+      "round": "R9",
+      "match": "Castleford Tigers vs Hull FC",
+      "home": "Castleford Tigers",
+      "away": "Hull FC",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "skip",
+      "predicted_winner": "Hull FC",
+      "prediction_confidence": 54.0,
+      "prediction_basis": "PD/G diff -6.25 (HFC edge). Market HFC 55.9% vig-adj. CAS home +3%, HFC road -3% = net -6% HFC. L1 HFC +6.25 +4% -> HFC 54%. EV HFC -10.9%. SKIP.",
+      "prediction_hit": null,
+      "l1_metric": "PD/G",
+      "l1_data": {
+        "home_pdg": -11.5,
+        "away_pdg": -5.25,
+        "diff": -6.25
+      },
+      "odds": {
+        "CAS": 2.1,
+        "HFC": 1.65
+      },
+      "rec_odds": null,
+      "ev": null,
+      "ev_est": -10.9,
+      "rec": null,
+      "estimated_win_pct": 54.0,
+      "uf_factors": [
+        "UF_HFC_PDG_edge",
+        "UF_HFC_road",
+        "UF_CAS_home"
+      ],
+      "uf_count": 1,
+      "div_pp": 12,
+      "market_fav": "HFC",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "Road-home tension. HFC PD/G better but Castleford home crowd factor close."
+    },
+    {
+      "date": "2026-04-24",
+      "round": "R9",
+      "match": "Leeds Rhinos vs Catalans Dragons",
+      "home": "Leeds Rhinos",
+      "away": "Catalans Dragons",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "Q3_output_a",
+      "predicted_winner": "Leeds Rhinos",
+      "prediction_confidence": 85.0,
+      "prediction_basis": "PD/G diff +16.88 dominant. Market LEE 78.7% vig-adj. LEE home +3, L1 dominance +3, Catalans long travel UK -3 (net +9) -> LEE conf ~88% capped at 85. EV +1.15%. Q3 output_a (conf>=85 AND EV>=0 regardless of threshold).",
+      "prediction_hit": null,
+      "l1_metric": "PD/G",
+      "l1_data": {
+        "home_pdg": 16.5,
+        "away_pdg": -0.38,
+        "diff": 16.88
+      },
+      "odds": {
+        "LEE": 1.19,
+        "CAT": 4.2
+      },
+      "rec_odds": null,
+      "ev": null,
+      "ev_est": 1.15,
+      "rec": null,
+      "estimated_win_pct": 85.0,
+      "uf_factors": [
+        "UF_LEE_PDG_dominant",
+        "UF_LEE_home",
+        "UFA_CAT_long_travel_UK"
+      ],
+      "uf_count": 0,
+      "div_pp": 62,
+      "market_fav": "LEE",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "Leeds R8 crushed Huddersfield 56-22. Catalans R8 upset Warrington 38-22 (tier:go miss). Leeds PD/G league-best +16.50. Catalans long-haul UK trip disadvantage."
+    },
+    {
+      "date": "2026-04-25",
+      "round": "R9",
+      "match": "Bradford Bulls vs Hull KR",
+      "home": "Bradford Bulls",
+      "away": "Hull KR",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "skip",
+      "predicted_winner": "Hull KR",
+      "prediction_confidence": 85.0,
+      "prediction_basis": "Odds HKR @1.00 is data entry error (impossible). PD/G diff -14.56 HKR strong. Best estimate conf 85% HKR but EV not computable.",
+      "prediction_hit": null,
+      "l1_metric": "PD/G",
+      "l1_data": {
+        "home_pdg": -4.13,
+        "away_pdg": 10.43,
+        "diff": -14.56
+      },
+      "odds": {
+        "BRA": 12.0,
+        "HKR": 1.0
+      },
+      "rec_odds": null,
+      "ev": null,
+      "ev_est": null,
+      "rec": null,
+      "estimated_win_pct": 85.0,
+      "uf_factors": [
+        "UF_DATA_ODDS_ERROR_HKR_1.00"
+      ],
+      "uf_count": 0,
+      "div_pp": null,
+      "market_fav": "HKR",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "Data integrity flag: HKR odds 1.00 in source JSON. Proceed with prediction only, EV pending re-verified odds."
+    },
+    {
+      "date": "2026-04-25",
+      "round": "R9",
+      "match": "St Helens vs Wakefield Trinity",
+      "home": "St Helens",
+      "away": "Wakefield Trinity",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "Q4_upset_watch",
+      "predicted_winner": "St Helens",
+      "prediction_confidence": 72.0,
+      "prediction_basis": "L1 Wakefield has HIGHER PD/G (+10.38 vs STH +2.50) - MARKET ANOMALY. Market STH 73.5% vig-adj. STH home +3%, but L1 contradicts +5% Wakefield weight -> STH conf 72%. EV STH -5.7%. Q4_upset_watch: UF2 + div 47pp but UF<3 so not UPSET_PICK.",
+      "prediction_hit": null,
+      "l1_metric": "PD/G",
+      "l1_data": {
+        "home_pdg": 2.5,
+        "away_pdg": 10.38,
+        "diff": -7.88
+      },
+      "odds": {
+        "STH": 1.31,
+        "WAK": 3.15
+      },
+      "rec_odds": null,
+      "ev": null,
+      "ev_est": -5.68,
+      "rec": null,
+      "estimated_win_pct": 72.0,
+      "uf_factors": [
+        "UF_L1_contradicts_market",
+        "UF_WAK_higher_PDG",
+        "UF_WAK_on_10pts"
+      ],
+      "uf_count": 2,
+      "div_pp": 47,
+      "market_fav": "STH",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "Interesting market anomaly. WAK 6-2 PD/G +10.38 vs STH 6-2 PD/G +2.50. Market prices STH strong fav on brand/home but PD/G favors WAK. Classic Q4 upset candidate. If Wakefield wins -> evidence for 'market PD/G anomaly' rule."
     }
   ],
   "screening_log": [
@@ -169,6 +458,20 @@
         }
       ],
       "notable": "Super League初回スクリーニング。Warrington Wolves (PD/G +21.17) とLeeds Rhinos (+14.00) が突出。GO2件: Leeds @1.32 (EV+14.8%) / Warrington @1.65 (EV+40.3%)。"
+    },
+    {
+      "date": "2026-04-23",
+      "session": "_53",
+      "round": "R9",
+      "total_games": 7,
+      "go_count": 0,
+      "caution_count": 0,
+      "skip_count": 7,
+      "q3_output_a": 1,
+      "q4_upset_watch": 1,
+      "data_error": 1,
+      "note": "SL R9 7 games L1(PD/G) + 4-quadrant. GO 0. Q3 output_a: Leeds vs Catalans (conf 85 PD/G +16.88 dominant). Q4 upset_watch: St Helens vs Wakefield (L1 reverses market, UF2 div47pp but UF<3 no UPSET_PICK). Data error: Bradford vs Hull KR HKR odds 1.00 impossible.",
+      "standings_source": "superleague.co.uk/tntsports fetched 2026-04-23"
     }
   ]
 }

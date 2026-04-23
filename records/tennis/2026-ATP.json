@@ -4013,6 +4013,54 @@
       "caution": 8,
       "skip": 21,
       "q3_output_a": 1
+    },
+    {
+      "date": "2026-04-23",
+      "session": "_53",
+      "scope": "ATP Challenger scope-out log (2026-04-23-2.json source)",
+      "tournaments_included": [
+        {
+          "name": "ATP Challenger Gwangju (Korea)",
+          "matches_live": 1,
+          "matches_completed": 2,
+          "matches_upcoming": 0,
+          "completed": [
+            "清水悠太 d. Holmgren (odds 2.38/1.49 - upset)",
+            "Kwon d. Chung (odds 1.34/2.95 - fav)"
+          ],
+          "live": [
+            "Bruady vs Schoolkate (3rd set 1-5, odds suspended)"
+          ]
+        },
+        {
+          "name": "ATP Challenger Rome (Italy)",
+          "matches_upcoming": 6,
+          "note": "R1 Italy domestic Challenger - Tiafoe P./Fatic / Djere L./Vavassori / Januasz/Romano / Svrcina/Bernet / Guerrieri/Fery / Vasami/Sakellaridis"
+        },
+        {
+          "name": "ATP Challenger Abidjan (Cote d'Ivoire)",
+          "matches_completed": 7,
+          "note": "Onclin/Bouchelaghem / Bennani/Jaba / Vacs/Visker / Bitoun-Coasmain/Chazal / Hamza Reguig/Stewart / Giunta/Arkaya / Bicknell/Erel. All completed with favorites mostly winning."
+        },
+        {
+          "name": "ATP Challenger Savannah (USA)",
+          "matches_completed": 4,
+          "matches_upcoming": 2,
+          "completed": [
+            "Basavareddy d. Roncadelli (fav win)",
+            "Andrade d. Mayo (fav win)",
+            "Galan d. Dostanic (fav win)",
+            "Kruger d. Shick (fav win)"
+          ],
+          "upcoming": [
+            "Feldbausch/Tabur (4/25)",
+            "Hart/Kennedy (4/25)"
+          ]
+        }
+      ],
+      "scope_verdict": "All ATP Challenger events out of scope: cElo (tennisabstract) not available for Challenger tier. 16 matches logged only. No predictions recorded.",
+      "total_matches_logged": 16,
+      "reason": "cElo data availability restricted to ATP Tour main draw + top qualifying events only."
     }
   ],
   "last_updated": "2026-04-21",

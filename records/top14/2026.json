@@ -219,15 +219,15 @@
       "away": "Pau",
       "tier": "skip",
       "predicted_winner": "SFP",
-      "prediction_confidence": 79.0,
+      "prediction_confidence": 76.8,
       "prediction_basis": "Market implied only. L1 PD/G未取得 (Basic Tier).",
       "odds": {
-        "SFP": 1.17,
-        "PAU": 4.4
+        "SFP": 1.21,
+        "PAU": 4.0
       },
-      "rec_odds": 1.17,
-      "ev_est": -7.57,
-      "skip_reason": "Market implied 79.0%, fav EV -7.57%. Basic Tier GO (conf>=78 AND EV>+7) 未達 or L1 unconfirmed.",
+      "rec_odds": 1.21,
+      "ev_est": -7.1,
+      "skip_reason": "Market implied 76.8%, fav EV -7.1%. Basic Tier GO (conf>=78 AND EV>+7) 未達 or L1 unconfirmed.",
       "rec": null,
       "ev": null,
       "status": "pending",
@@ -235,7 +235,25 @@
       "result": null,
       "prediction_hit": null,
       "screening_session": "2026-04-20 Session_43",
-      "note": "手動データ起点。Basic Tier L1(PD/G) depth probe 要。"
+      "note": "手動データ起点。Basic Tier L1(PD/G) depth probe 要。",
+      "odds_updated_at": [
+        {
+          "date": "2026-04-23",
+          "session": "_53",
+          "old": {
+            "winner": "SFP",
+            "odds": 1.17,
+            "conf": 79.0
+          },
+          "new": {
+            "winner": "SFP",
+            "odds": 1.21,
+            "conf": 76.8,
+            "ev": -7.1
+          },
+          "reason": "GEN004 odds shift >=0.01 in 2026-04-23-2.json"
+        }
+      ]
     },
     {
       "date": "2026-04-25",
@@ -245,15 +263,15 @@
       "away": "La Rochelle",
       "tier": "skip",
       "predicted_winner": "LAR",
-      "prediction_confidence": 60.8,
+      "prediction_confidence": 60.1,
       "prediction_basis": "Market implied only. L1 PD/G未取得 (Basic Tier).",
       "odds": {
-        "PER": 2.36,
-        "LAR": 1.52
+        "PER": 2.32,
+        "LAR": 1.54
       },
-      "rec_odds": 1.52,
-      "ev_est": -7.58,
-      "skip_reason": "Market implied 60.8%, fav EV -7.58%. Basic Tier GO (conf>=78 AND EV>+7) 未達 or L1 unconfirmed.",
+      "rec_odds": 1.54,
+      "ev_est": -7.44,
+      "skip_reason": "Market implied 60.1%, fav EV -7.44%. Basic Tier GO (conf>=78 AND EV>+7) 未達 or L1 unconfirmed.",
       "rec": null,
       "ev": null,
       "status": "pending",
@@ -261,25 +279,43 @@
       "result": null,
       "prediction_hit": null,
       "screening_session": "2026-04-20 Session_43",
-      "note": "手動データ起点。Basic Tier L1(PD/G) depth probe 要。"
+      "note": "手動データ起点。Basic Tier L1(PD/G) depth probe 要。",
+      "odds_updated_at": [
+        {
+          "date": "2026-04-23",
+          "session": "_53",
+          "old": {
+            "winner": "LAR",
+            "odds": 1.52,
+            "conf": 60.8
+          },
+          "new": {
+            "winner": "LAR",
+            "odds": 1.54,
+            "conf": 60.1,
+            "ev": -7.44
+          },
+          "reason": "GEN004 odds shift >=0.01 in 2026-04-23-2.json"
+        }
+      ]
     },
     {
       "date": "2026-04-25",
       "round": "R22",
-      "match": "Toulouse vs Bayonne",
-      "home": "Toulouse",
+      "match": "Toulon vs Bayonne",
+      "home": "Toulon",
       "away": "Bayonne",
       "tier": "skip",
       "predicted_winner": "TOU",
-      "prediction_confidence": 87.5,
+      "prediction_confidence": 88.1,
       "prediction_basis": "Market implied only. L1 PD/G未取得 (Basic Tier).",
       "odds": {
-        "TOU": 1.06,
-        "BAY": 7.4
+        "TOU": 1.05,
+        "BAY": 7.8
       },
-      "rec_odds": 1.06,
-      "ev_est": -7.25,
-      "skip_reason": "Market implied 87.5%, fav EV -7.25%. Basic Tier GO (conf>=78 AND EV>+7) 未達 or L1 unconfirmed.",
+      "rec_odds": 1.05,
+      "ev_est": -7.46,
+      "skip_reason": "Market implied 88.1%, fav EV -7.46%. Basic Tier GO (conf>=78 AND EV>+7) 未達 or L1 unconfirmed.",
       "rec": null,
       "ev": null,
       "status": "pending",
@@ -287,7 +323,33 @@
       "result": null,
       "prediction_hit": null,
       "screening_session": "2026-04-20 Session_43",
-      "note": "手動データ起点。Basic Tier L1(PD/G) depth probe 要。"
+      "note": "手動データ起点。Basic Tier L1(PD/G) depth probe 要。",
+      "ce_correction": [
+        {
+          "ce": "CE018",
+          "note": "Session_43 recorded as Toulouse vs Bayonne; actual fixture is RCT Toulon vs Bayonne (Toulouse plays vs Clermont 4/27). Corrected per 2026-04-23-2.json source.",
+          "session": "_53",
+          "date": "2026-04-23"
+        }
+      ],
+      "odds_updated_at": [
+        {
+          "date": "2026-04-23",
+          "session": "_53",
+          "old": {
+            "winner": "TOU",
+            "odds": 1.06,
+            "conf": 87.5
+          },
+          "new": {
+            "winner": "TOU",
+            "odds": 1.05,
+            "conf": 88.1,
+            "ev": -7.46
+          },
+          "reason": "GEN004 odds shift >=0.01 in 2026-04-23-2.json"
+        }
+      ]
     },
     {
       "date": "2026-04-25",
@@ -349,15 +411,15 @@
       "away": "Montpellier",
       "tier": "skip",
       "predicted_winner": "UBB",
-      "prediction_confidence": 82.3,
+      "prediction_confidence": 85.6,
       "prediction_basis": "Market implied only. L1 PD/G未取得 (Basic Tier).",
       "odds": {
-        "UBB": 1.12,
-        "MHR": 5.2
+        "UBB": 1.08,
+        "MHR": 6.4
       },
-      "rec_odds": 1.12,
-      "ev_est": -7.82,
-      "skip_reason": "Market implied 82.3%, fav EV -7.82%. Basic Tier GO (conf>=78 AND EV>+7) 未達 or L1 unconfirmed.",
+      "rec_odds": 1.08,
+      "ev_est": -7.59,
+      "skip_reason": "Market implied 85.6%, fav EV -7.59%. Basic Tier GO (conf>=78 AND EV>+7) 未達 or L1 unconfirmed.",
       "rec": null,
       "ev": null,
       "status": "pending",
@@ -365,7 +427,73 @@
       "result": null,
       "prediction_hit": null,
       "screening_session": "2026-04-20 Session_43",
-      "note": "手動データ起点。Basic Tier L1(PD/G) depth probe 要。"
+      "note": "手動データ起点。Basic Tier L1(PD/G) depth probe 要。",
+      "odds_updated_at": [
+        {
+          "date": "2026-04-23",
+          "session": "_53",
+          "old": {
+            "winner": "UBB",
+            "odds": 1.12,
+            "conf": 82.3
+          },
+          "new": {
+            "winner": "UBB",
+            "odds": 1.08,
+            "conf": 85.6,
+            "ev": -7.59
+          },
+          "reason": "GEN004 odds shift >=0.01 in 2026-04-23-2.json"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-27",
+      "round": "R23",
+      "match": "Stade Toulousain vs ASM Clermont Auvergne",
+      "home": "Stade Toulousain",
+      "away": "ASM Clermont Auvergne",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "Q3_output_a",
+      "predicted_winner": "TOU",
+      "prediction_confidence": 95.0,
+      "prediction_basis": "PD/G diff +13.04 (TOU +17.80 vs CLE +4.76). Market TOU implied 98.0%, vig 91.5%. L1 dominance +5% + TOU home +3% = TOU 99% capped at 95%. EV @1.02 = -3.1%. Q3 output_a.",
+      "prediction_hit": null,
+      "l1_metric": "PD/G",
+      "l1_data": {
+        "home_pdg": 17.8,
+        "away_pdg": 4.76,
+        "diff": 13.04
+      },
+      "odds": {
+        "TOU": 1.02,
+        "CLE": 11.0
+      },
+      "rec_odds": null,
+      "ev": null,
+      "ev_est": -3.1,
+      "rec": null,
+      "estimated_win_pct": 95.0,
+      "uf_factors": [
+        "UF_TOU_league_best_PDG",
+        "UF_TOU_home_fortress",
+        "UF_CLE_R23_spot"
+      ],
+      "uf_count": 0,
+      "div_pp": 88,
+      "market_fav": "TOU",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "Top14 title race - Toulouse league leaders (+374 PD over 21 games). Clermont mid-table struggling for playoff spot. T006 team sheet + T007 weather verify pre-match. Odds 1.02 impractical for bet but high prediction confidence.",
+      "rules_applied": [
+        "Top14_L1_PD_G",
+        "T006_team_sheet_48h",
+        "T007_weather_matchup",
+        "Basic_Tier_threshold"
+      ]
     }
   ],
   "screening_log": [
@@ -388,6 +516,30 @@
       "go_candidates_this_sport": 2,
       "upset_pick_checks_this_sport": 0,
       "screening_note": "All GO_CANDIDATE entries are market-only classification; L1 depth required to confirm EV+ -> GO. Output-A candidates captured for first time via new procedure."
+    },
+    {
+      "date": "2026-04-23",
+      "session": "_53",
+      "scope": "Top14 R22 GEN004 odds-shift reprice + CE018 Toulouse->Toulon match correction",
+      "games_repriced": 4,
+      "games_unchanged": [
+        "Lyon (LOU) vs Castres",
+        "Montauban vs Racing 92"
+      ],
+      "ce_discovered": "CE018 Toulouse vs Bayonne -> Toulon vs Bayonne (RCT not Stade Toulousain)",
+      "note": "Toulouse plays vs Clermont on 4/27 (separate new screening match)."
+    },
+    {
+      "date": "2026-04-23",
+      "session": "_53",
+      "round": "R23",
+      "total_games": 1,
+      "go_count": 0,
+      "caution_count": 0,
+      "skip_count": 1,
+      "q3_output_a": 1,
+      "note": "Top14 R23 new: Toulouse vs Clermont (4/27) only. TOU conf 95% Q3 output_a (league-best PD/G +17.80). odds 1.02 impractical. Previous R22 6 games already reprocessed via GEN004.",
+      "standings_source": "all.rugby fetched 2026-04-23"
     }
   ]
 }

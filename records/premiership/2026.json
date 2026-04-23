@@ -153,6 +153,258 @@
       "skip_reason": null,
       "note": "Initial screening 2026-04-17 (data: 手動試合データ/2026-04-17.json). Full L1 requires PD/G for all teams.",
       "source": "手動試合データ/2026-04-17.json"
+    },
+    {
+      "date": "2026-04-24",
+      "round": "R14",
+      "match": "Newcastle Falcons vs Bristol Bears",
+      "home": "Newcastle Falcons",
+      "away": "Bristol Bears",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "Q3_output_a",
+      "predicted_winner": "Bristol Bears",
+      "prediction_confidence": 88.0,
+      "prediction_basis": "PD/G diff -33.38 (BRI dominant). Market BRI implied 96.2%, vig 89.2%. NEW home +3% - BRI away -3% net -6% -> BRI 83%. L1 dominance +5% -> BRI 88% (Q3 threshold).",
+      "prediction_hit": null,
+      "l1_metric": "PD/G",
+      "l1_data": {
+        "home_pdg": -27.38,
+        "away_pdg": 6.0,
+        "diff": -33.38
+      },
+      "odds": {
+        "NEW": 8.6,
+        "BRI": 1.04
+      },
+      "rec_odds": null,
+      "ev": null,
+      "ev_est": -8.48,
+      "rec": null,
+      "estimated_win_pct": 88.0,
+      "uf_factors": [
+        "UF_NEW_worst_PDG_league",
+        "UF_BRI_9w_record"
+      ],
+      "uf_count": 0,
+      "div_pp": 78,
+      "market_fav": "BRI",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "NEW league-worst PD/G -27.38 (1 win). BRI 9-4 attacking momentum. P006 team sheet 48h + P007 weather to verify pre-match. Odds <=1.10 no practical bet but prediction confidence high.",
+      "rules_applied": [
+        "Premiership_L1_PD_G",
+        "P006_team_sheet_48h",
+        "P007_weather_matchup",
+        "Basic_Tier_threshold"
+      ]
+    },
+    {
+      "date": "2026-04-25",
+      "round": "R14",
+      "match": "Harlequins vs Sale Sharks",
+      "home": "Harlequins",
+      "away": "Sale Sharks",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "Q4_upset_watch",
+      "predicted_winner": "Harlequins",
+      "prediction_confidence": 60.0,
+      "prediction_basis": "L1 reversal: SAL PD/G better (-7.31 vs HQ -14.69). Market HQ fav 61.7% vig. L1 SAL edge -5% HQ, HQ home +3% -> HQ 60%. EV -10%. Q4 upset_watch: UF2 but UF<3 no UPSET_PICK.",
+      "prediction_hit": null,
+      "l1_metric": "PD/G",
+      "l1_data": {
+        "home_pdg": -14.69,
+        "away_pdg": -7.31,
+        "diff": -7.38
+      },
+      "odds": {
+        "HQ": 1.5,
+        "SAL": 2.42
+      },
+      "rec_odds": null,
+      "ev": null,
+      "ev_est": -10.0,
+      "rec": null,
+      "estimated_win_pct": 60.0,
+      "uf_factors": [
+        "UF_L1_contradicts_market",
+        "UF_SAL_better_PDG",
+        "UF_HQ_home"
+      ],
+      "uf_count": 2,
+      "div_pp": 20,
+      "market_fav": "HQ",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "Market anomaly candidate. HQ home field vs SAL road. SAL 3-10 but -7 PD/G vs HQ 3-10 -14 PD/G indicates SAL more competitive in defeats. P006/P007 verify pre-match.",
+      "rules_applied": [
+        "Premiership_L1_PD_G",
+        "P006_team_sheet_48h",
+        "P007_weather_matchup",
+        "Basic_Tier_threshold"
+      ]
+    },
+    {
+      "date": "2026-04-25",
+      "round": "R14",
+      "match": "Saracens vs Leicester Tigers",
+      "home": "Saracens",
+      "away": "Leicester Tigers",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "skip",
+      "predicted_winner": "Saracens",
+      "prediction_confidence": 70.0,
+      "prediction_basis": "PD/G near-even (+11.54 vs +11.92). Market SAR 67.5% vig-adj. SAR home +3% -> 70%. EV -4.1%. Classic rivalry tight matchup.",
+      "prediction_hit": null,
+      "l1_metric": "PD/G",
+      "l1_data": {
+        "home_pdg": 11.54,
+        "away_pdg": 11.92,
+        "diff": -0.38
+      },
+      "odds": {
+        "SAR": 1.37,
+        "LEI": 2.85
+      },
+      "rec_odds": null,
+      "ev": null,
+      "ev_est": -4.1,
+      "rec": null,
+      "estimated_win_pct": 70.0,
+      "uf_factors": [
+        "UF_L1_even",
+        "UF_rivalry"
+      ],
+      "uf_count": 0,
+      "div_pp": 32,
+      "market_fav": "SAR",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "Top-half clash. Leicester ahead on wins (10-3 vs SAR 6-7). PD/G equal. SAR home edge only.",
+      "rules_applied": [
+        "Premiership_L1_PD_G",
+        "P006_team_sheet_48h",
+        "P007_weather_matchup",
+        "Basic_Tier_threshold"
+      ]
+    },
+    {
+      "date": "2026-04-26",
+      "round": "R14",
+      "match": "Northampton Saints vs Bath Rugby",
+      "home": "Northampton Saints",
+      "away": "Bath Rugby",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "Q4_upset_watch",
+      "predicted_winner": "Northampton Saints",
+      "prediction_confidence": 81.0,
+      "prediction_basis": "L1 reversal mild: BAT PD/G better (+14.69 vs NSA +9.23). Market NSA heavy fav 81.4% vig. L1 BAT edge -3% NSA, NSA home +3% -> NSA 81%. EV -7.7%. Q4 upset_watch.",
+      "prediction_hit": null,
+      "l1_metric": "PD/G",
+      "l1_data": {
+        "home_pdg": 9.23,
+        "away_pdg": 14.69,
+        "diff": -5.46
+      },
+      "odds": {
+        "NSA": 1.14,
+        "BAT": 5.0
+      },
+      "rec_odds": null,
+      "ev": null,
+      "ev_est": -7.66,
+      "rec": null,
+      "estimated_win_pct": 81.0,
+      "uf_factors": [
+        "UF_BAT_higher_PDG",
+        "UF_NSA_home_fortress",
+        "UF_top_of_table_clash"
+      ],
+      "uf_count": 1,
+      "div_pp": 61,
+      "market_fav": "NSA",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "Title race R14. NSA 11-1-1 league leaders on points. BAT 11-2 with best PD/G. Critical for playoff positioning. P006/P007 team sheet weather essential.",
+      "rules_applied": [
+        "Premiership_L1_PD_G",
+        "P006_team_sheet_48h",
+        "P007_weather_matchup",
+        "Basic_Tier_threshold"
+      ]
+    },
+    {
+      "date": "2026-04-26",
+      "round": "R14",
+      "match": "Gloucester Rugby vs Exeter Chiefs",
+      "home": "Gloucester Rugby",
+      "away": "Exeter Chiefs",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "skip",
+      "predicted_winner": "Exeter Chiefs",
+      "prediction_confidence": 63.0,
+      "prediction_basis": "PD/G diff -22.76 (EXE +9.38 vs GLO -13.38). Market EXE 61.6% vig. L1 EXE +5% - GLO home -3% = net +2% -> EXE 63%. EV -5.5%. SKIP.",
+      "prediction_hit": null,
+      "l1_metric": "PD/G",
+      "l1_data": {
+        "home_pdg": -13.38,
+        "away_pdg": 9.38,
+        "diff": -22.76
+      },
+      "odds": {
+        "GLO": 2.41,
+        "EXE": 1.5
+      },
+      "rec_odds": null,
+      "ev": null,
+      "ev_est": -5.5,
+      "rec": null,
+      "estimated_win_pct": 63.0,
+      "uf_factors": [
+        "UF_EXE_PDG_advantage",
+        "UF_GLO_home"
+      ],
+      "uf_count": 1,
+      "div_pp": 25,
+      "market_fav": "EXE",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "Class gap evident. EXE 8-4-1 playoff pursuit vs GLO 2-11 struggling. Expected EXE win but home resistance factor.",
+      "rules_applied": [
+        "Premiership_L1_PD_G",
+        "P006_team_sheet_48h",
+        "P007_weather_matchup",
+        "Basic_Tier_threshold"
+      ]
+    }
+  ],
+  "screening_log": [
+    {
+      "date": "2026-04-23",
+      "session": "_53",
+      "round": "R14",
+      "total_games": 5,
+      "go_count": 0,
+      "caution_count": 0,
+      "skip_count": 5,
+      "q3_output_a": 1,
+      "q4_upset_watch": 2,
+      "note": "Premiership R14 5 games L1(PD/G) + 4-quadrant + Basic Tier. GO 0. Q3 output_a: Newcastle vs Bristol (BRI conf 88, odds 1.04 impractical EV). Q4 upset_watch: Harlequins vs Sale (L1 reversal), Northampton vs Bath (BAT higher PD/G). P006 team sheet + P007 weather verify pre-match.",
+      "standings_source": "ESPN Gallagher Prem standings fetched 2026-04-23 (Rounds through April 18 R13)"
     }
   ]
 }

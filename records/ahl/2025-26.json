@@ -18,7 +18,280 @@
     "pending": 27,
     "note_screening": "RS最終週 4/18-19 G1/G2 27試合 (home-and-home series). Basic Tier厳格閾値適用 + AHL A001-A006補正。"
   },
-  "games": [],
+  "games": [
+    {
+      "date": "2026-04-24",
+      "match": "Bridgeport Islanders vs Hershey Bears (G3 (best-of-3))",
+      "home": "Bridgeport Islanders",
+      "away": "Hershey Bears",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "skip",
+      "predicted_winner": "Hershey Bears",
+      "prediction_confidence": 48.1,
+      "prediction_basis": "AHL Basic Tier market-based (L1 GF% per-team unavailable). Market Hershey Bears vig-adj 50.1%. Road -2% L4 -> 48.1%. EV -10.53%.",
+      "prediction_hit": null,
+      "l1_metric": "L1_incomplete (AHL feed gap)",
+      "l1_data": null,
+      "odds": {
+        "Bridgeport Islanders": 1.87,
+        "Hershey Bears": 1.86
+      },
+      "rec_odds": null,
+      "ev": null,
+      "ev_est": -10.53,
+      "rec": null,
+      "estimated_win_pct": 48.1,
+      "uf_factors": [
+        "UF_L1_incomplete_AHL"
+      ],
+      "uf_count": 1,
+      "series_state": "G3 (best-of-3)",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "Bridgeport A4 vs Hershey A5 - decisive G3 | Basic Tier market-only screening due to L1 GF% feed gap. Revisit post-series for lineup confirmation."
+    },
+    {
+      "date": "2026-04-24",
+      "match": "Bakersfield Condors vs Coachella Valley Firebirds (G2)",
+      "home": "Bakersfield Condors",
+      "away": "Coachella Valley Firebirds",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "skip",
+      "predicted_winner": "Bakersfield Condors",
+      "prediction_confidence": 54.6,
+      "prediction_basis": "AHL Basic Tier market-based (L1 GF% per-team unavailable). Market Bakersfield Condors vig-adj 51.6%. Home +3% L4 -> 54.6%. EV -1.17%.",
+      "prediction_hit": null,
+      "l1_metric": "L1_incomplete (AHL feed gap)",
+      "l1_data": null,
+      "odds": {
+        "Bakersfield Condors": 1.81,
+        "Coachella Valley Firebirds": 1.93
+      },
+      "rec_odds": null,
+      "ev": null,
+      "ev_est": -1.17,
+      "rec": null,
+      "estimated_win_pct": 54.6,
+      "uf_factors": [
+        "UF_L1_incomplete_AHL"
+      ],
+      "uf_count": 1,
+      "series_state": "G2",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "Bakersfield P5 home G2 after CV won G1 | Basic Tier market-only screening due to L1 GF% feed gap. Revisit post-series for lineup confirmation."
+    },
+    {
+      "date": "2026-04-25",
+      "match": "Cleveland Monsters vs Syracuse Crunch (DS G2)",
+      "home": "Cleveland Monsters",
+      "away": "Syracuse Crunch",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "skip",
+      "predicted_winner": "Cleveland Monsters",
+      "prediction_confidence": 54.1,
+      "prediction_basis": "AHL Basic Tier market-based (L1 GF% per-team unavailable). Market Cleveland Monsters vig-adj 51.1%. Home +3% L4 -> 54.1%. EV -1.0%.",
+      "prediction_hit": null,
+      "l1_metric": "L1_incomplete (AHL feed gap)",
+      "l1_data": null,
+      "odds": {
+        "Cleveland Monsters": 1.83,
+        "Syracuse Crunch": 1.91
+      },
+      "rec_odds": null,
+      "ev": null,
+      "ev_est": -1.0,
+      "rec": null,
+      "estimated_win_pct": 54.1,
+      "uf_factors": [
+        "UF_L1_incomplete_AHL"
+      ],
+      "uf_count": 1,
+      "series_state": "DS G2",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "Cleveland bye to DS vs Syracuse (A3 winner) | Basic Tier market-only screening due to L1 GF% feed gap. Revisit post-series for lineup confirmation."
+    },
+    {
+      "date": "2026-04-25",
+      "match": "Charlotte Checkers vs Springfield Thunderbirds (R1 G? (BoB-3))",
+      "home": "Charlotte Checkers",
+      "away": "Springfield Thunderbirds",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "skip",
+      "predicted_winner": "Charlotte Checkers",
+      "prediction_confidence": 62.9,
+      "prediction_basis": "AHL Basic Tier market-based (L1 GF% per-team unavailable). Market Charlotte Checkers vig-adj 59.9%. Home +3% L4 -> 62.9%. EV -1.88%.",
+      "prediction_hit": null,
+      "l1_metric": "L1_incomplete (AHL feed gap)",
+      "l1_data": null,
+      "odds": {
+        "Charlotte Checkers": 1.56,
+        "Springfield Thunderbirds": 2.33
+      },
+      "rec_odds": null,
+      "ev": null,
+      "ev_est": -1.88,
+      "rec": null,
+      "estimated_win_pct": 62.9,
+      "uf_factors": [
+        "UF_L1_incomplete_AHL"
+      ],
+      "uf_count": 1,
+      "series_state": "R1 G? (BoB-3)",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "Charlotte vs Springfield | Basic Tier market-only screening due to L1 GF% feed gap. Revisit post-series for lineup confirmation."
+    },
+    {
+      "date": "2026-04-25",
+      "match": "Rochester Americans vs Toronto Marlies (R1 G? (BoB-3))",
+      "home": "Rochester Americans",
+      "away": "Toronto Marlies",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "skip",
+      "predicted_winner": "Toronto Marlies",
+      "prediction_confidence": 52.4,
+      "prediction_basis": "AHL Basic Tier market-based (L1 GF% per-team unavailable). Market Toronto Marlies vig-adj 54.4%. Road -2% L4 -> 52.4%. EV -9.87%.",
+      "prediction_hit": null,
+      "l1_metric": "L1_incomplete (AHL feed gap)",
+      "l1_data": null,
+      "odds": {
+        "Rochester Americans": 2.05,
+        "Toronto Marlies": 1.72
+      },
+      "rec_odds": null,
+      "ev": null,
+      "ev_est": -9.87,
+      "rec": null,
+      "estimated_win_pct": 52.4,
+      "uf_factors": [
+        "UF_L1_incomplete_AHL"
+      ],
+      "uf_count": 1,
+      "series_state": "R1 G? (BoB-3)",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "Rochester vs Marlies | Basic Tier market-only screening due to L1 GF% feed gap. Revisit post-series for lineup confirmation."
+    },
+    {
+      "date": "2026-04-25",
+      "match": "Manitoba Moose vs Milwaukee Admirals (R1 G? (BoB-3))",
+      "home": "Manitoba Moose",
+      "away": "Milwaukee Admirals",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "skip",
+      "predicted_winner": "Milwaukee Admirals",
+      "prediction_confidence": 50.5,
+      "prediction_basis": "AHL Basic Tier market-based (L1 GF% per-team unavailable). Market Milwaukee Admirals vig-adj 52.5%. Road -2% L4 -> 50.5%. EV -10.11%.",
+      "prediction_hit": null,
+      "l1_metric": "L1_incomplete (AHL feed gap)",
+      "l1_data": null,
+      "odds": {
+        "Manitoba Moose": 1.97,
+        "Milwaukee Admirals": 1.78
+      },
+      "rec_odds": null,
+      "ev": null,
+      "ev_est": -10.11,
+      "rec": null,
+      "estimated_win_pct": 50.5,
+      "uf_factors": [
+        "UF_L1_incomplete_AHL"
+      ],
+      "uf_count": 1,
+      "series_state": "R1 G? (BoB-3)",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "Manitoba vs Milwaukee | Basic Tier market-only screening due to L1 GF% feed gap. Revisit post-series for lineup confirmation."
+    },
+    {
+      "date": "2026-04-25",
+      "match": "Colorado Eagles vs San Diego Gulls (R1 G? (BoB-3))",
+      "home": "Colorado Eagles",
+      "away": "San Diego Gulls",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "skip",
+      "predicted_winner": "Colorado Eagles",
+      "prediction_confidence": 60.8,
+      "prediction_basis": "AHL Basic Tier market-based (L1 GF% per-team unavailable). Market Colorado Eagles vig-adj 57.8%. Home +3% L4 -> 60.8%. EV -1.5%.",
+      "prediction_hit": null,
+      "l1_metric": "L1_incomplete (AHL feed gap)",
+      "l1_data": null,
+      "odds": {
+        "Colorado Eagles": 1.62,
+        "San Diego Gulls": 2.22
+      },
+      "rec_odds": null,
+      "ev": null,
+      "ev_est": -1.5,
+      "rec": null,
+      "estimated_win_pct": 60.8,
+      "uf_factors": [
+        "UF_L1_incomplete_AHL"
+      ],
+      "uf_count": 1,
+      "series_state": "R1 G? (BoB-3)",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "Colorado vs SD Gulls | Basic Tier market-only screening due to L1 GF% feed gap. Revisit post-series for lineup confirmation."
+    },
+    {
+      "date": "2026-04-25",
+      "match": "Henderson Silver Knights vs San Jose Barracuda (R1 G? (BoB-3))",
+      "home": "Henderson Silver Knights",
+      "away": "San Jose Barracuda",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "skip",
+      "predicted_winner": "Henderson Silver Knights",
+      "prediction_confidence": 61.0,
+      "prediction_basis": "AHL Basic Tier market-based (L1 GF% per-team unavailable). Market Henderson Silver Knights vig-adj 58.0%. Home +3% L4 -> 61.0%. EV -1.79%.",
+      "prediction_hit": null,
+      "l1_metric": "L1_incomplete (AHL feed gap)",
+      "l1_data": null,
+      "odds": {
+        "Henderson Silver Knights": 1.61,
+        "San Jose Barracuda": 2.22
+      },
+      "rec_odds": null,
+      "ev": null,
+      "ev_est": -1.79,
+      "rec": null,
+      "estimated_win_pct": 61.0,
+      "uf_factors": [
+        "UF_L1_incomplete_AHL"
+      ],
+      "uf_count": 1,
+      "series_state": "R1 G? (BoB-3)",
+      "status": "pending",
+      "hit": null,
+      "result": null,
+      "screening_session": "2026-04-23 _53",
+      "notes": "Henderson vs SJ Barracuda | Basic Tier market-only screening due to L1 GF% feed gap. Revisit post-series for lineup confirmation."
+    }
+  ],
   "pending_games": [
     {
       "id": "AHL-001",
@@ -1419,6 +1692,16 @@
         "Division clinched teams (Providence/Grand Rapids/Ontario) 主力温存リスク高",
         "Eliminated teams (Hartford/Belleville/Lehigh Valley/Utica?/Rockford/Iowa/Tucson/Abbotsford/Calgary) motivation gap"
       ]
+    },
+    {
+      "date": "2026-04-23",
+      "session": "_53",
+      "round": "Calder Cup PO R1/DS",
+      "total_games": 8,
+      "go_count": 0,
+      "caution_count": 0,
+      "skip_count": 8,
+      "note": "AHL Calder Cup Playoffs 8 games L1(market-only, GF% feed unavailable) + Basic Tier. GO 0 (all ev<+7 or conf<78). PA033 partially satisfied. Best-of-3 R1 + DS semifinal Cleveland. Consider post-series deep-dive for goalie/lineup."
     }
   ]
 }

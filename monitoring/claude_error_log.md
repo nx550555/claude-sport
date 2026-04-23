@@ -47,6 +47,7 @@
 | CE015 | 2026-04-18 | DATA_ERROR | 【遡及発覚】MC2026 SF Alcaraz vs de Minaur と記録していたが、de Minaur は QF で Vacherot に敗退。実際の SF は Alcaraz vs Vacherot 6-4 6-4。対戦相手記載誤り + スコア"確認中"のまま未検証 | MITIGATED |
 | CE016 | 2026-04-20 | DATA_ERROR | 【PA051監査で発覚】upset_patterns.json の **A017/A022/A023/A024 全4件**の勝敗が真逆記録と確定。実際は Shelton d. Fonseca / Sakamoto d. Svajda / Gaubas d. Gea / Droguet d. Virtanen で**全て市場favoriteのHIT・UPSETではない**。4件とも `invalidated_upsets` に移動 | MITIGATED |
 | CE017 | 2026-04-23 | DATA_ERROR | 【PA071補填中に発覚】CE016 の延長: records/tennis/2026-ATP.json の Madrid Q R1 4/20 試合 #73/#75/#77/#94 で勝敗が逆転記録されていた。Session_46 で upset_patterns 側 (A022/A023/A024) は訂正されたが records 側は未訂正のまま約3日残存。#94 (Travaglia vs Basilashvili) は upset_patterns 未登録分の追加発見。一次ソース (Sofascore/ATP Stats/Wikipedia/Polymarket) 4件全て再検証で訂正 | MITIGATED |
+| CE018 | 2026-04-23 | DATA_ERROR | records/top14/2026.json の 4/25 R22 の試合名「Toulouse vs Bayonne」は誤記で、実際の fixture は「RCT Toulon vs Bayonne」。Stade Toulousain (Toulouse) は 4/27 に Clermont と対戦する別試合。チーム略称 RCT = Rugby Club Toulonnais (Toulon) と Stade Toulousain (Toulouse) の混同が原因。Session_53 GEN004 処理中に発覚・訂正 | MITIGATED |
 
 ---
 
@@ -539,3 +540,29 @@ Session_42 CE013/CE014 後の過去エントリ再検証中、WebSearch で「Al
 → トーナメント各ラウンドの対戦組合せは draw sheet / 前ラウンド結果から必ず確認する
 → スコア "確認中" "TBD" "未確認" のままのエントリを定期的に scan して解消する（grep自動化検討）
 → 前ラウンドの結果を参照するとトーナメント logical consistency が validation 可能
+
+---
+
+### CE018 — Top14 R22 Toulouse/Toulon チーム名誤記
+**日付:** 2026-04-23 発覚（元データ入力: 2026-04-20 Session_43）
+**カテゴリ:** DATA_ERROR（チーム名混同・略称未検証）
+**ステータス:** MITIGATED
+
+**何を間違えたか:**
+records/top14/2026.json の R22 4/25 entry `match: "Toulouse vs Bayonne"` が誤記。実際の fixture は **RCT Toulon vs Bayonne**（提供データ 2026-04-23-2.json で「RCタウロナイズ vs バイヨンヌ」と明示）。Stade Toulousain (Toulouse) は 4/27 の R23 で Clermont と対戦する別試合。
+
+**どう発覚したか:**
+Session_53 GEN004 処理中、提供データ 2026-04-23-2.json に「RCタウロナイズ vs バイヨンヌ」と「スタード・トゥールーザン vs ASMクレアモント・オーベアン」の2つが別試合として存在することから発覚。既存 records の "Toulouse vs Bayonne" 4/25 が RCT Toulon のミスラベルだと判明。
+
+**なぜ発生したか:**
+- フランスラグビーの略称混同: **RCT = Rugby Club Toulonnais (Toulon)** と **Stade Toulousain (Toulouse)** は全く別クラブだが、表記「Toulouse」に反射的に Stade Toulousain を割り当てた
+- Session_43 スクリーニング時に一次ソース (Top14 公式 or RugbyPass fixtures) でカード確認を怠った
+
+**修正内容:**
+- records/top14/2026.json R22 4/25 entry: `match: "Toulon vs Bayonne"`, `home: "Toulon"`, ce_correction 記録
+- R23 4/27 として新規 "Stade Toulousain vs ASM Clermont Auvergne" を追加
+
+**再発防止ルール:**
+→ フランスラグビー (Top14/Pro D2) を扱う際は **RCT (Toulon) ≠ Stade Toulousain (Toulouse)** を必須ルールとして意識する
+→ 日本語表記「トゥールーザン」「トゥロン」「トゥローザン」などは曖昧なため、オッズ提供データの正確な綴り・位置 (home/away) を一次ソース fixture と照合する
+→ 既存 records の週単位 schedule を Top14 公式とクロスチェックする routine check を設ける
