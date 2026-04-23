@@ -9,11 +9,12 @@
     "hit": 2,
     "hit_rate": 1.0,
     "ev_total": 1.863,
-    "prediction_total": 17,
-    "prediction_hit": 7,
-    "prediction_hit_rate": 0.7,
-    "prediction_pending": 7,
-    "note": "bet実績(GO tier): 2/2 100% +1.863u。予測精度: PA014 TBL-MTL G1 MTL 4-3 OT 予測MISS (A021 Type A)。予測確定 7/10 70%。BUF-BOS/その他G1残 pending 7。"
+    "prediction_total": 25,
+    "prediction_hit": 12,
+    "prediction_hit_rate": 0.48,
+    "prediction_pending": 0,
+    "note": "bet実績(GO tier): 2/2 100% +1.863u。予測精度: PA014 TBL-MTL G1 MTL 4-3 OT 予測MISS (A021 Type A)。予測確定 7/10 70%。BUF-BOS/その他G1残 pending 7。 | Session_49: G2 8/8 closed (5 prediction HIT). EDM-ANA G2 pending. all CAUTION/SKIP no-bet (P&L 0).",
+    "last_updated": "2026-04-23 Session_49"
   },
   "games": [
     {
@@ -1159,10 +1160,16 @@
       "ev": null,
       "status": "pending",
       "hit": null,
-      "result": null,
-      "prediction_hit": null,
+      "result": "Colorado Avalanche 2-1 Los Angeles Kings (OT)",
+      "prediction_hit": true,
       "screening_session": "2026-04-20 Session_43",
-      "note": "G1 COL 2-1 HIT後のG2。市場COL更強化。"
+      "note": "G1 COL 2-1 HIT後のG2。市場COL更強化。",
+      "score": "2-1 OT",
+      "closed_session": "_49",
+      "verification_sources": [
+        "NHL.com game recap",
+        "ESPN game recap"
+      ]
     },
     {
       "match": "BUF vs BOS G1",
@@ -1316,16 +1323,21 @@
       "tier": "skip",
       "quadrant": "skip",
       "note": "G1 MTL OT upset(A021). G2 TBL desperate home. xGF%+4pt. SKIP.",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Tampa Bay Lightning 3-2 Montreal Canadiens (OT)",
+      "score": "3-2 OT",
+      "prediction_hit": true,
       "rec": null,
       "rec_odds": null,
       "ev": null,
       "hit": null,
       "actual_ev": null,
       "source": "2026-04-21.json",
-      "screened_session": "_48"
+      "screened_session": "_48",
+      "closed_session": "_49",
+      "verification_sources": [
+        "NHL.com game recap",
+        "ESPN game recap"
+      ]
     },
     {
       "match": "BOS vs BUF G2",
@@ -1341,16 +1353,21 @@
       "tier": "skip",
       "quadrant": "skip",
       "note": "BUF G1 HIT. xGF%+2pt. SKIP.",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Boston Bruins 4-2 Buffalo Sabres",
+      "score": "4-2",
+      "prediction_hit": false,
       "rec": null,
       "rec_odds": null,
       "ev": null,
       "hit": null,
       "actual_ev": null,
       "source": "2026-04-21.json",
-      "screened_session": "_48"
+      "screened_session": "_48",
+      "closed_session": "_49",
+      "verification_sources": [
+        "NHL.com game recap",
+        "ESPN game recap"
+      ]
     },
     {
       "match": "VGK vs UTA G2",
@@ -1366,16 +1383,21 @@
       "tier": "skip",
       "quadrant": "skip",
       "note": "VGK G1 HIT. UTA xGF%データ不足. SKIP.",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Utah Mammoth 3-2 Vegas Golden Knights",
+      "score": "3-2",
+      "prediction_hit": false,
       "rec": null,
       "rec_odds": null,
       "ev": null,
       "hit": null,
       "actual_ev": null,
       "source": "2026-04-21.json",
-      "screened_session": "_48"
+      "screened_session": "_48",
+      "closed_session": "_49",
+      "verification_sources": [
+        "NHL.com game recap",
+        "ESPN game recap"
+      ]
     },
     {
       "match": "LAK vs COL G2",
@@ -1391,9 +1413,9 @@
       "tier": "caution",
       "quadrant": "skip",
       "note": "COL G1 HIT 2-1. xGF%+6pt L1_PASS. conf70/mkt71.9/EV-2.7%. CAUTION goalie確認要.",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Colorado Avalanche 2-1 Los Angeles Kings (OT)",
+      "score": "2-1 OT",
+      "prediction_hit": true,
       "rec": "Colorado Avalanche",
       "rec_odds": 1.39,
       "ev": -0.027,
@@ -1401,7 +1423,12 @@
       "actual_ev": null,
       "source": "2026-04-21.json",
       "screened_session": "_48",
-      "caution_type": "waiting"
+      "caution_type": "waiting",
+      "closed_session": "_49",
+      "verification_sources": [
+        "NHL.com game recap",
+        "ESPN game recap"
+      ]
     },
     {
       "match": "PHI vs PIT G2",
@@ -1417,16 +1444,21 @@
       "tier": "skip",
       "quadrant": "skip",
       "note": "G1 PHI upset 3-2(A027). G2 PHI home. xGF%=0 SKIP.",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Philadelphia Flyers 3-0 Pittsburgh Penguins",
+      "score": "3-0",
+      "prediction_hit": true,
       "rec": null,
       "rec_odds": null,
       "ev": null,
       "hit": null,
       "actual_ev": null,
       "source": "2026-04-21.json",
-      "screened_session": "_48"
+      "screened_session": "_48",
+      "closed_session": "_49",
+      "verification_sources": [
+        "NHL.com game recap",
+        "ESPN game recap"
+      ]
     },
     {
       "match": "MIN vs DAL G2",
@@ -1442,16 +1474,21 @@
       "tier": "skip",
       "quadrant": "skip",
       "note": "G1 MIN 6-1 blowout upset(A028 xGF%優先). G2 DAL home. P025 evidence予想継続.",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Dallas Stars 4-2 Minnesota Wild",
+      "score": "4-2",
+      "prediction_hit": false,
       "rec": null,
       "rec_odds": null,
       "ev": null,
       "hit": null,
       "actual_ev": null,
       "source": "2026-04-21.json",
-      "screened_session": "_48"
+      "screened_session": "_48",
+      "closed_session": "_49",
+      "verification_sources": [
+        "NHL.com game recap",
+        "ESPN game recap"
+      ]
     },
     {
       "match": "EDM vs ANA G2",
@@ -1466,7 +1503,7 @@
       "prediction_confidence": 58,
       "tier": "skip",
       "quadrant": "skip",
-      "note": "EDM G1 OT HIT. xGF%+1pt SKIP.",
+      "note": "EDM G1 OT HIT. xGF%+1pt SKIP. | Session_49: 4/22 試合進行中 (1stP 1-1)、結果未確定。次セッション確認。",
       "result": null,
       "score": null,
       "prediction_hit": null,
@@ -1492,16 +1529,21 @@
       "tier": "skip",
       "quadrant": "skip",
       "note": "CAR G1 HIT. xGF%-1pt CAR優位だが市場OTT本命. L1矛盾=SKIP.",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Carolina Hurricanes 3-2 Ottawa Senators (2OT)",
+      "score": "3-2 2OT",
+      "prediction_hit": true,
       "rec": null,
       "rec_odds": null,
       "ev": null,
       "hit": null,
       "actual_ev": null,
       "source": "2026-04-21.json",
-      "screened_session": "_48"
+      "screened_session": "_48",
+      "closed_session": "_49",
+      "verification_sources": [
+        "NHL.com game recap",
+        "ESPN game recap"
+      ]
     }
   ],
   "pending_games": [],

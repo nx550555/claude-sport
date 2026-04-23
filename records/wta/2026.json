@@ -5,11 +5,11 @@
   "rule_version": "v1.0",
   "started": "2026-04-10",
   "summary": {
-    "total": 3,
-    "hit": 1,
-    "hit_rate": 0.333,
-    "ev_total": -1.04,
-    "note": "【CE014訂正 2026-04-18】GB001 Ostapenko を誤って HIT 記録していたが、実際は Andreeva 5-7 6-2 6-4 で MISS。修正後: GB001 MISS(-0.25u)。Paolini Stuttgart R1 MISS(-1.0u)。Bondar Rouen R1 HIT(+0.21u)。通算: 1/3 33.3% -1.04u"
+    "total": 4,
+    "hit": 2,
+    "hit_rate": 0.5,
+    "ev_total": -0.5,
+    "note": "【CE014訂正 2026-04-18】GB001 Ostapenko を誤って HIT 記録していたが、実際は Andreeva 5-7 6-2 6-4 で MISS。修正後: GB001 MISS(-0.25u)。Paolini Stuttgart R1 MISS(-1.0u)。Bondar Rouen R1 HIT(+0.21u)。通算: 1/3 33.3% -1.04u | Session_49 update: Galfi Madrid Q Final GO HIT +0.54u (d. Vidmanova 7-5 6-3). Sonmez Madrid R1 Q3 output_a HIT (d. Martinez Cires 7-5 6-2). 通算 2/4 50.0% -0.500u"
   },
   "tournaments": [
     {
@@ -1399,13 +1399,20 @@
           "rec": "Galfi D.",
           "rec_odds": 1.54,
           "ev": 0.203,
-          "hit": null,
-          "result": null,
-          "score": null,
-          "prediction_hit": null,
+          "hit": true,
+          "result": "Galfi d. Vidmanova 7-5 6-3",
+          "score": "7-5 6-3",
+          "prediction_hit": true,
           "status": "pending",
           "screened_at": "2026-04-21",
-          "screened_session": "_48"
+          "screened_session": "_48",
+          "actual_ev": 0.54,
+          "verification_sources": [
+            "wtatennis.com Galfi vs Vidmanova RS023",
+            "WTA Madrid Q draw PDF",
+            "puntodebreak.com"
+          ],
+          "closed_session": "_49"
         },
         {
           "tournament": "WTA Madrid",
@@ -1424,12 +1431,18 @@
           "rec_odds": null,
           "ev": null,
           "hit": null,
-          "result": null,
-          "score": null,
-          "prediction_hit": null,
+          "result": "Sonmez d. Martinez Cires 7-5 6-2",
+          "score": "7-5 6-2",
+          "prediction_hit": true,
           "status": "pending",
           "screened_at": "2026-04-21",
-          "screened_session": "_48"
+          "screened_session": "_48",
+          "verification_sources": [
+            "puntodebreak.com Sonmez ends Carlota Martinez dream",
+            "anews.com.tr",
+            "skysports.com highlights"
+          ],
+          "closed_session": "_49"
         },
         {
           "tournament": "WTA Madrid",

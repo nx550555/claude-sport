@@ -9,9 +9,13 @@
     "hit": 2,
     "hit_rate": 1.0,
     "ev_total": 0.38,
-    "note": "NBA-001 Rockets HIT(+0.20) / NBA-002 Cavaliers SKIP / NBA-003 Spurs vs Blazers GO(pending) / NBA-004~010 SKIP (NRtg<5pt or EV-)",
-    "last_updated": "2026-04-20 Session_45",
-    "go_count": 0
+    "note": "NBA-001 Rockets HIT(+0.20) / NBA-002 Cavaliers SKIP / NBA-003 Spurs vs Blazers GO(pending) / NBA-004~010 SKIP (NRtg<5pt or EV-) | Session_49: G2 7/8 closed (2 prediction HIT). OKC-PHX G2 pending. Q3 output_a: BOS G2 MISS / SAS G2 MISS / Sonmez WTA HIT. [30][31][32] round label G1→G2 訂正 (Session_48 import error).",
+    "last_updated": "2026-04-23 Session_49",
+    "go_count": 0,
+    "prediction_total": 7,
+    "prediction_hit": 2,
+    "prediction_pending": 0,
+    "prediction_hit_rate": 0.286
   },
   "net_rating_snapshot": {
     "as_of": "2026-04-11",
@@ -1029,16 +1033,21 @@
       "tier": "skip",
       "quadrant": "Q3_output_a",
       "note": "G1 BOS blowout HIT. NRtg+8.06pt. conf85/mkt91.7/EV-7.3%. Q3 output_a候補.",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Philadelphia 76ers 111-97 Boston Celtics",
+      "score": "111-97",
+      "prediction_hit": false,
       "rec": null,
       "rec_odds": null,
       "ev": null,
       "hit": null,
       "actual_ev": null,
       "source": "2026-04-21.json",
-      "screened_session": "_48"
+      "screened_session": "_48",
+      "closed_session": "_49",
+      "verification_sources": [
+        "NBA.com game recap",
+        "ESPN game recap"
+      ]
     },
     {
       "match": "SAS vs POR G2",
@@ -1054,16 +1063,21 @@
       "tier": "skip",
       "quadrant": "Q3_output_a",
       "note": "G1 SAS HIT (Wemby 35pts). NRtg+8.40pt. conf85/mkt84.7/EV≈0. Q3 output_a.",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Portland Trail Blazers 106-103 San Antonio Spurs",
+      "score": "106-103",
+      "prediction_hit": false,
       "rec": null,
       "rec_odds": null,
       "ev": null,
       "hit": null,
       "actual_ev": null,
       "source": "2026-04-21.json",
-      "screened_session": "_48"
+      "screened_session": "_48",
+      "closed_session": "_49",
+      "verification_sources": [
+        "NBA.com game recap",
+        "ESPN game recap"
+      ]
     },
     {
       "match": "LAL vs HOU G2",
@@ -1079,16 +1093,21 @@
       "tier": "skip",
       "quadrant": "skip",
       "note": "G1 LAL upset(A029 KD OUT). KD G2 game-time decision (patellar contusion). SKIP KD-dependent.",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Los Angeles Lakers 101-94 Houston Rockets",
+      "score": "101-94",
+      "prediction_hit": false,
       "rec": null,
       "rec_odds": null,
       "ev": null,
       "hit": null,
       "actual_ev": null,
       "source": "2026-04-21.json + ESPN KD update",
-      "screened_session": "_48"
+      "screened_session": "_48",
+      "closed_session": "_49",
+      "verification_sources": [
+        "NBA.com game recap",
+        "ESPN game recap"
+      ]
     },
     {
       "match": "DET vs ORL G2",
@@ -1104,16 +1123,21 @@
       "tier": "skip",
       "quadrant": "skip",
       "note": "G1 ORL upset(A026). G2 DET bounce back home. NRtg+6.86pt. conf77/mkt83.3/EV-7.6% mkt過大.",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Detroit Pistons 98-83 Orlando Magic",
+      "score": "98-83",
+      "prediction_hit": true,
       "rec": null,
       "rec_odds": null,
       "ev": null,
       "hit": null,
       "actual_ev": null,
       "source": "2026-04-21.json",
-      "screened_session": "_48"
+      "screened_session": "_48",
+      "closed_session": "_49",
+      "verification_sources": [
+        "NBA.com game recap",
+        "ESPN game recap"
+      ]
     },
     {
       "match": "OKC vs PHX G2",
@@ -1128,7 +1152,7 @@
       "prediction_confidence": 88,
       "tier": "skip",
       "quadrant": "Q3_output_a",
-      "note": "G1 OKC blowout HIT. NRtg+9.24pt max. conf88/mkt96.2/EV-8.5%. Q3 output_a高確率.",
+      "note": "G1 OKC blowout HIT. NRtg+9.24pt max. conf88/mkt96.2/EV-8.5%. Q3 output_a高確率. | Session_49: 4/22 21:30 ET 進行中、結果未確定。次セッション確認。",
       "result": null,
       "score": null,
       "prediction_hit": null,
@@ -1141,9 +1165,9 @@
       "screened_session": "_48"
     },
     {
-      "match": "ATL vs NYK G1",
+      "match": "ATL vs NYK G2",
       "date": "2026-04-24",
-      "round": "Playoffs R1 G1",
+      "round": "Playoffs R1 G2",
       "sport": "nba",
       "favorite": "Atlanta Hawks",
       "fav_odds": 1.87,
@@ -1154,21 +1178,27 @@
       "tier": "skip",
       "quadrant": "skip",
       "note": "初戦. NRtg NYK+6.18 vs ATL+2.33 = diff+3.85pt NYK優位. 市場ATL微fav矛盾 SKIP.",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Atlanta Hawks d. New York Knicks (G2)",
+      "score": "ATL W",
+      "prediction_hit": false,
       "rec": null,
       "rec_odds": null,
       "ev": null,
       "hit": null,
       "actual_ev": null,
       "source": "2026-04-21.json",
-      "screened_session": "_48"
+      "screened_session": "_48",
+      "closed_session": "_49",
+      "verification_sources": [
+        "NBA.com game recap",
+        "ESPN game recap"
+      ],
+      "round_label_corrected": "Session_49: import時に G1 ラベル誤付与, 実際は G2"
     },
     {
-      "match": "TOR vs CLE G1",
+      "match": "TOR vs CLE G2",
       "date": "2026-04-24",
-      "round": "Playoffs R1 G1",
+      "round": "Playoffs R1 G2",
       "sport": "nba",
       "favorite": "Cleveland Cavaliers",
       "fav_odds": 1.65,
@@ -1179,21 +1209,27 @@
       "tier": "skip",
       "quadrant": "skip",
       "note": "初戦. NRtg差+1.20 CLE微. SKIP.",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Cleveland Cavaliers 115-105 Toronto Raptors",
+      "score": "115-105",
+      "prediction_hit": true,
       "rec": null,
       "rec_odds": null,
       "ev": null,
       "hit": null,
       "actual_ev": null,
       "source": "2026-04-21.json",
-      "screened_session": "_48"
+      "screened_session": "_48",
+      "closed_session": "_49",
+      "verification_sources": [
+        "NBA.com game recap",
+        "ESPN game recap"
+      ],
+      "round_label_corrected": "Session_49: import時に G1 ラベル誤付与, 実際は G2"
     },
     {
-      "match": "MIN vs DEN G1",
+      "match": "MIN vs DEN G2",
       "date": "2026-04-24",
-      "round": "Playoffs R1 G1",
+      "round": "Playoffs R1 G2",
       "sport": "nba",
       "favorite": "Denver Nuggets",
       "fav_odds": 1.8,
@@ -1204,16 +1240,22 @@
       "tier": "skip",
       "quadrant": "skip",
       "note": "初戦. NRtg+2.19 DEN微. SKIP.",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Minnesota Timberwolves 119-114 Denver Nuggets",
+      "score": "119-114",
+      "prediction_hit": false,
       "rec": null,
       "rec_odds": null,
       "ev": null,
       "hit": null,
       "actual_ev": null,
       "source": "2026-04-21.json",
-      "screened_session": "_48"
+      "screened_session": "_48",
+      "closed_session": "_49",
+      "verification_sources": [
+        "NBA.com game recap",
+        "ESPN game recap"
+      ],
+      "round_label_corrected": "Session_49: import時に G1 ラベル誤付与, 実際は G2"
     }
   ],
   "screening_log": [

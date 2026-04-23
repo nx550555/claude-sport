@@ -80,9 +80,14 @@
 | PA057 | NEW 新規候補 P025 | NHL PO type_a_watch 発動時 xGF% higher team を predicted_winner に優先設定 (A028 MIN/DAL で実証 1/3). evidence 収集継続 | PENDING | 中 | 継続 |
 | PA058 | NEW Session_47 | NBA PO R1 G1 全8試合結果反映 DONE. LAL-HOU UPSET(A029)登録・KD欠場系ルール候補P024発足 | DONE | 高 | 完了 2026-04-21 |
 | PA059 | NEW P018実装判断 | NHL PO G1 underdog young core activation (A021 MTL + A027 PHI) evidence 2/3 到達. あと1件で N019 実装判断 | PENDING | 中 | 継続 |
-| PA060 | NEW NHL PO G2 | 4/21-22 G2 全8試合結果確認 (BUF/BOS, MTL/TBL, CAR/OTT, PHI/PIT, COL/LAK, DAL/MIN, VGK/UTA, EDM/ANA) | WAITING | 高 | 4/22-23試合後 |
-| PA061 | NEW NBA PO G2 | 4/21-24 G2 全8試合結果確認 (ORL/DET, CLE/TOR, NYK/ATL, BOS/PHI, OKC/PHX, HOU/LAL, DEN/MIN, SAS/POR) | WAITING | 高 | 4/22-25試合後 |
-| PA062 | Madrid 本戦 R1 | 2026-04-21.json 受領済. ATP 24試合 + WTA 19試合 本戦R1 (4/22〜) スクリーニング | PENDING | 高 | 4/22試合前 |
+| PA060 | NEW NHL PO G2 | **DONE Session_49** 4/21-22 G2 7/8試合結果確認: BOS 4-2 BUF / TBL 3-2 MTL OT / CAR 3-2 OTT 2OT / PHI 3-0 PIT / COL 2-1 LAK OT / DAL 4-2 MIN / UTA 3-2 VGK. EDM-ANA G2 のみ pending (4/22 進行中) | DONE | 高 | 完了 2026-04-23 |
+| PA061 | NEW NBA PO G2 | **DONE Session_49** 4/21-22 G2 7/8試合結果確認: PHI 111-97 BOS / POR 106-103 SAS / LAL 101-94 HOU / DET 98-83 ORL / ATL d. NYK / CLE 115-105 TOR / MIN 119-114 DEN. OKC-PHX G2 のみ pending (4/22 進行中) | DONE | 高 | 完了 2026-04-23 |
+| PA062 | Madrid 本戦 R1 | 2026-04-21.json 受領済. ATP 24試合 + WTA 19試合 本戦R1 (4/22〜) スクリーニング **Session_48 で完了** | DONE | 高 | 完了 2026-04-22 |
+| PA063 | Galfi GO 結果 | **DONE Session_49**: Galfi D. d. Vidmanova D. 7-5 6-3 GO @1.54 HIT +0.54u (Madrid Q Final 4/21) | DONE | 最高 | 完了 2026-04-23 |
+| PA064 | Q3 output_a 4件 | **3/4 closed Session_49**: Sonmez HIT (d. Martinez Cires 7-5 6-2) / BOS G2 MISS (PHI 111-97) / SAS G2 MISS (POR 106-103) / OKC G2 pending. Q3 通算 8/10 80.0% | IN_PROGRESS | 高 | OKC 4/23 結果後 |
+| PA065 | EDM-ANA G2 | NHL 4/22 進行中 (1stP 1-1) → 4/23 JST 早朝結果確認 | WAITING | 高 | 4/23 朝 |
+| PA066 | OKC-PHX G2 | NBA 4/22 21:30 ET 進行中 → 4/23 JST 確認 | WAITING | 高 | 4/23 朝 |
+| PA067 | NBA records dedup | [10][17] CLE-TOR G1 / [11][21][30] NYK-ATL / [12][20][32] DEN-MIN / [13][18] BOS-PHI G1 / [14][24] LAL-HOU / [15][23] OKC-PHX / [16][22] DET-ORL G1 等 重複登録の整理 (Session_48 import + 既存命名のずれ) | PENDING | 中 | 次セッション |
 | PA044 | NHL | PA014 TBL-MTL G1 **MTL 4-3 OT 予測MISS 記録 DONE Session_44** (Slafkovsky hat trick + OT 1:22 PP). Type A A021 upset登録。CAUTION no-bet のため P&L影響なし | DONE | 高 | 完了 2026-04-20 |
 | PA045 | Rule Pipeline | **R020/R017 実装 DONE Session_44** (rules_tennis.json v2.2). P013/P010 implemented_rulesへ移動。GEN005衝突解消: R017 vs R020 同時成立時はR017優先 | DONE | 中 | 完了 2026-04-20 |
 | PA046 | 出力A/B | **Session_30-43 新規GO遡及追加 DONE Session_44** (multi_bets.json + dashboard同期). Leeds/Warriors/Warrington/SAS を追加。累計 11件・6HIT・3MISS・1VOID・1PENDING | DONE | 最高 | 完了 2026-04-20 |
