@@ -300,7 +300,18 @@
       "total": "N/A (既存 tier=skip records数)",
       "note": "L1差なし・UF因子なし・確実性低。予測精度追跡は prediction_hit ベース"
     },
-    "last_updated": "2026-04-20 Session_45"
+    "last_updated": "2026-04-20 Session_45",
+    "Q3_mid": {
+      "total": 0,
+      "confirmed": 0,
+      "hit": 0,
+      "hit_rate": null,
+      "ev_total": 0,
+      "_description": "Session_56 (2026-04-23) 新設: 80% <= conf < 85% の中確実性帯。Q3_output_a とは別バケットで集計。",
+      "rationale": "GEN007 #2 提案採用。soccer/高市場効率リーグで Q3_output_a (conf>=85%) 候補が 0件状態だったため、中確実性帯を分離追跡。目的は 85% 以上に昇格できる L1+L2 パターン特定。",
+      "review_trigger": "soccer records 50試合蓄積時に conf キャリブレーション (GEN007 #1 保留) とあわせて閾値再検証",
+      "last_updated": "2026-04-23 Session_56"
+    }
   },
   "last_updated": "2026-04-23",
   "schema_versions": [

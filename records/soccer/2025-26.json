@@ -1,32 +1,120 @@
 {
   "sport": "soccer",
-  "version": "1.0",
+  "version": "1.1",
   "season": "2025-26",
   "created": "2026-04-23",
-  "description": "サッカー 5 大リーグ (EPL/La Liga/Bundesliga/Serie A/Ligue 1) 予測記録。ユーザー提供データ起点でスクリーニング・予測・結果を追記する。",
+  "updated": "2026-04-23",
+  "description": "サッカー 5 大リーグ (EPL/La Liga/Bundesliga/Serie A/Ligue 1) + UCL/UEL KO stage (5大リーグ所属クラブ同士のみ) 予測記録。",
   "leagues": {
     "Premier League": {"country": "ENG", "teams_count": 20},
     "La Liga": {"country": "ESP", "teams_count": 20},
     "Bundesliga": {"country": "GER", "teams_count": 18},
     "Serie A": {"country": "ITA", "teams_count": 20},
-    "Ligue 1": {"country": "FRA", "teams_count": 18}
+    "Ligue 1": {"country": "FRA", "teams_count": 18},
+    "UCL": {"country": "EU", "scope_note": "5大リーグ所属クラブ同士の対戦のみ対象 (Session_56 2026-04-23 拡張)"},
+    "UEL": {"country": "EU", "scope_note": "5大リーグ所属クラブ同士の対戦のみ対象 (Session_56 2026-04-23 拡張)"}
   },
   "summary": {
-    "total_predictions": 0,
+    "total_predictions": 2,
     "bet_recommended": 0,
     "hit": 0,
     "miss": 0,
-    "pending": 0,
+    "pending": 2,
     "ev_total": 0.0,
     "prediction_hit_rate": null,
     "bet_hit_rate": null
   },
-  "predictions": [],
+  "predictions": [
+    {
+      "id": "SOC-001",
+      "league": "UCL",
+      "round": "SF 1st leg",
+      "date": "2026-04-29",
+      "kickoff_jst": "04:00",
+      "home": "Paris SG",
+      "away": "Bayern",
+      "odds": {"home": 2.31, "draw": 3.95, "away": 2.85},
+      "market_implied": {"home": 0.417, "draw": 0.244, "away": 0.338},
+      "l1_data": {
+        "elo_home": 1966.4,
+        "elo_away": 2020.0,
+        "elo_diff_raw": -53.6,
+        "elo_diff_home_adj": 6.4,
+        "xGD_per_game_home": 1.392,
+        "xGD_per_game_away": 2.035,
+        "xGD_diff": -0.643,
+        "l1_elo_ok": true,
+        "l1_xg_ok": true,
+        "l1_cross_ok": true
+      },
+      "predicted_winner": "Paris SG (slight)",
+      "prediction_confidence": 37.2,
+      "prediction_basis": "Home adj後 Elo差 +6.4 で PSG 僅差優位だが xGD/g で Bayern 強 (+0.64 逆方向)。L1 シグナル競合のため confidence 低。市場は PSG home 41.7% でほぼ同等評価。",
+      "prediction_hit": null,
+      "tier": "skip",
+      "quadrant": "skip",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "analysis_note": "UCL SF はホーム/アウェイの連戦設計 (2nd leg 5/7 Allianz Arena)。1st leg は情報戦・中立結果 (引き分け/僅差勝利) 狙いになりやすい。Elo と xG が逆方向を指すケースの典型例。",
+      "step_4_5_required": true,
+      "step_4_5_note": "両チーム SF 主力起用は標準 (UCL SF motivation +3% 想定)。怪我人 (Musiala/Kimmich/Sane/Dembele/Doue) の最新出場可否をキックオフ75分前に fetch_lineups で確認必須。",
+      "created": "2026-04-23",
+      "session": 56,
+      "source_data": "手動試合データ/2026-04-23-3.json"
+    },
+    {
+      "id": "SOC-002",
+      "league": "UCL",
+      "round": "SF 1st leg",
+      "date": "2026-04-30",
+      "kickoff_jst": "04:00",
+      "home": "Atletico",
+      "away": "Arsenal",
+      "odds": {"home": 2.85, "draw": 3.30, "away": 2.60},
+      "market_implied": {"home": 0.338, "draw": 0.292, "away": 0.370},
+      "l1_data": {
+        "elo_home": 1853.0,
+        "elo_away": 2044.2,
+        "elo_diff_raw": -191.2,
+        "elo_diff_home_adj": -131.2,
+        "xGD_per_game_home": 0.345,
+        "xGD_per_game_away": 1.125,
+        "xGD_diff": -0.78,
+        "l1_elo_ok": true,
+        "l1_xg_ok": true,
+        "l1_cross_ok": true
+      },
+      "predicted_winner": "Arsenal",
+      "prediction_confidence": 49.4,
+      "prediction_basis": "Home adj後 Elo差 -131 (Arsenal 強) / xGD/g 差 -0.78 (方向一致) L1★通過。Draw 率 29.2% が高く conf 49% 止まり。EV+28.3% @2.60 と市場乖離大 (Atletico home 短縮評価)。",
+      "prediction_hit": null,
+      "tier": "caution",
+      "caution_type": "margin",
+      "quadrant": "CAUTION_MARGIN",
+      "rec": "Arsenal",
+      "rec_odds": 2.60,
+      "ev": 28.3,
+      "analysis_note": "Arsenal は国内 EPL で xGD/g 1.125 で Elo 2044。Atletico はホーム力強いが xGD/g 0.345 で Arsenal に劣る。ただし Atletico は Wanda Metropolitano で伝統的にビッグクラブ相手 tight defense で 1-0/0-0 を引く傾向 → draw 率高め妥当。conf<75% で GO 条件未達。",
+      "step_4_5_required": true,
+      "step_4_5_note": "Saliba/Saka/Odegaard の出場可否 (Arsenal 怪我人多数 4月下旬) + Julian Alvarez/Griezmann 起用 をキックオフ75分前 fetch_lineups で確認必須。Arsenal 主力欠場判明なら conf 大幅降下。",
+      "created": "2026-04-23",
+      "session": 56,
+      "source_data": "手動試合データ/2026-04-23-3.json"
+    }
+  ],
   "screening_log": [
     {
       "date": "2026-04-23",
       "event": "records skeleton created",
       "note": "Session_54 新規追加。データ投入は次回以降のユーザー提供オッズJSON起点。"
+    },
+    {
+      "date": "2026-04-23",
+      "event": "Session_56 UCL 拡張初回スクリーニング",
+      "session": 56,
+      "note": "GEN007 提案 #3 採用。UCL SF 1st leg 2試合 (PSG-Bayern 4/29 / Atletico-Arsenal 4/30) を L1 クロスチェックで分析。PSG-Bayern は Elo/xG 競合で SKIP、Atletico-Arsenal は CAUTION_MARGIN (EV+28.3% だが conf 49.4%)。両試合とも STEP 4.5 スタメン確認必須。rules_soccer.json に ucl_uel_adjustments セクション追加済。",
+      "source_data": "手動試合データ/2026-04-23-3.json"
     }
   ]
 }

@@ -431,12 +431,17 @@ MISSは損失ではなく学習の機会。`miss_analysis` に「なぜ実際の
 
 |  | **EV+（ベット推奨）** | **EV-（ベットしないが予測）** |
 |---|---|---|
-| **本命側（Favorite）** | **Q1_go**<br>conf≥75% AND EV>+5% | **Q3_output_a**<br>conf≥85%（EV問わず） |
+| **本命側（Favorite）** | **Q1_go**<br>conf≥75% AND EV>+5% | **Q3_output_a**<br>conf≥85%（EV問わず）<br>**Q3_mid**<br>conf 80-84%（追跡中・別集計） |
 | **アップセット側（Dog）** | **Q2_upset_pick**<br>UF≥3 AND div≥15pp | **Q4_upset_watch**<br>dog odds≥3.0 AND UF≥2 |
 | **（どれも該当しない）** | → **skip**（L1差なし・UF因子なし・確実性低） | → **skip** |
 
+**【Session_56 2026-04-23 追加】Q3_mid の取り扱い:**
+- Q3_output_a (conf≥85%) とは別バケットで管理。cumulative.json / dashboard.html / multi_bets.json で**必ず分離表示**する
+- 目的: 中確実性帯の予測精度を別軸で追跡し、L1+L2深掘りで 85%以上に引き上げられる試合パターンを発見する
+- 統合・混在は禁止 (Q3_output_a の hit_rate を薄めないため)
+
 **4象限の運用ルール（必須遵守）：**
-1. **全試合に `quadrant` フィールドを付与**（Q1_go / Q2_upset_pick / Q3_output_a / Q4_upset_watch / skip のいずれか）
+1. **全試合に `quadrant` フィールドを付与**（Q1_go / Q2_upset_pick / Q3_output_a / **Q3_mid** / Q4_upset_watch / skip のいずれか）
 2. **Q1〜Q4 すべて深掘り対象**：Q1だけでなく Q2/Q3/Q4 も ②深掘り分析（WebSearch・スタッツ・怪我・フォーム等）を実施する
 3. **③検証は全象限で実施**：GO hit/miss だけでなく、Q3出力A・Q2/Q4 アップセット予測の精度も `stats/cumulative.json` の `by_quadrant` で追跡
 4. **④ルール強化は全象限の知見から**：Q3のMISS/Q4でのUPSET発生などもrule_pipelineに登録
@@ -446,8 +451,9 @@ MISSは損失ではなく学習の機会。`miss_analysis` に「なぜ実際の
 2. UF因子（UF01〜UFA06）を**機械的に全件walkthrough**し、該当数を記録
 3. 市場乖離（div pp = fav_implied - dog_implied）を計算
 4. 以下のテーブルで4象限分類：
-   - UF 0-1個 + conf<85% + EV<+5% → **skip**
-   - UF 0-1個 + conf<85% + EV>+5% → **Q1_go**
+   - UF 0-1個 + conf<80% + EV<+5% → **skip**
+   - UF 0-1個 + conf<80% + EV>+5% → **Q1_go** (conf≥75% 必須)
+   - UF 0-1個 + 80≤conf<85% → **Q3_mid** (Session_56 新設・別集計追跡)
    - UF 0-1個 + conf≥85% → **Q3_output_a**
    - UF 2個 + div 10-15pp → **Q4_upset_watch**（CAUTION相当）
    - UF 3個以上 + div≥15pp → **Q2_upset_pick**

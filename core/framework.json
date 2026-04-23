@@ -120,6 +120,41 @@
     "recommend_bet": "信頼度≥75% AND EV>+5%",
     "skip_bet": "上記以外（予測はするが、ベットは推奨しない）"
   },
+  "quadrant_framework": {
+    "_description": "Session_45 正式化 / Session_56 2026-04-23 Q3_mid 追加。全試合は必ず以下の quadrant いずれかにタグ付けする。",
+    "Q1_go": {
+      "label": "GO ベット推奨",
+      "condition": "UF 0-1個 AND conf≥75% AND EV≥+5% (Advanced) / conf≥78% AND EV≥+7% (Basic)",
+      "action": "ベット推奨 (1u)"
+    },
+    "Q2_upset_pick": {
+      "label": "UPSET_PICK アンダードッグ推奨",
+      "condition": "UF≥3個 AND 市場乖離≥15pp",
+      "action": "アンダードッグ側にベット推奨 (1u)。Q1と排他"
+    },
+    "Q3_output_a": {
+      "label": "出力A 高確実性予測 (ベットはEV次第で見送り)",
+      "condition": "UF 0-1個 AND conf≥85% (EV問わず)",
+      "action": "予測として記録。EV+ なら Q1_go と重複可"
+    },
+    "Q3_mid": {
+      "label": "Q3_mid 中確実性予測 (追跡中・Session_56 新設)",
+      "condition": "UF 0-1個 AND 80% ≤ conf < 85%",
+      "action": "Q3_output_a とは別集計で予測精度を追跡。統合・混在禁止。cumulative/dashboard/multi_bets の全箇所で分離表示必須。目的は『L1+L2深掘りで85%以上に昇格できるパターン特定』",
+      "rationale": "Session_56 (2026-04-23) GEN007 提案 #2 採用。Q3_output_a 閾値 85% のみでは soccer/高市場効率リーグで候補 0件状態が続くため、中確実性帯を分離バケットで追跡開始。",
+      "review_trigger": "soccer records 50試合蓄積で conf キャリブレーション (提案 #1 保留分) と合わせて閾値妥当性を再検証"
+    },
+    "Q4_upset_watch": {
+      "label": "UPSET_WATCH 観察 (ベットなし)",
+      "condition": "UF 2個 AND 市場乖離 10-15pp / または dog_odds≥3.0 AND UF≥2",
+      "action": "観察記録のみ。UPSET 発生で upset_patterns.json に登録"
+    },
+    "skip": {
+      "label": "SKIP (L1 差なし・UF 因子なし・確実性低)",
+      "condition": "上記いずれも該当しない",
+      "action": "予測勝者は必ず記録するが、ベット推奨はしない"
+    }
+  },
   "caution_taxonomy": {
     "_description": "Session_48 (2026-04-23) 導入: 従来の tier=caution を 3 サブタイプに分解。caution_type フィールドで識別。ベットは一切行わないが、それぞれ異なる運用目的を持つ。",
     "waiting": {

@@ -8,7 +8,20 @@
     "La Liga": "La Liga (Spain)",
     "Bundesliga": "Bundesliga (Germany)",
     "Serie A": "Serie A (Italy)",
-    "Ligue 1": "Ligue 1 (France)"
+    "Ligue 1": "Ligue 1 (France)",
+    "UCL": "UEFA Champions League (KO stage only, both teams from 5 big leagues) — Session_56 2026-04-23 追加",
+    "UEL": "UEFA Europa League (同条件) — Session_56 2026-04-23 追加"
+  },
+  "ucl_uel_adjustments": {
+    "_description": "Session_56 (2026-04-23) GEN007 提案 #3 採用による拡張。UCL/UEL は 5大リーグ所属クラブ同士の対戦のみ対象。国内リーグと性質が異なる点を補正する。",
+    "home_advantage": {
+      "default": "通常の home adj +60 Elo (国内リーグ) を維持。ただし中立地開催 (final) の場合は home adj = 0",
+      "cup_context": "KO stage のホームは 1st leg / 2nd leg の違いで意味が変わる。2nd leg ホームは away goals 廃止後も引き分け以上で通過可なので若干重要度高い (+5pp conf)"
+    },
+    "motivation_factor": "+3% confidence: UCL/UEL SF 以降は主力フル起用が標準 (ローテ補正は不要)。QF 以前は 6 日以内に国内リーグ重要試合がある場合 -5% (ローテ発動リスク)",
+    "form_vs_league_variance": "国内リーグ xG と UCL xG のサンプル分離困難。understat は UCL xG 個別提供なし → 国内リーグ xG を流用するが、UCL 内での履歴がある場合は参考情報として記録のみ (confidence には反映しない)",
+    "eligible_clubs_note": "両チームが 5 big leagues (EPL/La Liga/Bundesliga/Serie A/Ligue 1) に所属している場合のみ適用。片方でも他リーグ (Eredivisie / Primeira Liga 等) の場合は対象外 SKIP",
+    "fixture_labeling": "records/soccer/2025-26.json の league フィールドは 'UCL' または 'UEL' を使用、round フィールドで R16/QF/SF/F を識別"
   },
   "screening": {
     "L1_priority": [

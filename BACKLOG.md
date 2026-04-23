@@ -308,6 +308,36 @@
 - monitoring/pending_actions.md PA085/PA086 → DONE
 - BACKLOG.md Session_56 完了報告
 
+### 🚨 Session_56 Part 2: 2026-04-23-3.json スクリーニング + GEN007 提案採用
+
+**主題: 手動試合データ/2026-04-23-3.json (86試合) 一括スクリーニング → GEN007 3提案のユーザー判断を反映**
+
+**1. スクリーニング結果 (57 in-scope / 29 out-of-scope)**:
+- soccer 5大リーグ: 48試合 → Q1_go 0件 / Q3_output_a 0件 / CAUTION_MARGIN 3件 / skip 45件
+- MLB: 9試合 → 全 SKIP (Basic Tier 閾値 conf≥78% AND EV≥+7% に届かず)
+- CAUTION_MARGIN 3件: Mainz-Bayern (conf 69.1% EV+15.3%) / Koeln-Leverkusen (conf 56% EV+5.9%) / Osasuna-Sevilla (conf 49.5% EV+5.5%)
+- Out-of-scope: UCL SF 2 + Brazilian 10 + Ligue 2 9 + French National 8
+
+**2. GEN007 提案 #3 UCL 拡張 → 採用・即実装完了 (PA089)**:
+- rules_soccer.json に UCL/UEL target_leagues + ucl_uel_adjustments セクション追加
+- 5大リーグ所属クラブ同士のみ対象 (Eredivisie/Primeira Liga は対象外 SKIP)
+- records/soccer/2025-26.json に UCL SF 2試合登録:
+  - SOC-001 PSG vs Bayern (4/29 04:00 JST): Elo 1966 vs 2020 (home-adj +6.4) / xGD/g 1.39 vs 2.04 / L1 シグナル競合で conf 37.2% → **SKIP**
+  - SOC-002 Atletico vs Arsenal (4/30 04:00 JST): Elo 1853 vs 2044 (home-adj -131) / xGD/g 0.35 vs 1.13 / L1★通過だが conf 49.4% → **CAUTION_MARGIN** (EV+28.3% @2.60 Arsenal away)
+- 両試合 STEP 4.5 必須 (PA092)
+
+**3. GEN007 提案 #2 Q3 閾値緩和 + Q3_mid 新設 → 条件付き採用・実装完了 (PA088)**:
+- Q3_output_a は **85% 維持** (変更なし)
+- 新規 **Q3_mid バケット** (80% ≤ conf < 85%) を別集計で追跡開始
+- framework.json に quadrant_framework セクション追加 (Q1_go / Q2_upset_pick / Q3_output_a / Q3_mid / Q4_upset_watch / skip の6分類正式定義)
+- CLAUDE.md 4象限テーブル & 分類手順を Q3_mid 対応に更新
+- cumulative.json に Q3_mid バケット追加 (total=0 / hits=0 / rationale 記載)
+- 統合・混在禁止。dashboard_stats.json への表示は PA091 で次セッション拡張
+
+**4. GEN007 提案 #1 conf キャリブレーション → 保留 (PA090)**:
+- soccer records 50試合蓄積時に再提案する約束で登録
+- 現状は仮係数 (logistic divisor=400 / xGD_bonus=0.015 / conf上限=0.92) のまま運用継続
+
 ### 🎯 Session_57 行動計画 (次回)
 
 **最優先 A: Session_54 以降の積み残し pending 結果確認**
@@ -318,6 +348,11 @@
 **最優先 B: 修復後 fetcher 群の実運用確認**
 - 明日以降の試合スクリーニングで soccer L1 / MLB L1 クロスチェックを実地使用
 - GitHub Actions (fetch_stats.yml) での自動実行が次の朝に成功するか確認
+
+**最優先 C: UCL SF STEP 4.5 スタメン確認 (PA092)**
+- 4/29 PSG-Bayern / 4/30 Atletico-Arsenal キックオフ75分前に fetch_lineups.py 実行
+
+**中優先: PA091 sync_dashboard.py に Q3_mid セクション追加**
 
 ---
 
