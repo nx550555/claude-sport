@@ -1862,8 +1862,104 @@
       },
       "notes": "Session_53 L1-based screening for new data 2026-04-23-2.json. No GO bets generated (all EV<+7% Basic Tier threshold or conf<78%). 3 Q3 output_a candidates + 4 Q4 upset_watch + 1 CAUTION_MARGIN (OTT-CAR G3 EV+4.98%). Session focused on infra: full coverage 47+14+16 = 77 match analyses recorded across 8 sports. CE018 newly discovered in Top14.",
       "session": "_53"
+    },
+    {
+      "date": "2026-04-23",
+      "session_id": "_56",
+      "sports_screened": [
+        "Soccer_EPL",
+        "Soccer_La_Liga",
+        "Soccer_Bundesliga",
+        "Soccer_Serie_A",
+        "Soccer_Ligue_1",
+        "UCL_SF_1st_leg",
+        "MLB_2026_GD37"
+      ],
+      "total_matches_screened": 57,
+      "scope_out": 29,
+      "scope_out_breakdown": {
+        "UCL": "2 (採用で in-scope 化)",
+        "Brazilian_Serie_A": 10,
+        "Ligue_2": 9,
+        "French_National": 8
+      },
+      "screening_data_source": "2026-04-23-3.json",
+      "output_a": {
+        "description": "Session_56 Q3_output_a (conf>=85) - soccer 5大リーグ + UCL + MLB 全 SKIP / 該当0件",
+        "candidates": []
+      },
+      "output_a_mid": {
+        "description": "Session_56 新設 Q3_mid (80<=conf<85) - soccer 5大リーグ + UCL + MLB 全 SKIP / 該当0件",
+        "candidates": []
+      },
+      "caution_margin": {
+        "description": "Session_56 L1★通過 + EV+ だが conf<75% で GO 未達",
+        "candidates": [
+          {
+            "rank": 1,
+            "match": "Mainz vs Bayern",
+            "sport": "Bundesliga",
+            "rec": "Bayern",
+            "conf": 69.1,
+            "odds": 1.67,
+            "ev": 15.3,
+            "date": "2026-04-25",
+            "note": "Elo adj -282 / xGD/g diff -2.075 圧倒差だが market 効率 EV 限定的"
+          },
+          {
+            "rank": 2,
+            "match": "Koeln vs Leverkusen",
+            "sport": "Bundesliga",
+            "rec": "Leverkusen",
+            "conf": 56.0,
+            "odds": 1.89,
+            "ev": 5.9,
+            "date": "2026-04-25",
+            "note": "Elo adj -161 / xGD/g diff -1.045"
+          },
+          {
+            "rank": 3,
+            "match": "Osasuna vs Sevilla",
+            "sport": "La Liga",
+            "rec": "Osasuna",
+            "conf": 49.5,
+            "odds": 2.13,
+            "ev": 5.5,
+            "date": "2026-04-27",
+            "note": "Elo adj +127 / xGD/g diff +0.625 / Home"
+          },
+          {
+            "rank": 4,
+            "match": "Atletico vs Arsenal",
+            "sport": "UCL SF",
+            "rec": "Arsenal",
+            "conf": 49.4,
+            "odds": 2.6,
+            "ev": 28.3,
+            "date": "2026-04-30",
+            "note": "Elo adj -131 / xGD/g diff -0.78 / UCL 新拡張 初回 CAUTION_MARGIN"
+          }
+        ]
+      },
+      "q4_upset_watch": {
+        "description": "L1 unfit で計測対象外",
+        "candidates": []
+      },
+      "output_b_multi": {
+        "description": "Session_56: L1★通過 + EV+ GO 0件のためマルチ構成不可",
+        "total_prob_top5": [],
+        "ev_max_top5": []
+      },
+      "session_notes": [
+        "GEN007 提案 3件の判断反映完了: #3 UCL 拡張 採用 / #2 Q3_mid 新設 条件付き採用 / #1 キャリブレーション 保留",
+        "PA085 Understat fetcher 書き直し (Playwright + table 直接パース) で 96 teams 取得",
+        "PA086 FanGraphs → MLB StatsAPI 切替 (Cloudflare 回避) で 30 teams 取得",
+        "health_check v7 ALERT 0 / WARN 0 の完全健全化達成",
+        "soccer records SOC-001 PSG-Bayern (SKIP) + SOC-002 Atletico-Arsenal (CAUTION_MARGIN) 初回登録",
+        "mid-session で Session_54 一括 (lineup_watch/notify_digest 新設) から Session_55 (fetcher 部分修復) の積み残し解消"
+      ]
     }
   ],
   "last_updated": "2026-04-23",
-  "last_session": "_52"
+  "last_session": "_56"
 }

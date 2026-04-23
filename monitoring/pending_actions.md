@@ -61,10 +61,10 @@
 | PA039 | Tennis | 2026-MC.json CE015波及訂正 **DONE Session_43**: SF Alcaraz vs de Minaur → Alcaraz vs Vacherot (6-4 6-4) 訂正 / Marozsan vs Hurkacz スコア 6-2 6-3 確認 / QF draw_structure/screening_log 訂正 | DONE | 高 | 完了 2026-04-20 |
 | PA040 | スクリーニング | 2026-04-19.json スクリーニング **DONE Session_43**: NHL PO G1残5+G2 全SKIP / NBA PO G1残7 全SKIP / NRL R9 全SKIP / Top14 R22 全SKIP / WTA Oeiras+Madrid Q + ATP Challenger (out-of-scope, cElo取得不可) ログのみ | DONE | 中 | 完了 2026-04-20 |
 | PA041 | NHL | PO R1 G1 全8試合 結果反映 **DONE Session_47**: BUF/CAR/VGK/EDM HIT, TBL/PIT/DAL MISS(A021/A027/A028), COL HIT(Session_46). 5/8 62.5% all SKIP/CAUTION no-bet | DONE | 中 | 完了 2026-04-21 |
-| PA042 | P013実装判断 | Molcan/Shapovalov(MISS) + Kopriva/Darderi + Molcan/Altmaier で evidence 3件到達 → R020 「R1 upsetter R2 momentum +5%」実装判断 | PENDING | 中 | 次セッション |
-| PA043 | P010実装判断 | Jodar d. Norrie (A019候補) 追加で evidence 2件到達 → R017 「WC home + 連続ラウンドモメンタム +5%」実装判断 | PENDING | 中 | 次セッション |
+| PA042 | P013実装判断 | **DONE Session_56 棚卸し**: rule_pipeline.json で P013 は既に status=implemented (R020 として rules_tennis.json v2.2 に反映済 Session_44)。本 PA は誤残留のため DONE 化 | DONE | 中 | 完了 (Session_44 実装済) |
+| PA043 | P010実装判断 | **DONE Session_56 棚卸し**: rule_pipeline.json で P010 は既に status=implemented (R017 として rules_tennis.json v2.2 に反映済 Session_44)。本 PA は誤残留のため DONE 化 | DONE | 中 | 完了 (Session_44 実装済) |
 | PA036 | NRL | R7 Warriors @1.23 GO 結果確認 — **DONE 4/18 Warriors 28-20 Titans HIT +0.23u** (HT 22pt lead, Titans後半猛追も Warriors が最終ラインで止めて8点差逃げ切り) | DONE | 中 | 完了 2026-04-18 |
-| PA-PERM01 | 常設 | **毎セッション終了時に multi_bets.json の最新 session date が本日か確認し、古ければ session エントリを追記する**（全SKIPでも「候補なし」として記録）— 2026-04-20 Session_44 運用改善で追加 | PENDING | 最高 | 毎セッション末尾 |
+| PA-PERM01 | 常設 | **毎セッション終了時に multi_bets.json の最新 session date が本日か確認し、古ければ session エントリを追記する**（全SKIPでも「候補なし」として記録）— 2026-04-20 Session_44 運用改善で追加 **[Session_56 実施 2026-04-23: _56 session エントリ追記済 11件目 / last_session _56 更新]** | PENDING | 最高 | 毎セッション末尾 |
 | PA-PERM02 | 常設 | **毎セッション終了時に dashboard.html の予測精度タブ・成長分析タブの数値を dashboard_stats.json と突き合わせる** — Session_44 で Session_42/43 の訂正が未反映と発覚したため追加 | PENDING | 最高 | 毎セッション末尾 |
 | PA-PERM03 | 常設 | **スクリーニング時に UF因子（UF01〜UFA06）全件 walkthrough を必須実施**し、該当数+市場乖離を記録。UF≥3+div≥15pp で UPSET_PICK 候補化。CAUTION/SKIPでもUF≥2 なら注意記録 — Session_45 GEN005 運用改善 | PENDING | 最高 | 各試合スクリーニング時 |
 | PA-PERM04 | 常設 | **出力A候補（fav conf≥85%）は EV負でも独立タグ付けで抽出し multi_bets.json に記録**。GO推奨とは別軸で管理（CLAUDE.md指示通り） — Session_45 case-C で運用漏れ発覚 | PENDING | 最高 | 各セッション末尾 |
@@ -87,7 +87,7 @@
 | PA064 | Q3 output_a 4件 | **DONE Session_50**: Sonmez HIT / BOS G2 MISS / SAS G2 MISS / OKC G2 HIT (OKC 120-107 PHX SGA 37pts)。Q3 通算 9/11 81.8% | DONE | 高 | 完了 2026-04-23 |
 | PA065 | EDM-ANA G2 | **DONE Session_50**: ANA 6-4 EDM UPSET (Gauthier 決勝点 残り4:52)。予測MISS。SKIP no-bet (P&L 0)。type_a_watch 的中で P025 evidence 2/3 到達 | DONE | 高 | 完了 2026-04-23 |
 | PA066 | OKC-PHX G2 | **DONE Session_50**: OKC 120-107 PHX HIT (SGA 37pts/9ast)。シリーズ 2-0 OKC。Q3 output_a HIT | DONE | 高 | 完了 2026-04-23 |
-| PA067 | NBA records dedup | [10][17] CLE-TOR G1 / [11][21][30] NYK-ATL / [12][20][32] DEN-MIN / [13][18] BOS-PHI G1 / [14][24] LAL-HOU / [15][23] OKC-PHX / [16][22] DET-ORL G1 等 重複登録の整理 (Session_48 import + 既存命名のずれ) | PENDING | 中 | 次セッション |
+| PA067 | NBA records dedup | **DONE Session_56 棚卸し**: PA075 (Session_51) で既に解消済を確認。現状 33 games 中 6件 duplicate_closed / 27件 active / 残重複 0 件。本 PA は誤残留 | DONE | 中 | 完了 (Session_51 PA075 で解消) |
 | PA068 | Madrid GO 5件 結果 | Session_50 新規 → **Session_52 GEN003 で Tsitsipas / Musetti を CAUTION 降格**。残 GO 3件: Paul @1.40 (4/24) / Keys @1.23 (4/24) / Mertens @1.37 (**4/23 date 訂正**) 結果確認 | WAITING | 最高 | 4/23-25 |
 | PA076 | GEN003 Session_52 downgrade 追跡 | Tsitsipas CAUTION_MARGIN (@1.35 conf 72 / 今日 4/23) / Musetti CAUTION_WAITING (@1.42 conf 71 / 4/24 arm injury 初戦) 結果確認。CAUTION 予測精度として記録 (bet-off)。試合前に Musetti practice 状況で WAITING→SKIP 再判定検討 | WAITING | 高 | 4/23-24 |
 | PA077 | UFL W5 スクリーニング | **Session_52 で W5 schedule 確認のみ** (4/24-26 4試合 Louisville/Birmingham・StL/Orlando・Columbus/Houston・日曜夕方4試合目要確認)。PD/G 取得が未実施 → 次セッションで ESPN/FOX stats 取得後に L1 スクリーニング 4試合 | PENDING | 高 | 4/23-25 |
@@ -113,7 +113,7 @@
 | PA088 | Session_56 GEN007 #2 Q3_mid 新設 DONE | Q3_output_a 閾値 85% は維持しつつ、80-84% 帯を Q3_mid として別バケット追跡開始。framework.json quadrant_framework セクション追加・CLAUDE.md 4象限テーブル更新・cumulative.json Q3_mid bucket 追加。統合禁止・分離表示必須。| DONE | 高 | 完了 2026-04-23 |
 | PA089 | Session_56 GEN007 #3 UCL 拡張 DONE | rules_soccer.json に UCL/UEL target_leagues + ucl_uel_adjustments セクション追加。5大リーグ所属クラブ同士のみ対象。records/soccer/2025-26.json に SOC-001 PSG-Bayern (4/29) + SOC-002 Atletico-Arsenal (4/30) 初回登録。PSG-Bayern は SKIP、Atletico-Arsenal は CAUTION_MARGIN (conf 49.4% EV+28.3%)。両試合 STEP 4.5 必須 | DONE | 高 | 完了 2026-04-23 |
 | PA090 | Session_56 GEN007 #1 保留: conf キャリブレーション | soccer records 50試合到達時に再提案。現状は仮係数 (logistic divisor=400 / xGD_bonus=0.015 / conf上限=0.92) で運用。understat の過去 backtest data を使うか、自前 records 蓄積を待つかは再提案時に決定。ユーザー判断: 保留 (2026-04-23) | PENDING | 中 | soccer 50試合到達時 |
-| PA091 | Session_56 Q3_mid sync_dashboard.py 拡張 | sync_dashboard.py / dashboard_stats.json に Q3_mid バケットを表示する分離セクションを追加する必要あり。現状 cumulative.json は更新済だがダッシュボード可視化未対応 | PENDING | 中 | 次セッション以降 |
+| PA091 | Session_56 Q3_mid sync_dashboard.py 拡張 | **DONE Session_56 2026-04-23**: sync_dashboard.py の build_q3_html に Q3_mid バケット生成ロジック追加 (by_quadrant.Q3_mid 読込 + AUTO:PRED_Q3_MID ブロック出力)。dashboard.html 予測精度タブに Q3_mid 別パネル表示開始。該当0件でも panel 表示される設計 | DONE | 中 | 完了 2026-04-23 |
 | PA092 | Session_56 UCL SF STEP 4.5 | PSG-Bayern (4/29 04:00 JST) と Atletico-Arsenal (4/30 04:00 JST) のキックオフ75分前に fetch_lineups.py --sport soccer で team sheet 取得必須。GK/主力FW/CB/キャプテン確認で EV 再計算。Arsenal の Saliba/Saka/Odegaard 出場可否が最重要 | PENDING | 最高 | 4/29-30 キックオフ75分前 |
 | PA044 | NHL | PA014 TBL-MTL G1 **MTL 4-3 OT 予測MISS 記録 DONE Session_44** (Slafkovsky hat trick + OT 1:22 PP). Type A A021 upset登録。CAUTION no-bet のため P&L影響なし | DONE | 高 | 完了 2026-04-20 |
 | PA045 | Rule Pipeline | **R020/R017 実装 DONE Session_44** (rules_tennis.json v2.2). P013/P010 implemented_rulesへ移動。GEN005衝突解消: R017 vs R020 同時成立時はR017優先 | DONE | 中 | 完了 2026-04-20 |

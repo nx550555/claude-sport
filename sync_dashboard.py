@@ -306,6 +306,15 @@ def build_q3_panel(cumul, stats):
     main_pct = fmt_pct(q3_rate)
     main_color = color_pct(q3_rate)
 
+    # Q3_mid bucket (Session_56 2026-04-23 新設: 80 <= conf < 85)
+    q3_mid = cumul.get("by_quadrant", {}).get("Q3_mid", {})
+    q3m_total = q3_mid.get("total", 0) or 0
+    q3m_conf = q3_mid.get("confirmed", 0) or 0
+    q3m_hit = q3_mid.get("hit", 0) or 0
+    q3m_rate = (q3m_hit / q3m_conf) if q3m_conf > 0 else None
+    q3m_pct = fmt_pct(q3m_rate) if q3m_conf else "—"
+    q3m_color = color_pct(q3m_rate) if q3m_conf else "#8b949e"
+
     html = f"""<!-- AUTO:PRED_Q3 START -->
     <div class="pred-panel all-games">
       <div class="pred-panel-title">🔵 全試合予測 / Q3 高確率予想（v3.0〜 2026-04-13〜）</div>
@@ -319,7 +328,24 @@ def build_q3_panel(cumul, stats):
         ※ Source: stats/cumulative.json by_quadrant.Q3_output_a + records/multi_bets.json (auto-synced).
       </div>
     </div>
-    <!-- AUTO:PRED_Q3 END -->"""
+    <!-- AUTO:PRED_Q3 END -->
+
+    <!-- AUTO:PRED_Q3_MID START (Session_56 2026-04-23 新設) -->
+    <div class="pred-panel all-games" style="margin-top:16px;">
+      <div class="pred-panel-title" style="border-top-color:#f59e0b;">🟡 Q3_mid 中確実性予測（Session_56 新設 / 追跡中）</div>
+      <div class="pred-main-stat"><span class="pred-pct" style="color:{q3m_color};">{q3m_pct}</span><span class="pred-count">Q3_mid {q3m_hit} / {q3m_conf} 確定 <span style="color:#f0a519;">(total {q3m_total})</span></span></div>
+      <div class="pred-rows">
+        <div class="pred-row" style="background:rgba(245,158,11,.10);"><strong>🟡 Q3_mid (80% ≤ conf &lt; 85%)</strong><span><strong>{q3m_hit} / {q3m_conf}</strong></span><span style="color:{q3m_color};"><strong>{q3m_pct}</strong></span></div>
+        {'<div class="pred-row"><span style="padding-left:12px;color:var(--text2);">現在該当試合なし。soccer 5大リーグ + UCL + MLB いずれも conf 80% 未満</span><span></span><span style="color:#8b949e;">—</span></div>' if q3m_total == 0 else ''}
+      </div>
+      <div style="font-size:11px;color:var(--text2);margin-top:10px;padding-top:8px;border-top:1px solid var(--border);">
+        ※ Q3_mid = 80% ≤ conf &lt; 85% の中確実性帯。Q3_output_a (conf≥85%) とは別バケットで集計・統合禁止。<br>
+        ※ 目的: soccer など市場効率が高いリーグで L1+L2 深掘りによる 85%以上への昇格パターンを特定する。<br>
+        ※ GEN007 提案 #2 採用 (Session_56 2026-04-23)。conf キャリブレーション (提案 #1) は soccer 50試合蓄積時に再評価。<br>
+        ※ Source: stats/cumulative.json by_quadrant.Q3_mid (Session_56 追加).
+      </div>
+    </div>
+    <!-- AUTO:PRED_Q3_MID END -->"""
     return html
 
 
