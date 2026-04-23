@@ -371,97 +371,146 @@ def build_active_tab(stats):
         ("🏉 ラグビー", ["nrl", "superrugby", "superleague", "premiership", "top14", "prod2"]),
     ]
 
-    blocks = []
-    total_pending = 0
-    for group_label, keys in group_order:
-        # collect pending entries for each sport in group
-        group_items = []
-        for k in keys:
-            items = collect_pending_entries(k)
-            for it in items:
-                group_items.append((k, it))
-        count = len(group_items)
-        total_pending += count
+    # Split into GO (bet推奨) and CAUTION (観察 no-bet)
+    go_blocks = []
+    caution_blocks = []
+    go_count = 0
+    caution_count = 0
 
-        _, _, _, sport_label = RECORDS_BY_SPORT[keys[0]]
-        sub_labels = "/".join(RECORDS_BY_SPORT[k][3] for k in keys if RECORDS_BY_SPORT[k][0].exists())
+    def render_card(sport_key, e, is_go):
+        _, emoji, _, sport_label = RECORDS_BY_SPORT[sport_key]
+        tier_tag = tier_by_sport.get(sport_key, "basic")
+        tier_label = "Adv" if tier_tag == "adv" else "Basic"
+        tier_cls = "tier-adv" if tier_tag == "adv" else "tier-basic"
 
-        blocks.append(
-            f'    <div class="active-league-hdr">\n'
-            f'      <span>{group_label} <span style="color:var(--text2);font-weight:400;font-size:11px;">{sub_labels}</span></span>\n'
-            f'      <span class="alh-count">{count}件</span>\n'
+        tier_badge = (
+            '<span class="badge badge-go">GO (ベット推奨)</span>'
+            if is_go
+            else '<span class="badge" style="background:#3a2a0a;color:#e3b341;">CAUTION (監視・ベット無し)</span>'
+        )
+
+        match = e.get("match", "?")
+        rec = e.get("rec") or e.get("predicted_winner") or "?"
+        odds_raw = e.get("rec_odds") or e.get("fav_odds")
+        odds = f"{odds_raw}" if isinstance(odds_raw, (int, float)) else "—"
+        ev = e.get("ev")
+        if isinstance(ev, (int, float)):
+            if abs(ev) > 1.5:
+                ev_str = f"({ev:.2f} ←要修正)"
+                ev_color = "#f85149"
+            else:
+                ev_str = f"{ev*100:+.1f}%"
+                ev_color = "#3fb950" if ev > 0 else ("#f85149" if ev < 0 else "#8b949e")
+        else:
+            ev_str = "—"
+            ev_color = "#8b949e"
+        conf_raw = e.get("prediction_confidence")
+        conf = f"{conf_raw}%" if isinstance(conf_raw, (int, float)) else "—"
+        round_ = e.get("round", "")
+        tourney = e.get("tournament", sport_label)
+        date_ = e.get("date", "—")
+        basis = e.get("prediction_basis") or e.get("note") or ""
+
+        l1_data_raw = e.get("l1_data", "")
+        l1_data = l1_data_raw if isinstance(l1_data_raw, str) else json.dumps(l1_data_raw, ensure_ascii=False)[:80]
+        l1_short = l1_data[:60] + ("…" if len(l1_data) > 60 else "") if l1_data else ""
+
+        action_label = (
+            "ベット推奨"
+            if is_go
+            else "観察のみ (ベット無し)"
+        )
+        rec_color = "#3fb950" if is_go else "#e3b341"
+        card_style = (
+            ''
+            if is_go
+            else ' style="opacity:.85;border-left:3px solid #e3b341;"'
+        )
+
+        return (
+            f'    <div class="active-card"{card_style}>\n'
+            f'      <div class="ac-sport">{emoji} {sport_label} — {tourney} {round_} {tier_badge} <span class="tier-badge {tier_cls}">{tier_label}</span></div>\n'
+            f'      <div class="ac-match">{match}</div>\n'
+            f'      <div class="ac-rec">{action_label}: <strong style="color:{rec_color};">{rec}</strong></div>\n'
+            f'      <div class="ac-metrics">\n'
+            f'        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">{odds}</div></div>\n'
+            f'        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v" style="color:{ev_color};font-weight:700;">{ev_str}</div></div>\n'
+            f'        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">{conf}</div></div>\n'
+            f'        <div class="acm"><div class="acm-l">L1</div><div class="acm-v rule">{l1_short}</div></div>\n'
+            f'      </div>\n'
+            f'      <div class="ac-note">{basis}</div>\n'
+            f'      <div class="ac-date">📅 {date_} — {tourney} {round_}</div>\n'
             f'    </div>'
         )
 
-        for sport_key, e in group_items:
-            _, emoji, _, sport_label = RECORDS_BY_SPORT[sport_key]
-            tier_tag = tier_by_sport.get(sport_key, "basic")
-            tier_label = "Adv" if tier_tag == "adv" else "Basic"
-            tier_cls = "tier-adv" if tier_tag == "adv" else "tier-basic"
-
-            tier_badge = (
-                '<span class="badge badge-go">GO</span>'
-                if e.get("tier") == "go"
-                else '<span class="badge" style="background:#3a2a0a;color:#e3b341;">CAUTION</span>'
-            )
-
-            match = e.get("match", "?")
-            rec = e.get("rec") or e.get("predicted_winner") or "?"
-            odds_raw = e.get("rec_odds") or e.get("fav_odds")
-            odds = f"{odds_raw}" if isinstance(odds_raw, (int, float)) else "—"
-            ev = e.get("ev")
-            if isinstance(ev, (int, float)):
-                # Guard against percentage unit mistakes (>1 or <-1)
-                if abs(ev) > 1.5:
-                    ev_str = f"({ev:.2f} ←要修正)"
+    # Group entries by group + tier
+    for group_label, keys in group_order:
+        group_go = []
+        group_caution = []
+        for k in keys:
+            for e in collect_pending_entries(k):
+                if e.get("tier") == "go":
+                    group_go.append((k, e))
                 else:
-                    ev_str = f"{ev*100:+.1f}%"
-            else:
-                ev_str = "—"
-            conf_raw = e.get("prediction_confidence")
-            conf = f"{conf_raw}%" if isinstance(conf_raw, (int, float)) else "—"
-            round_ = e.get("round", "")
-            tourney = e.get("tournament", sport_label)
-            date_ = e.get("date", "—")
-            basis = e.get("prediction_basis") or e.get("note") or ""
+                    group_caution.append((k, e))
 
-            l1_data_raw = e.get("l1_data", "")
-            l1_data = l1_data_raw if isinstance(l1_data_raw, str) else json.dumps(l1_data_raw, ensure_ascii=False)[:80]
-            l1_short = l1_data[:60] + ("…" if len(l1_data) > 60 else "") if l1_data else ""
+        _, _, _, _ = RECORDS_BY_SPORT[keys[0]]
+        sub_labels = "/".join(RECORDS_BY_SPORT[k][3] for k in keys if RECORDS_BY_SPORT[k][0].exists())
 
-            blocks.append(
-                f'    <div class="active-card">\n'
-                f'      <div class="ac-sport">{emoji} {sport_label} — {tourney} {round_} {tier_badge} <span class="tier-badge {tier_cls}">{tier_label}</span></div>\n'
-                f'      <div class="ac-match">{match}</div>\n'
-                f'      <div class="ac-rec">推奨: <strong style="color:#3fb950;">{rec}</strong></div>\n'
-                f'      <div class="ac-metrics">\n'
-                f'        <div class="acm"><div class="acm-l">オッズ</div><div class="acm-v odds">{odds}</div></div>\n'
-                f'        <div class="acm"><div class="acm-l">予測EV</div><div class="acm-v ev">{ev_str}</div></div>\n'
-                f'        <div class="acm"><div class="acm-l">確信度</div><div class="acm-v">{conf}</div></div>\n'
-                f'        <div class="acm"><div class="acm-l">L1</div><div class="acm-v rule">{l1_short}</div></div>\n'
-                f'      </div>\n'
-                f'      <div class="ac-note">{basis}</div>\n'
-                f'      <div class="ac-date">📅 {date_} — {tourney} {round_}</div>\n'
+        if group_go:
+            go_blocks.append(
+                f'    <div class="active-league-hdr">\n'
+                f'      <span>{group_label} <span style="color:var(--text2);font-weight:400;font-size:11px;">{sub_labels}</span></span>\n'
+                f'      <span class="alh-count">{len(group_go)}件</span>\n'
                 f'    </div>'
             )
+            for sk, e in group_go:
+                go_blocks.append(render_card(sk, e, is_go=True))
+            go_count += len(group_go)
 
-    blocks_html = "\n\n".join(blocks)
+        if group_caution:
+            caution_blocks.append(
+                f'    <div class="active-league-hdr">\n'
+                f'      <span>{group_label} <span style="color:var(--text2);font-weight:400;font-size:11px;">{sub_labels}</span></span>\n'
+                f'      <span class="alh-count">{len(group_caution)}件</span>\n'
+                f'    </div>'
+            )
+            for sk, e in group_caution:
+                caution_blocks.append(render_card(sk, e, is_go=False))
+            caution_count += len(group_caution)
 
-    footer = (
-        f'  <div style="margin-top:14px;padding:10px 14px;background:var(--surface2);border-radius:6px;font-size:12px;color:var(--text2);line-height:1.7;">\n'
-        f'    <strong style="color:var(--text);">🔄 自動同期:</strong> records/*.json から tier=go/caution かつ hit=null のエントリを動的抽出。結果確定後は自動的に履歴へ移動します。<br>\n'
-        f'    最終 sync: {datetime.datetime.now().strftime("%Y-%m-%d %H:%M")} | Pending 総数: {total_pending}件\n'
-        f'  </div>'
-    )
+    go_html = "\n\n".join(go_blocks) if go_blocks else '    <div style="padding:16px;text-align:center;color:var(--text2);font-size:12px;">現在アクティブな GO 推奨はありません（スクリーニングで conf≥75% AND EV>+5% 満たす試合なし）</div>'
+    caution_html = "\n\n".join(caution_blocks) if caution_blocks else '    <div style="padding:12px;text-align:center;color:var(--text2);font-size:11px;">観察対象の CAUTION エントリはありません</div>'
+
+    total_pending = go_count + caution_count
 
     html = f"""<!-- AUTO:ACTIVE_TAB START -->
-  <div class="section-title">アクティブ GO / CAUTION 推奨 — PENDING のみ（結果確定後は全履歴タブへ移動）</div>
+  <div class="section-title" style="color:#3fb950;border-bottom-color:#2ea043;">🟢 GO 推奨（ベット対象 / conf≥75% AND EV&gt;+5%）</div>
+  <div style="background:var(--surface);border:1px solid #3fb95040;border-radius:10px;padding:12px 16px;margin-bottom:14px;font-size:12px;color:var(--text2);line-height:1.7;">
+    条件を満たした試合のみ <strong style="color:#3fb950;">ベット推奨</strong>。stake 1u。結果確定後は全履歴タブへ移動。<br>
+    現在 <strong style="color:var(--text);">{go_count}件</strong>
+  </div>
   <div class="section"><div class="active-grid">
 
-{blocks_html}
+{go_html}
 
   </div></div>
-{footer}
+
+  <div class="section-title" style="margin-top:20px;color:#e3b341;border-bottom-color:#d29922;">🟡 CAUTION 監視（予測のみ・ベット無し）</div>
+  <div style="background:var(--surface);border:1px solid #d2992240;border-radius:10px;padding:12px 16px;margin-bottom:14px;font-size:12px;color:var(--text2);line-height:1.7;">
+    <strong style="color:#e3b341;">CAUTION = 予測精度 tracking のみの監視対象</strong>。GO閾値未達（conf&lt;75% / EV&lt;+5%）または goalie/injury 要確認で <strong>ベットは行いません</strong>。<br>
+    EV がマイナス表示でも推奨ではなく「予測が当たったかを追跡するだけ」の意味です。<br>
+    現在 <strong style="color:var(--text);">{caution_count}件</strong>
+  </div>
+  <div class="section"><div class="active-grid">
+
+{caution_html}
+
+  </div></div>
+
+  <div style="margin-top:14px;padding:10px 14px;background:var(--surface2);border-radius:6px;font-size:12px;color:var(--text2);line-height:1.7;">
+    <strong style="color:var(--text);">🔄 自動同期:</strong> records/*.json から tier=go/caution かつ hit=null のエントリを動的抽出。最終 sync: {datetime.datetime.now().strftime("%Y-%m-%d %H:%M")} | Pending 総数: {total_pending}件 (GO {go_count} + CAUTION {caution_count})
+  </div>
 </div>
 <!-- AUTO:ACTIVE_TAB END -->"""
     return html
