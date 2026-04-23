@@ -242,6 +242,50 @@ def main():
     except Exception as e:
         warnings.append(f"CE016整合性チェック失敗: {e}")
 
+    # ---- 10. MISS miss_analysis 完全性 (Session_50 追加: feedback loop 監査) ----
+    # 背景: 2026-04-23 ユーザー指摘で BOS G2 / SAS G2 の miss_analysis 空白が発覚。
+    # Q3 output_a MISS が rule_pipeline に反映されない feedback loop 機能不全の再発防止。
+    try:
+        import glob
+        record_files = sorted(glob.glob(str(BASE / "records" / "**" / "*.json"), recursive=True))
+        incomplete = []
+        for rf in record_files:
+            if "multi_bets.json" in rf: continue
+            try:
+                d = load(Path(rf))
+            except Exception:
+                continue
+            def walk(obj):
+                if isinstance(obj, list):
+                    for x in obj: yield from walk(x)
+                elif isinstance(obj, dict):
+                    yield obj
+                    for v in obj.values(): yield from walk(v)
+            for o in walk(d):
+                result = o.get('result')
+                pred = o.get('predicted_winner')
+                if not result or not pred: continue
+                if str(result).strip() == str(pred).strip(): continue
+                ph = o.get('prediction_hit')
+                if ph is True: continue
+                has_ma = bool(o.get('miss_analysis'))
+                has_layer = bool(o.get('miss_layer'))
+                has_rl = bool(o.get('rule_linked') or o.get('rules_triggered'))
+                if not (has_ma and has_layer and has_rl):
+                    missing = []
+                    if not has_ma: missing.append("miss_analysis")
+                    if not has_layer: missing.append("miss_layer")
+                    if not has_rl: missing.append("rule_linked")
+                    match_name = str(o.get('match', '?'))[:40]
+                    file_name = Path(rf).name
+                    incomplete.append(f"{file_name}:{match_name}[{','.join(missing)}]")
+        if incomplete:
+            anomalies.append(f"MISS miss_analysis 欠損 {len(incomplete)}件: {'; '.join(incomplete[:3])}{'...' if len(incomplete)>3 else ''} → feedback loop 機能不全。rule_pipeline 反映前に補填必須。")
+        else:
+            goods.append(f"MISS feedback loop: 全 MISS 記録で miss_analysis + miss_layer + rule_linked 完全")
+    except Exception as e:
+        warnings.append(f"MISS miss_analysis 完全性チェック失敗: {e}")
+
     # === v4 追加: 外部スタッツフィード (GEN006) ===
     try:
         import sys as _sys

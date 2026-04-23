@@ -91,6 +91,8 @@
 | PA068 | Madrid GO 5件 結果 | Session_50 新規: Tsitsipas @1.35 (4/23) / Paul @1.40 (4/24) / Musetti @1.42 (4/24) / Keys @1.23 (4/24) / Mertens @1.37 (4/24) 結果確認 | WAITING | 最高 | 4/24-25 |
 | PA069 | Q3 output_a 7件 結果 | Session_50: Sinner/Bencic/Swiatek/Sabalenka/Andreeva/Gauff/Rybakina 予測精度追跡 | WAITING | 高 | 4/23-24 |
 | PA070 | Q4 upset_watch 13件 | Session_50: Osaka-Osorio UPSET濃厚 + Popyrin/Opelka/Rinderknech/Shelton/Diallo/Grant/Samsonova 等観察 | WAITING | 中 | 4/23-24 |
+| PA071 | 🚨 既存 MISS miss_analysis 欠損 58件 漸進補填 | Session_50 health_check v5 追加で検知。全 records MISS エントリの miss_analysis + miss_layer + rule_linked 3点セット欠損を毎セッション STEP 0 で自動アラート。58件を漸進的に補填 (新規 MISS は発生時同時記入 / 旧 MISS は毎セッション数件ずつ) | PENDING | 最高 | 漸進継続 |
+| PA-PERM05 | 常設 | **結果反映時は miss_analysis + miss_layer + rule_linked を必ず同時記入**（Session_50 feedback loop 改善プロトコル）。health_check v5 で毎セッション STEP 0 に自動検知 | PENDING | 最高 | 毎 MISS 発生時 |
 | PA044 | NHL | PA014 TBL-MTL G1 **MTL 4-3 OT 予測MISS 記録 DONE Session_44** (Slafkovsky hat trick + OT 1:22 PP). Type A A021 upset登録。CAUTION no-bet のため P&L影響なし | DONE | 高 | 完了 2026-04-20 |
 | PA045 | Rule Pipeline | **R020/R017 実装 DONE Session_44** (rules_tennis.json v2.2). P013/P010 implemented_rulesへ移動。GEN005衝突解消: R017 vs R020 同時成立時はR017優先 | DONE | 中 | 完了 2026-04-20 |
 | PA046 | 出力A/B | **Session_30-43 新規GO遡及追加 DONE Session_44** (multi_bets.json + dashboard同期). Leeds/Warriors/Warrington/SAS を追加。累計 11件・6HIT・3MISS・1VOID・1PENDING | DONE | 最高 | 完了 2026-04-20 |
