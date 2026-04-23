@@ -41,7 +41,9 @@
         "berrettini_shots_missed": 3,
         "duration": "49min",
         "source": "ATP Tour news / Sky Sports / multiple confirmed"
-      }
+      },
+      "notified": true,
+      "notified_at": "2026-04-23T21:36:43.095729+09:00"
     },
     {
       "tournament": "Monte-Carlo Masters",
@@ -78,7 +80,9 @@
         "set1_breaks": 4,
         "set1_tiebreak": "Machac 7-2",
         "source": "ATP Tour stats / scores24.live confirmed"
-      }
+      },
+      "notified": true,
+      "notified_at": "2026-04-23T21:36:43.918099+09:00"
     },
     {
       "tournament": "Monte-Carlo Masters",
@@ -97,7 +101,9 @@
       "hit": true,
       "actual_ev": 0.63,
       "miss_layer": null,
-      "rules_triggered": []
+      "rules_triggered": [],
+      "notified": true,
+      "notified_at": "2026-04-23T21:36:44.654122+09:00"
     },
     {
       "tournament": "Monte-Carlo Masters",
@@ -206,7 +212,9 @@
         "berrettini_fh_winners": 6,
         "duration": "74min",
         "source": "ATP Tour / Tennis.com confirmed"
-      }
+      },
+      "notified": true,
+      "notified_at": "2026-04-23T21:36:45.610023+09:00"
     },
     {
       "tournament": "Monte-Carlo Masters",
@@ -228,7 +236,9 @@
         "R009",
         "R013"
       ],
-      "note": "歴史的勝利。VacherotがモナコWCとして初めてMC QF進出（Open Era）"
+      "note": "歴史的勝利。VacherotがモナコWCとして初めてMC QF進出（Open Era）",
+      "notified": true,
+      "notified_at": "2026-04-23T21:36:46.409667+09:00"
     },
     {
       "tournament": "Monte-Carlo Masters",
@@ -249,7 +259,9 @@
       "rules_applied": [
         "R001",
         "R005"
-      ]
+      ],
+      "notified": true,
+      "notified_at": "2026-04-23T21:36:47.203838+09:00"
     },
     {
       "tournament": "Monte-Carlo Masters",
@@ -271,7 +283,9 @@
         "R001",
         "R005",
         "R007"
-      ]
+      ],
+      "notified": true,
+      "notified_at": "2026-04-23T21:36:47.977507+09:00"
     },
     {
       "tournament": "Monte-Carlo Masters",
@@ -292,7 +306,9 @@
       "rules_applied": [
         "R001",
         "R005"
-      ]
+      ],
+      "notified": true,
+      "notified_at": "2026-04-23T21:36:48.801580+09:00"
     },
     {
       "tournament": "Monte-Carlo Masters",
@@ -350,7 +366,9 @@
         "https://www.atptour.com/en/news/alcaraz-vacherot-monte-carlo-2026-sf",
         "https://www.sofascore.com/news/alcaraz-downs-vacherot-6-4-6-4-into-monte-carlo-final",
         "https://www.tennismajors.com/atp/alcaraz-beats-vacherot-to-set-up-the-first-alcaraz-sinner-final-of-2026-with-no-1-at-stake-848250.html"
-      ]
+      ],
+      "notified": true,
+      "notified_at": "2026-04-23T21:36:49.668225+09:00"
     },
     {
       "tournament": "Monte-Carlo Masters",
@@ -373,7 +391,9 @@
         "R002",
         "R005"
       ],
-      "note": "消耗していたZverevに対して1時間22分で圧勝"
+      "note": "消耗していたZverevに対して1時間22分で圧勝",
+      "notified": true,
+      "notified_at": "2026-04-23T21:36:50.696686+09:00"
     },
     {
       "tournament": "Monte-Carlo Masters",
@@ -3565,7 +3585,9 @@
         ],
         "action": "MAINTAIN_GO",
         "note": "怪我情報なし、clay 5-0 Houston champ 維持。"
-      }
+      },
+      "notified": true,
+      "notified_at": "2026-04-23T21:36:51.457249+09:00"
     },
     {
       "tournament": "Mutua Madrid Open 2026",
