@@ -274,6 +274,51 @@
 **最優先 C: Session_54 新規インフラ検証**
 - lineup_watch.yml / notify_digest.yml 初回実行ログ確認
 
+### 🚨 Session_56 完了報告 (2026-04-23)
+
+**主題: PA085 Understat / PA086 FanGraphs の parse=0 空フィード問題の構造的修復**
+
+**PA085 修復完了**:
+- 原因特定: understat.com の HTML から `var teamsData = JSON.parse(...)` 形式の JS 変数が完全消失（curl 18KB / Playwright 172KB いずれも 0 件）。現状はテーブルが DOM にクライアントサイドで描画される方式
+- 対応: fetch_understat.py を **Playwright レンダリング後の `<table>` 直接 HTML パース**方式に書き直し。各チーム行から xG / xGA / xG_per_game / xGD / xGD_per_game / xPoints を抽出
+- 結果: 5リーグ **96 teams 取得成功** (EPL 20 / La Liga 20 / Bundesliga 18 / Serie A 20 / Ligue 1 18)
+- stats_feed_reader API は変更不要 (team_id → team_slug フィールド名のみ変化、get_team_xg / get_soccer_all_teams 正常動作確認)
+
+**PA086 修復完了**:
+- 原因特定: FanGraphs は Cloudflare challenge (`Just a moment...`) が Playwright headless でも突破不可。ESPN も AWS WAF challenge で同じ
+- 対応: データソースを **公式 MLB StatsAPI (`statsapi.mlb.com/api/v1/teams/stats`)** に完全切替。無認証・Cloudflare なし
+- 計算ロジック実装:
+  - **FIP** = `(13×HR + 3×(BB+HBP) - 2×K) / IP + cFIP` （cFIP はリーグ平均で毎回キャリブレーション）
+  - **wRC+ proxy** = `100 × (team_OPS / league_avg_OPS)` （簡易 OPS+）
+- 結果: **30 teams 取得成功** (lgOPS=0.708 / lgERA=4.13 / cFIP=3.13 いずれも現実的な値)
+- 計算由来の値は `wRC_plus_is_proxy: true` / `FIP_is_computed: true` フラグで明示
+- 出力ファイル名・JSON 構造は踏襲のため stats_feed_reader API 変更不要 (get_mlb_team 正常動作確認)
+
+**運用影響**:
+- soccer L1 の **clubelo Elo × understat xG クロスチェックが復活**（S001 本来の判定が可能）
+- MLB L1 の **Baseball Savant xwOBA/xERA × StatsAPI FIP/OPS+ クロスチェックが復活**（Advanced Tier 本来の判定が可能。ただし FanGraphs 本来の park-adjusted wRC+ より精度は若干劣るため、Savant を主ソースに据える）
+- health_check v7: ALERT 0件 / WARN 0件 / OK 13項目の完全健全化達成
+
+**更新ファイル**:
+- scripts/fetch_understat.py (書き直し)
+- scripts/fetch_fangraphs.py (書き直し、データソース MLB StatsAPI に切替)
+- stats/external_feeds/soccer_understat_2026-04-23.json (96 teams)
+- stats/external_feeds/mlb_fangraphs_2026-04-23.json (30 teams)
+- CLAUDE.md STEP 0.5 修復メモ更新
+- monitoring/pending_actions.md PA085/PA086 → DONE
+- BACKLOG.md Session_56 完了報告
+
+### 🎯 Session_57 行動計画 (次回)
+
+**最優先 A: Session_54 以降の積み残し pending 結果確認**
+- PA068 Madrid GO 残 3件 (Mertens 4/23 / Paul 4/24 / Keys 4/24)
+- PA076 CAUTION 追跡 (Tsitsipas 4/23 / Musetti 4/24)
+- PA078 NHL G3 / PA079 UFL W6 / PA080 SL R9 / PA081 Premiership R14 / PA082 Top14 R23 / PA083 AHL PO
+
+**最優先 B: 修復後 fetcher 群の実運用確認**
+- 明日以降の試合スクリーニングで soccer L1 / MLB L1 クロスチェックを実地使用
+- GitHub Actions (fetch_stats.yml) での自動実行が次の朝に成功するか確認
+
 ---
 
 ### 🎯 Session_55 行動計画 (旧・参考用)

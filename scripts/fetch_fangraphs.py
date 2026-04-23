@@ -1,28 +1,30 @@
 # -*- coding: utf-8 -*-
 """
-FanGraphs MLB Team Stats Fetcher (FIP / wRC+)
+MLB Team Stats Fetcher (FIP proxy / wRC+ proxy)
 
-FanGraphs の leaders ページ (team=0&season=YYYY) はサーバーサイドで
-CSV 形式のエクスポートを提供。URL に &type=8 (dashboard) &team=0 (team stats) で
-チーム一覧を取得可能。
+[Session_56 2026-04-23 書き直し / PA086]
+- 旧: FanGraphs leaders ページを curl/Playwright で取得 (HTML <table class="rgMasterTable">)
+- 現: FanGraphs は Cloudflare challenge (Just a moment...) で headless Playwright でも突破不可
+  → 公式 MLB StatsAPI に切替: https://statsapi.mlb.com/api/v1/teams/stats (無認証・無 Cloudflare)
+- wRC+ と FIP は StatsAPI に存在しない ("sabermetrics" group は空) ため生スタッツから計算:
+    FIP  = (13*HR + 3*(BB+HBP) - 2*K) / IP + cFIP
+           cFIP = lgERA - (13*HR + 3*(BB+HBP) - 2*K) / IP   (リーグ平均でキャリブレーション)
+    wRC+ proxy = 100 * (team_OPS / league_avg_OPS)   (簡易リーグ調整 OPS+)
+- 出力ファイル名・構造は従来の mlb_fangraphs_*.json を踏襲 (stats_feed_reader.py 変更不要)
+  source フィールドに statsapi.mlb.com を記録、計算由来の値は computed=true 明示
 
 使い方:
   python scripts/fetch_fangraphs.py                   # days-stale 3
   python scripts/fetch_fangraphs.py --days-stale 0    # 強制
-  python scripts/fetch_fangraphs.py --season 2026     # シーズン指定
-
-出力: stats/external_feeds/mlb_fangraphs_YYYY-MM-DD.json
-
-取得カラム: Team / G / wRC+ / FIP / xFIP / K% / BB% / HR/9 / WAR / ERA / R / RA / Run_Diff
+  python scripts/fetch_fangraphs.py --season 2026
 """
 from __future__ import annotations
 import argparse
-import html as html_lib
 import json
-import re
 import shutil
 import subprocess
 import sys
+import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -33,11 +35,7 @@ JST = timezone(timedelta(hours=9))
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
 
-# FanGraphs team batting & team pitching dashboards
-URLS = {
-    "batting": "https://www.fangraphs.com/leaders/major-league?pos=all&stats=bat&lg=all&type=8&season={season}&month=0&ind=0&team=0,ts&rost=0&age=&filter=&players=0",
-    "pitching": "https://www.fangraphs.com/leaders/major-league?pos=all&stats=pit&lg=all&type=8&season={season}&month=0&ind=0&team=0,ts&rost=0&age=&filter=&players=0",
-}
+STATSAPI_BASE = "https://statsapi.mlb.com/api/v1/teams/stats"
 
 
 def latest_feed() -> Path | None:
@@ -50,121 +48,144 @@ def age_days(p: Path) -> float:
     return (datetime.now(JST) - m).total_seconds() / 86400
 
 
-def _num(v):
-    if v is None:
-        return None
-    s = str(v).strip().replace(",", "").replace("%", "")
-    if s in ("", "-", "—"):
-        return None
-    try:
-        return float(s)
-    except ValueError:
-        return v
-
-
-def fetch_html(url: str) -> str:
-    """FanGraphs は SPA のため Playwright で table 描画まで待つ必要あり。
-    curl でも HTML に table が含まれるケースがある (SSR時) ので両方試行。"""
+def http_get_json(url: str) -> dict:
+    """curl があれば curl 使用、無ければ urllib。MLB StatsAPI は認証不要。"""
     if shutil.which("curl"):
         r = subprocess.run(
             ["curl", "-sL", "--compressed", "-A", UA, "--max-time", "30", url],
-            capture_output=True, text=True, encoding="utf-8", errors="replace"
+            capture_output=True, text=True, encoding="utf-8", errors="replace",
         )
-        if r.returncode == 0 and r.stdout and "rgMasterTable" in r.stdout:
-            return r.stdout
-    # Playwright fallback
-    from playwright.sync_api import sync_playwright
-    with sync_playwright() as pw:
-        browser = pw.chromium.launch(headless=True)
-        ctx = browser.new_context(user_agent=UA)
-        page = ctx.new_page()
-        page.goto(url, wait_until="domcontentloaded", timeout=60000)
-        try:
-            page.wait_for_selector("table.rgMasterTable tbody tr", timeout=30000)
-        except Exception:
-            pass
-        content = page.content()
-        browser.close()
-    return content
+        if r.returncode == 0 and r.stdout:
+            return json.loads(r.stdout)
+    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        return json.loads(resp.read().decode("utf-8"))
 
 
-def parse_table(html: str) -> list[dict]:
-    m = re.search(r'<table[^>]*class="[^"]*rgMasterTable[^"]*"[^>]*>(.*?)</table>', html, flags=re.S)
-    if not m:
+def fetch_stats(season: str, group: str) -> list[dict]:
+    url = f"{STATSAPI_BASE}?season={season}&group={group}&stats=season&sportIds=1"
+    print(f"[FETCH] MLB StatsAPI {group} {season}")
+    data = http_get_json(url)
+    stats = data.get("stats", [])
+    if not stats:
         return []
-    tbody_m = re.search(r'<tbody[^>]*>(.*?)</tbody>', m.group(1), flags=re.S)
-    thead_m = re.search(r'<thead[^>]*>(.*?)</thead>', m.group(1), flags=re.S)
-    if not tbody_m or not thead_m:
-        return []
-    # ヘッダ取得
-    header_cells = re.findall(r'<th[^>]*>(.*?)</th>', thead_m.group(1), flags=re.S)
-    headers = [html_lib.unescape(re.sub(r'<[^>]+>', '', h)).strip() for h in header_cells]
-    # 行取得
-    rows = re.findall(r'<tr[^>]*>(.*?)</tr>', tbody_m.group(1), flags=re.S)
-    out = []
-    for r in rows:
-        cells = re.findall(r'<td[^>]*>(.*?)</td>', r, flags=re.S)
-        if not cells:
-            continue
-        vals = [html_lib.unescape(re.sub(r'<[^>]+>', '', c)).strip() for c in cells]
-        if len(vals) != len(headers):
-            continue
-        row = {h: _num(v) if h not in ("Team", "#", "Name") else v for h, v in zip(headers, vals)}
-        out.append(row)
-    return out
+    return stats[0].get("splits", [])
 
 
-def process_mode(mode: str, season: str) -> list[dict]:
-    url = URLS[mode].format(season=season)
-    print(f"[FETCH] MLB {mode} {season}: {url}")
-    html = fetch_html(url)
-    rows = parse_table(html)
-    print(f"  -> {len(rows)} teams parsed")
-    return rows
+def _ip_to_outs(ip_str: str | float | None) -> float:
+    """'123.2' = 123と2/3イニング = 123 + 2/3 = 123.667 を outs 基準で返す"""
+    if ip_str is None:
+        return 0.0
+    try:
+        s = str(ip_str)
+        if "." in s:
+            whole, frac = s.split(".", 1)
+            whole = int(whole)
+            frac_outs = int(frac[:1])  # .0 .1 .2
+            return whole + frac_outs / 3.0
+        return float(s)
+    except (ValueError, TypeError):
+        return 0.0
 
 
-def merge_batting_pitching(batting: list[dict], pitching: list[dict]) -> list[dict]:
-    """Team 名をキーに左右結合"""
-    by_team: dict[str, dict] = {}
-    for b in batting:
-        t = (b.get("Team") or "").strip()
-        if not t:
-            continue
-        by_team[t] = {"team": t, "batting": b}
-    for p in pitching:
-        t = (p.get("Team") or "").strip()
-        if not t:
-            continue
-        by_team.setdefault(t, {"team": t})["pitching"] = p
+def _f(v) -> float:
+    if v is None:
+        return 0.0
+    try:
+        s = str(v).strip().replace(",", "").replace("%", "")
+        if s in ("", "-", "—", ".---", "-.--"):
+            return 0.0
+        return float(s)
+    except (ValueError, TypeError):
+        return 0.0
 
-    merged = []
-    for t, d in by_team.items():
-        bat = d.get("batting", {})
-        pit = d.get("pitching", {})
+
+def compute_team_stats(hitting: list[dict], pitching: list[dict]) -> list[dict]:
+    """StatsAPI の hitting / pitching split を team 名でマージし、
+    FIP と wRC+ proxy を計算して返す"""
+    # league average OPS for wRC+ proxy
+    valid_ops = [_f(s["stat"].get("ops")) for s in hitting if _f(s["stat"].get("atBats")) > 0]
+    league_ops = sum(valid_ops) / len(valid_ops) if valid_ops else 0.720
+
+    # league aggregates for FIP constant
+    lg_hr = sum(_f(s["stat"].get("homeRuns")) for s in pitching)
+    lg_bb = sum(_f(s["stat"].get("baseOnBalls")) for s in pitching)
+    lg_hbp = sum(_f(s["stat"].get("hitByPitch")) for s in pitching)
+    lg_k = sum(_f(s["stat"].get("strikeOuts")) for s in pitching)
+    lg_er = sum(_f(s["stat"].get("earnedRuns")) for s in pitching)
+    lg_ip = sum(_ip_to_outs(s["stat"].get("inningsPitched")) for s in pitching)
+    if lg_ip > 0:
+        lg_era = 9.0 * lg_er / lg_ip
+        fip_kernel_lg = (13 * lg_hr + 3 * (lg_bb + lg_hbp) - 2 * lg_k) / lg_ip
+        c_fip = lg_era - fip_kernel_lg
+    else:
+        lg_era = 4.00
+        c_fip = 3.10
+
+    by_team: dict[int, dict] = {}
+    for s in hitting:
+        team = s.get("team", {})
+        tid = team.get("id")
+        st = s.get("stat", {})
+        by_team.setdefault(tid, {})["team"] = team.get("name")
+        by_team[tid]["team_id"] = tid
+        by_team[tid]["bat"] = st
+    for s in pitching:
+        team = s.get("team", {})
+        tid = team.get("id")
+        st = s.get("stat", {})
+        by_team.setdefault(tid, {"team": team.get("name"), "team_id": tid})["pit"] = st
+
+    results = []
+    for tid, d in by_team.items():
+        bat = d.get("bat", {}) or {}
+        pit = d.get("pit", {}) or {}
+        # Hitting proxy
+        ops = _f(bat.get("ops"))
+        wrc_plus_proxy = round(100 * ops / league_ops, 1) if league_ops > 0 else None
+
+        # Pitching FIP
+        ip_outs = _ip_to_outs(pit.get("inningsPitched"))
+        if ip_outs > 0:
+            hr = _f(pit.get("homeRuns"))
+            bb = _f(pit.get("baseOnBalls"))
+            hbp = _f(pit.get("hitByPitch"))
+            k = _f(pit.get("strikeOuts"))
+            fip = round((13 * hr + 3 * (bb + hbp) - 2 * k) / ip_outs + c_fip, 2)
+        else:
+            fip = None
+
         entry = {
-            "team": t,
-            "wRC_plus": bat.get("wRC+"),
-            "wOBA": bat.get("wOBA"),
-            "ISO": bat.get("ISO"),
-            "K_pct_bat": bat.get("K%"),
-            "BB_pct_bat": bat.get("BB%"),
-            "WAR_bat": bat.get("WAR"),
-            "R": bat.get("R"),
-            "FIP": pit.get("FIP"),
-            "xFIP": pit.get("xFIP"),
-            "ERA": pit.get("ERA"),
-            "K_pct_pit": pit.get("K%"),
-            "BB_pct_pit": pit.get("BB%"),
-            "HR_per_9": pit.get("HR/9"),
-            "WAR_pit": pit.get("WAR"),
-            "IP": pit.get("IP"),
+            "team": d.get("team"),
+            "team_id": tid,
+            # Hitting
+            "wRC_plus": wrc_plus_proxy,          # ★ wRC+ proxy (OPS+ 近似)
+            "wRC_plus_is_proxy": True,
+            "OPS": round(ops, 3) if ops else None,
+            "OBP": round(_f(bat.get("obp")), 3) if bat.get("obp") else None,
+            "SLG": round(_f(bat.get("slg")), 3) if bat.get("slg") else None,
+            "AVG": round(_f(bat.get("avg")), 3) if bat.get("avg") else None,
+            "HR_bat": int(_f(bat.get("homeRuns"))),
+            "R": int(_f(bat.get("runs"))),
+            "SO_bat": int(_f(bat.get("strikeOuts"))),
+            "BB_bat": int(_f(bat.get("baseOnBalls"))),
+            # Pitching
+            "FIP": fip,                          # ★ FIP (生スタッツから計算)
+            "FIP_is_computed": True,
+            "ERA": round(_f(pit.get("era")), 2) if pit.get("era") else None,
+            "WHIP": round(_f(pit.get("whip")), 3) if pit.get("whip") else None,
+            "IP": pit.get("inningsPitched"),
+            "K_pit": int(_f(pit.get("strikeOuts"))),
+            "BB_pit": int(_f(pit.get("baseOnBalls"))),
+            "HR_pit": int(_f(pit.get("homeRuns"))),
+            "RA": int(_f(pit.get("runs"))),
         }
-        # Run differential proxy
-        if isinstance(entry["R"], (int, float)) and isinstance(pit.get("R"), (int, float)):
-            entry["run_diff"] = entry["R"] - pit.get("R")
-        merged.append(entry)
-    merged.sort(key=lambda x: x.get("wRC_plus") or 0, reverse=True)
-    return merged
+        # Run differential
+        entry["run_diff"] = entry["R"] - entry["RA"]
+        results.append(entry)
+
+    results.sort(key=lambda x: (x.get("wRC_plus") or 0), reverse=True)
+    return results, league_ops, c_fip, lg_era
 
 
 def main():
@@ -181,33 +202,54 @@ def main():
         if args.check:
             sys.exit(0 if age <= args.days_stale else 1)
         if age <= args.days_stale and args.days_stale > 0:
-            print(f"[SKIP] age <= {args.days_stale}d, skipping fetch.")
-            sys.exit(0)
+            try:
+                with open(latest, "r", encoding="utf-8") as f:
+                    prev = json.load(f)
+                prev_total = prev.get("team_count", 0)
+            except Exception:
+                prev_total = 0
+            if prev_total > 0:
+                print(f"[SKIP] age <= {args.days_stale}d and teams>0, skipping fetch.")
+                sys.exit(0)
+            print("[RETRY] previous feed had 0 teams, re-fetching.")
     elif args.check:
         print("[WARN] no feed yet.")
         sys.exit(1)
 
     try:
-        batting = process_mode("batting", args.season)
-        pitching = process_mode("pitching", args.season)
+        hitting = fetch_stats(args.season, "hitting")
+        pitching = fetch_stats(args.season, "pitching")
     except Exception as e:
         print(f"[ERR] fetch failed: {e}")
         print("[GEN006] mlb_fangraphs fetch failed.")
         sys.exit(2)
 
-    merged = merge_batting_pitching(batting, pitching)
+    if not hitting or not pitching:
+        print("[ERR] empty stats from MLB StatsAPI")
+        print("[GEN006] mlb_fangraphs fetch failed.")
+        sys.exit(2)
+
+    merged, lg_ops, c_fip, lg_era = compute_team_stats(hitting, pitching)
+
     data = {
-        "source_batting": URLS["batting"].format(season=args.season),
-        "source_pitching": URLS["pitching"].format(season=args.season),
+        "source": f"{STATSAPI_BASE}?season={args.season}&group=hitting|pitching",
+        "source_note": "Switched from fangraphs.com to MLB StatsAPI (Cloudflare bypass). "
+                       "wRC+ is OPS+ proxy (100 * team_OPS / league_avg_OPS). "
+                       "FIP computed from (13*HR + 3*(BB+HBP) - 2*K)/IP + cFIP.",
         "fetched_at": datetime.now(JST).isoformat(),
         "season": args.season,
+        "league_context": {
+            "league_avg_OPS": round(lg_ops, 3),
+            "league_avg_ERA": round(lg_era, 2),
+            "cFIP_constant": round(c_fip, 2),
+        },
         "teams": merged,
         "team_count": len(merged),
     }
     today = datetime.now(JST).strftime("%Y-%m-%d")
     out = FEED_DIR / f"mlb_fangraphs_{today}.json"
     out.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"[OK] saved: {out} (teams={data['team_count']})")
+    print(f"[OK] saved: {out} (teams={data['team_count']}, lgOPS={lg_ops:.3f}, lgERA={lg_era:.2f})")
 
 
 if __name__ == "__main__":

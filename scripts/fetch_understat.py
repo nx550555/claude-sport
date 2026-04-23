@@ -2,9 +2,12 @@
 """
 understat.com xG Fetcher (Soccer 5 big leagues)
 
-understat.com は公式 API 無し。各リーグのチームページ HTML に埋め込まれた
-JSON (teamsData / datesData / playersData) を JavaScript 変数として
-展開している。正規表現で JS 変数を抜き出してデコードする方式。
+[Session_56 2026-04-23 書き直し / PA085]
+- 旧: HTML 内 `var teamsData = JSON.parse('\\x7b...');` を正規表現で抽出
+- 現: understat の HTML は JavaScript 変数 teamsData 非埋め込みに変更された
+  (curl 18KB / Playwright 172KB いずれも teamsData=0)
+- 新方式: Playwright でページを完全レンダリング → `<table>` 要素を直接 HTML パースして
+  チーム別の xG/xGA/Pts をスコア行から取得する
 
 使い方:
   python scripts/fetch_understat.py                   # days-stale 3
@@ -20,8 +23,6 @@ from __future__ import annotations
 import argparse
 import json
 import re
-import shutil
-import subprocess
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -60,27 +61,21 @@ def age_days(p: Path) -> float:
     return (datetime.now(JST) - m).total_seconds() / 86400
 
 
-def fetch_html(url: str) -> str:
-    """understat.com は Cloudflare で bot 防御している。curl で返る HTML には
-    JS データ (teamsData) が埋め込まれていない場合が多い。返り値に teamsData が
-    含まれていることを curl 成功の条件にする。含まれなければ Playwright にフォールバック。"""
-    if shutil.which("curl"):
-        r = subprocess.run(
-            ["curl", "-sL", "--compressed", "-A", UA, "--max-time", "30", url],
-            capture_output=True, text=True, encoding="utf-8", errors="replace"
-        )
-        if r.returncode == 0 and r.stdout and "teamsData" in r.stdout:
-            return r.stdout
-    # Playwright fallback (Cloudflare challenge を解ける可能性あり)
+def fetch_html_rendered(url: str) -> str:
+    """Playwright で Cloudflare 突破してフルレンダリング HTML を返す。
+    teamsData は消失済のため DOM table の <tr> を得ることが目的。"""
     from playwright.sync_api import sync_playwright
     with sync_playwright() as pw:
         browser = pw.chromium.launch(headless=True)
         ctx = browser.new_context(user_agent=UA)
         page = ctx.new_page()
-        page.goto(url, wait_until="domcontentloaded", timeout=60000)
-        # teamsData が script tag に埋め込まれるまで短時間待機
+        page.goto(url, wait_until="networkidle", timeout=60000)
+        # テーブル本体が描画されるのを待つ (複数行に team link がある状態)
         try:
-            page.wait_for_function("() => document.documentElement.innerHTML.includes('teamsData')", timeout=20000)
+            page.wait_for_function(
+                "() => document.querySelectorAll('table a[href^=\"team/\"]').length >= 18",
+                timeout=20000,
+            )
         except Exception:
             pass
         content = page.content()
@@ -88,84 +83,95 @@ def fetch_html(url: str) -> str:
     return content
 
 
-def _decode_js_escaped(s: str) -> str:
-    """understat は JSON.parse('\x7b...') 形式。\\x?? を実バイトに戻す"""
-    return re.sub(r"\\x([0-9a-fA-F]{2})", lambda m: chr(int(m.group(1), 16)), s)
+_CELL_RX = re.compile(r"<td[^>]*>(.*?)</td>", flags=re.S)
+_ROW_RX = re.compile(r"<tr[^>]*>(.*?)</tr>", flags=re.S)
+_TABLE_RX = re.compile(r"<table[^>]*>(.*?)</table>", flags=re.S)
+_TEAM_LINK_RX = re.compile(r'<a\s+href="team/([^"/]+)/[^"]+"[^>]*>([^<]+)</a>')
+_NUM_RX = re.compile(r"-?\d+(?:\.\d+)?")
 
 
-def extract_var(html: str, var_name: str) -> dict | list | None:
-    """var teamsData = JSON.parse('\\x7b ... \\x7d'); を抜き出して dict/list にする"""
-    pat = re.compile(
-        r"var\s+" + re.escape(var_name) + r"\s*=\s*JSON\.parse\s*\(\s*['\"](.+?)['\"]\s*\)\s*;",
-        flags=re.S,
-    )
-    m = pat.search(html)
+def _strip(s: str) -> str:
+    return re.sub(r"<[^>]+>", " ", s).strip()
+
+
+def _first_num(s: str) -> float | None:
+    m = _NUM_RX.search(s)
+    return float(m.group(0)) if m else None
+
+
+def parse_league_table(html: str) -> list[dict]:
+    """最初に出現する <table> を league standing として解釈。
+
+    Column layout (Session_56 時点 understat.com 実測):
+      0: rank, 1: team (link), 2: M, 3: W, 4: D, 5: L,
+      6: G, 7: GA, 8: PTS, 9: xG, 10: xGA, 11: xPTS
+    xG / xGA / xPTS セルは "値 <sup>±diff</sup>" 形式のため、
+    第1 数値 (主値) のみを採用する。
+    """
+    m = _TABLE_RX.search(html)
     if not m:
-        return None
-    raw = _decode_js_escaped(m.group(1))
-    try:
-        return json.loads(raw)
-    except json.JSONDecodeError:
-        return None
-
-
-def parse_league(html: str) -> dict:
-    teams_data = extract_var(html, "teamsData") or {}
-    teams_out = []
-    for tid, tinfo in teams_data.items():
-        title = tinfo.get("title")
-        history = tinfo.get("history") or []
-        if not history:
+        return []
+    tbl = m.group(1)
+    teams = []
+    for r in _ROW_RX.findall(tbl):
+        cells = _CELL_RX.findall(r)
+        if len(cells) < 12:
             continue
-        # 累計を集計
-        gp = len(history)
-        xG = sum(float(h.get("xG", 0) or 0) for h in history)
-        xGA = sum(float(h.get("xGA", 0) or 0) for h in history)
-        npxG = sum(float(h.get("npxG", 0) or 0) for h in history)
-        npxGA = sum(float(h.get("npxGA", 0) or 0) for h in history)
-        pts = sum(int(h.get("pts", 0) or 0) for h in history)
-        scored = sum(int(h.get("scored", 0) or 0) for h in history)
-        missed = sum(int(h.get("missed", 0) or 0) for h in history)
-        ppda_sum = sum(
-            (float(h.get("ppda", {}).get("att", 0) or 0)) /
-            max(float(h.get("ppda", {}).get("def", 0) or 1), 1)
-            for h in history
-        )
-        teams_out.append({
-            "team_id": tid,
-            "team": title,
+        # team セル
+        team_m = _TEAM_LINK_RX.search(cells[1])
+        if not team_m:
+            continue
+        team_slug = team_m.group(1)
+        team_name = team_m.group(2).strip()
+        try:
+            gp = int(_strip(cells[2]))
+            w = int(_strip(cells[3]))
+            d = int(_strip(cells[4]))
+            l_ = int(_strip(cells[5]))
+            g = int(_strip(cells[6]))
+            ga = int(_strip(cells[7]))
+            pts = int(_strip(cells[8]))
+        except ValueError:
+            continue
+        xg = _first_num(cells[9])
+        xga = _first_num(cells[10])
+        xpts = _first_num(cells[11])
+        if gp <= 0 or xg is None or xga is None:
+            continue
+        teams.append({
+            "team_slug": team_slug,
+            "team": team_name,
             "games_played": gp,
-            "xG": round(xG, 2),
-            "xGA": round(xGA, 2),
-            "npxG": round(npxG, 2),
-            "npxGA": round(npxGA, 2),
-            "xG_per_game": round(xG / gp, 3) if gp else None,
-            "xGA_per_game": round(xGA / gp, 3) if gp else None,
-            "xGD": round(xG - xGA, 2),
-            "xGD_per_game": round((xG - xGA) / gp, 3) if gp else None,
+            "wins": w,
+            "draws": d,
+            "losses": l_,
+            "scored": g,
+            "missed": ga,
             "points": pts,
-            "scored": scored,
-            "missed": missed,
-            "ppda_avg": round(ppda_sum / gp, 3) if gp else None,
+            "xG": round(xg, 2),
+            "xGA": round(xga, 2),
+            "xG_per_game": round(xg / gp, 3),
+            "xGA_per_game": round(xga / gp, 3),
+            "xGD": round(xg - xga, 2),
+            "xGD_per_game": round((xg - xga) / gp, 3),
+            "xPoints": round(xpts, 2) if xpts is not None else None,
         })
-    teams_out.sort(key=lambda x: x.get("xGD", 0), reverse=True)
-    return {
-        "teams": teams_out,
-        "team_count": len(teams_out),
-    }
+    teams.sort(key=lambda x: x["xGD"], reverse=True)
+    return teams
 
 
 def process(league: str, season: str) -> dict:
     url = LEAGUE_URLS[league].format(season=season)
     print(f"[FETCH] {league} {season}: {url}")
-    html = fetch_html(url)
-    parsed = parse_league(html)
+    html = fetch_html_rendered(url)
+    teams = parse_league_table(html)
     return {
         "source": url,
         "league_key": league,
         "league_display": LEAGUE_DISPLAY[league],
         "season": f"{season}-{int(season)+1}",
-        **parsed,
+        "teams": teams,
+        "team_count": len(teams),
     }
 
 
@@ -184,8 +190,17 @@ def main():
         if args.check:
             sys.exit(0 if age <= args.days_stale else 1)
         if age <= args.days_stale and args.days_stale > 0:
-            print(f"[SKIP] age <= {args.days_stale}d, skipping fetch.")
-            sys.exit(0)
+            # parse=0 空フィードは skip せず再取得 (Session_56 修復対応)
+            try:
+                with open(latest, "r", encoding="utf-8") as f:
+                    prev = json.load(f)
+                prev_total = sum(v.get("team_count", 0) for v in prev.get("leagues", {}).values())
+            except Exception:
+                prev_total = 0
+            if prev_total > 0:
+                print(f"[SKIP] age <= {args.days_stale}d and teams>0, skipping fetch.")
+                sys.exit(0)
+            print(f"[RETRY] previous feed had 0 teams, re-fetching.")
     elif args.check:
         print("[WARN] no feed yet.")
         sys.exit(1)
@@ -200,7 +215,9 @@ def main():
     failed = []
     for lg in leagues:
         try:
-            payload["leagues"][LEAGUE_DISPLAY[lg]] = process(lg, args.season)
+            r = process(lg, args.season)
+            payload["leagues"][LEAGUE_DISPLAY[lg]] = r
+            print(f"  -> {lg}: teams={r['team_count']}")
         except Exception as e:
             print(f"[ERR] {lg}: {e}")
             failed.append(lg)
@@ -214,6 +231,8 @@ def main():
     out.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     team_total = sum(v.get("team_count", 0) for v in payload["leagues"].values())
     print(f"[OK] saved: {out} (leagues={len(payload['leagues'])}, teams_total={team_total}, failed={failed})")
+    if team_total == 0:
+        sys.exit(2)
 
 
 if __name__ == "__main__":
