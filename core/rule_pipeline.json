@@ -779,6 +779,60 @@
         "nhl_g1_overreaction_correction"
       ],
       "note": "Session_51 新設。2/3 到達。3件目 evidence は NHL PO G2 残り (EDM-ANA G3 / TBL-MTL G3 / CAR-OTT G3 など) で G1 UPSET 系シリーズの G2 結果から抽出。実装時は conf 算出に「直前ラウンド UPSET 反応バイアス補正」として G2 home fav に +3〜+5%。P024/P026 と相補関係 (P026 は逆方向: G1 home blowout win → G2 home fade)。"
+    },
+    {
+      "candidate_id": "P028",
+      "status": "watching",
+      "target_rule_file": "core/rules_nba.json",
+      "proposed_rule_id": "N_NBA_new4",
+      "title": "NBA PO G1 home fav win 後 G2 home 4Q execution collapse 補正",
+      "description": "G1 を home で勝った fav が G2 でも home だが 4Q で collapse するパターン。NYK の RS 4Q NRtg リーグ1位が G2 で 22.7% 5-22 shooting collapse へ反転。opponent の star scorer (ATL McCollum 32pts) タイミング爆発と組み合わさる。P019 (rivalry home fade) の兄弟だが rivalry 要件なし。",
+      "trigger_threshold": 3,
+      "current_count": 1,
+      "evidence": [
+        {
+          "id": "A032_variant_atl_nyk_g2",
+          "match": "Atlanta Hawks d. New York Knicks G2 2026-04-20 107-106",
+          "pattern": "NYK RS 4Q NRtg リーグ1位 → G2 4Q 5-for-22 (22.7%) 15pts collapse。12pt 4Q deficit 逆転された。ATL McCollum 32pts + Kuminga 19pts bench impact。series 1-1 tied.",
+          "tag": "nba_po_g2_4q_execution_collapse",
+          "sources": [
+            "nba.com hawks-knicks-2026-playoffs-game-2",
+            "espn.com CJ McCollum late rally"
+          ]
+        }
+      ],
+      "tag_matches": [
+        "nba_po_g2_4q_execution_collapse",
+        "nba_po_home_fav_4q_fade"
+      ],
+      "note": "3件揃ったら N_NBA_new4 として実装。G1 home win 後 G2 home で 4Q NRtg 逆転される閾値 (fav 4Q RS NRtg top 5 AND G1 close win <15pt) を特定。"
+    },
+    {
+      "candidate_id": "P029",
+      "status": "watching",
+      "target_rule_file": "core/rules_nba.json",
+      "proposed_rule_id": "N_NBA_new5",
+      "title": "NBA PO L3 DPOY center vs MVP scoring center matchup 封じ込め補正",
+      "description": "Gobert DPOY が Jokic MVP を 1-of-8 に封じた G2 のような defensive matchup は NBA PO で decisive。NRtg ベース L1 は RS 全体平均 → specific matchup の defensive efficiency 上振れを反映しない。DPOY vs MVP center matchup のある試合は L3 +3〜+5% defender 側補正 (逆に +scorer 側 -3%).",
+      "trigger_threshold": 3,
+      "current_count": 1,
+      "evidence": [
+        {
+          "id": "A033_min_den_g2",
+          "match": "Minnesota Timberwolves d. Denver Nuggets G2 2026-04-20 119-114",
+          "pattern": "Rudy Gobert vs Nikola Jokic matchup で Jokic 1-of-8 (12.5%) 1H 6pts。MIN +17 2nd-chance (20-3) offensive rebounding dominance。MIN 48% FG / 14-34 3P (41.2% variance swing)。road win.",
+          "tag": "nba_po_dpoy_vs_mvp_center_matchup",
+          "sources": [
+            "nba.com timberwolves-nuggets-2026-playoffs-game-2",
+            "espn.com Gobert contains Jokic"
+          ]
+        }
+      ],
+      "tag_matches": [
+        "nba_po_dpoy_vs_mvp_center_matchup",
+        "nba_defensive_matchup_decisive"
+      ],
+      "note": "3件揃ったら N_NBA_new5 として実装。DPOY tier (Gobert/Adebayo/Smart 等) vs Top5 MVP scoring center (Jokic/Embiid) の matchup で defender 側 +3〜+5% / scorer 側 -3%。"
     }
   ],
   "implemented_rules": [
@@ -854,5 +908,5 @@
     }
   ],
   "last_updated": "2026-04-23",
-  "updated_session": "_51"
+  "updated_session": "_52"
 }

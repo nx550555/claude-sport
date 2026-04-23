@@ -1657,7 +1657,76 @@
         }
       ],
       "session": "_50"
+    },
+    {
+      "date": "2026-04-23",
+      "session_id": "_52",
+      "sports_screened": [
+        "atp_madrid",
+        "wta_madrid"
+      ],
+      "total_matches_screened": 0,
+      "note": "Session_52 GEN003 最新情報チェック + 候補なし session。新規スクリーニングなし。既存 pending GO 5件中 2件 (Tsitsipas/Musetti) を GEN003 で CAUTION 降格。GO pending 5->3。",
+      "output_a": {
+        "description": "Session_52 高確率予想 (conf>=85 EV問わず) - 新規スクリーニングなし",
+        "candidates": []
+      },
+      "output_b": {
+        "description": "Session_52 マルチベット - 候補なし",
+        "multi_accuracy": [],
+        "multi_ev": []
+      },
+      "closed_results": [],
+      "cumulative_after": {
+        "q1_go_total": 33,
+        "q1_go_confirmed": 30,
+        "q1_go_hit": 22,
+        "q1_go_pending": 3,
+        "q1_go_hit_rate": 0.733,
+        "q1_go_pnl": 2.453
+      },
+      "go_recommendations": {
+        "maintained": [
+          {
+            "match": "Paul T. vs Tirante T.A.",
+            "odds": 1.4,
+            "conf": 80,
+            "date": "2026-04-24",
+            "sport": "atp"
+          },
+          {
+            "match": "Keys M. vs Zhang Sh.",
+            "odds": 1.23,
+            "conf": 86,
+            "date": "2026-04-24",
+            "sport": "wta"
+          },
+          {
+            "match": "Mertens E. vs Eala A.",
+            "odds": 1.37,
+            "conf": 78,
+            "date": "2026-04-23",
+            "sport": "wta",
+            "date_corrected": "from 4/24 to 4/23"
+          }
+        ],
+        "downgraded": [
+          {
+            "match": "Tsitsipas S. vs Kypson P.",
+            "from": "GO @1.35 conf 86",
+            "to": "CAUTION_MARGIN conf 72",
+            "reason": "4 of last 5 losses + Munich R1 loss + Top70 圏外 (P007/P011)"
+          },
+          {
+            "match": "Musetti L. vs Hurkacz H.",
+            "from": "GO @1.42 conf 76",
+            "to": "CAUTION_WAITING conf 71",
+            "reason": "Miami 棄権 arm injury + going through tough times (puntodebreak 4/22)"
+          }
+        ]
+      }
     }
   ],
-  "last_updated": "2026-04-21"
+  "last_updated": "2026-04-23",
+  "last_session": "_52"
 }

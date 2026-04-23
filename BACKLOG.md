@@ -181,7 +181,9 @@
 - [ ] **dashboard.html 累計履歴 / 成長分析タブ sync_dashboard.py 拡張** (低優先継続)
 
 **最優先 B: 通常運用継続**
-- [ ] **PA068 Madrid GO 5件結果** (Tsitsipas 4/23 → Paul/Musetti/Keys/Mertens 4/24-25)
+- [x] **Session_52 GEN003 最新情報チェック完了** (2026-04-23): Tsitsipas GO→CAUTION_MARGIN / Musetti GO→CAUTION_WAITING / Paul・Keys・Mertens 維持 / Mertens date 4/24→4/23 訂正
+- [ ] **PA068 Madrid GO 残 3件結果** (Paul 4/24 / Keys 4/24 / Mertens 4/23)
+- [ ] **PA076 Session_52 downgrade 追跡** (Tsitsipas 4/23 / Musetti 4/24 CAUTION 予測精度として)
 - [ ] **PA069 Q3 output_a 7件結果追跡** (Sinner/Swiatek/Gauff/Sabalenka/Andreeva/Bencic/Rybakina)
 - [ ] **PA070 Q4 upset_watch 13件** (Osaka-Osorio UPSET 観察など)
 - [ ] **NHL/NBA G3 スクリーニング** (4/24-26 開催)

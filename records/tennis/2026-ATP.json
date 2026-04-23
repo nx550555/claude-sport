@@ -3038,8 +3038,8 @@
       "round": "R1",
       "date": "2026-04-23",
       "match": "Tsitsipas S. vs Kypson P.",
-      "tier": "go",
-      "quadrant": "Q1_go",
+      "tier": "caution",
+      "quadrant": "Q4_upset_watch",
       "l1_metric": "clay_cElo",
       "l1_data": {
         "ce_diff": 316,
@@ -3047,25 +3047,36 @@
         "dog": "Patrick Kypson"
       },
       "predicted_winner": "Stefanos Tsitsipas",
-      "prediction_confidence": 86,
-      "prediction_basis": "cElo +316pt Tsitsipas clay pedigree",
+      "prediction_confidence": 72,
+      "prediction_basis": "cElo +316pt Tsitsipas clay pedigree / GEN003 downgrade: 直近5試合4敗・Munich R1 Marozsan敗北・Top70圏外 L4 form slump -14% (P007 form slump + P011 career-worst-exit mental penalty)",
       "odds": {
         "fav": 1.35,
         "dog": 3.25
       },
-      "note": "GO: cElo dominant. Risk R018 post-MC R1. Rec Tsitsipas @1.35.",
+      "note": "Downgraded GO->CAUTION MARGIN via GEN003 (Session_52). cElo 過去累積反映 vs 直近 form slump 乖離。predictive model 71%と整合。Kypson LL upset risk.",
       "screened_session": "_50",
       "source": "2026-04-23.json",
       "category": "ATP 1000",
       "surface": "clay",
       "rec": "Stefanos Tsitsipas",
       "rec_odds": 1.35,
-      "ev": 0.161,
+      "ev": -0.028,
       "result": null,
       "score": null,
       "prediction_hit": null,
       "hit": null,
-      "actual_ev": null
+      "actual_ev": null,
+      "caution_type": "margin",
+      "gen003_checked": {
+        "date": "2026-04-23",
+        "session": "_52",
+        "sources": [
+          "lastwordonsports.com/tennis/2026/04/22/atp-madrid-best-bets-tsitsipas-kypson",
+          "dimers.com/news/patrick-kypson-vs-stefanos-tsitsipas (predictive 71%)"
+        ],
+        "action": "GO->CAUTION_MARGIN"
+      },
+      "downgrade_reason": "form_slump_4of5_losses_plus_munich_r1_loss"
     },
     {
       "tournament": "Mutua Madrid Open 2026",
@@ -3545,7 +3556,16 @@
       "score": null,
       "prediction_hit": null,
       "hit": null,
-      "actual_ev": null
+      "actual_ev": null,
+      "gen003_checked": {
+        "date": "2026-04-23",
+        "session": "_52",
+        "sources": [
+          "tennishead.net Tommy Paul 2026 return clay 5-0"
+        ],
+        "action": "MAINTAIN_GO",
+        "note": "怪我情報なし、clay 5-0 Houston champ 維持。"
+      }
     },
     {
       "tournament": "Mutua Madrid Open 2026",
@@ -3586,8 +3606,8 @@
       "round": "R2",
       "date": "2026-04-24",
       "match": "Musetti L. vs Hurkacz H.",
-      "tier": "go",
-      "quadrant": "Q1_go",
+      "tier": "caution",
+      "quadrant": "Q4_upset_watch",
       "l1_metric": "clay_cElo",
       "l1_data": {
         "ce_diff": 202,
@@ -3595,25 +3615,37 @@
         "dog": "Hubert Hurkacz"
       },
       "predicted_winner": "Lorenzo Musetti",
-      "prediction_confidence": 76,
-      "prediction_basis": "cElo +202pt clay pedigree H2H clay 1-0",
+      "prediction_confidence": 71,
+      "prediction_basis": "cElo +202pt clay pedigree H2H clay 1-0 / GEN003 downgrade: Musetti Miami 棄権 arm injury / puntodebreak \"going through tough times\" (4/22) / clay revival attempt L4 injury recovery -5%",
       "odds": {
         "fav": 1.42,
         "dog": 2.9
       },
-      "note": "GO: Rec Musetti @1.42. Risk P008 Hurkacz PR.",
+      "note": "Downgraded GO->CAUTION WAITING via GEN003 (Session_52). Arm injury recovery 初戦。Hurkacz PR リスク複合。試合前の practice 状況次第で再判定。",
       "screened_session": "_50",
       "source": "2026-04-23.json",
       "category": "ATP 1000",
       "surface": "clay",
       "rec": "Lorenzo Musetti",
       "rec_odds": 1.42,
-      "ev": 0.082,
+      "ev": 0.008,
       "result": null,
       "score": null,
       "prediction_hit": null,
       "hit": null,
-      "actual_ev": null
+      "actual_ev": null,
+      "caution_type": "waiting",
+      "gen003_checked": {
+        "date": "2026-04-23",
+        "session": "_52",
+        "sources": [
+          "atptour.com/en/news/musetti-feature-madrid-2026",
+          "atptour.com/en/news/musetti-miami-2026-withdrawal (arm injury)",
+          "puntodebreak.com/en/2026/04/22/musetti-now-what-comes-is-going-through-tough-times"
+        ],
+        "action": "GO->CAUTION_WAITING"
+      },
+      "downgrade_reason": "arm_injury_miami_withdrawal_plus_form_struggles"
     },
     {
       "tournament": "Mutua Madrid Open 2026",

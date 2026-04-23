@@ -1250,7 +1250,7 @@
     },
     {
       "match": "ATL vs NYK G2",
-      "date": "2026-04-24",
+      "date": "2026-04-20",
       "round": "Playoffs R1 G2",
       "sport": "nba",
       "favorite": "Atlanta Hawks",
@@ -1262,8 +1262,8 @@
       "tier": "skip",
       "quadrant": "skip",
       "note": "初戦. NRtg NYK+6.18 vs ATL+2.33 = diff+3.85pt NYK優位. 市場ATL微fav矛盾 SKIP.",
-      "result": "Atlanta Hawks d. New York Knicks (G2)",
-      "score": "ATL W",
+      "result": "Atlanta Hawks 107-106 New York Knicks (G2)",
+      "score": "107-106",
       "prediction_hit": false,
       "rec": null,
       "rec_odds": null,
@@ -1278,9 +1278,41 @@
         "ESPN game recap"
       ],
       "round_label_corrected": "Session_49: import時に G1 ラベル誤付与, 実際は G2",
-      "miss_analysis": "NYK fav 想定 (G1 NYK win 後 G2 連勝期待) だったが ATL G2 で逆転勝利。詳細スタッツ未取得 (次セッション WebSearch で具体化)。L4 候補: NYK road game (ATL home momentum) / Trae Young 個人爆発 / NYK foul trouble。形式記入のみ - 詳細補填は P018/P019 兄弟パターン (PO G1 home favorite fade) を参考に深掘り要。",
+      "miss_analysis": {
+        "summary": "ATL 107-106 NYK G2 at MSG. ATL overcame a 12pt 4Q deficit to tie series 1-1.",
+        "score": "107-106",
+        "location": "Madison Square Garden (NYK home)",
+        "series_status": "1-1",
+        "key_stats": {
+          "CJ McCollum": "32pts / 6ast / 3 key buckets in final 2:08 / go-ahead step-back over Anunoby 34s left",
+          "ATL_4Q_shooting": "72% FG (dramatic comeback)",
+          "NYK_4Q": "15pts on 5-for-22 (NBA best 4Q NRtg collapsed)",
+          "Jonathan Kuminga": "19pts off bench + key block"
+        },
+        "factor_analysis": {
+          "L4_NYK_4Q_collapse": "NYK had NBA best 4Q NRtg during RS → G2 で 5-for-22 (22.7%) 集合的崩壊。home favorite 4Q pressure collapse パターン",
+          "L4_star_scorer_shift": "ATL McCollum 32pts は過去シーズン平均 (18-22ppg) を大幅に上回る個人爆発。star lift factor",
+          "L4_bench_impact": "ATL Kuminga 19pts off bench - depth advantage G2",
+          "L4_home_expectation_pressure": "NYK home after G1 win 余裕失 (series 2-0 意識が 4Q execution を下げた示唆)"
+        },
+        "rule_pipeline_evidence": {
+          "P018_brother": "PO G1 home favorite fade とは異なる: G2 home fade / 4Q collapse パターン → P019 (rivalry home fade) の兄弟: 新パターン候補",
+          "P026_G1_blowout_G2_fade_変形": "G1 NYK win 11pt差 → G2 home で close loss。P026 (G1 blowout 後 G2 complacency) の類似構造だが G1 blowout ではない",
+          "new_candidate": "P028 候補: PO G1 home fav win 後 G2 home 4Q execution collapse (star-dependent opponent のタイムリー爆発)"
+        },
+        "sources": [
+          "https://www.nba.com/news/hawks-knicks-2026-playoffs-first-round-game-2-takeaways",
+          "https://www.espn.com/nba/story/_/id/48546628/cj-mccollum-leads-late-rally-hawks-stun-knicks-tie-series",
+          "https://sports.yahoo.com/nba/article/nba-playoffs-2026-takeaways-msg-has-a-new-villain-in-cj-mccollum-after-hawks-shock-knicks-043907203.html"
+        ]
+      },
       "miss_layer": "L4_External",
-      "rule_linked": "PENDING (Session_51 後段で WebSearch 補填)"
+      "rule_linked": [
+        "P019_variant",
+        "P028_candidate"
+      ],
+      "date_original_incorrect": "2026-04-24",
+      "session_52_backfill": true
     },
     {
       "match": "TOR vs CLE G2",
@@ -1315,7 +1347,7 @@
     },
     {
       "match": "MIN vs DEN G2",
-      "date": "2026-04-24",
+      "date": "2026-04-20",
       "round": "Playoffs R1 G2",
       "sport": "nba",
       "favorite": "Denver Nuggets",
@@ -1343,9 +1375,45 @@
         "ESPN game recap"
       ],
       "round_label_corrected": "Session_49: import時に G1 ラベル誤付与, 実際は G2",
-      "miss_analysis": "MIN home G2 で DEN を 5pt差 (119-114) で破る。Edwards/Gobert 中心 + DEN Jokic high-load + roleplayer 負担増懸念。詳細スタッツ要 WebSearch (Edwards得点・Jokic stats・Murray status)。形式記入のみ - P020 (NRL 小サンプル類似) や rules_nba R001 (G1 home loss 後の G2 home rebound parental) との関連検討要。",
+      "miss_analysis": {
+        "summary": "MIN 119-114 DEN G2 at Denver. MIN road win, series tied 1-1. 1H 19pt DEN lead → 39-25 MIN Q2 comeback.",
+        "score": "119-114",
+        "location": "Denver (DEN home, road win for MIN)",
+        "series_status": "1-1",
+        "key_stats": {
+          "Anthony Edwards": "30pts (20 by half)",
+          "Julius Randle": "24pts",
+          "Donte DiVincenzo": "16pts + late clutch 3",
+          "Nikola Jokic": "24pts (only 6pts 1H / Gobert held to 1-of-8 vs Gobert)",
+          "Jamal Murray": "23pts 1H (then faded)",
+          "MIN_FG_pct": "48% / 14-of-34 3P (41.2%)",
+          "MIN_second_chance_pts": "+17 advantage (20-3)"
+        },
+        "factor_analysis": {
+          "L3_gobert_defensive_matchup": "Gobert vs Jokic matchup で Jokic 1-of-8 (12.5%) 封じ込め。DEN offense ceiling cap",
+          "L3_second_chance_dominance": "MIN +17 2nd-chance pts (20 vs 3) / offensive rebounding dominance",
+          "L3_three_point_variance": "MIN 14-of-34 (41.2%) vs RS平均 37%. positive variance swing",
+          "L4_murray_1h_fade": "Murray 23pts 1H → 2H 停滞。scoring dependency risk on one-time flow",
+          "L4_jokic_usage_ceiling": "Jokic 1H 6pts = season atypically low. Gobert matchup is systemic not random"
+        },
+        "rule_pipeline_evidence": {
+          "P026_variant": "G1 DEN win 後 G2 home で close loss。小blowout差なら complacency 要素薄い。むしろ L3 matchup defense が decisive",
+          "new_candidate_gobert_joker": "Gobert vs Jokic DPOY matchup が MVP scoring を効果的に封じる → NBA PO L3 defensive matchup rule 候補 (P029 候補)"
+        },
+        "sources": [
+          "https://www.nba.com/news/timberwolves-nuggets-2026-playoffs-game-2-takeaways",
+          "https://www.espn.com/nba/story/_/id/48547786/timberwolves-rally-nuggets-win-game-2-even-series",
+          "https://www.si.com/nba/nuggets/onsi/good-bad-ugly-from-nuggets-game-2-loss-to-timberwolves",
+          "https://clutchpoints.com/nba/denver-nuggets/nuggets-news-david-adelman-issue-denver-game-2-loss-timberwolves"
+        ]
+      },
       "miss_layer": "L4_External",
-      "rule_linked": "PENDING (Session_51 後段で WebSearch 補填)"
+      "rule_linked": [
+        "P026_variant",
+        "P029_candidate"
+      ],
+      "date_original_incorrect": "2026-04-24",
+      "session_52_backfill": true
     }
   ],
   "screening_log": [

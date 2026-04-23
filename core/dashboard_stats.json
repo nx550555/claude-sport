@@ -1,15 +1,15 @@
 {
   "_comment": "Sport card の唯一の真実ソース。記録更新後は必ずここを更新してから sync_sport_cards.py を実行すること",
   "last_updated": "2026-04-23",
-  "session": "_50",
+  "session": "_52",
   "sports": {
     "atp": {
-      "go_count": 17,
+      "go_count": 15,
       "confirmed_count": 14,
       "hit_count": 11,
       "hit_rate": 0.786,
       "pnl": 1.74,
-      "pending_count": 3
+      "pending_count": 1
     },
     "wta": {
       "go_count": 6,
@@ -101,21 +101,21 @@
     }
   },
   "overview": {
-    "total_go": 35,
+    "total_go": 33,
     "total_confirmed": 30,
     "total_hits": 22,
     "hit_rate": 0.733,
     "total_pnl": 2.5,
-    "total_pending": 5,
-    "pending_breakdown": "ATP x3 + WTA x2"
+    "total_pending": 3,
+    "pending_breakdown": "ATP x1 + WTA x2"
   },
   "by_tier": {
     "advanced": {
-      "go_count": 22,
+      "go_count": 20,
       "confirmed_count": 22,
       "hit_count": 17,
       "pnl": 3.483,
-      "pending_count": 5,
+      "pending_count": 3,
       "sports": [
         "atp",
         "wta",
@@ -123,7 +123,7 @@
         "nba"
       ],
       "hit_rate": 0.773,
-      "note": "Session_48 (2026-04-21): Galfi WTA Madrid GO pending @1.54 EV+20.3% 追加. 確定分 16/21 76.2% +2.943u. | Session_49: Galfi HIT 反映, 17/22 77.3% +3.483u."
+      "note": "Session_48 (2026-04-21): Galfi WTA Madrid GO pending @1.54 EV+20.3% 追加. 確定分 16/21 76.2% +2.943u. | Session_49: Galfi HIT 反映, 17/22 77.3% +3.483u. | Session_52 (2026-04-23) GEN003: Tsitsipas GO->CAUTION_MARGIN (4/5 losses + Munich R1 loss), Musetti GO->CAUTION_WAITING (Miami arm injury) -> GO pending 5->3."
     },
     "basic": {
       "go_count": 8,

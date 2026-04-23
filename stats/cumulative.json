@@ -1,12 +1,12 @@
 {
   "updated": "2026-04-23",
   "tennis_atp": {
-    "total_predictions": 14,
+    "total_predictions": 12,
     "confirmed": 14,
     "hits": 11,
     "hit_rate": 0.786,
     "ev_total": 1.74,
-    "pending": 3,
+    "pending": 1,
     "note_hit_rate": "hit_rate = hits / confirmed (pending除外)。GO tierのみ集計（CAUTION除外）",
     "correction_note": "4/12: SF Sinner vs Zverev の結果を修正（MISS→HIT: Sinner 6-1 6-4）。旧セッションで誤記録。delta +1.65",
     "tournaments": [
@@ -34,7 +34,8 @@
       }
     ],
     "tier": "advanced",
-    "note_qf_screening": "2026-04-17 QF: Barcelona (Rublev/Medjedovic/Fils/Jodar HIT 3/4, Musetti MISS SKIP) / Munich (Zverev/Cobolli HIT 2/4, Fonseca/Shapovalov MISS SKIP). 予測精度 5/8 62.5% (SKIP予測のため bet_performance影響なし)."
+    "note_qf_screening": "2026-04-17 QF: Barcelona (Rublev/Medjedovic/Fils/Jodar HIT 3/4, Musetti MISS SKIP) / Munich (Zverev/Cobolli HIT 2/4, Fonseca/Shapovalov MISS SKIP). 予測精度 5/8 62.5% (SKIP予測のため bet_performance影響なし).",
+    "gen003_session_52": "Session_52 (2026-04-23) GEN003 downgrade: Tsitsipas GO->CAUTION_MARGIN (4/5 losses + Munich R1), Musetti GO->CAUTION_WAITING (Miami arm injury). pending 3->1."
   },
   "tennis_wta": {
     "total_predictions": 4,
@@ -260,12 +261,12 @@
     "_formula": "hit_rate = hits / confirmed / ev_total = sum of actual_ev for GO-tier only",
     "_frame": "Q1_go=GO推奨(conf>=75 AND EV>+5) / Q2_upset_pick=UPSET_PICK(UF>=3 AND div>=15pp) / Q3_output_a=高確率予想(conf>=85 EV問わず) / Q4_upset_watch=アップセット観察(dog>=3.0 AND UF>=2)",
     "Q1_go": {
-      "total": 35,
+      "total": 33,
       "confirmed": 30,
       "hit": 22,
       "hit_rate": 0.733,
       "ev_total": 2.453,
-      "note": "既存GO推奨累計。Session_30-43のGO+Session_44遡及4件+過去全件 | Session_49: Galfi GO HIT +0.54u 反映 | NBA SAS G1 反映訂正: 22/30 73.3% | Session_50: +5 GO pending (Tsitsipas @1.35 / Paul @1.40 / Musetti @1.42 / Keys @1.23 / Mertens @1.37)."
+      "note": "既存GO推奨累計。Session_30-43のGO+Session_44遡及4件+過去全件 | Session_49: Galfi GO HIT +0.54u 反映 | NBA SAS G1 反映訂正: 22/30 73.3% | Session_50: +5 GO pending (Tsitsipas @1.35 / Paul @1.40 / Musetti @1.42 / Keys @1.23 / Mertens @1.37). | Session_52 GEN003: Tsitsipas (@1.35) + Musetti (@1.42) 2件 GO->CAUTION 降格。Q1_go total 35->33, pending 5->3."
     },
     "Q2_upset_pick": {
       "total": 0,

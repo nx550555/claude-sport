@@ -2428,7 +2428,16 @@
           "score": null,
           "prediction_hit": null,
           "hit": null,
-          "actual_ev": null
+          "actual_ev": null,
+          "gen003_checked": {
+            "date": "2026-04-23",
+            "session": "_52",
+            "sources": [
+              "wtatennis.com/videos/4491304 Zhang past Lys 6-4 6-3 meets Keys R2"
+            ],
+            "action": "MAINTAIN_GO",
+            "note": "怪我情報なし。Zhang R1 で Lys を 6-4 6-3 で撃破したが form brief momentum にとどまる。Keys #16 seed cElo +313pt 維持。"
+          }
         },
         {
           "tournament": "Mutua Madrid Open 2026",
@@ -2530,7 +2539,7 @@
         {
           "tournament": "Mutua Madrid Open 2026",
           "round": "R2",
-          "date": "2026-04-24",
+          "date": "2026-04-23",
           "match": "Mertens E. vs Eala A.",
           "tier": "go",
           "quadrant": "Q1_go",
@@ -2557,7 +2566,18 @@
           "score": null,
           "prediction_hit": null,
           "hit": null,
-          "actual_ev": null
+          "actual_ev": null,
+          "date_original": "2026-04-24",
+          "gen003_checked": {
+            "date": "2026-04-23",
+            "session": "_52",
+            "sources": [
+              "manilatimes.net/2026/04/20/sports/eala-eyes-mertens-rematch (Thursday April 23)",
+              "olympics.com Eala progresses R1 6-3 6-3 Pavlyuchenkova"
+            ],
+            "action": "MAINTAIN_GO_DATE_CORRECTED",
+            "note": "一次ソース複数で試合日 4/23 (Thursday) 確認 → date 訂正。怪我情報なし。"
+          }
         },
         {
           "tournament": "Mutua Madrid Open 2026",

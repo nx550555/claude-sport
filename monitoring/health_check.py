@@ -150,12 +150,13 @@ def main():
         sessions = mb.get("sessions", [])
         if sessions:
             latest = sessions[-1]
-            # quadrant tagging は session 内の screening_procedure_note や deep_dive で識別
-            has_q_tag = any(
-                k in latest for k in ["output_a_candidates","output_a_additions","upset_pick_checks","upset_pick_uf_deep_dive"]
-            )
+            # quadrant tagging は session 内の screening_procedure_note / deep_dive / 実運用キー (output_a/go_recommendations) で識別
+            # Session_48 以降は output_a / go_recommendations / closed_results が標準。output_a_candidates は旧世代互換。
+            q_keys_checked = ["output_a_candidates","output_a_additions","upset_pick_checks","upset_pick_uf_deep_dive","output_a","go_recommendations","closed_results"]
+            has_q_tag = any(latest.get(k) for k in q_keys_checked)
             if has_q_tag:
-                goods.append(f"前セッション ({latest.get('session_id','?')}) で4象限分類記録あり")
+                matched = [k for k in q_keys_checked if latest.get(k)]
+                goods.append(f"前セッション ({latest.get('session_id','?')}) で4象限分類記録あり [{','.join(matched)}]")
             else:
                 warnings.append(f"前セッション ({latest.get('session_id','?')}) で4象限分類記録が見つからない。STEP⓪〜④の手順漏れの可能性")
     except Exception as e:
