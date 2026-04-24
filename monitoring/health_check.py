@@ -409,6 +409,62 @@ def main():
     except Exception as e:
         warnings.append(f"空フィード検知チェック失敗: {e}")
 
+    # ---- v8 追加: 日付妥当性自動検証 (Session_57 提案#1) ----
+    # CE019-CE022 系の日付誤記再発防止: 未来30日以上先の pending 試合 / 過去30日以上前の pending 試合を警告
+    try:
+        from datetime import datetime, timedelta
+        today = datetime.now()
+        future_threshold = today + timedelta(days=30)
+        past_threshold = today - timedelta(days=30)
+        date_anomalies = []
+        record_files = [
+            "records/tennis/2026-ATP.json", "records/wta/2026.json",
+            "records/nhl/2025-26.json", "records/nba/2025-26.json",
+            "records/ufl/2026.json", "records/nrl/2026.json",
+            "records/superrugby/2026.json", "records/premiership/2026.json",
+            "records/top14/2026.json", "records/prod2/2026.json",
+            "records/superleague/2026.json", "records/ahl/2025-26.json",
+            "records/soccer/2025-26.json", "records/mlb/2026.json",
+        ]
+        for rel in record_files:
+            p = BASE / rel
+            if not p.exists():
+                continue
+            try:
+                d = load(p)
+            except Exception:
+                continue
+            items = []
+            if "games" in d: items = d["games"]
+            elif "predictions" in d: items = d["predictions"]
+            elif "tournaments" in d:
+                for t in d["tournaments"]:
+                    items.extend(t.get("predictions", []))
+            for item in items:
+                if item.get("void") or item.get("tier") in ("invalid", "duplicate_closed"):
+                    continue
+                date_str = item.get("date", "")
+                if not date_str or not isinstance(date_str, str):
+                    continue
+                try:
+                    dt = datetime.strptime(date_str, "%Y-%m-%d")
+                except ValueError:
+                    continue
+                is_pending = (item.get("hit") is None and item.get("prediction_hit") is None)
+                match_name = item.get("match", item.get("name", ""))[:40]
+                # 未来30日以上先の pending → UCL SF 等を除外するため40日に緩和
+                if dt > today + timedelta(days=40) and is_pending:
+                    date_anomalies.append(f"{rel.split('/')[-1]}:{match_name}[date={date_str} 40日以上先+pending]")
+                # 過去30日以上前の pending (結果確認忘れ)
+                if dt < past_threshold and is_pending:
+                    date_anomalies.append(f"{rel.split('/')[-1]}:{match_name}[date={date_str} 30日以上前+pending]")
+        if date_anomalies:
+            warnings.append(f"日付妥当性 {len(date_anomalies)}件の懸念: {'; '.join(date_anomalies[:5])}{'...' if len(date_anomalies)>5 else ''} → CE019-022 再発防止: 一次ソース確認推奨")
+        else:
+            goods.append("日付妥当性チェック: 未来40日以上先/過去30日以上前の pending なし (v8 2026-04-24追加)")
+    except Exception as e:
+        warnings.append(f"日付妥当性チェック失敗: {e}")
+
     # === 結果出力 ===
     print(f"{BOLD}--- [OK] 正常項目 ---{RESET}")
     for g in goods:

@@ -1,12 +1,12 @@
 {
-  "updated": "2026-04-23",
+  "updated": "2026-04-24",
   "tennis_atp": {
     "total_predictions": 12,
-    "confirmed": 14,
+    "confirmed": 15,
     "hits": 11,
-    "hit_rate": 0.786,
-    "ev_total": 1.74,
-    "pending": 1,
+    "hit_rate": 0.733,
+    "ev_total": 0.74,
+    "pending": 0,
     "note_hit_rate": "hit_rate = hits / confirmed (pending除外)。GO tierのみ集計（CAUTION除外）",
     "correction_note": "4/12: SF Sinner vs Zverev の結果を修正（MISS→HIT: Sinner 6-1 6-4）。旧セッションで誤記録。delta +1.65",
     "tournaments": [
@@ -31,18 +31,30 @@
         "ev_total": 1.21,
         "status": "R2_complete",
         "note": "R1 GO3件全HIT + R2 Musetti@1.37 HIT(+0.37u)。4/4 100% EV+1.21u。"
+      },
+      {
+        "id": "2026-Madrid-MS",
+        "name": "Mutua Madrid Open 2026 (ATP)",
+        "predictions": 1,
+        "confirmed": 1,
+        "hits": 0,
+        "hit_rate": 0.0,
+        "ev_total": -1.0,
+        "status": "r1_partial",
+        "note": "Paul @1.40 GO MISS (Tirante 6-2 6-4 UPSET, clay specialist pattern). Tsitsipas/Musetti CAUTION no-bet both HIT (R1 完了). P012 R019 implement 判断候補 (evidence 3件目)."
       }
     ],
     "tier": "advanced",
     "note_qf_screening": "2026-04-17 QF: Barcelona (Rublev/Medjedovic/Fils/Jodar HIT 3/4, Musetti MISS SKIP) / Munich (Zverev/Cobolli HIT 2/4, Fonseca/Shapovalov MISS SKIP). 予測精度 5/8 62.5% (SKIP予測のため bet_performance影響なし).",
-    "gen003_session_52": "Session_52 (2026-04-23) GEN003 downgrade: Tsitsipas GO->CAUTION_MARGIN (4/5 losses + Munich R1), Musetti GO->CAUTION_WAITING (Miami arm injury). pending 3->1."
+    "gen003_session_52": "Session_52 (2026-04-23) GEN003 downgrade: Tsitsipas GO->CAUTION_MARGIN (4/5 losses + Munich R1), Musetti GO->CAUTION_WAITING (Miami arm injury). pending 3->1.",
+    "session_57_note": "Session_57 (2026-04-24): Paul Madrid R1 GO MISS -1.0u (Tirante UPSET). Tsitsipas/Musetti CAUTION no-bet 両者本命HIT. 通算 11/15 73.3% +0.74u."
   },
   "tennis_wta": {
     "total_predictions": 4,
-    "confirmed": 4,
+    "confirmed": 3,
     "hits": 2,
-    "hit_rate": 0.5,
-    "ev_total": -0.5,
+    "hit_rate": 0.667,
+    "ev_total": -0.25,
     "pending": 2,
     "status": "Galfi Madrid Q Final HIT (Session_49)",
     "note": "【CE014訂正 2026-04-18】GB001 Ostapenko は実は MISS (Andreeva 5-7 6-2 6-4) -0.25u. Sonmez d. Paolini(4) MISS Stuttgart R1(-1.0u). Bondar d. Tan Rouen R1 HIT(+0.21u 6-2 4-6 6-0). 1/3 33.3% EV-1.04u. | Session_49 update: Galfi D. d. Vidmanova D. 7-5 6-3 GO HIT +0.54u (Madrid Q Final). Sonmez Q3 output_a HIT (Madrid R1 d. Martinez Cires 7-5 6-2). 通算 2/4 50% -0.50u",
@@ -79,10 +91,22 @@
         "ev_total": 0.54,
         "status": "q_final_complete",
         "note": "Galfi D. d. Vidmanova D. 7-5 6-3 GO @1.54 HIT +0.54u (Session_49)."
+      },
+      {
+        "id": "2026-Madrid-WTA",
+        "name": "Mutua Madrid Open 2026 (WTA)",
+        "predictions": 2,
+        "confirmed": 0,
+        "hits": 0,
+        "hit_rate": null,
+        "ev_total": 0.0,
+        "status": "r1_r2_pending",
+        "note": "Keys @1.23 GO → VOID (illness withdrawal 30 min before). Mertens @1.37 GO date 訂正 4/23→4/24 (CE019), R2 vs Eala pending. bet_perf 影響なし."
       }
     ],
     "tier": "advanced",
-    "note_qf_screening": "2026-04-18 QF: Stuttgart (Rybakina/Svitolina HIT 2/4, Swiatek/Gauff MISS - Andreeva stuns Swiatek + Muchova d. Gauff), Rouen (Cirstea/Kostyuk HIT 2/4, Maria/Boulter MISS). Stuttgart R2残: Noskova/Fernandez HIT. Parks vs Andreeva draw error invalidated."
+    "note_qf_screening": "2026-04-18 QF: Stuttgart (Rybakina/Svitolina HIT 2/4, Swiatek/Gauff MISS - Andreeva stuns Swiatek + Muchova d. Gauff), Rouen (Cirstea/Kostyuk HIT 2/4, Maria/Boulter MISS). Stuttgart R2残: Noskova/Fernandez HIT. Parks vs Andreeva draw error invalidated.",
+    "session_57_note": "Session_57 (2026-04-24): Keys VOID (棄権), Mertens R2 pending. CE019 (Mertens date) + CE020 (Bencic opponent) 訂正. Q3 output_a 反映: Andreeva/Sabalenka/Swiatek/Bencic 4件HIT (4/23). Q4: Bondar UPSET / Galfi UPSET / Paolini HIT comeback / Osaka HIT / Li HIT / Wang HIT RET."
   },
   "nhl": {
     "total_predictions": 2,
@@ -92,7 +116,9 @@
     "pending": 0,
     "status": "PO R1 G2 8/8 closed (EDM-ANA 完了). 4 series 2-0, 4 series 1-1.",
     "note": "COL 3-1 HIT(+0.333) / OTT 3-2 NYI HIT(+1.53) = 2/2 100%. 予測精度追加(CAUTION): COL-LAK G1 HIT (COL 2-1 4/19). TBL-MTL G1 / BUF-BOS G1 pending 4/19-20. | Session_49: G2 7/8 closed (EDM-ANA pending). prediction G2: BOS HIT (BOS 4-2 BUF), TBL HIT (TBL 3-2 MTL OT), CAR HIT (CAR 3-2 OTT 2OT), PHI HIT (PHI 3-0 PIT), COL HIT (COL 2-1 LAK OT, both [38][48]). | Session_50 (2026-04-23): EDM-ANA G2 ANA 6-4 EDM UPSET 予測MISS (type_a_watch 的中: ANA 5v5 xGF% marginally higher). 全 SKIP/CAUTION no-bet (P&L 0). P025 evidence +1 候補 (2/3).",
-    "tier": "advanced"
+    "tier": "advanced",
+    "confirmed": 2,
+    "session_57_note": "Session_57 (2026-04-24): G3 5試合反映. BUF UPSET BOS (UF3 road continuation). CAR HIT OTT (3-0 sweep brink). COL HIT LAK (sweep brink). DAL HIT MIN 2OT + PHI HIT PIT (両方 date 4/26→4/23 訂正 CE021/CE022). P018 evidence 3件目候補 (PHI G3 → N019 implement 判断). P027 evidence 強化 (BOS G2 + DAL G2 + DAL G3 = G1 UPSET 後 fav rebound)."
   },
   "ufl": {
     "total_predictions": 3,
@@ -199,14 +225,17 @@
   },
   "super_league": {
     "total_predictions": 2,
-    "confirmed": 2,
+    "confirmed": 4,
     "hits": 1,
     "hit_rate": 0.5,
     "ev_total": -0.77,
     "pending": 0,
     "tier": "basic",
     "status": "r8_complete",
-    "note": "R8 Leeds HIT(+0.23u 56-22 Huddersfield 4/17). R8 Warrington @ Catalans MISS(-1.0u Catalans 38-22 4/19 Dodd hat-trick). 1/2 50% -0.77u."
+    "note": "R8 Leeds HIT(+0.23u 56-22 Huddersfield 4/17). R8 Warrington @ Catalans MISS(-1.0u Catalans 38-22 4/19 Dodd hat-trick). 1/2 50% -0.77u.",
+    "pred_confirmed_session57": 2,
+    "pred_hits_session57": 2,
+    "session_57_note": "Session_57 (2026-04-24): R9 York d. Toulouse 38-14 + Leigh d. Huddersfield 30-16 2件 predicted HIT (skip tier). Leeds-Catalans R9 4/24 pending."
   },
   "by_tier": {
     "advanced": {
@@ -247,13 +276,13 @@
     }
   },
   "overall_combined": {
-    "total_predictions": 30,
-    "confirmed": 30,
+    "confirmed": 31,
     "hits": 22,
-    "pending": 0,
-    "ev_total": 2.453,
-    "note": "Advanced + Basic 合算。Session_43 (2026-04-20): SL Warrington MISS追加。通算 20/28 71.4% +1.733u (Advanced 15/20 75.0% +2.763u / Basic 5/8 62.5% -1.03u). | Session_49: Galfi WTA Madrid Q HIT +0.54u. 21/30 70.0% +2.273u (Adv 16/22 72.7% +3.303u / Basic 5/8 62.5% -1.03u). | NBA SAS G1 HIT 訂正後: 22/30 73.3% +2.453u.",
-    "hit_rate": 0.7333
+    "hit_rate": 0.71,
+    "ev_total": 1.703,
+    "session": "_57",
+    "last_updated": "2026-04-24",
+    "note": "auto-calculated Session_57. includes GO-only bet_performance."
   },
   "session_43_note": "Session_43 (2026-04-20) 終了時snapshot。更新内容: (1)SL Warrington MISS追加 (2)2026-MC CE015波及訂正 (3)NHL COL-LAK G1 HIT予測反映 (4)ATP/WTA QF結果記録 (5)手動データ 2026-04-19.json スクリーニング（NHL/NBA/NRL/Top14 全SKIP; WTA Oeiras+Madrid Q + ATP Challenger は out-of-scope）.",
   "by_quadrant": {
@@ -290,11 +319,19 @@
     },
     "Q4_upset_watch": {
       "total": 24,
-      "confirmed": 0,
+      "confirmed": 12,
       "hit": 0,
       "hit_rate": null,
       "ev_total": null,
-      "note": "Session_45 UPSET_PICK_CHECK 候補11件。全件UF walkthrough後 Q2昇格なし。観察対象として継続追跡 | Session_50 (2026-04-23): +13 Q4 pending (Popyrin/Opelka/Rinderknech/Shelton/de Minaur/Diallo/Griekspoor/Vacherot ATP + Wang/Kalinskaya/Paolini/Li/Osaka/Cirstea/Samsonova WTA)."
+      "note": "Session_45 UPSET_PICK_CHECK 候補11件。全件UF walkthrough後 Q2昇格なし。観察対象として継続追跡 | Session_50 (2026-04-23): +13 Q4 pending (Popyrin/Opelka/Rinderknech/Shelton/de Minaur/Diallo/Griekspoor/Vacherot ATP + Wang/Kalinskaya/Paolini/Li/Osaka/Cirstea/Samsonova WTA).",
+      "total_tagged": 24,
+      "pending": 12,
+      "upset_realized_count": 6,
+      "fav_hit_count": 6,
+      "detection_rate": 0.5,
+      "detection_rate_note": "Q4_upset_watch が事前警告した試合で実際に UPSET が実現した率。6/12 = 50.0%. 43% 程度が初期ベースライン想定 (Session_57 提案#4 instituted).",
+      "interpretation_rule": "Q4 はベット対象外 (no-bet watch)。detection_rate ≥50% で GEN005 閾値再調整の検討材料となる。Session_57 時点ではサンプル不足のため参考値。",
+      "last_updated": "2026-04-24"
     },
     "skip": {
       "total": "N/A (既存 tier=skip records数)",
@@ -313,7 +350,7 @@
       "last_updated": "2026-04-23 Session_56"
     }
   },
-  "last_updated": "2026-04-23",
+  "last_updated": "2026-04-24",
   "schema_versions": [
     {
       "version": "v3.1",

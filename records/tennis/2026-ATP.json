@@ -1670,7 +1670,9 @@
       "output_a_entry": true,
       "miss_analysis": "Alcaraz Barcelona R2 棄権 (右手首負傷 4/16 判明)。WALKOVER のため予測対象外 VOID 扱い。Madrid/Rome/RG 出場リスク報道。BACKLOG PA020 で対応済。",
       "miss_layer": "VOID",
-      "rule_linked": "PA020 (Alcaraz withdrawal VOID handling) - bet_performance 影響なし、prediction_hit 算定対象外"
+      "rule_linked": "PA020 (Alcaraz withdrawal VOID handling) - bet_performance 影響なし、prediction_hit 算定対象外",
+      "void": true,
+      "void_reason": "withdrawal/walkover before match start - bet refunded"
     },
     {
       "tournament": "BMW Open Munich",
@@ -3047,11 +3049,21 @@
       "rec": null,
       "rec_odds": null,
       "ev": 0.301,
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Damm d. Popyrin",
+      "score": "7-6(7) 6-4",
+      "prediction_hit": false,
       "hit": null,
-      "actual_ev": null
+      "actual_ev": null,
+      "outcome_note": "UPSET_realized: Damm (underdog) won. Q4_upset_watch HIT (UPSET detected successfully).",
+      "verification_sources": [
+        "atptour.com/en/news/madrid-2026-results",
+        "perfect-tennis.com day-two-recap"
+      ],
+      "miss_analysis": [
+        "Damm (young FIN) ousted Popyrin (Top30 AUS) in 2 sets. Popyrin clay struggles continue (2026 losing streak extension). Damm serve dominance 7-6(7) converted. Q4_upset_watch pattern (UF≥2 detection) succeeded. 類似 P018 NHL G1 young core activation の ATP版: under25 new-gen momentum upsets vet/seed."
+      ],
+      "miss_layer": "L1_fav_form_slump",
+      "rule_linked": "Q4_upset_watch_detection_success"
     },
     {
       "tournament": "Mutua Madrid Open 2026",
@@ -3081,11 +3093,11 @@
       "rec": "Stefanos Tsitsipas",
       "rec_odds": 1.35,
       "ev": -0.028,
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Tsitsipas d. Kypson",
+      "score": "3-6 6-7(6) 7-6(4)",
+      "prediction_hit": true,
       "hit": null,
-      "actual_ev": null,
+      "actual_ev": 0.0,
       "caution_type": "margin",
       "gen003_checked": {
         "date": "2026-04-23",
@@ -3096,7 +3108,13 @@
         ],
         "action": "GO->CAUTION_MARGIN"
       },
-      "downgrade_reason": "form_slump_4of5_losses_plus_munich_r1_loss"
+      "downgrade_reason": "form_slump_4of5_losses_plus_munich_r1_loss",
+      "outcome_note": "Tsitsipas rallied from 1 set + 2 points down in 2nd-set TB. CAUTION_MARGIN no-bet / 本命予測HIT. snapped 3-match losing streak.",
+      "verification_sources": [
+        "yardbarker.com ATP Madrid Open Day Two Round-Up",
+        "tennistonic.com Tsitsipas outlasts Kypson",
+        "greekcitytimes.com Tsitsipas Madrid Open"
+      ]
     },
     {
       "tournament": "Mutua Madrid Open 2026",
@@ -3160,11 +3178,15 @@
       "rec": null,
       "rec_odds": null,
       "ev": null,
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Vallejo d. Dimitrov",
+      "score": "6-4 6-4",
+      "prediction_hit": true,
       "hit": null,
-      "actual_ev": null
+      "actual_ev": null,
+      "outcome_note": "predicted Vallejo (WC local) correct. fav_HIT (market was close). debut for Vallejo.",
+      "verification_sources": [
+        "atptour.com/en/news/madrid-2026-video-recap-day-2"
+      ]
     },
     {
       "tournament": "Mutua Madrid Open 2026",
@@ -3262,11 +3284,15 @@
       "rec": null,
       "rec_odds": null,
       "ev": null,
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Carabelli d. Monfils",
+      "score": "6-3 6-4",
+      "prediction_hit": true,
       "hit": null,
-      "actual_ev": null
+      "actual_ev": null,
+      "outcome_note": "Monfils farewell exit. Carabelli 予測HIT.",
+      "verification_sources": [
+        "tennismajors.com Ugo Carabelli sends Monfils into Madrid night"
+      ]
     },
     {
       "tournament": "Mutua Madrid Open 2026",
@@ -3297,11 +3323,18 @@
       "rec": null,
       "rec_odds": null,
       "ev": 0.217,
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Budkov Kjaer d. Opelka (ret. 5-3)",
+      "score": "RET",
+      "prediction_hit": false,
       "hit": null,
-      "actual_ev": null
+      "actual_ev": null,
+      "outcome_note": "Opelka retired at 5-3 due to injury. CAUTION no-bet / 予測MISS (Opelka pred). L4_External: retirement.",
+      "miss_layer": "L4_External",
+      "miss_analysis": "Opelka injury retirement at 5-3 down. Not a true upset - external factor.",
+      "verification_sources": [
+        "yardbarker.com ATP Madrid Day Two Round-Up Opelka retires injured"
+      ],
+      "rule_linked": "L4_External_retirement"
     },
     {
       "tournament": "Mutua Madrid Open 2026",
@@ -3572,11 +3605,11 @@
       "rec": "Tommy Paul",
       "rec_odds": 1.4,
       "ev": 0.123,
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
-      "hit": null,
-      "actual_ev": null,
+      "result": "Tirante d. Paul",
+      "score": "6-2 6-4",
+      "prediction_hit": false,
+      "hit": false,
+      "actual_ev": -1.0,
       "gen003_checked": {
         "date": "2026-04-23",
         "session": "_52",
@@ -3587,7 +3620,15 @@
         "note": "怪我情報なし、clay 5-0 Houston champ 維持。"
       },
       "notified": true,
-      "notified_at": "2026-04-23T21:36:51.457249+09:00"
+      "notified_at": "2026-04-23T21:36:51.457249+09:00",
+      "outcome_note": "UPSET MISS. Tirante (ARG clay specialist) d. Paul straight sets. P012 clay-specialist vs hardcourt-bias pattern evidence candidate.",
+      "miss_layer": "L1_clay_specialist_bias",
+      "miss_analysis": "Tirante ARG clay specialist defeated Paul in straight sets. Paul primarily a hard-court player. P012 (clay specialist vs hardcourt) evidence 3/3 候補 — 既存 A011 (Carabelli d. Khachanov) + A024 (Droguet d. Virtanen) と同パターン. 今回が decisive 3件目で R019 implement 判断要.",
+      "rule_linked": "P012_candidate",
+      "verification_sources": [
+        "atptour.com/en/news/madrid-2026-results",
+        "dimers.com tirante-paul"
+      ]
     },
     {
       "tournament": "Mutua Madrid Open 2026",
@@ -3651,11 +3692,11 @@
       "rec": "Lorenzo Musetti",
       "rec_odds": 1.42,
       "ev": 0.008,
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Musetti d. Hurkacz",
+      "score": "6-4 7-6",
+      "prediction_hit": true,
       "hit": null,
-      "actual_ev": null,
+      "actual_ev": 0.0,
       "caution_type": "waiting",
       "gen003_checked": {
         "date": "2026-04-23",
@@ -3667,7 +3708,13 @@
         ],
         "action": "GO->CAUTION_WAITING"
       },
-      "downgrade_reason": "arm_injury_miami_withdrawal_plus_form_struggles"
+      "downgrade_reason": "arm_injury_miami_withdrawal_plus_form_struggles",
+      "outcome_note": "Musetti advances firmly in 2 sets. CAUTION_WAITING no-bet (arm injury concern) / 本命予測HIT. Next R3 vs Griekspoor.",
+      "verification_sources": [
+        "sport.sky.it Musetti Hurkacz",
+        "corrieredellosport.it",
+        "puntodebreak.com Musetti advances firmly"
+      ]
     },
     {
       "tournament": "Mutua Madrid Open 2026",
@@ -4085,7 +4132,7 @@
       "reason": "cElo data availability restricted to ATP Tour main draw + top qualifying events only."
     }
   ],
-  "last_updated": "2026-04-21",
+  "last_updated": "2026-04-24",
   "log": [
     {
       "session": "_45",

@@ -1,7 +1,7 @@
 {
   "sport": "tennis",
-  "version": "v2.2",
-  "updated": "2026-04-20",
+  "version": "v2.3",
+  "updated": "2026-04-24",
   "surface_note": "現在はクレーシーズン。サーフェス変更時はcEloソースを切り替える",
   "screening": {
     "L1_source": "Tennis Abstract cElo (tennisabstract.com)",
@@ -166,8 +166,55 @@
       ],
       "added": "2026-04-20",
       "version": "v1.0"
+    },
+    {
+      "id": "R019",
+      "name": "Clay specialist vs hardcourt-bias 実効力補正",
+      "type": "L1_adjustment",
+      "applies_to": "ATP clay surface matches",
+      "condition": {
+        "surface": "clay",
+        "l1_celo_diff": "<120pt",
+        "clay_specialist_side": {
+          "nationality": [
+            "ARG",
+            "ESP",
+            "FRA (clay-heavy)",
+            "ITA (clay-heavy)",
+            "URU",
+            "PER",
+            "CHI",
+            "BRA"
+          ],
+          "recent_clay_record": ">=8 wins in last 12 months on clay OR clay-preference in ATP profile"
+        },
+        "hardcourt_bias_opponent": {
+          "nationality": [
+            "USA",
+            "RUS",
+            "POL (non-clay-specialist)",
+            "CZE (non-clay-specialist)",
+            "AUS"
+          ],
+          "surface_bias": "hardcourt primary (>50% career wins on hard)"
+        }
+      },
+      "adjustment": "+15pt cElo bonus to clay specialist side (実質 confidence +3〜+5%)",
+      "rationale": "clay specialist rally endurance + baseline defense on clay dominates over hardcourt-oriented servers/flat-hitters when cElo gap is marginal. 3 件 evidence 到達で implement.",
+      "evidence_base": [
+        "A011 Carabelli (ARG) d. Khachanov (RUS) Barcelona 2026 R1 (cElo diff 82pt)",
+        "A024 Droguet (FRA clay) d. Virtanen (FIN hardcourt bias) Madrid Q R1 2026 3sets",
+        "Tirante (ARG clay) d. Paul T. (USA hardcourt) Madrid R1 2026 6-2 6-4 (Session_57 GO MISS -1.0u)"
+      ],
+      "implemented_date": "2026-04-24",
+      "implemented_session": "_57",
+      "collision_rules": [
+        "R019 と R001 (cElo base threshold) 同時成立時: R019 を L1 補正として適用後に R001 閾値判定",
+        "R019 と R017 (home WC momentum) 同時成立時: R017 優先"
+      ]
     }
   ],
   "accuracy_tier": "advanced",
-  "tier_note": "高精度Tier: 高度な調整済指標（cElo/xGF%/NRtg/DVOA等）をL1に使用。標準GO閾値(conf>=75%, EV>+5%)で運用。"
+  "tier_note": "高精度Tier: 高度な調整済指標（cElo/xGF%/NRtg/DVOA等）をL1に使用。標準GO閾値(conf>=75%, EV>+5%)で運用。",
+  "last_update_note": "Session_57 R019 clay specialist vs hardcourt-bias implement (evidence 3/3 reached via A011+A024+Tirante/Paul)"
 }

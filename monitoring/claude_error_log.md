@@ -48,6 +48,10 @@
 | CE016 | 2026-04-20 | DATA_ERROR | 【PA051監査で発覚】upset_patterns.json の **A017/A022/A023/A024 全4件**の勝敗が真逆記録と確定。実際は Shelton d. Fonseca / Sakamoto d. Svajda / Gaubas d. Gea / Droguet d. Virtanen で**全て市場favoriteのHIT・UPSETではない**。4件とも `invalidated_upsets` に移動 | MITIGATED |
 | CE017 | 2026-04-23 | DATA_ERROR | 【PA071補填中に発覚】CE016 の延長: records/tennis/2026-ATP.json の Madrid Q R1 4/20 試合 #73/#75/#77/#94 で勝敗が逆転記録されていた。Session_46 で upset_patterns 側 (A022/A023/A024) は訂正されたが records 側は未訂正のまま約3日残存。#94 (Travaglia vs Basilashvili) は upset_patterns 未登録分の追加発見。一次ソース (Sofascore/ATP Stats/Wikipedia/Polymarket) 4件全て再検証で訂正 | MITIGATED |
 | CE018 | 2026-04-23 | DATA_ERROR | records/top14/2026.json の 4/25 R22 の試合名「Toulouse vs Bayonne」は誤記で、実際の fixture は「RCT Toulon vs Bayonne」。Stade Toulousain (Toulouse) は 4/27 に Clermont と対戦する別試合。チーム略称 RCT = Rugby Club Toulonnais (Toulon) と Stade Toulousain (Toulouse) の混同が原因。Session_53 GEN004 処理中に発覚・訂正 | MITIGATED |
+| CE019 | 2026-04-24 | DATA_ERROR | records/wta/2026.json Mertens vs Eala の日付を「2026-04-23」と記録していた (Session_52 GEN003 で 4/24→4/23 に訂正した結果)。実際は Mertens (seeded) R1 bye、初戦は R2 4/24 vs Eala。Session_57 で再訂正。CLAUDE.md BACKLOG PA068 の記述「Mertens date 4/24→4/23 訂正」が CE019 の根本原因 | MITIGATED |
+| CE020 | 2026-04-24 | DATA_ERROR | records/wta/2026.json Bencic 4/23 R2 の対戦相手を「Martincova P.」と記録していた。実際の対戦相手は「Marcinko P.」(Petra Marcinko / Croatian 10代)。Tereza Martincova (Czech) と Petra Marcinko (Croatian) の別人混同。Session_57 で訂正 | MITIGATED |
+| CE021 | 2026-04-24 | DATA_ERROR | records/nhl/2025-26.json [60] Philadelphia Flyers vs Pittsburgh Penguins G3 の日付を「2026-04-26」と記録していた。実際は 4/22 ET = 4/23 JST 開催 (PHI 5-2 PIT)。日付入力時の data entry error。Session_57 で訂正 | MITIGATED |
+| CE022 | 2026-04-24 | DATA_ERROR | records/nhl/2025-26.json [59] Minnesota Wild vs Dallas Stars G3 の日付を「2026-04-26」と記録していた。実際は 4/22 ET = 4/23 JST 開催 (DAL 4-3 MIN 2OT)。CE021 と同一パターン (同バッチ data entry error)。Session_57 で訂正 | MITIGATED |
 
 ---
 

@@ -285,13 +285,13 @@
     },
     {
       "candidate_id": "P012",
-      "status": "watching",
+      "status": "implemented",
       "target_rule_file": "core/rules_tennis.json",
       "proposed_rule_id": "R019",
       "title": "クレースペシャリスト（南米/スペイン）対ハードコーター: L1差縮小補正",
       "description": "アルゼンチン・スペイン等南米/欧州クレースペシャリストがクレーで'名声ランキング高め'のハードコーターと対戦する場合、実質cElo差を縮小して評価すべき。L1差<120ptのケースでは+15ptクレー補正（スペシャリスト側cEloを実態に近づける）。",
       "trigger_threshold": 3,
-      "current_count": 2,
+      "current_count": 3,
       "evidence": [
         {
           "id": "A011",
@@ -307,12 +307,24 @@
           "sources": [
             "en.wikipedia.org 2026_Mutua_Madrid_Open_Mens_singles"
           ]
+        },
+        {
+          "id": "A034_session57",
+          "match": "Tirante T.A. d. Paul T. Madrid 2026 R1 6-2 6-4",
+          "pattern": "Tirante (ARG clay specialist, ranking ~100) d. Paul T. (USA hardcourt bias, Top20). GO @1.40 MISS -1.0u. clay endurance + ARG specialist power overcame seed gap. P012 3件目 evidence 到達 (A011+A024+今回) → R019 implement.",
+          "tag": "atp_clay_specialist_vs_hardcourt_player",
+          "sources": [
+            "atptour.com/en/news/madrid-2026-results",
+            "dimers.com tirante-paul"
+          ]
         }
       ],
       "tag_matches": [
         "atp_clay_specialist_vs_hardcourt_player"
       ],
-      "note": "3件揃ったら: アルゼンチン/スペイン選手のクレーcElo補正値を定量化しR019として実装。Source: eleco.com.ar, ATP Stats Centre (A011) [Session_46]: A024 evidence 追加 (本命HIT経由 - clay specialist endurance pattern)."
+      "note": "3件揃ったら: アルゼンチン/スペイン選手のクレーcElo補正値を定量化しR019として実装。Source: eleco.com.ar, ATP Stats Centre (A011) [Session_46]: A024 evidence 追加 (本命HIT経由 - clay specialist endurance pattern). 【実装完了 2026-04-24】Session_57 Paul MISS で evidence 3/3 到達 → R019 clay specialist vs hardcourt-bias として rules_tennis.json v2.3 に実装",
+      "implemented_date": "2026-04-24",
+      "implemented_in": "rules_tennis.json v2.3 R019"
     },
     {
       "candidate_id": "W_P_new1",
@@ -905,8 +917,18 @@
       "trigger_event": "U006_R2 (Molcan/Altmaier R2) + A014 (Kopriva/Darderi R2) + A018 (Molcan/Shapovalov QF) = 3件 threshold到達",
       "evidence_count": 3,
       "note": "非seed(Q/WC/LL/unseeded)がR1で seed/本命を撃破 → R2以降の本命対戦で L4 +5% 補正。R1勝因タイプで差別化（ストレート+75% 1stSrvPts=+7% / 3セット接戦2h30min+=補正なし）。P010と違い home要件なし。GEN005衝突解消: R017と同時成立時はR017優先。"
+    },
+    {
+      "candidate_id": "P012",
+      "implemented_date": "2026-04-24",
+      "target_rule_file": "core/rules_tennis.json",
+      "rule_id": "R019",
+      "title": "Clay specialist vs hardcourt-bias 実効力補正 (+15pt cElo)",
+      "trigger_event": "A011 Carabelli/Khachanov + A024 Droguet/Virtanen + A034 Tirante/Paul (Session_57 GO MISS -1.0u) = 3件 threshold到達",
+      "evidence_count": 3,
+      "note": "ATP clay L1 cElo差<120pt + 南米/clay-heavy specialist vs hardcourt-bias → clay specialist 側 +15pt 補正 (confidence +3〜+5%). R017 と同時成立時は R017 優先."
     }
   ],
-  "last_updated": "2026-04-23",
-  "updated_session": "_52"
+  "last_updated": "2026-04-24",
+  "updated_session": "_57"
 }

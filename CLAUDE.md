@@ -100,6 +100,34 @@ python scripts/fetch_lineups.py --days-stale 0.5 --sport all  # スタメン (12
    - 情報なし → 「〇〇: 最新情報なし、推奨維持」と一行報告
 4. 変更があれば records JSON・ダッシュボードを即座に更新する
 
+**【Session_57 追加 2026-04-24 提案#6】日付基準統一 (CE021/CE022 再発防止):**
+
+全 records の `date` フィールドは以下の基準で統一する:
+
+| スポーツ | date 基準 |
+|---|---|
+| NHL / NBA / MLB / NFL / UFL / CFL / AHL | **ET (Eastern Time)** - 北米現地試合日 |
+| NRL / Super Rugby | AEST - オーストラリア/NZ現地 |
+| Premiership / Super League | BST - 英国現地 |
+| Top14 / Pro D2 | CET - フランス現地 |
+| ATP / WTA | local tournament 日 (大会開催地タイムゾーン) |
+| Soccer (5大リーグ) | local league 日 |
+
+**変換ルール (重要):**
+- NHL 試合: JST で 4/24 午前 = ET 4/23 夜開催 → records には **ET 4/23** と記録する (× JST 4/24 ではない)
+- 結果確認時 WebSearch で「April 22 ET」と出たら records date は "2026-04-22" で記録
+- 混在した date が既存 records に残っている場合は `scripts/audit_date_basis.py` で検出、訂正時は CE0xx として記録する
+- 単位: `YYYY-MM-DD` 形式を遵守
+
+**【Session_57 追加 2026-04-24 提案#2】draw sheet 照合必須化 (CE019 再発防止):**
+- tennis (ATP/WTA) の seeded player は R1 bye が標準 → 初戦は R2 で開催される
+- `date` フィールドを訂正する場合は、必ず以下の一次ソースで round 構造を確認する:
+  - ATP: `atptour.com/en/scores/current/{tournament}/draws` または `wtafiles.wtatennis.com/pdf/draws/` 
+  - 同様にラグビー playoffs/PO は fixtures ページの round 構造を確認
+- WebSearch snippet のみでの date 修正は**禁止**。必ず WebFetch で draw sheet を開き、該当選手が R1/R2/R3 のどのラウンドから登場するかを確認する
+- seeded player + "match date X" の snippet は、R1 bye を考慮せず誤訂正を誘発するため特に注意
+- この手順違反で CE019 (Mertens 4/23→4/24 再訂正) が発生 → Session_52 GEN003 誤訂正が根本原因
+
 ⚠️ この確認を飛ばして分析・記録に入ることは禁止。
 
 **【毎回必須・最重要】システム改善提案の常時義務（GEN007 Session_54 2026-04-23 制定）：**

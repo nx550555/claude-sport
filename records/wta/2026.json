@@ -1554,11 +1554,20 @@
           "rec": null,
           "rec_odds": null,
           "ev": null,
-          "result": null,
-          "score": null,
-          "prediction_hit": null,
+          "result": "Bondar d. Svitolina",
+          "score": "6-3 6-4",
+          "prediction_hit": false,
           "hit": null,
-          "actual_ev": null
+          "actual_ev": null,
+          "outcome_note": "UPSET realized (skip tier, no-bet). Bondar first career top-10 win. 6 aces / 6/6 BP saved. Svitolina MISS.",
+          "miss_layer": "L1_elo_underestimate",
+          "miss_analysis": "Bondar HUN clay specialist + Svitolina post-surgery return form dip. 27 winners / 9 unforced errors from Bondar 示す overwhelming performance. P009 (injury comeback overrated) の逆方向: Svitolina が過大評価され Bondar が正当評価に戻った。",
+          "rule_linked": "P009_reverse_candidate",
+          "verification_sources": [
+            "tennistonic.com Bondar surprises Svitolina",
+            "skysports.com Bondar vs Svitolina Madrid Highlights",
+            "yournews.com Bondar upends Svitolina"
+          ]
         },
         {
           "tournament": "Mutua Madrid Open 2026",
@@ -1586,17 +1595,22 @@
           "rec": null,
           "rec_odds": null,
           "ev": null,
-          "result": null,
-          "score": null,
-          "prediction_hit": null,
+          "result": "Cristian d. Starodubtseva",
+          "score": "6-3 6-7(5) 6-4",
+          "prediction_hit": true,
           "hit": null,
-          "actual_ev": null
+          "actual_ev": null,
+          "outcome_note": "Cristian HIT (skip tier, no-bet). Starodubtseva LL squandered 3 match points in Set 2 TB. dramatic 3 sets.",
+          "verification_sources": [
+            "news.de Starodubtseva vs Cristian",
+            "mezha.net Starodubtseva lost to Cristian"
+          ]
         },
         {
           "tournament": "Mutua Madrid Open 2026",
           "round": "R1",
           "date": "2026-04-23",
-          "match": "Bencic B. vs Martincova P.",
+          "match": "Bencic B. vs Marcinko P.",
           "tier": "skip",
           "quadrant": "Q3_output_a",
           "l1_metric": "clay_cElo_wta",
@@ -1618,11 +1632,19 @@
           "rec": null,
           "rec_odds": null,
           "ev": null,
-          "result": null,
-          "score": null,
-          "prediction_hit": null,
+          "result": "Bencic d. Marcinko",
+          "score": "6-4 6-2",
+          "prediction_hit": true,
           "hit": null,
-          "actual_ev": null
+          "actual_ev": null,
+          "ce_correction": "CE020: opponent name 'Martincova P.' was incorrect. Actual opponent was Petra Marcinko (Croatian, teenager). corrected 2026-04-24.",
+          "outcome_note": "Q3_output_a HIT. Bencic 5 aces/64% 1stSrv/78% 1stSrvWon / 5 breaks. match 1h24m. daughter's 2nd birthday win.",
+          "verification_sources": [
+            "lastwordonsports.com WTA Madrid Best Bets Bencic Marcinko",
+            "tennisuptodate.com Bencic celebrates daughters birthday",
+            "tennistonic.com Bencic prevails over Marcinko",
+            "dimers.com bencic-marcinko"
+          ]
         },
         {
           "tournament": "Mutua Madrid Open 2026",
@@ -1651,11 +1673,16 @@
           "rec": null,
           "rec_odds": null,
           "ev": 0.048,
-          "result": null,
-          "score": null,
-          "prediction_hit": null,
+          "result": "Wang d. Samson (Samson RET Set 3)",
+          "score": "6-2 3-6 0-5 RET",
+          "prediction_hit": true,
           "hit": null,
-          "actual_ev": null
+          "actual_ev": 0.0,
+          "outcome_note": "Q4 watchlist caution_margin - not an underdog win (Samson retired Set 3). Wang fav_HIT via retirement. L4_External: Samson injury.",
+          "verification_sources": [
+            "wtatennis.com Wang vs Samson Round of 64",
+            "tennismajors.com Xinyu Wang vs Laura Samsonova"
+          ]
         },
         {
           "tournament": "Mutua Madrid Open 2026",
@@ -1683,11 +1710,16 @@
           "rec": null,
           "rec_odds": null,
           "ev": null,
-          "result": null,
-          "score": null,
-          "prediction_hit": null,
+          "result": "Shnaider d. Bouzas Maneiro",
+          "score": "3-6 7-5 6-1",
+          "prediction_hit": true,
           "hit": null,
-          "actual_ev": null
+          "actual_ev": null,
+          "outcome_note": "Shnaider HIT (skip tier). 1st career H2H. Bouzas took set 1, Shnaider dominated sets 2-3.",
+          "verification_sources": [
+            "tennistonic.com Shnaider Bouzas Maneiro prediction",
+            "wtatennis.com Shnaider Bouzas R64"
+          ]
         },
         {
           "tournament": "Mutua Madrid Open 2026",
@@ -1716,11 +1748,19 @@
           "rec": null,
           "rec_odds": null,
           "ev": 0.002,
-          "result": null,
-          "score": null,
-          "prediction_hit": null,
+          "result": "Galfi d. Kalinskaya",
+          "score": "6-3 6-3",
+          "prediction_hit": false,
           "hit": null,
-          "actual_ev": null
+          "actual_ev": 0.0,
+          "outcome_note": "UPSET_realized (Q4_upset_watch HIT). Galfi WTA No.117 d. seed No.22 Kalinskaya 66 min. Q4 upset detection succeeded.",
+          "miss_layer": "L1_small_divergence",
+          "miss_analysis": "Galfi previously GO HIT 4/21 Madrid Q Final (vs Vidmanova). Form continuation — Q carrier momentum + Kalinskaya underperformance on clay. Q4_upset_watch の検知パターンとしては UPSET detection の成功例.",
+          "rule_linked": "WTA_Q_carrier_momentum",
+          "verification_sources": [
+            "WTA official scores",
+            "ubitennis.com WTA Madrid"
+          ]
         },
         {
           "tournament": "Mutua Madrid Open 2026",
@@ -1748,11 +1788,16 @@
           "rec": null,
           "rec_odds": null,
           "ev": null,
-          "result": null,
-          "score": null,
-          "prediction_hit": null,
+          "result": "Swiatek d. Snigur",
+          "score": "6-1 6-2",
+          "prediction_hit": true,
           "hit": null,
-          "actual_ev": null
+          "actual_ev": null,
+          "outcome_note": "Q3_output_a HIT. Swiatek straight-sets dominance.",
+          "verification_sources": [
+            "skysports.com Sabalenka Swiatek Madrid",
+            "flashscore.com Madrid roundup"
+          ]
         },
         {
           "tournament": "Mutua Madrid Open 2026",
@@ -1781,11 +1826,16 @@
           "rec": null,
           "rec_odds": null,
           "ev": 0.026,
-          "result": null,
-          "score": null,
-          "prediction_hit": null,
+          "result": "Paolini d. Siegemund",
+          "score": "3-6 6-2 6-4",
+          "prediction_hit": true,
           "hit": null,
-          "actual_ev": null
+          "actual_ev": 0.0,
+          "outcome_note": "Paolini comeback win 3 sets (lost 1st set). Q4 watchlist fav_confirmed (Paolini HIT).",
+          "verification_sources": [
+            "ubitennis.com Paolini comeback",
+            "oasport.it Paolini vince in rimonta"
+          ]
         },
         {
           "tournament": "Mutua Madrid Open 2026",
@@ -1813,11 +1863,17 @@
           "rec": null,
           "rec_odds": null,
           "ev": null,
-          "result": null,
-          "score": null,
-          "prediction_hit": null,
+          "result": "Kalinina d. Bouzkova",
+          "score": "確認中 (indirect confirmation via Osaka R3 opponent)",
+          "prediction_hit": true,
           "hit": null,
-          "actual_ev": null
+          "actual_ev": null,
+          "outcome_note": "skip tier, no-bet. Kalinina HIT confirmed indirectly (Osaka R3 vs Kalinina). score unverified - needs direct confirmation next session.",
+          "verification_status": "WINNER_CONFIRMED_SCORE_PENDING",
+          "verification_sources": [
+            "tennisworldusa.org Osaka to face qualifier in 3R (Kalinina)",
+            "tennistonic.com Osaka ousts Osorio (Kalinina next)"
+          ]
         },
         {
           "tournament": "Mutua Madrid Open 2026",
@@ -1846,11 +1902,16 @@
           "rec": null,
           "rec_odds": null,
           "ev": 0.253,
-          "result": null,
-          "score": null,
-          "prediction_hit": null,
+          "result": "Li d. Parks",
+          "score": "6-2 6-7(5) 6-3",
+          "prediction_hit": true,
           "hit": null,
-          "actual_ev": null
+          "actual_ev": 0.0,
+          "outcome_note": "Q4 watchlist caution_margin fav_confirmed. Li fav_HIT in 3 sets all-American match. Li best Madrid result tied.",
+          "verification_sources": [
+            "tennistonic.com Ann Li wins against Parks",
+            "thestatszone.com Parks vs Li Preview"
+          ]
         },
         {
           "tournament": "Mutua Madrid Open 2026",
@@ -1878,11 +1939,16 @@
           "rec": null,
           "rec_odds": null,
           "ev": null,
-          "result": null,
-          "score": null,
-          "prediction_hit": null,
+          "result": "Sabalenka d. Stearns",
+          "score": "7-5 6-3",
+          "prediction_hit": true,
           "hit": null,
-          "actual_ev": null
+          "actual_ev": null,
+          "outcome_note": "Q3_output_a HIT. Sabalenka 2026 clay-court debut. some rust but advanced.",
+          "verification_sources": [
+            "skysports.com Sabalenka clay debut Madrid",
+            "tennis.com Sabalenka 2026 clay-court debut"
+          ]
         },
         {
           "tournament": "Mutua Madrid Open 2026",
@@ -1910,11 +1976,16 @@
           "rec": null,
           "rec_odds": null,
           "ev": null,
-          "result": null,
-          "score": null,
-          "prediction_hit": null,
+          "result": "Jovic d. Linette",
+          "score": "6-4 6-1",
+          "prediction_hit": true,
           "hit": null,
-          "actual_ev": null
+          "actual_ev": null,
+          "outcome_note": "Jovic HIT (skip tier). 15-seed 16-ranked American dominant 69min. H2H 2-0 Jovic.",
+          "verification_sources": [
+            "profootballnetwork.com Jovic vs Linette preview",
+            "en.tennistemple.com Jovic defeats Linette Madrid R2"
+          ]
         },
         {
           "tournament": "Mutua Madrid Open 2026",
@@ -2007,11 +2078,16 @@
           "rec": null,
           "rec_odds": null,
           "ev": 0.126,
-          "result": null,
-          "score": null,
-          "prediction_hit": null,
+          "result": "Osaka d. Osorio",
+          "score": "6-2 7-5",
+          "prediction_hit": true,
           "hit": null,
-          "actual_ev": null
+          "actual_ev": 0.0,
+          "outcome_note": "Osaka 2026 first clay win. Q4 watchlist fav_confirmed, fav Osaka HIT. Osaka advances to R3 vs Kalinina.",
+          "verification_sources": [
+            "tennisworldusa.org Naomi Osaka wins first match on clay 2026",
+            "tennistonic.com Osaka ousts Osorio"
+          ]
         },
         {
           "tournament": "Mutua Madrid Open 2026",
@@ -2039,11 +2115,16 @@
           "rec": null,
           "rec_odds": null,
           "ev": null,
-          "result": null,
-          "score": null,
-          "prediction_hit": null,
+          "result": "Andreeva d. Udvardy",
+          "score": "7-5 6-2",
+          "prediction_hit": true,
           "hit": null,
-          "actual_ev": null
+          "actual_ev": null,
+          "outcome_note": "Q3_output_a HIT. Andreeva most clay wins on tour in 2026.",
+          "verification_sources": [
+            "wtatennis.com By the Numbers Andreeva Madrid",
+            "wtatennis.com Andreeva vs Udvardy R64"
+          ]
         },
         {
           "tournament": "Mutua Madrid Open 2026",
@@ -2424,11 +2505,11 @@
           "rec": "Madison Keys",
           "rec_odds": 1.23,
           "ev": 0.055,
-          "result": null,
-          "score": null,
+          "result": "VOID (Keys WITHDREW due to illness)",
+          "score": "W/O",
           "prediction_hit": null,
           "hit": null,
-          "actual_ev": null,
+          "actual_ev": 0.0,
           "gen003_checked": {
             "date": "2026-04-23",
             "session": "_52",
@@ -2437,7 +2518,18 @@
             ],
             "action": "MAINTAIN_GO",
             "note": "怪我情報なし。Zhang R1 で Lys を 6-4 6-3 で撃破したが form brief momentum にとどまる。Keys #16 seed cElo +313pt 維持。"
-          }
+          },
+          "outcome_note": "Keys WITHDREW 30 min before her match due to illness. VOID (no bet P&L). Potapova (LL) replaced her. Advisory: R020/GEN003 same-day info check should have flagged earlier if possible.",
+          "verification_sources": [
+            "puntodebreak.com Madison Keys withdraws half an hour before match",
+            "wtatennis.com Keys withdraws illness",
+            "koranmanado.co.id Madison Keys Withdraws"
+          ],
+          "void": true,
+          "void_reason": "Keys withdrew 30 min before match due to illness",
+          "miss_analysis": "N/A - VOID (no match played, bet refunded)",
+          "miss_layer": "N/A_VOID",
+          "rule_linked": "N/A_VOID"
         },
         {
           "tournament": "Mutua Madrid Open 2026",
@@ -2539,7 +2631,7 @@
         {
           "tournament": "Mutua Madrid Open 2026",
           "round": "R2",
-          "date": "2026-04-23",
+          "date": "2026-04-24",
           "match": "Mertens E. vs Eala A.",
           "tier": "go",
           "quadrant": "Q1_go",
@@ -2577,7 +2669,9 @@
             ],
             "action": "MAINTAIN_GO_DATE_CORRECTED",
             "note": "一次ソース複数で試合日 4/23 (Thursday) 確認 → date 訂正。怪我情報なし。"
-          }
+          },
+          "ce_correction": "CE019: date was incorrectly recorded as 2026-04-23 (Session_52 misclassified). Mertens is seeded (R1 bye) and first match is R2 vs Eala on 2026-04-24. Corrected Session_57 2026-04-24.",
+          "outcome_note_pre": "awaiting result 2026-04-24. Eala d. Pavlyuchenkova 6-3 6-3 in R1."
         },
         {
           "tournament": "Mutua Madrid Open 2026",
@@ -3132,5 +3226,6 @@
       "q3_output_a_count": 8,
       "q4_upset_watch": 13
     }
-  ]
+  ],
+  "last_updated": "2026-04-24"
 }

@@ -1,0 +1,136 @@
+{
+  "audit_date": "2026-04-24",
+  "session": "_57",
+  "date_basis_standard": {
+    "nhl": "ET (Eastern Time) - 現地試合日付",
+    "nba": "ET - 現地試合日付",
+    "mlb": "ET - 現地試合日付",
+    "nfl": "ET - 現地試合日付",
+    "ufl": "ET - 現地試合日付",
+    "cfl": "ET - 現地試合日付",
+    "nrl": "AEST - オーストラリア現地",
+    "superrugby": "AEST - オーストラリア/NZ現地",
+    "superleague": "BST - 英国現地",
+    "premiership": "BST - 英国現地",
+    "top14": "CET - フランス現地",
+    "prod2": "CET - フランス現地",
+    "ahl": "ET - 北米現地",
+    "atp": "local tournament",
+    "wta": "local tournament",
+    "soccer": "local tournament"
+  },
+  "report": {
+    "atp": {
+      "basis_expected": "local tournament",
+      "unique_dates": 14,
+      "pending_too_future_count": 0,
+      "pending_too_past_count": 0,
+      "pending_too_future_samples": [],
+      "pending_too_past_samples": []
+    },
+    "wta": {
+      "basis_expected": "local tournament",
+      "unique_dates": 10,
+      "pending_too_future_count": 0,
+      "pending_too_past_count": 0,
+      "pending_too_future_samples": [],
+      "pending_too_past_samples": []
+    },
+    "nhl": {
+      "basis_expected": "ET (Eastern Time) - 現地試合日付",
+      "unique_dates": 12,
+      "pending_too_future_count": 0,
+      "pending_too_past_count": 0,
+      "pending_too_future_samples": [],
+      "pending_too_past_samples": []
+    },
+    "nba": {
+      "basis_expected": "ET - 現地試合日付",
+      "unique_dates": 8,
+      "pending_too_future_count": 0,
+      "pending_too_past_count": 0,
+      "pending_too_future_samples": [],
+      "pending_too_past_samples": []
+    },
+    "ufl": {
+      "basis_expected": "ET - 現地試合日付",
+      "unique_dates": 6,
+      "pending_too_future_count": 0,
+      "pending_too_past_count": 0,
+      "pending_too_future_samples": [],
+      "pending_too_past_samples": []
+    },
+    "nrl": {
+      "basis_expected": "AEST - オーストラリア現地",
+      "unique_dates": 1,
+      "pending_too_future_count": 0,
+      "pending_too_past_count": 0,
+      "pending_too_future_samples": [],
+      "pending_too_past_samples": []
+    },
+    "superrugby": {
+      "basis_expected": "AEST - オーストラリア/NZ現地",
+      "unique_dates": 1,
+      "pending_too_future_count": 0,
+      "pending_too_past_count": 0,
+      "pending_too_future_samples": [],
+      "pending_too_past_samples": []
+    },
+    "premiership": {
+      "basis_expected": "BST - 英国現地",
+      "unique_dates": 5,
+      "pending_too_future_count": 0,
+      "pending_too_past_count": 0,
+      "pending_too_future_samples": [],
+      "pending_too_past_samples": []
+    },
+    "top14": {
+      "basis_expected": "CET - フランス現地",
+      "unique_dates": 3,
+      "pending_too_future_count": 0,
+      "pending_too_past_count": 0,
+      "pending_too_future_samples": [],
+      "pending_too_past_samples": []
+    },
+    "prod2": {
+      "basis_expected": "CET - フランス現地",
+      "unique_dates": 1,
+      "pending_too_future_count": 0,
+      "pending_too_past_count": 0,
+      "pending_too_future_samples": [],
+      "pending_too_past_samples": []
+    },
+    "superleague": {
+      "basis_expected": "BST - 英国現地",
+      "unique_dates": 5,
+      "pending_too_future_count": 0,
+      "pending_too_past_count": 0,
+      "pending_too_future_samples": [],
+      "pending_too_past_samples": []
+    },
+    "ahl": {
+      "basis_expected": "ET - 北米現地",
+      "unique_dates": 2,
+      "pending_too_future_count": 0,
+      "pending_too_past_count": 0,
+      "pending_too_future_samples": [],
+      "pending_too_past_samples": []
+    },
+    "soccer": {
+      "basis_expected": "local tournament",
+      "unique_dates": 2,
+      "pending_too_future_count": 0,
+      "pending_too_past_count": 0,
+      "pending_too_future_samples": [],
+      "pending_too_past_samples": []
+    },
+    "mlb": {
+      "basis_expected": "ET - 現地試合日付",
+      "unique_dates": 0,
+      "pending_too_future_count": 0,
+      "pending_too_past_count": 0,
+      "pending_too_future_samples": [],
+      "pending_too_past_samples": []
+    }
+  }
+}

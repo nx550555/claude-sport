@@ -149,7 +149,7 @@
       "predicted_winner": "York Knights",
       "prediction_confidence": 69.0,
       "prediction_basis": "PD/G near-even (+0.37). Market YORK implied 66.0% vig-adj. YORK home +3% -> 69%. EV -3.4%. SKIP.",
-      "prediction_hit": null,
+      "prediction_hit": true,
       "l1_metric": "PD/G",
       "l1_data": {
         "home_pdg": -10.38,
@@ -174,9 +174,15 @@
       "market_fav": "YORK",
       "status": "pending",
       "hit": null,
-      "result": null,
+      "result": "York 38-14 Toulouse",
       "screening_session": "2026-04-23 _53",
-      "notes": "L1 neutral - both teams PD/G ~-10. Market-driven fav on home advantage only."
+      "notes": "L1 neutral - both teams PD/G ~-10. Market-driven fav on home advantage only.",
+      "score": "38-14",
+      "winner": "York Knights",
+      "outcome_note": "York HIT (skip tier, no-bet). Scott Galeano hat-trick. dominance at LNER Community Stadium.",
+      "verification_sources": [
+        "skysports.com Galeano hat-trick York beat Toulouse"
+      ]
     },
     {
       "date": "2026-04-23",
@@ -190,7 +196,7 @@
       "predicted_winner": "Leigh Leopards",
       "prediction_confidence": 76.0,
       "prediction_basis": "PD/G near-even (+0.12). Market LEI implied 73.0% vig-adj. LEI home +3% -> 76%. EV -5.8%. SKIP.",
-      "prediction_hit": null,
+      "prediction_hit": true,
       "l1_metric": "PD/G",
       "l1_data": {
         "home_pdg": -9.63,
@@ -215,9 +221,15 @@
       "market_fav": "LEI",
       "status": "pending",
       "hit": null,
-      "result": null,
+      "result": "Leigh 30-16 Huddersfield",
       "screening_session": "2026-04-23 _53",
-      "notes": "Both teams sub-.500 PD/G near equal. Leigh R8 loss to Leeds 56-22. Huddersfield bottom-3 struggle continues."
+      "notes": "Both teams sub-.500 PD/G near equal. Leigh R8 loss to Leeds 56-22. Huddersfield bottom-3 struggle continues.",
+      "score": "30-16",
+      "winner": "Leigh Leopards",
+      "outcome_note": "Leigh HIT (skip tier). Josh Charnley 400th appearance + 2 tries. AJ Towse 2 tries + Senior 1 + Lam penalty try.",
+      "verification_sources": [
+        "skysports.com Super League Leigh win Huddersfield"
+      ]
     },
     {
       "date": "2026-04-24",
@@ -473,5 +485,6 @@
       "note": "SL R9 7 games L1(PD/G) + 4-quadrant. GO 0. Q3 output_a: Leeds vs Catalans (conf 85 PD/G +16.88 dominant). Q4 upset_watch: St Helens vs Wakefield (L1 reverses market, UF2 div47pp but UF<3 no UPSET_PICK). Data error: Bradford vs Hull KR HKR odds 1.00 impossible.",
       "standings_source": "superleague.co.uk/tntsports fetched 2026-04-23"
     }
-  ]
+  ],
+  "last_updated": "2026-04-24"
 }

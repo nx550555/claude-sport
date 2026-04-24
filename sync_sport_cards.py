@@ -84,11 +84,15 @@ def get_go_entries(data):
             entries.append(e)
     # top-level games[] + pending_games[] (NHL/UFL/NRL/NBA/SL/SRP)
     for e in data.get("games", []) + data.get("pending_games", []):
+        if e.get("void"):  # Session_57 提案#3: VOID schema 除外
+            continue
         if e.get("tier") in GO_TIERS:
             entries.append(e)
     # tournaments[].predictions[] (WTA)
     for t in data.get("tournaments", []):
         for e in t.get("predictions", []):
+            if e.get("void"):  # Session_57 提案#3: VOID schema 除外
+                continue
             if e.get("tier") in GO_TIERS:
                 entries.append(e)
     return entries
