@@ -1,6 +1,6 @@
 {
   "source": "https://www.basketball-reference.com/leagues/NBA_2026_advanced.html",
-  "fetched_at": "2026-04-24T12:39:17.953273+09:00",
+  "fetched_at": "2026-04-24T22:58:15.118377+09:00",
   "kind": "advanced",
   "player_count": 763,
   "players": [
@@ -1986,7 +1986,7 @@
       "dbpm": 1.5,
       "bpm": 2.7,
       "vorp": 2.5,
-      "awards": null
+      "awards": "6MOY-6"
     },
     {
       "player": "Devin Booker",
@@ -2079,7 +2079,7 @@
       "dbpm": -1.9,
       "bpm": -0.7,
       "vorp": 0.7,
-      "awards": null
+      "awards": "6MOY-3"
     },
     {
       "player": "Jaime Jaquez Jr.",
@@ -2110,7 +2110,7 @@
       "dbpm": -0.1,
       "bpm": 0.1,
       "vorp": 1.1,
-      "awards": null
+      "awards": "6MOY-2"
     },
     {
       "player": "Duncan Robinson",
@@ -2575,7 +2575,7 @@
       "dbpm": 1.0,
       "bpm": 0.9,
       "vorp": 1.5,
-      "awards": null
+      "awards": "6MOY-4"
     },
     {
       "player": "Davion Mitchell",
@@ -3133,7 +3133,7 @@
       "dbpm": -0.3,
       "bpm": 0.9,
       "vorp": 1.4,
-      "awards": null
+      "awards": "6MOY-1"
     },
     {
       "player": "Anthony Black",
@@ -3350,7 +3350,7 @@
       "dbpm": -0.3,
       "bpm": 1.0,
       "vorp": 1.4,
-      "awards": null
+      "awards": "6MOY-9"
     },
     {
       "player": "Ayo Dosunmu",
@@ -3567,7 +3567,7 @@
       "dbpm": 0.0,
       "bpm": -2.3,
       "vorp": -0.1,
-      "awards": null
+      "awards": "6MOY-12"
     },
     {
       "player": "Pelle Larsson",
@@ -4218,7 +4218,7 @@
       "dbpm": 0.7,
       "bpm": 2.8,
       "vorp": 2.1,
-      "awards": null
+      "awards": "6MOY-10"
     },
     {
       "player": "Tobias Harris",
@@ -5458,7 +5458,7 @@
       "dbpm": 1.1,
       "bpm": 1.4,
       "vorp": 1.3,
-      "awards": null
+      "awards": "6MOY-11"
     },
     {
       "player": "Ron Holland",
@@ -6171,7 +6171,7 @@
       "dbpm": 1.6,
       "bpm": 1.9,
       "vorp": 1.4,
-      "awards": null
+      "awards": "6MOY-5"
     },
     {
       "player": "Shaedon Sharpe",
@@ -8093,7 +8093,7 @@
       "dbpm": 1.1,
       "bpm": 0.0,
       "vorp": 0.7,
-      "awards": null
+      "awards": "6MOY-7"
     },
     {
       "player": "Egor Dёmin",
@@ -9178,7 +9178,7 @@
       "dbpm": 1.5,
       "bpm": 3.5,
       "vorp": 1.6,
-      "awards": null
+      "awards": "6MOY-8"
     },
     {
       "player": "Simone Fontecchio",

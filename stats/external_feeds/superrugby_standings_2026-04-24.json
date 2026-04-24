@@ -2,7 +2,7 @@
   "league": "superrugby",
   "source": "https://en.wikipedia.org/wiki/2026_Super_Rugby_Pacific_season",
   "strategy": "wikipedia_table",
-  "fetched_at": "2026-04-24T12:39:29.215718+09:00",
+  "fetched_at": "2026-04-24T22:58:25.032907+09:00",
   "team_count": 11,
   "teams": [
     {
@@ -42,6 +42,18 @@
       "pd_per_game": 8.78
     },
     {
+      "team": "Crusaders",
+      "gp": 10,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 338,
+      "pa": "Crusaders",
+      "pd": 54,
+      "pts": 26,
+      "pd_per_game": 5.4
+    },
+    {
       "team": "Brumbies",
       "gp": 9,
       "w": null,
@@ -65,26 +77,14 @@
       "pts": 22
     },
     {
-      "team": "Crusaders",
+      "team": "Waratahs",
       "gp": 9,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 303,
-      "pa": "Crusaders",
-      "pd": 39,
-      "pts": 21,
-      "pd_per_game": 4.33
-    },
-    {
-      "team": "Waratahs",
-      "gp": 8,
-      "w": null,
-      "l": null,
-      "d": null,
-      "pf": 201,
+      "pf": 221,
       "pa": "Waratahs",
-      "pd": "−28",
+      "pd": "−43",
       "pts": 19
     },
     {

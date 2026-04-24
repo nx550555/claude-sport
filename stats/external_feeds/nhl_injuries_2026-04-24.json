@@ -1,25 +1,9 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-04-24T12:39:39.814051+09:00",
+  "fetched_at": "2026-04-24T22:58:33.857101+09:00",
   "starting_goalies": [],
   "injuries": [
-    {
-      "player": "Radko Gudas",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Apr 24",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Ross Johnston",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Apr 24",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
     {
       "player": "Shea Weber",
       "team": null,
@@ -83,14 +67,6 @@
       "estimated_return": "Sep 15",
       "status": "Injured Reserve",
       "comment": "Apr 12: Romanov (shoulder) will miss the final two games of the regular season, according to Stefen Rosner of NHL.com on Sunday."
-    },
-    {
-      "player": "Jake Sanderson",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Apr 25",
-      "status": "Day-To-Day",
-      "comment": ""
     },
     {
       "player": "Nick Jensen",

@@ -2,7 +2,7 @@
   "league": "nrl",
   "source": "https://www.nrl.com/ladder/",
   "strategy": "playwright_nrl",
-  "fetched_at": "2026-04-24T12:39:29.055953+09:00",
+  "fetched_at": "2026-04-24T22:58:24.980570+09:00",
   "team_count": 17,
   "teams": [
     {
@@ -58,6 +58,32 @@
       "pd_per_game": 5.0
     },
     {
+      "team": "Broncos",
+      "gp": 8,
+      "pts": 10,
+      "w": 5,
+      "d": 0,
+      "l": 3,
+      "byes": 0,
+      "pf": 186,
+      "pa": 171,
+      "pd": 15,
+      "pd_per_game": 1.88
+    },
+    {
+      "team": "Cowboys",
+      "gp": 8,
+      "pts": 10,
+      "w": 5,
+      "d": 0,
+      "l": 3,
+      "byes": 0,
+      "pf": 211,
+      "pa": 215,
+      "pd": -4,
+      "pd_per_game": -0.5
+    },
+    {
       "team": "Roosters",
       "gp": 6,
       "pts": 10,
@@ -84,19 +110,6 @@
       "pd_per_game": 6.33
     },
     {
-      "team": "Sharks",
-      "gp": 6,
-      "pts": 8,
-      "w": 3,
-      "d": 0,
-      "l": 3,
-      "byes": 1,
-      "pf": 158,
-      "pa": 152,
-      "pd": 6,
-      "pd_per_game": 1.0
-    },
-    {
       "team": "Knights",
       "gp": 7,
       "pts": 8,
@@ -110,43 +123,30 @@
       "pd_per_game": -0.29
     },
     {
-      "team": "Broncos",
+      "team": "Sharks",
       "gp": 7,
-      "pts": 8,
-      "w": 4,
-      "d": 0,
-      "l": 3,
-      "byes": 0,
-      "pf": 154,
-      "pa": 159,
-      "pd": -5,
-      "pd_per_game": -0.71
-    },
-    {
-      "team": "Bulldogs",
-      "gp": 6,
       "pts": 8,
       "w": 3,
       "d": 0,
-      "l": 3,
+      "l": 4,
       "byes": 1,
-      "pf": 121,
-      "pa": 134,
-      "pd": -13,
-      "pd_per_game": -2.17
+      "pf": 192,
+      "pa": 198,
+      "pd": -6,
+      "pd_per_game": -0.86
     },
     {
-      "team": "Cowboys",
+      "team": "Bulldogs",
       "gp": 7,
       "pts": 8,
-      "w": 4,
+      "w": 3,
       "d": 0,
-      "l": 3,
-      "byes": 0,
-      "pf": 165,
-      "pa": 181,
-      "pd": -16,
-      "pd_per_game": -2.29
+      "l": 4,
+      "byes": 1,
+      "pf": 133,
+      "pa": 166,
+      "pd": -33,
+      "pd_per_game": -4.71
     },
     {
       "team": "Dolphins",
