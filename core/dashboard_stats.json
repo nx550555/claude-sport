@@ -36,12 +36,12 @@
       "pending_count": 0
     },
     "nrl": {
-      "go_count": 5,
+      "go_count": 4,
       "confirmed_count": 3,
       "hit_count": 2,
       "hit_rate": 0.667,
-      "pnl": -0.32,
-      "pending_count": 2
+      "pnl": -0.31999999999999995,
+      "pending_count": 1
     },
     "superrugby": {
       "go_count": 1,
@@ -101,20 +101,20 @@
     }
   },
   "overview": {
-    "total_go": 39,
+    "total_go": 38,
     "total_confirmed": 33,
     "total_hits": 24,
-    "hit_rate": 0.7273,
-    "total_pnl": 2.25,
-    "total_pending": 6,
-    "pending_breakdown": "ATP x3 + WTA x1 + NRL x2"
+    "hit_rate": 0.727,
+    "total_pnl": 2.3,
+    "total_pending": 5,
+    "pending_breakdown": "ATP x3 + WTA x1 + NRL x1"
   },
   "by_tier": {
     "advanced": {
       "go_count": 28,
-      "confirmed_count": 23,
+      "confirmed_count": 24,
       "hit_count": 18,
-      "pnl": 3.103,
+      "pnl": 2.853,
       "pending_count": 4,
       "void_count": 1,
       "sports": [
@@ -126,7 +126,7 @@
         "soccer",
         "mlb"
       ],
-      "hit_rate": 0.783
+      "hit_rate": 0.75
     },
     "basic": {
       "go_count": 10,
@@ -182,7 +182,7 @@
     "pending_4_24_night": "Sinner/Shelton/de Minaur/Rublev/Fils/Fonseca/Rinderknech + TBL-MTL G3 / VGK-UTA G3 / EDM-ANA G3 / Mertens-Eala / Gauff / Rybakina 未完結 → 次セッション確認",
     "key_metrics": "GO bet: 21/29 (72.4%) +1.473u / pending 1 / total GO 30"
   },
-  "last_session": "_59",
+  "last_session": "_60",
   "session_59_notes": {
     "audit_action": "STEP A-E 全実行: MC 二重ファイル archived 化 + WTA Tan/Bondar 重複統合 + cumulative.json/dashboard_stats.json 全種目 sport/tier/quadrant 実測再集計",
     "data_changes": {
