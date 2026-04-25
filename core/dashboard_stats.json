@@ -1,22 +1,22 @@
 {
   "_comment": "Sport card の唯一の真実ソース。記録更新後は必ずここを更新してから sync_sport_cards.py を実行すること",
-  "last_updated": "2026-04-24",
+  "last_updated": "2026-04-25",
   "session": "_57",
   "sports": {
     "atp": {
-      "go_count": 15,
+      "go_count": 18,
       "confirmed_count": 15,
       "hit_count": 11,
       "hit_rate": 0.733,
       "pnl": 0.74,
-      "pending_count": 0
+      "pending_count": 3
     },
     "wta": {
-      "go_count": 5,
-      "confirmed_count": 4,
-      "hit_count": 2,
-      "hit_rate": 0.5,
-      "pnl": -0.5,
+      "go_count": 6,
+      "confirmed_count": 5,
+      "hit_count": 3,
+      "hit_rate": 0.6,
+      "pnl": -0.12999999999999998,
       "pending_count": 1
     },
     "nhl": {
@@ -36,12 +36,12 @@
       "pending_count": 0
     },
     "nrl": {
-      "go_count": 2,
+      "go_count": 4,
       "confirmed_count": 2,
       "hit_count": 1,
       "hit_rate": 0.5,
       "pnl": -0.77,
-      "pending_count": 0
+      "pending_count": 2
     },
     "superrugby": {
       "go_count": 1,
@@ -101,13 +101,13 @@
     }
   },
   "overview": {
-    "total_go": 32,
-    "total_confirmed": 31,
-    "total_hits": 22,
-    "hit_rate": 0.71,
-    "total_pnl": 1.5,
-    "total_pending": 1,
-    "pending_breakdown": "WTA x1"
+    "total_go": 38,
+    "total_confirmed": 32,
+    "total_hits": 23,
+    "hit_rate": 0.719,
+    "total_pnl": 1.8,
+    "total_pending": 6,
+    "pending_breakdown": "ATP x3 + WTA x1 + NRL x2"
   },
   "by_tier": {
     "advanced": {
@@ -177,5 +177,6 @@
     "data_quality_issues": "CE019 (Mertens date 4/23→4/24) / CE020 (Bencic opponent Martincova→Marcinko) / CE021 (PHI G3 date 4/26→4/23) / CE022 (DAL G3 date 4/26→4/23) 4件訂正.",
     "pending_4_24_night": "Sinner/Shelton/de Minaur/Rublev/Fils/Fonseca/Rinderknech + TBL-MTL G3 / VGK-UTA G3 / EDM-ANA G3 / Mertens-Eala / Gauff / Rybakina 未完結 → 次セッション確認",
     "key_metrics": "GO bet: 21/29 (72.4%) +1.473u / pending 1 / total GO 30"
-  }
+  },
+  "last_session": "_58"
 }

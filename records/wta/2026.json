@@ -2654,11 +2654,11 @@
           "rec": "Elise Mertens",
           "rec_odds": 1.37,
           "ev": 0.071,
-          "result": null,
-          "score": null,
-          "prediction_hit": null,
-          "hit": null,
-          "actual_ev": null,
+          "result": "Mertens d. Eala",
+          "score": "6-2 6-1",
+          "prediction_hit": true,
+          "hit": true,
+          "actual_ev": 0.37,
           "date_original": "2026-04-24",
           "gen003_checked": {
             "date": "2026-04-23",
@@ -2671,7 +2671,16 @@
             "note": "一次ソース複数で試合日 4/23 (Thursday) 確認 → date 訂正。怪我情報なし。"
           },
           "ce_correction": "CE019: date was incorrectly recorded as 2026-04-23 (Session_52 misclassified). Mertens is seeded (R1 bye) and first match is R2 vs Eala on 2026-04-24. Corrected Session_57 2026-04-24.",
-          "outcome_note_pre": "awaiting result 2026-04-24. Eala d. Pavlyuchenkova 6-3 6-3 in R1."
+          "outcome_note_pre": "awaiting result 2026-04-24. Eala d. Pavlyuchenkova 6-3 6-3 in R1.",
+          "status": "completed",
+          "match_duration": "1h 16min",
+          "outcome_note": "Mertens 6-2 6-1 dominant (1h16m). GO HIT +0.37u. Eala strong start but Mertens consistent depth and return game prevailed. Next R3 TBD.",
+          "session_58_final": "HIT 2026-04-25 JST (JST 朝確定)",
+          "verification_sources": [
+            "olympics.com Mertens advances to third round straight-sets",
+            "manilabulletin.com Alex Eala bows Mertens Madrid Open",
+            "justwomenssports.com Eala Falls Mertens Madrid"
+          ]
         },
         {
           "tournament": "Mutua Madrid Open 2026",
@@ -2827,6 +2836,165 @@
           "rec": null,
           "rec_odds": null,
           "ev": null,
+          "result": null,
+          "score": null,
+          "prediction_hit": null,
+          "hit": null,
+          "actual_ev": null
+        },
+        {
+          "tournament": "Mutua Madrid Open 2026",
+          "round": "R2",
+          "date": "2026-04-25",
+          "match": "Mboko V. vs McNally C.",
+          "tier": "go",
+          "quadrant": "Q1_go",
+          "l1_metric": "clay_cElo_wta",
+          "l1_data": {
+            "ce_diff": 248.9,
+            "fav": "Victoria Mboko",
+            "dog": "Caty McNally"
+          },
+          "predicted_winner": "Victoria Mboko",
+          "prediction_confidence": 80,
+          "prediction_basis": "cElo +249pt / Mboko Top10 復帰・R2 bye / McNally R1 勝利 momentum but WTA125 グレード / Mboko clay first 2026 tournament (wisdom teeth後 復帰)",
+          "odds": {
+            "fav": 1.33,
+            "dog": 3.45
+          },
+          "note": "GO: Rec Mboko @1.33. Q3_mid 境界 (conf 80%)",
+          "screened_session": "_58",
+          "source": "2026-04-24.json",
+          "rec": "Victoria Mboko",
+          "rec_odds": 1.33,
+          "ev": 0.074,
+          "result": null,
+          "score": null,
+          "prediction_hit": null,
+          "hit": null,
+          "actual_ev": null,
+          "rules_applied": [
+            "W001"
+          ]
+        },
+        {
+          "tournament": "Mutua Madrid Open 2026",
+          "round": "R2",
+          "date": "2026-04-25",
+          "match": "Sabalenka A. vs Cristian J.",
+          "tier": "skip",
+          "quadrant": "Q3_output_a",
+          "l1_metric": "clay_cElo_wta",
+          "l1_data": {
+            "ce_diff": 416.5,
+            "fav": "Aryna Sabalenka",
+            "dog": "Jaqueline Cristian"
+          },
+          "predicted_winner": "Aryna Sabalenka",
+          "prediction_confidence": 92,
+          "prediction_basis": "cElo +416pt 圧倒 / Sabalenka #1 seed / Cristian clay Q突破",
+          "odds": {
+            "fav": 1.03,
+            "dog": 13.0
+          },
+          "rec": null,
+          "rec_odds": null,
+          "ev": null,
+          "note": "Q3_output_a conf 92% EV -5.6% (market 織込 1.03)",
+          "screened_session": "_58",
+          "result": null,
+          "score": null,
+          "prediction_hit": null,
+          "hit": null,
+          "actual_ev": null
+        },
+        {
+          "tournament": "Mutua Madrid Open 2026",
+          "round": "R2",
+          "date": "2026-04-25",
+          "match": "Swiatek I. vs Li A.",
+          "tier": "skip",
+          "quadrant": "Q3_output_a",
+          "l1_metric": "clay_cElo_wta",
+          "l1_data": {
+            "ce_diff": 331.4,
+            "fav": "Iga Swiatek",
+            "dog": "Ann Li"
+          },
+          "predicted_winner": "Iga Swiatek",
+          "prediction_confidence": 87,
+          "prediction_basis": "cElo +331pt / Swiatek 3x defending champ / Li USA hardcourt bias",
+          "odds": {
+            "fav": 1.05,
+            "dog": 9.8
+          },
+          "rec": null,
+          "rec_odds": null,
+          "ev": null,
+          "note": "Q3_output_a conf 87% EV -8.6%",
+          "screened_session": "_58",
+          "result": null,
+          "score": null,
+          "prediction_hit": null,
+          "hit": null,
+          "actual_ev": null
+        },
+        {
+          "tournament": "Mutua Madrid Open 2026",
+          "round": "R2",
+          "date": "2026-04-25",
+          "match": "Pegula J. vs Boulter K.",
+          "tier": "skip",
+          "quadrant": "Q3_mid",
+          "l1_metric": "clay_cElo_wta",
+          "l1_data": {
+            "ce_diff": 248.3,
+            "fav": "Jessica Pegula",
+            "dog": "Katie Boulter"
+          },
+          "predicted_winner": "Jessica Pegula",
+          "prediction_confidence": 81,
+          "prediction_basis": "cElo +248pt / Pegula #3 seed / Boulter clay 経験少",
+          "odds": {
+            "fav": 1.14,
+            "dog": 5.6
+          },
+          "rec": null,
+          "rec_odds": null,
+          "ev": null,
+          "note": "Q3_mid (80-84%) conf 80.7% EV -8.0% 市場織込済",
+          "screened_session": "_58",
+          "result": null,
+          "score": null,
+          "prediction_hit": null,
+          "hit": null,
+          "actual_ev": null
+        },
+        {
+          "tournament": "Mutua Madrid Open 2026",
+          "round": "R3",
+          "date": "2026-04-25",
+          "match": "Paolini J. vs Baptiste H.",
+          "tier": "skip",
+          "quadrant": "skip",
+          "l1_metric": "clay_cElo_wta",
+          "l1_data": {
+            "ce_diff": 201.0,
+            "fav": "Jasmine Paolini",
+            "dog": "Hailey Baptiste"
+          },
+          "predicted_winner": "Jasmine Paolini",
+          "prediction_confidence": 66,
+          "prediction_basis": "cElo +201pt / Paolini P007 当季 form slump 53%勝率 前年名声 cElo 過大 / Baptiste WTA125 winner momentum / form slump L4 -10% → conf 66% → SKIP",
+          "odds": {
+            "fav": 1.61,
+            "dog": 2.33
+          },
+          "rec": null,
+          "rec_odds": null,
+          "ev": null,
+          "note": "SKIP (initial GO candidate downgrade). P007 form slump + R3 opponent uncertainty. A007 Sonmez upset の前例があり。",
+          "screened_session": "_58",
           "result": null,
           "score": null,
           "prediction_hit": null,
@@ -3225,6 +3393,38 @@
       "skip": 43,
       "q3_output_a_count": 8,
       "q4_upset_watch": 13
+    },
+    {
+      "session": "_58",
+      "date": "2026-04-25",
+      "source": "2026-04-24.json",
+      "matches_screened": {
+        "wta_madrid_r2_4_25": 11,
+        "new_records": 5
+      },
+      "go_candidates": [
+        "Mboko @1.33"
+      ],
+      "q3_output_a": [
+        "Sabalenka 91.7%",
+        "Swiatek 87.1%"
+      ],
+      "q3_mid": [
+        "Pegula 80.7%",
+        "Mboko 80.7% (GO 重複)"
+      ],
+      "skip_batch": [
+        "Tauson vs Siniakova (diff 31 L1 fail)",
+        "Bencic vs Shnaider (diff -1.1 L1 fail)",
+        "Osaka vs Kalinina (diff 7.6 L1 fail)",
+        "Andreeva vs Galfi (Galfi cElo unknown)",
+        "Jovic vs Fernandez (diff 29 L1 fail)",
+        "Bondar vs Samsonova (diff -15.6 L1 fail - fav reversed)",
+        "Paolini vs Baptiste R3 (P007 form slump downgrade)"
+      ],
+      "completed_updates": [
+        "Mertens d. Eala 6-2 6-1 GO HIT +0.37u (Session_58 確定)"
+      ]
     }
   ],
   "last_updated": "2026-04-24"

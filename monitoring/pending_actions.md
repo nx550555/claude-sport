@@ -88,8 +88,8 @@
 | PA065 | EDM-ANA G2 | **DONE Session_50**: ANA 6-4 EDM UPSET (Gauthier 決勝点 残り4:52)。予測MISS。SKIP no-bet (P&L 0)。type_a_watch 的中で P025 evidence 2/3 到達 | DONE | 高 | 完了 2026-04-23 |
 | PA066 | OKC-PHX G2 | **DONE Session_50**: OKC 120-107 PHX HIT (SGA 37pts/9ast)。シリーズ 2-0 OKC。Q3 output_a HIT | DONE | 高 | 完了 2026-04-23 |
 | PA067 | NBA records dedup | **DONE Session_56 棚卸し**: PA075 (Session_51) で既に解消済を確認。現状 33 games 中 6件 duplicate_closed / 27件 active / 残重複 0 件。本 PA は誤残留 | DONE | 中 | 完了 (Session_51 PA075 で解消) |
-| PA068 | Madrid GO 5件 結果 | Session_50 新規 → **Session_52 GEN003 で Tsitsipas / Musetti を CAUTION 降格**。残 GO 3件: Paul @1.40 (4/24) / Keys @1.23 (4/24) / Mertens @1.37 (**4/23 date 訂正**) 結果確認 | WAITING | 最高 | 4/23-25 |
-| PA076 | GEN003 Session_52 downgrade 追跡 | Tsitsipas CAUTION_MARGIN (@1.35 conf 72 / 今日 4/23) / Musetti CAUTION_WAITING (@1.42 conf 71 / 4/24 arm injury 初戦) 結果確認。CAUTION 予測精度として記録 (bet-off)。試合前に Musetti practice 状況で WAITING→SKIP 再判定検討 | WAITING | 高 | 4/23-24 |
+| PA068 | Madrid GO 5件 結果 | **DONE Session_58 2026-04-25**: Paul MISS (Tirante UPSET 7-5 6-4 -1.0u) / Keys VOID (病欠棄権) / Mertens HIT (6-2 6-1 +0.37u) / Tsitsipas HIT (R1 Kypson 3-6 6-7 7-6) / Musetti HIT (Hurkacz 6-4 7-6(4))。Net -0.63u (+0.37 Mertens -1.0 Paul)。| DONE | 最高 | 完了 2026-04-25 |
+| PA076 | GEN003 Session_52 downgrade 追跡 | **DONE Session_58 2026-04-25**: Tsitsipas prediction HIT / Musetti prediction HIT 両者 CAUTION 推奨維持で P&L 0。CAUTION tier 予測精度としては HIT 2/2。 | DONE | 高 | 完了 2026-04-25 |
 | PA077 | UFL W5 スクリーニング | **Session_52 で W5 schedule 確認のみ** (4/24-26 4試合 Louisville/Birmingham・StL/Orlando・Columbus/Houston・日曜夕方4試合目要確認)。PD/G 取得が未実施 → 次セッションで ESPN/FOX stats 取得後に L1 スクリーニング 4試合 | PENDING | 高 | 4/23-25 |
 | PA069 | Q3 output_a 7件 結果 | Session_50: Sinner/Bencic/Swiatek/Sabalenka/Andreeva/Gauff/Rybakina 予測精度追跡 | WAITING | 高 | 4/23-24 |
 | PA070 | Q4 upset_watch 13件 | Session_50: Osaka-Osorio UPSET濃厚 + Popyrin/Opelka/Rinderknech/Shelton/Diallo/Grant/Samsonova 等観察 | WAITING | 中 | 4/23-24 |
@@ -115,6 +115,13 @@
 | PA090 | Session_56 GEN007 #1 保留: conf キャリブレーション | soccer records 50試合到達時に再提案。現状は仮係数 (logistic divisor=400 / xGD_bonus=0.015 / conf上限=0.92) で運用。understat の過去 backtest data を使うか、自前 records 蓄積を待つかは再提案時に決定。ユーザー判断: 保留 (2026-04-23) | PENDING | 中 | soccer 50試合到達時 |
 | PA091 | Session_56 Q3_mid sync_dashboard.py 拡張 | **DONE Session_56 2026-04-23**: sync_dashboard.py の build_q3_html に Q3_mid バケット生成ロジック追加 (by_quadrant.Q3_mid 読込 + AUTO:PRED_Q3_MID ブロック出力)。dashboard.html 予測精度タブに Q3_mid 別パネル表示開始。該当0件でも panel 表示される設計 | DONE | 中 | 完了 2026-04-23 |
 | PA092 | Session_56 UCL SF STEP 4.5 | PSG-Bayern (4/29 04:00 JST) と Atletico-Arsenal (4/30 04:00 JST) のキックオフ75分前に fetch_lineups.py --sport soccer で team sheet 取得必須。GK/主力FW/CB/キャプテン確認で EV 再計算。Arsenal の Saliba/Saka/Odegaard 出場可否が最重要 | PENDING | 最高 | 4/29-30 キックオフ75分前 |
+| PA093 | Session_58 Phase B 結果反映済 DONE | Paul MISS (Tirante UPSET)・Mertens HIT・Fonseca VOID (Cilic WO)・Jodar UPSET A035 (SKIP→R3 登録) の records 更新完了 | DONE | 最高 | 完了 2026-04-25 |
+| PA094 | Session_58 新規 GO 6件 結果追跡 | 4/25-26 開催: **Khachanov @1.22 / FAA @1.25 / Mensik @1.29 (ATP R2)** + **Mboko @1.33 (WTA R2)** + **Warriors @1.45 / Manly @1.38 (NRL R9)**。結果反映要・マルチベット 3-leg 推奨 (Mensik+FAA+Manly or Mensik+Khachanov+Warriors) EV +41% | WAITING | 最高 | 4/25-26 |
+| PA095 | Session_58 CAUTION_MARGIN 2件追跡 | Shapovalov @1.55 (form不安定) / Ruud @1.42 (Munar Spain home) prediction HIT/MISS 反映要 | WAITING | 高 | 4/25 |
+| PA096 | Session_58 Q4_upset_watch 5件追跡 | LAL @3.70 road sweep / SAS Wembanyama concussion G3 / ANA G3 home (A030 evidence) / MTL G3 home (A021) / Osaka vs Kalinina | WAITING | 中 | 4/25-26 |
+| PA097 | Session_58 A035 新規 UPSET 登録 | Jodar d. de Minaur 6-3 6-1 Top-10 upset → upset_patterns.json A035 新規 entry 登録 (P010 R017 evidence 補強候補) | PENDING | 中 | 次セッション |
+| PA098 | Session_58 NHL G3 結果追跡 | MTL-TBL G3 4/25 / UTA-VGK G3 4/25 / ANA-EDM G3 4/25 結果反映 + PHI G4 CAUTION_MARGIN close-out 結果反映 | WAITING | 高 | 4/25-27 |
+| PA099 | Session_58 NBA G3/G4 結果追跡 | 8試合全 SKIP 予測精度追跡 (BOS-PHI G3 / HOU-LAL G3 / POR-SAS G3 / ORL-DET G3 / PHX-OKC G3 / ATL-NYK G3 / MIN-DEN G4 / TOR-CLE G4) | WAITING | 中 | 4/25-27 |
 | PA044 | NHL | PA014 TBL-MTL G1 **MTL 4-3 OT 予測MISS 記録 DONE Session_44** (Slafkovsky hat trick + OT 1:22 PP). Type A A021 upset登録。CAUTION no-bet のため P&L影響なし | DONE | 高 | 完了 2026-04-20 |
 | PA045 | Rule Pipeline | **R020/R017 実装 DONE Session_44** (rules_tennis.json v2.2). P013/P010 implemented_rulesへ移動。GEN005衝突解消: R017 vs R020 同時成立時はR017優先 | DONE | 中 | 完了 2026-04-20 |
 | PA046 | 出力A/B | **Session_30-43 新規GO遡及追加 DONE Session_44** (multi_bets.json + dashboard同期). Leeds/Warriors/Warrington/SAS を追加。累計 11件・6HIT・3MISS・1VOID・1PENDING | DONE | 最高 | 完了 2026-04-20 |

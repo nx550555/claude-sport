@@ -524,6 +524,28 @@
       ],
       "all_skip": true,
       "note": "8/8 NRL R9 all EV < +7% Basic Tier threshold, SKIP continues. Broncos-Bulldogs: fav flipped BRI->CBY due to Broncos odds 1.76->2.28."
+    },
+    {
+      "session": "_58",
+      "date": "2026-04-25",
+      "source": "2026-04-24.json",
+      "matches_screened": {
+        "nrl_r9": 7
+      },
+      "go_candidates": [
+        "Warriors @1.45",
+        "Manly @1.38"
+      ],
+      "q3_output_a": [
+        "Roosters road @1.12 (89.3% market)",
+        "Panthers road @1.17 (85.5% market)"
+      ],
+      "skip_batch": [
+        "Storm vs Rabbitohs (Storm PD/G weaker -0.29 but home odds 1.51 diff-wise fail)",
+        "Bulldogs vs Cowboys (diff 0.12 L1 fail)",
+        "Storm vs Dolphins 5/1 (L1 fail)"
+      ],
+      "notes": "Phase C NRL R9. GO 2件昇格 (Warriors / Manly)."
     }
   ],
   "predictions": [
@@ -725,22 +747,23 @@
       "match": "New Zealand Warriors vs Dolphins",
       "home": "New Zealand Warriors",
       "away": "Dolphins",
-      "tier": "skip",
-      "predicted_winner": "New Zealand Warriors",
-      "prediction_confidence": 65.0,
-      "prediction_basis": "Market implied. L1(PD/G) 要確認。保守的推定 65.0%. (Session_53 GEN004 reprice)",
+      "tier": "go",
+      "predicted_winner": "NZ Warriors",
+      "prediction_confidence": 78,
+      "prediction_basis": "PD/G diff +16.5pt / Warriors 5W2L home / Dolphins 2W4L collapse / Home advantage NZ",
       "odds": {
-        "NZW": 1.43,
-        "DOL": 2.65
+        "fav": 1.45,
+        "dog": 2.55
       },
-      "rec_odds": 1.43,
+      "rec_odds": 1.45,
       "estimated_win_pct": 65.0,
       "ev_est": -7.12,
       "skip_reason": "Market implied 65.0%, EV -7.12% < +7% Basic Tier GO threshold OR odds too short.",
-      "rec": null,
-      "ev": null,
+      "rec": "NZ Warriors",
+      "ev": 0.131,
       "rules_applied": [
-        "NRL_L1_PD_G(pending)"
+        "NRL_L1_PD_G(pending)",
+        "U008_modified"
       ],
       "status": "pending",
       "hit": null,
@@ -765,7 +788,16 @@
           },
           "reason": "GEN004 odds shift >0.01 in 2026-04-23-2.json"
         }
-      ]
+      ],
+      "quadrant": "Q1_go",
+      "l1_metric": "pd_per_game",
+      "l1_data": {
+        "pd_diff": 16.5,
+        "fav": "NZ Warriors (+12.0/G)",
+        "dog": "Dolphins (-4.5/G)"
+      },
+      "screened_session": "_58",
+      "source": "2026-04-24.json"
     },
     {
       "date": "2026-04-25",
@@ -869,20 +901,20 @@
       "match": "Manly Sea Eagles vs Parramatta Eels",
       "home": "Manly Sea Eagles",
       "away": "Parramatta Eels",
-      "tier": "skip",
+      "tier": "go",
       "predicted_winner": "Manly Sea Eagles",
-      "prediction_confidence": 71.0,
-      "prediction_basis": "Market implied. L1(PD/G) 要確認。保守的推定 71.0%. (Session_53 GEN004 reprice)",
+      "prediction_confidence": 80,
+      "prediction_basis": "PD/G diff +18.3pt / Manly 3W3L home / Eels 3W4L PD-12/G / Eels collapse pattern",
       "odds": {
-        "MAN": 1.31,
-        "PAR": 3.2
+        "fav": 1.38,
+        "dog": 2.8
       },
-      "rec_odds": 1.31,
+      "rec_odds": 1.38,
       "estimated_win_pct": 71.0,
       "ev_est": -7.05,
       "skip_reason": "Market implied 71.0%, EV -7.05% < +7% Basic Tier GO threshold OR odds too short.",
-      "rec": null,
-      "ev": null,
+      "rec": "Manly Sea Eagles",
+      "ev": 0.104,
       "rules_applied": [
         "NRL_L1_PD_G(pending)"
       ],
@@ -909,7 +941,16 @@
           },
           "reason": "GEN004 odds shift >0.01 in 2026-04-23-2.json"
         }
-      ]
+      ],
+      "quadrant": "Q1_go",
+      "l1_metric": "pd_per_game",
+      "l1_data": {
+        "pd_diff": 18.3,
+        "fav": "Manly Sea Eagles (+6.33/G)",
+        "dog": "Eels (-12.0/G)"
+      },
+      "screened_session": "_58",
+      "source": "2026-04-24.json"
     }
   ]
 }

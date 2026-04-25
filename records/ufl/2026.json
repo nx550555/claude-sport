@@ -581,6 +581,22 @@
       "skip_count": 4,
       "note": "UFL W6 4 games L1(PD/G) + U008_modified Week3-6 cap 70% + 4-quadrant. GO 0 (cap 70% restricts all conf<78 Basic Tier threshold). Key: Orlando 4-0 vs STL EV+12% conf 69% still below GO threshold. PA077 completed with ESPN standings baseline.",
       "standings_source": "ESPN UFL Standings fetched 2026-04-23"
+    },
+    {
+      "session": "_58",
+      "date": "2026-04-25",
+      "source": "2026-04-24.json",
+      "matches_screened": {
+        "UFL W5": 4
+      },
+      "go_candidates": [],
+      "skip_batch": [
+        "DC @1.37 road vs Stallions (Basic 78% 未達)",
+        "ORL @1.63 home vs STL (conf 61% < 78%)",
+        "COL @1.44 road vs HOU (1-3 Aviators W4 UPSET 後 let-down リスク CAUTION)",
+        "REN @1.26 home vs LOU (Basic conf 79% 境界 EV -0.46% SKIP)"
+      ],
+      "notes": "Phase C UFL W5. 全 SKIP (Basic Tier 閾値未達)."
     }
   ]
 }

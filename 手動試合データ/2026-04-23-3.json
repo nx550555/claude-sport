@@ -1,0 +1,1343 @@
+{
+  "date": "2026-04-23",
+  "updated_at": "2026-04-23T12:40:34.076Z",
+  "tournaments": [
+    {
+      "tournament": "プレミアリーグ",
+      "category": "soccer",
+      "sport": "unknown",
+      "date": "2024-04-25",
+      "matches": {
+        "live": [],
+        "completed": [],
+        "upcoming": [
+          {
+            "date": "2024-04-25",
+            "start_time": "04:00",
+            "team1": "サンダーランドAFC",
+            "team2": "ノッティンガム・フォレスト",
+            "odds": {
+              "team1": 2.8,
+              "draw": 3.25,
+              "team2": 2.7
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-25",
+            "start_time": "20:30",
+            "team1": "フラムFC",
+            "team2": "アストンヴィラ",
+            "odds": {
+              "team1": 2.75,
+              "draw": 3.6,
+              "team2": 2.5
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-25",
+            "start_time": "23:00",
+            "team1": "ウェストハム・ユナイテッド",
+            "team2": "エヴァートン",
+            "odds": {
+              "team1": 2.42,
+              "draw": 3.4,
+              "team2": 3
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-25",
+            "start_time": "23:00",
+            "team1": "リバプール",
+            "team2": "クリスタルパレス",
+            "odds": {
+              "team1": 1.49,
+              "draw": 4.9,
+              "team2": 6.2
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-25",
+            "start_time": "23:00",
+            "team1": "ウォルヴァーハンプトン",
+            "team2": "トッテナム",
+            "odds": {
+              "team1": 4.5,
+              "draw": 4.1,
+              "team2": 1.75
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-26",
+            "start_time": "01:30",
+            "team1": "アーセナルFC",
+            "team2": "ニューカッスル・ユナイテッド",
+            "odds": {
+              "team1": 1.49,
+              "draw": 4.8,
+              "team2": 6.2
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-28",
+            "start_time": "04:00",
+            "team1": "マンチェスター・ユナイテッド",
+            "team2": "ブレントフォードFC",
+            "odds": {
+              "team1": 1.88,
+              "draw": 3.95,
+              "team2": 3.95
+            },
+            "markets": [
+              "1x2"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tournament": "ラリーガ",
+      "category": "football",
+      "sport": "unknown",
+      "date": "2024-04-24",
+      "matches": {
+        "live": [],
+        "completed": [],
+        "upcoming": [
+          {
+            "date": "2024-04-24",
+            "start_time": "02:00",
+            "team1": "レバンテ",
+            "team2": "セビージャ",
+            "odds": {
+              "team1": 2.43,
+              "draw": 3.25,
+              "team2": 3.1
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "03:00",
+            "team1": "ラーヨ・バジェカーノ",
+            "team2": "エスパニョール バルセロナ",
+            "odds": {
+              "team1": 2.12,
+              "draw": 3.3,
+              "team2": 3.75
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "04:30",
+            "team1": "レアル・オビエド",
+            "team2": "ビジャレアル",
+            "odds": {
+              "team1": 3.6,
+              "draw": 3.4,
+              "team2": 2.13
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-25",
+            "start_time": "04:00",
+            "team1": "レアル・ベティス・バロンピエ",
+            "team2": "レアル・マドリード",
+            "odds": {
+              "team1": 3.7,
+              "draw": 4.1,
+              "team2": 1.9
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-25",
+            "start_time": "21:00",
+            "team1": "アラベス",
+            "team2": "RCDマジョルカ",
+            "odds": {
+              "team1": 2.2,
+              "draw": 3.15,
+              "team2": 3.75
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-25",
+            "start_time": "23:15",
+            "team1": "ヘタフェCF",
+            "team2": "バルセロナ",
+            "odds": {
+              "team1": 5.6,
+              "draw": 4.2,
+              "team2": 1.6
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-26",
+            "start_time": "01:30",
+            "team1": "バレンシア",
+            "team2": "ジローナFC",
+            "odds": {
+              "team1": 2.05,
+              "draw": 3.55,
+              "team2": 3.7
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-26",
+            "start_time": "04:00",
+            "team1": "アトレティコマドリード",
+            "team2": "アスレチック・ビルバオ",
+            "odds": {
+              "team1": 2.22,
+              "draw": 3.6,
+              "team2": 3.25
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-26",
+            "start_time": "21:00",
+            "team1": "ラーヨ・バジェカーノ",
+            "team2": "レアル・ソシエダ",
+            "odds": {
+              "team1": 2.42,
+              "draw": 3.35,
+              "team2": 3.05
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-26",
+            "start_time": "23:15",
+            "team1": "レアル・オビエド",
+            "team2": "CFエルチェ",
+            "odds": {
+              "team1": 2.37,
+              "draw": 3.3,
+              "team2": 3.15
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-27",
+            "start_time": "01:30",
+            "team1": "オサスナCA",
+            "team2": "セビージャ",
+            "odds": {
+              "team1": 2.13,
+              "draw": 3.45,
+              "team2": 3.6
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-27",
+            "start_time": "04:00",
+            "team1": "ビジャレアル",
+            "team2": "セルタ・ デ・ビゴ",
+            "odds": {
+              "team1": 2.01,
+              "draw": 3.6,
+              "team2": 3.8
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-28",
+            "start_time": "04:00",
+            "team1": "エスパニョール バルセロナ",
+            "team2": "レバンテ",
+            "odds": {
+              "team1": 1.95,
+              "draw": 3.6,
+              "team2": 4
+            },
+            "markets": [
+              "1x2"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tournament": "セリエＡ",
+      "category": "soccer",
+      "sport": "unknown",
+      "date": "2024-04-25",
+      "matches": {
+        "live": [],
+        "completed": [],
+        "upcoming": [
+          {
+            "date": "2024-04-25",
+            "start_time": "03:45",
+            "team1": "ナポリ",
+            "team2": "USクレモネーゼ",
+            "odds": {
+              "team1": 1.34,
+              "draw": 5.2,
+              "team2": 9.8
+            },
+            "markets": {
+              "1x2": {
+                "team1": 1.34,
+                "draw": 5.2,
+                "team2": 9.8
+              }
+            }
+          },
+          {
+            "date": "2024-04-25",
+            "start_time": "22:00",
+            "team1": "パルマ・カルチョ",
+            "team2": "Pisa",
+            "odds": {
+              "team1": 2.13,
+              "draw": 3.25,
+              "team2": 3.8
+            },
+            "markets": {
+              "1x2": {
+                "team1": 2.13,
+                "draw": 3.25,
+                "team2": 3.8
+              }
+            }
+          },
+          {
+            "date": "2024-04-26",
+            "start_time": "01:00",
+            "team1": "ボローニャ",
+            "team2": "ASローマ",
+            "odds": {
+              "team1": 3.05,
+              "draw": 3.25,
+              "team2": 2.46
+            },
+            "markets": {
+              "1x2": {
+                "team1": 3.05,
+                "draw": 3.25,
+                "team2": 2.46
+              }
+            }
+          },
+          {
+            "date": "2024-04-26",
+            "start_time": "03:45",
+            "team1": "エラス・ヴェローナ",
+            "team2": "レッチェ",
+            "odds": {
+              "team1": 2.75,
+              "draw": 3.05,
+              "team2": 2.85
+            },
+            "markets": {
+              "1x2": {
+                "team1": 2.75,
+                "draw": 3.05,
+                "team2": 2.85
+              }
+            }
+          },
+          {
+            "date": "2024-04-26",
+            "start_time": "19:30",
+            "team1": "フィオレンティーナ",
+            "team2": "サッスオーロ・カルチョ",
+            "odds": {
+              "team1": 1.96,
+              "draw": 3.55,
+              "team2": 4.1
+            },
+            "markets": {
+              "1x2": {
+                "team1": 1.96,
+                "draw": 3.55,
+                "team2": 4.1
+              }
+            }
+          },
+          {
+            "date": "2024-04-26",
+            "start_time": "22:00",
+            "team1": "ジェノア",
+            "team2": "コモ1907",
+            "odds": {
+              "team1": 4.7,
+              "draw": 3.8,
+              "team2": 1.78
+            },
+            "markets": {
+              "1x2": {
+                "team1": 4.7,
+                "draw": 3.8,
+                "team2": 1.78
+              }
+            }
+          },
+          {
+            "date": "2024-04-27",
+            "start_time": "01:00",
+            "team1": "トリノ",
+            "team2": "インテル・ミラノ",
+            "odds": {
+              "team1": 7,
+              "draw": 5,
+              "team2": 1.43
+            },
+            "markets": {
+              "1x2": {
+                "team1": 7,
+                "draw": 5,
+                "team2": 1.43
+              }
+            }
+          },
+          {
+            "date": "2024-04-27",
+            "start_time": "03:45",
+            "team1": "ACミラン",
+            "team2": "ユヴェントス",
+            "odds": {
+              "team1": 3,
+              "draw": 3.25,
+              "team2": 2.55
+            },
+            "markets": {
+              "1x2": {
+                "team1": 3,
+                "draw": 3.25,
+                "team2": 2.55
+              }
+            }
+          },
+          {
+            "date": "2024-04-28",
+            "start_time": "01:30",
+            "team1": "カリアリ",
+            "team2": "アタランタ",
+            "odds": {
+              "team1": 4.5,
+              "draw": 3.75,
+              "team2": 1.81
+            },
+            "markets": {
+              "1x2": {
+                "team1": 4.5,
+                "draw": 3.75,
+                "team2": 1.81
+              }
+            }
+          },
+          {
+            "date": "2024-04-28",
+            "start_time": "03:45",
+            "team1": "ラツィオ",
+            "team2": "ウディネーゼ",
+            "odds": {
+              "team1": 2.02,
+              "draw": 3.35,
+              "team2": 4.1
+            },
+            "markets": {
+              "1x2": {
+                "team1": 2.02,
+                "draw": 3.35,
+                "team2": 4.1
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "tournament": "UEFA チャンピオンズリーグ",
+      "category": "soccer",
+      "sport": "unknown",
+      "date": "2024-04-29",
+      "matches": {
+        "live": [],
+        "completed": [],
+        "upcoming": [
+          {
+            "date": "2024-04-29",
+            "start_time": "04:00",
+            "team1": "パリ・サン＝ジェルマン",
+            "team2": "バイエルン・ミュンヘン",
+            "odds": {
+              "team1": 2.31,
+              "draw": 3.95,
+              "team2": 2.85
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-30",
+            "start_time": "04:00",
+            "team1": "アトレティコマドリード",
+            "team2": "アーセナルFC",
+            "odds": {
+              "team1": 2.85,
+              "draw": 3.3,
+              "team2": 2.6
+            },
+            "markets": [
+              "1x2"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tournament": "ブラジレイロ セリエ A",
+      "category": "サッカー",
+      "sport": "unknown",
+      "date": "2024-04-26",
+      "matches": {
+        "live": [],
+        "completed": [],
+        "upcoming": [
+          {
+            "date": "2024-04-26",
+            "start_time": "06:30",
+            "team1": "ボタフォゴFR RJ",
+            "team2": "SCインテルナシオナル RS",
+            "odds": {
+              "team1": 2.5,
+              "draw": 3.1,
+              "team2": 2.95
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-26",
+            "start_time": "06:30",
+            "team1": "EC バイーア BA",
+            "team2": "サントスFC SP",
+            "odds": {
+              "team1": 1.84,
+              "draw": 3.6,
+              "team2": 4.2
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-26",
+            "start_time": "06:30",
+            "team1": "クルーベ・ド・レモPA",
+            "team2": "クルゼイロMG",
+            "odds": {
+              "team1": 3.4,
+              "draw": 3.4,
+              "team2": 2.12
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-26",
+            "start_time": "09:00",
+            "team1": "サンパウロ FC SP",
+            "team2": "ミラソウFC",
+            "odds": {
+              "team1": 1.85,
+              "draw": 3.6,
+              "team2": 4.1
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-27",
+            "start_time": "04:00",
+            "team1": "グレミオFBポルト・アレグレンセ RS",
+            "team2": "コリチーバ FC PR",
+            "odds": {
+              "team1": 1.92,
+              "draw": 3.35,
+              "team2": 4.2
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-27",
+            "start_time": "04:00",
+            "team1": "SCコリンチャンスSP",
+            "team2": "CRヴァスコ・ダ・ガマRJ",
+            "odds": {
+              "team1": 2.01,
+              "draw": 3.45,
+              "team2": 3.7
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-27",
+            "start_time": "06:30",
+            "team1": "CAパラナエンセPR",
+            "team2": "ヴィクトリア BA",
+            "odds": {
+              "team1": 1.7,
+              "draw": 3.6,
+              "team2": 5.2
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-27",
+            "start_time": "06:30",
+            "team1": "レッドブル ブラガンティノ SP",
+            "team2": "SEパルメイラス SP",
+            "odds": {
+              "team1": 3.1,
+              "draw": 3.25,
+              "team2": 2.31
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-27",
+            "start_time": "08:30",
+            "team1": "アトレチコ・ミネイロMG",
+            "team2": "CR フラメンゴ RJ",
+            "odds": {
+              "team1": 3.75,
+              "draw": 3.3,
+              "team2": 2.03
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-27",
+            "start_time": "08:30",
+            "team1": "フルミネンセFC RJ",
+            "team2": "シャペコエンセSC",
+            "odds": {
+              "team1": 1.29,
+              "draw": 5.4,
+              "team2": 10
+            },
+            "markets": [
+              "1x2"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tournament": "ブンデスリーガ",
+      "category": "soccer",
+      "sport": "unknown",
+      "date": "2025-04-25",
+      "matches": {
+        "live": [],
+        "completed": [],
+        "upcoming": [
+          {
+            "date": "2025-04-25",
+            "start_time": "03:30",
+            "team1": "RBライプツィヒ",
+            "team2": "ウニオンベルリン",
+            "odds": {
+              "team1": 1.36,
+              "draw": 5.6,
+              "team2": 8
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2025-04-25",
+            "start_time": "22:30",
+            "team1": "1.FCハイデンハイム1846",
+            "team2": "FCザンクトパウリ",
+            "odds": {
+              "team1": 2.4,
+              "draw": 3.45,
+              "team2": 3
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2025-04-25",
+            "start_time": "22:30",
+            "team1": "ヴォルフスブルク",
+            "team2": "ボルシア・メンヒェングラートバッハ",
+            "odds": {
+              "team1": 2.28,
+              "draw": 3.7,
+              "team2": 3.05
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2025-04-25",
+            "start_time": "22:30",
+            "team1": "アウグスブルク",
+            "team2": "アイントラハト・フランクフルト",
+            "odds": {
+              "team1": 2.55,
+              "draw": 3.8,
+              "team2": 2.6
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2025-04-25",
+            "start_time": "22:30",
+            "team1": "1. FCケルン",
+            "team2": "バイエル・レバークーゼン",
+            "odds": {
+              "team1": 3.8,
+              "draw": 4,
+              "team2": 1.89
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2025-04-25",
+            "start_time": "22:30",
+            "team1": "FSVマインツ05",
+            "team2": "バイエルン・ミュンヘン",
+            "odds": {
+              "team1": 4.5,
+              "draw": 4.6,
+              "team2": 1.67
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2025-04-26",
+            "start_time": "01:30",
+            "team1": "ハンブルガーSV",
+            "team2": "ホッフェンハイム",
+            "odds": {
+              "team1": 4.1,
+              "draw": 4.1,
+              "team2": 1.81
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2025-04-26",
+            "start_time": "22:30",
+            "team1": "VfBシュトゥットガルト",
+            "team2": "ヴェルダー・ブレーメン",
+            "odds": {
+              "team1": 1.53,
+              "draw": 4.8,
+              "team2": 5.6
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2025-04-27",
+            "start_time": "00:30",
+            "team1": "ボルシア・ドルトムント",
+            "team2": "SCフライブルク",
+            "odds": {
+              "team1": 1.42,
+              "draw": 5.2,
+              "team2": 7
+            },
+            "markets": [
+              "1x2"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tournament": "リーグ 1",
+      "category": "French Football",
+      "sport": "unknown",
+      "date": "2024-04-25",
+      "matches": {
+        "live": [],
+        "completed": [],
+        "upcoming": [
+          {
+            "date": "2024-04-25",
+            "start_time": "03:45",
+            "team1": "スタッド・ブレスト29",
+            "team2": "RCランス",
+            "odds": {
+              "team1": 4.8,
+              "draw": 4.1,
+              "team2": 1.7
+            },
+            "markets": "+109"
+          },
+          {
+            "date": "2024-04-25",
+            "start_time": "22:00",
+            "team1": "オリンピック・リヨン",
+            "team2": "AJオセール",
+            "odds": {
+              "team1": 1.69,
+              "draw": 3.95,
+              "team2": 5.2
+            },
+            "markets": "+104"
+          },
+          {
+            "date": "2024-04-26",
+            "start_time": "02:00",
+            "team1": "アンジェ",
+            "team2": "パリ・サン＝ジェルマン",
+            "odds": {
+              "team1": 10,
+              "draw": 6.4,
+              "team2": 1.28
+            },
+            "markets": "+104"
+          },
+          {
+            "date": "2024-04-26",
+            "start_time": "04:05",
+            "team1": "トゥールーズFC",
+            "team2": "モナコ",
+            "odds": {
+              "team1": 3.4,
+              "draw": 3.7,
+              "team2": 2.11
+            },
+            "markets": "+104"
+          },
+          {
+            "date": "2024-04-26",
+            "start_time": "22:00",
+            "team1": "FCロリアン",
+            "team2": "RCストラスブール・アルザス",
+            "odds": {
+              "team1": 2.19,
+              "draw": 3.55,
+              "team2": 3.3
+            },
+            "markets": "+98"
+          },
+          {
+            "date": "2024-04-27",
+            "start_time": "00:15",
+            "team1": "パリFC",
+            "team2": "リールLOSC",
+            "odds": {
+              "team1": 3.9,
+              "draw": 3.65,
+              "team2": 1.97
+            },
+            "markets": "+98"
+          },
+          {
+            "date": "2024-04-27",
+            "start_time": "00:15",
+            "team1": "ル・アーヴルAC",
+            "team2": "メッツ",
+            "odds": {
+              "team1": 1.68,
+              "draw": 3.95,
+              "team2": 5.2
+            },
+            "markets": "+98"
+          },
+          {
+            "date": "2024-04-27",
+            "start_time": "00:15",
+            "team1": "スタッド・レンヌ",
+            "team2": "ナント",
+            "odds": {
+              "team1": 1.44,
+              "draw": 4.9,
+              "team2": 7
+            },
+            "markets": "+98"
+          },
+          {
+            "date": "2024-04-27",
+            "start_time": "03:45",
+            "team1": "オリンピック・マルセイユ",
+            "team2": "OGCニース",
+            "odds": {
+              "team1": 1.49,
+              "draw": 5,
+              "team2": 5.8
+            },
+            "markets": "+98"
+          }
+        ]
+      }
+    },
+    {
+      "tournament": "リーグ 2",
+      "category": "",
+      "sport": "unknown",
+      "date": "2025-04-25",
+      "matches": {
+        "live": [],
+        "completed": [],
+        "upcoming": [
+          {
+            "date": "2025-04-25",
+            "start_time": "03:00",
+            "team1": "レッドスターFC",
+            "team2": "ゲンギャン",
+            "odds": {
+              "team1": 2,
+              "draw": 3.55,
+              "team2": 3.4
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2025-04-25",
+            "start_time": "03:00",
+            "team1": "クレルモンフット",
+            "team2": "バスティア",
+            "odds": {
+              "team1": 2.6,
+              "draw": 3.2,
+              "team2": 2.6
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2025-04-25",
+            "start_time": "03:00",
+            "team1": "FC アヌシー",
+            "team2": "ポーFC",
+            "odds": {
+              "team1": 2.04,
+              "draw": 3.4,
+              "team2": 3.4
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2025-04-25",
+            "start_time": "03:00",
+            "team1": "スタッド・ラヴァロワ・マイエンヌFC",
+            "team2": "Rodez",
+            "odds": {
+              "team1": 2.55,
+              "draw": 3.3,
+              "team2": 2.6
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2025-04-25",
+            "start_time": "03:00",
+            "team1": "アミアン",
+            "team2": "モンペリエ",
+            "odds": {
+              "team1": 3.25,
+              "draw": 3.6,
+              "team2": 2.03
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2025-04-25",
+            "start_time": "21:00",
+            "team1": "グルノーブルフット",
+            "team2": "ル・マンFC",
+            "odds": {
+              "team1": 3.8,
+              "draw": 3.35,
+              "team2": 1.95
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2025-04-25",
+            "start_time": "21:00",
+            "team1": "スタッド・ランス",
+            "team2": "ASナンシー",
+            "odds": {
+              "team1": 1.56,
+              "draw": 3.95,
+              "team2": 5.4
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2025-04-26",
+            "start_time": "03:00",
+            "team1": "サンテティエンヌ",
+            "team2": "ESトロアAC",
+            "odds": {
+              "team1": 1.93,
+              "draw": 3.6,
+              "team2": 3.55
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2025-04-28",
+            "start_time": "03:45",
+            "team1": "USブローニュ",
+            "team2": "ダンケルク",
+            "odds": {
+              "team1": 2.8,
+              "draw": 3.05,
+              "team2": 2.5
+            },
+            "markets": [
+              "1x2"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tournament": "ナショナル",
+      "category": "フランス ナショナル",
+      "sport": "american_football",
+      "date": "2024-04-25",
+      "matches": {
+        "live": [],
+        "completed": [],
+        "upcoming": [
+          {
+            "date": "2024-04-25",
+            "start_time": "02:30",
+            "team1": "ヴァランシエンヌFC",
+            "team2": "ディジョンFCO",
+            "odds": {
+              "team1": 3.25,
+              "draw": 3.15,
+              "team2": 2.1
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-25",
+            "start_time": "02:30",
+            "team1": "ソショー",
+            "team2": "Football Bourg-En-Bresse Peronnas 01",
+            "odds": {
+              "team1": 1.48,
+              "draw": 3.85,
+              "team2": 6.2
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-25",
+            "start_time": "02:30",
+            "team1": "SMカーン",
+            "team2": "FCヴィルフランシュ＝ボジョレー",
+            "odds": {
+              "team1": 1.75,
+              "draw": 3.45,
+              "team2": 4.2
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-25",
+            "start_time": "02:30",
+            "team1": "ル・ピュイ",
+            "team2": "ベルサイユ78",
+            "odds": {
+              "team1": 2.28,
+              "draw": 3.15,
+              "team2": 2.9
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-25",
+            "start_time": "02:30",
+            "team1": "LBシャトールー",
+            "team2": "フルーリー",
+            "odds": {
+              "team1": 2.75,
+              "draw": 3.4,
+              "team2": 2.26
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-25",
+            "start_time": "02:30",
+            "team1": "Stade Briochin",
+            "team2": "USコンカルノー",
+            "odds": {
+              "team1": 3.05,
+              "draw": 3.05,
+              "team2": 2.24
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-25",
+            "start_time": "02:30",
+            "team1": "オルレアン US45",
+            "team2": "US Quevilly-Rouen Metropole",
+            "odds": {
+              "team1": 1.59,
+              "draw": 3.7,
+              "team2": 5
+            },
+            "markets": [
+              "1x2"
+            ]
+          },
+          {
+            "date": "2024-04-25",
+            "start_time": "02:30",
+            "team1": "ルアン",
+            "team2": "オーバーニュFC",
+            "odds": {
+              "team1": 1.48,
+              "draw": 4,
+              "team2": 5.8
+            },
+            "markets": [
+              "1x2"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "tournament": "メジャーリーグベースボール",
+      "category": "baseball",
+      "sport": "unknown",
+      "date": "2024-04-24",
+      "matches": {
+        "live": [],
+        "completed": [],
+        "upcoming": [
+          {
+            "date": "2024-04-24",
+            "start_time": "02:05",
+            "team1": "ワシントンナショナルス",
+            "team2": "アトランタ・ブレーブ",
+            "odds": {
+              "team1": 2.12,
+              "team2": 1.73
+            },
+            "markets": [
+              "勝者（延長回含む）"
+            ]
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "02:10",
+            "team1": "デトロイトタイガース",
+            "team2": "ミルウォーキー・ブリュワーズ",
+            "odds": {
+              "team1": 1.42,
+              "team2": 2.9
+            },
+            "markets": [
+              "勝者（延長回含む）"
+            ]
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "03:20",
+            "team1": "シカゴ・カブス",
+            "team2": "フィラデルフィア・フィリーズ",
+            "odds": {
+              "team1": 2.02,
+              "team2": 1.8
+            },
+            "markets": [
+              "勝者（延長回含む）"
+            ]
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "04:10",
+            "team1": "コロラドロッキーズ",
+            "team2": "サンディエゴ・パドレス",
+            "odds": {
+              "team1": 2.29,
+              "team2": 1.63
+            },
+            "markets": [
+              "勝者（延長回含む）"
+            ]
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "04:40",
+            "team1": "アリゾナダイアモンドバックス",
+            "team2": "シカゴ・ホワイトソックス",
+            "odds": {
+              "team1": 1.64,
+              "team2": 2.28
+            },
+            "markets": [
+              "勝者（延長回含む）"
+            ]
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "04:45",
+            "team1": "サンフランシスコ・ジャイアンツ",
+            "team2": "ロサンゼルス・ドジャース",
+            "odds": {
+              "team1": 2.31,
+              "team2": 1.62
+            },
+            "markets": [
+              "勝者（延長回含む）"
+            ]
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "07:10",
+            "team1": "ボストン・レッドソックス",
+            "team2": "ニューヨーク・ヤンキース",
+            "odds": {
+              "team1": 2.24,
+              "team2": 1.65
+            },
+            "markets": [
+              "勝者（延長回含む）"
+            ]
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "08:10",
+            "team1": "ニューヨーク・メッツ",
+            "team2": "ミネソタ・ツインズ",
+            "odds": {
+              "team1": 1.99,
+              "team2": 1.83
+            },
+            "markets": [
+              "勝者（延長回含む）"
+            ]
+          },
+          {
+            "date": "2024-04-24",
+            "start_time": "09:05",
+            "team1": "テキサス・レンジャーズ",
+            "team2": "ピッツバーグ・パイレーツ",
+            "odds": {
+              "team1": 1.61,
+              "team2": 2.34
+            },
+            "markets": [
+              "勝者（延長回含む）"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -3571,11 +3571,19 @@
       "rec": null,
       "rec_odds": null,
       "ev": -0.026,
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Jodar d. de Minaur",
+      "score": "6-3 6-1",
+      "prediction_hit": false,
       "hit": null,
-      "actual_ev": null
+      "actual_ev": null,
+      "status": "completed",
+      "type_a_upset_id": "A035",
+      "outcome_note": "UPSET: Jodar (19yo WC Spain) d. de Minaur (#8) 6-3 6-1 maiden Top-10 win. 34 receiver points vs 19, 61% 1st-serve return, 6 breaks from 13 chances. R009 home WC + R017 連続ラウンドモメンタム (vs R1 Norrie) 適用で Jodar 上方修正の事前兆候あり。",
+      "session_58_update": "結果反映 UPSET 2026-04-25 JST",
+      "verification_sources": [
+        "atptour.com jodar-de-minaur-madrid-2026-friday",
+        "sofascore.com Madrid Open Jodar beats de Minaur 6-3 6-1"
+      ]
     },
     {
       "tournament": "Mutua Madrid Open 2026",
@@ -3606,7 +3614,7 @@
       "rec_odds": 1.4,
       "ev": 0.123,
       "result": "Tirante d. Paul",
-      "score": "6-2 6-4",
+      "score": "7-5 6-4",
       "prediction_hit": false,
       "hit": false,
       "actual_ev": -1.0,
@@ -3621,14 +3629,16 @@
       },
       "notified": true,
       "notified_at": "2026-04-23T21:36:51.457249+09:00",
-      "outcome_note": "UPSET MISS. Tirante (ARG clay specialist) d. Paul straight sets. P012 clay-specialist vs hardcourt-bias pattern evidence candidate.",
-      "miss_layer": "L1_clay_specialist_bias",
-      "miss_analysis": "Tirante ARG clay specialist defeated Paul in straight sets. Paul primarily a hard-court player. P012 (clay specialist vs hardcourt) evidence 3/3 候補 — 既存 A011 (Carabelli d. Khachanov) + A024 (Droguet d. Virtanen) と同パターン. 今回が decisive 3件目で R019 implement 判断要.",
-      "rule_linked": "P012_candidate",
+      "outcome_note": "Tirante (ARG clay specialist) UPSET over Paul (USA hardcourt bias). 7-5 6-4. GO @1.42 MISS -1.0u. Session_57 で P012 A034 として事前記録済 → R019 実装 evidence 3/3。",
+      "miss_layer": "L1_cElo_insufficient_surface_weight",
+      "miss_analysis": "Tirante clay specialist endurance 2セットstraight。Paul hardcourt bias + GEN003 での Paul 出場維持確認は正しかったが、Tirante clay pedigree を L1 cElo で捕捉しきれなかった (+15pt 補正 R019 適用しても conf 70% → EV +0%)。R019 本実装により今後同型は CAUTION 降格可能。",
+      "rule_linked": "R019 (clay specialist vs hardcourt bias - 実装済 Session_57)",
       "verification_sources": [
-        "atptour.com/en/news/madrid-2026-results",
-        "dimers.com tirante-paul"
-      ]
+        "opencourt.ca Madrid Friday April 24 2026 order of play",
+        "tennistonic.com/tennis-news/989901 Tirante draw vs Paul"
+      ],
+      "status": "completed",
+      "session_58_update": "結果反映 2026-04-25 JST"
     },
     {
       "tournament": "Mutua Madrid Open 2026",
@@ -3658,11 +3668,18 @@
       "rec": null,
       "rec_odds": null,
       "ev": null,
-      "result": null,
-      "score": null,
+      "result": "VOID (Cilic WITHDREW last minute)",
+      "score": "W/O",
       "prediction_hit": null,
       "hit": null,
-      "actual_ev": null
+      "actual_ev": 0.0,
+      "void": true,
+      "void_reason": "Cilic last-minute withdrawal (Arantxa Sanchez Court)",
+      "outcome_note": "Cilic withdrew at last minute. Fonseca advances W/O to R3 vs Jodar.",
+      "session_58_update": "VOID 反映 2026-04-25 JST",
+      "verification_sources": [
+        "puntodebreak.com Cilic is out at the last minute Fonseca waiting R3"
+      ]
     },
     {
       "tournament": "Mutua Madrid Open 2026",
@@ -3693,7 +3710,7 @@
       "rec_odds": 1.42,
       "ev": 0.008,
       "result": "Musetti d. Hurkacz",
-      "score": "6-4 7-6",
+      "score": "6-4 7-6(4)",
       "prediction_hit": true,
       "hit": null,
       "actual_ev": 0.0,
@@ -3708,8 +3725,19 @@
         ],
         "action": "GO->CAUTION_WAITING"
       },
+      "gen003_session58_confirm": {
+        "date": "2026-04-24",
+        "session": "_58",
+        "sources": [
+          "profootballnetwork.com Musetti vs Hurkacz preview",
+          "puntodebreak.com Musetti advances firmly R3",
+          "atptour.com Madrid 2026 feature Musetti clay revival"
+        ],
+        "action": "CAUTION_MAINTAINED_outcome_hit",
+        "note": "Musetti arm injury 大丈夫、2セットで安定勝利。R3 は Griekspoor (cElo 1742) 対戦。CAUTION_WAITING 正解 (arm injury 予備警戒)。"
+      },
       "downgrade_reason": "arm_injury_miami_withdrawal_plus_form_struggles",
-      "outcome_note": "Musetti advances firmly in 2 sets. CAUTION_WAITING no-bet (arm injury concern) / 本命予測HIT. Next R3 vs Griekspoor.",
+      "outcome_note": "Musetti advances firmly in 2 sets (6-4 7-6(4)). CAUTION_WAITING no-bet (arm injury concern) / 本命予測HIT. Next R3 vs Griekspoor.",
       "verification_sources": [
         "sport.sky.it Musetti Hurkacz",
         "corrieredellosport.it",
@@ -3956,6 +3984,213 @@
       "prediction_hit": null,
       "hit": null,
       "actual_ev": null
+    },
+    {
+      "tournament": "Mutua Madrid Open 2026",
+      "round": "R2",
+      "date": "2026-04-25",
+      "match": "Khachanov K. vs Walton A.",
+      "tier": "go",
+      "quadrant": "Q1_go",
+      "l1_metric": "clay_cElo",
+      "l1_data": {
+        "ce_diff": 324.1,
+        "fav": "Karen Khachanov",
+        "dog": "Adam Walton"
+      },
+      "predicted_winner": "Karen Khachanov",
+      "prediction_confidence": 86,
+      "prediction_basis": "cElo +324pt / Walton AUS hardcourt bias (R019 clay specialist 新実装適用 +15pt 補正でさらに強化) / Walton clay R2 debut Masters",
+      "odds": {
+        "fav": 1.22,
+        "dog": 4.4
+      },
+      "note": "GO: Rec Khachanov @1.22. R019 新実装: Khachanov clay records + Walton hardcourt specialty bias で L1 優位が実態より大きい。",
+      "screened_session": "_58",
+      "source": "2026-04-24.json",
+      "category": "ATP 1000",
+      "surface": "clay",
+      "rec": "Karen Khachanov",
+      "rec_odds": 1.22,
+      "ev": 0.056,
+      "result": null,
+      "score": null,
+      "prediction_hit": null,
+      "hit": null,
+      "actual_ev": null,
+      "rules_applied": [
+        "R001",
+        "R019"
+      ]
+    },
+    {
+      "tournament": "Mutua Madrid Open 2026",
+      "round": "R2",
+      "date": "2026-04-25",
+      "match": "Auger-Aliassime F. vs Gaubas V.",
+      "tier": "go",
+      "quadrant": "Q1_go",
+      "l1_metric": "clay_cElo",
+      "l1_data": {
+        "ce_diff": 323.9,
+        "fav": "Felix Auger-Aliassime",
+        "dog": "Vilius Gaubas"
+      },
+      "predicted_winner": "Felix Auger-Aliassime",
+      "prediction_confidence": 86,
+      "prediction_basis": "cElo +324pt / FAA 2026 form 上向き / Gaubas 22yo 若手 Madrid Q R1 seed HIT 経験のみ clay masters 経験浅",
+      "odds": {
+        "fav": 1.25,
+        "dog": 3.95
+      },
+      "note": "GO: Rec FAA @1.25. Q3_output_a 重複 (conf 86%).",
+      "screened_session": "_58",
+      "source": "2026-04-24.json",
+      "category": "ATP 1000",
+      "surface": "clay",
+      "rec": "Felix Auger-Aliassime",
+      "rec_odds": 1.25,
+      "ev": 0.082,
+      "result": null,
+      "score": null,
+      "prediction_hit": null,
+      "hit": null,
+      "actual_ev": null,
+      "rules_applied": [
+        "R001"
+      ]
+    },
+    {
+      "tournament": "Mutua Madrid Open 2026",
+      "round": "R2",
+      "date": "2026-04-25",
+      "match": "Mensik J. vs Damm M.",
+      "tier": "go",
+      "quadrant": "Q1_go",
+      "l1_metric": "clay_cElo",
+      "l1_data": {
+        "ce_diff": 422.3,
+        "fav": "Jakub Mensik",
+        "dog": "Martin Damm"
+      },
+      "predicted_winner": "Jakub Mensik",
+      "prediction_confidence": 92,
+      "prediction_basis": "cElo +422pt 圧倒 / Damm cElo 1372 Q選手 / Mensik 20yo ブレイクスルー",
+      "odds": {
+        "fav": 1.29,
+        "dog": 3.65
+      },
+      "note": "GO: Rec Mensik @1.29. Q3_output_a 重複 (conf 92%).",
+      "screened_session": "_58",
+      "source": "2026-04-24.json",
+      "category": "ATP 1000",
+      "surface": "clay",
+      "rec": "Jakub Mensik",
+      "rec_odds": 1.29,
+      "ev": 0.186,
+      "result": null,
+      "score": null,
+      "prediction_hit": null,
+      "hit": null,
+      "actual_ev": null,
+      "rules_applied": [
+        "R001"
+      ]
+    },
+    {
+      "tournament": "Mutua Madrid Open 2026",
+      "round": "R2",
+      "date": "2026-04-25",
+      "match": "Shapovalov D. vs Budkov Kjaer N.",
+      "tier": "caution",
+      "quadrant": "Q4_upset_watch",
+      "caution_type": "margin",
+      "l1_metric": "clay_cElo",
+      "l1_data": {
+        "ce_diff": 279.6,
+        "fav": "Denis Shapovalov",
+        "dog": "Nicolai Budkov Kjaer"
+      },
+      "predicted_winner": "Denis Shapovalov",
+      "prediction_confidence": 72,
+      "prediction_basis": "cElo +280pt / Shapovalov 2026 form 不安定 8-8 clay 2-2 / dimers 59% / Budkov Kjaer 17yo Q突破 Opelka 撃破 momentum - L4 form slump -10% 補正",
+      "odds": {
+        "fav": 1.55,
+        "dog": 2.47
+      },
+      "rec": "Denis Shapovalov",
+      "rec_odds": 1.55,
+      "ev": 0.116,
+      "note": "CAUTION_MARGIN (downgrade from GO): form 不安定 + Q突破 dog momentum",
+      "screened_session": "_58",
+      "result": null,
+      "score": null,
+      "prediction_hit": null,
+      "hit": null,
+      "actual_ev": null
+    },
+    {
+      "tournament": "Mutua Madrid Open 2026",
+      "round": "R2",
+      "date": "2026-04-25",
+      "match": "Ruud C. vs Munar J.",
+      "tier": "caution",
+      "quadrant": "Q4_upset_watch",
+      "caution_type": "margin",
+      "l1_metric": "clay_cElo",
+      "l1_data": {
+        "ce_diff": 201.6,
+        "fav": "Casper Ruud",
+        "dog": "Jaume Munar"
+      },
+      "predicted_winner": "Casper Ruud",
+      "prediction_confidence": 70,
+      "prediction_basis": "cElo +202pt / Ruud defending champion but Munar スペイン人地元 Madrid (R009 -5% home crowd) / Munar 怪我明け復帰 Shevchenko R1 勝利 momentum / 当季 clay comeback",
+      "odds": {
+        "fav": 1.42,
+        "dog": 2.9
+      },
+      "rec": "Casper Ruud",
+      "rec_odds": 1.42,
+      "ev": -0.006,
+      "note": "CAUTION_MARGIN (downgrade from GO): Munar home WC + recovery momentum + R009 applied.",
+      "screened_session": "_58",
+      "result": null,
+      "score": null,
+      "prediction_hit": null,
+      "hit": null,
+      "actual_ev": null
+    },
+    {
+      "tournament": "Mutua Madrid Open 2026",
+      "round": "R2",
+      "date": "2026-04-25",
+      "match": "Zverev A. vs Navone M.",
+      "tier": "skip",
+      "quadrant": "Q3_mid",
+      "l1_metric": "clay_cElo",
+      "l1_data": {
+        "ce_diff": 241.0,
+        "fav": "Alexander Zverev",
+        "dog": "Mariano Navone"
+      },
+      "predicted_winner": "Alexander Zverev",
+      "prediction_confidence": 80,
+      "prediction_basis": "cElo +241pt / Zverev #3 seed clay / Navone ARG clay specialist (R019候補) / odds 1.23 market織込済 EV-",
+      "odds": {
+        "fav": 1.23,
+        "dog": 4.3
+      },
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "note": "Q3_mid: conf 80% EV 織込済 → skip. Session_56 新設 Q3_mid 対象.",
+      "screened_session": "_58",
+      "result": null,
+      "score": null,
+      "prediction_hit": null,
+      "hit": null,
+      "actual_ev": null
     }
   ],
   "screening_log": [
@@ -4130,6 +4365,45 @@
       "scope_verdict": "All ATP Challenger events out of scope: cElo (tennisabstract) not available for Challenger tier. 16 matches logged only. No predictions recorded.",
       "total_matches_logged": 16,
       "reason": "cElo data availability restricted to ATP Tour main draw + top qualifying events only."
+    },
+    {
+      "session": "_58",
+      "date": "2026-04-25",
+      "source": "2026-04-24.json",
+      "matches_screened": {
+        "atp_madrid_r2_4_25": 18,
+        "new_records": 6
+      },
+      "go_candidates": [
+        "Khachanov @1.22",
+        "Auger-Aliassime @1.25",
+        "Mensik @1.29"
+      ],
+      "caution_margin": [
+        "Shapovalov @1.55",
+        "Ruud @1.42"
+      ],
+      "q3_output_a": [
+        "Khachanov",
+        "FAA",
+        "Mensik"
+      ],
+      "q3_mid": [
+        "Zverev vs Navone 80.0%"
+      ],
+      "skip_batch": [
+        "Nakashima vs Blockx (diff 14.8pt L1 fail)",
+        "Davidovich vs Carreno (diff 88.5 L1 fail)",
+        "Cerundolo F. vs Hanfmann (diff 119.7 L1 pass but EV -12.79)",
+        "Humbert vs Atmane (diff 106.8 L1 pass but conf 64.9 < 75)",
+        "Merida vs Moutet (diff 97.6 L1 fail)",
+        "Medvedev vs Marozsan (diff 173.3 L1 pass but conf 73.1 L4 clay aversion risk)",
+        "Vallejo vs Tien (diff 37.6 L1 fail)",
+        "Darderi vs Juan Manuel Cerundolo (diff 104.8 L1 pass but EV -1.75)",
+        "Bublik vs Tsitsipas (diff 12.7 L1 fail coin flip)",
+        "Cobolli vs Carabelli (diff 85.5 L1 fail)"
+      ],
+      "notes": "Phase B1 ATP R2 4/25 スクリーニング結果。GO 3件 + CAUTION 2件 + Q3_mid 1件 + SKIP 10件。R019 新実装 evidence A034 (Session_57 Paul MISS) と Tirante d. Paul 4/24 R2 7-5 6-4 で一致確認。"
     }
   ],
   "last_updated": "2026-04-24",

@@ -2178,6 +2178,31 @@
       "skip_count": 6,
       "q4_upset_watch": 1,
       "note": "NHL PO R1 G3 8 games L1(xGF)+L4 + 4-quadrant screening. GO 0 (all EV<+5%). CAUTION_MARGIN: OTT-CAR (elim desperation EV+4.98%), ANA-EDM (Q4 upset watch UF2 div9pp EV+11.78%). Feed gap: UTA xGF missing."
+    },
+    {
+      "session": "_58",
+      "date": "2026-04-25",
+      "source": "2026-04-24.json",
+      "matches_screened": {
+        "nhl_g3_pending": 3,
+        "nhl_g4_new": 5
+      },
+      "go_candidates": [],
+      "caution_margin": [
+        "PHI G4 @1.83 home close-out 3-0 (L1 xGF% tied but series context EV+19%)"
+      ],
+      "q4_upset_watch": [
+        "ANA home G3 @2.11 (A030 evidence 2/3 type_a_watch)",
+        "MTL home G3 @2.01 (A021 young core momentum)"
+      ],
+      "skip_batch": [
+        "UTA-VGK G3 (L1 xGF% 3pt diff fail)",
+        "OTT-CAR G4 (xGF 1pt)",
+        "MIN-DAL G4 (xGF 0 tied)",
+        "BOS-BUF G4 (BOS elim 0-3)",
+        "LAK-COL G4 (LAK elim 0-3 COL road close-out EV-)"
+      ],
+      "notes": "Phase B3 NHL. xGF% strict L1 で GO なし。PHI G4 series 3-0 home close-out を CAUTION_MARGIN として追跡。"
     }
   ],
   "last_updated": "2026-04-24"

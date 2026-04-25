@@ -484,6 +484,23 @@
       "data_error": 1,
       "note": "SL R9 7 games L1(PD/G) + 4-quadrant. GO 0. Q3 output_a: Leeds vs Catalans (conf 85 PD/G +16.88 dominant). Q4 upset_watch: St Helens vs Wakefield (L1 reverses market, UF2 div47pp but UF<3 no UPSET_PICK). Data error: Bradford vs Hull KR HKR odds 1.00 impossible.",
       "standings_source": "superleague.co.uk/tntsports fetched 2026-04-23"
+    },
+    {
+      "session": "_58",
+      "date": "2026-04-25",
+      "source": "2026-04-24.json",
+      "matches_screened": {
+        "SL R9": 5
+      },
+      "go_candidates": [],
+      "skip_batch": [
+        "Warrington @1.72 (conf 58.1%)",
+        "Hull FC @1.66 road (conf 60.2%)",
+        "Leeds @1.18 home vs Catalans (conf 84.7% EV +0.1% Basic 78% 未達・EV不足)",
+        "Bradford vs HKR (odds 1.00 invalid)",
+        "St Helens @1.28 home (conf 78.1% EV +5.0% Basic 7% 未達)"
+      ],
+      "notes": "Phase C SL R9. 全 SKIP (Basic Tier 閾値未達)."
     }
   ],
   "last_updated": "2026-04-24"

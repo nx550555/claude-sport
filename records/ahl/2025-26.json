@@ -1702,6 +1702,19 @@
       "caution_count": 0,
       "skip_count": 8,
       "note": "AHL Calder Cup Playoffs 8 games L1(market-only, GF% feed unavailable) + Basic Tier. GO 0 (all ev<+7 or conf<78). PA033 partially satisfied. Best-of-3 R1 + DS semifinal Cleveland. Consider post-series deep-dive for goalie/lineup."
+    },
+    {
+      "session": "_58",
+      "date": "2026-04-25",
+      "source": "2026-04-24.json",
+      "matches_screened": {
+        "AHL PO": 1
+      },
+      "go_candidates": [],
+      "skip_batch": [
+        "6試合全 SKIP (Basic tier conf <65% EV 市場織込済)"
+      ],
+      "notes": "Phase C AHL PO. 全 SKIP (Basic Tier 閾値未達)."
     }
   ]
 }

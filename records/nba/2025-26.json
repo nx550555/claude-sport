@@ -1686,6 +1686,29 @@
         "[23]OKC-PHX keep / [15] closed",
         "[16]DET-ORL RS 4/20 と [22]DET-ORL G1 4/19 は別試合 (保持)"
       ]
+    },
+    {
+      "session": "_58",
+      "date": "2026-04-25",
+      "source": "2026-04-24.json",
+      "matches_screened": {
+        "nba_g3_g4": 8
+      },
+      "go_candidates": [],
+      "q4_upset_watch": [
+        "LAL @3.70 road G3 sweep attempt (series 2-0 LAL at HOU home - KD 復帰 status)",
+        "SAS road @1.70 G3 (Wembanyama concussion G2 status)"
+      ],
+      "skip_batch": [
+        "BOS vs PHI G3 (NRtg diff 6pt but PHI home G2 crushed win momentum - EV-)",
+        "HOU-LAL G3 (HOU home +fav market overrate)",
+        "DET vs ORL G3 (DET big road fav market織込)",
+        "OKC vs PHX G3 (OKC sweep setup market織込 1.22)",
+        "ATL vs NYK G3 (ATL 1-1 home slight fav)",
+        "MIN vs DEN G4 (slightly unclear series status)",
+        "TOR vs CLE G4 (CLE road fav 2-0)"
+      ],
+      "notes": "Phase B4 NBA PO G3/G4. L1 NRtg 差を market が全て織込済 → 全 SKIP。Q4_upset_watch 2件追跡。"
     }
   ],
   "last_updated": "2026-04-21"

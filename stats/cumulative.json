@@ -290,12 +290,13 @@
     "_formula": "hit_rate = hits / confirmed / ev_total = sum of actual_ev for GO-tier only",
     "_frame": "Q1_go=GO推奨(conf>=75 AND EV>+5) / Q2_upset_pick=UPSET_PICK(UF>=3 AND div>=15pp) / Q3_output_a=高確率予想(conf>=85 EV問わず) / Q4_upset_watch=アップセット観察(dog>=3.0 AND UF>=2)",
     "Q1_go": {
-      "total": 33,
+      "total": 35,
       "confirmed": 30,
-      "hit": 22,
+      "hit": 23,
       "hit_rate": 0.733,
-      "ev_total": 2.453,
-      "note": "既存GO推奨累計。Session_30-43のGO+Session_44遡及4件+過去全件 | Session_49: Galfi GO HIT +0.54u 反映 | NBA SAS G1 反映訂正: 22/30 73.3% | Session_50: +5 GO pending (Tsitsipas @1.35 / Paul @1.40 / Musetti @1.42 / Keys @1.23 / Mertens @1.37). | Session_52 GEN003: Tsitsipas (@1.35) + Musetti (@1.42) 2件 GO->CAUTION 降格。Q1_go total 35->33, pending 5->3."
+      "ev_total": 1.823,
+      "note": "既存GO推奨累計。Session_30-43のGO+Session_44遡及4件+過去全件 | Session_49: Galfi GO HIT +0.54u 反映 | NBA SAS G1 反映訂正: 22/30 73.3% | Session_50: +5 GO pending (Tsitsipas @1.35 / Paul @1.40 / Musetti @1.42 / Keys @1.23 / Mertens @1.37). | Session_52 GEN003: Tsitsipas (@1.35) + Musetti (@1.42) 2件 GO->CAUTION 降格。Q1_go total 35->33, pending 5->3.",
+      "miss": 1
     },
     "Q2_upset_pick": {
       "total": 0,
@@ -350,7 +351,7 @@
       "last_updated": "2026-04-23 Session_56"
     }
   },
-  "last_updated": "2026-04-24",
+  "last_updated": "2026-04-25",
   "schema_versions": [
     {
       "version": "v3.1",
@@ -372,5 +373,15 @@
       "date": "2026-04-23",
       "change": "Session_50 screening: 69試合スクリーニング (GO 5件 + Q3 7件 + Q4 13件 追加)"
     }
-  ]
+  ],
+  "overall": {
+    "confirmed": 2,
+    "hit": 1,
+    "miss": 1,
+    "void": 1,
+    "hit_rate": 0.5,
+    "ev_total": -0.63,
+    "note": " | Session_58 update: Mertens HIT +0.37u, Paul MISS -1.0u, Cilic VOID (Fonseca W/O). Net -0.63u."
+  },
+  "last_session": "_58"
 }
