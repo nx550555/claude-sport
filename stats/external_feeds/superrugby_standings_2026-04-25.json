@@ -2,9 +2,33 @@
   "league": "superrugby",
   "source": "https://en.wikipedia.org/wiki/2026_Super_Rugby_Pacific_season",
   "strategy": "wikipedia_table",
-  "fetched_at": "2026-04-25T12:24:24.322772+09:00",
+  "fetched_at": "2026-04-25T22:23:58.377278+09:00",
   "team_count": 11,
   "teams": [
+    {
+      "team": "Hurricanes",
+      "gp": 9,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 368,
+      "pa": "Hurricanes",
+      "pd": 217,
+      "pts": 36,
+      "pd_per_game": 24.11
+    },
+    {
+      "team": "Blues",
+      "gp": 10,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 333,
+      "pa": "Blues",
+      "pd": 82,
+      "pts": 33,
+      "pd_per_game": 8.2
+    },
     {
       "team": "Chiefs",
       "gp": 9,
@@ -16,30 +40,6 @@
       "pd": 109,
       "pts": 31,
       "pd_per_game": 12.11
-    },
-    {
-      "team": "Hurricanes",
-      "gp": 8,
-      "w": null,
-      "l": null,
-      "d": null,
-      "pf": 323,
-      "pa": "Hurricanes",
-      "pd": 184,
-      "pts": 31,
-      "pd_per_game": 23.0
-    },
-    {
-      "team": "Blues",
-      "gp": 9,
-      "w": null,
-      "l": null,
-      "d": null,
-      "pf": 297,
-      "pa": "Blues",
-      "pd": 79,
-      "pts": 29,
-      "pd_per_game": 8.78
     },
     {
       "team": "Crusaders",
@@ -55,26 +55,26 @@
     },
     {
       "team": "Brumbies",
+      "gp": 10,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 309,
+      "pa": "Brumbies",
+      "pd": 16,
+      "pts": 25,
+      "pd_per_game": 1.6
+    },
+    {
+      "team": "Reds",
       "gp": 9,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 297,
-      "pa": "Brumbies",
-      "pd": 49,
-      "pts": 25,
-      "pd_per_game": 5.44
-    },
-    {
-      "team": "Reds",
-      "gp": 8,
-      "w": null,
-      "l": null,
-      "d": null,
-      "pf": 188,
+      "pf": 221,
       "pa": "Reds",
-      "pd": "−36",
-      "pts": 22
+      "pd": "−39",
+      "pts": 23
     },
     {
       "team": "Waratahs",
