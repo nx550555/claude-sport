@@ -4021,7 +4021,9 @@
       "rules_applied": [
         "R001",
         "R019"
-      ]
+      ],
+      "notified": true,
+      "notified_at": "2026-04-25T09:50:30.507225+09:00"
     },
     {
       "tournament": "Mutua Madrid Open 2026",
@@ -4058,7 +4060,9 @@
       "actual_ev": null,
       "rules_applied": [
         "R001"
-      ]
+      ],
+      "notified": true,
+      "notified_at": "2026-04-25T09:50:31.206246+09:00"
     },
     {
       "tournament": "Mutua Madrid Open 2026",
@@ -4095,7 +4099,9 @@
       "actual_ev": null,
       "rules_applied": [
         "R001"
-      ]
+      ],
+      "notified": true,
+      "notified_at": "2026-04-25T09:50:32.077181+09:00"
     },
     {
       "tournament": "Mutua Madrid Open 2026",

@@ -797,7 +797,9 @@
         "dog": "Dolphins (-4.5/G)"
       },
       "screened_session": "_58",
-      "source": "2026-04-24.json"
+      "source": "2026-04-24.json",
+      "notified": true,
+      "notified_at": "2026-04-25T09:50:28.787045+09:00"
     },
     {
       "date": "2026-04-25",
@@ -950,7 +952,9 @@
         "dog": "Eels (-12.0/G)"
       },
       "screened_session": "_58",
-      "source": "2026-04-24.json"
+      "source": "2026-04-24.json",
+      "notified": true,
+      "notified_at": "2026-04-25T09:50:29.613536+09:00"
     }
   ]
 }
