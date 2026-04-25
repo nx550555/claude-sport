@@ -2173,8 +2173,138 @@
           }
         ]
       }
+    },
+    {
+      "session_id": "_60",
+      "date": "2026-04-25",
+      "scope": "soccer 5大リーグ + MLB + NRL R9 (2026-04-25.json 新規分一括スクリーニング)",
+      "totals": {
+        "screened_total": 57,
+        "provisional_go": 6,
+        "caution_margin": 6,
+        "skip": 45
+      },
+      "q1_go_provisional": [
+        {
+          "match": "Arsenal vs Newcastle United",
+          "sport": "soccer",
+          "rec": "Arsenal",
+          "rec_odds": 1.45,
+          "conf": 77.0,
+          "ev": 0.116,
+          "date": "2026-04-26",
+          "step45": "PENDING"
+        },
+        {
+          "match": "Leeds vs Burnley",
+          "sport": "soccer",
+          "rec": "Leeds",
+          "rec_odds": 1.43,
+          "conf": 80.3,
+          "ev": 0.148,
+          "date": "2026-05-02",
+          "step45": "PENDING"
+        },
+        {
+          "match": "Torino vs Inter",
+          "sport": "soccer",
+          "rec": "Inter",
+          "rec_odds": 1.43,
+          "conf": 82.1,
+          "ev": 0.174,
+          "date": "2026-04-27",
+          "step45": "PENDING"
+        },
+        {
+          "match": "Borussia Dortmund vs Freiburg",
+          "sport": "soccer",
+          "rec": "Borussia Dortmund",
+          "rec_odds": 1.36,
+          "conf": 77.5,
+          "ev": 0.054,
+          "date": "2026-04-27",
+          "step45": "PENDING"
+        },
+        {
+          "match": "Newcastle Knights vs Penrith Panthers",
+          "sport": "nrl",
+          "rec": "Penrith Panthers",
+          "rec_odds": 1.15,
+          "conf": 95.0,
+          "ev": 0.092,
+          "date": "2026-04-26",
+          "step45": "PENDING"
+        },
+        {
+          "match": "Manly Sea Eagles vs Parramatta Eels",
+          "sport": "nrl",
+          "rec": "Manly Sea Eagles",
+          "rec_odds": 1.37,
+          "conf": 88.5,
+          "ev": 0.213,
+          "date": "2026-04-26",
+          "step45": "PENDING"
+        }
+      ],
+      "caution_margin": [
+        {
+          "match": "Getafe vs Barcelona",
+          "sport": "soccer",
+          "rec": "Barcelona",
+          "conf": 71.9,
+          "ev": 0.215,
+          "date": "2026-04-26"
+        },
+        {
+          "match": "Mainz 05 vs Bayern Munich",
+          "sport": "soccer",
+          "rec": "Bayern Munich",
+          "conf": 71.6,
+          "ev": 0.217,
+          "date": "2026-04-25"
+        },
+        {
+          "match": "VfB Stuttgart vs Werder Bremen",
+          "sport": "soccer",
+          "rec": "VfB Stuttgart",
+          "conf": 70.9,
+          "ev": 0.099,
+          "date": "2026-04-26"
+        },
+        {
+          "match": "Houston Astros vs New York Yankees",
+          "sport": "mlb",
+          "rec": "New York Yankees",
+          "conf": 68.3,
+          "ev": 0.119,
+          "date": "2026-04-26"
+        },
+        {
+          "match": "Los Angeles Dodgers vs Chicago Cubs",
+          "sport": "mlb",
+          "rec": "Los Angeles Dodgers",
+          "conf": 68.1,
+          "ev": 0.137,
+          "date": "2026-04-26"
+        },
+        {
+          "match": "Parramatta Eels vs New Zealand Warriors",
+          "sport": "nrl",
+          "rec": "New Zealand Warriors",
+          "conf": 75.8,
+          "ev": 0.153,
+          "date": "2026-05-02"
+        }
+      ],
+      "output_a": {
+        "candidates": [],
+        "count": 0
+      },
+      "output_a_additions": [],
+      "q3_mid": [],
+      "note": "STEP 4.5 (スタメン確認) 未実施。Soccer/MLB/NRL 全 provisional_go は STEP 4.5 後に GO 昇格 or caution_waiting 格下げ判定。MLB 全件は M002 (先発SP未確定→GO禁止) で waiting。"
     }
   ],
   "last_updated": "2026-04-25",
-  "last_session": "_58"
+  "last_session": "_60"
 }
