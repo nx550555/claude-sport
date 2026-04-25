@@ -18,7 +18,44 @@
 
 ## 未完了・作業中（次回セッション最優先）
 
-### 🎯 次回セッション開始時の行動順序（Session_48）
+### 🎯 Session_60 行動順序
+
+**STEP 0/0.5/1**: 通常通り (CLAUDE.md)
+
+**Session_60 最優先タスク:**
+- [ ] dashboard.html 成長分析タブに `cumulative_history.json` を読み込む AUTO ブロック実装 (sync_dashboard.py 拡張)
+- [ ] CLAUDE.md にセッション終了時 `python scripts/_snapshot_history.py` 自動実行を追記
+- [ ] PA094: 4/25-26 GO 6件 (Khachanov / FAA / Mensik / Mboko / Warriors / Manly) 結果反映
+- [ ] PA095: CAUTION_MARGIN 2件 (Shapovalov / Ruud) 結果反映
+- [ ] PA098: NHL G3 残 (MTL-TBL / UTA-VGK / ANA-EDM) 結果反映
+- [ ] PA099: NBA G3/G4 8試合結果反映
+- [ ] PA097: upset_patterns.json への 4/23以降 6件追加登録
+- [ ] GEN007 提案: UPSET_PICK_Lite 採否判断
+- [ ] rule_pipeline evidence 2/3 候補 8件の追加観察継続 (P018/P024/P025/P027/P020/P023/P007/P001)
+
+### ✅ Session_59 完了報告 (2026-04-25)
+
+**主要成果 (データ整合性監査 + 真値再計算):**
+- [x] STEP A: tennis/2026-MC.json 14 entries archived 化 (二重ファイル解消)
+- [x] STEP B: tennis/2026-WTA.json Tan/Bondar 重複統合
+- [x] STEP C: cumulative.json 全種目+by_tier+overall 真値書き換え (sync_sport_cards.py logic 統一)
+- [x] STEP D: 4象限 (Q1_go/Q3_output_a/Q3_mid/Q4_upset_watch) 再集計
+- [x] STEP E: dashboard_stats.json + sync_dashboard.py + sync_sport_cards.py 真値同期
+- [x] STEP F: stats/cumulative_history.json 新設 + Session _43〜_59 8 snapshot 投入
+- [x] health_check.py: void/ph=null を MISS 判定から除外
+- [x] de Minaur vs Jodar miss_analysis 補填 (R009 + R017)
+
+**真値 (Session_59 確定):**
+- 🟢 GO 推奨累計 23/32 (71.9%) +1.80u / pending 6
+- 🔵 Advanced 18/24 (75.0%) +2.85u / Basic 5/8 (62.5%) -1.03u
+- 🎯 Q3_output_a 8/10 (80.0%)
+- 👁️ Q4_upset_watch detect rate 7/13 (53.8%)
+
+**コミット**: 5fb10b4 (rebase で origin/main に Session_58 取り込み後 push 成功)
+
+---
+
+### 🎯 旧: 次回セッション開始時の行動順序（Session_48）
 
 **STEP 0: システム健全性スキャン**
 - `python monitoring/health_check.py` を必ず実行（v3: 9項目チェック）
