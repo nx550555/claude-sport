@@ -36,11 +36,11 @@
       "pending_count": 0
     },
     "nrl": {
-      "go_count": 4,
-      "confirmed_count": 2,
-      "hit_count": 1,
-      "hit_rate": 0.5,
-      "pnl": -0.77,
+      "go_count": 5,
+      "confirmed_count": 3,
+      "hit_count": 2,
+      "hit_rate": 0.667,
+      "pnl": -0.32,
       "pending_count": 2
     },
     "superrugby": {
@@ -101,11 +101,11 @@
     }
   },
   "overview": {
-    "total_go": 38,
-    "total_confirmed": 32,
-    "total_hits": 23,
-    "hit_rate": 0.719,
-    "total_pnl": 1.8,
+    "total_go": 39,
+    "total_confirmed": 33,
+    "total_hits": 24,
+    "hit_rate": 0.7273,
+    "total_pnl": 2.25,
     "total_pending": 6,
     "pending_breakdown": "ATP x3 + WTA x1 + NRL x2"
   },
@@ -205,6 +205,26 @@
       "monitoring/health_check.py: void/ph=null を MISS 判定から除外 (CE19 由来)",
       "records/tennis/2026-ATP.json: de Minaur vs Jodar miss_analysis 補填"
     ],
-    "next_step_proposal": "STEP F: stats/cumulative_history.json 新設 (各セッション snapshot 保存) → ダッシュボード成長分析タブで時系列推移を可視化"
+    "next_step_proposal": "STEP F: stats/cumulative_history.json 新設 (各セッション snapshot 保存) → ダッシュボード成長分析タブで時系列推移を可視化",
+    "result_confirmation": {
+      "date": "2026-04-25",
+      "updates": [
+        "NRL Warriors GO @1.45 HIT +0.45u (Warriors 20-18 Dolphins)",
+        "NHL G3 4 games: CAR/MTL/UTA/ANA all won home (CAR 2-1 OTT, MTL 3-2 OT TBL, UTA 4-2 VGK, ANA 7-4 EDM). All caution/skip no-bet.",
+        "NBA G3 4 games added: BOS 108-100 PHI HIT pred / LAL 112-108 OT HOU MISS pred (Q4 LAL UPSET HIT) / SAS 120-108 POR MISS pred (Wemby OUT but SAS won) / ATL 109-108 NYK MISS pred (McCollum GWG)"
+      ],
+      "rule_evidence_advance": [
+        "P025/N021 evidence 3/3 reached (A028+A030+A030_g3 ANA G3) → implementation judgment trigger",
+        "P028 evidence 2/3 reached (G2 NYK + G3 NYK home fav 4Q decline)",
+        "P018 evidence 3/3 candidate (Slafkovsky+Hutson MTL young core G3)"
+      ],
+      "still_pending": [
+        "ATP Madrid R2 GO 5件 + CAUTION 2件 (in progress today)",
+        "NBA G3 ORL/DET, PHX/OKC, MIN/DEN G4 (4/25 evening ET)",
+        "NRL Manly @1.38 (4/26)",
+        "TOR-CLE G4 (4/27)",
+        "Premiership R14 / SL R9 / Top14 R23 / UFL W6"
+      ]
+    }
   }
 }

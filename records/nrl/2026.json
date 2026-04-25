@@ -5,12 +5,14 @@
   "rule_version": "v1.0",
   "started": "2026-04-10",
   "summary": {
-    "total": 3,
+    "total": 4,
     "confirmed": 2,
-    "hit": 1,
+    "hit": 2,
     "hit_rate": 0.5,
-    "ev_total": -0.77,
-    "pending": 1
+    "ev_total": -0.32,
+    "pending": 1,
+    "prediction_total": 1,
+    "prediction_hit": 1
   },
   "games": [
     {
@@ -766,9 +768,9 @@
         "U008_modified"
       ],
       "status": "pending",
-      "hit": null,
-      "result": null,
-      "prediction_hit": null,
+      "hit": true,
+      "result": "NZ Warriors 20-18 Dolphins",
+      "prediction_hit": true,
       "screening_session": "2026-04-20 Session_43",
       "note": "手動データ2026-04-19.json起点。L1(PD/G)詳細は時間節約のため保留。追加confirmation要なら個別調査。",
       "odds_updated_at": [
@@ -799,7 +801,16 @@
       "screened_session": "_58",
       "source": "2026-04-24.json",
       "notified": true,
-      "notified_at": "2026-04-25T09:50:28.787045+09:00"
+      "notified_at": "2026-04-25T09:50:28.787045+09:00",
+      "score": "20-18",
+      "actual_ev": 0.45,
+      "outcome_note": "Warriors 20-18 Dolphins (HT 14-18 Dolphins lead → 後半逆転 61分 Tuaupiki blindside try). GO @1.45 HIT +0.45u. predicted Warriors HIT.",
+      "verification_sources": [
+        "NZ Herald Warriors v Dolphins comeback Wellington",
+        "NRL.com Warriors v Dolphins Round 8/9 2026",
+        "RNZ NRL live NZ Warriors v Dolphins"
+      ],
+      "venue_note": "Wellington (Sky Stadium) — Anzac Round home"
     },
     {
       "date": "2026-04-25",
@@ -956,5 +967,6 @@
       "notified": true,
       "notified_at": "2026-04-25T09:50:29.613536+09:00"
     }
-  ]
+  ],
+  "last_updated": "2026-04-25"
 }

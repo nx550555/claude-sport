@@ -1672,12 +1672,13 @@
       "winner": "Carolina Hurricanes",
       "actual_ev": 0.0,
       "outcome_note": "CAUTION_MARGIN no-bet / 予測MISS. OTT home fav だが CAR 3-0 series lead。Stankoven franchise first player 3G in streak + Blake GWG 17:29. Hurricanes on brink of elimination OTT.",
-      "miss_layer": "L4_home_motivation_insufficient",
+      "miss_layer": "L4_External",
       "miss_analysis": "OTT home G3 + CAR road sweeping momentum. home bounce 期待したが CAR 3-0 sweep 濃厚. P027 home rebound 理論の反例 (OTT は G1/G2 両方 road で MISS してた前提で G3 home 期待したが CAR のシリーズ支配力が上回った)。",
       "rule_linked": "series_sweep_momentum_outweighs_home_boost",
       "verification_sources": [
-        "nhl.com carolina-hurricanes-ottawa-senators-game-3-recap-april-23-2026",
-        "espn.com 401869783 hurricanes-senators"
+        "NHL.com Carolina Hurricanes Ottawa Senators game-3-recap-april-23-2026",
+        "CBC News Senators on brink of elimination",
+        "FOX Sports Final Score"
       ]
     },
     {
@@ -1736,7 +1737,7 @@
       "predicted_winner": "Tampa Bay Lightning",
       "prediction_confidence": 50.0,
       "prediction_basis": "TBL xGF +4pp, market TBL fav 52.1%. MTL Bell Centre home +5% + Slafkovsky/Suzuki +3% vs TBL Vasilevskiy/Kucherov +3%. Near-even. Thin TBL edge by xGF.",
-      "prediction_hit": null,
+      "prediction_hit": false,
       "l1_metric": "xGF%",
       "l1_data": {
         "home_xgf": 50.0,
@@ -1760,9 +1761,20 @@
       "series_state": "1-1",
       "status": "pending",
       "hit": null,
-      "result": null,
+      "result": "Montreal Canadiens 3-2 Tampa Bay Lightning (OT)",
       "screening_session": "2026-04-23 _53",
-      "notes": "High variance. G1/G2 both decided in OT. Slafkovsky home crowd + Suzuki pivotal."
+      "notes": "High variance. G1/G2 both decided in OT. Slafkovsky home crowd + Suzuki pivotal.",
+      "score": "3-2 OT",
+      "actual_ev": 0.0,
+      "outcome_note": "MTL 3-2 OT TBL (Hutson 2:09 OT GWG, MTL series 2-1 lead). predicted TBL MISS.",
+      "verification_sources": [
+        "NHL.com Hutson OT goal lifts Canadiens past Lightning Game 3 recap",
+        "CBS Sports gametracker NHL_20260424_TB@MON",
+        "ESPN gameId 401869771"
+      ],
+      "miss_layer": "L4_External",
+      "miss_analysis": "TBL recovery 2-2 但 home MTL crowd + Slafkovsky/Suzuki/Hutson 若手3人組 momentum 維持。Hutson OT GWG で MTL 3試合連続若手主導 (P018 evidence 3件目候補)。",
+      "rule_linked_candidate": "P018 evidence 3/3 候補"
     },
     {
       "date": "2026-04-25",
@@ -1775,7 +1787,7 @@
       "predicted_winner": "Utah Hockey Club",
       "prediction_confidence": 53.0,
       "prediction_basis": "L1 incomplete (UTA xGF feed missing - mover franchise). Market VGK micro fav 50.9%. UTA home +5% -> UTA 53%. EV UTA +1.76%.",
-      "prediction_hit": null,
+      "prediction_hit": true,
       "l1_metric": "xGF%",
       "l1_data": {
         "home_xgf": null,
@@ -1799,9 +1811,17 @@
       "series_state": "1-1",
       "status": "pending",
       "hit": null,
-      "result": null,
+      "result": "Utah Mammoth 4-2 Vegas Golden Knights",
       "screening_session": "2026-04-23 _53",
-      "notes": "UTA xGF feed gap to investigate post-session. Market near-even indicates structural parity."
+      "notes": "UTA xGF feed gap to investigate post-session. Market near-even indicates structural parity.",
+      "score": "4-2",
+      "actual_ev": 0.0,
+      "outcome_note": "UTA 4-2 VGK (Crouse 2G + Weegar 1G1A + Guenther 1G; Eichel/Dowd VGK)。UTA series 2-1 lead. franchise 初 home PO win. predicted UTA HIT.",
+      "verification_sources": [
+        "NHL.com Crouse scores twice Mammoth defeat Golden Knights Game 3 recap",
+        "SinBin.vegas UTAvsVGK 2026 G3",
+        "CBS Sports gametracker NHL_20260424_LV@UTA"
+      ]
     },
     {
       "date": "2026-04-25",
@@ -1814,7 +1834,7 @@
       "predicted_winner": "Anaheim Ducks",
       "prediction_confidence": 54.0,
       "prediction_basis": "EDM market fav 54.3%. ANA L1 xGF ~equal, G2 6-4 momentum +3%, ANA home +5% -> ANA 54%. EV ANA +11.78% market inefficiency candidate BUT conf<75% GO threshold. Q4 upset_watch: UF 2 (G2 carryover + home) div 9pp.",
-      "prediction_hit": null,
+      "prediction_hit": true,
       "l1_metric": "xGF%",
       "l1_data": {
         "home_xgf": 51.0,
@@ -1839,9 +1859,19 @@
       "series_state": "1-1",
       "status": "pending",
       "hit": null,
-      "result": null,
+      "result": "Anaheim Ducks 7-4 Edmonton Oilers",
       "screening_session": "2026-04-23 _53",
-      "notes": "A030 P025 evidence established. Monitor Gauthier/Terry form + McDavid pressure."
+      "notes": "A030 P025 evidence established. Monitor Gauthier/Terry form + McDavid pressure.",
+      "score": "7-4",
+      "actual_ev": 0.0,
+      "outcome_note": "ANA 7-4 EDM (Sennecke + Carlsson 42秒間で連続得点 → 4Q 4G爆発, ANA series 2-1 lead). predicted ANA HIT. CAUTION no-bet → P&L 0. P025 (xGF% higher team 優先) evidence 3件目到達 (A028 MIN G1 + A030 ANA G2 + A030_g3 ANA G3 連続 HIT) → N021 実装判断材料完成。",
+      "verification_sources": [
+        "NHL.com Ducks score 4 in 3rd period pull away from Oilers Game 3 recap",
+        "TSN Ducks swarming Oilers after first period",
+        "CBS Sports gametracker NHL_20260424_EDM@ANA",
+        "ESPN gameId 401869770"
+      ],
+      "rule_linked_candidate": "P025 evidence 3/3 完了 → N021 実装判断"
     },
     {
       "date": "2026-04-23",
@@ -2205,5 +2235,5 @@
       "notes": "Phase B3 NHL. xGF% strict L1 で GO なし。PHI G4 series 3-0 home close-out を CAUTION_MARGIN として追跡。"
     }
   ],
-  "last_updated": "2026-04-24"
+  "last_updated": "2026-04-25"
 }

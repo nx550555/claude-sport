@@ -140,17 +140,18 @@
     "session_59_audit": "Session_59 (2026-04-25) STEP C/D 真値書き換え (sync_sport_cards.py logic 採用): GO+GB total=3 confirmed=3 hit=2 ev=-0.030u pending=0. Source: dashboard_stats.json (records 全件再計算)."
   },
   "nrl": {
-    "total_predictions": 4,
-    "confirmed": 2,
-    "hits": 1,
-    "hit_rate": 0.5,
-    "ev_total": -0.77,
+    "total_predictions": 5,
+    "confirmed": 3,
+    "hits": 2,
+    "hit_rate": 0.6667,
+    "ev_total": -0.32,
     "pending": 2,
     "status": "in_progress",
     "note": "R6 Rabbitohs vs Raiders MISS（Raiders 36-34逆転）。R7: Warriors HIT @1.23 (+0.23u 28-20 Titans 4/18)。Broncos REVOKED（Luai+May Tigers復帰でスクリーニング取消）。",
     "tier": "basic",
     "void": 0,
-    "session_59_audit": "Session_59 (2026-04-25) STEP C/D 真値書き換え (sync_sport_cards.py logic 採用): GO+GB total=4 confirmed=2 hit=1 ev=-0.770u pending=2. Source: dashboard_stats.json (records 全件再計算)."
+    "session_59_audit": "Session_59 (2026-04-25) STEP C/D 真値書き換え (sync_sport_cards.py logic 採用): GO+GB total=4 confirmed=2 hit=1 ev=-0.770u pending=2. Source: dashboard_stats.json (records 全件再計算).",
+    "session_59_update": "Session_59 (2026-04-25): Warriors GO @1.45 HIT +0.45u (Warriors 20-18 Dolphins, Wellington Anzac Round home). Manly @1.38 pending (4/26)."
   },
   "superrugby": {
     "total_predictions": 1,
