@@ -9,7 +9,7 @@
       "predictions": [
         {
           "match": "Medvedev D.(7) vs Berrettini M.(WC)",
-          "tier": "go",
+          "tier": "archived_duplicate",
           "rec": "Medvedev",
           "rec_odds": 1.9,
           "ev": 15.0,
@@ -22,11 +22,15 @@
           "rules_triggered": [
             "R008",
             "R009"
-          ]
+          ],
+          "archived": true,
+          "archived_reason": "duplicate_of_2026-ATP.json (Session_59 STEP A)",
+          "archived_date": "2026-04-25",
+          "tier_original": "go"
         },
         {
           "match": "Cerundolo F.(16) vs Machac T.",
-          "tier": "go",
+          "tier": "archived_duplicate",
           "rec": "Cerundolo",
           "rec_odds": 1.53,
           "ev": 14.8,
@@ -38,11 +42,15 @@
           "miss_layer": "L2",
           "rules_triggered": [
             "R011"
-          ]
+          ],
+          "archived": true,
+          "archived_reason": "duplicate_of_2026-ATP.json (Session_59 STEP A)",
+          "archived_date": "2026-04-25",
+          "tier_original": "go"
         },
         {
           "match": "Auger-Aliassime F.(6) vs Cilic M.",
-          "tier": "go",
+          "tier": "archived_duplicate",
           "rec": "Auger-Aliassime",
           "rec_odds": 1.63,
           "ev": 7.6,
@@ -52,11 +60,15 @@
           "hit": true,
           "actual_ev": 0.63,
           "miss_layer": null,
-          "rules_triggered": []
+          "rules_triggered": [],
+          "archived": true,
+          "archived_reason": "duplicate_of_2026-ATP.json (Session_59 STEP A)",
+          "archived_date": "2026-04-25",
+          "tier_original": "go"
         },
         {
           "match": "Fonseca J. vs Rinderknech A.",
-          "tier": "caution",
+          "tier": "archived_duplicate",
           "rec": "Rinderknech",
           "rec_odds": 3.5,
           "ev": 43.5,
@@ -68,11 +80,15 @@
           "miss_layer": "L2",
           "rules_triggered": [
             "R010"
-          ]
+          ],
+          "archived": true,
+          "archived_reason": "duplicate_of_2026-ATP.json (Session_59 STEP A)",
+          "archived_date": "2026-04-25",
+          "tier_original": "caution"
         },
         {
           "match": "Marozsan F. vs Hurkacz H.(PR)",
-          "tier": "caution",
+          "tier": "archived_duplicate",
           "rec": "Marozsan",
           "rec_odds": 1.73,
           "ev": 2.1,
@@ -89,7 +105,11 @@
             "sofascore.com match 15921153",
             "atptour.com stats-centre MS021"
           ],
-          "score_verified_date": "2026-04-20"
+          "score_verified_date": "2026-04-20",
+          "archived": true,
+          "archived_reason": "duplicate_of_2026-ATP.json (Session_59 STEP A)",
+          "archived_date": "2026-04-25",
+          "tier_original": "caution"
         }
       ],
       "summary": {
@@ -104,7 +124,7 @@
       "predictions": [
         {
           "match": "Berrettini M.(WC) vs Fonseca J.",
-          "tier": "go",
+          "tier": "archived_duplicate",
           "rec": "Berrettini",
           "rec_odds": 1.72,
           "ev": 8.4,
@@ -117,11 +137,15 @@
           "hit": false,
           "actual_ev": -1.0,
           "miss_layer": "L4",
-          "note": "Fonsecaがサービス・アグレッシブプレーで圧倒。Berrettiniのホームコートアドバンテージを上回った"
+          "note": "Fonsecaがサービス・アグレッシブプレーで圧倒。Berrettiniのホームコートアドバンテージを上回った",
+          "archived": true,
+          "archived_reason": "duplicate_of_2026-ATP.json (Session_59 STEP A)",
+          "archived_date": "2026-04-25",
+          "tier_original": "go"
         },
         {
           "match": "Vacherot V.(WC) vs Hurkacz H.(PR)",
-          "tier": "go",
+          "tier": "archived_duplicate",
           "rec": "Vacherot",
           "rec_odds": 1.57,
           "ev": 11.2,
@@ -134,7 +158,11 @@
           "score": "6-7(4) 6-3 6-4",
           "hit": true,
           "actual_ev": 0.57,
-          "note": "歴史的勝利。Vacherotがモナコ人として初めてMC QF進出（Open Era）。R009ホームコートが機能"
+          "note": "歴史的勝利。Vacherotがモナコ人として初めてMC QF進出（Open Era）。R009ホームコートが機能",
+          "archived": true,
+          "archived_reason": "duplicate_of_2026-ATP.json (Session_59 STEP A)",
+          "archived_date": "2026-04-25",
+          "tier_original": "go"
         }
       ],
       "summary": {
@@ -161,7 +189,7 @@
       "predictions": [
         {
           "match": "Zverev A.(3) vs Fonseca J.",
-          "tier": "go",
+          "tier": "archived_duplicate",
           "rec": "Zverev",
           "rec_odds_est": 1.55,
           "ev_est": 19.4,
@@ -180,11 +208,15 @@
           "result": "Zverev",
           "score": "4-6 6-4 7-5",
           "hit": true,
-          "actual_ev": 0.55
+          "actual_ev": 0.55,
+          "archived": true,
+          "archived_reason": "duplicate_of_2026-ATP.json (Session_59 STEP A)",
+          "archived_date": "2026-04-25",
+          "tier_original": "go"
         },
         {
           "match": "Sinner J.(2) vs Auger-Aliassime F.(6)  ※FAA R16勝利の場合",
-          "tier": "go",
+          "tier": "archived_duplicate",
           "rec": "Sinner",
           "rec_odds_est": 1.38,
           "ev_est": 17.4,
@@ -205,11 +237,15 @@
           "result": "Sinner",
           "score": "6-3 6-4",
           "hit": true,
-          "actual_ev": 0.38
+          "actual_ev": 0.38,
+          "archived": true,
+          "archived_reason": "duplicate_of_2026-ATP.json (Session_59 STEP A)",
+          "archived_date": "2026-04-25",
+          "tier_original": "go"
         },
         {
           "match": "Alcaraz C.(1) vs Bublik A.(8)",
-          "tier": "go",
+          "tier": "archived_duplicate",
           "rec": "Alcaraz",
           "rec_odds_est": 1.25,
           "ev_est": 11.3,
@@ -228,11 +264,15 @@
           "result": "Alcaraz",
           "score": "6-1 6-3",
           "hit": true,
-          "actual_ev": 0.25
+          "actual_ev": 0.25,
+          "archived": true,
+          "archived_reason": "duplicate_of_2026-ATP.json (Session_59 STEP A)",
+          "archived_date": "2026-04-25",
+          "tier_original": "go"
         },
         {
           "match": "de Minaur A.(5) vs Vacherot V.(WC)",
-          "tier": "skip",
+          "tier": "archived_duplicate",
           "rec": "なし（信頼度不足）",
           "rec_odds_est": null,
           "ev_est": null,
@@ -252,7 +292,11 @@
           "miss_analysis": "Vacherot (WC, Monaco home) が de Minaur(5) を撃破して 初の Monaco 人 MC SEMI-FINAL 進出 (Open Era)。home WC + 連続シード撃破モメンタム (R2 Hurkacz 撃破からの2連続)。crowd familiarity mental freedom of underdog with nothing to lose 全要因揃う。conf 算出時に R009 WC+2% のみで stop していた。R017 (P010 implemented) 候補となった decisive evidence。",
           "miss_layer": "L4_External",
           "rule_linked": "R017 (P010 implemented 2026-04-20: WC home + 連続seed撃破モメンタム +5%)",
-          "type_a_upset_id": "A004"
+          "type_a_upset_id": "A004",
+          "archived": true,
+          "archived_reason": "duplicate_of_2026-ATP.json (Session_59 STEP A)",
+          "archived_date": "2026-04-25",
+          "tier_original": "skip"
         }
       ],
       "summary": {
@@ -269,7 +313,7 @@
       "predictions": [
         {
           "match": "Alcaraz C.(1) vs Vacherot V.(WC)",
-          "tier": "go",
+          "tier": "archived_duplicate",
           "rec": "Alcaraz",
           "rec_odds_est": 1.5,
           "ev_est": 24.5,
@@ -289,11 +333,15 @@
           "score": "6-4 6-4",
           "hit": true,
           "actual_ev": 0.5,
-          "ce_correction": "CE015 (2026-04-18): 対戦相手誤記訂正 de Minaur → Vacherot。Alcaraz 6-4 6-4 (84分) 勝利。HIT判定維持。"
+          "ce_correction": "CE015 (2026-04-18): 対戦相手誤記訂正 de Minaur → Vacherot。Alcaraz 6-4 6-4 (84分) 勝利。HIT判定維持。",
+          "archived": true,
+          "archived_reason": "duplicate_of_2026-ATP.json (Session_59 STEP A)",
+          "archived_date": "2026-04-25",
+          "tier_original": "go"
         },
         {
           "match": "Sinner J.(2) vs Zverev A.(3)",
-          "tier": "go",
+          "tier": "archived_duplicate",
           "rec": "Sinner",
           "rec_odds_est": 1.65,
           "ev_est": 27.1,
@@ -313,7 +361,11 @@
           "result": "Sinner",
           "score": "6-1 6-4",
           "hit": true,
-          "actual_ev": 0.65
+          "actual_ev": 0.65,
+          "archived": true,
+          "archived_reason": "duplicate_of_2026-ATP.json (Session_59 STEP A)",
+          "archived_date": "2026-04-25",
+          "tier_original": "go"
         }
       ],
       "summary": {
@@ -331,7 +383,7 @@
       "predictions": [
         {
           "match": "Alcaraz C.(1) vs Sinner J.(2)",
-          "tier": "skip",
+          "tier": "archived_duplicate",
           "rec": "なし（L1未達: cElo差~20pt）",
           "rec_odds_est": null,
           "ev_est": null,
@@ -349,7 +401,11 @@
           "result": null,
           "score": null,
           "hit": null,
-          "actual_ev": null
+          "actual_ev": null,
+          "archived": true,
+          "archived_reason": "duplicate_of_2026-ATP.json (Session_59 STEP A)",
+          "archived_date": "2026-04-25",
+          "tier_original": "skip"
         }
       ]
     }
@@ -463,6 +519,14 @@
           "result": "PENDING"
         }
       ]
+    }
+  ],
+  "archived_log": [
+    {
+      "date": "2026-04-25",
+      "session": "_59",
+      "reason": "MC predictions が 2026-ATP.json と完全二重計上していたため archived 化",
+      "archived_count": 14
     }
   ]
 }

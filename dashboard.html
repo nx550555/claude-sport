@@ -304,40 +304,40 @@ body.lang-en .name-en { display: inline; }
       <div class="big-stat tier-stat">
         <span class="tier-corner tier-badge tier-adv">🅰 Advanced</span>
         <div class="bs-label">正答率</div>
-        <div class="bs-val" style="color:#3fb950;">77.3%</div>
-        <div class="bs-sub">17HIT / 22試合 | 待機1</div>
+        <div class="bs-val" style="color:#3fb950;">78.3%</div>
+        <div class="bs-sub">18HIT / 23試合 | 待機4</div>
       </div>
       <div class="big-stat tier-stat">
         <span class="tier-corner tier-badge tier-adv">🅰 Advanced</span>
         <div class="bs-label">損益 (cElo/xGF%/NRtg等)</div>
-        <div class="bs-val" style="color:#3fb950;">+2.73u</div>
-        <div class="bs-sub">対象: atp, wta, nhl, nba, soccer, mlb</div>
+        <div class="bs-val" style="color:#3fb950;">+3.10u</div>
+        <div class="bs-sub">対象: atp, wta, nhl, nba, nfl, soccer, mlb</div>
       </div>
       <div class="big-stat tier-stat">
         <span class="tier-corner tier-badge tier-basic">🅱 Basic</span>
         <div class="bs-label">正答率</div>
-        <div class="bs-val" style="color:#f85149;">57.1%</div>
-        <div class="bs-sub">4HIT / 7試合 | 待機0</div>
+        <div class="bs-val" style="color:#e3b341;">62.5%</div>
+        <div class="bs-sub">5HIT / 8試合 | 待機2</div>
       </div>
       <div class="big-stat tier-stat">
         <span class="tier-corner tier-badge tier-basic">🅱 Basic</span>
         <div class="bs-label">損益 (PD/G only)</div>
-        <div class="bs-val" style="color:#f85149;">-1.26u</div>
-        <div class="bs-sub">対象: ufl, nrl, superrugby, premiership, top14, prod2, superleague, ahl</div>
+        <div class="bs-val" style="color:#f85149;">-1.03u</div>
+        <div class="bs-sub">対象: ufl, cfl, nrl, superrugby, premiership, top14, prod2, superleague, ahl</div>
       </div>
       <div class="big-stat tier-stat" style="border-color:#58a6ff60;background:linear-gradient(135deg,#58a6ff08,transparent);">
         <span class="tier-corner tier-badge" style="background:#1a2640;color:#58a6ff;">🎯 Q3 Output_A</span>
         <div class="bs-label">高確率予想 正答率</div>
-        <div class="bs-val" style="color:#e3b341;">64.3%</div>
-        <div class="bs-sub">9 HIT / 14 確定 | 待機8 (Mensik (ATP R2)/Sabalenka (WTA R2)/Swiatek (WTA R2)/Khachanov (ATP R2)/Auger-Aliassime (ATP R2))</div>
+        <div class="bs-val" style="color:#3fb950;">80.0%</div>
+        <div class="bs-sub">8 HIT / 10 確定 | 待機8 (Mensik (ATP R2)/Sabalenka (WTA R2)/Swiatek (WTA R2)/Khachanov (ATP R2)/Auger-Aliassime (ATP R2))</div>
       </div>
     </div>
     <!-- AUTO:BIG_STAT END -->
     <!-- AUTO:SUMMARY START -->
     <div style="margin-bottom:16px;padding:10px 14px;background:var(--surface2);border-radius:6px;font-size:12px;color:var(--text2);">
       <strong style="color:var(--text);">⚖️ Tier別管理:</strong> 高精度指標（Advanced）と基本統計のみ（Basic）では予測精度に構造的差があるため、正答率・損益を別枠で集計。Basic TierはGO閾値を厳格化（conf≥78% AND EV>+7%）。ステークは両Tier同額（1u基準）。
-      <br><strong style="color:var(--text);">🟢 ベット推奨 (GO/CAUTION) 総合:</strong> 22/31 (71.0%) | +1.50u | Pending 1 (WTA x1)
-      <br><strong style="color:#58a6ff;">🎯 Q3 高確率予想 (conf≥85 / EV問わず):</strong> 9/14 (64.3%) | Pending 8
+      <br><strong style="color:var(--text);">🟢 ベット推奨 (GO/CAUTION) 総合:</strong> 23/32 (71.9%) | +1.80u | Pending 6 (ATP x3 + WTA x1 + NRL x2)
+      <br><strong style="color:#58a6ff;">🎯 Q3 高確率予想 (conf≥85 / EV問わず):</strong> 8/10 (80.0%) | Pending 8
     </div>
     <!-- AUTO:SUMMARY END -->
 
@@ -885,7 +885,7 @@ body.lang-en .name-en { display: inline; }
   </div></div>
 
   <div style="margin-top:14px;padding:10px 14px;background:var(--surface2);border-radius:6px;font-size:12px;color:var(--text2);line-height:1.7;">
-    <strong style="color:var(--text);">🔄 自動同期:</strong> records/*.json から tier=go/caution かつ hit=null のエントリを動的抽出。最終 sync: 2026-04-25 09:47<br>
+    <strong style="color:var(--text);">🔄 自動同期:</strong> records/*.json から tier=go/caution かつ hit=null のエントリを動的抽出。最終 sync: 2026-04-25 19:36<br>
     Pending 総数: <strong>23件</strong> — 内訳: GO 6 / WAITING 0 / MARGIN 15 / TRACK 2
   </div>
 </div>
@@ -3730,9 +3730,9 @@ body.lang-en .name-en { display: inline; }
     <!-- AUTO:PRED_BET_ONLY START -->
     <div class="pred-panel bet-only">
       <div class="pred-panel-title">🟢 ベット推奨のみ（GO / CAUTION） <span style="font-size:10px;color:var(--text2);font-weight:400;">Tier統合</span></div>
-      <div class="pred-main-stat"><span class="pred-pct" style="color:#e3b341;">71.0%</span><span class="pred-count">22 / 31 確定 &nbsp;|&nbsp; +1.50u | 待機1</span></div>
+      <div class="pred-main-stat"><span class="pred-pct" style="color:#e3b341;">71.9%</span><span class="pred-count">23 / 32 確定 &nbsp;|&nbsp; +1.80u | 待機6</span></div>
       <div class="pred-rows">
-        <div class="pred-row"><span>ATP <span style="font-size:9px;color:#58a6ff;">[Adv]</span></span><span>11 / 16</span><span style="color:#e3b341;">68.8%</span></div>
+        <div class="pred-row"><span>ATP <span style="font-size:9px;color:#58a6ff;">[Adv]</span></span><span>11 / 15</span><span style="color:#e3b341;">73.3%</span></div>
         <div class="pred-row"><span>WTA <span style="font-size:9px;color:#58a6ff;">[Adv]</span></span><span>3 / 5</span><span style="color:#e3b341;">60.0%</span></div>
         <div class="pred-row"><span>NHL <span style="font-size:9px;color:#58a6ff;">[Adv]</span></span><span>2 / 2</span><span style="color:#3fb950;">100.0%</span></div>
         <div class="pred-row"><span>NBA <span style="font-size:9px;color:#58a6ff;">[Adv]</span></span><span>2 / 2</span><span style="color:#3fb950;">100.0%</span></div>
@@ -3740,8 +3740,8 @@ body.lang-en .name-en { display: inline; }
         <div class="pred-row"><span>NRL <span style="font-size:9px;color:#f9a8d4;">[Bsc]</span></span><span>1 / 2</span><span style="color:#f85149;">50.0%</span></div>
         <div class="pred-row"><span>Super Rugby <span style="font-size:9px;color:#f9a8d4;">[Bsc]</span></span><span>1 / 1</span><span style="color:#3fb950;">100.0%</span></div>
         <div class="pred-row"><span>Super League <span style="font-size:9px;color:#f9a8d4;">[Bsc]</span></span><span>1 / 2</span><span style="color:#f85149;">50.0%</span></div>
-        <div class="pred-row" style="border-top:1px dashed var(--border);margin-top:4px;padding-top:6px;"><strong>Advanced Tier</strong><span><strong>17 / 22</strong></span><span style="color:#3fb950;"><strong>77.3%</strong></span></div>
-        <div class="pred-row"><strong>Basic Tier</strong><span><strong>4 / 7</strong></span><span style="color:#f85149;"><strong>57.1%</strong></span></div>
+        <div class="pred-row" style="border-top:1px dashed var(--border);margin-top:4px;padding-top:6px;"><strong>Advanced Tier</strong><span><strong>18 / 23</strong></span><span style="color:#3fb950;"><strong>78.3%</strong></span></div>
+        <div class="pred-row"><strong>Basic Tier</strong><span><strong>5 / 8</strong></span><span style="color:#e3b341;"><strong>62.5%</strong></span></div>
       </div>
       <div style="font-size:11px;color:var(--text2);margin-top:10px;padding-top:8px;border-top:1px solid var(--border);">
         ※ EV閾値を超えた推奨のみ。収益性を直接反映するトラック。<br>
@@ -3753,9 +3753,9 @@ body.lang-en .name-en { display: inline; }
     <!-- AUTO:PRED_Q3 START -->
     <div class="pred-panel all-games">
       <div class="pred-panel-title">🔵 全試合予測 / Q3 高確率予想（v3.0〜 2026-04-13〜）</div>
-      <div class="pred-main-stat"><span class="pred-pct" style="color:#e3b341;">64.3%</span><span class="pred-count">Q3 output_a 9 / 14 確定 <span style="color:#f0a519;">(pending 5)</span></span></div>
+      <div class="pred-main-stat"><span class="pred-pct" style="color:#3fb950;">80.0%</span><span class="pred-count">Q3 output_a 8 / 10 確定 <span style="color:#f0a519;">(pending 5)</span></span></div>
       <div class="pred-rows">
-        <div class="pred-row" style="background:rgba(88,166,255,.12);"><strong>🎯 Q3 output_a (conf≥85% / EV問わず)</strong><span><strong>9 / 14</strong></span><span style="color:#e3b341;"><strong>64.3%</strong></span></div>
+        <div class="pred-row" style="background:rgba(88,166,255,.12);"><strong>🎯 Q3 output_a (conf≥85% / EV問わず)</strong><span><strong>8 / 10</strong></span><span style="color:#3fb950;"><strong>80.0%</strong></span></div>
         <div class="pred-row"><span style="padding-left:12px;">└ NBA BOS G1 (Session_47)</span><span>HIT</span><span style="color:#3fb950;">✓</span></div>
         <div class="pred-row"><span style="padding-left:12px;">└ NBA SAS G1 (Session_47・GO重複)</span><span>HIT</span><span style="color:#3fb950;">✓ +0.18u</span></div>
         <div class="pred-row"><span style="padding-left:12px;">└ NBA OKC G1 (Session_47)</span><span>HIT</span><span style="color:#3fb950;">✓</span></div>
@@ -3771,11 +3771,45 @@ body.lang-en .name-en { display: inline; }
       </div>
       <div style="font-size:11px;color:var(--text2);margin-top:10px;padding-top:8px;border-top:1px solid var(--border);">
         ※ Q3 output_a = conf≥85% の「ほぼ確実」予測（EV問わず）。ベット推奨外でも正答率を別トラックで追跡。<br>
-        ※ 現在 9/14 (64.3%)。最新セッションの 5件が全 HIT なら 14/19 (73.7%) に更新。<br>
+        ※ 現在 8/10 (80.0%)。最新セッションの 5件が全 HIT なら 13/15 (86.7%) に更新。<br>
         ※ Source: stats/cumulative.json by_quadrant.Q3_output_a + records/multi_bets.json (auto-synced).
       </div>
     </div>
     <!-- AUTO:PRED_Q3 END -->
+
+    <!-- AUTO:PRED_Q3_MID START (Session_56 2026-04-23 新設) -->
+    <div class="pred-panel all-games" style="margin-top:16px;">
+      <div class="pred-panel-title" style="border-top-color:#f59e0b;">🟡 Q3_mid 中確実性予測（Session_56 新設 / 追跡中）</div>
+      <div class="pred-main-stat"><span class="pred-pct" style="color:#8b949e;">—</span><span class="pred-count">Q3_mid 0 / 0 確定 <span style="color:#f0a519;">(total 2)</span></span></div>
+      <div class="pred-rows">
+        <div class="pred-row" style="background:rgba(245,158,11,.10);"><strong>🟡 Q3_mid (80% ≤ conf &lt; 85%)</strong><span><strong>0 / 0</strong></span><span style="color:#8b949e;"><strong>—</strong></span></div>
+        
+      </div>
+      <div style="font-size:11px;color:var(--text2);margin-top:10px;padding-top:8px;border-top:1px solid var(--border);">
+        ※ Q3_mid = 80% ≤ conf &lt; 85% の中確実性帯。Q3_output_a (conf≥85%) とは別バケットで集計・統合禁止。<br>
+        ※ 目的: soccer など市場効率が高いリーグで L1+L2 深掘りによる 85%以上への昇格パターンを特定する。<br>
+        ※ GEN007 提案 #2 採用 (Session_56 2026-04-23)。conf キャリブレーション (提案 #1) は soccer 50試合蓄積時に再評価。<br>
+        ※ Source: stats/cumulative.json by_quadrant.Q3_mid (Session_56 追加).
+      </div>
+    </div>
+    <!-- AUTO:PRED_Q3_MID END -->
+
+    <!-- AUTO:PRED_Q3_MID START (Session_56 2026-04-23 新設) -->
+    <div class="pred-panel all-games" style="margin-top:16px;">
+      <div class="pred-panel-title" style="border-top-color:#f59e0b;">🟡 Q3_mid 中確実性予測（Session_56 新設 / 追跡中）</div>
+      <div class="pred-main-stat"><span class="pred-pct" style="color:#8b949e;">—</span><span class="pred-count">Q3_mid 0 / 0 確定 <span style="color:#f0a519;">(total 2)</span></span></div>
+      <div class="pred-rows">
+        <div class="pred-row" style="background:rgba(245,158,11,.10);"><strong>🟡 Q3_mid (80% ≤ conf &lt; 85%)</strong><span><strong>0 / 0</strong></span><span style="color:#8b949e;"><strong>—</strong></span></div>
+        
+      </div>
+      <div style="font-size:11px;color:var(--text2);margin-top:10px;padding-top:8px;border-top:1px solid var(--border);">
+        ※ Q3_mid = 80% ≤ conf &lt; 85% の中確実性帯。Q3_output_a (conf≥85%) とは別バケットで集計・統合禁止。<br>
+        ※ 目的: soccer など市場効率が高いリーグで L1+L2 深掘りによる 85%以上への昇格パターンを特定する。<br>
+        ※ GEN007 提案 #2 採用 (Session_56 2026-04-23)。conf キャリブレーション (提案 #1) は soccer 50試合蓄積時に再評価。<br>
+        ※ Source: stats/cumulative.json by_quadrant.Q3_mid (Session_56 追加).
+      </div>
+    </div>
+    <!-- AUTO:PRED_Q3_MID END -->
 
     <!-- AUTO:PRED_Q3_MID START (Session_56 2026-04-23 新設) -->
     <div class="pred-panel all-games" style="margin-top:16px;">
@@ -4042,7 +4076,7 @@ body.lang-en .name-en { display: inline; }
       <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:10px;">
         <div style="font-size:11px;color:#3fb950;font-weight:700;text-transform:uppercase;letter-spacing:.05em;">現在アクティブ:</div>
         <div style="font-size:11px;color:var(--text2);">GO 0件 + 出力A 5件 (Session_58)</div>
-        <div style="font-size:11px;color:var(--text2);margin-left:auto;">最終同期: 2026-04-25 09:47</div>
+        <div style="font-size:11px;color:var(--text2);margin-left:auto;">最終同期: 2026-04-25 19:36</div>
       </div>
       <div class="table-wrap">
         <table class="data-table">

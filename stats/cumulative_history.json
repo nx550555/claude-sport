@@ -1,0 +1,247 @@
+{
+  "_description": "セッションごとの累積統計スナップショット。dashboard 成長分析タブで時系列推移を表示する真値ソース。",
+  "_created": "2026-04-25 Session_59",
+  "_format": "各エントリは {session, date, overall, advanced, basic, by_quadrant, sports} を含む完全スナップショット",
+  "_update_rule": "セッション終了時に必ず追記する (CLAUDE.md セッション終了手順に追加予定)",
+  "snapshots": [
+    {
+      "session": "_43",
+      "date": "2026-04-20",
+      "overall": {
+        "confirmed": 28,
+        "hits": 20,
+        "hit_rate": 0.714,
+        "pnl": 1.733
+      },
+      "note": "BACKLOG/CLAUDE.md より遡及補填"
+    },
+    {
+      "session": "_47",
+      "date": "2026-04-21",
+      "overall": {
+        "confirmed": 29,
+        "hits": 21,
+        "hit_rate": 0.724,
+        "pnl": 1.9
+      },
+      "note": "BACKLOG より遡及補填"
+    },
+    {
+      "session": "_48",
+      "date": "2026-04-22",
+      "overall": {
+        "confirmed": 29,
+        "hits": 21,
+        "hit_rate": 0.724,
+        "pnl": 1.9,
+        "pending": 1
+      },
+      "note": "BACKLOG (Galfi pending)"
+    },
+    {
+      "session": "_49",
+      "date": "2026-04-23",
+      "overall": {
+        "confirmed": 30,
+        "hits": 22,
+        "hit_rate": 0.733,
+        "pnl": 2.453
+      },
+      "note": "BACKLOG (Galfi HIT 反映)"
+    },
+    {
+      "session": "_50",
+      "date": "2026-04-23",
+      "overall": {
+        "confirmed": 30,
+        "hits": 22,
+        "hit_rate": 0.733,
+        "pnl": 2.453
+      },
+      "note": "BACKLOG (G2 SKIP のため変化なし)"
+    },
+    {
+      "session": "_57",
+      "date": "2026-04-24",
+      "overall": {
+        "confirmed": 32,
+        "hits": 23,
+        "hit_rate": 0.719,
+        "pnl": 1.473,
+        "pending": 1
+      },
+      "note": "BACKLOG (Paul MISS / Mertens pending)"
+    },
+    {
+      "session": "_58",
+      "date": "2026-04-25",
+      "overall": {
+        "confirmed": 32,
+        "hits": 23,
+        "hit_rate": 0.719,
+        "pnl": 1.8,
+        "pending": 6
+      },
+      "note": "CLAUDE.md / cumulative session_58_update"
+    },
+    {
+      "session": "_59",
+      "date": "2026-04-25",
+      "timestamp": "2026-04-25T19:36:59",
+      "overall": {
+        "go_total": 38,
+        "confirmed": 32,
+        "hits": 23,
+        "misses": 9,
+        "pending": 6,
+        "hit_rate": 0.719,
+        "pnl": 1.8
+      },
+      "by_tier": {
+        "advanced": {
+          "go": 28,
+          "confirmed": 23,
+          "hit": 18,
+          "pnl": 3.103,
+          "pending": 4,
+          "hit_rate": 0.783
+        },
+        "basic": {
+          "go": 10,
+          "confirmed": 8,
+          "hit": 5,
+          "pnl": -1.03,
+          "pending": 2,
+          "hit_rate": 0.625
+        }
+      },
+      "by_quadrant": {
+        "Q1_go": {
+          "total": 38,
+          "confirmed": 32,
+          "hit": 23,
+          "pnl": 1.8
+        },
+        "Q3_output_a": {
+          "total": 18,
+          "confirmed": 10,
+          "hit": 8,
+          "hit_rate": 0.8
+        },
+        "Q3_mid": {
+          "total": 2,
+          "confirmed": 0,
+          "hit": 0
+        },
+        "Q4_upset_watch": {
+          "total": 26,
+          "confirmed": 13,
+          "upset_realized": 7,
+          "fav_hit": 6,
+          "detect_rate": 0.538
+        }
+      },
+      "sports": {
+        "atp": {
+          "go": 18,
+          "confirmed": 15,
+          "hit": 11,
+          "hit_rate": 0.733,
+          "pnl": 0.74,
+          "pending": 3
+        },
+        "wta": {
+          "go": 6,
+          "confirmed": 5,
+          "hit": 3,
+          "hit_rate": 0.6,
+          "pnl": -0.12999999999999998,
+          "pending": 1
+        },
+        "nhl": {
+          "go": 2,
+          "confirmed": 2,
+          "hit": 2,
+          "hit_rate": 1.0,
+          "pnl": 1.863,
+          "pending": 0
+        },
+        "ufl": {
+          "go": 3,
+          "confirmed": 3,
+          "hit": 2,
+          "hit_rate": 0.667,
+          "pnl": -0.02999999999999997,
+          "pending": 0
+        },
+        "nrl": {
+          "go": 4,
+          "confirmed": 2,
+          "hit": 1,
+          "hit_rate": 0.5,
+          "pnl": -0.77,
+          "pending": 2
+        },
+        "superrugby": {
+          "go": 1,
+          "confirmed": 1,
+          "hit": 1,
+          "hit_rate": 1.0,
+          "pnl": 0.54,
+          "pending": 0
+        },
+        "nba": {
+          "go": 2,
+          "confirmed": 2,
+          "hit": 2,
+          "hit_rate": 1.0,
+          "pnl": 0.38,
+          "pending": 0
+        },
+        "superleague": {
+          "go": 2,
+          "confirmed": 2,
+          "hit": 1,
+          "hit_rate": 0.5,
+          "pnl": -0.77,
+          "pending": 0
+        },
+        "premiership": {
+          "go": 0,
+          "confirmed": 0,
+          "hit": 0,
+          "hit_rate": null,
+          "pnl": 0,
+          "pending": 0
+        },
+        "top14": {
+          "go": 0,
+          "confirmed": 0,
+          "hit": 0,
+          "hit_rate": null,
+          "pnl": 0,
+          "pending": 0
+        },
+        "prod2": {
+          "go": 0,
+          "confirmed": 0,
+          "hit": 0,
+          "hit_rate": null,
+          "pnl": 0,
+          "pending": 0
+        },
+        "ahl": {
+          "go": 0,
+          "confirmed": 0,
+          "hit": 0,
+          "hit_rate": null,
+          "pnl": 0,
+          "pending": 0
+        }
+      },
+      "session_summary": "Session_59 STEP A-E 真値再計算完了。MC 二重ファイル archived 化 + WTA 重複統合 + cumulative/dashboard_stats 全種目実測再集計。STEP F (本 history) 開始。"
+    }
+  ],
+  "_last_updated": "2026-04-25",
+  "_last_session": "_59"
+}

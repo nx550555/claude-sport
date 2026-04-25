@@ -3583,6 +3583,12 @@
       "verification_sources": [
         "atptour.com jodar-de-minaur-madrid-2026-friday",
         "sofascore.com Madrid Open Jodar beats de Minaur 6-3 6-1"
+      ],
+      "miss_analysis": "Jodar (19yo Spanish WC) が de Minaur (#8) を 6-3 6-1 で完封。L4 external 要因が L1 cElo +24pt を完全に逆転: (1) home WC momentum (R009): Caja Magica クラウド + 母国メディアで Jodar の serve hold 率が想定以上, (2) consecutive round momentum (R017): R1 Norrie 撃破 → R2 で confidence ピーク連鎖, (3) Top100 vet 不在 の R1 を勝ち抜いた若手 WC のクレー特化適応 (de Minaur は HC 寄り baseline player), (4) match stats: 受け 34pt vs 19pt / 1st-serve return 61% / break 6/13 で Jodar が試合を完全支配。cElo +24pt の小差は若手 WC ホーム適応 + クレー clay specialist 補正を含めると逆転圏。",
+      "miss_layer": "L4_external",
+      "rule_linked": [
+        "R009",
+        "R017"
       ]
     },
     {

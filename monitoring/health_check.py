@@ -269,6 +269,9 @@ def main():
                 if str(result).strip() == str(pred).strip(): continue
                 ph = o.get('prediction_hit')
                 if ph is True: continue
+                # void/W-O は試合不成立で MISS ではないため除外 (Session_59 追加)
+                if o.get('void') is True: continue
+                if ph is None: continue
                 has_ma = bool(o.get('miss_analysis'))
                 has_layer = bool(o.get('miss_layer'))
                 has_rl = bool(o.get('rule_linked') or o.get('rules_triggered'))
