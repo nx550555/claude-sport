@@ -1473,7 +1473,12 @@
       "miss_layer": "L4_External",
       "miss_analysis": "KD returned G3 but HOU L1 NRtg edge was reversed by LAL veteran clutch + OT 4Q execution. Q4 UPSET series 3-0 sweep imminent MOMENTUM exceeded NRtg gap. A036 candidate.",
       "rule_linked_candidate": "A036 candidate / P024 boundary case for evaluation",
-      "session": "_59"
+      "session": "_59",
+      "rule_linked": [
+        "P024_subset"
+      ],
+      "rule_linked_note": "P024 (star scorer absence/return) subset: KD return G3 でも LAL veteran clutch + OT 4Q execution が NRtg 上回り。star return ≠ momentum reversal の示唆。新候補 A036 (series 0-2 elimination home back-to-wall MOMENTUM) candidate 1/3",
+      "type_a_upset_id": "A036_candidate"
     },
     {
       "date": "2026-04-24",
@@ -1505,7 +1510,11 @@
       "miss_layer": "L4_External",
       "miss_analysis": "Wemby concussion OUT L4 -8 to -10% adjustment justified POR pick, but SAS rookie Dylan Harper (No.2 pick) 27pts career night exceeded the L4 buffer. star scorer absence offset by bench breakout = P024 simple -8/-10% adjustment limit exposed. depth/draft pedigree factor needed.",
       "rule_linked_candidate": "P024 counter-evidence: simple star OFF -10% adjustment insufficient, replacement quality factor required",
-      "session": "_59"
+      "session": "_59",
+      "rule_linked": [
+        "P024"
+      ],
+      "rule_linked_note": "P024 (NBA PO star scorer absence -8〜-10% 補正) limit exposed evidence: Wemby OUT で POR 予測したが SAS rookie Dylan Harper 27pts career-high で bench breakout が L4 buffer を超えた。'star scorer absence + opponent bench breakout' compound case として P024 拡張提案 (depth/draft pedigree factor 追加)"
     },
     {
       "date": "2026-04-23",
@@ -1537,7 +1546,12 @@
       "miss_layer": "L4_External",
       "miss_analysis": "NYK 4Q execution wavered again (G2 5-22 -> G3 lost lead with 12.5s on McCollum game-winner). McCollum individual outburst + ATL closing experience exceeded NYK home edge. P028 (G2 4Q collapse) extension: home fav 4Q execution decline trend confirmed in G3.",
       "rule_linked_candidate": "P028 evidence 2/3 reached: G1 home win -> G2 home 4Q collapse -> G3 road clutch. 3rd evidence triggers N_NBA_new4 implementation.",
-      "session": "_59"
+      "session": "_59",
+      "rule_linked": [
+        "P028"
+      ],
+      "rule_linked_note": "P028 (NBA G2/G3 home fav 4Q execution collapse) evidence 2/3 到達: G2 NYK 4Q 5-22 + G3 NYK home 12.5s clutch 失敗 (McCollum game-winner)。P028 implement へ残 1件",
+      "type_a_upset_id": "A032_extension"
     }
   ],
   "screening_log": [

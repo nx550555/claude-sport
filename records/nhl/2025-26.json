@@ -1774,7 +1774,12 @@
       ],
       "miss_layer": "L4_External",
       "miss_analysis": "TBL recovery 2-2 但 home MTL crowd + Slafkovsky/Suzuki/Hutson 若手3人組 momentum 維持。Hutson OT GWG で MTL 3試合連続若手主導 (P018 evidence 3件目候補)。",
-      "rule_linked_candidate": "P018 evidence 3/3 候補"
+      "rule_linked_candidate": "P018 evidence 3/3 候補",
+      "rule_linked": [
+        "P018"
+      ],
+      "rule_linked_note": "P018 (NHL PO R1 underdog 若手コア活性化補正) evidence 3/3 到達: A021 MTL G1 Slafkovsky hat trick + A027 PHI Drysdale/Martone + 今回 G3 Hutson OT GWG (Slafkovsky/Suzuki/Hutson 若手3人組 連続 momentum)。**N019 implement 候補**",
+      "type_a_upset_id": "A021_extension_g3"
     },
     {
       "date": "2026-04-25",
