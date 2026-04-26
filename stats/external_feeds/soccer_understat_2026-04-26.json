@@ -1,6 +1,6 @@
 {
   "source_group": "understat.com",
-  "fetched_at": "2026-04-26T12:47:21.352283+09:00",
+  "fetched_at": "2026-04-26T22:24:32.599957+09:00",
   "season": "2025-2026",
   "leagues": {
     "Premier League": {
@@ -1225,6 +1225,24 @@
           "xPoints": 43.1
         },
         {
+          "team_slug": "Fiorentina",
+          "team": "Fiorentina",
+          "games_played": 34,
+          "wins": 8,
+          "draws": 13,
+          "losses": 13,
+          "scored": 38,
+          "missed": 45,
+          "points": 37,
+          "xG": 49.71,
+          "xGA": 50.54,
+          "xG_per_game": 1.462,
+          "xGA_per_game": 1.486,
+          "xGD": -0.83,
+          "xGD_per_game": -0.024,
+          "xPoints": 45.47
+        },
+        {
           "team_slug": "Bologna",
           "team": "Bologna",
           "games_played": 34,
@@ -1241,24 +1259,6 @@
           "xGD": -1.18,
           "xGD_per_game": -0.035,
           "xPoints": 46.74
-        },
-        {
-          "team_slug": "Fiorentina",
-          "team": "Fiorentina",
-          "games_played": 33,
-          "wins": 8,
-          "draws": 12,
-          "losses": 13,
-          "scored": 38,
-          "missed": 45,
-          "points": 36,
-          "xG": 47.52,
-          "xGA": 49.95,
-          "xG_per_game": 1.44,
-          "xGA_per_game": 1.514,
-          "xGD": -2.43,
-          "xGD_per_game": -0.074,
-          "xPoints": 42.98
         },
         {
           "team_slug": "Genoa",
@@ -1335,20 +1335,20 @@
         {
           "team_slug": "Sassuolo",
           "team": "Sassuolo",
-          "games_played": 33,
+          "games_played": 34,
           "wins": 13,
-          "draws": 6,
+          "draws": 7,
           "losses": 14,
           "scored": 41,
           "missed": 44,
-          "points": 45,
-          "xG": 38.91,
-          "xGA": 52.72,
-          "xG_per_game": 1.179,
-          "xGA_per_game": 1.598,
-          "xGD": -13.81,
-          "xGD_per_game": -0.418,
-          "xPoints": 38.96
+          "points": 46,
+          "xG": 39.5,
+          "xGA": 54.91,
+          "xG_per_game": 1.162,
+          "xGA_per_game": 1.615,
+          "xGD": -15.41,
+          "xGD_per_game": -0.453,
+          "xPoints": 39.31
         },
         {
           "team_slug": "Cagliari",

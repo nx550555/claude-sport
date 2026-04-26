@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-04-26T12:47:15.665792+09:00",
+  "fetched_at": "2026-04-26T22:24:26.713875+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -29,36 +29,12 @@
       "comment": ""
     },
     {
-      "player": "Alexander Nikishin",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Apr 27",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Shea Weber",
       "team": null,
       "position": "D",
       "estimated_return": "Jul 1",
       "status": "Injured Reserve",
       "comment": "Sep 30: ir-lt"
-    },
-    {
-      "player": "Nils Lundkvist",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Apr 28",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Jason Dickinson",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Apr 26",
-      "status": "Day-To-Day",
-      "comment": "Apr 25: Dickinson (undisclosed) is expected to be a game-time decision for Game 4 in Anaheim on Sunday."
     },
     {
       "player": "Brett Pesce",

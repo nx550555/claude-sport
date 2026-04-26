@@ -2,9 +2,21 @@
   "league": "superrugby",
   "source": "https://en.wikipedia.org/wiki/2026_Super_Rugby_Pacific_season",
   "strategy": "wikipedia_table",
-  "fetched_at": "2026-04-26T12:47:05.734578+09:00",
+  "fetched_at": "2026-04-26T22:24:17.870347+09:00",
   "team_count": 11,
   "teams": [
+    {
+      "team": "Chiefs",
+      "gp": 10,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 351,
+      "pa": "Chiefs",
+      "pd": 129,
+      "pts": 36,
+      "pd_per_game": 12.9
+    },
     {
       "team": "Hurricanes",
       "gp": 9,
@@ -28,18 +40,6 @@
       "pd": 82,
       "pts": 33,
       "pd_per_game": 8.2
-    },
-    {
-      "team": "Chiefs",
-      "gp": 9,
-      "w": null,
-      "l": null,
-      "d": null,
-      "pf": 309,
-      "pa": "Chiefs",
-      "pd": 109,
-      "pts": 31,
-      "pd_per_game": 12.11
     },
     {
       "team": "Crusaders",
@@ -77,6 +77,17 @@
       "pts": 23
     },
     {
+      "team": "Highlanders",
+      "gp": 10,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 242,
+      "pa": "Highlanders",
+      "pd": "−45",
+      "pts": 20
+    },
+    {
       "team": "Waratahs",
       "gp": 9,
       "w": null,
@@ -89,24 +100,13 @@
     },
     {
       "team": "Drua",
-      "gp": 9,
+      "gp": 10,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 210,
+      "pf": 232,
       "pa": "Drua",
-      "pd": "−93",
-      "pts": 16
-    },
-    {
-      "team": "Highlanders",
-      "gp": 9,
-      "w": null,
-      "l": null,
-      "d": null,
-      "pf": 215,
-      "pa": "Highlanders",
-      "pd": "−55",
+      "pd": "−113",
       "pts": 16
     },
     {
@@ -122,13 +122,13 @@
     },
     {
       "team": "Moana Pasifika",
-      "gp": 9,
+      "gp": 10,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 171,
+      "pf": 188,
       "pa": "Moana Pasifika",
-      "pd": "−222",
+      "pd": "−232",
       "pts": 4
     }
   ]
