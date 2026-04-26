@@ -1,0 +1,1947 @@
+{
+  "source": "http://api.clubelo.com/2026-04-26",
+  "fetched_at": "2026-04-26T12:47:21.300603+09:00",
+  "snapshot_date": "2026-04-26",
+  "leagues": {
+    "Premier League": [
+      {
+        "club": "Arsenal",
+        "country": "ENG",
+        "league": "Premier League",
+        "rank": 1,
+        "elo": 2044.21435547,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-04-29"
+      },
+      {
+        "club": "Man City",
+        "country": "ENG",
+        "league": "Premier League",
+        "rank": 3,
+        "elo": 1969.01245117,
+        "level": 1.0,
+        "from": "2026-04-23",
+        "to": "2026-05-04"
+      },
+      {
+        "club": "Liverpool",
+        "country": "ENG",
+        "league": "Premier League",
+        "rank": 6,
+        "elo": 1925.5925293,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-03"
+      },
+      {
+        "club": "Aston Villa",
+        "country": "ENG",
+        "league": "Premier League",
+        "rank": 8,
+        "elo": 1899.11437988,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-04-30"
+      },
+      {
+        "club": "Man United",
+        "country": "ENG",
+        "league": "Premier League",
+        "rank": 10,
+        "elo": 1881.35864258,
+        "level": 1.0,
+        "from": "2026-04-19",
+        "to": "2026-04-27"
+      },
+      {
+        "club": "Brighton",
+        "country": "ENG",
+        "league": "Premier League",
+        "rank": 11,
+        "elo": 1864.64599609,
+        "level": 1.0,
+        "from": "2026-04-22",
+        "to": "2026-05-02"
+      },
+      {
+        "club": "Bournemouth",
+        "country": "ENG",
+        "league": "Premier League",
+        "rank": 13,
+        "elo": 1846.52856445,
+        "level": 1.0,
+        "from": "2026-04-23",
+        "to": "2026-05-03"
+      },
+      {
+        "club": "Chelsea",
+        "country": "ENG",
+        "league": "Premier League",
+        "rank": 15,
+        "elo": 1839.94726562,
+        "level": 1.0,
+        "from": "2026-04-22",
+        "to": "2026-05-04"
+      },
+      {
+        "club": "Brentford",
+        "country": "ENG",
+        "league": "Premier League",
+        "rank": 16,
+        "elo": 1833.06677246,
+        "level": 1.0,
+        "from": "2026-04-20",
+        "to": "2026-04-27"
+      },
+      {
+        "club": "Everton",
+        "country": "ENG",
+        "league": "Premier League",
+        "rank": 19,
+        "elo": 1829.22680664,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-04"
+      },
+      {
+        "club": "Newcastle",
+        "country": "ENG",
+        "league": "Premier League",
+        "rank": 20,
+        "elo": 1827.16137695,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-02"
+      },
+      {
+        "club": "Crystal Palace",
+        "country": "ENG",
+        "league": "Premier League",
+        "rank": 21,
+        "elo": 1810.97509766,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-04-30"
+      },
+      {
+        "club": "Forest",
+        "country": "ENG",
+        "league": "Premier League",
+        "rank": 23,
+        "elo": 1808.82128906,
+        "level": 1.0,
+        "from": "2026-04-25",
+        "to": "2026-04-30"
+      },
+      {
+        "club": "Fulham",
+        "country": "ENG",
+        "league": "Premier League",
+        "rank": 25,
+        "elo": 1801.04772949,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-02"
+      },
+      {
+        "club": "Leeds",
+        "country": "ENG",
+        "league": "Premier League",
+        "rank": 27,
+        "elo": 1791.93457031,
+        "level": 1.0,
+        "from": "2026-04-23",
+        "to": "2026-05-01"
+      },
+      {
+        "club": "West Ham",
+        "country": "ENG",
+        "league": "Premier League",
+        "rank": 33,
+        "elo": 1759.28210449,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-02"
+      },
+      {
+        "club": "Tottenham",
+        "country": "ENG",
+        "league": "Premier League",
+        "rank": 39,
+        "elo": 1750.35717773,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-03"
+      },
+      {
+        "club": "Sunderland",
+        "country": "ENG",
+        "league": "Premier League",
+        "rank": 52,
+        "elo": 1713.22888184,
+        "level": 1.0,
+        "from": "2026-04-25",
+        "to": "2026-05-02"
+      },
+      {
+        "club": "Wolves",
+        "country": "ENG",
+        "league": "Premier League",
+        "rank": 60,
+        "elo": 1684.17126465,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-02"
+      },
+      {
+        "club": "Burnley",
+        "country": "ENG",
+        "league": "Premier League",
+        "rank": 67,
+        "elo": 1663.70690918,
+        "level": 1.0,
+        "from": "2026-04-23",
+        "to": "2026-05-01"
+      }
+    ],
+    "La Liga": [
+      {
+        "club": "Barcelona",
+        "country": "ESP",
+        "league": "La Liga",
+        "rank": 5,
+        "elo": 1964.98547363,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-02"
+      },
+      {
+        "club": "Real Madrid",
+        "country": "ESP",
+        "league": "La Liga",
+        "rank": 7,
+        "elo": 1918.35021973,
+        "level": 1.0,
+        "from": "2026-04-25",
+        "to": "2026-05-03"
+      },
+      {
+        "club": "Atletico",
+        "country": "ESP",
+        "league": "La Liga",
+        "rank": 14,
+        "elo": 1840.41430664,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-04-29"
+      },
+      {
+        "club": "Villarreal",
+        "country": "ESP",
+        "league": "La Liga",
+        "rank": 37,
+        "elo": 1754.27038574,
+        "level": 1.0,
+        "from": "2026-04-24",
+        "to": "2026-04-26"
+      },
+      {
+        "club": "Betis",
+        "country": "ESP",
+        "league": "La Liga",
+        "rank": 45,
+        "elo": 1731.60302734,
+        "level": 1.0,
+        "from": "2026-04-25",
+        "to": "2026-05-03"
+      },
+      {
+        "club": "Bilbao",
+        "country": "ESP",
+        "league": "La Liga",
+        "rank": 56,
+        "elo": 1694.35339355,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-02"
+      },
+      {
+        "club": "Celta",
+        "country": "ESP",
+        "league": "La Liga",
+        "rank": 57,
+        "elo": 1688.42797852,
+        "level": 1.0,
+        "from": "2026-04-23",
+        "to": "2026-04-26"
+      },
+      {
+        "club": "Sociedad",
+        "country": "ESP",
+        "league": "La Liga",
+        "rank": 61,
+        "elo": 1682.00415039,
+        "level": 1.0,
+        "from": "2026-04-23",
+        "to": "2026-04-26"
+      },
+      {
+        "club": "Osasuna",
+        "country": "ESP",
+        "league": "La Liga",
+        "rank": 63,
+        "elo": 1677.96618652,
+        "level": 1.0,
+        "from": "2026-04-22",
+        "to": "2026-04-26"
+      },
+      {
+        "club": "Getafe",
+        "country": "ESP",
+        "league": "La Liga",
+        "rank": 66,
+        "elo": 1673.28186035,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-03"
+      },
+      {
+        "club": "Rayo Vallecano",
+        "country": "ESP",
+        "league": "La Liga",
+        "rank": 68,
+        "elo": 1663.54199219,
+        "level": 1.0,
+        "from": "2026-04-24",
+        "to": "2026-04-26"
+      },
+      {
+        "club": "Valencia",
+        "country": "ESP",
+        "league": "La Liga",
+        "rank": 71,
+        "elo": 1658.08996582,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-02"
+      },
+      {
+        "club": "Girona",
+        "country": "ESP",
+        "league": "La Liga",
+        "rank": 74,
+        "elo": 1652.02294922,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-01"
+      },
+      {
+        "club": "Mallorca",
+        "country": "ESP",
+        "league": "La Liga",
+        "rank": 76,
+        "elo": 1645.72766113,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-01"
+      },
+      {
+        "club": "Alaves",
+        "country": "ESP",
+        "league": "La Liga",
+        "rank": 92,
+        "elo": 1621.29504395,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-02"
+      },
+      {
+        "club": "Espanyol",
+        "country": "ESP",
+        "league": "La Liga",
+        "rank": 93,
+        "elo": 1617.46813965,
+        "level": 1.0,
+        "from": "2026-04-24",
+        "to": "2026-04-27"
+      },
+      {
+        "club": "Levante",
+        "country": "ESP",
+        "league": "La Liga",
+        "rank": 94,
+        "elo": 1615.26745605,
+        "level": 1.0,
+        "from": "2026-04-24",
+        "to": "2026-04-27"
+      },
+      {
+        "club": "Elche",
+        "country": "ESP",
+        "league": "La Liga",
+        "rank": 95,
+        "elo": 1613.49291992,
+        "level": 1.0,
+        "from": "2026-04-23",
+        "to": "2026-04-26"
+      },
+      {
+        "club": "Sevilla",
+        "country": "ESP",
+        "league": "La Liga",
+        "rank": 97,
+        "elo": 1608.46972656,
+        "level": 1.0,
+        "from": "2026-04-24",
+        "to": "2026-04-26"
+      },
+      {
+        "club": "Oviedo",
+        "country": "ESP",
+        "league": "La Liga",
+        "rank": null,
+        "elo": 1588.67358398,
+        "level": 1.0,
+        "from": "2026-04-24",
+        "to": "2026-04-26"
+      }
+    ],
+    "Bundesliga": [
+      {
+        "club": "Bayern",
+        "country": "GER",
+        "league": "Bundesliga",
+        "rank": 2,
+        "elo": 2019.98083496,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-04-28"
+      },
+      {
+        "club": "Dortmund",
+        "country": "GER",
+        "league": "Bundesliga",
+        "rank": 17,
+        "elo": 1832.17749023,
+        "level": 1.0,
+        "from": "2026-04-20",
+        "to": "2026-04-26"
+      },
+      {
+        "club": "Leverkusen",
+        "country": "GER",
+        "league": "Bundesliga",
+        "rank": 22,
+        "elo": 1810.60119629,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-02"
+      },
+      {
+        "club": "RB Leipzig",
+        "country": "GER",
+        "league": "Bundesliga",
+        "rank": 29,
+        "elo": 1782.80859375,
+        "level": 1.0,
+        "from": "2026-04-25",
+        "to": "2026-05-02"
+      },
+      {
+        "club": "Stuttgart",
+        "country": "GER",
+        "league": "Bundesliga",
+        "rank": 32,
+        "elo": 1760.82128906,
+        "level": 1.0,
+        "from": "2026-04-20",
+        "to": "2026-04-26"
+      },
+      {
+        "club": "Freiburg",
+        "country": "GER",
+        "league": "Bundesliga",
+        "rank": 42,
+        "elo": 1734.64086914,
+        "level": 1.0,
+        "from": "2026-04-23",
+        "to": "2026-04-26"
+      },
+      {
+        "club": "Hoffenheim",
+        "country": "GER",
+        "league": "Bundesliga",
+        "rank": 54,
+        "elo": 1711.09851074,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-02"
+      },
+      {
+        "club": "Frankfurt",
+        "country": "GER",
+        "league": "Bundesliga",
+        "rank": 62,
+        "elo": 1679.80664062,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-02"
+      },
+      {
+        "club": "Mainz",
+        "country": "GER",
+        "league": "Bundesliga",
+        "rank": 64,
+        "elo": 1677.54614258,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-03"
+      },
+      {
+        "club": "Augsburg",
+        "country": "GER",
+        "league": "Bundesliga",
+        "rank": 82,
+        "elo": 1633.24414062,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-02"
+      },
+      {
+        "club": "Werder",
+        "country": "GER",
+        "league": "Bundesliga",
+        "rank": 87,
+        "elo": 1627.09436035,
+        "level": 1.0,
+        "from": "2026-04-23",
+        "to": "2026-04-26"
+      },
+      {
+        "club": "Gladbach",
+        "country": "GER",
+        "league": "Bundesliga",
+        "rank": 91,
+        "elo": 1622.2052002,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-03"
+      },
+      {
+        "club": "Union Berlin",
+        "country": "GER",
+        "league": "Bundesliga",
+        "rank": 100,
+        "elo": 1595.06115723,
+        "level": 1.0,
+        "from": "2026-04-25",
+        "to": "2026-05-02"
+      },
+      {
+        "club": "Koeln",
+        "country": "GER",
+        "league": "Bundesliga",
+        "rank": null,
+        "elo": 1589.59082031,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-02"
+      },
+      {
+        "club": "Wolfsburg",
+        "country": "GER",
+        "league": "Bundesliga",
+        "rank": null,
+        "elo": 1587.45788574,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-03"
+      },
+      {
+        "club": "Hamburg",
+        "country": "GER",
+        "league": "Bundesliga",
+        "rank": null,
+        "elo": 1582.46252441,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-02"
+      },
+      {
+        "club": "St Pauli",
+        "country": "GER",
+        "league": "Bundesliga",
+        "rank": null,
+        "elo": 1567.4284668,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-03"
+      },
+      {
+        "club": "Heidenheim",
+        "country": "GER",
+        "league": "Bundesliga",
+        "rank": null,
+        "elo": 1529.92785645,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-02"
+      }
+    ],
+    "Serie A": [
+      {
+        "club": "Inter",
+        "country": "ITA",
+        "league": "Serie A",
+        "rank": 9,
+        "elo": 1895.63110352,
+        "level": 1.0,
+        "from": "2026-04-18",
+        "to": "2026-04-26"
+      },
+      {
+        "club": "Juventus",
+        "country": "ITA",
+        "league": "Serie A",
+        "rank": 26,
+        "elo": 1796.41931152,
+        "level": 1.0,
+        "from": "2026-04-20",
+        "to": "2026-04-26"
+      },
+      {
+        "club": "Atalanta",
+        "country": "ITA",
+        "league": "Serie A",
+        "rank": 28,
+        "elo": 1784.67749023,
+        "level": 1.0,
+        "from": "2026-04-19",
+        "to": "2026-04-27"
+      },
+      {
+        "club": "Milan",
+        "country": "ITA",
+        "league": "Serie A",
+        "rank": 30,
+        "elo": 1782.53674316,
+        "level": 1.0,
+        "from": "2026-04-20",
+        "to": "2026-04-26"
+      },
+      {
+        "club": "Napoli",
+        "country": "ITA",
+        "league": "Serie A",
+        "rank": 31,
+        "elo": 1779.31799316,
+        "level": 1.0,
+        "from": "2026-04-25",
+        "to": "2026-05-02"
+      },
+      {
+        "club": "Roma",
+        "country": "ITA",
+        "league": "Serie A",
+        "rank": 34,
+        "elo": 1757.9074707,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-04"
+      },
+      {
+        "club": "Como",
+        "country": "ITA",
+        "league": "Serie A",
+        "rank": 41,
+        "elo": 1736.51123047,
+        "level": 1.0,
+        "from": "2026-04-23",
+        "to": "2026-04-26"
+      },
+      {
+        "club": "Lazio",
+        "country": "ITA",
+        "league": "Serie A",
+        "rank": 51,
+        "elo": 1715.53942871,
+        "level": 1.0,
+        "from": "2026-04-19",
+        "to": "2026-04-27"
+      },
+      {
+        "club": "Bologna",
+        "country": "ITA",
+        "league": "Serie A",
+        "rank": 58,
+        "elo": 1688.11816406,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-03"
+      },
+      {
+        "club": "Fiorentina",
+        "country": "ITA",
+        "league": "Serie A",
+        "rank": 69,
+        "elo": 1663.17053223,
+        "level": 1.0,
+        "from": "2026-04-24",
+        "to": "2026-04-26"
+      },
+      {
+        "club": "Udinese",
+        "country": "ITA",
+        "league": "Serie A",
+        "rank": 79,
+        "elo": 1639.46594238,
+        "level": 1.0,
+        "from": "2026-04-22",
+        "to": "2026-04-27"
+      },
+      {
+        "club": "Genoa",
+        "country": "ITA",
+        "league": "Serie A",
+        "rank": 81,
+        "elo": 1635.51086426,
+        "level": 1.0,
+        "from": "2026-04-22",
+        "to": "2026-04-26"
+      },
+      {
+        "club": "Sassuolo",
+        "country": "ITA",
+        "league": "Serie A",
+        "rank": 85,
+        "elo": 1632.18078613,
+        "level": 1.0,
+        "from": "2026-04-20",
+        "to": "2026-04-26"
+      },
+      {
+        "club": "Torino",
+        "country": "ITA",
+        "league": "Serie A",
+        "rank": 88,
+        "elo": 1625.50158691,
+        "level": 1.0,
+        "from": "2026-04-23",
+        "to": "2026-04-26"
+      },
+      {
+        "club": "Parma",
+        "country": "ITA",
+        "league": "Serie A",
+        "rank": 98,
+        "elo": 1598.78466797,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-03"
+      },
+      {
+        "club": "Cagliari",
+        "country": "ITA",
+        "league": "Serie A",
+        "rank": null,
+        "elo": 1566.92785645,
+        "level": 1.0,
+        "from": "2026-04-18",
+        "to": "2026-04-27"
+      },
+      {
+        "club": "Lecce",
+        "country": "ITA",
+        "league": "Serie A",
+        "rank": null,
+        "elo": 1543.34655762,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-01"
+      },
+      {
+        "club": "Cremonese",
+        "country": "ITA",
+        "league": "Serie A",
+        "rank": null,
+        "elo": 1524.81286621,
+        "level": 1.0,
+        "from": "2026-04-25",
+        "to": "2026-05-04"
+      },
+      {
+        "club": "Verona",
+        "country": "ITA",
+        "league": "Serie A",
+        "rank": null,
+        "elo": 1494.24768066,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-03"
+      },
+      {
+        "club": "Pisa",
+        "country": "ITA",
+        "league": "Serie A",
+        "rank": null,
+        "elo": 1484.52380371,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-01"
+      }
+    ],
+    "Ligue 1": [
+      {
+        "club": "Paris SG",
+        "country": "FRA",
+        "league": "Ligue 1",
+        "rank": 4,
+        "elo": 1967.66870117,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-04-28"
+      },
+      {
+        "club": "Lens",
+        "country": "FRA",
+        "league": "Ligue 1",
+        "rank": 35,
+        "elo": 1757.16931152,
+        "level": 1.0,
+        "from": "2026-04-25",
+        "to": "2026-05-02"
+      },
+      {
+        "club": "Lille",
+        "country": "FRA",
+        "league": "Ligue 1",
+        "rank": 36,
+        "elo": 1754.91674805,
+        "level": 1.0,
+        "from": "2026-04-24",
+        "to": "2026-04-26"
+      },
+      {
+        "club": "Lyon",
+        "country": "FRA",
+        "league": "Ligue 1",
+        "rank": 40,
+        "elo": 1748.27612305,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-03"
+      },
+      {
+        "club": "Monaco",
+        "country": "FRA",
+        "league": "Ligue 1",
+        "rank": 43,
+        "elo": 1732.37915039,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-02"
+      },
+      {
+        "club": "Rennes",
+        "country": "FRA",
+        "league": "Ligue 1",
+        "rank": 46,
+        "elo": 1729.13598633,
+        "level": 1.0,
+        "from": "2026-04-22",
+        "to": "2026-04-26"
+      },
+      {
+        "club": "Marseille",
+        "country": "FRA",
+        "league": "Ligue 1",
+        "rank": 49,
+        "elo": 1727.07177734,
+        "level": 1.0,
+        "from": "2026-04-24",
+        "to": "2026-04-26"
+      },
+      {
+        "club": "Strasbourg",
+        "country": "FRA",
+        "league": "Ligue 1",
+        "rank": 50,
+        "elo": 1721.74609375,
+        "level": 1.0,
+        "from": "2026-04-20",
+        "to": "2026-04-26"
+      },
+      {
+        "club": "Brest",
+        "country": "FRA",
+        "league": "Ligue 1",
+        "rank": 75,
+        "elo": 1648.45336914,
+        "level": 1.0,
+        "from": "2026-04-25",
+        "to": "2026-05-03"
+      },
+      {
+        "club": "Lorient",
+        "country": "FRA",
+        "league": "Ligue 1",
+        "rank": 77,
+        "elo": 1644.7244873,
+        "level": 1.0,
+        "from": "2026-04-19",
+        "to": "2026-04-26"
+      },
+      {
+        "club": "Toulouse",
+        "country": "FRA",
+        "league": "Ligue 1",
+        "rank": 83,
+        "elo": 1632.44775391,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-03"
+      },
+      {
+        "club": "Paris FC",
+        "country": "FRA",
+        "league": "Ligue 1",
+        "rank": 96,
+        "elo": 1608.77038574,
+        "level": 1.0,
+        "from": "2026-04-23",
+        "to": "2026-04-26"
+      },
+      {
+        "club": "Auxerre",
+        "country": "FRA",
+        "league": "Ligue 1",
+        "rank": null,
+        "elo": 1594.14416504,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-03"
+      },
+      {
+        "club": "Nice",
+        "country": "FRA",
+        "league": "Ligue 1",
+        "rank": null,
+        "elo": 1585.69958496,
+        "level": 1.0,
+        "from": "2026-04-19",
+        "to": "2026-04-26"
+      },
+      {
+        "club": "Le Havre",
+        "country": "FRA",
+        "league": "Ligue 1",
+        "rank": null,
+        "elo": 1567.7097168,
+        "level": 1.0,
+        "from": "2026-04-19",
+        "to": "2026-04-26"
+      },
+      {
+        "club": "Angers",
+        "country": "FRA",
+        "league": "Ligue 1",
+        "rank": null,
+        "elo": 1553.02526855,
+        "level": 1.0,
+        "from": "2026-04-26",
+        "to": "2026-05-03"
+      },
+      {
+        "club": "Nantes",
+        "country": "FRA",
+        "league": "Ligue 1",
+        "rank": null,
+        "elo": 1528.25720215,
+        "level": 1.0,
+        "from": "2026-04-23",
+        "to": "2026-04-26"
+      },
+      {
+        "club": "Metz",
+        "country": "FRA",
+        "league": "Ligue 1",
+        "rank": null,
+        "elo": 1497.8380127,
+        "level": 1.0,
+        "from": "2026-04-20",
+        "to": "2026-04-26"
+      }
+    ]
+  },
+  "clubs": {
+    "Arsenal": {
+      "club": "Arsenal",
+      "country": "ENG",
+      "league": "Premier League",
+      "rank": 1,
+      "elo": 2044.21435547,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-04-29"
+    },
+    "Bayern": {
+      "club": "Bayern",
+      "country": "GER",
+      "league": "Bundesliga",
+      "rank": 2,
+      "elo": 2019.98083496,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-04-28"
+    },
+    "Man City": {
+      "club": "Man City",
+      "country": "ENG",
+      "league": "Premier League",
+      "rank": 3,
+      "elo": 1969.01245117,
+      "level": 1.0,
+      "from": "2026-04-23",
+      "to": "2026-05-04"
+    },
+    "Paris SG": {
+      "club": "Paris SG",
+      "country": "FRA",
+      "league": "Ligue 1",
+      "rank": 4,
+      "elo": 1967.66870117,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-04-28"
+    },
+    "Barcelona": {
+      "club": "Barcelona",
+      "country": "ESP",
+      "league": "La Liga",
+      "rank": 5,
+      "elo": 1964.98547363,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-02"
+    },
+    "Liverpool": {
+      "club": "Liverpool",
+      "country": "ENG",
+      "league": "Premier League",
+      "rank": 6,
+      "elo": 1925.5925293,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-03"
+    },
+    "Real Madrid": {
+      "club": "Real Madrid",
+      "country": "ESP",
+      "league": "La Liga",
+      "rank": 7,
+      "elo": 1918.35021973,
+      "level": 1.0,
+      "from": "2026-04-25",
+      "to": "2026-05-03"
+    },
+    "Aston Villa": {
+      "club": "Aston Villa",
+      "country": "ENG",
+      "league": "Premier League",
+      "rank": 8,
+      "elo": 1899.11437988,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-04-30"
+    },
+    "Inter": {
+      "club": "Inter",
+      "country": "ITA",
+      "league": "Serie A",
+      "rank": 9,
+      "elo": 1895.63110352,
+      "level": 1.0,
+      "from": "2026-04-18",
+      "to": "2026-04-26"
+    },
+    "Man United": {
+      "club": "Man United",
+      "country": "ENG",
+      "league": "Premier League",
+      "rank": 10,
+      "elo": 1881.35864258,
+      "level": 1.0,
+      "from": "2026-04-19",
+      "to": "2026-04-27"
+    },
+    "Brighton": {
+      "club": "Brighton",
+      "country": "ENG",
+      "league": "Premier League",
+      "rank": 11,
+      "elo": 1864.64599609,
+      "level": 1.0,
+      "from": "2026-04-22",
+      "to": "2026-05-02"
+    },
+    "Bournemouth": {
+      "club": "Bournemouth",
+      "country": "ENG",
+      "league": "Premier League",
+      "rank": 13,
+      "elo": 1846.52856445,
+      "level": 1.0,
+      "from": "2026-04-23",
+      "to": "2026-05-03"
+    },
+    "Atletico": {
+      "club": "Atletico",
+      "country": "ESP",
+      "league": "La Liga",
+      "rank": 14,
+      "elo": 1840.41430664,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-04-29"
+    },
+    "Chelsea": {
+      "club": "Chelsea",
+      "country": "ENG",
+      "league": "Premier League",
+      "rank": 15,
+      "elo": 1839.94726562,
+      "level": 1.0,
+      "from": "2026-04-22",
+      "to": "2026-05-04"
+    },
+    "Brentford": {
+      "club": "Brentford",
+      "country": "ENG",
+      "league": "Premier League",
+      "rank": 16,
+      "elo": 1833.06677246,
+      "level": 1.0,
+      "from": "2026-04-20",
+      "to": "2026-04-27"
+    },
+    "Dortmund": {
+      "club": "Dortmund",
+      "country": "GER",
+      "league": "Bundesliga",
+      "rank": 17,
+      "elo": 1832.17749023,
+      "level": 1.0,
+      "from": "2026-04-20",
+      "to": "2026-04-26"
+    },
+    "Everton": {
+      "club": "Everton",
+      "country": "ENG",
+      "league": "Premier League",
+      "rank": 19,
+      "elo": 1829.22680664,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-04"
+    },
+    "Newcastle": {
+      "club": "Newcastle",
+      "country": "ENG",
+      "league": "Premier League",
+      "rank": 20,
+      "elo": 1827.16137695,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-02"
+    },
+    "Crystal Palace": {
+      "club": "Crystal Palace",
+      "country": "ENG",
+      "league": "Premier League",
+      "rank": 21,
+      "elo": 1810.97509766,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-04-30"
+    },
+    "Leverkusen": {
+      "club": "Leverkusen",
+      "country": "GER",
+      "league": "Bundesliga",
+      "rank": 22,
+      "elo": 1810.60119629,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-02"
+    },
+    "Forest": {
+      "club": "Forest",
+      "country": "ENG",
+      "league": "Premier League",
+      "rank": 23,
+      "elo": 1808.82128906,
+      "level": 1.0,
+      "from": "2026-04-25",
+      "to": "2026-04-30"
+    },
+    "Fulham": {
+      "club": "Fulham",
+      "country": "ENG",
+      "league": "Premier League",
+      "rank": 25,
+      "elo": 1801.04772949,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-02"
+    },
+    "Juventus": {
+      "club": "Juventus",
+      "country": "ITA",
+      "league": "Serie A",
+      "rank": 26,
+      "elo": 1796.41931152,
+      "level": 1.0,
+      "from": "2026-04-20",
+      "to": "2026-04-26"
+    },
+    "Leeds": {
+      "club": "Leeds",
+      "country": "ENG",
+      "league": "Premier League",
+      "rank": 27,
+      "elo": 1791.93457031,
+      "level": 1.0,
+      "from": "2026-04-23",
+      "to": "2026-05-01"
+    },
+    "Atalanta": {
+      "club": "Atalanta",
+      "country": "ITA",
+      "league": "Serie A",
+      "rank": 28,
+      "elo": 1784.67749023,
+      "level": 1.0,
+      "from": "2026-04-19",
+      "to": "2026-04-27"
+    },
+    "RB Leipzig": {
+      "club": "RB Leipzig",
+      "country": "GER",
+      "league": "Bundesliga",
+      "rank": 29,
+      "elo": 1782.80859375,
+      "level": 1.0,
+      "from": "2026-04-25",
+      "to": "2026-05-02"
+    },
+    "Milan": {
+      "club": "Milan",
+      "country": "ITA",
+      "league": "Serie A",
+      "rank": 30,
+      "elo": 1782.53674316,
+      "level": 1.0,
+      "from": "2026-04-20",
+      "to": "2026-04-26"
+    },
+    "Napoli": {
+      "club": "Napoli",
+      "country": "ITA",
+      "league": "Serie A",
+      "rank": 31,
+      "elo": 1779.31799316,
+      "level": 1.0,
+      "from": "2026-04-25",
+      "to": "2026-05-02"
+    },
+    "Stuttgart": {
+      "club": "Stuttgart",
+      "country": "GER",
+      "league": "Bundesliga",
+      "rank": 32,
+      "elo": 1760.82128906,
+      "level": 1.0,
+      "from": "2026-04-20",
+      "to": "2026-04-26"
+    },
+    "West Ham": {
+      "club": "West Ham",
+      "country": "ENG",
+      "league": "Premier League",
+      "rank": 33,
+      "elo": 1759.28210449,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-02"
+    },
+    "Roma": {
+      "club": "Roma",
+      "country": "ITA",
+      "league": "Serie A",
+      "rank": 34,
+      "elo": 1757.9074707,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-04"
+    },
+    "Lens": {
+      "club": "Lens",
+      "country": "FRA",
+      "league": "Ligue 1",
+      "rank": 35,
+      "elo": 1757.16931152,
+      "level": 1.0,
+      "from": "2026-04-25",
+      "to": "2026-05-02"
+    },
+    "Lille": {
+      "club": "Lille",
+      "country": "FRA",
+      "league": "Ligue 1",
+      "rank": 36,
+      "elo": 1754.91674805,
+      "level": 1.0,
+      "from": "2026-04-24",
+      "to": "2026-04-26"
+    },
+    "Villarreal": {
+      "club": "Villarreal",
+      "country": "ESP",
+      "league": "La Liga",
+      "rank": 37,
+      "elo": 1754.27038574,
+      "level": 1.0,
+      "from": "2026-04-24",
+      "to": "2026-04-26"
+    },
+    "Tottenham": {
+      "club": "Tottenham",
+      "country": "ENG",
+      "league": "Premier League",
+      "rank": 39,
+      "elo": 1750.35717773,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-03"
+    },
+    "Lyon": {
+      "club": "Lyon",
+      "country": "FRA",
+      "league": "Ligue 1",
+      "rank": 40,
+      "elo": 1748.27612305,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-03"
+    },
+    "Como": {
+      "club": "Como",
+      "country": "ITA",
+      "league": "Serie A",
+      "rank": 41,
+      "elo": 1736.51123047,
+      "level": 1.0,
+      "from": "2026-04-23",
+      "to": "2026-04-26"
+    },
+    "Freiburg": {
+      "club": "Freiburg",
+      "country": "GER",
+      "league": "Bundesliga",
+      "rank": 42,
+      "elo": 1734.64086914,
+      "level": 1.0,
+      "from": "2026-04-23",
+      "to": "2026-04-26"
+    },
+    "Monaco": {
+      "club": "Monaco",
+      "country": "FRA",
+      "league": "Ligue 1",
+      "rank": 43,
+      "elo": 1732.37915039,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-02"
+    },
+    "Betis": {
+      "club": "Betis",
+      "country": "ESP",
+      "league": "La Liga",
+      "rank": 45,
+      "elo": 1731.60302734,
+      "level": 1.0,
+      "from": "2026-04-25",
+      "to": "2026-05-03"
+    },
+    "Rennes": {
+      "club": "Rennes",
+      "country": "FRA",
+      "league": "Ligue 1",
+      "rank": 46,
+      "elo": 1729.13598633,
+      "level": 1.0,
+      "from": "2026-04-22",
+      "to": "2026-04-26"
+    },
+    "Marseille": {
+      "club": "Marseille",
+      "country": "FRA",
+      "league": "Ligue 1",
+      "rank": 49,
+      "elo": 1727.07177734,
+      "level": 1.0,
+      "from": "2026-04-24",
+      "to": "2026-04-26"
+    },
+    "Strasbourg": {
+      "club": "Strasbourg",
+      "country": "FRA",
+      "league": "Ligue 1",
+      "rank": 50,
+      "elo": 1721.74609375,
+      "level": 1.0,
+      "from": "2026-04-20",
+      "to": "2026-04-26"
+    },
+    "Lazio": {
+      "club": "Lazio",
+      "country": "ITA",
+      "league": "Serie A",
+      "rank": 51,
+      "elo": 1715.53942871,
+      "level": 1.0,
+      "from": "2026-04-19",
+      "to": "2026-04-27"
+    },
+    "Sunderland": {
+      "club": "Sunderland",
+      "country": "ENG",
+      "league": "Premier League",
+      "rank": 52,
+      "elo": 1713.22888184,
+      "level": 1.0,
+      "from": "2026-04-25",
+      "to": "2026-05-02"
+    },
+    "Hoffenheim": {
+      "club": "Hoffenheim",
+      "country": "GER",
+      "league": "Bundesliga",
+      "rank": 54,
+      "elo": 1711.09851074,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-02"
+    },
+    "Bilbao": {
+      "club": "Bilbao",
+      "country": "ESP",
+      "league": "La Liga",
+      "rank": 56,
+      "elo": 1694.35339355,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-02"
+    },
+    "Celta": {
+      "club": "Celta",
+      "country": "ESP",
+      "league": "La Liga",
+      "rank": 57,
+      "elo": 1688.42797852,
+      "level": 1.0,
+      "from": "2026-04-23",
+      "to": "2026-04-26"
+    },
+    "Bologna": {
+      "club": "Bologna",
+      "country": "ITA",
+      "league": "Serie A",
+      "rank": 58,
+      "elo": 1688.11816406,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-03"
+    },
+    "Wolves": {
+      "club": "Wolves",
+      "country": "ENG",
+      "league": "Premier League",
+      "rank": 60,
+      "elo": 1684.17126465,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-02"
+    },
+    "Sociedad": {
+      "club": "Sociedad",
+      "country": "ESP",
+      "league": "La Liga",
+      "rank": 61,
+      "elo": 1682.00415039,
+      "level": 1.0,
+      "from": "2026-04-23",
+      "to": "2026-04-26"
+    },
+    "Frankfurt": {
+      "club": "Frankfurt",
+      "country": "GER",
+      "league": "Bundesliga",
+      "rank": 62,
+      "elo": 1679.80664062,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-02"
+    },
+    "Osasuna": {
+      "club": "Osasuna",
+      "country": "ESP",
+      "league": "La Liga",
+      "rank": 63,
+      "elo": 1677.96618652,
+      "level": 1.0,
+      "from": "2026-04-22",
+      "to": "2026-04-26"
+    },
+    "Mainz": {
+      "club": "Mainz",
+      "country": "GER",
+      "league": "Bundesliga",
+      "rank": 64,
+      "elo": 1677.54614258,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-03"
+    },
+    "Getafe": {
+      "club": "Getafe",
+      "country": "ESP",
+      "league": "La Liga",
+      "rank": 66,
+      "elo": 1673.28186035,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-03"
+    },
+    "Burnley": {
+      "club": "Burnley",
+      "country": "ENG",
+      "league": "Premier League",
+      "rank": 67,
+      "elo": 1663.70690918,
+      "level": 1.0,
+      "from": "2026-04-23",
+      "to": "2026-05-01"
+    },
+    "Rayo Vallecano": {
+      "club": "Rayo Vallecano",
+      "country": "ESP",
+      "league": "La Liga",
+      "rank": 68,
+      "elo": 1663.54199219,
+      "level": 1.0,
+      "from": "2026-04-24",
+      "to": "2026-04-26"
+    },
+    "Fiorentina": {
+      "club": "Fiorentina",
+      "country": "ITA",
+      "league": "Serie A",
+      "rank": 69,
+      "elo": 1663.17053223,
+      "level": 1.0,
+      "from": "2026-04-24",
+      "to": "2026-04-26"
+    },
+    "Valencia": {
+      "club": "Valencia",
+      "country": "ESP",
+      "league": "La Liga",
+      "rank": 71,
+      "elo": 1658.08996582,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-02"
+    },
+    "Girona": {
+      "club": "Girona",
+      "country": "ESP",
+      "league": "La Liga",
+      "rank": 74,
+      "elo": 1652.02294922,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-01"
+    },
+    "Brest": {
+      "club": "Brest",
+      "country": "FRA",
+      "league": "Ligue 1",
+      "rank": 75,
+      "elo": 1648.45336914,
+      "level": 1.0,
+      "from": "2026-04-25",
+      "to": "2026-05-03"
+    },
+    "Mallorca": {
+      "club": "Mallorca",
+      "country": "ESP",
+      "league": "La Liga",
+      "rank": 76,
+      "elo": 1645.72766113,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-01"
+    },
+    "Lorient": {
+      "club": "Lorient",
+      "country": "FRA",
+      "league": "Ligue 1",
+      "rank": 77,
+      "elo": 1644.7244873,
+      "level": 1.0,
+      "from": "2026-04-19",
+      "to": "2026-04-26"
+    },
+    "Udinese": {
+      "club": "Udinese",
+      "country": "ITA",
+      "league": "Serie A",
+      "rank": 79,
+      "elo": 1639.46594238,
+      "level": 1.0,
+      "from": "2026-04-22",
+      "to": "2026-04-27"
+    },
+    "Genoa": {
+      "club": "Genoa",
+      "country": "ITA",
+      "league": "Serie A",
+      "rank": 81,
+      "elo": 1635.51086426,
+      "level": 1.0,
+      "from": "2026-04-22",
+      "to": "2026-04-26"
+    },
+    "Augsburg": {
+      "club": "Augsburg",
+      "country": "GER",
+      "league": "Bundesliga",
+      "rank": 82,
+      "elo": 1633.24414062,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-02"
+    },
+    "Toulouse": {
+      "club": "Toulouse",
+      "country": "FRA",
+      "league": "Ligue 1",
+      "rank": 83,
+      "elo": 1632.44775391,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-03"
+    },
+    "Sassuolo": {
+      "club": "Sassuolo",
+      "country": "ITA",
+      "league": "Serie A",
+      "rank": 85,
+      "elo": 1632.18078613,
+      "level": 1.0,
+      "from": "2026-04-20",
+      "to": "2026-04-26"
+    },
+    "Werder": {
+      "club": "Werder",
+      "country": "GER",
+      "league": "Bundesliga",
+      "rank": 87,
+      "elo": 1627.09436035,
+      "level": 1.0,
+      "from": "2026-04-23",
+      "to": "2026-04-26"
+    },
+    "Torino": {
+      "club": "Torino",
+      "country": "ITA",
+      "league": "Serie A",
+      "rank": 88,
+      "elo": 1625.50158691,
+      "level": 1.0,
+      "from": "2026-04-23",
+      "to": "2026-04-26"
+    },
+    "Gladbach": {
+      "club": "Gladbach",
+      "country": "GER",
+      "league": "Bundesliga",
+      "rank": 91,
+      "elo": 1622.2052002,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-03"
+    },
+    "Alaves": {
+      "club": "Alaves",
+      "country": "ESP",
+      "league": "La Liga",
+      "rank": 92,
+      "elo": 1621.29504395,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-02"
+    },
+    "Espanyol": {
+      "club": "Espanyol",
+      "country": "ESP",
+      "league": "La Liga",
+      "rank": 93,
+      "elo": 1617.46813965,
+      "level": 1.0,
+      "from": "2026-04-24",
+      "to": "2026-04-27"
+    },
+    "Levante": {
+      "club": "Levante",
+      "country": "ESP",
+      "league": "La Liga",
+      "rank": 94,
+      "elo": 1615.26745605,
+      "level": 1.0,
+      "from": "2026-04-24",
+      "to": "2026-04-27"
+    },
+    "Elche": {
+      "club": "Elche",
+      "country": "ESP",
+      "league": "La Liga",
+      "rank": 95,
+      "elo": 1613.49291992,
+      "level": 1.0,
+      "from": "2026-04-23",
+      "to": "2026-04-26"
+    },
+    "Paris FC": {
+      "club": "Paris FC",
+      "country": "FRA",
+      "league": "Ligue 1",
+      "rank": 96,
+      "elo": 1608.77038574,
+      "level": 1.0,
+      "from": "2026-04-23",
+      "to": "2026-04-26"
+    },
+    "Sevilla": {
+      "club": "Sevilla",
+      "country": "ESP",
+      "league": "La Liga",
+      "rank": 97,
+      "elo": 1608.46972656,
+      "level": 1.0,
+      "from": "2026-04-24",
+      "to": "2026-04-26"
+    },
+    "Parma": {
+      "club": "Parma",
+      "country": "ITA",
+      "league": "Serie A",
+      "rank": 98,
+      "elo": 1598.78466797,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-03"
+    },
+    "Union Berlin": {
+      "club": "Union Berlin",
+      "country": "GER",
+      "league": "Bundesliga",
+      "rank": 100,
+      "elo": 1595.06115723,
+      "level": 1.0,
+      "from": "2026-04-25",
+      "to": "2026-05-02"
+    },
+    "Auxerre": {
+      "club": "Auxerre",
+      "country": "FRA",
+      "league": "Ligue 1",
+      "rank": null,
+      "elo": 1594.14416504,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-03"
+    },
+    "Koeln": {
+      "club": "Koeln",
+      "country": "GER",
+      "league": "Bundesliga",
+      "rank": null,
+      "elo": 1589.59082031,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-02"
+    },
+    "Oviedo": {
+      "club": "Oviedo",
+      "country": "ESP",
+      "league": "La Liga",
+      "rank": null,
+      "elo": 1588.67358398,
+      "level": 1.0,
+      "from": "2026-04-24",
+      "to": "2026-04-26"
+    },
+    "Wolfsburg": {
+      "club": "Wolfsburg",
+      "country": "GER",
+      "league": "Bundesliga",
+      "rank": null,
+      "elo": 1587.45788574,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-03"
+    },
+    "Nice": {
+      "club": "Nice",
+      "country": "FRA",
+      "league": "Ligue 1",
+      "rank": null,
+      "elo": 1585.69958496,
+      "level": 1.0,
+      "from": "2026-04-19",
+      "to": "2026-04-26"
+    },
+    "Hamburg": {
+      "club": "Hamburg",
+      "country": "GER",
+      "league": "Bundesliga",
+      "rank": null,
+      "elo": 1582.46252441,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-02"
+    },
+    "Le Havre": {
+      "club": "Le Havre",
+      "country": "FRA",
+      "league": "Ligue 1",
+      "rank": null,
+      "elo": 1567.7097168,
+      "level": 1.0,
+      "from": "2026-04-19",
+      "to": "2026-04-26"
+    },
+    "St Pauli": {
+      "club": "St Pauli",
+      "country": "GER",
+      "league": "Bundesliga",
+      "rank": null,
+      "elo": 1567.4284668,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-03"
+    },
+    "Cagliari": {
+      "club": "Cagliari",
+      "country": "ITA",
+      "league": "Serie A",
+      "rank": null,
+      "elo": 1566.92785645,
+      "level": 1.0,
+      "from": "2026-04-18",
+      "to": "2026-04-27"
+    },
+    "Angers": {
+      "club": "Angers",
+      "country": "FRA",
+      "league": "Ligue 1",
+      "rank": null,
+      "elo": 1553.02526855,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-03"
+    },
+    "Lecce": {
+      "club": "Lecce",
+      "country": "ITA",
+      "league": "Serie A",
+      "rank": null,
+      "elo": 1543.34655762,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-01"
+    },
+    "Heidenheim": {
+      "club": "Heidenheim",
+      "country": "GER",
+      "league": "Bundesliga",
+      "rank": null,
+      "elo": 1529.92785645,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-02"
+    },
+    "Nantes": {
+      "club": "Nantes",
+      "country": "FRA",
+      "league": "Ligue 1",
+      "rank": null,
+      "elo": 1528.25720215,
+      "level": 1.0,
+      "from": "2026-04-23",
+      "to": "2026-04-26"
+    },
+    "Cremonese": {
+      "club": "Cremonese",
+      "country": "ITA",
+      "league": "Serie A",
+      "rank": null,
+      "elo": 1524.81286621,
+      "level": 1.0,
+      "from": "2026-04-25",
+      "to": "2026-05-04"
+    },
+    "Metz": {
+      "club": "Metz",
+      "country": "FRA",
+      "league": "Ligue 1",
+      "rank": null,
+      "elo": 1497.8380127,
+      "level": 1.0,
+      "from": "2026-04-20",
+      "to": "2026-04-26"
+    },
+    "Verona": {
+      "club": "Verona",
+      "country": "ITA",
+      "league": "Serie A",
+      "rank": null,
+      "elo": 1494.24768066,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-03"
+    },
+    "Pisa": {
+      "club": "Pisa",
+      "country": "ITA",
+      "league": "Serie A",
+      "rank": null,
+      "elo": 1484.52380371,
+      "level": 1.0,
+      "from": "2026-04-26",
+      "to": "2026-05-01"
+    }
+  },
+  "club_count": 96,
+  "league_counts": {
+    "Premier League": 20,
+    "La Liga": 20,
+    "Bundesliga": 18,
+    "Serie A": 20,
+    "Ligue 1": 18
+  }
+}
