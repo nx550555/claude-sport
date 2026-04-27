@@ -472,6 +472,10 @@ def main():
     # 5種タグ ([FETCH/FETCHER/SEARCH/MEMORY/INFER]) の付与状況を検査。
     # 遡及対象外: フェーズ4 ステージ3 承認日 (2026-04-27) 以降に追加された
     # miss_analysis のみ対象 (既存記録への遡及付与は実施しないため)。
+    # (Session_62 フェーズ5 改修) record_class == "skip_record" フィルタ追加:
+    # 区分3 試合は走査対象外。柱D 7. 既存柱との整合性 + 柱C との整合参照。
+    # record_class が未設定のエントリは既存ロジック (APPROVAL_DATE 判定) に
+    # よって自然に skip されるため遡及付与対象外として扱う。
     try:
         import re
         import glob as _glob
@@ -499,6 +503,12 @@ def main():
             for o in walk_v12(d):
                 ma = o.get("miss_analysis")
                 if not ma or not isinstance(ma, str):
+                    continue
+                # (Session_62 フェーズ5) 柱D 区分3 (skip_record) は走査対象外。
+                # 区分3 はタグ義務対象外のため検査スキップ。
+                # record_class 未設定エントリは既存ロジック (APPROVAL_DATE 判定)
+                # で自然に skip されるため、明示フィルタは "skip_record" のみ。
+                if o.get("record_class") == "skip_record":
                     continue
                 # 承認日基準で対象判定: prediction_hit_date / last_updated_at / date のいずれか
                 # を参照。日付不明 or 承認日より前なら遡及対象外として skip。
