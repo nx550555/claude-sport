@@ -18,20 +18,41 @@
 
 ## 未完了・作業中（次回セッション最優先）
 
-### 🎯 Session_60 行動順序
+### 🎯 Session_61 行動順序 (次回)
 
 **STEP 0/0.5/1**: 通常通り (CLAUDE.md)
 
-**Session_60 最優先タスク:**
-- [ ] dashboard.html 成長分析タブに `cumulative_history.json` を読み込む AUTO ブロック実装 (sync_dashboard.py 拡張)
-- [ ] CLAUDE.md にセッション終了時 `python scripts/_snapshot_history.py` 自動実行を追記
-- [ ] PA094: 4/25-26 GO 6件 (Khachanov / FAA / Mensik / Mboko / Warriors / Manly) 結果反映
-- [ ] PA095: CAUTION_MARGIN 2件 (Shapovalov / Ruud) 結果反映
-- [ ] PA098: NHL G3 残 (MTL-TBL / UTA-VGK / ANA-EDM) 結果反映
-- [ ] PA099: NBA G3/G4 8試合結果反映
-- [ ] PA097: upset_patterns.json への 4/23以降 6件追加登録
-- [ ] GEN007 提案: UPSET_PICK_Lite 採否判断
-- [ ] rule_pipeline evidence 2/3 候補 8件の追加観察継続 (P018/P024/P025/P027/P020/P023/P007/P001)
+**Session_61 最優先タスク:**
+- [ ] **Session_60 Provisional GO 6件 結果反映** (4/25-26 開催):
+  - Soccer: Arsenal-Newcastle / Leeds-Burnley / Torino-Inter / Dortmund-Freiburg
+  - NRL: Penrith @ Newcastle / Manly vs Parramatta
+- [ ] **Session_60 CAUTION_MARGIN 6件 結果反映** (Getafe-Barca / Mainz-Bayern / Stuttgart-Bremen / HOU-NYY / LAD-CHC / PAR-WAR)
+- [ ] PA094 / PA095 / PA098 / PA099 残試合一括反映 (4/25-27 NHL G3-G4 / NBA G3-G4 / ATP Madrid R2-R3 / Premiership R14 / SL R9 / Top14 R23 / UFL W6)
+- [ ] PA097 upset_patterns.json 4/23以降 6件追加登録
+- [ ] **GEN007 提案 PA103: UPSET_PICK_Lite 採否判断** (Phase2移行後 9日経過, 発動0件)
+- [ ] dashboard 高確率予想画面 Tier内訳/推奨種別内訳 詳細監査 (Session_60 で WARNING 注記付与済)
+- [ ] dashboard 成長分析タブ `cumulative_history.json` AUTO ブロック実装 (Session_60 持越し)
+- [ ] フィード再取得: nhl_injuries / nba_injuries / tennis_withdrawals / lineups (古い 4件)
+- [ ] rule_pipeline evidence 2/3 候補 観察継続 (P018 → 3/3 達成済 N019 implement 判断 / P024 / P025 → 3/3 達成済 N021 implement 判断 / P027 / P020 / P023 / P007 / P001 / P028)
+- [ ] **【Session_57 持越し】**: dashboard.html 成長分析タブ AUTO ブロック / CLAUDE.md _snapshot_history.py 自動実行追記
+
+### ✅ Session_60 完了報告 (2026-04-25 〜 2026-04-27)
+
+**主要成果:**
+- [x] **ALERT 4件 rule_linked 補填**: NBA HOU-LAL G3 (P024_subset+A036) / POR-SAS G3 (P024 limit) / NYK-ATL G3 (P028 2/3) / NHL MTL-TBL G3 (**P018 3/3 → N019 候補**)
+- [x] **dashboard 整合性修正**: 概要 Advanced 損益 +3.10u → +2.85u / 正答率 78.3% → 75.0% / 高確率予想 64.3% (9/14) → 80.0% (8/10)
+  - 根因: dashboard_stats.json (Session_58時点) と cumulative.json (Session_59 真値) の by_tier 値乖離
+  - dashboard_stats.json by_tier 完全同期 + sync_dashboard 再生成
+- [x] **2026-04-25.json 新規分一括スクリーニング 57試合**:
+  - Soccer 5大リーグ 35件 (4 prov_GO + 3 caution_margin + 28 skip)
+  - MLB 15件 (2 caution_margin + 13 skip) — records/mlb/2026.json 初回 entries 投入
+  - NRL R9 7件 (2 prov_GO + 1 caution_margin + 4 skip)
+- [x] **GEN007 提案 PA103 (UPSET_PICK_Lite)** pending_actions.md 登録
+- [x] scripts: `_session60_screen.py` / `_session60_writeback.py` / `_session60_screen.py` 保存
+
+**Session_60 末尾 health_check**: 16/16 OK + WARN 2件 (UPSET_PICK 未発動継続 / フィード古い 4件)
+
+**コミット**: cb4d28e (ALERT補填+GEN007提案) / 2a5e415 (dashboard整合性修正) / 882319b (スクリーニング57件)
 
 ### ✅ Session_59 完了報告 (2026-04-25)
 
