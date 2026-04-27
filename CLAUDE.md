@@ -549,6 +549,142 @@ Session_61 で R024 (form slump 補正) を同一 turn 内で evidence 3/3 → i
 
 ---
 
+## 【柱C: 一次ソース fetch 義務化】Session_62 2026-04-27 制定
+
+> **背景**: Session_61 運用品質診断 v2 で、WebFetch 本文取得 0件成功・SNS/監督会見 0件・構造化スタッツサイト 0件のまま miss_analysis を記述し、記憶ベース推論で「Madrid altitude (1500m) で sub-altitude ball change が rhythm 破壊」のような事実根拠を伴わない主張を evidence として採用した事象が発生 (項目C 自己評価 2/5)。本プロトコルは MISS の重要度に応じた fetch 統制を義務化し、一次ソースに基づく分析品質を担保する。
+>
+> 本セクションは段階的に追記される。ステージ1 (4-1 MISS 重要度3段階分類) を本フェーズで先行実装し、ステージ2 (4-2 fetch 件数規定) / ステージ3 (4-3 情報源タグ義務化) は後続ステージで追記する。
+
+### 4-1. MISS 重要度3段階分類
+
+records/{sport}/*.json の `prediction_hit=false` エントリには `miss_class` フィールドを必須付与する。**新規 MISS 発生時のみ付与開始** (既存記録への遡及付与は実施しない)。
+
+#### 判定条件 (機械判定可能な tier / quadrant ベース)
+
+| Class | 判定条件 | 運用上の意義 |
+|---|---|---|
+| **A: 高重要度** | `tier ∈ {go, upset_pick}` の MISS (実損失あり) | ベット P&L に直結。予測モデルの根幹に関わる失敗 |
+| **B: 中重要度** | (a) `tier ∈ {caution, caution_margin, provisional_go}` の MISS / (b) `quadrant=Q3_output_a` (conf≥85%) の MISS | ベット影響なしだが確実視判断のズレ。Track 2 (モデル品質) の信頼性に影響 |
+| **C: 低重要度** | (a) `tier=skip` の MISS / (b) `quadrant=Q3_mid` (80≤conf<85%) の MISS / (c) `quadrant=Q4_upset_watch` HIT / (d) **scope外UPSET** (records 未登録だが市場fav≤1.50 敗戦) | 予測対象外・参考データ。ルール強化のための長期蓄積用 |
+
+#### confidence_drift フラグ (HIT 内 confidence 乖離大の追跡)
+
+HIT であっても推定勝率と試合内容に大きな乖離がある場合、`confidence_drift` フィールドを付与し Class B 相当の深掘り対象とする。
+
+- **フィールド定義**: `confidence_drift: "high" | null` (2値構造。`"low"` は本フェーズでは未定義のため不採用。将来拡張時にフェーズ6 / 別タスクで再設計する)
+- **判定基準**: 「推定勝率 ≥ 80% で予想したのに、実際は接戦/僅差勝利だった場合」に `"high"` を付与
+- **種目別の薄勝ち閾値**: **TBD: フェーズ6 統合動作確認時に確定**
+  - 想定例 (確定前の参考): テニス 3セット縺れ / NHL OT勝利 / NBA 1桁差 / サッカー 1点差 / MLB 1点差 / NFL TD1個差以内 / NRL TD1個差以内
+  - 各種目の具体数値は本フェーズでは確定せず、フェーズ6 で協議
+- **本フェーズでは枠組みのみ実装**。具体閾値確定までは `confidence_drift` フィールド付与は任意。確定後に必須化
+
+#### miss_class フィールド必須付与ルール
+
+- **対象**: フェーズ4 承認後の **新規** `prediction_hit=false` エントリのみ
+- **遡及付与なし**: 既存 records/*.json 100件超への遡及付与は実施しない
+- **付与タイミング**: 結果反映で `prediction_hit=false` を確定した時点で同時付与
+- **値**: `"A"` / `"B"` / `"C"` の3値必須 (空・null は禁止)
+- **scope外UPSET の扱い**: records 未登録 → ユーザー承認後に records 登録時に `miss_class: "C"` 付与
+- **記述例**:
+  ```json
+  {
+    "match": "...",
+    "tier": "go",
+    "prediction_hit": false,
+    "miss_class": "A",
+    "miss_analysis": "..."
+  }
+  ```
+
+#### v3.0 2トラック精度管理との整合性
+
+- **Track 1 (ベット推奨収益性)**: Class A / B(a) のみ寄与
+- **Track 2 (全試合モデル品質)**: Class A / B / C 全件寄与
+- 既存 `prediction_hit` フィールドは維持。`miss_class` は補助フィールドとして追加するのみ
+- `cumulative.json` への `by_miss_class` 集計セクション追加は本フェーズ範囲外 (フェーズ6 後の別タスクで検討)
+
+### 4-2. fetch 件数規定
+
+MISS 分析で参照する一次ソースの最低件数を Class 別に規定する。本規定は **新規 MISS 発生時の調査強度** を統制するもので、既存記録への遡及適用は実施しない。
+
+#### Class 別 WebFetch 必須件数
+
+| Class | WebFetch 最低成功件数 | ソース内訳必須要件 |
+|---|---|---|
+| **A: 高重要度** | **3 件以上** | (a) 公式試合レポート 1件 / (b) 詳細スタッツサイト 1件 / (c) 選手・監督コメント or ニュース記事 1件 |
+| **B: 中重要度** | **2 件以上** | (a) 公式試合レポート 1件 / (b) 詳細スタッツ or ニュース記事 1件 |
+| **C: 低重要度** | **1 件以上** | (a) 公式試合レポート or 信頼スタッツサイト 1件 |
+| **HIT confidence_drift=high** | Class B 相当 (2 件以上) | Class B 内訳に準じる |
+
+#### WebSearch スニペット原則
+
+WebSearch のスニペット (検索結果リスト内の抜粋テキスト) は **fetch カウント対象外**。理由:
+
+- スニペットは検索エンジン側の要約であり、元記事の前後文脈が省略される
+- 抜粋部分の正確性が検証できない
+- Week / Round / 日付の混同を誘発する (CE013 再発リスク)
+
+fetch は **WebFetch で本文取得した URL のみ** を有効カウントとする。WebSearch は補助情報 (URL 候補の発見・スニペット予備調査) として位置付け、確定根拠としては扱わない。
+
+#### fetcher 経由 (構造化スタッツ) のカウント
+
+`scripts/fetch_*.py` 経由で取得済の構造化スタッツデータ (`stats/feeds/*.json` 配下) は **WebFetch 1件相当としてカウント可**。ただし以下の条件を満たすこと:
+
+- 該当 fetcher の最終取得が `--days-stale` 規定内 (鮮度 OK) であること
+- `scripts/stats_feed_reader.py` の `feed_status()` で `OK` 判定であること
+- タグは `[FETCHER:src]` で別タグ扱い (具体仕様はステージ3 で定義)
+
+#### fetch 失敗時の運用 (3回試行 + [FETCH_FAILED] フラグ)
+
+WebFetch で 403 / 404 / timeout が発生した場合:
+
+1. **試行1**: 同種別の代替ソース 1件を試行 (例: atptour.com 失敗 → tennisabstract.com)
+2. **試行2**: 別種別ソースを 1件試行 (例: スタッツサイト失敗 → ESPN記事)
+3. **試行3**: 計3回試行しても fetch 必須件数を満たせなければ、以下を実施:
+   - `miss_analysis` に `[FETCH_FAILED:URL1, URL2, URL3]` タグを明示 (具体タグ仕様はステージ3 で定義)
+   - 当該 records エントリに `investigation_status: "investigation_incomplete"` を付与
+   - 次セッション再試行を `monitoring/pending_actions.md` に登録
+
+#### investigation_incomplete のまま evidence 加算禁止 (柱A 整合)
+
+`investigation_status: "investigation_incomplete"` のまま `core/rule_pipeline.json` の `evidence` 配列への加算は **禁止**。理由:
+
+- evidence 蓄積は最終的に `current_count >= trigger_threshold` 到達時に提案レポート生成 → ルール実装に繋がる
+- 不完全調査による evidence 加算は柱A 承認制プロセスの根拠を毀損する
+- 調査完了 (規定件数達成 or ユーザー判断による打切り) してから evidence 加算する運用とする
+
+#### claude_sport で参照する一次ソースサイト推奨リスト
+
+| 種目 | 公式試合レポート | 詳細スタッツ | コメント / ニュース |
+|---|---|---|---|
+| **ATP テニス** | atptour.com | tennisabstract.com | espn.com (tennis) / theathletic.com |
+| **WTA テニス** | wtatennis.com | tennisabstract.com (Women's) | espn.com / theathletic.com |
+| **NHL** | nhl.com (gamecenter) | moneypuck.com / naturalstattrick.com | espn.com / theathletic.com |
+| **NBA** | nba.com (boxscore) | basketball-reference.com / cleaningtheglass.com | espn.com / theathletic.com |
+| **MLB** | mlb.com | baseballsavant.mlb.com / fangraphs.com | espn.com / theathletic.com |
+| **NFL** | nfl.com | pro-football-reference.com / footballoutsiders.com | espn.com / theathletic.com |
+| **CFL** | cfl.ca | cfl.ca/stats | tsn.ca |
+| **UFL** | theufl.com | theufl.com/stats | espn.com |
+| **NRL** | nrl.com (match center) | nrl.com/draw | foxsports.com.au |
+| **Super League** | superleague.co.uk | rugby-league.com | bbc.co.uk/sport/rugby-league |
+| **Super Rugby** | super.rugby | super.rugby/stats | rugbypass.com |
+| **Premiership** | premiershiprugby.com | premiershiprugby.com/stats | rugbypass.com / bbc.co.uk |
+| **Top 14 / Pro D2** | lnr.fr | lnr.fr/stats | rugbypass.com / midi-olympique.fr |
+| **AHL** | theahl.com | theahl.com/stats | thehockeynews.com |
+| **サッカー (5大リーグ)** | premierleague.com / laliga.com / bundesliga.com / legaseriea.it / ligue1.com | understat.com / fbref.com | espn.com / bbc.co.uk |
+| **横断 (全種目)** | flashscore.com / sofascore.com | sofascore.com / flashscore.com | (該当なし) |
+
+注意:
+- 上記リストは **fetch 対象としての候補一覧** であり、各サイトの WebFetch 成功実績は本フェーズでは未検証。実績は運用で蓄積する
+- Cloudflare 等の保護で WebFetch が 403 失敗するサイト (例: Session_61 で atptour.com 失敗) は試行1 で代替へフォールバックする
+- fetcher 経由 (`scripts/fetch_*.py`) で既に成功実績があるサイト (moneypuck / basketball-reference / understat / baseball-savant 等) は fetcher 経由カウントを優先利用すること
+
+### 4-3. 情報源タグ義務化 (ステージ3 で追記予定)
+
+(本ステージでは未実装。ステージ3 で 5種タグ仕様 + 主張ごと付与 + タグなし禁止 + 良い例/悪い例 + CHECK-2 連携 + セッション固有スクリプト生成時のタグ義務を追記する)
+
+---
+
 ## 【絶対禁止】架空情報の生成
 
 選手名・チーム名・スコア・オッズ・怪我・出場情報など、架空の具体的情報を生成することは絶対禁止。
