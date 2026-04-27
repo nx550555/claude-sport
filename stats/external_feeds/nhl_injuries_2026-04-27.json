@@ -1,13 +1,37 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-04-27T12:52:12.780480+09:00",
+  "fetched_at": "2026-04-27T23:20:48.979764+09:00",
   "starting_goalies": [],
   "injuries": [
+    {
+      "player": "Radko Gudas",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Apr 28",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Ross Johnston",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Apr 28",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
     {
       "player": "Viktor Arvidsson",
       "team": null,
       "position": "LW",
+      "estimated_return": "Apr 28",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Josh Norris",
+      "team": null,
+      "position": "C",
       "estimated_return": "Apr 28",
       "status": "Day-To-Day",
       "comment": ""
@@ -40,7 +64,7 @@
       "player": "Nikolaj Ehlers",
       "team": null,
       "position": "LW",
-      "estimated_return": "Apr 27",
+      "estimated_return": "May 1",
       "status": "Day-To-Day",
       "comment": ""
     },
@@ -56,6 +80,14 @@
       "player": "Nils Lundkvist",
       "team": null,
       "position": "D",
+      "estimated_return": "Apr 28",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Colton Dach",
+      "team": null,
+      "position": "C",
       "estimated_return": "Apr 28",
       "status": "Day-To-Day",
       "comment": ""
@@ -139,6 +171,14 @@
       "estimated_return": "Sep 15",
       "status": "Injured Reserve",
       "comment": "Sep 30: ir-lt"
+    },
+    {
+      "player": "Charle-Edouard D'Astous",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Apr 29",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Victor Hedman",

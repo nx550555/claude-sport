@@ -1,7 +1,7 @@
 {
   "source": "https://statsapi.mlb.com/api/v1/teams/stats?season=2026&group=hitting|pitching",
   "source_note": "Switched from fangraphs.com to MLB StatsAPI (Cloudflare bypass). wRC+ is OPS+ proxy (100 * team_OPS / league_avg_OPS). FIP computed from (13*HR + 3*(BB+HBP) - 2*K)/IP + cFIP.",
-  "fetched_at": "2026-04-27T12:52:40.694658+09:00",
+  "fetched_at": "2026-04-27T23:21:22.699876+09:00",
   "season": "2026",
   "league_context": {
     "league_avg_OPS": 0.715,
