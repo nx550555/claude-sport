@@ -679,9 +679,133 @@ WebFetch で 403 / 404 / timeout が発生した場合:
 - Cloudflare 等の保護で WebFetch が 403 失敗するサイト (例: Session_61 で atptour.com 失敗) は試行1 で代替へフォールバックする
 - fetcher 経由 (`scripts/fetch_*.py`) で既に成功実績があるサイト (moneypuck / basketball-reference / understat / baseball-savant 等) は fetcher 経由カウントを優先利用すること
 
-### 4-3. 情報源タグ義務化 (ステージ3 で追記予定)
+### 4-3. 情報源タグ義務化
 
-(本ステージでは未実装。ステージ3 で 5種タグ仕様 + 主張ごと付与 + タグなし禁止 + 良い例/悪い例 + CHECK-2 連携 + セッション固有スクリプト生成時のタグ義務を追記する)
+`miss_analysis` フィールド・`rule_pipeline.json` の `evidence` エントリ・session_logs の MISS 分析記述・`upset_patterns.json` の miss_analysis_text 等、**事実主張を含む全テキスト** に対し、5種タグのいずれかを主張ごとに付与する義務を課す。
+
+#### 5種タグ仕様
+
+| タグ | 用途 | 記述例 | カウント扱い |
+|---|---|---|---|
+| `[FETCH:URL]` | 当該 URL を **WebFetch で本文取得した事実根拠** | `Khachanov 6-2 6-3 で勝利 [FETCH:https://www.atptour.com/en/scores/...]` | Class 別 fetch 件数の有効 1件 |
+| `[FETCHER:src]` | `scripts/fetch_*.py` 経由で取得済の構造化スタッツ (鮮度 OK + `feed_status()` OK 判定) | `Madrid Elo Khachanov 1812 vs Walton 1623 [FETCHER:tennis_elo]` | WebFetch 1件相当 |
+| `[FETCHER:src:proxy]` | proxy / 計算由来の値 (`wRC_plus_is_proxy=true` / `FIP_is_computed=true` 等のフラグ付き) | `HOU 打線 wRC+ 118 (StatsAPI proxy) [FETCHER:fangraphs:proxy]` | WebFetch 1件相当だが信頼性が proxy であることを明示 |
+| `[SEARCH]` | WebSearch スニペットレベルの根拠 (本文取得していない) | `Shapovalov は serve に苦戦したと報じられた [SEARCH]` | **fetch カウント対象外** (補助情報のみ) |
+| `[MEMORY]` | 記憶ベースの推論 (検証不能・記述許容だが evidence 化禁止) | `Madrid は 1500m の altitude にあると一般に知られる [MEMORY]` | カウント対象外。evidence 配列への加算禁止 |
+| `[INFER]` | fetch / search の組合せからの導出推論 | `→ サーブ依存型の rhythm が崩れた可能性 [INFER]` | カウント対象外 |
+
+#### タグ付与単位 (主張ごと)
+
+タグは **主張ごと** に付与する。段落一括での末尾1タグは禁止。
+
+- **1主張 = 1事実言明 or 1推論結論**
+- 複数主張を含む段落は、各主張の末尾にタグを付与
+- 句読点単位ではなく「論理的に独立した主張」単位で区切る
+
+#### タグなし主張は禁止
+
+事実主張・推論を含む文末にタグなしの記述があれば **禁止**。検出方法は2系統併用:
+
+- **CHECK-2 自己点検** (Claude 側): 応答送信前 / 記録ファイル書き込み前にタグなし主張がないか目視確認 (`monitoring/check_protocol.md` CHECK-2 と連携)
+- **health_check.py 機械検出** (システム側): 新検査項目 `miss_analysis_tag_compliance` が `records/{sport}/*.json` の miss_analysis フィールドを走査し、タグ無し主張を WARN/ALERT 化
+
+#### 良い例 / 悪い例
+
+**悪い例 (Session_61 A038 Shapovalov の miss_analysis 実例)**:
+
+```
+Madrid altitude (1500m) で sub-altitude ball change が rhythm を破壊し、
+Budkov Kjaer の serve 圧力に対応できなかった。
+```
+
+→ 問題点:
+- altitude 1500m は記憶ベース ([MEMORY] 必要だが付与なし)
+- sub-altitude ball change の影響は WebFetch で検証されていない ([INFER] 必要だが先行 [FETCH] なし)
+- serve 圧力の主張も一次ソース未確認 ([SEARCH] 止まり)
+- 全体としてタグなしで「確定事実のように」記述 → 一次ソース統制が機能せず R024 implement の根拠として採用された構造的問題
+
+**良い例 (改善後の同パターン)**:
+
+```
+Budkov Kjaer は 53分のストレート勝利 [FETCH:https://www.atptour.com/en/scores/2026/madrid/match/r2-budkov-kjaer-shapovalov]。
+試合中の Shapovalov の 1st serve in% は 52% (通常 65%) [FETCHER:tennis_serve]。
+Madrid は標高 1500m と一般に知られる [MEMORY]。
+→ サーブ依存型 player の rhythm が標高で崩れた可能性 [INFER]。
+```
+
+→ 各主張ごとにタグが付与され、根拠の信頼性レベル (FETCH > FETCHER > SEARCH > MEMORY > INFER) が読み手に明示される。
+
+#### `[FETCH_FAILED:URL1,URL2,URL3]` タグ詳細仕様
+
+4-2 規定の fetch 失敗時 3回試行で規定件数未達となった場合に付与する。
+
+- **形式**: `[FETCH_FAILED:URL1,URL2,URL3]` (試行した URL をカンマ区切りで列挙)
+- **試行回数**: 計3回 (試行1: 同種別代替 / 試行2: 別種別 / 試行3: 別種別)
+- **配置**: 当該 miss_analysis テキストの末尾、または該当主張の直後
+- **必須セット**: `investigation_status: "investigation_incomplete"` を records エントリに同時付与
+- **記述例**:
+  ```
+  Newcastle の lineup 変更を確認しようとしたが取得失敗
+  [FETCH_FAILED:https://example.com/team1,https://example.com/team2,https://espn.com/match]。
+  investigation_status: investigation_incomplete として次セッション再試行を pending_actions.md に登録。
+  ```
+
+#### `[FETCHER:src:proxy]` タグ仕様 (4-2 補足の実体化)
+
+- `[FETCHER:src]` = 通常の構造化スタッツデータ (一次計算値)
+- `[FETCHER:src:proxy]` = proxy / 計算由来の値 (フラグ付きデータ)
+- 件数カウントは同等 (WebFetch 1件相当)
+- 適用例:
+  - `fangraphs` で `wRC_plus_is_proxy=true` のデータ → `[FETCHER:fangraphs:proxy]`
+  - `fangraphs` で `FIP_is_computed=true` のデータ → `[FETCHER:fangraphs:proxy]`
+  - 通常の Statcast 直接取得値 → `[FETCHER:baseball_savant]` (proxy なし)
+- 分析時は proxy データを **副**、一次取得値を **主** の位置付けで使用すること
+
+#### `[INFER]` のネスト記法不採用
+
+`[INFER:[FETCH:url]]` のような入れ子記述は **不採用**。代わりに、同段落内に先行する `[FETCH:url]` または `[FETCHER:src]` または `[SEARCH]` タグを置き、それを根拠として直後に `[INFER]` 主張を続ける運用とする。
+
+例 (再掲):
+```
+xG は ホーム 2.1 / アウェー 0.7 [FETCHER:understat]。
+→ ホーム側のシュート機会優位だが決定力差で接戦化した可能性 [INFER]。
+```
+
+→ `[INFER]` の根拠は同段落内の先行タグに依存。段落をまたぐ場合は再掲する。
+
+#### 遡及適用範囲 (新規のみ)
+
+- **対象**: フェーズ4 ステージ3 承認後の **新規** miss_analysis / evidence エントリ / session_logs MISS 分析記述
+- **遡及付与なし**: 既存 records/*.json (100件超) / 既存 `rule_pipeline.json` evidence (P001-P033) / 既存 `upset_patterns.json` (A001-A043) への遡及付与は実施しない
+- 既存記述に対する CHECK-2 / health_check 検出は **新規付与時点以降のエントリのみ** 対象とする
+
+#### CHECK-2 連携
+
+`monitoring/check_protocol.md` の CHECK-2 (情報精度チェック) に以下のチェック項目を追加して運用する (本フェーズで check_protocol.md 自体は改訂対象外。CHECK-2 適用時に本セクションを参照する運用):
+
+- 新規 miss_analysis / evidence 記述時、各主張に5種タグのいずれかが付与されているか?
+- `[FETCH:URL]` / `[FETCHER:src]` の URL/src は実際に取得した一次ソースか?
+- `[INFER]` 主張の同段落内に先行 `[FETCH]` / `[FETCHER]` / `[SEARCH]` タグがあるか?
+- 4-2 規定の Class 別 fetch 件数 (A=3 / B=2 / C=1) を満たしているか?
+- 規定未達なら `[FETCH_FAILED:URL1,URL2,URL3]` + `investigation_status: investigation_incomplete` が付与されているか?
+
+#### health_check.py 連携 (新項目 `miss_analysis_tag_compliance`)
+
+`monitoring/health_check.py` に12番目の検査項目として `miss_analysis_tag_compliance` を実装する:
+
+- `records/{sport}/*.json` を再帰走査し、`miss_analysis` フィールドを持つエントリを抽出
+- フェーズ4 ステージ3 承認日 (= 2026-04-27) 以降に追加されたエントリのみ対象 (記録ファイルの `last_updated` または `prediction_hit` の確定日基準)
+- 各 miss_analysis テキストを正規表現でスキャンし、5種タグ (`\[FETCH:` / `\[FETCHER:` / `\[SEARCH\]` / `\[MEMORY\]` / `\[INFER\]` / `\[FETCH_FAILED:`) の有無を検出
+- タグなし主張 (= タグなしで終わる文) を発見 → WARN 化
+- 完全タグなし miss_analysis (タグ 0個) を発見 → ALERT 化
+
+#### セッション固有スクリプト (`_sessionXX_*.py`) 生成時のタグ義務
+
+セッション内の使い捨てスクリプトで records / upset_patterns / rule_pipeline に書き込みを行う場合、書き込まれる miss_analysis / evidence テキストにも本タグ仕様を適用する。スクリプト生成時に以下を遵守:
+
+- スクリプト内で生成する miss_analysis 文字列には主張ごとのタグを含めること
+- スクリプト末尾に `# tag_compliance_check: applied` コメントを残し、health_check 側で目印とする (将来の自動検証用)
+- 既存 `_session61_writeback.py` / `_session61_rule_feedback.py` / `_session61_phase2_upsets.py` の3本は使い捨て完了済のため改修対象外
 
 ---
 

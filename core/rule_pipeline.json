@@ -8,7 +8,8 @@
     "新しいアップセット・MISS事例が追加されたら、該当する候補のevidenceとcurrent_countを更新する",
     "実装済みルールはimplemented_rulesセクションへ移動し、candidatesからは削除しない（履歴として残す）。ただし implemented への移行はユーザー承認後にのみ実行する。",
     "(Session_45 2026-04-20 追加) GEN005 UF因子チェックは、L1-L4確信度算出直後の**必須手順**。UF因子を機械的に全件 walkthrough (UF01〜UFA06) し、該当数と市場乖離を記録。UPSET_PICK条件未達でも UF因子数>=2 であれば CAUTION 格下げを検討。",
-    "(Session_62 2026-04-27 追加) 既存ルール (R*** / N*** / W*** 等) の body / evidence / application 改訂もユーザー承認必須。CLAUDE.md『ルール改訂統制プロトコル』セクションを参照のこと。"
+    "(Session_62 2026-04-27 追加) 既存ルール (R*** / N*** / W*** 等) の body / evidence / application 改訂もユーザー承認必須。CLAUDE.md『ルール改訂統制プロトコル』セクションを参照のこと。",
+    "(Session_62 2026-04-27 フェーズ4 追加) evidence 配列への追加時、各 evidence エントリの記述は CLAUDE.md『柱C: 一次ソース fetch 義務化』の 5種タグ仕様 ([FETCH:URL] / [FETCHER:src] / [SEARCH] / [MEMORY] / [INFER]) に従うこと。タグなし主張の evidence 加算は禁止。"
   ],
   "trigger_check_protocol": {
     "when": "upset_patterns.jsonにU00x IDで新規エントリ追加時 / BACKLOG.md更新時",

@@ -468,6 +468,96 @@ def main():
     except Exception as e:
         warnings.append(f"日付妥当性チェック失敗: {e}")
 
+    # ---- 12. miss_analysis_tag_compliance (Session_62 フェーズ4 4-3 追加) ----
+    # 5種タグ ([FETCH/FETCHER/SEARCH/MEMORY/INFER]) の付与状況を検査。
+    # 遡及対象外: フェーズ4 ステージ3 承認日 (2026-04-27) 以降に追加された
+    # miss_analysis のみ対象 (既存記録への遡及付与は実施しないため)。
+    try:
+        import re
+        import glob as _glob
+        TAG_PATTERN = re.compile(r"\[(FETCH|FETCHER|SEARCH|MEMORY|INFER|FETCH_FAILED)(:[^\]]*)?\]")
+        APPROVAL_DATE = date(2026, 4, 27)  # フェーズ4 ステージ3 承認日
+        record_files_v12 = sorted(_glob.glob(str(BASE / "records" / "**" / "*.json"), recursive=True))
+        no_tag_entries = []
+        partial_tag_entries = []
+        checked_count = 0
+        for rf in record_files_v12:
+            if "multi_bets.json" in rf:
+                continue
+            try:
+                d = load(Path(rf))
+            except Exception:
+                continue
+            def walk_v12(obj):
+                if isinstance(obj, list):
+                    for x in obj:
+                        yield from walk_v12(x)
+                elif isinstance(obj, dict):
+                    yield obj
+                    for v in obj.values():
+                        yield from walk_v12(v)
+            for o in walk_v12(d):
+                ma = o.get("miss_analysis")
+                if not ma or not isinstance(ma, str):
+                    continue
+                # 承認日基準で対象判定: prediction_hit_date / last_updated_at / date のいずれか
+                # を参照。日付不明 or 承認日より前なら遡及対象外として skip。
+                entry_date = None
+                for date_key in ("prediction_hit_updated_at", "last_updated_at", "date"):
+                    dv = o.get(date_key)
+                    parsed = parse_date(dv) if isinstance(dv, str) else None
+                    if parsed:
+                        entry_date = parsed
+                        break
+                if entry_date is None or entry_date < APPROVAL_DATE:
+                    continue
+                checked_count += 1
+                tags_found = TAG_PATTERN.findall(ma)
+                file_name = Path(rf).name
+                match_name = str(o.get("match", "?"))[:40]
+                if not tags_found:
+                    # 完全タグなし → ALERT 候補
+                    no_tag_entries.append(f"{file_name}:{match_name}")
+                else:
+                    # タグはあるが文末タグなし主張が混在しているかチェック:
+                    # 文 (。 区切り) に分解し、各文がタグで終わっているか確認
+                    sentences = [s.strip() for s in re.split(r"[。\n]+", ma) if s.strip()]
+                    untagged_sentences = []
+                    for sent in sentences:
+                        if not TAG_PATTERN.search(sent):
+                            # 短い接続句 (10文字未満) はカウント対象外 (例: 「なお、」)
+                            if len(sent) >= 10:
+                                untagged_sentences.append(sent[:30])
+                    if untagged_sentences:
+                        partial_tag_entries.append(
+                            f"{file_name}:{match_name}[untagged_sentences={len(untagged_sentences)}]"
+                        )
+        if no_tag_entries:
+            anomalies.append(
+                f"miss_analysis_tag_compliance: 完全タグなし {len(no_tag_entries)}件: "
+                f"{'; '.join(no_tag_entries[:3])}{'...' if len(no_tag_entries)>3 else ''} → "
+                "5種タグ ([FETCH/FETCHER/SEARCH/MEMORY/INFER]) 必須。CLAUDE.md 柱C 4-3 参照。"
+            )
+        if partial_tag_entries:
+            warnings.append(
+                f"miss_analysis_tag_compliance: タグなし主張混在 {len(partial_tag_entries)}件: "
+                f"{'; '.join(partial_tag_entries[:3])}{'...' if len(partial_tag_entries)>3 else ''} → "
+                "主張ごとにタグ付与必須。"
+            )
+        if not no_tag_entries and not partial_tag_entries:
+            if checked_count == 0:
+                goods.append(
+                    f"miss_analysis_tag_compliance: 承認日 {APPROVAL_DATE.isoformat()} 以降の"
+                    "新規 miss_analysis 未検出 (遡及対象外のみ・正常)"
+                )
+            else:
+                goods.append(
+                    f"miss_analysis_tag_compliance: {checked_count}件全件で5種タグ付与済 "
+                    f"(承認日 {APPROVAL_DATE.isoformat()} 以降の新規 miss_analysis のみ対象)"
+                )
+    except Exception as e:
+        warnings.append(f"miss_analysis_tag_compliance チェック失敗: {e}")
+
     # === 結果出力 ===
     print(f"{BOLD}--- [OK] 正常項目 ---{RESET}")
     for g in goods:
