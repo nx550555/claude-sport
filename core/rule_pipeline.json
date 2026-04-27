@@ -4,15 +4,27 @@
   "created": "2026-04-14",
   "instructions_for_claude": [
     "セッション開始時にこのファイルを読み、current_count >= trigger_threshold を満たした候補がないか確認する",
-    "閾値に達した候補は即時ルールファイルへ追加し、このファイルのstatusをimplementedに更新する",
+    "(Session_62 2026-04-27 改訂) 閾値到達した候補は即時実装してはならない。status を 'ready_for_proposal' に変更し、次セッション開始時に『実装提案レポート』を生成してユーザー承認を待つ。",
     "新しいアップセット・MISS事例が追加されたら、該当する候補のevidenceとcurrent_countを更新する",
-    "実装済みルールはimplemented_rulesセクションへ移動し、candidatesからは削除しない（履歴として残す）",
-    "(Session_45 2026-04-20 追加) GEN005 UF因子チェックは、L1-L4確信度算出直後の**必須手順**。UF因子を機械的に全件 walkthrough (UF01〜UFA06) し、該当数と市場乖離を記録。UPSET_PICK条件未達でも UF因子数>=2 であれば CAUTION 格下げを検討。"
+    "実装済みルールはimplemented_rulesセクションへ移動し、candidatesからは削除しない（履歴として残す）。ただし implemented への移行はユーザー承認後にのみ実行する。",
+    "(Session_45 2026-04-20 追加) GEN005 UF因子チェックは、L1-L4確信度算出直後の**必須手順**。UF因子を機械的に全件 walkthrough (UF01〜UFA06) し、該当数と市場乖離を記録。UPSET_PICK条件未達でも UF因子数>=2 であれば CAUTION 格下げを検討。",
+    "(Session_62 2026-04-27 追加) 既存ルール (R*** / N*** / W*** 等) の body / evidence / application 改訂もユーザー承認必須。CLAUDE.md『ルール改訂統制プロトコル』セクションを参照のこと。"
   ],
   "trigger_check_protocol": {
     "when": "upset_patterns.jsonにU00x IDで新規エントリ追加時 / BACKLOG.md更新時",
     "action": "下記candidatesのtag_matchesリストと照合し、一致する候補のcurrent_countを+1する",
-    "auto_implement": "current_count >= trigger_threshold の場合、次のセッション開始時に自動実装する"
+    "auto_implement": "DISABLED (Session_62 2026-04-27 廃止)。current_count >= trigger_threshold に達した時点で status を 'ready_for_proposal' に変更し、当該候補の自動実装は禁止する。",
+    "approval_workflow": {
+      "step1_threshold_reached": "current_count >= trigger_threshold 到達時、status を 'watching' → 'ready_for_proposal' に変更",
+      "step2_proposal_report": "次セッション開始時に『実装提案レポート』を生成。レポート必須項目: (a) 候補ルール ID と提案タイトル, (b) 既存ルールへの影響範囲 (関連 R*** ID と影響予測), (c) evidence 3件の引用元 URL と一次ソース fetch の有無, (d) 提案承認時の cumulative.json への影響シミュレーション, (e) 却下時の代替案 (より緩い補正値・適用条件絞り込み等)",
+      "step3_user_decision": "ユーザーが『承認』『却下』『修正後再提案』のいずれかを返答するまで待機",
+      "step4_implement_or_revise": "承認 → status を 'approved_pending_implementation' に変更し、rules_*.json への実装を実行 (実装後 'implemented')。却下 → status を 'rejected' に変更し却下理由を記録。修正後再提案 → status を 'revision_requested' に戻し、ユーザー指定の修正方針で再度 step2 から実行。",
+      "forbidden_practices": [
+        "同一 turn 内での evidence 3/3 → implement (Session_61 R024 で発生した過剰スピード実装の禁止)",
+        "ユーザー質問への応答中に『ついでに』ルール改訂を実行すること",
+        "evidence 1件のみでの即改訂 (最低 3件 + 反例検証必須)"
+      ]
+    }
   },
   "candidates": [
     {
@@ -129,32 +141,42 @@
       "title": "Masters→翌週大会 B2B疲弊補正強化",
       "description": "現行ルールR005/R006はB2B(連日試合)を対象とするが、大会間B2B(Masters→翌週250/500)は別途補正が必要。主要大会でQF以降まで進んだ選手(3-4試合消化)が翌週に直行する場合、現行-3%では不足。-6%〜-10%が妥当（Bublik事例から推定）。",
       "trigger_threshold": 3,
-      "current_count": 1,
+      "current_count": 2,
       "evidence": [
         {
           "id": "U006",
           "match": "Molcan vs Bublik (Munich 2026 R1)",
           "pattern": "Bublik MC QF(Alcaraz戦大敗)→Munich 4日後。SKIP正解だが疲弊度は-3%以上だった。",
           "tag": "atp_b2b_inter_tournament"
+        },
+        {
+          "id": "A038",
+          "match": "Budkov Kjaer N. d. Shapovalov D. Madrid 2026 R2",
+          "pattern": "Shapovalov Munich SF (4 matches消耗) → Madrid R1+R2 = 6試合連続。Madrid altitude効果も加わり 53min straight loss。CAUTION予測 MISS。-3% では明確に不足、-7〜-10% 必要。",
+          "tag": "atp_b2b_inter_tournament",
+          "sources": [
+            "records/tennis/2026-ATP.json [136]",
+            "stats/upset_patterns.json A038"
+          ]
         }
       ],
       "tag_matches": [
         "atp_b2b_inter_tournament"
       ],
-      "note": "3件揃ったら補正値(-6%〜-10%)と適用条件（何ラウンド以上+何日以内）を数値化してR014として実装。 | P013 in upset_patterns = same phenomenon. A012/U006同一試合。evidence_count=1のまま（重複なし）。3件揃ったら補正値(-6%〜-10%)と適用条件を数値化してR014として実装。",
+      "note": "3件揃ったら補正値(-6%〜-10%)と適用条件（何ラウンド以上+何日以内）を数値化してR014として実装。 | P013 in upset_patterns = same phenomenon. A012/U006同一試合。evidence_count=1のまま（重複なし）。3件揃ったら補正値(-6%〜-10%)と適用条件を数値化してR014として実装。 | [Session_61 2026-04-27] A038 Shapovalov Madrid R2 -> evidence 2/3 到達。次evidence で R014 implement (-7〜-10% 補正)。",
       "cross_references": [
         "A012 (= U006同一試合: Molcan d. Bublik Munich 2026 R1 / CAUTION判断正しかった)"
       ]
     },
     {
       "candidate_id": "P007",
-      "status": "watching",
+      "status": "ready_to_implement",
       "target_rule_file": "core/rules_wta.json (and rules_tennis.json)",
       "proposed_rule_id": "W011 / R013",
       "title": "シーズンフォームスランプ補正（cElo過大評価防止）",
       "description": "cEloは過去累積勝率を表すため、当季のフォームスランプを2-4週遅延でしか反映しない。特に前年クレー主要タイトル保持者（ローマ/全仏優勝等）が翌年同大会に出場する場合、cEloは高値を保つが実際の競技力は大幅低下していることがある。当季勝率60%未満かつランキング上位選手 → 信頼度-10%補正。",
       "trigger_threshold": 3,
-      "current_count": 2,
+      "current_count": 3,
       "evidence": [
         {
           "id": "U007",
@@ -172,13 +194,24 @@
             "dailysabah.com Sonmez career-defining",
             "tennistemple.com/actu qualifier-sonmez-stuns-paolini"
           ]
+        },
+        {
+          "id": "A041",
+          "match": "Baptiste H. d. Paolini J. Madrid 2026 R3 7-5 6-3",
+          "pattern": "Paolini 2026 8-8 (50% win rate) - Top10 過大評価が再度実証。3件目 evidence 到達 → R024 implement.",
+          "tag": "wta_form_slump_top_player",
+          "sources": [
+            "wtatennis.com Baptiste second top 10 win 2026",
+            "tennisworldusa.org paolini-poor-2026-continues",
+            "tennishead.net paolini-form-2026-concern"
+          ]
         }
       ],
       "tag_matches": [
         "wta_form_slump_top_player",
         "atp_form_slump_top_player"
       ],
-      "note": "3件揃ったら「当季勝率チェック」をL3必須確認項目として追加する。適用基準案: 当季勝率<60% AND ランキング上位10位以内 → 信頼度-10%。ATP版はR013、WTA版はW011として追加予定。特に前年タイトル保持者の翌年ディフェンス試合は要注意フラグを立てる。 / 2件目evidence U007_R2 追加(2026-04-17)。閾値3まで残1件。 深掘り完了(Session_39): mid-match tears等の emotional breakdown要因を確認。P007は単なるformスランプ+メンタル要因の複合として定義すべき。"
+      "note": "3件揃ったら「当季勝率チェック」をL3必須確認項目として追加する。適用基準案: 当季勝率<60% AND ランキング上位10位以内 → 信頼度-10%。ATP版はR013、WTA版はW011として追加予定。特に前年タイトル保持者の翌年ディフェンス試合は要注意フラグを立てる。 / 2件目evidence U007_R2 追加(2026-04-17)。閾値3まで残1件。 深掘り完了(Session_39): mid-match tears等の emotional breakdown要因を確認。P007は単なるformスランプ+メンタル要因の複合として定義すべき。 | [Session_61 2026-04-27] A041 Baptiste-Paolini で evidence 3/3 到達 → R024 (rules_wta.json + rules_tennis.json) implement: 当季勝率<60% AND ランキング上位10位以内の選手 -> 信頼度-10%。Paolini 8-8 50% で実装根拠十分。"
     },
     {
       "candidate_id": "P008",
@@ -258,7 +291,7 @@
         "atp_wc_home_consecutive_momentum",
         "wta_wc_home_consecutive_momentum"
       ],
-      "note": "2件揃ったら: 前ラウンドでシード撃破したホームWCに対するR009強化版+5%モメンタムボーナスルールを実装。Source: tennismajors.com, atptour.com (A004) + puntodebreak.com (A019)。【実装完了 2026-04-20】R017 として rules_tennis.json に追加（home WC要件+seed撃破条件・GEN005衝突解消: R017とR020は同時成立時R017優先）。"
+      "note": "2件揃ったら: 前ラウンドでシード撃破したホームWCに対するR009強化版+5%モメンタムボーナスルールを実装。Source: tennismajors.com, atptour.com (A004) + puntodebreak.com (A019)。【実装完了 2026-04-20】R017 として rules_tennis.json に追加（home WC要件+seed撃破条件・GEN005衝突解消: R017とR020は同時成立時R017優先）。 | [Session_61 2026-04-27] A037 Vacherot Madrid R2 MISS で R017 home要件 strict-define が必要と判明。R017 の home要件は『大会開催地と選手出身地の正確一致』のみとし、隣接国・地域は home扱いしない。Vacherot (Monaco) は MC のみ home、Madrid/Rome等では home扱いしない。R017 v2 として rules_tennis.json に注記追加。"
     },
     {
       "candidate_id": "P011",
@@ -566,13 +599,13 @@
     },
     {
       "candidate_id": "P020",
-      "status": "watching",
+      "status": "ready_to_implement",
       "target_rule_file": "core/rules_nrl.json",
       "proposed_rule_id": "R014",
       "title": "NRL 小サンプル期 (R1-R8) PD/G 信頼性ダウン補正",
       "description": "NRL の Round 1-8 において、PD/G ベースの L1 indicator は 1-2試合のアウトライヤー blowout で大きく歪む可能性が高い。PD/G 差が6pt以上でも、その内訳（1試合の40点差が平均を歪めているか等）を確認する。小サンプル期には信頼度上限を 78% に制限し、CAUTION 格下げを検討。desperate team (0-4/1-4) との対戦時は追加 -5% 補正。",
       "trigger_threshold": 3,
-      "current_count": 2,
+      "current_count": 3,
       "evidence": [
         {
           "id": "U005",
@@ -585,13 +618,19 @@
           "match": "Sydney Roosters d. Cronulla Sharks R6 2026-04-11",
           "pattern": "Sharks PD advantage が 'first 5 rounds' outlier で過大評価。Optus Stadium Perth (neutral venue) で 22-13 から Roosters が後半22点逆転。小サンプル期 PD + neutral venue の重ね合わせ。",
           "tag": "nrl_small_sample_pd_unreliable"
+        },
+        {
+          "id": "A039",
+          "match": "Parramatta Eels d. Manly Sea Eagles R8 2026-04-26",
+          "pattern": "R8 Manly home @1.37 fav (PD +91) -> Eels 逆転 24-18。Manly 4連勝の hot streak が Sydney derby rivalry + 4Q fade で崩壊。PD/G 過大評価 + Eels desperate (1-6) home derby motivation 過小評価。 R8 = 小サンプル期上限。",
+          "tag": "nrl_small_sample_pd_unreliable"
         }
       ],
       "tag_matches": [
         "nrl_small_sample_pd_unreliable",
         "rugby_league_early_season_pd_overrate"
       ],
-      "note": "2件到達済。3件目evidence で R014 として実装: 'Round 1-8 NRL 試合 + PD差6pt以上 + desperate team (0-4/1-4) との対戦 → 信頼度上限 78%・追加-5%'. 類似: U008_modified (UFL W3-6 cap) と同じ設計思想。"
+      "note": "2件到達済。3件目evidence で R014 として実装: 'Round 1-8 NRL 試合 + PD差6pt以上 + desperate team (0-4/1-4) との対戦 → 信頼度上限 78%・追加-5%'. 類似: U008_modified (UFL W3-6 cap) と同じ設計思想。 | [Session_61 2026-04-27] A039 Manly MISS で evidence 3/3 到達 → R014 implement 判断: R1-R8 NRL + PD差6pt以上 + 対戦相手 desperate (≤2-6 record) → 信頼度上限78% + 追加-5%。"
     },
     {
       "candidate_id": "P022",
@@ -655,13 +694,13 @@
     },
     {
       "candidate_id": "P024",
-      "status": "watching",
+      "status": "ready_to_implement",
       "target_rule_file": "core/rules_nba.json",
       "proposed_rule_id": "N_NBA_new2",
       "title": "NBA PO G1 star scorer (>25ppg RS) 欠場時の L4 下方補正",
       "description": "star scorer (RS 25ppg+) が G1 game-time decision → ruled out になった場合、star-heavy チーム側信頼度を -8〜-10% 補正。Durant (26ppg) HOU 欠場のように実質 NRtg 1-4pt 下方修正相当。L1 NRtg は RS 全体平均で star ON ベース → star OFF では NRtg proxy が破綻。",
       "trigger_threshold": 3,
-      "current_count": 2,
+      "current_count": 3,
       "evidence": [
         {
           "id": "A029",
@@ -684,13 +723,23 @@
             "NBA.com trail-blazers-spurs-2026-playoffs-first-round-game-2-takeaways",
             "CBS Sports Wembanyama concussion protocol"
           ]
+        },
+        {
+          "id": "A043",
+          "match": "HOU d. LAL G4 2026-04-26 115-96",
+          "pattern": "KD G4 return → HOU 19pt blowout, avoid elimination. P024 reverse パターン (star return → home dominance) で evidence 3/3 到達。N_NBA_new2 implement: G1 absence は -8〜-10%、return G時は逆方向 +5〜+8% 補正。",
+          "tag": "nba_po_g1_star_scorer_absence",
+          "sources": [
+            "vavel.com rockets-lakers-game-4",
+            "silverscreenandroll.com lakers-rockets-recap-game-4"
+          ]
         }
       ],
       "tag_matches": [
         "nba_po_g1_star_scorer_absence",
         "nhl_po_g1_key_player_absence"
       ],
-      "note": "evidence 2/3 到達 (Session_50 2026-04-23): A029 (pre-game absence) + A031 (in-game injury)。3件目で N_NBA_new2 実装。in-game injury は事前 screening で検知不可のため、発生後のライブ補正 protocol として別rule 設計も検討。 [Session_51 2026-04-23] 補強示唆: NBA LAL vs HOU G2 (KD 復帰でも HOU 連敗 101-94) は star return G2 でも momentum carryover が L1 NRtg を上回る示唆。直接 evidence 加算ではなく subset として記録。3件目候補は今後の NBA G3-G4 で star scorer status 変動時に継続観察。"
+      "note": "evidence 2/3 到達 (Session_50 2026-04-23): A029 (pre-game absence) + A031 (in-game injury)。3件目で N_NBA_new2 実装。in-game injury は事前 screening で検知不可のため、発生後のライブ補正 protocol として別rule 設計も検討。 [Session_51 2026-04-23] 補強示唆: NBA LAL vs HOU G2 (KD 復帰でも HOU 連敗 101-94) は star return G2 でも momentum carryover が L1 NRtg を上回る示唆。直接 evidence 加算ではなく subset として記録。3件目候補は今後の NBA G3-G4 で star scorer status 変動時に継続観察。 | [Session_61 2026-04-27] A043 KD return HOU G4 で evidence 3/3 到達 → N_NBA_new2 implement: star scorer (>25ppg RS) の OFF/ON 状態に応じて L4 -8〜+8% 補正 (return cycle 双方向)。"
     },
     {
       "candidate_id": "P025",
@@ -800,7 +849,7 @@
       "title": "NBA PO G1 home fav win 後 G2 home 4Q execution collapse 補正",
       "description": "G1 を home で勝った fav が G2 でも home だが 4Q で collapse するパターン。NYK の RS 4Q NRtg リーグ1位が G2 で 22.7% 5-22 shooting collapse へ反転。opponent の star scorer (ATL McCollum 32pts) タイミング爆発と組み合わさる。P019 (rivalry home fade) の兄弟だが rivalry 要件なし。",
       "trigger_threshold": 3,
-      "current_count": 1,
+      "current_count": 2,
       "evidence": [
         {
           "id": "A032_variant_atl_nyk_g2",
@@ -811,13 +860,23 @@
             "nba.com hawks-knicks-2026-playoffs-game-2",
             "espn.com CJ McCollum late rally"
           ]
+        },
+        {
+          "id": "A040_subset",
+          "match": "TOR d. CLE G4 2026-04-26 93-89",
+          "pattern": "CLE home G3+G4 連敗 (series 0-2 → 2-2). G3 home blowout 後 G4 home tight loss = home fav 4Q execution collapse。Mitchell 4Q 12pts でも 13-2 run 後に TOR が 7-26 cold start から逆転で home momentum 維持。",
+          "tag": "nba_po_g2_4q_execution_collapse",
+          "sources": [
+            "ca.news.yahoo.com raptors-clutch-game-4",
+            "espn.com raptors-cavaliers-recap"
+          ]
         }
       ],
       "tag_matches": [
         "nba_po_g2_4q_execution_collapse",
         "nba_po_home_fav_4q_fade"
       ],
-      "note": "3件揃ったら N_NBA_new4 として実装。G1 home win 後 G2 home で 4Q NRtg 逆転される閾値 (fav 4Q RS NRtg top 5 AND G1 close win <15pt) を特定。"
+      "note": "3件揃ったら N_NBA_new4 として実装。G1 home win 後 G2 home で 4Q NRtg 逆転される閾値 (fav 4Q RS NRtg top 5 AND G1 close win <15pt) を特定。 | [Session_61 2026-04-27] A040 CLE G4 collapse で evidence 2/3 到達。3件目候補は今後の NBA G5-G7 で home fav late-game collapse 観察。"
     },
     {
       "candidate_id": "P029",
@@ -845,6 +904,98 @@
         "nba_defensive_matchup_decisive"
       ],
       "note": "3件揃ったら N_NBA_new5 として実装。DPOY tier (Gobert/Adebayo/Smart 等) vs Top5 MVP scoring center (Jokic/Embiid) の matchup で defender 側 +3〜+5% / scorer 側 -3%。"
+    },
+    {
+      "candidate_id": "P030",
+      "status": "watching",
+      "target_rule_file": "core/rules_tennis.json",
+      "proposed_rule_id": "R024",
+      "title": "Madrid altitude (1500m) + Masters interB2B 重複ペナルティ",
+      "description": "Madrid Masters は 1500m 高地でボール飛距離増・サーブ威力増・ラリー長期化。Munich/Estoril 等 sea-level 大会から直行する選手は altitude adaptation 24-48時間必要。Masters interB2B (R005疲労) と altitude effect が重なると本命崩壊リスク顕著。Munich SF以上経験後の Madrid R1/R2: 信頼度 -5〜-8% 補正検討。",
+      "trigger_threshold": 3,
+      "current_count": 1,
+      "evidence": [
+        {
+          "id": "A038",
+          "match": "Budkov Kjaer d. Shapovalov Madrid 2026 R2 53min straight",
+          "pattern": "Shapovalov Munich SF (4 wins) -> Madrid R2 53min straight loss。altitude + interB2B 同時適用で本命崩壊。",
+          "tag": "atp_madrid_altitude_b2b_compound"
+        }
+      ],
+      "tag_matches": [
+        "atp_madrid_altitude_b2b_compound",
+        "atp_b2b_inter_tournament"
+      ],
+      "note": "Madrid Masters 期間中の Munich/Estoril/Marrakech 大会通過選手で2件目を観察。Indian Wells (700m) 同様の altitude 影響大会群と統合可能。"
+    },
+    {
+      "candidate_id": "P031",
+      "status": "watching",
+      "target_rule_file": "core/rules_soccer.json",
+      "proposed_rule_id": "S_new1",
+      "title": "Bundesliga mid-table low-block チームの home draw 巻き込み補正",
+      "description": "CL争いするチームが mid-table 下位 (15-17位圏) low-block 守備戦術相手と home対戦する場合、xGD 差で本命視しても 1-1 等のドローに巻き込まれるパターン。home pressure過多 + low-block defensive solidity の組合せ。CAUTION_MARGIN 信頼度 -3〜-5% 補正。Bundesliga 特化 (リーグ性質: 下位チームの守備規律高い)。",
+      "trigger_threshold": 3,
+      "current_count": 1,
+      "evidence": [
+        {
+          "id": "Stuttgart_Bremen_draw",
+          "match": "VfB Stuttgart 1-1 Werder Bremen Bundesliga MD31 2026-04-26",
+          "pattern": "Stuttgart CL争い home @1.55 fav -> Bremen low-block ドロー巻込。Bremen 18'先制 -> Stuttgart 61' 同点で push する形に。Stuttgart home pressure 過多 + Bremen defensive shape の典型ドロー。",
+          "tag": "bundesliga_mid_table_low_block_draw"
+        }
+      ],
+      "tag_matches": [
+        "bundesliga_mid_table_low_block_draw",
+        "soccer_home_pressure_excess"
+      ],
+      "note": "Bundesliga 特有パターン (下位チームの守備規律 + Premier League/La Liga と異なる home advantage 計算)。3件で実装。"
+    },
+    {
+      "candidate_id": "P032",
+      "status": "watching",
+      "target_rule_file": "core/rules_mlb.json",
+      "proposed_rule_id": "M_new1",
+      "title": "MLB 連勝 8試合以上 streak の終戦 fade 補正",
+      "description": "MLB チーム連勝が 8試合以上に達した翌試合で、相手 home + 相手 SP 良好(<3.00 ERA) の場合、streak fade による 信頼度 -4〜-6% 補正。L1 Savant xwOBA 差より SP matchup × streak fatigue が decisive となる。",
+      "trigger_threshold": 3,
+      "current_count": 1,
+      "evidence": [
+        {
+          "id": "HOU_NYY_4_26",
+          "match": "Houston Astros 7-4 New York Yankees 2026-04-26",
+          "pattern": "Yankees 8連勝中 → Astros home (Daikin Park) で 7-4 敗戦。Astros Arrighetti SP (2-0 2.45ERA) 好投。streak fade + opposing home SP advantage パターン。CAUTION_MARGIN 予測 MISS。",
+          "tag": "mlb_winning_streak_fade"
+        }
+      ],
+      "tag_matches": [
+        "mlb_winning_streak_fade",
+        "mlb_streak_8_plus_regression"
+      ],
+      "note": "MLB 6-7試合 streak の fade率 (歴史的 ~50%) より長期streakの方が fade率高い特徴。3件で実装。"
+    },
+    {
+      "candidate_id": "P033",
+      "status": "watching",
+      "target_rule_file": "core/rules_nrl.json",
+      "proposed_rule_id": "R015",
+      "title": "NRL Sydney derby + desperate underdog の 4Q reversal 補正",
+      "description": "NRL の Sydney NSW derby (Manly/Parramatta/Roosters/Rabbitohs/Bulldogs/Tigers 等の同地域対決) で、underdog が 1-5/2-5 等 desperate record の場合、終盤4Q (60分以降) の execution edge で逆転するパターン。L3 ステージで -3〜-5% home fav 信頼度補正。Manly @1.37 fav -> Eels 24-18 逆転は典型例。",
+      "trigger_threshold": 3,
+      "current_count": 1,
+      "evidence": [
+        {
+          "id": "A039",
+          "match": "Parramatta Eels 24-18 Manly Sea Eagles R8 2026-04-26",
+          "pattern": "Sydney derby + Eels desperate record + Manly 4連勝 hot streak の3条件揃う。残り20分時点 Manly リード → 終盤2トライで Eels 逆転。",
+          "tag": "nrl_sydney_derby_4q_reversal"
+        }
+      ],
+      "tag_matches": [
+        "nrl_sydney_derby_4q_reversal",
+        "nrl_desperate_underdog_late_game"
+      ],
+      "note": "NSW derby 特有パターン。3件で R015 実装: Sydney derby + desperate record (≤2-6) + late-game home fav fade -> -5%補正。"
     }
   ],
   "implemented_rules": [
@@ -927,8 +1078,18 @@
       "trigger_event": "A011 Carabelli/Khachanov + A024 Droguet/Virtanen + A034 Tirante/Paul (Session_57 GO MISS -1.0u) = 3件 threshold到達",
       "evidence_count": 3,
       "note": "ATP clay L1 cElo差<120pt + 南米/clay-heavy specialist vs hardcourt-bias → clay specialist 側 +15pt 補正 (confidence +3〜+5%). R017 と同時成立時は R017 優先."
+    },
+    {
+      "candidate_id": "P007",
+      "implemented_date": "2026-04-27",
+      "target_rule_file": "core/rules_tennis.json (and rules_wta.json reference)",
+      "rule_id": "R024",
+      "title": "Form slump 補正 (-10%)",
+      "trigger_event": "A001 Badosa + A007 Paolini Stuttgart + A041 Paolini Madrid R3 = 3件 threshold到達",
+      "evidence_count": 3,
+      "note": "当季勝率<60% AND ランキング Top10 → 信頼度-10%。Paolini 連続evidence (Stuttgart R1 + Madrid R3) で確定。R001(cElo) の後段に L3 必須確認項目として挿入。"
     }
   ],
-  "last_updated": "2026-04-24",
-  "updated_session": "_57"
+  "last_updated": "2026-04-27",
+  "updated_session": "_61"
 }
