@@ -913,7 +913,7 @@
       "candidate_id": "P030",
       "status": "watching",
       "target_rule_file": "core/rules_tennis.json",
-      "proposed_rule_id": "R024",
+      "proposed_rule_id": "R025",
       "title": "Madrid altitude (1500m) + Masters interB2B 重複ペナルティ",
       "description": "Madrid Masters は 1500m 高地でボール飛距離増・サーブ威力増・ラリー長期化。Munich/Estoril 等 sea-level 大会から直行する選手は altitude adaptation 24-48時間必要。Masters interB2B (R005疲労) と altitude effect が重なると本命崩壊リスク顕著。Munich SF以上経験後の Madrid R1/R2: 信頼度 -5〜-8% 補正検討。",
       "trigger_threshold": 3,
@@ -1082,16 +1082,6 @@
       "trigger_event": "A011 Carabelli/Khachanov + A024 Droguet/Virtanen + A034 Tirante/Paul (Session_57 GO MISS -1.0u) = 3件 threshold到達",
       "evidence_count": 3,
       "note": "ATP clay L1 cElo差<120pt + 南米/clay-heavy specialist vs hardcourt-bias → clay specialist 側 +15pt 補正 (confidence +3〜+5%). R017 と同時成立時は R017 優先."
-    },
-    {
-      "candidate_id": "P007",
-      "implemented_date": "2026-04-27",
-      "target_rule_file": "core/rules_tennis.json (and rules_wta.json reference)",
-      "rule_id": "R024",
-      "title": "Form slump 補正 (-10%)",
-      "trigger_event": "A001 Badosa + A007 Paolini Stuttgart + A041 Paolini Madrid R3 = 3件 threshold到達",
-      "evidence_count": 3,
-      "note": "当季勝率<60% AND ランキング Top10 → 信頼度-10%。Paolini 連続evidence (Stuttgart R1 + Madrid R3) で確定。R001(cElo) の後段に L3 必須確認項目として挿入。"
     }
   ],
   "last_updated": "2026-04-27",
