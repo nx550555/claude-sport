@@ -166,7 +166,7 @@
       "predicted_winner": "Bristol Bears",
       "prediction_confidence": 88.0,
       "prediction_basis": "PD/G diff -33.38 (BRI dominant). Market BRI implied 96.2%, vig 89.2%. NEW home +3% - BRI away -3% net -6% -> BRI 83%. L1 dominance +5% -> BRI 88% (Q3 threshold).",
-      "prediction_hit": null,
+      "prediction_hit": true,
       "l1_metric": "PD/G",
       "l1_data": {
         "home_pdg": -27.38,
@@ -189,10 +189,29 @@
       "uf_count": 0,
       "div_pp": 78,
       "market_fav": "BRI",
-      "status": "pending",
-      "hit": null,
-      "result": null,
+      "status": "completed",
+      "hit": true,
+      "result": "win",
+      "score": "Newcastle Falcons 19 - 52 Bristol Bears",
+      "score_detail": {
+        "ht": "NEW 5 - BRI 21",
+        "ft": "NEW 19 - BRI 52",
+        "diff": -33,
+        "venue": "Kingston Park, Newcastle upon Tyne",
+        "winning_tries_summary": "BRI 9 tries (Lane 10', Ravouvou 12', Brocklebank 21', Jordan 25', Heward 42', Wade 51', van Rensburg 62', Hodge 66', Thacker 80'). NEW 2 tries (Moroni 45', Heward 42').",
+        "source": "sofascore.com"
+      },
+      "actual_ev": null,
+      "record_class": "full_record",
+      "match_status": "completed",
+      "step05_scanned_at": "2026-04-28T13:03:25Z",
+      "match_summary": "BRI commanding 33-pt victory (52-19) at Kingston Park, NEW home ground [FETCH:https://www.sofascore.com/rugby/match/newcastle-falcons-bristol-bears/QIbsRIb]. HT 5-21 で前半から BRI 優位を確立 [FETCH:https://www.sofascore.com/rugby/match/newcastle-falcons-bristol-bears/QIbsRIb]. NEW (Red Bulls) 10位 1W-13L 7pt / BRI 5位 10W-4L 48pt (4/19 時点) [FETCH:https://en.wikipedia.org/wiki/2025%E2%80%9326_Premiership_Rugby]. 市場fav BRI (1.04) の Q3_output_a 高信頼予測が33点差大勝で正当化 [INFER]. confidence_drift 判定対象外 (33点差大勝 / ユニオン系 7点差以内薄勝ち閾値外) [INFER].",
+      "verification_sources": [
+        "https://www.sofascore.com/rugby/match/newcastle-falcons-bristol-bears/QIbsRIb",
+        "https://en.wikipedia.org/wiki/2025%E2%80%9326_Premiership_Rugby"
+      ],
       "screening_session": "2026-04-23 _53",
+      "result_reflection_session": "2026-04-28 _64_a3_sub3_session2",
       "notes": "NEW league-worst PD/G -27.38 (1 win). BRI 9-4 attacking momentum. P006 team sheet 48h + P007 weather to verify pre-match. Odds <=1.10 no practical bet but prediction confidence high.",
       "rules_applied": [
         "Premiership_L1_PD_G",
@@ -297,7 +316,7 @@
       ]
     },
     {
-      "date": "2026-04-26",
+      "date": "2026-04-25",
       "round": "R14",
       "match": "Northampton Saints vs Bath Rugby",
       "home": "Northampton Saints",
@@ -308,7 +327,7 @@
       "predicted_winner": "Northampton Saints",
       "prediction_confidence": 81.0,
       "prediction_basis": "L1 reversal mild: BAT PD/G better (+14.69 vs NSA +9.23). Market NSA heavy fav 81.4% vig. L1 BAT edge -3% NSA, NSA home +3% -> NSA 81%. EV -7.7%. Q4 upset_watch.",
-      "prediction_hit": null,
+      "prediction_hit": true,
       "l1_metric": "PD/G",
       "l1_data": {
         "home_pdg": 9.23,
@@ -332,10 +351,30 @@
       "uf_count": 1,
       "div_pp": 61,
       "market_fav": "NSA",
-      "status": "pending",
-      "hit": null,
-      "result": null,
+      "status": "completed",
+      "hit": true,
+      "result": "win",
+      "score": "Northampton Saints 41 - 38 Bath Rugby",
+      "score_detail": {
+        "ht": "NSA 26 - BAT 14",
+        "ft": "NSA 41 - BAT 38",
+        "diff": 3,
+        "venue": "Franklin's Gardens (NSA home)",
+        "winning_tries_summary": "NSA 5 tries (Tommy Freeman hat-trick 15'/30'/73' + Ollie Sleightholme 2 tries). BAT 6 tries (Hennessey, Green, Carr-Smith, de Glanville, Griffin, Tuipulotu). 83min Fin Smith penalty (Enoch Opoku-Gyamfu の high tackle penalty) で決着.",
+        "source": "skysports.com"
+      },
+      "actual_ev": null,
+      "record_class": "full_record",
+      "match_status": "completed",
+      "step05_scanned_at": "2026-04-28T13:03:25Z",
+      "confidence_drift": "high",
+      "date_correction_note": "Original record date 2026-04-26 corrected to 2026-04-25 based on skysports.com match report (Saturday 25 April 2026 fixture confirmed) [FETCH:https://www.skysports.com/rugby-union/northampton-vs-bath/111292]. 訂正実施: A-3 サブタスク3 セッション2 (Session_64) 2026-04-28.",
+      "match_summary": "NSA 41-38 BAT 3点差薄勝ち at Franklin's Gardens [FETCH:https://www.skysports.com/rugby-union/northampton-vs-bath/111292]. HT 26-14 で NSA 前半リードも、BAT が後半反撃 [FETCH:https://www.skysports.com/rugby-union/northampton-vs-bath/111292]. Tommy Freeman ハットトリック (15'/30'/73') + Ollie Sleightholme 2 tries で NSA 5 tries [FETCH:https://www.skysports.com/rugby-union/northampton-vs-bath/111292]. BAT 主力温存 (Champions Cup SF Bordeaux-Begles 翌週見据え) で本来のチーム力との差が拡大 [FETCH:https://www.skysports.com/rugby-union/northampton-vs-bath/111292]. 83min Fin Smith penalty (Enoch Opoku-Gyamfu の high tackle penalty で成立) で決着 [FETCH:https://www.skysports.com/rugby-union/northampton-vs-bath/111292]. 市場fav NSA (1.14) の Q4_upset_watch 予測が薄勝ちで実現 = HIT [INFER]. confidence_drift=high 必須付与 (conf 81% + 3点差 ユニオン系 7点差以内薄勝ち閾値内 / 議題3 規定) [MEMORY:CLAUDE.md 柱C 4-1 confidence_drift 種目別閾値テーブル]. NSA リーグ首位を確固化 [FETCH:https://www.skysports.com/rugby-union/northampton-vs-bath/111292].",
+      "verification_sources": [
+        "https://www.skysports.com/rugby-union/northampton-vs-bath/111292"
+      ],
       "screening_session": "2026-04-23 _53",
+      "result_reflection_session": "2026-04-28 _64_a3_sub3_session2",
       "notes": "Title race R14. NSA 11-1-1 league leaders on points. BAT 11-2 with best PD/G. Critical for playoff positioning. P006/P007 team sheet weather essential.",
       "rules_applied": [
         "Premiership_L1_PD_G",
@@ -405,6 +444,42 @@
       "q4_upset_watch": 2,
       "note": "Premiership R14 5 games L1(PD/G) + 4-quadrant + Basic Tier. GO 0. Q3 output_a: Newcastle vs Bristol (BRI conf 88, odds 1.04 impractical EV). Q4 upset_watch: Harlequins vs Sale (L1 reversal), Northampton vs Bath (BAT higher PD/G). P006 team sheet + P007 weather verify pre-match.",
       "standings_source": "ESPN Gallagher Prem standings fetched 2026-04-23 (Rounds through April 18 R13)"
+    },
+    {
+      "session": "_64_a3_sub3_session2",
+      "date": "2026-04-28",
+      "purpose": "A-3 サブタスク3 セッション2 (ラグビー Premiership 2件) 既存 pending エントリ結果反映 + 4本柱フィールド遡及付与",
+      "processed_entries": [
+        {
+          "match": "Newcastle Falcons vs Bristol Bears",
+          "date": "2026-04-24",
+          "status_transition": "pending → completed",
+          "prediction_hit": true,
+          "actions": [
+            "result/score/score_detail 追加",
+            "4本柱フィールド付与 (record_class/match_status/step05_scanned_at)",
+            "match_summary タグ義務充足"
+          ]
+        },
+        {
+          "match": "Northampton Saints vs Bath Rugby",
+          "date": "2026-04-25 (corrected from 2026-04-26)",
+          "status_transition": "pending → completed",
+          "prediction_hit": true,
+          "actions": [
+            "result/score/score_detail 追加",
+            "date 訂正 + date_correction_note 記録",
+            "4本柱フィールド付与",
+            "confidence_drift=high 必須付与 (議題3)",
+            "match_summary タグ義務充足"
+          ]
+        }
+      ],
+      "verification_sources_count": 3,
+      "fetch_protocol_compliance": "柱C 4-2 Class C 規定 (1件以上) 両試合とも充足",
+      "tag_protocol_compliance": "柱C 4-3 5種タグ義務 / [FETCH] 多数 + [INFER] + [MEMORY] 運用",
+      "summary_update": "別タスク (サブタスク4) で実施",
+      "review_notes_reference": "monitoring/a3_subtask3_session1_review_notes.md"
     }
   ]
 }
