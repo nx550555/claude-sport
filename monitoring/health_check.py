@@ -568,6 +568,98 @@ def main():
     except Exception as e:
         warnings.append(f"miss_analysis_tag_compliance チェック失敗: {e}")
 
+    # ---- 13. step05_scan_compliance (Session_62 フェーズ6 第4段階 ステップ6 追加) ----
+    # 議題2 確定方針 (案A + 案D 併用) に基づく実装。
+    # CLAUDE.md【結果反映 STEP 0.5・毎回必須】サブセクション2 ステップ7 / サブセクション6 参照。
+    # 結果反映時に prediction_hit を確定する全エントリに対し step05_scanned_at フィールド
+    # を必須付与する規定の機械検証。
+    # 遡及対象外: フェーズ6 第3段階 確定日 (2026-04-28) 以降に prediction_hit が確定した
+    # エントリのみ対象 (既存記録への遡及付与は実施しないため)。
+    # (柱D 整合) record_class == "skip_record" フィルタ追加: 区分3 試合は走査対象外。
+    # record_class が未設定のエントリは APPROVAL_DATE 判定で自然に skip される
+    # (12項目目 miss_analysis_tag_compliance と同一パターン)。
+    try:
+        import glob as _glob_v13
+        APPROVAL_DATE_V13 = date(2026, 4, 28)  # フェーズ6 第3段階確定日
+        record_files_v13 = sorted(
+            _glob_v13.glob(str(BASE / "records" / "**" / "*.json"), recursive=True)
+        )
+        no_step05_entries = []
+        target_count = 0
+        present_count = 0
+        for rf in record_files_v13:
+            if "multi_bets.json" in rf:
+                continue
+            try:
+                d = load(Path(rf))
+            except Exception:
+                continue
+            def walk_v13(obj):
+                if isinstance(obj, list):
+                    for x in obj:
+                        yield from walk_v13(x)
+                elif isinstance(obj, dict):
+                    yield obj
+                    for v in obj.values():
+                        yield from walk_v13(v)
+            for o in walk_v13(d):
+                # prediction_hit が true/false 確定済みエントリのみ対象
+                ph = o.get("prediction_hit")
+                if ph is None:
+                    continue
+                if not isinstance(ph, bool):
+                    continue
+                # 区分3 (skip_record) は走査対象外 (柱D サブセクション7 既存柱との整合性)
+                if o.get("record_class") == "skip_record":
+                    continue
+                # 承認日基準で対象判定: prediction_hit_updated_at / last_updated_at / date
+                # を順に参照。日付不明 or 承認日より前なら遡及対象外として skip。
+                entry_date = None
+                for date_key in ("prediction_hit_updated_at", "last_updated_at", "date"):
+                    dv = o.get(date_key)
+                    parsed = parse_date(dv) if isinstance(dv, str) else None
+                    if parsed:
+                        entry_date = parsed
+                        break
+                if entry_date is None or entry_date < APPROVAL_DATE_V13:
+                    continue
+                target_count += 1
+                if o.get("step05_scanned_at"):
+                    present_count += 1
+                else:
+                    file_name = Path(rf).name
+                    match_name = str(o.get("match", "?"))[:40]
+                    no_step05_entries.append(f"{file_name}:{match_name}")
+        # 判定: 完全未付与 = ALERT / 部分未付与 = WARN / 全件付与 or 対象0件 = OK
+        if target_count == 0:
+            goods.append(
+                f"step05_scan_compliance: 承認日 {APPROVAL_DATE_V13.isoformat()} 以降の"
+                "新規 prediction_hit 確定エントリ未検出 (遡及対象外のみ・正常)"
+            )
+        elif present_count == 0 and len(no_step05_entries) > 0:
+            # 完全未付与 → ALERT
+            anomalies.append(
+                f"step05_scan_compliance: 完全未付与 {len(no_step05_entries)}件: "
+                f"{'; '.join(no_step05_entries[:3])}{'...' if len(no_step05_entries)>3 else ''} → "
+                "STEP 0.5 scope外UPSET スキャン未実施の可能性。CLAUDE.md "
+                "【結果反映 STEP 0.5】サブセクション2 ステップ7 参照。"
+            )
+        elif len(no_step05_entries) > 0:
+            # 部分未付与 → WARN
+            warnings.append(
+                f"step05_scan_compliance: 部分未付与 {len(no_step05_entries)}/{target_count}件: "
+                f"{'; '.join(no_step05_entries[:3])}{'...' if len(no_step05_entries)>3 else ''} → "
+                "prediction_hit 確定時に step05_scanned_at 同時付与必須。"
+            )
+        else:
+            # 全件付与 → OK
+            goods.append(
+                f"step05_scan_compliance: {target_count}件全件で step05_scanned_at 付与済 "
+                f"(承認日 {APPROVAL_DATE_V13.isoformat()} 以降の新規 prediction_hit 確定エントリのみ対象)"
+            )
+    except Exception as e:
+        warnings.append(f"step05_scan_compliance チェック失敗: {e}")
+
     # === 結果出力 ===
     print(f"{BOLD}--- [OK] 正常項目 ---{RESET}")
     for g in goods:
