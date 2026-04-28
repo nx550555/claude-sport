@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-04-28T12:56:30.802624+09:00",
+  "fetched_at": "2026-04-28T23:35:34.604731+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -43,14 +43,6 @@
       "estimated_return": "Apr 28",
       "status": "Day-To-Day",
       "comment": ""
-    },
-    {
-      "player": "Tyson Kozak",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Apr 28",
-      "status": "Day-To-Day",
-      "comment": "Apr 27: Kozak (undisclosed) is probable for Tuesday's Game 5 against the Bruins, Heather Engel of NHL.com reports."
     },
     {
       "player": "Josh Norris",
@@ -98,6 +90,14 @@
       "position": "D",
       "estimated_return": "May 3",
       "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Nils Lundkvist",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Apr 30",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -163,6 +163,14 @@
       "estimated_return": "Sep 15",
       "status": "Injured Reserve",
       "comment": "Apr 12: Romanov (shoulder) will miss the final two games of the regular season, according to Stefen Rosner of NHL.com on Sunday."
+    },
+    {
+      "player": "Artem Zub",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 15",
+      "status": "Out",
+      "comment": "Apr 27: Zub (lower body) remains about a month away from being fully fit, Bruce Garrioch of Postmedia reports Monday."
     },
     {
       "player": "Nick Jensen",
