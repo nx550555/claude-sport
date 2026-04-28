@@ -1530,9 +1530,9 @@
         },
         {
           "tournament": "Mutua Madrid Open 2026",
-          "round": "R1",
+          "round": "R2",
           "date": "2026-04-23",
-          "match": "Svitolina E. vs Bondar A.",
+          "match": "Svitolina E.(#7) vs Bondar A.",
           "tier": "skip",
           "quadrant": "skip",
           "l1_metric": "clay_cElo_wta",
@@ -1559,15 +1559,21 @@
           "prediction_hit": false,
           "hit": null,
           "actual_ev": null,
+          "record_class": "full_record",
+          "match_status": "completed",
+          "step05_scanned_at": "2026-04-28T12:18:01Z",
+          "miss_class": "C",
           "outcome_note": "UPSET realized (skip tier, no-bet). Bondar first career top-10 win. 6 aces / 6/6 BP saved. Svitolina MISS.",
           "miss_layer": "L1_elo_underestimate",
-          "miss_analysis": "Bondar HUN clay specialist + Svitolina post-surgery return form dip. 27 winners / 9 unforced errors from Bondar 示す overwhelming performance. P009 (injury comeback overrated) の逆方向: Svitolina が過大評価され Bondar が正当評価に戻った。",
+          "miss_analysis": "Bondar 6-3 6-4 で Svitolina (#7 seed) を 87分のストレートで撃破 [FETCH:https://www.wtatennis.com/news/4492015/swiatek-enjoys-61-minute-opening-win-bondar-stuns-svitolina-in-madrid]. Bondar 27 winners / 9 unforced errors / 6 aces / 6/6 BP saved の overwhelming performance [FETCH:https://www.wtatennis.com/news/4492015/swiatek-enjoys-61-minute-opening-win-bondar-stuns-svitolina-in-madrid]. Svitolina は第2セット 3-2 リードで足首 medical treatment を受診 [FETCH:https://www.wtatennis.com/news/4492015/swiatek-enjoys-61-minute-opening-win-bondar-stuns-svitolina-in-madrid]. Bondar 自身「I like to use my heavy forehand, so I think that was one of the keys today」 [FETCH:https://www.wtatennis.com/news/4492015/swiatek-enjoys-61-minute-opening-win-bondar-stuns-svitolina-in-madrid]. Bondar (HUN) はクレースペシャリスト + Svitolina post-surgery return form dip [INFER]. P009 (injury comeback overrated) の逆方向 = Svitolina が過大評価され Bondar が正当評価に戻った [INFER]. Svitolina #7 seed の R1 bye は seeded player 標準仕様で R2 が初戦 (CE019 同根: draw sheet 確認義務に基づき既存 round R1 → R2 に訂正済) [FETCH:https://www.wtatennis.com/news/4492015/swiatek-enjoys-61-minute-opening-win-bondar-stuns-svitolina-in-madrid]. 本対戦は両者 12ヶ月で4回目 (Roland Garros / Wimbledon / US Open / Madrid) [FETCH:https://www.wtatennis.com/news/4492015/swiatek-enjoys-61-minute-opening-win-bondar-stuns-svitolina-in-madrid].",
           "rule_linked": "P009_reverse_candidate",
           "verification_sources": [
+            "https://www.wtatennis.com/news/4492015/swiatek-enjoys-61-minute-opening-win-bondar-stuns-svitolina-in-madrid",
             "tennistonic.com Bondar surprises Svitolina",
             "skysports.com Bondar vs Svitolina Madrid Highlights",
             "yournews.com Bondar upends Svitolina"
-          ]
+          ],
+          "round_correction_note": "Session_64 A-3 サブタスク3 セッション1 ステップ2 で訂正: 旧 round 'R1' → 'R2' (Svitolina #7 seed の R1 bye 標準仕様 / WTA 公式記事 'second round' 明記 / CE019 同根 draw sheet 確認義務に基づく訂正)."
         },
         {
           "tournament": "Mutua Madrid Open 2026",
@@ -2674,7 +2680,7 @@
           "outcome_note_pre": "awaiting result 2026-04-24. Eala d. Pavlyuchenkova 6-3 6-3 in R1.",
           "status": "completed",
           "match_duration": "1h 16min",
-          "outcome_note": "Mertens 6-2 6-1 dominant (1h16m). GO HIT +0.37u. Eala strong start but Mertens consistent depth and return game prevailed. Next R3 TBD.",
+          "outcome_note": "Mertens 6-2 6-1 dominant (1h16m). GO HIT +0.37u. Eala strong start but Mertens consistent depth and return game prevailed. Next R3 vs Pliskova K.(PR) → Pliskova won 7-5 2-6 7-6(3) (Mertens MISS, A-3 サブタスク3 ステップ4 で R3 結果反映済 / 詳細は本ファイル Pliskova-Mertens R3 エントリ参照).",
           "session_58_final": "HIT 2026-04-25 JST (JST 朝確定)",
           "verification_sources": [
             "olympics.com Mertens advances to third round straight-sets",
@@ -2995,11 +3001,78 @@
           "ev": null,
           "note": "SKIP (initial GO candidate downgrade). P007 form slump + R3 opponent uncertainty. A007 Sonmez upset の前例があり。",
           "screened_session": "_58",
-          "result": null,
-          "score": null,
-          "prediction_hit": null,
+          "result": "Baptiste won 7-5 6-3",
+          "score": "7-5 6-3",
+          "prediction_hit": false,
           "hit": null,
-          "actual_ev": null
+          "actual_ev": 0,
+          "record_class": "full_record",
+          "match_status": "completed",
+          "step05_scanned_at": "2026-04-28T12:27:14Z",
+          "miss_class": "C",
+          "outcome_note": "UPSET realized (skip tier, no-bet). Baptiste 2026 シーズン2件目 / キャリア3件目の Top 10 win + クレー初の Top 10 win. Paolini MISS.",
+          "miss_layer": "L3_form_slump_underadjustment",
+          "miss_analysis": "Baptiste 7-5 6-3 で Paolini (#9) を 1h50m のストレートで撃破 [FETCH:https://www.koranmanado.co.id/en/baptiste-li-madrid-open-round-16]. Baptiste 14 aces / クレー初の Top 10 win [FETCH:https://www.koranmanado.co.id/en/baptiste-li-madrid-open-round-16]. Baptiste 30th seed / WTA #32 / Paolini World No.9 (Top 10) [FETCH:https://www.koranmanado.co.id/en/baptiste-li-madrid-open-round-16]. Baptiste 2026 シーズン2件目 / キャリア3件目の Top 10 win (キャリア 2-9 → 改善) [FETCH:https://www.koranmanado.co.id/en/baptiste-li-madrid-open-round-16]. 【予測時の判断 (Session_58)】 Session_58 予測は R024 v1.0 candidate 段階の form slump L4 -10% 適用 conf 66 → SKIP 判定 [INFER]. Paolini 当季 8-8 (50%) form slump + Baptiste WTA125 winner momentum を考慮 [MEMORY:rule_pipeline.json P007 candidates]. A007 Sonmez upset (Stuttgart R2) の前例ありで P007 candidate 蓄積 [MEMORY:rule_pipeline.json P007 candidates]. 【R024 取り消し後の影響分析】 R024 v1.0 が Session_61 で implement → Session_62 で取り消し済 (commit 6f0d877) [MEMORY:A-3 サブタスク1 取り消し決定]. R024 取り消し後の補正なしの本来 conf は 76 で GO 判定相当 = 仮想 -1.0u 損失 [INFER]. これは議題9 案B 半自動シミュレーション結果 (A-3 サブタスク1 提案レポート (d) 算出) と完全一致 [MEMORY:A-3 取り消し提案レポート (d)]. 【UPSET 性質】 Paolini の form slump 継続 (Stuttgart R2 Sonmez upset の続編) [INFER]. A041 は upset_patterns.json に既登録 [MEMORY:upset_patterns A041]. 【予測記録の扱い (案Z)】 予測時点 (Session_58) の正当性を尊重し、prediction_confidence 66 を改竄せずに維持 [INFER]. R024 取り消しの影響は r024_rollback_impact_note フィールドで対比明記.",
+          "r024_rollback_impact_note": "Session_58 予測時点では R024 v1.0 candidate 段階の form slump L4 -10% 適用で conf 66 → SKIP 判定 [INFER]. R024 v1.0 が Session_61 で implement されたが、Session_62 で取り消し済 (commit 6f0d877) [MEMORY:A-3 サブタスク1 取り消し決定]. R024 取り消し後の補正なしの本来 conf は 76 で GO 判定相当 = 仮想 -1.0u 損失 [INFER]. 議題9 案B 半自動シミュレーション (A-3 サブタスク1 提案レポート (d) 算出) と完全一致 [MEMORY:A-3 取り消し提案レポート]. 過去予測の改竄なし (案Z 採用).",
+          "rule_linked": "P007_unimplemented",
+          "verification_sources": [
+            "https://www.koranmanado.co.id/en/baptiste-li-madrid-open-round-16",
+            "wtatennis.com/videos/4493610 Baptiste knocks off Paolini in Madrid",
+            "tennisworldusa.org Madrid Paolini surprise defeat 3R",
+            "tennistemple.com Baptiste defeats Paolini Madrid 2026 Round 3"
+          ]
+        },
+        {
+          "tournament": "Mutua Madrid Open 2026",
+          "round": "R3",
+          "date": "2026-04-26",
+          "match": "Mertens E.(#19) vs Pliskova K.(PR)",
+          "tier": "skip",
+          "quadrant": "skip",
+          "l1_metric": "clay_cElo_wta",
+          "l1_data": {
+            "ce_diff_estimated": 200,
+            "fav": "Elise Mertens",
+            "dog": "Karolina Pliskova",
+            "l1_data_construction_note": "ce_diff は A-3 で事後構築の暫定値 (Mertens #19 seed Top20 vs Pliskova PR (#197) の差を反映した概算) [INFER]. 実際の Session_61 予測ではない."
+          },
+          "predicted_winner": "Elise Mertens",
+          "prediction_confidence": 70,
+          "prediction_basis": "Mertens #19 seed Top20 vs Pliskova PR (#197). Mertens R2 Eala 6-2 6-1 dominant + Pliskova clay form questionable. L1 cElo 推定 fav. A-3 事後構築のため確度 [INFER].",
+          "prediction_basis_construction_note": "本エントリは Session_61 で scope外UPSET スキャン未実施のため未予測. A-3 サブタスク3 セッション1 ステップ4 で事後構築したシミュレーション予測. 実際の Session_61 予測ではない.",
+          "odds": {
+            "fav": 1.55,
+            "dog": 2.5,
+            "odds_construction_note": "handoff 想定値 (A-3 事後構築) [INFER]. 実際の Session_61 ブックメーカーオッズ取得は未実施."
+          },
+          "rec": null,
+          "rec_odds": null,
+          "ev": null,
+          "note": "A-3 サブタスク3 セッション1 ステップ4 新規追加. Pliskova PR (Protected Ranking) entry / WTA #197 / Madrid 史上最低ランク QF 進出記録 [SEARCH].",
+          "screened_session": "_64_a3_sub3_step4_retrofit",
+          "result": "Pliskova won 7-5 2-6 7-6(3)",
+          "score": "7-5 2-6 7-6(3)",
+          "prediction_hit": false,
+          "hit": null,
+          "actual_ev": 0,
+          "record_class": "full_record",
+          "match_status": "completed",
+          "step05_scanned_at": "2026-04-28T12:32:24Z",
+          "miss_class": "C",
+          "outcome_note": "UPSET realized (skip tier, no-bet). Pliskova 2018年以来 Madrid R3 突破 + Madrid 史上最低ランク (#197 PR) QF 進出記録. Mertens MISS. R2 Eala 圧勝後の 1日休養 → 3セット 熱戦敗北 (marathon 想定).",
+          "miss_layer": "L4_form_underestimate",
+          "miss_analysis": "Pliskova 7-5 2-6 7-6(3) で Mertens (#19 seed) を 3 セット マラソンで撃破 [SEARCH] [FETCH:https://www.wtatennis.com/news/4492740/mertens-cruises-past-eala-will-face-pliskova-in-madrid]. Pliskova WTA #197 / Protected Ranking (PR) entry [SEARCH]. Pliskova は Madrid 史上最低ランク QF 進出記録を樹立 [SEARCH]. Mertens WTA #19 seed (handoff テーブル一致 + WTA 公式記事「No. 19 seed」明記) [FETCH:https://www.wtatennis.com/news/4492740/mertens-cruises-past-eala-will-face-pliskova-in-madrid]. 本対戦は Pliskova vs Mertens 8回目対戦 (2023年以来) / Pliskova 4-3 リード [FETCH:https://www.wtatennis.com/news/4492740/mertens-cruises-past-eala-will-face-pliskova-in-madrid]. 【予測の事後構築】 本エントリは Session_61 で scope外UPSET スキャン未実施のため未予測 [INFER]. A-3 サブタスク3 で事後構築したシミュレーション予測 [INFER]. 実際の Session_61 予測ではない [INFER]. predicted_winner / prediction_confidence / odds は概算値 [INFER]. 【UPSET 性質】 Pliskova の PR 復帰後 form を cElo が underestimate した可能性 [INFER]. ベテラン PR 復帰 form の cElo underestimate は新規 P*** 候補化の余地あり [INFER]. ただし議題1 確定方針 (異セッション独立 evidence 3件必要) に従い、本ステップでは evidence 1件 蓄積のみ・新規 P*** 提案は実施せず [MEMORY:CLAUDE.md 柱A 議題1 確定方針]. 後セッションで類似 evidence 蓄積を待ち、3件到達時に柱A 承認制プロセスで P*** 候補化を提案 [MEMORY:CLAUDE.md 柱A approval_workflow]. 【Mertens 側】 Mertens R2 Eala 6-2 6-1 dominant 圧勝後 (1h16m) の 1日休養 → R3 3セット熱戦敗北 [MEMORY:records/wta/2026.json line 2683 Mertens-Eala R2 outcome_note 'Next R3 TBD']. R2 圧勝が R3 油断 / 調整不足を招いた可能性 [INFER]. 【予測記録の扱い】 本エントリは事後構築のため、prediction_basis_construction_note フィールドで「実際の Session_61 予測ではない」を明示 [INFER].",
+          "rule_linked": "P006_candidate_clay_R2R3_short_recovery",
+          "rule_linked_note": "P006 候補 (clay R2-R3 short recovery: Mertens R2 4/24 → R3 4/26 1日休養後の体力消耗) に弱く紐付け [INFER]. ただし P006 候補の正式 evidence カウント対象としない (本試合の主要 UPSET 要因は P006 ではなく、Pliskova の PR 復帰 form の cElo underestimate の可能性が高い [INFER]). A042 (upset_patterns 同一試合) で既に P006 candidate 紐付け記録済との整合性確保 [MEMORY:upset_patterns A042 line 1290].",
+          "potential_new_p_candidate_note": "本試合の主要 UPSET 要因として『PR ranking veteran return form の cElo underestimate』が想定される [INFER]. これは新規 P*** 候補化の余地あり [INFER]. ただし議題1 確定方針 (異セッション独立 evidence 3件必要) に従い、本ステップでは保留記録のみ・新規 P*** 提案は実施せず [MEMORY:CLAUDE.md 柱A 議題1 確定方針]. 後セッションで類似 evidence 蓄積を待ち、3件到達時に柱A 承認制プロセスで P*** 候補化を提案 [MEMORY:CLAUDE.md 柱A approval_workflow]. evidence 1件目 = A042 Pliskova-Mertens Madrid R3.",
+          "verification_sources": [
+            "https://www.wtatennis.com/news/4492740/mertens-cruises-past-eala-will-face-pliskova-in-madrid",
+            "wtatennis.com/tournaments/madrid-open/scores/LS029 Mertens vs Pliskova R3 official score page",
+            "puntodebreak.com Pliskova lowest-ranked quarterfinalist Madrid history",
+            "msn.com Pliskova stages stunning comeback Madrid last 16",
+            "lastwordonsports.com WTA Madrid Best Bets",
+            "tennisuptodate.com WTA Madrid Day Seven Round-Up"
+          ]
         }
       ]
     }

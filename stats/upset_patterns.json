@@ -1,7 +1,7 @@
 {
   "description": "全8種目のアンダードッグ勝利・予測外れの要因分析。第一段階の精度向上と第二段階（逆転予測）への橋渡しデータ。",
   "phase": 1,
-  "updated": "2026-04-11",
+  "updated": "2026-04-27",
   "framework": {
     "phase1": "強い側が確実に勝つことを読み取る精度向上（現在）",
     "phase2": "アンダードッグが逆転する条件パターンの特定",
@@ -1084,6 +1084,279 @@
         "CBS Sports kevin-durant-injury-rockets-lakers-analysis"
       ],
       "rule_linked": "P024 NEW (NBA PO star scorer absence L4 correction)"
+    },
+    {
+      "id": "A036",
+      "match": "Prizmic D. d. Shelton B. Madrid 2026 R2 4-6 7-6(4) 7-6(5)",
+      "date": "2026-04-24",
+      "tour": "ATP",
+      "tournament": "Mutua Madrid Open 2026",
+      "round": "R2",
+      "winner": "Prizmic D.",
+      "loser": "Shelton B.",
+      "market_favorite": "Shelton B.",
+      "fav_odds": 1.3,
+      "underdog_odds": 3.5,
+      "div_pp": 23.0,
+      "uf_factors": [
+        "UF02 Q hot streak",
+        "UF04 Shelton 連戦疲労 (Munich SF)",
+        "UFT01 clay specialist matchup"
+      ],
+      "uf_count": 3,
+      "factor_notes": [
+        "Prizmic (CRO Q, 18yo) Madrid 本戦進出後初Top10勝利、3h00 marathon",
+        "Shelton (No.4 seed Top10) Munich SF 4試合消耗→Madrid R1 Q+R2 = 6試合連続",
+        "若手 clay specialist が Top10 サーブ型を 3rd-set TB で崩す",
+        "P023 (Top20 サーブ型 vs 若手clay) の 反例 → P023 boundary 明確化に活用"
+      ],
+      "rule_linked": "R014 candidate (Masters interB2B) / P006 evidence",
+      "type": "type_a_underdog_realized",
+      "added_session": "_61"
+    },
+    {
+      "id": "A037",
+      "match": "Nava E. d. Vacherot V. Madrid 2026 R2",
+      "date": "2026-04-24",
+      "tour": "ATP",
+      "tournament": "Mutua Madrid Open 2026",
+      "round": "R2",
+      "winner": "Nava E.",
+      "loser": "Vacherot V.",
+      "market_favorite": "Vacherot V.",
+      "fav_odds": 1.55,
+      "underdog_odds": 2.4,
+      "div_pp": 18.0,
+      "uf_factors": [
+        "UF06 home WC効果消失 (海外大会)",
+        "UF04 MC SF 連戦疲労継続"
+      ],
+      "uf_count": 2,
+      "factor_notes": [
+        "Vacherot (Monaco home WC, MC SF実績) が Madrid (海外) WC 同士で Nava (USA) に敗北",
+        "R017 (home WC + 連続seed撃破モメンタム) は home要件厳格適用が必要",
+        "Monaco出身 vs Madrid開催地 不一致 → home要件不成立",
+        "MC R32-SF 4試合 → Madrid R1 + R2 = 連戦6試合の疲労蓄積"
+      ],
+      "rule_linked": "R017 (home要件 strict-define refinement)",
+      "type": "type_a_underdog_realized",
+      "added_session": "_61"
+    },
+    {
+      "id": "A038",
+      "match": "Budkov Kjaer N. d. Shapovalov D. Madrid 2026 R2 (53min straight)",
+      "date": "2026-04-25",
+      "tour": "ATP",
+      "tournament": "Mutua Madrid Open 2026",
+      "round": "R2",
+      "winner": "Budkov Kjaer N.",
+      "loser": "Shapovalov D.",
+      "market_favorite": "Shapovalov D.",
+      "fav_odds": 1.55,
+      "underdog_odds": 2.4,
+      "div_pp": 18.0,
+      "uf_factors": [
+        "UF04 Munich SF後 連戦疲労",
+        "UF02 18yo Q hot streak",
+        "UF01 Madrid altitude (1500m) ball変化"
+      ],
+      "uf_count": 3,
+      "factor_notes": [
+        "Shapovalov: Munich Griekspoor R1 3sets → Munich R2/QF/SF (4勝) → Madrid R1 + R2 = 6試合連続",
+        "Budkov Kjaer (NOR Q, 18yo) Roland Garros U21 実績の clay specialist",
+        "Madrid 高地 (1500m) で sub-altitude ball change が Shapovalov serve-baseline rhythm 破壊",
+        "53分 straight sets = Shapovalov の体力枯渇明白",
+        "P006 (Masters→翌週大会 B2B疲弊) decisive evidence 2件目"
+      ],
+      "rule_linked": "P006 → R014 candidate evidence 2/3",
+      "type": "type_a_underdog_realized",
+      "added_session": "_61"
+    },
+    {
+      "id": "A039",
+      "match": "Parramatta Eels d. Manly Sea Eagles NRL R8 2026 24-18",
+      "date": "2026-04-26",
+      "tour": "NRL",
+      "tournament": "NRL Premiership 2026 Round 8",
+      "round": "R8",
+      "winner": "Parramatta Eels",
+      "loser": "Manly Sea Eagles",
+      "market_favorite": "Manly Sea Eagles",
+      "fav_odds": 1.37,
+      "underdog_odds": 3.1,
+      "div_pp": 14.0,
+      "uf_factors": [
+        "UF06 Sydney derby rivalry motivation",
+        "UF04 Manly 4Q fade pattern"
+      ],
+      "uf_count": 2,
+      "factor_notes": [
+        "Manly Foran新監督就任後 4連勝中 → Eels に終盤逆転負け",
+        "残り20分時点 Manly リード → 終盤2トライで Eels 逆転",
+        "Sydney NSW derby motivation を L3 で過小評価",
+        "1Q-3Q dominance vs 4Q execution の典型パターン",
+        "L1 PD/G + home advantage で本命視も 4Q decisive trend を反映できず"
+      ],
+      "rule_linked": "P020 evidence 3/3 候補 (NRL 小サンプル期 PD/G信頼性ダウン)",
+      "type": "type_a_underdog_realized",
+      "added_session": "_61"
+    },
+    {
+      "id": "A040",
+      "match": "Toronto Raptors d. Cleveland Cavaliers G4 2026-04-26 93-89",
+      "date": "2026-04-26",
+      "tour": "NBA",
+      "tournament": "NBA Playoffs R1",
+      "round": "G4",
+      "winner": "Toronto Raptors",
+      "loser": "Cleveland Cavaliers",
+      "market_favorite": "Cleveland Cavaliers (-3.5)",
+      "fav_odds": 1.65,
+      "underdog_odds": 2.3,
+      "div_pp": 12.0,
+      "uf_factors": [
+        "UF02 underdog home crowd",
+        "UF06 fav favorite-pressure",
+        "UF07 home court playoff"
+      ],
+      "uf_count": 3,
+      "factor_notes": [
+        "Cleveland #4 East seed が #5 TOR に G3+G4 連敗 (series 0-2 → 2-2)",
+        "Brandon Ingram + Scottie Barnes 各 23pts. Mitchell 20pts (12pts in 4Q)",
+        "Cleveland 3.5 fav → ugly rock-fight game で 89点止まり",
+        "TOR 1Q 7/26 (26.9%) cold start → 後半逆転",
+        "G3-G4 ともに TOR home → home court playoff momentum 過小評価",
+        "P022 (NBA PO experience gap) 補強 evidence (CLE が PO 2yr連続 1stシード経験) - 反例ではあるが home team momentum boost"
+      ],
+      "rule_linked": "P028 candidate (NBA PO G2/G3 home fav 4Q execution) / NBA_new candidate",
+      "type": "type_a_underdog_realized_scope_outside",
+      "added_session": "_61",
+      "scope_note": "NBA records には未登録 (Session_60 では PHX-OKC / DET-ORL G3 程度のみ)。今回 scope外 UPSET として手動追加検出"
+    },
+    {
+      "id": "A041",
+      "match": "Baptiste H. d. Paolini J. Madrid 2026 R3 7-5 6-3",
+      "date": "2026-04-26",
+      "tour": "WTA",
+      "tournament": "Mutua Madrid Open 2026",
+      "round": "R3",
+      "winner": "Baptiste H.",
+      "loser": "Paolini J.",
+      "market_favorite": "Paolini J.",
+      "fav_odds": 1.4,
+      "underdog_odds": 3.0,
+      "div_pp": 18.0,
+      "uf_factors": [
+        "UF02 form slump top player",
+        "UF06 mental vulnerability",
+        "UF09 market fame bias"
+      ],
+      "uf_count": 3,
+      "factor_notes": [
+        "Paolini 2026: 8-8 (50% win rate) で Top10 のレベルに無い継続的低調",
+        "Baptiste 30th seed - 2026 で2件目の Top10 win (3rd career Top10)",
+        "1h50m clay court で技術ベースで Top10 を制圧",
+        "Stuttgart R1 でも Sonmez (Q) に 6-2 6-2 完敗していた連続パターン",
+        "P007 (form slump top player) evidence 3件目 到達 → R024 implement 判断"
+      ],
+      "rule_linked": "P007 → R024 (rules_wta.json + rules_tennis.json) implement evidence 3/3",
+      "type": "type_a_underdog_realized",
+      "added_session": "_61"
+    },
+    {
+      "id": "A042",
+      "match": "Pliskova K. d. Mertens E. Madrid 2026 R3 7-5 2-6 7-6(3)",
+      "date": "2026-04-26",
+      "tour": "WTA",
+      "tournament": "Mutua Madrid Open 2026",
+      "round": "R3",
+      "winner": "Pliskova K.",
+      "loser": "Mertens E.",
+      "market_favorite": "Mertens E. (#19 seed)",
+      "fav_odds": 1.55,
+      "underdog_odds": 2.4,
+      "div_pp": 15.0,
+      "uf_factors": [
+        "UF04 連戦疲労 R1 bye→R2 vs Eala→R3",
+        "UFT02 deciding-set TB collapse"
+      ],
+      "uf_count": 2,
+      "factor_notes": [
+        "Mertens R2 で Eala に 6-2 6-1 圧勝 → R3 で 3sets TB 敗北",
+        "Pliskova (Q) が Top20 selected #19 を 2h+ 接戦",
+        "Mertens R2-R3 の 短い回復時間 (R2 Apr 24 → R3 Apr 26) と clay momentum 不安定さ",
+        "R3 deciding-set TB で Pliskova の experience advantage 顕在化"
+      ],
+      "rule_linked": "P006 candidate (clay R2-R3 short recovery)",
+      "type": "type_a_underdog_realized",
+      "added_session": "_61"
+    },
+    {
+      "id": "A043",
+      "match": "Houston Rockets d. Los Angeles Lakers G4 2026-04-26 115-96",
+      "date": "2026-04-26",
+      "tour": "NBA",
+      "tournament": "NBA Playoffs R1",
+      "round": "G4",
+      "winner": "Houston Rockets",
+      "loser": "Los Angeles Lakers",
+      "market_favorite": "Los Angeles Lakers (-2 spread)",
+      "fav_odds": 1.65,
+      "underdog_odds": 2.3,
+      "div_pp": 13.0,
+      "uf_factors": [
+        "UF02 KD return after G1 absence",
+        "UF06 elimination-game motivation",
+        "UF07 HOU home court"
+      ],
+      "uf_count": 3,
+      "factor_notes": [
+        "Series 3-1 LAL → G4 HOU avoid elimination 115-96 大勝",
+        "Amen Thompson 23pts + Tari Eason 20pts (KD return 効果)",
+        "P024 (star scorer absence) の reverse パターン: KD return G4 で HOU 戦力完全復帰",
+        "Lakers 2-1 リードで G4 home で警戒緩み",
+        "HOU 19pt blowout = comprehensive matchup advantage 発揮",
+        "P024 evidence 3件目 (return → home elimination win) として登録: A029 (KD G1 OFF) + A031 (Wemby G2 in-game injury) + A043 (KD G4 return)"
+      ],
+      "rule_linked": "P024 → N_NBA_new2 implement evidence 3/3 (star scorer absence + return cycle)",
+      "type": "type_a_underdog_realized",
+      "added_session": "_61"
+    },
+    {
+      "id": "A044",
+      "match": "Li A. d. Swiatek I. (#1) Madrid 2026 R3 7-6(4) 2-6 3-0 ret.",
+      "date": "2026-04-26",
+      "tour": "WTA",
+      "tournament": "Mutua Madrid Open 2026",
+      "round": "R3",
+      "winner": "Li A.",
+      "loser": "Swiatek I. (#1)",
+      "score": "7-6(4) 2-6 3-0 ret.",
+      "market_favorite": "Swiatek I. (#1)",
+      "fav_odds": null,
+      "underdog_odds": null,
+      "div_pp": null,
+      "record_class": "reference_only",
+      "match_status": "retired",
+      "step05_scanned_at": "2026-04-28T12:14:44Z",
+      "uf_factors": [
+        "UF_External Swiatek illness mid-match retirement"
+      ],
+      "uf_count": 1,
+      "factor_notes": [
+        "Swiatek が第3セット 0-3 で MTO 後にリタイア [FETCH:https://www.wtatennis.com/news/4493404/iga-swiatek-retires-in-final-set-ann-li-earns-second-top-10-career-win].",
+        "原因: 胃腸炎 (gastrointestinal illness / stomach virus) [FETCH:https://www.wtatennis.com/news/4493404/iga-swiatek-retires-in-final-set-ann-li-earns-second-top-10-career-win].",
+        "Swiatek 本人「past two days were pretty terrible / zero energy, zero stability / felt really bad physically」 [FETCH:https://www.wtatennis.com/news/4493404/iga-swiatek-retires-in-final-set-ann-li-earns-second-top-10-career-win].",
+        "Swiatek が涙でコート退場 (one of the most distressing scenes of her difficult season) [FETCH:https://www.tennismajors.com/wta-tour-news/swiatek-retires-in-tears-as-troubled-season-takes-another-painful-turn-849221.html].",
+        "Set 1 = TB 7-6(4) Li / Set 2 = Swiatek 6-2 / Set 3 = Li 3-0 ret. (Swiatek 0-2 で MTO 後 4ゲーム目数ポイントで棄権) [FETCH:https://www.wtatennis.com/news/4493404/iga-swiatek-retires-in-final-set-ann-li-earns-second-top-10-career-win].",
+        "Li 側コメント: 「I'm super sorry for her that she's had to pull out, it's never easy to go like that」 [FETCH:https://www.wtatennis.com/news/4493404/iga-swiatek-retires-in-final-set-ann-li-earns-second-top-10-career-win].",
+        "Li にとって 2026 シーズン2回目のキャリア Top 10 勝利 (retirement 経由) [FETCH:https://www.wtatennis.com/news/4493404/iga-swiatek-retires-in-final-set-ann-li-earns-second-top-10-career-win]."
+      ],
+      "rule_linked": null,
+      "rule_linked_note": "P*** 候補との関連性は後ステップで分析。illness/health-related upset pattern は既存 P*** 候補で未カバー (P030 Madrid altitude は altitude 由来であり、本件 illness とは無関係) [INFER].",
+      "type": "type_a_underdog_realized_via_retirement",
+      "scope_note": "区分2 (reference_only): records/wta/2026.json には未登録。retire のため prediction_hit / miss_class は付与せず (柱D サブセクション7 区分2 簡略可)。柱C 4-2 Class C 規定 (1件以上) 遵守: WebFetch 2件成功 (wtatennis.com/news/4493404 + tennismajors.com/.../849221).",
+      "added_session": "_64"
     }
   ],
   "upset_pick_candidates": {
@@ -1532,5 +1805,6 @@
     "ufl": 3,
     "super_league": 1,
     "nba": 2
-  }
+  },
+  "session": "_61"
 }
