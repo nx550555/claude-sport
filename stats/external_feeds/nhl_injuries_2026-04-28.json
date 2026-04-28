@@ -1,0 +1,216 @@
+{
+  "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
+  "source_injuries": "https://www.espn.com/nhl/injuries",
+  "fetched_at": "2026-04-28T12:56:30.802624+09:00",
+  "starting_goalies": [],
+  "injuries": [
+    {
+      "player": "Jansen Harkins",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Apr 28",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Radko Gudas",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Apr 28",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Ross Johnston",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Apr 28",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Viktor Arvidsson",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Apr 28",
+      "status": "Day-To-Day",
+      "comment": "Apr 27: Arvidsson (upper body) is questionable for Game 5 against Buffalo on Tuesday, Conor Ryan of The Boston Globe reports."
+    },
+    {
+      "player": "Nikita Zadorov",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Apr 28",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Tyson Kozak",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Apr 28",
+      "status": "Day-To-Day",
+      "comment": "Apr 27: Kozak (undisclosed) is probable for Tuesday's Game 5 against the Bruins, Heather Engel of NHL.com reports."
+    },
+    {
+      "player": "Josh Norris",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Apr 28",
+      "status": "Day-To-Day",
+      "comment": "Apr 27: Norris (undisclosed) could be an option for Game 5 versus the Bruins on Tuesday after head coach Lindy Ruff told reporters, \"Norris is going to skate (Monday). He could be available.\""
+    },
+    {
+      "player": "Jason Zucker",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Apr 28",
+      "status": "Day-To-Day",
+      "comment": "Apr 27: Zucker (undisclosed) is considered probable ahead of Game 5 versus the Bruins on Tuesday, according to head coach Lindy Ruff."
+    },
+    {
+      "player": "Alexander Nikishin",
+      "team": null,
+      "position": "D",
+      "estimated_return": "May 3",
+      "status": "Day-To-Day",
+      "comment": "Apr 26: Nikishin was officially diagnosed with a concussion suffered during Saturday's 4-2 win over the Senators, the Hurricanes announced Sunday."
+    },
+    {
+      "player": "Nikolaj Ehlers",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "May 1",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Shea Weber",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Jul 1",
+      "status": "Injured Reserve",
+      "comment": "Sep 30: ir-lt"
+    },
+    {
+      "player": "Josh Manson",
+      "team": null,
+      "position": "D",
+      "estimated_return": "May 3",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Adam Henrique",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Apr 28",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Colton Dach",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Apr 28",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Yakov Trenin",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Apr 28",
+      "status": "Day-To-Day",
+      "comment": "Apr 27: Trenin (upper body) is questionable for Game 5 versus the Stars on Tuesday, per Joe Smith of The Athletic."
+    },
+    {
+      "player": "Mats Zuccarello",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Apr 28",
+      "status": "Day-To-Day",
+      "comment": "Apr 27: Zuccarello (upper body) is questionable for Game 5 against Dallas on Tuesday, Joe Smith of The Athletic reports."
+    },
+    {
+      "player": "Brett Pesce",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": "Apr 13: ir-lt"
+    },
+    {
+      "player": "Semyon Varlamov",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": "Apr 19: Varlamov (knee) has been returned from his conditioning role with AHL Bridgeport, per the AHL transaction log."
+    },
+    {
+      "player": "Kyle Palmieri",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": "Apr 15: Palmieri (knee) told reporters Wednesday that he should be ready to go for the start of training camp, Stefen Rosner of NHL.com reports."
+    },
+    {
+      "player": "Alexander Romanov",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": "Apr 12: Romanov (shoulder) will miss the final two games of the regular season, according to Stefen Rosner of NHL.com on Sunday."
+    },
+    {
+      "player": "Nick Jensen",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": "Apr 14: Head coach Travis Green said Tuesday that Jensen (knee) is a long shot to play again this year, Bruce Garrioch of Postmedia reports."
+    },
+    {
+      "player": "Rodrigo Abols",
+      "team": null,
+      "position": "C",
+      "estimated_return": "May 2",
+      "status": "Injured Reserve",
+      "comment": "Jan 21: Abols' injury is a fractured right ankle, Kevin Kurz of The Athletic reports Wednesday."
+    },
+    {
+      "player": "Logan Couture",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": "Sep 30: ir-lt"
+    },
+    {
+      "player": "Charle-Edouard D'Astous",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Apr 29",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Victor Hedman",
+      "team": null,
+      "position": "D",
+      "estimated_return": "May 5",
+      "status": "Injured Reserve",
+      "comment": "Apr 22: Hedman (personal) is expected to travel with the Lightning to Montreal ahead of Friday's Game 3 against the Canadiens, Eduardo A. Encina of the Tampa Bay Times reports."
+    },
+    {
+      "player": "Derek Forbort",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": "Oct 28: Forbort (undisclosed) was placed on long-term injured reserve Tuesday."
+    }
+  ]
+}
