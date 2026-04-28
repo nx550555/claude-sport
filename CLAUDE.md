@@ -498,6 +498,16 @@ Session_61 で R024 (form slump 補正) を同一 turn 内で evidence 3/3 → i
 - `core/framework.json` の改訂
 - その他、予測モデルの判定ロジックに影響する設定ファイル
 
+#### 1-1. CLAUDE.md 改訂の階層化規定 (Session_62 2026-04-28 フェーズ6 議題6 追加)
+
+CLAUDE.md 改訂のうち、以下を **B区分 (承認必須)** と **対象外 (追記のみ)** に階層化する:
+
+- **B区分 (承認必須)**: 既存大会の **名称変更** (例: `ATP 250 → ATP Tour 250` / `Premiership → Gallagher Premiership` 等)
+  - 理由: 名称変更は判定ロジック (rules_*.json 内の大会名照合等) に影響するため、本プロトコルの適用対象として承認必須化する
+- **柱A 適用対象外 (追記のみ)**: **新リーグ追加** (新スポーツ・新リーグの scope 追加で 柱D 大会優先度テーブル / scope_rounds 階層に行を追加するのみ)
+  - 理由: 既存ロジック非影響・追加のみのため運用負荷軽減
+- **境界判断**: 名称変更 / 新リーグ追加の境界判断は **ケースバイケース対応** (リーグ統合・分割・大会フォーマット変更等の中間ケースは個別判断 — Claude 自発判断禁止・ユーザー判断必須)
+
 ### 2. 適用対象外 (従来通り確認不要)
 
 以下は日常運用ファイルとして従来通り確認なしで編集可:
@@ -522,6 +532,21 @@ Session_61 で R024 (form slump 補正) を同一 turn 内で evidence 3/3 → i
    - (e) 却下時の代替案 (より緩い補正値、適用条件絞り込み等)
 4. ユーザー判断: `承認` / `却下` / `修正後再提案`
 5. 承認後にのみ `rules_*.json` への実装を実行
+
+#### 3-1. evidence 時間的独立性チェック (Session_62 2026-04-28 フェーズ6 議題1 追加)
+
+新規ルール実装プロセスの step1 (`current_count >= trigger_threshold` 到達時の status 変更) に、以下の時間的独立性チェックを義務化する:
+
+- **原則**: evidence 3件は **異なるセッション** で独立検出されたものであること (= 各 evidence の検出セッション ID が一致しないこと)
+- **同一セッション内で複数件 evidence が追加された場合**: 最後の evidence 追加から **次セッション以降** に proposal 生成を必須化 (= 同一セッション内 step2 proposal 生成の禁止)
+- **同一 turn 内で evidence 3件目に到達した場合**: status を `ready_for_proposal` に変更可 (status 変更自体は確認不要) だが、proposal 生成は次セッション開始時まで待機する (= 同一 turn 内 implement 完全禁止)
+- **ユーザー質問契機 evidence の別カウント**: 検出契機 (Claude 自発検出 / ユーザー質問契機 / scope外UPSET スキャン契機 等) による区別はせず、独立性のみで判定する (Session_62 2026-04-28 フェーズ6 議題1 確定方針: 案D 不採用)
+
+**Session_61 由来の逸脱パターン (R024 で発生した二重時間的依存)**:
+
+R024 (form slump 補正) では evidence 3件目 (A041 Baptiste-Paolini) が Session_61 内の scope外UPSET スキャン中に検出され、同 turn 内で `current_count` 3/3 到達 → implement に至った。これは (a) 同一 turn 内 implement、(b) 同一 turn 内 evidence 検出、の二重時間的依存に該当する。本プロトコルはこれを再発防止対象として明示的に禁止する。
+
+**実装箇所**: `core/rule_pipeline.json` の `instructions_for_claude` / `approval_workflow.step1_threshold_reached` / `forbidden_practices` に同義の規定を実装済 (Session_62 2026-04-28 フェーズ6 第4段階 ステップ1)。
 
 ### 4. 既存ルール改訂プロセス (R*** / N*** 等の v_X.0 → v_Y.0)
 
