@@ -409,17 +409,17 @@ Session_62 フェーズ6 第3段階で議題1〜9 全件確定。確定内容を
 
 ### 確定方針一覧表
 
-| 議題 | 論点 | 確定方針 | 実装区分 |
-|---|---|---|---|
-| **議題1** | evidence の時間的独立性 | **案C + 案A 併用** (異セッション独立検出 + proposal は次セッション以降) | 第4段階で即時反映 (柱A) |
-| **議題2** | STEP 0.5 実施保証の仕組み | **案A + 案D 併用** (機械チェッカー + records `step05_scanned_at` フィールド) | 第4段階で即時反映 (柱B + health_check 13項目目) |
-| **議題3** | confidence_drift 種目別閾値 | **Claude Code 暫定案採用** (テニス 3セット縺れ / NHL OT・1点差 / NBA 1桁差 / MLB 1点差 / サッカー 1点差 / NFL 8点差以下 / ラグビー TD1個差以内) | 第4段階で即時反映 (柱C 4-1) |
-| **議題4** | タグ付与の粒度ガイドライン | **解釈B + 但し書き5項目** (同一 source 段落末1タグ可 / source 別は別タグ / FACT+INFER 混在は両方 / 否定主張も必須 / INFER 連鎖は末尾1タグ可) | 第4段階で即時反映 (柱C 4-3 + memory) |
-| **議題5** | match_status 遡及範囲 | **案B 採用 (retired/walkover 区別判定 + 遡及付与)** | 別タスク統合 (フェーズ6 では agenda.md 記録のみ) |
-| **議題6** | 大会優先度テーブル維持責任 | **案C 採用** (名称変更=B区分 + 新リーグ追加=対象外 階層化) | 第4段階で即時反映 (柱D サブセクション6 + 柱A サブセクション1) |
-| **議題7** | 区分2 cumulative 集計除外境界 | **案C 採用** (`by_record_class` 別軸集計 / Track 1=区分1 のみ / Track 2=区分1 のみ + 区分1+2 並列) | 別タスク統合 (cumulative.json / dashboard.html 改修は4本柱完了後・フェーズ6 では柱D サブセクション1 文言改訂のみ即時反映) |
-| **議題8** | 境界曖昧リーグ判断踏襲の有効期限 | **案B 原則 + シーズン跨ぎ見直し提案 + フォーマット変更時強制再判断** (種目別シーズン跨ぎ判定基準テーブル付き) | 第4段階で即時反映 (柱D サブセクション8) |
-| **議題9** | ルール提案レポート (d) シミュレーション計算ロジック | **案B 採用** (半自動 + memory ガイドライン化) | 別タスク統合 (memory ガイドライン作成は4本柱完了後・フェーズ6 では agenda.md 記録のみ) |
+| 議題 | 論点 | 確定方針 | 実装区分 | 実装ステータス |
+|---|---|---|---|---|
+| **議題1** | evidence の時間的独立性 | **案C + 案A 併用** (異セッション独立検出 + proposal は次セッション以降) | 第4段階で即時反映 (柱A) | **✅ 第4段階で実装反映完了 (2026-04-28 / commit db7e151)** |
+| **議題2** | STEP 0.5 実施保証の仕組み | **案A + 案D 併用** (機械チェッカー + records `step05_scanned_at` フィールド) | 第4段階で即時反映 (柱B + health_check 13項目目) | **✅ 第4段階で実装反映完了 (2026-04-28 / commit 5ae443d + 2b205a8)** |
+| **議題3** | confidence_drift 種目別閾値 | **Claude Code 暫定案採用** (テニス 3セット縺れ / NHL OT・1点差 / NBA 1桁差 / MLB 1点差 / サッカー 1点差 / NFL 8点差以下 / ラグビー TD1個差以内) | 第4段階で即時反映 (柱C 4-1) | **✅ 第4段階で実装反映完了 (2026-04-28 / commit 13f45b4)** |
+| **議題4** | タグ付与の粒度ガイドライン | **解釈B + 但し書き5項目** (同一 source 段落末1タグ可 / source 別は別タグ / FACT+INFER 混在は両方 / 否定主張も必須 / INFER 連鎖は末尾1タグ可) | 第4段階で即時反映 (柱C 4-3 + memory) | **✅ 第4段階で実装反映完了 (2026-04-28 / commit d3c8720)** |
+| **議題5** | match_status 遡及範囲 | **案B 採用 (retired/walkover 区別判定 + 遡及付与)** | 別タスク統合 (フェーズ6 では agenda.md 記録のみ) | 🔵 別タスク統合維持 (4本柱完了後の遡及判断タスクで実施) |
+| **議題6** | 大会優先度テーブル維持責任 | **案C 採用** (名称変更=B区分 + 新リーグ追加=対象外 階層化) | 第4段階で即時反映 (柱D サブセクション6 + 柱A サブセクション1) | **✅ 第4段階で実装反映完了 (2026-04-28 / commit db7e151 + 00611cc)** |
+| **議題7** | 区分2 cumulative 集計除外境界 | **案C 採用** (`by_record_class` 別軸集計 / Track 1=区分1 のみ / Track 2=区分1 のみ + 区分1+2 並列) | 文言反映=第4段階 / cumulative.json/dashboard.html 改修=別タスク統合 | **✅ 文言反映完了 (2026-04-28 / commit 00611cc)** + 🔵 cumulative/dashboard 改修は別タスク統合維持 |
+| **議題8** | 境界曖昧リーグ判断踏襲の有効期限 | **案B 原則 + シーズン跨ぎ見直し提案 + フォーマット変更時強制再判断** (種目別シーズン跨ぎ判定基準テーブル付き) | 第4段階で即時反映 (柱D サブセクション8) | **✅ 第4段階で実装反映完了 (2026-04-28 / commit 00611cc)** |
+| **議題9** | ルール提案レポート (d) シミュレーション計算ロジック | **案B 採用** (半自動 + memory ガイドライン化) | 別タスク統合 (memory ガイドライン作成は4本柱完了後・フェーズ6 では agenda.md 記録のみ) | 🔵 別タスク統合維持 (4本柱完了後の遡及判断タスクで実施) |
 
 ### 第4段階で即時反映する改修対象ファイル
 
@@ -460,3 +460,59 @@ Session_62 フェーズ6 第3段階で議題1〜9 全件確定。確定内容を
 - R017 v2.0 / R024 v1.0 / P030 ID衝突解消は4本柱完了後の遡及判断タスクで判定
 - Session_61 9件振り分け実施は4本柱完了後の遡及判断タスクで実施
 - 議題5 (match_status 遡及付与) / 議題7 (cumulative 改修) / 議題9 (memory ガイドライン) は4本柱完了後の遡及判断タスクと統合実施
+
+---
+
+## 【フェーズ6 第4段階 実装反映完了サマリ】 (2026-04-28)
+
+Session_62 フェーズ6 第4段階で議題1〜9 のうち即時反映対象 (議題1/2/3/4/6/7文言/8) の実装反映を全件完了。各ステップで commit を分割 (柱単位) し、ステップ7 完了時に統合 push を実施。
+
+### 第4段階 7 commit 構成
+
+| 順序 | commit ID | message | 反映議題 | 改修ファイル |
+|---|---|---|---|---|
+| 1 | `db7e151` | Session_62 phase6 stage4 step1: 柱A 改訂 (議題1 evidence 時間的独立性 + 議題6 CLAUDE.md 階層化) | 議題1 + 議題6 | `core/rule_pipeline.json` + `CLAUDE.md` 柱A サブセクション1-1 + 3-1 |
+| 2 | `5ae443d` | Session_62 phase6 stage4 step2: 柱B 改訂 (議題2 step05_scanned_at 規定 + 機械検証移行) | 議題2 規定部分 | `CLAUDE.md` 柱B サブセクション2 ステップ7 + サブセクション6 拡張 |
+| 3 | `13f45b4` | Session_62 phase6 stage4 step3: 柱C 4-1 改訂 (議題3 confidence_drift 種目別閾値テーブル + 必須化) | 議題3 | `CLAUDE.md` 柱C 4-1 confidence_drift フラグ サブセクション 全面改訂 |
+| 4 | `d3c8720` | Session_62 phase6 stage4 step4: 柱C 4-3 改訂 (議題4 タグ付与の粒度ガイドライン) | 議題4 | `CLAUDE.md` 柱C 4-3 タグ付与の粒度ガイドライン サブセクション 新設 + `memory/feedback_no_fabrication.md` (git 管轄外) + `memory/MEMORY.md` (git 管轄外) |
+| 5 | `00611cc` | Session_62 phase6 stage4 step5: 柱D 改訂 (議題6 サブセクション6 3層構造 + 議題7 文言 + 議題8 踏襲有効期限) | 議題6 + 議題7 文言 + 議題8 | `CLAUDE.md` 柱D サブセクション1 整合表新設 + サブセクション6 全面改訂 + サブセクション8 踏襲有効期限新設 |
+| 6 | `2b205a8` | Session_62 phase6 stage4 step6: monitoring/health_check.py 13項目目追加 (議題2 step05_scan_compliance 機械検証) | 議題2 機械チェッカー部分 | `monitoring/health_check.py` 13項目目 step05_scan_compliance 実装 |
+| 7 | (本commit) | Session_62 phase6 stage4 step7: agenda.md 議題1〜9 第4段階実装反映完了ステータス更新 | 全議題 | `monitoring/session62_phase6_agenda.md` ステータス列追加 + 第4段階完了サマリ追記 |
+
+### 第4段階で即時反映完了した議題サマリ
+
+| 議題 | 改修内容サマリ |
+|---|---|
+| **議題1** (evidence 時間的独立性) | rule_pipeline.json: instructions_for_claude / approval_workflow.step1_threshold_reached / forbidden_practices に時間的独立性チェック追加。CLAUDE.md 柱A サブセクション3-1 で規定明文化 (異セッション独立 + 同一セッション内複数件追加時は次セッション以降 proposal / 同一 turn 内 evidence 3件目 → implement 完全禁止 / 案D 不採用) |
+| **議題2** (STEP 0.5 実施保証) | CLAUDE.md 柱B サブセクション2 ステップ7 で `step05_scanned_at` フィールド必須付与規定 (ISO 8601 UTC タイムスタンプ / 検出 0件でも付与必須 / 遡及付与なし)。サブセクション6 で旧検証方法 (commit message) + 新検証方法 (records JSON フィールド機械検証) の二重担保。health_check.py 13項目目 step05_scan_compliance で機械チェック (完全未付与=ALERT / 部分未付与=WARN / 区分3 走査対象外) |
+| **議題3** (confidence_drift 種目別閾値) | CLAUDE.md 柱C 4-1 confidence_drift フラグ サブセクション 全面改訂。判定対象明確化 (≥80% conf + HIT のみ / <80% / 敗戦 / 試合不成立 / 区分3 は対象外) + 種目別薄勝ち閾値テーブル新設 (7種目: テニス 3セット縺れ / NHL OT or 1点差 / NBA 1桁差 / MLB 1点差 / サッカー 1点差 / NFL TD1個差 / ラグビー TD1個差 リーグ系6点 ユニオン系7点) + 必須化文言置換 + JSON 記述例 |
+| **議題4** (タグ付与の粒度ガイドライン) | CLAUDE.md 柱C 4-3 「タグ付与の粒度ガイドライン」サブセクション 新設 (解釈B + 但し書き4項目: source 別 / FACT+INFER 混在 / 否定主張 / INFER 連鎖 + 短い接続句のカウント対象外規定 + 解釈緩和の影響 + 既存サブセクションとの位置付け)。memory/feedback_no_fabrication.md + MEMORY.md (両方 git 管轄外) も同義の追記 + frontmatter 更新 |
+| **議題6** (大会優先度テーブル維持責任) | CLAUDE.md 柱A サブセクション1-1 で CLAUDE.md 改訂の階層化規定 (B区分 名称変更 / 対象外 新リーグ追加 / 境界判断 ケースバイケース) + 柱D サブセクション6 全面改訂 (6-1 新リーグ追加ワークフロー / 6-2 既存大会の名称変更 / 6-3 境界判断) |
+| **議題7 文言** (区分2 cumulative 集計除外境界) | CLAUDE.md 柱D サブセクション1 区分2 寄与記述改訂 ("cumulative.json 集計対象外" → "Track 1 集計対象外、Track 2 では `by_record_class` 別軸集計対象") + v3.0 2トラック精度管理整合表新設 (Track 1 = 区分1 のみ / Track 2 = `by_record_class` 別軸 = `record_class_1_only` + `record_class_1_and_2`)。**cumulative.json / dashboard.html 改修は別タスク継続** |
+| **議題8** (境界曖昧リーグ判断踏襲の有効期限) | CLAUDE.md 柱D サブセクション8 「踏襲有効期限」サブセクション新設 (案B 原則 + シーズン跨ぎ見直し提案1回 + フォーマット変更時強制再判断 + 種目別シーズン跨ぎ判定基準テーブル5区分: テニス / 北米プロ / サッカー / ラグビー / CFL UFL AHL) |
+
+### 別タスク統合議題の現状継続 (本フェーズで実装変更なし)
+
+| 議題 | 別タスク内容 | 実施タイミング |
+|---|---|---|
+| **議題5** (match_status 遡及範囲) | 既存 records 100件超の void:true エントリ → WebSearch 再確認 → match_status 遡及付与 | 4本柱完了後の遡及判断タスクと統合実施 |
+| **議題7 cumulative 改修部分** | cumulative.json `by_record_class` セクション新設 + dashboard.html 表示拡張 (Track 2 二軸表示) | 4本柱完了後の遡及判断タスクと統合実施 |
+| **議題9** (ルール提案レポート (d) シミュレーション計算ロジック) | `memory/feedback_rule_simulation_guideline.md` 新規作成 (半自動運用ガイドライン) | 4本柱完了後の柱A 運用初動段階で具体化 |
+
+### 凍結維持中の対象 (本フェーズで一切手を付けない)
+
+- **Session_61 由来 12件 (Modified 8 + Untracked 4)**: `core/dashboard_stats.json` / `core/rules_tennis.json` / `dashboard.html` / `records/mlb,nrl,soccer,tennis` / `stats/upset_patterns.json` + `monitoring/session_61_handoff.md` / `scripts/_session61_*.py` 3本
+- **ready_to_implement 候補 2本**: P020 (NRL R014) / P024 (NBA N_NBA_new2)
+- **R017 v2.0 / R024 v1.0 / P030 ID衝突解消**: 4本柱完了後の遡及判断タスクで判定
+- **Session_61 9件振り分け実施**: 柱D サブセクション9 テーブル参照・4本柱完了後の遡及判断タスクで実施
+
+### 第5段階 (フェーズ6 完了報告 + Session_62 全体総括 + 引継ぎサマリ作成) への引き継ぎ事項
+
+第4段階完了をもって、Session_62 フェーズ6 第5段階に移行可能。第5段階で実施する内容:
+
+1. **フェーズ6 完了報告**: フェーズ6 第1〜4段階の総括 (仮想 Session_63 ワークフロー / Session_61 vs Session_63 比較表 / 議題1〜9 協議 / 議題1/2/3/4/6/7文言/8 実装反映)
+2. **Session_62 全体総括**: フェーズ1〜6 の進捗総覧 (4本柱本体実装フェーズ1-5 + 議題確定+反映フェーズ6 + 累計 commit 一覧)
+3. **引継ぎサマリ作成**: 4本柱完了状態の確認 + 4本柱完了後の遡及判断タスク一覧整理 + 凍結対象 12件 + ready_to_implement 候補 + 別タスク統合議題 5/7/9 を1ファイルに集約
+4. **完了をもって 4本柱 実装作業 完了** → A-3 遡及判断タスクへの移行条件達成
+
+第5段階完了後、本セッションは終了 → 4本柱完了後の遡及判断タスクは別セッションで着手する想定。
