@@ -369,3 +369,15 @@ A-3 タスク累計: **11 commit** (実装 4件 + handoff 7件)
 **最優先議題**: 議題1+1' (柱A 議題1 vs health_check 8項目目競合 + candidate_pattern フィールド新設)
 
 新セッション最優先: **A-3 振り返り議論セッション着手** → 議題1+1' から開始 → 柱A 承認制プロトコル step1 (提案レポート (a)〜(e) 生成) → step2 (ユーザー判断 + 外部レビュー) → step3 (改訂実装: health_check.py + CLAUDE.md 柱A 追記 + records スキーマ追加) → step4 (運用テスト) → 議題2 → 議題3 → 議題4 の順で4議題完遂 → サブタスク4-9 着手準備フェーズへ移行
+
+---
+
+## 訂正注記 (Session_64 議題4 step3 / 2026-04-30)
+
+本handoff 内の以下記述は議題4 step3 で訂正されました。原記述は議論プロセス記録として保持しています。
+
+- 「scope外UPSET (市場fav 敗戦)」→ #1/#7 は誤判定。正しくは prediction_hit=true HIT (#1 = Q3_output_a 高信頼予測 HIT / #7 = market_fav HOU 1.53 大勝 HIT で favorite が LAL ではなく HOU の二重誤判定)
+- 「#7 パターンB」→ パターンC が実態整合 (G3 screening_log → G4 prediction フィールド事後構築)
+- 「#2 confidence_drift=high 候補」→ 「付与済 (records L372 / Session_64 サブタスク3 セッション2 同時付与)」
+
+詳細は CLAUDE.md 柱D 9 テーブル 訂正履歴セクション 2026-04-30 エントリ参照。
