@@ -1552,6 +1552,113 @@
       ],
       "rule_linked_note": "P028 (NBA G2/G3 home fav 4Q execution collapse) evidence 2/3 到達: G2 NYK 4Q 5-22 + G3 NYK home 12.5s clutch 失敗 (McCollum game-winner)。P028 implement へ残 1件",
       "type_a_upset_id": "A032_extension"
+    },
+    {
+      "date": "2026-04-26",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "Q4_upset_watch",
+      "match": "Toronto Raptors vs Cleveland Cavaliers (G4 R1)",
+      "home": "Toronto Raptors",
+      "away": "Cleveland Cavaliers",
+      "l1_metric": "NRtg diff",
+      "l1_data": "CLE NRtg 4.0 vs TOR 2.5 (diff 1.5pt) / CLE 2-1 series lead road fav / TOR home elimination edge",
+      "predicted_winner": "Cleveland Cavaliers",
+      "prediction_confidence": 58,
+      "prediction_basis": "CLE market fav 1.59 (-170) / NRtg edge 1.5pt + series 2-1 lead / Mitchell return form / TOR home but elimination pressure. (事後構築: Session_58 screening_log で CLE road fav として SKIP 判定済)",
+      "prediction_basis_construction_note": "A-3 サブタスク3 セッション3 事後構築: Session_58 screening_log line 1847 で CLE road fav 認識のもと SKIP 判定済だが games[] に未登録だったため、結果反映と同時に prediction フィールドを再構築。Session_58 当時の「CLE road fav 2-0」記述は G3 (TOR home で CLE 126-104 勝利 → CLE 2-1 リード) 反映前のため series 状況は古いが、market_fav 認識 (CLE) は正しい。",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "fav_odds": 1.59,
+      "dog_odds": 2.42,
+      "favorite": "Cleveland Cavaliers",
+      "dog": "Toronto Raptors",
+      "result": "Toronto Raptors 93-89 Cleveland Cavaliers",
+      "score": "93-89",
+      "score_detail": {
+        "Q1": "TOR 14 - CLE 17",
+        "Q2": "TOR 24 - CLE 19",
+        "Q3": "TOR 22 - CLE 22",
+        "Q4": "TOR 33 - CLE 31",
+        "final": "TOR 93 - CLE 89"
+      },
+      "prediction_hit": false,
+      "hit": null,
+      "actual_ev": 0.0,
+      "outcome_note": "TOR 93-89 CLE G4 (TOR home win / Q4 33-31 で逆転)。Barnes go-ahead FT in final minute (23pts) / Ingram 23pts / Mitchell CLE 20pts (6/24 FG)。Q4_upset_watch HIT (TOR @2.42 home actualized) / predicted CLE MISS / 4点差 NBA 1桁差。series 2-2 タイ。",
+      "verification_sources": [
+        "[FETCH:https://www.espn.com/nba/game/_/gameId/401869377]",
+        "ESPN NBA Cavaliers vs Raptors Apr 26 2026 Game 4 boxscore",
+        "VAVEL USA Raptors 93-89 Cavaliers Apr 26 2026 highlights",
+        "NBA.com Cleveland Cavaliers vs Toronto Raptors Apr 26 2026 Summary 0042500134"
+      ],
+      "miss_layer": "L4_External",
+      "miss_class": "C",
+      "miss_analysis": "TOR 93-89 CLE G4 = scope外UPSET (CLE 市場fav 1.59 敗戦 / 4点差 NBA 1桁差) [FETCH:https://www.espn.com/nba/game/_/gameId/401869377]。Q4 で TOR 33-31 (2点差勝ち) で逆転 [FETCH:https://www.espn.com/nba/game/_/gameId/401869377]。TOR FT% 75% (27/36) vs CLE 65% (15/23) で FT execution 優位 [FETCH:https://www.espn.com/nba/game/_/gameId/401869377]。TOR turnover 12 vs CLE 18 で ball security 優位 [FETCH:https://www.espn.com/nba/game/_/gameId/401869377]。Barnes go-ahead FT in final minute + 23pts / Ingram 23pts [FETCH:https://www.espn.com/nba/game/_/gameId/401869377]。CLE Mitchell 20pts (6/24 FG = 25% FG / 4/4 FT) で primary scorer の FG 不振 [FETCH:https://www.espn.com/nba/game/_/gameId/401869377]。CLE 全体 FG 37% (32/87) / 3P 25% (10/40) でシュート不振 [FETCH:https://www.espn.com/nba/game/_/gameId/401869377]。→ NRtg 1.5pt diff の market 1.59 implied 63% は home elimination pressure + Q4 clutch FT execution + TOR ball security のリスクを過小評価していた可能性 [INFER]。→ TOR home elimination motivation で defensive intensity が CLE の FG efficiency を 37% まで抑え込んだ可能性 [INFER]。→ G3 で TOR home 126-104 で大敗していたチームの bounce-back 性質も Q4 clutch 逆転を後押し [INFER]。",
+      "rule_linked": [
+        "P028_candidate"
+      ],
+      "rule_linked_note": "P028 (NBA G2/G3 home fav 4Q execution collapse) との弱紐付け: 本 case は G4 road fav (CLE) の Q4 execution collapse / TOR home Q4 33-31 逆転で類似構造。柱A 議題1 確定方針遵守: 同一 turn 内での新規 P*** 候補化を保留 (案Q 暫定対応 / P028 evidence の正式カウント対象とはしない)。",
+      "potential_new_p_candidate_note": "保留候補 (議題1 確定方針による次セッション以降の独立 evidence 蓄積待ち): 'NBA PO road fav 2-1 series リードが home dog Q4 ball security/FT execution で 1桁差 (≤9点差) 逆転 UPSET' パターン。本 G4 (TOR 93-89 CLE) は本パターンの 1件目 evidence 候補。次セッション以降に異セッション独立 evidence 2件追加で current_count 3/3 到達なら柱A 承認制プロセス起動。",
+      "record_class": "full_record",
+      "match_status": "completed",
+      "step05_scanned_at": "2026-04-28T15:00:00Z",
+      "type_a_upset_id": "scope_outside_session_61_a3_sub3_session3_tor_cle_g4",
+      "session": "_a3_sub3_session3",
+      "result_reflection_session": "_a3_sub3_session3"
+    },
+    {
+      "date": "2026-04-26",
+      "tier": "skip",
+      "caution_type": null,
+      "quadrant": "skip",
+      "match": "Houston Rockets vs Los Angeles Lakers (G4 R1)",
+      "home": "Houston Rockets",
+      "away": "Los Angeles Lakers",
+      "l1_metric": "NRtg diff",
+      "l1_data": "HOU NRtg 5.0 vs LAL 1.5 (diff 3.5pt) / LAL 3-0 series lead / HOU home elimination back-to-wall",
+      "predicted_winner": "Houston Rockets",
+      "prediction_confidence": 60,
+      "prediction_basis": "HOU market fav 1.53 (-190) / NRtg edge 3.5pt + home + elimination pressure motivation / LAL road sweep attempt 3-0. (事後構築: Session_58 screening_log で類似 G3 を HOU home fav 認識のもと SKIP 判定済)",
+      "prediction_basis_construction_note": "A-3 サブタスク3 セッション3 事後構築: Session_58 screening_log line 1842 「HOU-LAL G3 HOU home +fav market overrate」記述から HOU 市場fav 認識。本 G4 でも同様に HOU 市場fav 1.53 で類似ポジション。games[] に未登録だったため結果反映と同時に prediction フィールドを再構築。",
+      "rec": null,
+      "rec_odds": null,
+      "ev": null,
+      "fav_odds": 1.53,
+      "dog_odds": 2.60,
+      "favorite": "Houston Rockets",
+      "dog": "Los Angeles Lakers",
+      "result": "Houston Rockets 115-96 Los Angeles Lakers",
+      "score": "115-96",
+      "score_detail": {
+        "Q1": "HOU 26 - LAL 21",
+        "Q2": "HOU 30 - LAL 26",
+        "Q3": "HOU 34 - LAL 18",
+        "Q4": "HOU 25 - LAL 31",
+        "final": "HOU 115 - LAL 96"
+      },
+      "prediction_hit": true,
+      "hit": null,
+      "actual_ev": 0.0,
+      "outcome_note": "HOU 115-96 LAL G4 (HOU home blowout / 19点差大勝)。Amen Thompson 23pts (10/16 FG) + Tari Eason 20pts。HOU Q3 dominance 34pts (LAL 18) で試合決定。HOU 3P 40% (12/30) vs LAL 3P 23% (5/22) で perimeter shooting 圧倒。LAL turnover 24 vs HOU 13。HIT realized (HOU 市場fav 勝利) / predicted HOU HIT / 19点差は NBA 1桁差外で confidence_drift 不要。LAL series 3-1 lead 維持。HOU 0-3 elimination back-to-wall で sweep 回避 G5 開催権獲得。",
+      "match_summary": "HOU 115-96 LAL G4 [FETCH:https://www.espn.com/nba/game/_/gameId/401869405]。HOU 市場fav 1.53 (implied 65%) 通りに勝利、predicted_winner=HOU 一致 = HIT [FETCH:https://www.espn.com/nba/game/_/gameId/401869405]。Amen Thompson 23pts (10/16 FG = 62.5%) + Tari Eason 20pts で HOU 若手 scoring carry [FETCH:https://www.espn.com/nba/game/_/gameId/401869405]。HOU Q3 34pts vs LAL 18pts (差 16pts) でハーフタイム後の third quarter dominance が試合決定 [FETCH:https://www.espn.com/nba/game/_/gameId/401869405]。HOU 3P% 40% (12/30) vs LAL 3P% 23% (5/22) で perimeter shooting 圧倒 [FETCH:https://www.espn.com/nba/game/_/gameId/401869405]。LAL turnover 24 vs HOU 13 で ball security 致命的に劣勢 [FETCH:https://www.espn.com/nba/game/_/gameId/401869405]。LAL Ayton 19pts (9/12 FG) のみ目立った貢献、LeBron/Doncic/Davis ともゲームリーダー外 (top scorer 報道に未掲載) [FETCH:https://www.espn.com/nba/game/_/gameId/401869405]。→ HOU 0-3 elimination back-to-wall motivation + Q3 third quarter explosion + 3P variance positive swing で 19点差 blowout を実現 [INFER]。→ LAL は 3-0 リードからの油断 (complacency) + road game での energy depletion で turnover 多発 [INFER]。→ 既存 P028_candidate (G1 home fav win 後 G2 home 4Q execution collapse) とは方向違いだが LAL 側の Q3 execution collapse 要素は構造的類似 [INFER]。",
+      "verification_sources": [
+        "[FETCH:https://www.espn.com/nba/game/_/gameId/401869405]",
+        "ESPN NBA Lakers vs Rockets Apr 26 2026 Game 4 boxscore",
+        "VAVEL USA Houston Rockets 115-96 Los Angeles Lakers Apr 26 2026 highlights",
+        "NBA.com Los Angeles Lakers vs Houston Rockets Apr 26 2026 Summary 0042500174"
+      ],
+      "rule_linked": [
+        "P028_candidate"
+      ],
+      "rule_linked_note": "P028 (NBA G2/G3 home fav 4Q execution collapse) との弱紐付け: 本 case は LAL road fav 視点で Q3 execution collapse + Q3 18-34 で test されたパターン。柱A 議題1 確定方針遵守: 同一 turn 内での新規 P*** 候補化を保留 (案Q 暫定対応 / P028 evidence の正式カウント対象とはしない)。HIT 試合だが NRtg 3.5pt edge (本来 SKIP 閾値 5pt 未達) からの予測のため強い R*** 紐付けは無し。",
+      "potential_new_p_candidate_note": "保留候補 (議題1 確定方針による次セッション以降の独立 evidence 蓄積待ち): 'NBA PO 0-3 elimination home back-to-wall で Q3 dominance + 3P variance positive swing による blowout HIT (≥15点差)' パターン。Amen Thompson type 若手 breakout が触媒。本 G4 は本パターンの 1件目 evidence 候補。",
+      "record_class": "full_record",
+      "match_status": "completed",
+      "step05_scanned_at": "2026-04-28T15:00:00Z",
+      "session": "_a3_sub3_session3",
+      "result_reflection_session": "_a3_sub3_session3"
     }
   ],
   "screening_log": [
@@ -1847,6 +1954,20 @@
         "TOR vs CLE G4 (CLE road fav 2-0)"
       ],
       "notes": "Phase B4 NBA PO G3/G4. L1 NRtg 差を market が全て織込済 → 全 SKIP。Q4_upset_watch 2件追跡。"
+    },
+    {
+      "session": "_a3_sub3_session3",
+      "date": "2026-04-28",
+      "source": "A-3 サブタスク3 セッション3 (NBA Playoffs G4 2件 結果反映 + 4本柱フィールド付与)",
+      "scope": "Session_61 由来 9件振り分け (CLAUDE.md 柱D サブセクション9 #6 / #7) 結果反映",
+      "matches_added": 2,
+      "tor_cle_g4": "TOR 93-89 CLE = UPSET (CLE 市場fav 1.59 敗戦 / 4点差 NBA 1桁差) / Q4_upset_watch HIT / record_class=full_record / miss_class=C / 5種タグ運用 ([FETCH] x7 + [INFER] x3) / WebFetch ESPN 1件成功 (Class C 規定達成)",
+      "hou_lal_g4": "HOU 115-96 LAL = HIT (HOU 市場fav 1.53 勝利 / 19点差 1桁差外で confidence_drift 不要) / record_class=full_record / 5種タグ運用 ([FETCH] x7 + [INFER] x3) / WebFetch ESPN 1件成功 (Class C 規定達成)",
+      "verification_method": "WebFetch ESPN x2 成功 (Class C 規定 1件以上達成) / basketball-reference 403 + nba.com timeout で代替試行 = 柱C 4-2 試行3回フロー成功",
+      "sub_issue_b_finding": "CLAUDE.md 柱D サブセクション9 表 #7 「市場fav LAL 敗戦」記述は誤り (実際は HOU 市場fav 1.53 勝利 / LAL は dog +160 で敗戦 = HIT)。Session_61 当時「LAL 3-0 series リード = LAL strong」と混同した可能性。判断6 案III に従い CLAUDE.md 訂正はサブタスク3 全件完了後に一括処理 (#1/#2/#7 計3件誤記述判明)。",
+      "agenda1_compliance": "両試合とも新規 P*** 候補化を保留 (potential_new_p_candidate_note フィールドで記録) / rule_linked = ['P028_candidate'] 弱紐付け (案Q 暫定対応) + rule_linked_note で意図的弱紐付けを明示 / 議題1 確定方針 (異セッション独立 evidence 3件 / 同一 turn 内 implement 禁止) 遵守",
+      "patterns_observed": "両試合とも新規追加パターン (既存遡及更新パターン蓄積は計4件のまま変動なし)",
+      "notes": "セッション3 完了で Session_61 由来 9件中 8件処理完了。残 1件 = #5 PHI G4 vs PIT (NHL Playoffs / セッション4)。本セッションで last_updated は判断8 (summary 更新サブタスク4 で処理) に従い未更新維持。"
     }
   ],
   "last_updated": "2026-04-25"
