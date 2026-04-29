@@ -1979,6 +1979,75 @@
         "pensburgh.com Game 3 Recap",
         "espn.com 401869796"
       ]
+    },
+    {
+      "date": "2026-04-25",
+      "match": "Philadelphia Flyers vs Pittsburgh Penguins (G4)",
+      "home": "Philadelphia Flyers",
+      "away": "Pittsburgh Penguins",
+      "round": "R1 G4",
+      "playoff_round": "R1 G4",
+      "venue": "Xfinity Mobile Arena",
+      "attendance": 20053,
+      "tier": "caution_margin",
+      "caution_type": "margin",
+      "quadrant": "Q4_upset_watch",
+      "predicted_winner": "Philadelphia Flyers",
+      "prediction_confidence": 65.0,
+      "prediction_basis": "Reconstructed from screening_log _58 caution_margin entry. PHI close-out home G4 @1.83 (market fav 54.6% implied). L1 xGF% tied (51 vs 51) but series context PHI 3-0 lead + PHI home +5% + close-out momentum -> conf 65%. EV+19% (1.83 * 0.65 - 1). Below GO threshold conf>=75%, classified caution_margin / Q4_upset_watch.",
+      "prediction_basis_construction_note": "predictionフィールドは screening_log _58 (Session_58 / 2026-04-25) caution_margin 痕跡 'PHI G4 @1.83 home close-out 3-0 (L1 xGF% tied but series context EV+19%)' から復元。pending_games[] / games[] 両方に登録未済の第3 のパターン (= screening_log 痕跡あり + games[] 未登録) 初顕在化ケース。論点5 (柱B 規定への新サブセクション追加 = 案α 拡張) として論点2 + 副次論点A と統合議論で議題化済 (2026-04-29 サブタスク3 セッション4 で確定)。",
+      "l1_metric": "xGF%",
+      "l1_data": {
+        "home_xgf": 51.0,
+        "away_xgf": 51.0,
+        "diff": 0.0
+      },
+      "odds": {
+        "PHI": 1.83,
+        "PIT": 1.95
+      },
+      "rec_odds": null,
+      "ev": null,
+      "rec": null,
+      "estimated_win_pct": 65.0,
+      "uf_factors": [
+        "UFH_home_crowd",
+        "UFH_close_out_pressure_phi",
+        "UFH02_pit_elimination_desperation"
+      ],
+      "uf_count": 1,
+      "div_pp": 9,
+      "series_state": "3-0 PHI leads (close-out attempt)",
+      "screened_session": "_58",
+      "closed_session": "_64_a3_sub3_session4",
+      "result_reflection_session": "_64_a3_sub3_session4",
+      "status": "completed",
+      "result": "Pittsburgh Penguins 4-2 Philadelphia Flyers",
+      "score": "4-2 PIT (regulation)",
+      "score_detail": {
+        "P1": "PIT 1-0 (Crosby PPG 14:24, A: Karlsson)",
+        "P2": "1-1 (Rakell 1:03 unassisted / Barkey 15:40, A: Zegras+York)",
+        "P3": "PIT 2-1 (Letang 4:27 A: Crosby+Rakell / Konecny 7:03 A: Dvorak+Sanheim / Dewar EN 19:03 A: Lizotte+Acciari)"
+      },
+      "winner": "Pittsburgh Penguins",
+      "prediction_hit": false,
+      "hit": null,
+      "actual_ev": 0.0,
+      "record_class": "full_record",
+      "match_status": "completed",
+      "step05_scanned_at": "2026-04-29T09:28:44Z",
+      "confidence_drift": null,
+      "miss_class": "C",
+      "miss_layer": "L4_External",
+      "miss_analysis": "PIT 4-2 PHI (regulation, 2点差) で PHI close-out home G4 失敗 [FETCH:https://www.nhl.com/news/pittsburgh-penguins-philadelphia-flyers-game-4-recap-april-25-2026]。Crosby PPG (P1 14:24, A: Karlsson) + Rakell (P2 1:03 unassisted) + Letang (P3 4:27, A: Crosby+Rakell) + Dewar EN (P3 19:03, A: Lizotte+Acciari) の veteran core 4G 復活 [FETCH:https://www.espn.com/nhl/game/_/gameId/401869799/penguins-flyers]。Silovs 28 saves PIT [FETCH:https://www.nhl.com/news/pittsburgh-penguins-philadelphia-flyers-game-4-recap-april-25-2026]。PHI shots 30 vs PIT 22 で PHI shot 量上回るも決定力差敗戦 (Vladar 17 saves = 21被弾中 17 stop = .810 sv%) [FETCH:https://www.espn.com/nhl/game/_/gameId/401869799/penguins-flyers]。close-out home G4 でも market 過剰評価 (PHI 1.83 = 54.6% implied) [SEARCH]。→ PIT veteran core (Crosby/Letang/Rakell) が elimination desperation で PHI young energy (Drysdale/Martone/Barkey) を上回る pattern が表面化 [INFER]。R1 close-out home G4 home favorite 過剰評価傾向は新規候補 P_NHL_PO_close_out_home_fav_failure_candidate になりうるが本セッションでは新規 P*** 候補化を保留 (議題1 同一 turn 内 evidence 加算禁止) [INFER]。",
+      "potential_new_p_candidate_note": "新規候補 P_NHL_PO_close_out_home_fav_failure_candidate (NHL PO R1 G4 home favorite close-out 試合での veteran core elimination desperation 上振れ pattern) - 議題1 確定方針 (異セッション独立 evidence 3件 + 同一セッション内複数件追加時は次セッション以降 proposal 生成 + 同一 turn 内 implement 禁止) 遵守のため本 turn 内での新規 P*** 候補化保留。異セッション独立 evidence 蓄積待ち (今後の NHL PO close-out home fav 失敗ケースを別セッションで evidence 1件として加算する候補)。",
+      "rule_linked": ["P_NHL_PO_close_out_home_fav_failure_candidate"],
+      "rule_linked_note": "弱紐付け (案Q 暫定対応 / セッション1 Pliskova-Mertens P006 弱紐付け + セッション3 TOR-CLE/HOU-LAL P028 弱紐付け同パターン)。正式 evidence カウント対象外。理由: 既存 P027 (NHL G1 UPSET 後 G2 fav home rebound) はパターン方向が真逆 (G2 home fav 勝利 vs 本件 G4 home fav 敗戦) のため extension 命名は不適切と判断 (判断4 命名再考 / 案A 不採用)。種目特定型新規候補 ID 案B 採用 (P_NHL_PO_close_out_home_fav_failure_candidate)。health_check 8項目目 (MISS feedback loop = miss_analysis + miss_layer + rule_linked 完全要件) との整合性確保のため空配列ではなく弱紐付けで記述。議題1 確定方針 (異セッション独立 evidence 3件 / 同一 turn 内 implement 禁止) 遵守。",
+      "verification_sources": [
+        "https://www.nhl.com/news/pittsburgh-penguins-philadelphia-flyers-game-4-recap-april-25-2026",
+        "https://www.espn.com/nhl/game/_/gameId/401869799/penguins-flyers"
+      ],
+      "outcome_note": "SKIP no-bet (caution_margin, conf 65% < 75% GO 閾値未達) / 予測MISS。PIT veteran core (Crosby PPG / Rakell / Letang / Dewar EN) elimination desperation で PHI close-out home G4 失敗。Silovs 28 saves PIT vs Vladar 17 saves PHI (PHI shots 30 上回るも決定力差)。series 3-1 PHI leads (PIT season 延命 / G5 PIT home 4/27 へ)。"
     }
   ],
   "pending_games": [],
@@ -2238,6 +2307,19 @@
         "LAK-COL G4 (LAK elim 0-3 COL road close-out EV-)"
       ],
       "notes": "Phase B3 NHL. xGF% strict L1 で GO なし。PHI G4 series 3-0 home close-out を CAUTION_MARGIN として追跡。"
+    },
+    {
+      "session": "_64_a3_sub3_session4",
+      "date": "2026-04-29",
+      "source": "A-3 サブタスク3 セッション4 (NHL Playoffs G4 1件 結果反映 + 4本柱フィールド付与 + 第3 のパターン処理方針X 採用)",
+      "scope": "Session_61 由来 9件振り分け (CLAUDE.md 柱D サブセクション9 #5) 結果反映 + 副次論点B 残検証 = 記述正しい確認",
+      "matches_added": 1,
+      "phi_g4": "PIT 4-2 PHI = UPSET (PHI 市場fav 1.83 敗戦 / regulation 2点差) / 第3 のパターン (screening_log _58 痕跡引継ぎ) 方針X 採用 / record_class=full_record / miss_class=C / 5種タグ運用 / WebFetch NHL.com + ESPN NHL 計2件成功 (Class C 規定達成)",
+      "verification_method": "WebSearch 2件 + WebFetch NHL.com (200 OK) + ESPN NHL (200 OK) で詳細データ完備 / 試行3回フロー不要 (1回成功)",
+      "sub_issue_b_finding": "#5 PHI G4 vs PIT は UPSET 確定 (handoff §4.1 / CLAUDE.md 柱D サブセクション9 #5 記述正しい) / 累計誤記述件数は #1/#2/#7 計3件で確定 (#5 は誤記述に含めない) / 柱D サブセクション9 テーブル信頼性 = 9件中 6件正しい記述 (67%) / 33% 誤記述",
+      "agenda1_compliance": "新規 P*** 候補化を保留 (potential_new_p_candidate_note で記録 / 命名: P_NHL_PO_close_out_home_fav_failure_candidate 案B 採用) / rule_linked = [P_NHL_PO_close_out_home_fav_failure_candidate] 弱紐付け (案Q 暫定対応) + rule_linked_note で意図的弱紐付け を明示 / 議題1 確定方針 (異セッション独立 evidence 3件 / 同一 turn 内 implement 禁止) 遵守",
+      "patterns_observed": "第3 のパターン (screening_log 痕跡あり + games[] 未登録) 初顕在化 / 論点5 として振り返り議題化済 (論点2 + 副次論点A と統合議論 / 柱B 規定への新サブセクション追加 = 案α 拡張)",
+      "notes": "セッション4 完了で Session_61 由来 9件中 全件処理完了 (9/9 = 100%) / サブタスク3 全件完了 / 振り返り議論 + handoff/CLAUDE.md 一括訂正 (#1/#2/#7) + サブタスク4-9 着手準備フェーズに移行可能"
     }
   ],
   "last_updated": "2026-04-25"
