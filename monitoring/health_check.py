@@ -797,6 +797,107 @@ def main():
     except Exception as e:
         warnings.append(f"candidate_pattern_uniqueness チェック失敗: {e}")
 
+    # ---- 15. step05_prediction_hit_sync_compliance (Session_64 議題2 制定) ----
+    # 柱B サブセクション 2 ステップ8 (結果反映の処理パターン分類) 規定の機械検証。
+    # 結果反映時に prediction_hit を確定する全エントリに対し、
+    # step05_scanned_at と prediction_hit_updated_at が同一値で同時付与されている
+    # ことを検証する。prediction_hit_updated_at は health_check 項目12/13 の
+    # 第1優先キー (検査対象判定) として機能する。
+    # - 完全未付与 (= step05_scanned_at 付与済エントリ全件で
+    #   prediction_hit_updated_at 未付与) = ALERT
+    # - 部分未付与 (= 一部のエントリのみ未付与) = WARN
+    # - 区分3 (skip_record) は走査対象外 (柱D 既存柱との整合性 / 議題1+1' 項目14
+    #   と同一パターン)
+    # - record_class 未設定エントリは APPROVAL_DATE 判定で自然に skip
+    try:
+        import glob as _glob_v15
+        APPROVAL_DATE_V15 = date(2026, 4, 29)  # 議題2 step3 承認日
+        record_files_v15 = sorted(
+            _glob_v15.glob(str(BASE / "records" / "**" / "*.json"), recursive=True)
+        )
+        # upset_patterns.json も走査対象に含める (A044 Swiatek 等の参考登録分)
+        extra_files_v15 = [BASE / "stats" / "upset_patterns.json"]
+        target_count_v15 = 0
+        synced_count_v15 = 0
+        no_sync_entries = []
+        all_files = list(record_files_v15) + [str(p) for p in extra_files_v15 if p.exists()]
+        for rf in all_files:
+            if "multi_bets.json" in rf:
+                continue
+            try:
+                d = load(Path(rf))
+            except Exception:
+                continue
+            def walk_v15(obj):
+                if isinstance(obj, list):
+                    for x in obj:
+                        yield from walk_v15(x)
+                elif isinstance(obj, dict):
+                    yield obj
+                    for v in obj.values():
+                        yield from walk_v15(v)
+            for o in walk_v15(d):
+                # step05_scanned_at が付与されている全エントリを対象
+                step05_val = o.get("step05_scanned_at")
+                if not step05_val or not isinstance(step05_val, str):
+                    continue
+                # 区分3 (skip_record) は走査対象外
+                if o.get("record_class") == "skip_record":
+                    continue
+                # 承認日基準で対象判定 (step05_scanned_at 自体の日付で判定)
+                step05_date = parse_date(step05_val)
+                if step05_date is None or step05_date < APPROVAL_DATE_V15:
+                    # 議題2 step3 承認日 (2026-04-29) より前のエントリは
+                    # 9件遡及付与の対象として走査するため、APPROVAL_DATE_V15
+                    # 判定を skip した上で全件検査する
+                    pass
+                target_count_v15 += 1
+                pred_hit_updated = o.get("prediction_hit_updated_at")
+                if pred_hit_updated and isinstance(pred_hit_updated, str):
+                    # 同一値検証 (二重管理回避規定)
+                    if pred_hit_updated == step05_val:
+                        synced_count_v15 += 1
+                    else:
+                        file_name = Path(rf).name
+                        match_name = str(o.get("match", "?"))[:40]
+                        no_sync_entries.append(
+                            f"{file_name}:{match_name}[step05={step05_val}/pred_hit={pred_hit_updated} 値不一致]"
+                        )
+                else:
+                    file_name = Path(rf).name
+                    match_name = str(o.get("match", "?"))[:40]
+                    no_sync_entries.append(
+                        f"{file_name}:{match_name}[prediction_hit_updated_at 未付与]"
+                    )
+        # 判定
+        if target_count_v15 == 0:
+            goods.append(
+                "step05_prediction_hit_sync_compliance: step05_scanned_at 付与済"
+                "エントリ未検出 (議題2 step3 制定後の新規付与待ち・正常)"
+            )
+        elif synced_count_v15 == 0 and len(no_sync_entries) > 0:
+            anomalies.append(
+                f"step05_prediction_hit_sync_compliance: 完全未付与 "
+                f"{len(no_sync_entries)}件: "
+                f"{'; '.join(no_sync_entries[:3])}{'...' if len(no_sync_entries)>3 else ''} → "
+                "step05_scanned_at + prediction_hit_updated_at 同一値同時付与必須。"
+                "CLAUDE.md 柱B サブセクション 2 ステップ8 参照。"
+            )
+        elif len(no_sync_entries) > 0:
+            warnings.append(
+                f"step05_prediction_hit_sync_compliance: 部分未付与 "
+                f"{len(no_sync_entries)}/{target_count_v15}件: "
+                f"{'; '.join(no_sync_entries[:3])}{'...' if len(no_sync_entries)>3 else ''} → "
+                "step05_scanned_at と prediction_hit_updated_at 同一値同時付与必須。"
+            )
+        else:
+            goods.append(
+                f"step05_prediction_hit_sync_compliance: {target_count_v15}件全件で "
+                f"step05_scanned_at + prediction_hit_updated_at 同一値同時付与済"
+            )
+    except Exception as e:
+        warnings.append(f"step05_prediction_hit_sync_compliance チェック失敗: {e}")
+
     # === 結果出力 ===
     print(f"{BOLD}--- [OK] 正常項目 ---{RESET}")
     for g in goods:

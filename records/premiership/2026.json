@@ -205,6 +205,7 @@
       "record_class": "full_record",
       "match_status": "completed",
       "step05_scanned_at": "2026-04-28T13:03:25Z",
+      "prediction_hit_updated_at": "2026-04-28T13:03:25Z",
       "match_summary": "BRI commanding 33-pt victory (52-19) at Kingston Park, NEW home ground [FETCH:https://www.sofascore.com/rugby/match/newcastle-falcons-bristol-bears/QIbsRIb]. HT 5-21 で前半から BRI 優位を確立 [FETCH:https://www.sofascore.com/rugby/match/newcastle-falcons-bristol-bears/QIbsRIb]. NEW (Red Bulls) 10位 1W-13L 7pt / BRI 5位 10W-4L 48pt (4/19 時点) [FETCH:https://en.wikipedia.org/wiki/2025%E2%80%9326_Premiership_Rugby]. 市場fav BRI (1.04) の Q3_output_a 高信頼予測が33点差大勝で正当化 [INFER]. confidence_drift 判定対象外 (33点差大勝 / ユニオン系 7点差以内薄勝ち閾値外) [INFER].",
       "verification_sources": [
         "https://www.sofascore.com/rugby/match/newcastle-falcons-bristol-bears/QIbsRIb",
@@ -367,6 +368,7 @@
       "record_class": "full_record",
       "match_status": "completed",
       "step05_scanned_at": "2026-04-28T13:03:25Z",
+      "prediction_hit_updated_at": "2026-04-28T13:03:25Z",
       "confidence_drift": "high",
       "date_correction_note": "Original record date 2026-04-26 corrected to 2026-04-25 based on skysports.com match report (Saturday 25 April 2026 fixture confirmed) [FETCH:https://www.skysports.com/rugby-union/northampton-vs-bath/111292]. 訂正実施: A-3 サブタスク3 セッション2 (Session_64) 2026-04-28.",
       "match_summary": "NSA 41-38 BAT 3点差薄勝ち at Franklin's Gardens [FETCH:https://www.skysports.com/rugby-union/northampton-vs-bath/111292]. HT 26-14 で NSA 前半リードも、BAT が後半反撃 [FETCH:https://www.skysports.com/rugby-union/northampton-vs-bath/111292]. Tommy Freeman ハットトリック (15'/30'/73') + Ollie Sleightholme 2 tries で NSA 5 tries [FETCH:https://www.skysports.com/rugby-union/northampton-vs-bath/111292]. BAT 主力温存 (Champions Cup SF Bordeaux-Begles 翌週見据え) で本来のチーム力との差が拡大 [FETCH:https://www.skysports.com/rugby-union/northampton-vs-bath/111292]. 83min Fin Smith penalty (Enoch Opoku-Gyamfu の high tackle penalty で成立) で決着 [FETCH:https://www.skysports.com/rugby-union/northampton-vs-bath/111292]. 市場fav NSA (1.14) の Q4_upset_watch 予測が薄勝ちで実現 = HIT [INFER]. confidence_drift=high 必須付与 (conf 81% + 3点差 ユニオン系 7点差以内薄勝ち閾値内 / 議題3 規定) [MEMORY:CLAUDE.md 柱C 4-1 confidence_drift 種目別閾値テーブル]. NSA リーグ首位を確固化 [FETCH:https://www.skysports.com/rugby-union/northampton-vs-bath/111292].",

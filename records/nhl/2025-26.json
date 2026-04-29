@@ -2036,6 +2036,7 @@
       "record_class": "full_record",
       "match_status": "completed",
       "step05_scanned_at": "2026-04-29T09:28:44Z",
+      "prediction_hit_updated_at": "2026-04-29T09:28:44Z",
       "confidence_drift": null,
       "miss_class": "C",
       "miss_layer": "L4_External",

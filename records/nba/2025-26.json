@@ -1605,6 +1605,7 @@
       "record_class": "full_record",
       "match_status": "completed",
       "step05_scanned_at": "2026-04-28T15:00:00Z",
+      "prediction_hit_updated_at": "2026-04-28T15:00:00Z",
       "type_a_upset_id": "scope_outside_session_61_a3_sub3_session3_tor_cle_g4",
       "session": "_a3_sub3_session3",
       "result_reflection_session": "_a3_sub3_session3"
@@ -1659,6 +1660,7 @@
       "record_class": "full_record",
       "match_status": "completed",
       "step05_scanned_at": "2026-04-28T15:00:00Z",
+      "prediction_hit_updated_at": "2026-04-28T15:00:00Z",
       "session": "_a3_sub3_session3",
       "result_reflection_session": "_a3_sub3_session3"
     }
