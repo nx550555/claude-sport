@@ -1599,7 +1599,8 @@
       "rule_linked": [
         "P028_candidate"
       ],
-      "rule_linked_note": "P028 (NBA G2/G3 home fav 4Q execution collapse) との弱紐付け: 本 case は G4 road fav (CLE) の Q4 execution collapse / TOR home Q4 33-31 逆転で類似構造。柱A 議題1 確定方針遵守: 同一 turn 内での新規 P*** 候補化を保留 (案Q 暫定対応 / P028 evidence の正式カウント対象とはしない)。",
+      "rule_linked_note": "P028 (NBA G2/G3 home fav 4Q execution collapse) との弱紐付け: 本 case は G4 road fav (CLE) の Q4 execution collapse / TOR home Q4 33-31 逆転で類似構造。柱A 議題1 確定方針遵守: 同一 turn 内での新規 P*** 候補化を保留 (案Q 暫定対応 / P028 evidence の正式カウント対象とはしない)。 候補パターン: 'NBA PO road fav 2-1 series リードが home dog Q4 ball security/FT execution で 1桁差 (≤9点差) 逆転 UPSET'. 本 case (TOR 93-89 CLE / 4点差) は本パターンの 1件目 evidence 候補 (candidate_pattern=nba_po_road_fav_series_lead_home_dog_close_game_upset / registry 登録済). 議題1 確定方針 (異セッション独立 evidence 3件) 遵守 [MEMORY:CLAUDE.md 柱A 議題1 確定方針].",
+      "candidate_pattern": "nba_po_road_fav_series_lead_home_dog_close_game_upset",
       "potential_new_p_candidate_note": "保留候補 (議題1 確定方針による次セッション以降の独立 evidence 蓄積待ち): 'NBA PO road fav 2-1 series リードが home dog Q4 ball security/FT execution で 1桁差 (≤9点差) 逆転 UPSET' パターン。本 G4 (TOR 93-89 CLE) は本パターンの 1件目 evidence 候補。次セッション以降に異セッション独立 evidence 2件追加で current_count 3/3 到達なら柱A 承認制プロセス起動。",
       "record_class": "full_record",
       "match_status": "completed",
@@ -1626,7 +1627,7 @@
       "rec_odds": null,
       "ev": null,
       "fav_odds": 1.53,
-      "dog_odds": 2.60,
+      "dog_odds": 2.6,
       "favorite": "Houston Rockets",
       "dog": "Los Angeles Lakers",
       "result": "Houston Rockets 115-96 Los Angeles Lakers",
@@ -1652,7 +1653,8 @@
       "rule_linked": [
         "P028_candidate"
       ],
-      "rule_linked_note": "P028 (NBA G2/G3 home fav 4Q execution collapse) との弱紐付け: 本 case は LAL road fav 視点で Q3 execution collapse + Q3 18-34 で test されたパターン。柱A 議題1 確定方針遵守: 同一 turn 内での新規 P*** 候補化を保留 (案Q 暫定対応 / P028 evidence の正式カウント対象とはしない)。HIT 試合だが NRtg 3.5pt edge (本来 SKIP 閾値 5pt 未達) からの予測のため強い R*** 紐付けは無し。",
+      "rule_linked_note": "P028 (NBA G2/G3 home fav 4Q execution collapse) との弱紐付け: 本 case は LAL road fav 視点で Q3 execution collapse + Q3 18-34 で test されたパターン。柱A 議題1 確定方針遵守: 同一 turn 内での新規 P*** 候補化を保留 (案Q 暫定対応 / P028 evidence の正式カウント対象とはしない)。HIT 試合だが NRtg 3.5pt edge (本来 SKIP 閾値 5pt 未達) からの予測のため強い R*** 紐付けは無し。 候補パターン: 'NBA PO 0-3 elimination home back-to-wall で Q3 dominance + 3P variance positive swing による blowout HIT (≥15点差)'. 本 case (HOU 115-96 LAL / 19点差) は本パターンの 1件目 evidence 候補 (HIT 側 / 論点6 任意付与) (candidate_pattern=nba_po_back_to_wall_blowout_via_q3_dominance_3p_variance_hit / registry 登録済). 議題1 確定方針 (異セッション独立 evidence 3件) 遵守 [MEMORY:CLAUDE.md 柱A 議題1 確定方針].",
+      "candidate_pattern": "nba_po_back_to_wall_blowout_via_q3_dominance_3p_variance_hit",
       "potential_new_p_candidate_note": "保留候補 (議題1 確定方針による次セッション以降の独立 evidence 蓄積待ち): 'NBA PO 0-3 elimination home back-to-wall で Q3 dominance + 3P variance positive swing による blowout HIT (≥15点差)' パターン。Amen Thompson type 若手 breakout が触媒。本 G4 は本パターンの 1件目 evidence 候補。",
       "record_class": "full_record",
       "match_status": "completed",

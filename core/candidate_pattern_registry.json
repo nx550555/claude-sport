@@ -1,0 +1,117 @@
+{
+  "version": "1.0",
+  "created": "2026-04-29",
+  "schema_version": "Session_64 議題1+1' 制定",
+  "description": "新規 P*** 候補の機械検証可能化のため、records スキーマに導入された candidate_pattern フィールドの値を一元管理する registry。CLAUDE.md 柱A サブセクション3-3 規約に従う。",
+  "naming_convention": {
+    "format": "{sport}_{context}_{pattern_summary}",
+    "max_length": 80,
+    "case": "snake_case (全小文字 / アルファベット数字_のみ)",
+    "sport_alias_table": {
+      "nhl": "NHL",
+      "nba": "NBA",
+      "nfl": "NFL",
+      "mlb": "MLB",
+      "nrl": "NRL",
+      "sr": "Super Rugby Pacific",
+      "prm": "England Premiership",
+      "t14": "Top 14 (France)",
+      "pd2": "Pro D2 (France)",
+      "sl": "Super League (UK)",
+      "ufl": "UFL",
+      "cfl": "CFL",
+      "ahl": "AHL",
+      "atp": "ATP Tennis",
+      "wta": "WTA Tennis",
+      "scc": "Soccer (5大リーグ)"
+    }
+  },
+  "machine_verification": {
+    "health_check_item": 14,
+    "item_name": "candidate_pattern_uniqueness",
+    "rules": [
+      "同一セッション内同一値重複 → WARN (議題1 同一セッション内 evidence 加算回避の精神違反)",
+      "同一 turn 内同一値検出 (= step05_scanned_at 完全一致) → ALERT (議題1 同一 turn 内 evidence 加算厳禁違反)",
+      "registry 未登録値の使用 → WARN",
+      "区分3 (skip_record) は走査対象外 (柱D 既存柱との整合性)"
+    ]
+  },
+  "patterns": {
+    "wta_clay_pr_veteran_return_form_celo_underestimate": {
+      "sport": "wta",
+      "context": "wta_masters_madrid_clay_r3",
+      "summary": "PR (Protected Ranking) veteran return form の cElo underestimate (clay R3 マラソン3セット負けでのアップセット)",
+      "evidence_count": 1,
+      "first_evidence": {
+        "session": "_64_a3_sub3_session1",
+        "match": "Mertens E.(#19) vs Pliskova K.(PR)",
+        "date": "2026-04-26",
+        "result": "Pliskova won 7-5 2-6 7-6(3)",
+        "tournament": "WTA 1000 Madrid",
+        "round": "R3"
+      },
+      "alias": [],
+      "status": "watching",
+      "trigger_threshold": 3,
+      "promoted_to_p_candidate_id": null,
+      "weak_link_to_existing": "P006_candidate_clay_R2R3_short_recovery (弱紐付け / 正式 evidence カウント対象外)"
+    },
+    "nba_po_road_fav_series_lead_home_dog_close_game_upset": {
+      "sport": "nba",
+      "context": "nba_playoffs_round1_g4",
+      "summary": "NBA PO road fav 2-1 series リードが home dog Q4 ball security/FT execution で 1桁差 (≤9点差) 逆転 UPSET",
+      "evidence_count": 1,
+      "first_evidence": {
+        "session": "_64_a3_sub3_session3",
+        "match": "Toronto Raptors vs Cleveland Cavaliers (G4 R1)",
+        "date": "2026-04-26",
+        "result": "TOR 93-89 CLE",
+        "round": "Playoffs R1 G4"
+      },
+      "alias": [],
+      "status": "watching",
+      "trigger_threshold": 3,
+      "promoted_to_p_candidate_id": null,
+      "weak_link_to_existing": "P028_candidate (NBA G2/G3 home fav 4Q execution collapse / 弱紐付け / 正式 evidence カウント対象外)"
+    },
+    "nba_po_back_to_wall_blowout_via_q3_dominance_3p_variance_hit": {
+      "sport": "nba",
+      "context": "nba_playoffs_round1_g4",
+      "summary": "NBA PO 0-3 elimination home back-to-wall で Q3 dominance + 3P variance positive swing による blowout HIT (≥15点差)",
+      "evidence_count": 1,
+      "first_evidence": {
+        "session": "_64_a3_sub3_session3",
+        "match": "Houston Rockets vs Los Angeles Lakers (G4 R1)",
+        "date": "2026-04-26",
+        "result": "HOU 115-96 LAL",
+        "round": "Playoffs R1 G4"
+      },
+      "alias": [],
+      "status": "watching",
+      "trigger_threshold": 3,
+      "promoted_to_p_candidate_id": null,
+      "weak_link_to_existing": "P028_candidate (HIT 側 / 弱紐付け / 正式 evidence カウント対象外)",
+      "note": "HIT エントリへの candidate_pattern 付与 (論点6 任意・選択的)"
+    },
+    "nhl_po_close_out_home_fav_failure_via_veteran_desperation": {
+      "sport": "nhl",
+      "context": "nhl_playoffs_round1_g4_close_out",
+      "summary": "NHL PO R1 G4 home favorite close-out 試合での veteran core elimination desperation 上振れ pattern",
+      "evidence_count": 1,
+      "first_evidence": {
+        "session": "_64_a3_sub3_session4",
+        "match": "Philadelphia Flyers vs Pittsburgh Penguins (G4)",
+        "date": "2026-04-25",
+        "result": "PIT 4-2 PHI (regulation 2点差)",
+        "round": "Playoffs R1 G4"
+      },
+      "alias": ["nhl_po_homefav_closeout_fail_veteran_desp"],
+      "status": "watching",
+      "trigger_threshold": 3,
+      "promoted_to_p_candidate_id": null,
+      "weak_link_to_existing": "P_NHL_PO_close_out_home_fav_failure_candidate (種目特定型新規候補 ID 案B / 弱紐付け / 正式 evidence カウント対象外)"
+    }
+  },
+  "last_updated": "2026-04-29",
+  "updated_session": "_64_a3_review_agenda1+1prime"
+}

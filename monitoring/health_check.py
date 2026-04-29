@@ -275,6 +275,16 @@ def main():
                 has_ma = bool(o.get('miss_analysis'))
                 has_layer = bool(o.get('miss_layer'))
                 has_rl = bool(o.get('rule_linked') or o.get('rules_triggered'))
+                # 議題1+1' (Session_64 制定) 改訂: rule_linked: null + rule_linked_note
+                # 50文字以上の実質的記述ありなら OK 扱い (議題1 確定方針による
+                # 意図的 null = 異セッション独立 evidence 3件未満で正式 evidence
+                # カウント対象外として保留中の新規 P*** 候補 1件目記録パターン)。
+                # CLAUDE.md 柱A サブセクション3-2 必須4項目の中身検証は
+                # CHECK-2 自己点検 (Claude 側責務) で実施。
+                if not has_rl:
+                    rl_note = o.get('rule_linked_note', '')
+                    if rl_note and isinstance(rl_note, str) and len(rl_note) >= 50:
+                        has_rl = True  # OK 扱い (議題1 正規パターン)
                 if not (has_ma and has_layer and has_rl):
                     missing = []
                     if not has_ma: missing.append("miss_analysis")
@@ -659,6 +669,133 @@ def main():
             )
     except Exception as e:
         warnings.append(f"step05_scan_compliance チェック失敗: {e}")
+
+    # ---- 14. candidate_pattern_uniqueness (Session_64 議題1+1' 制定) ----
+    # 柱A サブセクション3-3 規定の機械検証。
+    # records スキーマに導入された candidate_pattern フィールドの重複付与を検出。
+    # - 同一セッション内同一値重複 = WARN (議題1 同一セッション内 evidence 加算回避)
+    # - 同一 turn 内同一値検出 = ALERT (議題1 同一 turn 内 evidence 加算厳禁)
+    # registry (core/candidate_pattern_registry.json) 整合性検証も同時実施:
+    # - registry 未登録値の使用 = WARN
+    # - 区分3 (skip_record) は走査対象外 (柱D 既存柱との整合性)
+    try:
+        import glob as _glob_v14
+        record_files_v14 = sorted(
+            _glob_v14.glob(str(BASE / "records" / "**" / "*.json"), recursive=True)
+        )
+        # registry 読み込み
+        registry_path = BASE / "core" / "candidate_pattern_registry.json"
+        registry_keys = set()
+        registry_aliases = set()
+        if registry_path.exists():
+            try:
+                reg = load(registry_path)
+                patterns = reg.get("patterns", {})
+                registry_keys = set(patterns.keys())
+                for v in patterns.values():
+                    for a in v.get("alias", []) or []:
+                        registry_aliases.add(a)
+            except Exception:
+                pass
+        else:
+            warnings.append(
+                "candidate_pattern_uniqueness: core/candidate_pattern_registry.json "
+                "が存在しない。柱A サブセクション3-3 規約参照。"
+            )
+        # session 単位 (screened_session / closed_session / result_reflection_session) の
+        # 同一値カウント + turn 単位 (step05_scanned_at 完全一致) の同一値カウント
+        from collections import defaultdict
+        session_pattern_count = defaultdict(lambda: defaultdict(list))
+        turn_pattern_count = defaultdict(lambda: defaultdict(list))
+        unregistered = []
+        all_entries = []
+        for rf in record_files_v14:
+            if "multi_bets.json" in rf:
+                continue
+            try:
+                d = load(Path(rf))
+            except Exception:
+                continue
+            def walk_v14(obj):
+                if isinstance(obj, list):
+                    for x in obj:
+                        yield from walk_v14(x)
+                elif isinstance(obj, dict):
+                    yield obj
+                    for v in obj.values():
+                        yield from walk_v14(v)
+            for o in walk_v14(d):
+                cp = o.get("candidate_pattern")
+                if not cp or not isinstance(cp, str):
+                    continue
+                if o.get("record_class") == "skip_record":
+                    continue
+                file_name = Path(rf).name
+                match_name = str(o.get("match", "?"))[:40]
+                # registry 整合性
+                if registry_keys and cp not in registry_keys and cp not in registry_aliases:
+                    unregistered.append(f"{file_name}:{match_name}[{cp}]")
+                # session 識別子
+                session_id = (
+                    o.get("screened_session")
+                    or o.get("closed_session")
+                    or o.get("result_reflection_session")
+                    or o.get("session_id")
+                )
+                if session_id:
+                    session_pattern_count[session_id][cp].append(
+                        f"{file_name}:{match_name}"
+                    )
+                # turn 識別子 = step05_scanned_at 完全一致 (秒単位)
+                turn_id = o.get("step05_scanned_at")
+                if turn_id:
+                    turn_pattern_count[turn_id][cp].append(
+                        f"{file_name}:{match_name}"
+                    )
+                all_entries.append((file_name, match_name, cp, session_id, turn_id))
+        # 重複検出
+        session_dups = []
+        for sid, patmap in session_pattern_count.items():
+            for cp, locs in patmap.items():
+                if len(locs) >= 2:
+                    session_dups.append(f"session={sid}/{cp}/{len(locs)}件:{locs[0]}...")
+        turn_dups = []
+        for tid, patmap in turn_pattern_count.items():
+            for cp, locs in patmap.items():
+                if len(locs) >= 2:
+                    turn_dups.append(f"turn={tid}/{cp}/{len(locs)}件:{locs[0]}...")
+        # 判定
+        if turn_dups:
+            anomalies.append(
+                f"candidate_pattern_uniqueness: 同一 turn 内重複 {len(turn_dups)}件: "
+                f"{'; '.join(turn_dups[:3])}{'...' if len(turn_dups)>3 else ''} → "
+                "議題1 同一 turn 内 evidence 加算禁止違反。CLAUDE.md 柱A サブセクション3-3 参照。"
+            )
+        if session_dups:
+            warnings.append(
+                f"candidate_pattern_uniqueness: 同一セッション内重複 {len(session_dups)}件: "
+                f"{'; '.join(session_dups[:3])}{'...' if len(session_dups)>3 else ''} → "
+                "議題1 同一セッション内 evidence 加算回避の精神違反。"
+            )
+        if unregistered:
+            warnings.append(
+                f"candidate_pattern_uniqueness: registry 未登録値 {len(unregistered)}件: "
+                f"{'; '.join(unregistered[:3])}{'...' if len(unregistered)>3 else ''} → "
+                "core/candidate_pattern_registry.json への登録必須。"
+            )
+        if not turn_dups and not session_dups and not unregistered:
+            if all_entries:
+                goods.append(
+                    f"candidate_pattern_uniqueness: {len(all_entries)}件全件で "
+                    f"registry 整合性 OK + 重複なし (registry={len(registry_keys)} patterns)"
+                )
+            else:
+                goods.append(
+                    "candidate_pattern_uniqueness: candidate_pattern 付与エントリ 0件 "
+                    "(議題1+1' 制定後の新規付与待ち・正常)"
+                )
+    except Exception as e:
+        warnings.append(f"candidate_pattern_uniqueness チェック失敗: {e}")
 
     # === 結果出力 ===
     print(f"{BOLD}--- [OK] 正常項目 ---{RESET}")

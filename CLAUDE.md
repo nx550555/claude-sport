@@ -574,6 +574,75 @@ R024 (form slump 補正) では evidence 3件目 (A041 Baptiste-Paolini) が Ses
 
 **実装箇所**: `core/rule_pipeline.json` の `instructions_for_claude` / `approval_workflow.step1_threshold_reached` / `forbidden_practices` に同義の規定を実装済 (Session_62 2026-04-28 フェーズ6 第4段階 ステップ1)。
 
+#### 3-2. rule_linked: null + rule_linked_note 必須パターン (Session_64 2026-04-29 議題1+1' 制定)
+
+> **背景**: A-3 サブタスク3 (Session_61 9件振り分け) で計4件 (Pliskova-Mertens / TOR-CLE G4 / HOU-LAL G4 / PHI G4) が、議題1 確定方針 (異セッション独立 evidence 3件未満で正式 evidence カウント対象外) と health_check.py 項目10 (MISS feedback loop = miss_analysis + miss_layer + rule_linked 完全要件) の競合により ALERT 回避目的の弱紐付け文字列を `rule_linked` に付与する暫定対応 (案Q) が運用された。本サブセクションは案 (a)+(b)+(c) 統合採用 (議題1+1' 提案レポート step1) に基づき、`rule_linked: null` + `rule_linked_note` 50文字以上の正規パターンを規定する。
+
+新規 P*** 候補の 1件目 evidence として記録する場合 (議題1 確定方針による異セッション独立 evidence 3件未満)、以下の正規パターンに従う:
+
+##### 必須記載項目 (rule_linked_note / 4項目)
+
+| # | 項目 | 内容 |
+|---|---|---|
+| 1 | **保留理由** | 「正式 evidence カウント対象外」を明示 |
+| 2 | **候補パターン記述** | 想定される P*** 候補のパターン名 (自然言語で簡潔に) |
+| 3 | **evidence 1件目位置付け** | 「本 case は本パターンの 1件目 evidence 候補」と明示 |
+| 4 | **議題1 確定方針遵守宣言** | 「議題1 確定方針 (異セッション独立 evidence 3件) 遵守」を `[MEMORY:CLAUDE.md 柱A 議題1 確定方針]` タグ付きで明示 (機械検証可能化) |
+
+##### 正規パターン例
+
+- `rule_linked: null` (新規ケース) または既存 P*** 候補への弱紐付け string/list (既存4件は現状維持温存 / 論点1 確定方針)
+- `rule_linked_note`: 上記4項目を含む 50文字以上の記述
+- `potential_new_p_candidate_note`: 候補パターン詳細 + 異セッション独立 evidence 蓄積待ち宣言
+- `candidate_pattern`: 標準化された候補 ID (柱A サブセクション3-3 参照)
+
+##### 機械検証
+
+- `monitoring/health_check.py` 項目10 (MISS feedback loop) 改訂: `rule_linked: null` でも `rule_linked_note` が 50文字以上の実質的記述ありなら OK 扱い (議題1 正規パターン)
+- CHECK-2 自己点検 (Claude 側責務): 必須4項目の充足を文言検証。中身検証は機械化困難のため Claude が応答送信前/記録ファイル書き込み前に目視確認すること
+- 柱C 4-3 5種タグ義務との整合: 必須4項目の項目4 で `[MEMORY:CLAUDE.md 柱A 議題1 確定方針]` タグ付与必須
+
+##### 既存4件 (案Q 暫定対応) との関係
+
+| # | 試合 | rule_linked | rule_linked_note | candidate_pattern (柱A 3-3 参照) |
+|---|---|---|---|---|
+| 1 | Pliskova-Mertens Madrid R3 | `"P006_candidate_clay_R2R3_short_recovery"` (現状維持温存) | 必須4項目準拠記述 | `wta_clay_pr_veteran_return_form_celo_underestimate` |
+| 2 | TOR vs CLE G4 | `["P028_candidate"]` (現状維持温存) | 必須4項目準拠記述 | `nba_po_road_fav_series_lead_home_dog_close_game_upset` |
+| 3 | LAL vs HOU G4 | `["P028_candidate"]` (現状維持温存) | 必須4項目準拠記述 | `nba_po_back_to_wall_blowout_via_q3_dominance_3p_variance_hit` |
+| 4 | PHI G4 vs PIT | `["P_NHL_PO_close_out_home_fav_failure_candidate"]` (現状維持温存) | 必須4項目準拠記述 | `nhl_po_close_out_home_fav_failure_via_veteran_desperation` |
+
+→ 既存4件の `rule_linked` は論点1 確定方針により温存。**新規ケースから真の `rule_linked: null` 採用を許容**。
+
+#### 3-3. candidate_pattern フィールド規約 (Session_64 2026-04-29 議題1+1' 制定)
+
+新規 P*** 候補の機械検証可能化のため、records スキーマに `candidate_pattern` フィールドを導入する。
+
+##### 命名規則
+
+- **形式**: `{sport}_{context}_{pattern_summary}` (snake_case / 全小文字 / アルファベット数字_のみ)
+- **最大長**: 80文字
+- **略称表 (sport)**: `nhl` / `nba` / `nfl` / `mlb` / `nrl` / `sr` (Super Rugby) / `prm` (Premiership) / `t14` (Top 14) / `pd2` (Pro D2) / `sl` (Super League) / `ufl` / `cfl` / `ahl` / `atp` / `wta` / `scc` (= soccer)
+
+##### 付与義務
+
+- **MISS エントリ + `rule_linked: null` パターン**: 必須
+- **MISS エントリ + 弱紐付け (既存4件パターン)**: 必須 (3-2 必須4項目と整合)
+- **HIT エントリ**: 任意・選択的 (HIT 側候補追跡で付与可・論点6 確定方針)
+
+##### registry 参照義務
+
+- 新規 `candidate_pattern` 値は `core/candidate_pattern_registry.json` に登録必須
+- 既存値の重複付与は禁止 (議題1 同一 turn 内 evidence 加算回避)
+- registry 未登録値の使用は health_check 項目14 で WARN 検出
+
+##### 機械検証
+
+- `monitoring/health_check.py` 項目14 (`candidate_pattern_uniqueness`) で以下を検証:
+  - 同一セッション内同一値重複 → **WARN** (議題1 同一セッション内 evidence 加算回避の精神違反)
+  - 同一 turn 内同一値検出 (= `step05_scanned_at` 完全一致) → **ALERT** (議題1 同一 turn 内 evidence 加算厳禁違反)
+  - registry 未登録値 → **WARN**
+  - 区分3 (skip_record) は走査対象外 (柱D 既存柱との整合性)
+
 ### 4. 既存ルール改訂プロセス (R*** / N*** 等の v_X.0 → v_Y.0)
 
 既存 implemented ルールの body / evidence / application を変更する場合も承認必須:
@@ -595,6 +664,7 @@ R024 (form slump 補正) では evidence 3件目 (A041 Baptiste-Paolini) が Ses
 - evidence 1件のみでのルール改訂 (反例検証なし)
 - ユーザー確認なしの既存ルール v_X.0 → v_Y.0 改訂
 - 「次のセッション開始時」を待たずの自動実装
+- 同一セッション内で同じ `candidate_pattern` 値の重複付与 (議題1 同一 turn 内 evidence 加算回避の精神 / Session_64 2026-04-29 議題1+1' 制定 / health_check.py 項目14 で機械検証)
 
 ### 6. 競合解消ルール
 
