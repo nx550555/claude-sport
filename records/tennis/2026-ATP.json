@@ -3433,11 +3433,13 @@
       "rec": null,
       "rec_odds": null,
       "ev": 0.095,
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Rinderknech A.",
+      "score": "6-3 6-2",
+      "prediction_hit": true,
       "hit": null,
-      "actual_ev": null
+      "actual_ev": null,
+      "updated_session": "_61",
+      "updated_at": "2026-04-27"
     },
     {
       "tournament": "Mutua Madrid Open 2026",
@@ -3502,11 +3504,16 @@
       "rec": null,
       "rec_odds": null,
       "ev": 0.083,
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Prizmic D.",
+      "score": "4-6 7-6(4) 7-6(5)",
+      "prediction_hit": false,
       "hit": null,
-      "actual_ev": null
+      "actual_ev": null,
+      "miss_analysis": "Prizmic (Croatian Q, 18yo) が Shelton (No.4 seed Top10) を 3h00 marathon で破る。Shelton 1stセット獲得後、TBバトルで本命崩壊。Q初Top10 win。R017候補補強 (clay momentum + Q upsetter)。",
+      "miss_layer": "L3_FormFitness+L4_Mental",
+      "rule_linked": "R020 candidate (R1 upsetter momentum) / R017 candidate",
+      "updated_session": "_61",
+      "updated_at": "2026-04-27"
     },
     {
       "tournament": "Mutua Madrid Open 2026",
@@ -3847,11 +3854,16 @@
       "rec": null,
       "rec_odds": null,
       "ev": 0.195,
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Moller E.",
+      "score": "retired",
+      "prediction_hit": false,
       "hit": null,
-      "actual_ev": null
+      "actual_ev": null,
+      "miss_analysis": "Diallo R2 試合中 retire。具体的負傷部位は要確認。怪我による途中棄権で予測 MISS は不可避。caution tier no-bet で P&L影響なし。",
+      "miss_layer": "L4_External_Injury",
+      "rule_linked": "N/A (in-game retirement)",
+      "updated_session": "_61",
+      "updated_at": "2026-04-27"
     },
     {
       "tournament": "Mutua Madrid Open 2026",
@@ -3950,11 +3962,13 @@
       "rec": null,
       "rec_odds": null,
       "ev": 0.059,
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Griekspoor T.",
+      "score": "6-3 6-4",
+      "prediction_hit": true,
       "hit": null,
-      "actual_ev": null
+      "actual_ev": null,
+      "updated_session": "_61",
+      "updated_at": "2026-04-27"
     },
     {
       "tournament": "Mutua Madrid Open 2026",
@@ -3985,11 +3999,16 @@
       "rec": null,
       "rec_odds": null,
       "ev": 0.054,
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Nava E.",
+      "score": "lost R2",
+      "prediction_hit": false,
       "hit": null,
-      "actual_ev": null
+      "actual_ev": null,
+      "miss_analysis": "Vacherot (Monaco home WC, MC SF実績) が Nava (USA WC) に R2 で敗北。R017 (home WC + 連続seed撃破モメンタム) は Madrid (海外大会) では home WC 要件不適合。連続ラウンド戦の疲労 + 環境変化で実力差顕在化。R017 の home 要件の厳格適用 (大会開催地と選手出身地の一致のみ home WC とする) を裏付ける evidence。",
+      "miss_layer": "L4_External",
+      "rule_linked": "R017 (home WC 厳格適用)",
+      "updated_session": "_61",
+      "updated_at": "2026-04-27"
     },
     {
       "tournament": "Mutua Madrid Open 2026",
@@ -4019,17 +4038,19 @@
       "rec": "Karen Khachanov",
       "rec_odds": 1.22,
       "ev": 0.056,
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
-      "hit": null,
-      "actual_ev": null,
+      "result": "Khachanov K.",
+      "score": "6-2 6-3",
+      "prediction_hit": true,
+      "hit": true,
+      "actual_ev": 0.22,
       "rules_applied": [
         "R001",
         "R019"
       ],
       "notified": true,
-      "notified_at": "2026-04-25T09:50:30.507225+09:00"
+      "notified_at": "2026-04-25T09:50:30.507225+09:00",
+      "updated_session": "_61",
+      "updated_at": "2026-04-27"
     },
     {
       "tournament": "Mutua Madrid Open 2026",
@@ -4059,16 +4080,18 @@
       "rec": "Felix Auger-Aliassime",
       "rec_odds": 1.25,
       "ev": 0.082,
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
-      "hit": null,
-      "actual_ev": null,
+      "result": "Auger-Aliassime F.",
+      "score": "6-3 6-4",
+      "prediction_hit": true,
+      "hit": true,
+      "actual_ev": 0.25,
       "rules_applied": [
         "R001"
       ],
       "notified": true,
-      "notified_at": "2026-04-25T09:50:31.206246+09:00"
+      "notified_at": "2026-04-25T09:50:31.206246+09:00",
+      "updated_session": "_61",
+      "updated_at": "2026-04-27"
     },
     {
       "tournament": "Mutua Madrid Open 2026",
@@ -4098,16 +4121,18 @@
       "rec": "Jakub Mensik",
       "rec_odds": 1.29,
       "ev": 0.186,
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
-      "hit": null,
-      "actual_ev": null,
+      "result": "Mensik J.",
+      "score": "6-3 6-4",
+      "prediction_hit": true,
+      "hit": true,
+      "actual_ev": 0.29,
       "rules_applied": [
         "R001"
       ],
       "notified": true,
-      "notified_at": "2026-04-25T09:50:32.077181+09:00"
+      "notified_at": "2026-04-25T09:50:32.077181+09:00",
+      "updated_session": "_61",
+      "updated_at": "2026-04-27"
     },
     {
       "tournament": "Mutua Madrid Open 2026",
@@ -4135,11 +4160,16 @@
       "ev": 0.116,
       "note": "CAUTION_MARGIN (downgrade from GO): form 不安定 + Q突破 dog momentum",
       "screened_session": "_58",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Budkov Kjaer N.",
+      "score": "lost in 53 min straight sets",
+      "prediction_hit": false,
       "hit": null,
-      "actual_ev": null
+      "actual_ev": null,
+      "miss_analysis": "Shapovalov (Munich SF実績後) が Budkov Kjaer (NOR Q, 18yo) に straight sets 53min で完敗。Munich消化試合連続 (R005 B2B大会間疲弊) + Madrid 高地 (1500m altitude) + Shapovalov の serve-baseline rhythm 喪失。R014 (Masters→翌週大会 B2B) evidence 補強。Shapovalov MC R1 で Griekspoor 戦 3sets 消耗 → Munich SF (4 matches) → Madrid R1 → R2 = 6試合連続。clay specialist player (Budkov NOR Q U21 Roland Garros) が rhythm 破壊。",
+      "miss_layer": "L4_External_Fatigue",
+      "rule_linked": "R014 candidate (Masters間B2B疲弊) / P006",
+      "updated_session": "_61",
+      "updated_at": "2026-04-27"
     },
     {
       "tournament": "Mutua Madrid Open 2026",
@@ -4167,11 +4197,13 @@
       "ev": -0.006,
       "note": "CAUTION_MARGIN (downgrade from GO): Munar home WC + recovery momentum + R009 applied.",
       "screened_session": "_58",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Ruud C.",
+      "score": "6-0 6-1",
+      "prediction_hit": true,
       "hit": null,
-      "actual_ev": null
+      "actual_ev": null,
+      "updated_session": "_61",
+      "updated_at": "2026-04-27"
     },
     {
       "tournament": "Mutua Madrid Open 2026",
@@ -4416,9 +4448,15 @@
         "Cobolli vs Carabelli (diff 85.5 L1 fail)"
       ],
       "notes": "Phase B1 ATP R2 4/25 スクリーニング結果。GO 3件 + CAUTION 2件 + Q3_mid 1件 + SKIP 10件。R019 新実装 evidence A034 (Session_57 Paul MISS) と Tirante d. Paul 4/24 R2 7-5 6-4 で一致確認。"
+    },
+    {
+      "session": "_61",
+      "date": "2026-04-27",
+      "action": "Madrid R2 10件 結果反映",
+      "details": "GO 3/3 HIT (+0.76u Khachanov/FAA/Mensik) + CAUTION 4 HIT (Rinderknech/Griekspoor/Ruud) / 4 MISS (Shelton/Diallo retire/Vacherot/Shapovalov). MISS 4件 miss_analysis 同時記入完了 (PA-PERM05)."
     }
   ],
-  "last_updated": "2026-04-24",
+  "last_updated": "2026-04-27 Session_61",
   "log": [
     {
       "session": "_45",

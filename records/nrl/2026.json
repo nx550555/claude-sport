@@ -1074,8 +1074,8 @@
       ],
       "status": "pending",
       "hit": null,
-      "result": null,
-      "prediction_hit": null,
+      "result": "Penrith Panthers",
+      "prediction_hit": true,
       "screening_session": "2026-04-20 Session_43",
       "note": "手動データ2026-04-19.json起点。L1(PD/G)詳細は時間節約のため保留。追加confirmation要なら個別調査。",
       "odds_updated_at": [
@@ -1095,7 +1095,10 @@
           },
           "reason": "GEN004 odds shift >0.01 in 2026-04-23-2.json"
         }
-      ]
+      ],
+      "score": "12-44",
+      "updated_session": "_61",
+      "updated_at": "2026-04-27"
     },
     {
       "date": "2026-04-26",
@@ -1122,8 +1125,8 @@
       ],
       "status": "pending",
       "hit": null,
-      "result": null,
-      "prediction_hit": null,
+      "result": "Parramatta Eels",
+      "prediction_hit": false,
       "screening_session": "2026-04-20 Session_43",
       "note": "手動データ2026-04-19.json起点。L1(PD/G)詳細は時間節約のため保留。追加confirmation要なら個別調査。",
       "odds_updated_at": [
@@ -1154,8 +1157,14 @@
       "screened_session": "_58",
       "source": "2026-04-24.json",
       "notified": true,
-      "notified_at": "2026-04-25T09:50:29.613536+09:00"
+      "notified_at": "2026-04-25T09:50:29.613536+09:00",
+      "score": "18-24",
+      "miss_analysis": "Manly home (4 Pines) で 4連勝中だったが Eels に 18-24 で逆転負け。残り20分時点で Manly リード → 終盤2トライで Eels 逆転。Foran 新監督就任後 Manly が +91 PD で快進撃中も、Eels の 終盤ラッシュ (NRL では 4Q decisive trend) で崩壊。L1 PD/G 差 + home advantage で本命視も、Eels rivalry (NSW Sydney derby) motivation 過小評価。Manly 1Q-3Q dominance vs 4Q fatigue/closer execution パターン。Provisional GO のままキックオフ → caution_waiting 扱いで P&L影響なし。",
+      "miss_layer": "L3_4Q_Execution",
+      "rule_linked": "NRL_new candidate (Sydney derby rivalry 4Q reversal)",
+      "updated_session": "_61",
+      "updated_at": "2026-04-27"
     }
   ],
-  "last_updated": "2026-04-25"
+  "last_updated": "2026-04-27 Session_61"
 }

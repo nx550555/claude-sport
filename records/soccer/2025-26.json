@@ -237,11 +237,15 @@
       "screening_date": "2026-04-25",
       "step45_required": true,
       "step45_status": "PENDING",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Arsenal",
+      "score": "1-0",
+      "prediction_hit": true,
       "actual_ev": null,
-      "notify_sent": false
+      "notify_sent": false,
+      "tier_final": "caution_waiting",
+      "note_session61": "STEP 4.5 lineups 未確認のままキックオフ → P&L 影響なし扱い (予測精度のみカウント)",
+      "updated_session": "_61",
+      "updated_at": "2026-04-27"
     },
     {
       "match": "Manchester United vs Brentford",
@@ -367,11 +371,13 @@
       "screening_date": "2026-04-25",
       "step45_required": false,
       "step45_status": "PENDING",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Barcelona",
+      "score": "0-2",
+      "prediction_hit": true,
       "actual_ev": null,
-      "notify_sent": false
+      "notify_sent": false,
+      "updated_session": "_61",
+      "updated_at": "2026-04-27"
     },
     {
       "match": "Valencia vs Girona",
@@ -965,11 +971,13 @@
       "screening_date": "2026-04-25",
       "step45_required": false,
       "step45_status": "PENDING",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Bayern Munich",
+      "score": "3-4",
+      "prediction_hit": true,
       "actual_ev": null,
-      "notify_sent": false
+      "notify_sent": false,
+      "updated_session": "_61",
+      "updated_at": "2026-04-27"
     },
     {
       "match": "Hamburger SV vs Hoffenheim",
@@ -1017,11 +1025,16 @@
       "screening_date": "2026-04-25",
       "step45_required": false,
       "step45_status": "PENDING",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "draw",
+      "score": "1-1",
+      "prediction_hit": false,
       "actual_ev": null,
-      "notify_sent": false
+      "notify_sent": false,
+      "miss_analysis": "VfB Stuttgart home でドロー (1-1)。Bremen が 18'先制 → Demirovic 61'同点。CL圏争いの Stuttgart にとってドローは敗北同然。Bremen 守備強度 (low-block defensive shape) 想定外。L1 xGD 差 と実際の試合内容に乖離。Bundesliga 中位下位の defensive game plan が高位チームを mid-table draw に巻き込むパターン。",
+      "miss_layer": "L3_TacticalMatchup",
+      "rule_linked": "S_new candidate (mid-table low-block vs CL争いhome)",
+      "updated_session": "_61",
+      "updated_at": "2026-04-27"
     },
     {
       "match": "Borussia Dortmund vs Freiburg",
@@ -1071,5 +1084,5 @@
       "summary": "soccer: 35 entries added (Session_60 一括スクリーニング)"
     }
   ],
-  "last_updated": "2026-04-25"
+  "last_updated": "2026-04-27 Session_61"
 }

@@ -269,11 +269,16 @@
       "screening_date": "2026-04-25",
       "step45_required": false,
       "step45_status": "PENDING",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Houston Astros",
+      "score": "7-4",
+      "prediction_hit": false,
       "actual_ev": null,
-      "notify_sent": false
+      "notify_sent": false,
+      "miss_analysis": "Yankees 8連勝中の状況で Astros home (Daikin Park) で 7-4 勝利。Astros Arrighetti SP (2-0 2.45ERA) good start。Yankees Gil SP (1-1 4.11ERA) 苦戦。L1 Savant xwOBA 差より SP matchup decisive。Yankees 連勝 streak fade + Astros home advantage 過小評価。",
+      "miss_layer": "L3_PitcherMatchup",
+      "rule_linked": "M_new candidate (winning streak ≥8 game fade + opposing home SP advantage)",
+      "updated_session": "_61",
+      "updated_at": "2026-04-27"
     },
     {
       "match": "Kansas City Royals vs Los Angeles Angels",
@@ -373,11 +378,13 @@
       "screening_date": "2026-04-25",
       "step45_required": false,
       "step45_status": "PENDING",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Los Angeles Dodgers",
+      "score": "6-0",
+      "prediction_hit": true,
       "actual_ev": null,
-      "notify_sent": false
+      "notify_sent": false,
+      "updated_session": "_61",
+      "updated_at": "2026-04-27"
     },
     {
       "match": "Atlanta Braves vs Philadelphia Phillies",
@@ -420,5 +427,5 @@
       "summary": "mlb: 15 entries added (Session_60 一括スクリーニング)"
     }
   ],
-  "last_updated": "2026-04-25"
+  "last_updated": "2026-04-27 Session_61"
 }
