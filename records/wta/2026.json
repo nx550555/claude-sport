@@ -1510,8 +1510,18 @@
               "hit_normal"
             ],
             "depth": "light",
-            "note": "Osorio d. Zakharova 6-0 6-3 (R1, 65min)。出典: wtatennis.com videos/4491025 'Osorio races past Zakharova in Madrid' (一次)。",
-            "source_tier": "primary"
+            "source_tier": "primary",
+            "facts": "Osorio d. Zakharova 6-0 6-3 (R1, 65min)。出典: wtatennis.com videos/4491025 'Osorio races past Zakharova in Madrid' (一次)。",
+            "analysis": {
+              "decisive_factor": null,
+              "market_blind_spot": null,
+              "confidence_level": null
+            },
+            "rules_implication": {
+              "candidate_pattern": null,
+              "rule_candidate_id": null,
+              "replicability": null
+            }
           }
         },
         {
@@ -1545,8 +1555,18 @@
               "upset_occurred"
             ],
             "depth": "deep",
-            "note": "Zhang d. Lys 6-4 6-3 (R1, 81min)。出典: wtatennis.com Madrid 2026 R1 (一次, YouTube WTA Match Highlights), tennistemple 補助。",
-            "source_tier": "primary"
+            "source_tier": "primary",
+            "facts": "Zhang d. Lys 6-4 6-3 (R1, 81min)。出典: wtatennis.com Madrid 2026 R1 (一次, YouTube WTA Match Highlights), tennistemple 補助。",
+            "analysis": {
+              "decisive_factor": null,
+              "market_blind_spot": null,
+              "confidence_level": null
+            },
+            "rules_implication": {
+              "candidate_pattern": null,
+              "rule_candidate_id": null,
+              "replicability": null
+            }
           }
         },
         {
@@ -2053,8 +2073,18 @@
               "hit_normal"
             ],
             "depth": "light",
-            "note": "Fernandez d. Grabher 6-2 6-3 (R1)。出典: wtatennis.com tournaments/1038/madrid/2026/scores/LS042 (一次)。",
-            "source_tier": "primary"
+            "source_tier": "primary",
+            "facts": "Fernandez d. Grabher 6-2 6-3 (R1)。出典: wtatennis.com tournaments/1038/madrid/2026/scores/LS042 (一次)。",
+            "analysis": {
+              "decisive_factor": null,
+              "market_blind_spot": null,
+              "confidence_level": null
+            },
+            "rules_implication": {
+              "candidate_pattern": null,
+              "rule_candidate_id": null,
+              "replicability": null
+            }
           }
         },
         {
@@ -2095,8 +2125,18 @@
               "hit_normal"
             ],
             "depth": "light",
-            "note": "Baptiste d. Quevedo 6-1 6-4 (R1)。出典: wtatennis.com news/4490924 'Five best things we saw today, beginning with Quevedo first WTA 1000 win' (一次)。",
-            "source_tier": "primary"
+            "source_tier": "primary",
+            "facts": "Baptiste d. Quevedo 6-1 6-4 (R1)。出典: wtatennis.com news/4490924 'Five best things we saw today, beginning with Quevedo first WTA 1000 win' (一次)。",
+            "analysis": {
+              "decisive_factor": null,
+              "market_blind_spot": null,
+              "confidence_level": null
+            },
+            "rules_implication": {
+              "candidate_pattern": null,
+              "rule_candidate_id": null,
+              "replicability": null
+            }
           }
         },
         {
@@ -2213,8 +2253,18 @@
               "upset_occurred"
             ],
             "depth": "deep",
-            "note": "Sierra d. Frech 6-2 6-4 (R1)。出典: wtatennis.com Madrid Open 2026 R1 results (一次)。",
-            "source_tier": "primary"
+            "source_tier": "primary",
+            "facts": "Sierra d. Frech 6-2 6-4 (R1)。出典: wtatennis.com Madrid Open 2026 R1 results (一次)。",
+            "analysis": {
+              "decisive_factor": null,
+              "market_blind_spot": null,
+              "confidence_level": null
+            },
+            "rules_implication": {
+              "candidate_pattern": null,
+              "rule_candidate_id": null,
+              "replicability": null
+            }
           }
         },
         {
@@ -2255,8 +2305,18 @@
               "hit_normal"
             ],
             "depth": "light",
-            "note": "Gauff d. Jeanjean 6-3 6-0 (R1, Q3_output_a 本命的中)。出典: wtatennis.com Madrid Open 2026 R1 results (一次)。",
-            "source_tier": "primary"
+            "source_tier": "primary",
+            "facts": "Gauff d. Jeanjean 6-3 6-0 (R1, Q3_output_a 本命的中)。出典: wtatennis.com Madrid Open 2026 R1 results (一次)。",
+            "analysis": {
+              "decisive_factor": null,
+              "market_blind_spot": null,
+              "confidence_level": null
+            },
+            "rules_implication": {
+              "candidate_pattern": null,
+              "rule_candidate_id": null,
+              "replicability": null
+            }
           }
         },
         {
@@ -2297,8 +2357,18 @@
               "hit_normal"
             ],
             "depth": "light",
-            "note": "Rybakina (2) d. Ruse 4-6 6-3 7-5 (R1, Q3_output_a 本命的中、フルセット接戦)。出典: wtatennis.com Madrid Open 2026 R1 (一次)。",
-            "source_tier": "primary"
+            "source_tier": "primary",
+            "facts": "Rybakina (2) d. Ruse 4-6 6-3 7-5 (R1, Q3_output_a 本命的中、フルセット接戦)。出典: wtatennis.com Madrid Open 2026 R1 (一次)。",
+            "analysis": {
+              "decisive_factor": null,
+              "market_blind_spot": null,
+              "confidence_level": null
+            },
+            "rules_implication": {
+              "candidate_pattern": null,
+              "rule_candidate_id": null,
+              "replicability": null
+            }
           }
         },
         {
@@ -2340,8 +2410,18 @@
               "upset_occurred"
             ],
             "depth": "deep",
-            "note": "Pliskova d. Sakkari 6-4 7-6(6) (R1)。出典: wtatennis.com Madrid Open 2026 R1 results (一次)。",
-            "source_tier": "primary"
+            "source_tier": "primary",
+            "facts": "Pliskova d. Sakkari 6-4 7-6(6) (R1)。出典: wtatennis.com Madrid Open 2026 R1 results (一次)。",
+            "analysis": {
+              "decisive_factor": null,
+              "market_blind_spot": null,
+              "confidence_level": null
+            },
+            "rules_implication": {
+              "candidate_pattern": null,
+              "rule_candidate_id": null,
+              "replicability": null
+            }
           }
         },
         {
@@ -2382,8 +2462,18 @@
               "hit_normal"
             ],
             "depth": "light",
-            "note": "Zheng d. Kenin 1-6 6-3 6-3 (R1, フルセット逆転)。出典: wtatennis.com Madrid Open 2026 R1 results (一次)。",
-            "source_tier": "primary"
+            "source_tier": "primary",
+            "facts": "Zheng d. Kenin 1-6 6-3 6-3 (R1, フルセット逆転)。出典: wtatennis.com Madrid Open 2026 R1 results (一次)。",
+            "analysis": {
+              "decisive_factor": null,
+              "market_blind_spot": null,
+              "confidence_level": null
+            },
+            "rules_implication": {
+              "candidate_pattern": null,
+              "rule_candidate_id": null,
+              "replicability": null
+            }
           }
         },
         {
@@ -2424,8 +2514,18 @@
               "hit_normal"
             ],
             "depth": "light",
-            "note": "Sonmez d. Bucsa 6-1 6-7(4) 6-2 (R1, フルセット)。出典: wtatennis.com Madrid Open 2026 R1 results (一次)。",
-            "source_tier": "primary"
+            "source_tier": "primary",
+            "facts": "Sonmez d. Bucsa 6-1 6-7(4) 6-2 (R1, フルセット)。出典: wtatennis.com Madrid Open 2026 R1 results (一次)。",
+            "analysis": {
+              "decisive_factor": null,
+              "market_blind_spot": null,
+              "confidence_level": null
+            },
+            "rules_implication": {
+              "candidate_pattern": null,
+              "rule_candidate_id": null,
+              "replicability": null
+            }
           }
         },
         {
@@ -2500,8 +2600,18 @@
               "hit_normal"
             ],
             "depth": "light",
-            "note": "Kostyuk d. Putintseva 6-1 6-3 (R1)。出典: wtatennis.com tournaments/1038/madrid/2026/scores/LS049 (一次)。",
-            "source_tier": "primary"
+            "source_tier": "primary",
+            "facts": "Kostyuk d. Putintseva 6-1 6-3 (R1)。出典: wtatennis.com tournaments/1038/madrid/2026/scores/LS049 (一次)。",
+            "analysis": {
+              "decisive_factor": null,
+              "market_blind_spot": null,
+              "confidence_level": null
+            },
+            "rules_implication": {
+              "candidate_pattern": null,
+              "rule_candidate_id": null,
+              "replicability": null
+            }
           }
         },
         {
@@ -2542,8 +2652,18 @@
               "hit_normal"
             ],
             "depth": "light",
-            "note": "Noskova (13) d. Arango 6-3 6-2 (R1)。出典: wtatennis.com Madrid Open 2026 R1 results (一次)。",
-            "source_tier": "primary"
+            "source_tier": "primary",
+            "facts": "Noskova (13) d. Arango 6-3 6-2 (R1)。出典: wtatennis.com Madrid Open 2026 R1 results (一次)。",
+            "analysis": {
+              "decisive_factor": null,
+              "market_blind_spot": null,
+              "confidence_level": null
+            },
+            "rules_implication": {
+              "candidate_pattern": null,
+              "rule_candidate_id": null,
+              "replicability": null
+            }
           }
         },
         {
@@ -2585,8 +2705,18 @@
               "hit_normal"
             ],
             "depth": "light",
-            "note": "Cirstea d. Grant T.C. 6-2 7-6(5) (R1, Q4_upset_watch 本命勝ち、upset 不発)。出典: wtatennis.com Madrid Open 2026 R1 (一次)。",
-            "source_tier": "primary"
+            "source_tier": "primary",
+            "facts": "Cirstea d. Grant T.C. 6-2 7-6(5) (R1, Q4_upset_watch 本命勝ち、upset 不発)。出典: wtatennis.com Madrid Open 2026 R1 (一次)。",
+            "analysis": {
+              "decisive_factor": null,
+              "market_blind_spot": null,
+              "confidence_level": null
+            },
+            "rules_implication": {
+              "candidate_pattern": null,
+              "rule_candidate_id": null,
+              "replicability": null
+            }
           }
         },
         {
@@ -2713,8 +2843,18 @@
               "hit_normal"
             ],
             "depth": "light",
-            "note": "Ostapenko (21) d. Waltert 6-2 7-5 (R1)。出典: wtatennis.com Madrid Open 2026 R1 results (一次)。",
-            "source_tier": "primary"
+            "source_tier": "primary",
+            "facts": "Ostapenko (21) d. Waltert 6-2 7-5 (R1)。出典: wtatennis.com Madrid Open 2026 R1 results (一次)。",
+            "analysis": {
+              "decisive_factor": null,
+              "market_blind_spot": null,
+              "confidence_level": null
+            },
+            "rules_implication": {
+              "candidate_pattern": null,
+              "rule_candidate_id": null,
+              "replicability": null
+            }
           }
         },
         {
@@ -2756,8 +2896,18 @@
               "hit_normal"
             ],
             "depth": "light",
-            "note": "Samsonova d. Tjen 6-2 6-1 (R2 of 64, 69min, Q4_upset_watch 本命勝ち、upset 不発)。出典: wtatennis.com videos/4492734 'Samsonova defeats Tjen in just 69 minutes to reach Madrid third round' (一次)。",
-            "source_tier": "primary"
+            "source_tier": "primary",
+            "facts": "Samsonova d. Tjen 6-2 6-1 (R2 of 64, 69min, Q4_upset_watch 本命勝ち、upset 不発)。出典: wtatennis.com videos/4492734 'Samsonova defeats Tjen in just 69 minutes to reach Madrid third round' (一次)。",
+            "analysis": {
+              "decisive_factor": null,
+              "market_blind_spot": null,
+              "confidence_level": null
+            },
+            "rules_implication": {
+              "candidate_pattern": null,
+              "rule_candidate_id": null,
+              "replicability": null
+            }
           }
         },
         {
@@ -3057,8 +3207,18 @@
               "market_divergence"
             ],
             "depth": "deep",
-            "note": "McNally d. Mboko 6-4 6-1 (R2 of 64 / 1h19min)。Mboko upset 敗退、McNally first Top 10 win。出典: wtatennis.com news 'Lucky number nine! McNally stuns Mboko in Madrid for first Top 10 win' (一次), wtatennis.com scores LS051 (一次)。Q1_go_miss: 市場乖離発生 (Mboko @1.33 fav に対し McNally @3.45 dog が勝利)。",
-            "source_tier": "primary"
+            "source_tier": "primary",
+            "facts": "McNally d. Mboko 6-4 6-1 (R2 of 64 / 1h19min)。Mboko upset 敗退、McNally first Top 10 win。出典: wtatennis.com news 'Lucky number nine! McNally stuns Mboko in Madrid for first Top 10 win' (一次), wtatennis.com scores LS051 (一次)。Q1_go_miss: 市場乖離発生 (Mboko @1.33 fav に対し McNally @3.45 dog が勝利)。",
+            "analysis": {
+              "decisive_factor": null,
+              "market_blind_spot": null,
+              "confidence_level": null
+            },
+            "rules_implication": {
+              "candidate_pattern": null,
+              "rule_candidate_id": null,
+              "replicability": null
+            }
           }
         },
         {
@@ -3098,8 +3258,18 @@
               "hit_normal"
             ],
             "depth": "light",
-            "note": "Sabalenka d. Cristian 6-1 6-4 (R3, Q3_output_a 本命的中)。出典: wtatennis.com videos/4493670 'Sabalenka eases past Cristian, into Madrid fourth round' (一次)。",
-            "source_tier": "primary"
+            "source_tier": "primary",
+            "facts": "Sabalenka d. Cristian 6-1 6-4 (R3, Q3_output_a 本命的中)。出典: wtatennis.com videos/4493670 'Sabalenka eases past Cristian, into Madrid fourth round' (一次)。",
+            "analysis": {
+              "decisive_factor": null,
+              "market_blind_spot": null,
+              "confidence_level": null
+            },
+            "rules_implication": {
+              "candidate_pattern": null,
+              "rule_candidate_id": null,
+              "replicability": null
+            }
           }
         },
         {
@@ -3140,8 +3310,18 @@
               "upset_occurred"
             ],
             "depth": "deep",
-            "note": "Li d. Swiatek 7-6(4) 2-6 3-0 (Swiatek retired due to illness in R3)。試合は成立後の途中棄権 (boundary_rules.exclusions.retired)、完了側 Li が勝利進出のため verification 対象、Q3_output_a 本命 Swiatek 予測 MISS。出典: wtatennis.com (一次), espn.com/tennis/story/_/id/48591168 (準一次), beIN SPORTS (準一次), washingtonpost.com (準一次)。",
-            "source_tier": "primary"
+            "source_tier": "primary",
+            "facts": "Li d. Swiatek 7-6(4) 2-6 3-0 (Swiatek retired due to illness in R3)。試合は成立後の途中棄権 (boundary_rules.exclusions.retired)、完了側 Li が勝利進出のため verification 対象、Q3_output_a 本命 Swiatek 予測 MISS。出典: wtatennis.com (一次), espn.com/tennis/story/_/id/48591168 (準一次), beIN SPORTS (準一次), washingtonpost.com (準一次)。",
+            "analysis": {
+              "decisive_factor": null,
+              "market_blind_spot": null,
+              "confidence_level": null
+            },
+            "rules_implication": {
+              "candidate_pattern": null,
+              "rule_candidate_id": null,
+              "replicability": null
+            }
           }
         },
         {
@@ -3181,8 +3361,18 @@
               "hit_normal"
             ],
             "depth": "light",
-            "note": "Pegula (5, 2022 finalist) d. Boulter 6-4 6-4 (R2 of 64, Q3_mid 本命的中)。出典: wtatennis.com videos/4493121 'Former finalist Pegula starts strong with Boulter win in Madrid' (一次), wtatennis.com tournaments/1038/madrid/2026/scores/LS048 (一次)。",
-            "source_tier": "primary"
+            "source_tier": "primary",
+            "facts": "Pegula (5, 2022 finalist) d. Boulter 6-4 6-4 (R2 of 64, Q3_mid 本命的中)。出典: wtatennis.com videos/4493121 'Former finalist Pegula starts strong with Boulter win in Madrid' (一次), wtatennis.com tournaments/1038/madrid/2026/scores/LS048 (一次)。",
+            "analysis": {
+              "decisive_factor": null,
+              "market_blind_spot": null,
+              "confidence_level": null
+            },
+            "rules_implication": {
+              "candidate_pattern": null,
+              "rule_candidate_id": null,
+              "replicability": null
+            }
           }
         },
         {

@@ -333,9 +333,21 @@
       "trigger": "Session_60+ 健全性診断: MISS は 96% 記録があるが『当てた upset』『弱い根拠で当たった hit』『市場乖離が発生した試合』が体系的に未記録 → 学習源が片側 (失敗) に偏り生存者バイアスが発生",
       "rule": "prediction_hit が True/False で確定した全試合に、verification フィールドを必須記入する。class 配列で試合の性質を分類し、class に応じた depth (light/deep) で note を記載する。",
       "verification_schema": {
+        "version": "v3 (2026-05-01 拡張: facts/analysis/rules_implication 構造分離)",
         "class": "string array — 以下の 5 値から該当するものを 1〜複数選択",
         "depth": "string — 'light' or 'deep' (class 構成から自動判定)",
-        "note": "string — 区分判定の根拠記述 (light なら 20 文字以上 / deep なら 40 文字以上)"
+        "facts": "string — スニペット由来事実のみ。出典明記必須。推論禁止 (light なら 20 字以上 / deep なら 40 字以上)",
+        "analysis": {
+          "decisive_factor": "string or null — L1/L2/L3/L4/External のどれが効いたか + 簡潔な記述 (deep のみ必須)",
+          "market_blind_spot": "string or null — 市場が何を見落としていた/見えていたかの仮説 (deep のみ必須)",
+          "confidence_level": "string — 'high' | 'medium' | 'low' | 'speculative' — 仮説の確度自己申告 (deep のみ必須)"
+        },
+        "rules_implication": {
+          "candidate_pattern": "string or null — 他試合に転用できそうなパターン名 (なければ null)",
+          "rule_candidate_id": "string or null — rules_*.json への昇格候補ID (なければ null)",
+          "replicability": "string or null — 'high' | 'medium' | 'low' | 'unknown' (なければ null)"
+        },
+        "source_tier": "string — 'primary' | 'secondary_primary' | 'secondary'"
       },
       "class_definitions": {
         "hit_normal": "通常の HIT。予測通りに当たった。L1〜L4 のシグナルが期待通り機能した",
@@ -346,8 +358,13 @@
       },
       "class_array_note": "class は配列。複数該当する場合は両方記述可 (例: ['miss', 'market_divergence'] / ['upset_occurred', 'hit_unexpected'])",
       "depth_determination": {
-        "light": "class が ['hit_normal'] のみの場合 → note 20 文字以上、確認程度の記述で OK",
-        "deep": "class に hit_unexpected / miss / upset_occurred / market_divergence のいずれかが含まれる場合 → note 40 文字以上"
+        "light": "class が ['hit_normal'] のみの場合 → facts 20 字以上、確認程度の記述で OK",
+        "deep": "class に hit_unexpected / miss / upset_occurred / market_divergence のいずれかが含まれる場合 → facts 40 字以上 + analysis 全フィールド必須"
+      },
+      "depth_field_requirements": {
+        "light": ["facts (20字以上)"],
+        "deep": ["facts (40字以上)", "analysis.decisive_factor", "analysis.market_blind_spot", "analysis.confidence_level"],
+        "rules_implication_optional": "rules_implication は light/deep いずれも任意。共通パターンが見えたら記入、なければ全フィールド null"
       },
       "deep_note_required_content": [
         "決定要因: どのシグナル (L1 / L2 / L3 / L4 / External) が試合結果を左右したか",
@@ -436,23 +453,29 @@
           "redundancy_avoidance": "Q1_go MISS は ['miss', 'upset_occurred', 'market_divergence'] が標準セットのため冗長判定不要"
         },
         "anti_hallucination_rules": {
-          "principle": "verification.note は WebSearch スニペットに直接書かれた事実のみ記述する。Claudeの推論で書き加えることは禁止。",
-          "forbidden_in_note": [
+          "principle": "verification.facts は WebSearch スニペットに直接書かれた事実のみ記述する。Claudeの推論で書き加えることは禁止。推論は verification.analysis に分離して記述する。",
+          "forbidden_in_facts": [
             "WebSearchで確認していないオッズ数値(例: 「○○前後 fav」)",
             "スニペットに書かれていない選手の強み・弱みの主観的評価",
             "フィジカル状態・形・適応度等の推論記述(スニペット由来でない場合)",
             "rec_odds以外の市場オッズ推定値"
           ],
-          "required_in_note": [
+          "required_in_facts": [
             "WebSearchスニペットの直接引用または明確な要約",
             "引用元URLまたはメディア名",
             "事実情報が不足する場合は『事実情報のみ・分析保留』と明記し、後日深掘りタスクとして残す"
           ],
-          "fallback_when_insufficient_info": "深掘りに必要な事実情報が取れない場合、無理に分析を書かず、note は事実のみ記述しdepthをlightに格下げする。後日WebFetch等で詳細取得後に再度deepに昇格させる",
-          "rationale": "今日のATP結果反映で『一次ソース率12.5%』『MISS deep noteのほぼ全件にClaude推論が混入』『架空オッズ4件』が判明。CLAUDE.md『架空情報の完全禁止』に抵触する可能性があったため、note記述ルールを明示化"
+          "facts_vs_analysis_distinction": {
+            "facts_section": "スニペット由来事実のみ。推論禁止。出典明記必須。20字 (light) / 40字 (deep) 以上",
+            "analysis_section": "推論OK。ただし confidence_level (high/medium/low/speculative) で確度を自己申告必須。decisive_factor は L1/L2/L3/L4/External の分類タグ付き、market_blind_spot は市場乖離の原因仮説",
+            "rationale": "事実 (facts) と分析 (analysis) を構造的に分離することで、anti_hallucination ルール (facts は厳格に事実のみ) と正答率向上ループ (analysis で深掘り推論を蓄積) を両立する。confidence_level により speculative な推論も透明に記録可能",
+            "operational_note": "light レコードでは analysis 全フィールドを null に保つ。deep レコードでは analysis 全フィールド必須。rules_implication はどちらも任意"
+          },
+          "fallback_when_insufficient_info": "深掘りに必要な事実情報が取れない場合、無理に分析を書かず、facts は事実のみ記述しdepthをlightに格下げする。後日WebFetch等で詳細取得後に再度deepに昇格させる",
+          "rationale": "今日のATP結果反映で『一次ソース率12.5%』『MISS deep noteのほぼ全件にClaude推論が混入』『架空オッズ4件』が判明。CLAUDE.md『架空情報の完全禁止』に抵触する可能性があったため、note記述ルールを明示化。さらに 2026-05-01 v3 拡張で事実と分析を構造分離"
         }
       }
     }
   ],
-  "last_updated": "2026-05-01"
+  "last_updated": "2026-05-01 (verification schema v3: facts/analysis/rules_implication separation)"
 }

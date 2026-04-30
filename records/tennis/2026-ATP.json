@@ -2697,7 +2697,18 @@
           "hit_normal"
         ],
         "depth": "light",
-        "note": "Jodar d. de Jong 2-6 7-5 6-4 (R1, Manolo Santana stadium 17:35 UTC)。出典: atptour.com news/jodar-de-jong-madrid-2026-wednesday, atptour stats centre ms078。"
+        "facts": "Jodar d. de Jong 2-6 7-5 6-4 (R1, Manolo Santana stadium 17:35 UTC)。出典: atptour.com news/jodar-de-jong-madrid-2026-wednesday, atptour stats centre ms078。",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
       }
     },
     {
@@ -2729,7 +2740,18 @@
           "hit_normal"
         ],
         "depth": "light",
-        "note": "予測通り Budkov Kjaer がストレートで Echargui を圧倒 (Q-final 進出)。"
+        "facts": "予測通り Budkov Kjaer がストレートで Echargui を圧倒 (Q-final 進出)。",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
       }
     },
     {
@@ -2762,9 +2784,19 @@
           "upset_occurred"
         ],
         "depth": "light",
-        "note": "Walton d. Landaluce 6-2 6-3 (R1 of 128, 4/23 開催)。出典: atptour.com stats centre ms121, puntodebreak。事実情報のみ・分析保留。",
         "depth_downgrade_reason": "Original deep note contained Claude inferences. Cleaned per anti_hallucination_rules. class=['miss','upset_occurred'] retained.",
-        "source_tier": "primary"
+        "source_tier": "primary",
+        "facts": "Walton d. Landaluce 6-2 6-3 (R1 of 128, 4/23 開催)。出典: atptour.com stats centre ms121, puntodebreak。事実情報のみ・分析保留。",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        }
       },
       "date_corrected_from": "2026-04-22",
       "date_correction_note": "Actual match date per atptour.com ms121 was 2026-04-23. Original entry incorrectly dated 2026-04-22."
@@ -2798,8 +2830,18 @@
           "hit_normal"
         ],
         "depth": "light",
-        "note": "Buse d. Mannarino 6-4 6-2 (R1, Court 4 10:10 UTC)。出典: atptour.com/en/video highlights-buse-breezes-past-mannarino-for-madrid-2026-r2-spot (一次)。",
-        "source_tier": "primary"
+        "source_tier": "primary",
+        "facts": "Buse d. Mannarino 6-4 6-2 (R1, Court 4 10:10 UTC)。出典: atptour.com/en/video highlights-buse-breezes-past-mannarino-for-madrid-2026-r2-spot (一次)。",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        }
       }
     },
     {
@@ -2831,7 +2873,18 @@
           "hit_normal"
         ],
         "depth": "light",
-        "note": "Machac d. Comesana 3-6 7-6(3) 6-3 (R1, Stadium 3 16:40 UTC)。出典: atptour.com stats centre MS069 (Spanish version)。"
+        "facts": "Machac d. Comesana 3-6 7-6(3) 6-3 (R1, Stadium 3 16:40 UTC)。出典: atptour.com stats centre MS069 (Spanish version)。",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
       }
     },
     {
@@ -2874,8 +2927,18 @@
           "hit_normal"
         ],
         "depth": "light",
-        "note": "Hanfmann d. Giron 6-4 6-7(3) 7-5 (R1, Day 2 unlikely winners)。出典: atptour.com news/madrid-2026-best-hot-shots (Day 2 cat-and-mouse exchange 言及, 一次)。",
-        "source_tier": "primary"
+        "source_tier": "primary",
+        "facts": "Hanfmann d. Giron 6-4 6-7(3) 7-5 (R1, Day 2 unlikely winners)。出典: atptour.com news/madrid-2026-best-hot-shots (Day 2 cat-and-mouse exchange 言及, 一次)。",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        }
       }
     },
     {
@@ -2918,8 +2981,18 @@
           "hit_normal"
         ],
         "depth": "light",
-        "note": "Blockx d. Garin 3-6 6-3 6-4 (R1, comeback)。出典: atptour.com/en/video highlights-blockx-outlasts-garin-in-madrid-2026-r1 (一次)。",
-        "source_tier": "primary"
+        "source_tier": "primary",
+        "facts": "Blockx d. Garin 3-6 6-3 6-4 (R1, comeback)。出典: atptour.com/en/video highlights-blockx-outlasts-garin-in-madrid-2026-r1 (一次)。",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        }
       },
       "score_correction_note": "Original score '4-6 7-5 7-5' (二次ソース perfect-tennis 由来) was incorrect. Corrected to atptour.com primary source."
     },
@@ -2964,8 +3037,19 @@
           "upset_occurred"
         ],
         "depth": "light",
-        "note": "Atmane Powers Past Kecmanovic in Straight Sets 6-4 7-5。出典: tennistemple, atptour stats centre ms125。事実情報のみ・分析保留。",
-        "depth_downgrade_reason": "Original deep note contained Claude inferences. Cleaned per anti_hallucination_rules. class=['miss','upset_occurred'] retained."
+        "depth_downgrade_reason": "Original deep note contained Claude inferences. Cleaned per anti_hallucination_rules. class=['miss','upset_occurred'] retained.",
+        "facts": "Atmane Powers Past Kecmanovic in Straight Sets 6-4 7-5。出典: tennistemple, atptour stats centre ms125。事実情報のみ・分析保留。",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
       }
     },
     {
@@ -3008,8 +3092,18 @@
           "hit_normal"
         ],
         "depth": "light",
-        "note": "Carreno Busta d. Fucsovics 4-6 7-6(5) 6-2 (R1, WC entry)。出典: atptour.com results page (一次)。",
-        "source_tier": "primary"
+        "source_tier": "primary",
+        "facts": "Carreno Busta d. Fucsovics 4-6 7-6(5) 6-2 (R1, WC entry)。出典: atptour.com results page (一次)。",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        }
       }
     },
     {
@@ -3052,8 +3146,18 @@
           "hit_normal"
         ],
         "depth": "light",
-        "note": "Munar d. Shevchenko 6-4 6-1 (R1)。出典: atptour.com/en/scores/stats-centre/live/2026/1536/ms102 (一次)。",
-        "source_tier": "primary"
+        "source_tier": "primary",
+        "facts": "Munar d. Shevchenko 6-4 6-1 (R1)。出典: atptour.com/en/scores/stats-centre/live/2026/1536/ms102 (一次)。",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        }
       }
     },
     {
@@ -3096,8 +3200,18 @@
           "hit_normal"
         ],
         "depth": "light",
-        "note": "Marozsan d. Quinn 7-6(5) 7-6(6) (R1, double tiebreak)。出典: atptour.com/en/scores/stats-centre/live/2026/1536/ms113 (一次)。",
-        "source_tier": "primary"
+        "source_tier": "primary",
+        "facts": "Marozsan d. Quinn 7-6(5) 7-6(6) (R1, double tiebreak)。出典: atptour.com/en/scores/stats-centre/live/2026/1536/ms113 (一次)。",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        }
       },
       "score_correction_note": "Original score '7-6(5) 7-6(5)' (検索要約由来) was incorrect. Corrected per atptour ms113 stats centre."
     },
@@ -3141,7 +3255,18 @@
           "hit_normal"
         ],
         "depth": "light",
-        "note": "Navone d. Borges 6-3 6-4 (R1)。出典: atptour.com stats centre archive ms126, tennisabstract.com 2026ATPMadrid."
+        "facts": "Navone d. Borges 6-3 6-4 (R1)。出典: atptour.com stats centre archive ms126, tennisabstract.com 2026ATPMadrid.",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
       }
     },
     {
@@ -3281,9 +3406,19 @@
           "upset_occurred"
         ],
         "depth": "light",
-        "note": "Gaubas d. Baez 7-5 6-1 (R1, Lithuanian qualifier upset)。出典: atptour.com news (Auger-Aliassime meets upset maker Gaubas / 一次), 補助: rollingout.com (準一次)。市場乖離度: WebSearch未確認。",
         "depth_downgrade_reason": "Original deep note contained Claude inferences. Cleaned per anti_hallucination_rules. class=['miss','upset_occurred'] retained.",
-        "source_tier": "primary"
+        "source_tier": "primary",
+        "facts": "Gaubas d. Baez 7-5 6-1 (R1, Lithuanian qualifier upset)。出典: atptour.com news (Auger-Aliassime meets upset maker Gaubas / 一次), 補助: rollingout.com (準一次)。市場乖離度: WebSearch未確認。",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        }
       }
     },
     {
@@ -3364,8 +3499,18 @@
           "hit_normal"
         ],
         "depth": "light",
-        "note": "Merida d. Trungelliti 6-4 1-6 7-6(8-6) (R1, Trungelliti が LL で再対戦 - Q-final と同カード)。出典: ESPN Deportes (準一次), lanacion.com.ar (準一次), agenciafe.com (二次)。Merida saved 2 match points.",
-        "source_tier": "secondary_primary"
+        "source_tier": "secondary_primary",
+        "facts": "Merida d. Trungelliti 6-4 1-6 7-6(8-6) (R1, Trungelliti が LL で再対戦 - Q-final と同カード)。出典: ESPN Deportes (準一次), lanacion.com.ar (準一次), agenciafe.com (二次)。Merida saved 2 match points.",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        }
       }
     },
     {
@@ -3408,8 +3553,18 @@
           "hit_normal"
         ],
         "depth": "light",
-        "note": "Cerundolo (J.M.) d. Altmaier 6-4 6-4 (R1)。出典: atptour.com results page 検索要約 (準一次、stats centre URL 直接未確認)。",
-        "source_tier": "secondary_primary"
+        "source_tier": "secondary_primary",
+        "facts": "Cerundolo (J.M.) d. Altmaier 6-4 6-4 (R1)。出典: atptour.com results page 検索要約 (準一次、stats centre URL 直接未確認)。",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        }
       }
     },
     {
@@ -3533,8 +3688,19 @@
           "upset_occurred"
         ],
         "depth": "deep",
-        "note": "予測 Landaluce 外し。Walton が 2-0 で勝利。注: 4/22 同カードと date 重複登録の可能性あり、別タスクで dedup 確認。決定要因: Landaluce のクレー速度差・フィジカル不足。市場乖離: 軽度。",
-        "status_note": "duplicate_removed - excluded from aggregation"
+        "status_note": "duplicate_removed - excluded from aggregation",
+        "facts": "予測 Landaluce 外し。Walton が 2-0 で勝利。注: 4/22 同カードと date 重複登録の可能性あり、別タスクで dedup 確認。決定要因: Landaluce のクレー速度差・フィジカル不足。市場乖離: 軽度。",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
       },
       "status": "duplicate_removed",
       "duplicate_removed_reason": "Same match as 2026-04-22 entry. Actual match was 2026-04-23 (atptour ms121). Keeping 2026-04-22 entry as canonical."
@@ -3579,8 +3745,18 @@
           "hit_normal"
         ],
         "depth": "light",
-        "note": "Etcheverry d. Ofner 6-4 6-4 (R1)。出典: atptour.com results page 検索要約 (準一次、stats centre URL 直接未確認、video highlights は vs Prizmic R2 / vs Fils R3 のみ)。",
-        "source_tier": "secondary_primary"
+        "source_tier": "secondary_primary",
+        "facts": "Etcheverry d. Ofner 6-4 6-4 (R1)。出典: atptour.com results page 検索要約 (準一次、stats centre URL 直接未確認、video highlights は vs Prizmic R2 / vs Fils R3 のみ)。",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        }
       }
     },
     {
@@ -3660,7 +3836,18 @@
           "hit_normal"
         ],
         "depth": "light",
-        "note": "予測通り Sinner が Bonzi をフルセットで下す (Q3_output_a 本命的中)。"
+        "facts": "予測通り Sinner が Bonzi をフルセットで下す (Q3_output_a 本命的中)。",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
       }
     },
     {
@@ -3744,8 +3931,19 @@
           "upset_occurred"
         ],
         "depth": "light",
-        "note": "Norrie d. Machac 6-2 6-7(6) 7-6(5)。出典: olympics.com Madrid Open 2026 Day Three 記事。事実情報のみ・分析保留。",
-        "depth_downgrade_reason": "Original deep note contained Claude inferences. Cleaned per anti_hallucination_rules. class=['miss','upset_occurred'] retained."
+        "depth_downgrade_reason": "Original deep note contained Claude inferences. Cleaned per anti_hallucination_rules. class=['miss','upset_occurred'] retained.",
+        "facts": "Norrie d. Machac 6-2 6-7(6) 7-6(5)。出典: olympics.com Madrid Open 2026 Day Three 記事。事実情報のみ・分析保留。",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
       }
     },
     {
@@ -3998,8 +4196,18 @@
           "hit_normal"
         ],
         "depth": "light",
-        "note": "Lehecka d. Tabilo 3-6 7-6(3) 6-4 (R2, comeback)。出典: atptour.com/en/scores/stats-centre/live/2026/1536/ms044 (一次), sofascore.com news 補助 (準一次)。",
-        "source_tier": "primary"
+        "source_tier": "primary",
+        "facts": "Lehecka d. Tabilo 3-6 7-6(3) 6-4 (R2, comeback)。出典: atptour.com/en/scores/stats-centre/live/2026/1536/ms044 (一次), sofascore.com news 補助 (準一次)。",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        }
       }
     },
     {
@@ -4043,8 +4251,18 @@
           "upset_occurred"
         ],
         "depth": "deep",
-        "note": "Michelsen d. Struff 6-2 6-1 (R2, 57min sweep, 70% 1st serve, 26 of 28 first-serve points won)。Michelsen 自身が 'one of his finest clay-court performances' と発言。出典: atptour.com/en/scores/stats-centre/live/2026/1536/ms045 (一次), tennistonic 記事 (二次補助)。市場乖離度: WebSearch未確認。",
-        "source_tier": "primary"
+        "source_tier": "primary",
+        "facts": "Michelsen d. Struff 6-2 6-1 (R2, 57min sweep, 70% 1st serve, 26 of 28 first-serve points won)。Michelsen 自身が 'one of his finest clay-court performances' と発言。出典: atptour.com/en/scores/stats-centre/live/2026/1536/ms045 (一次), tennistonic 記事 (二次補助)。市場乖離度: WebSearch未確認。",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        }
       }
     },
     {
@@ -4127,7 +4345,18 @@
           "hit_normal"
         ],
         "depth": "light",
-        "note": "予測通り Fils が Buse をフルセットの接戦で振り切る。"
+        "facts": "予測通り Fils が Buse をフルセットの接戦で振り切る。",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
       }
     },
     {
@@ -4171,8 +4400,19 @@
           "upset_occurred"
         ],
         "depth": "light",
-        "note": "Kopriva d. Rublev 2-0 (upset, Top10 Rublev 敗退)。出典: atptour stats centre ms036, sofascore。市場乖離度: WebSearch未確認。事実情報のみ・分析保留。",
-        "depth_downgrade_reason": "Original deep note contained Claude inferences. Cleaned per anti_hallucination_rules. class=['miss','upset_occurred'] retained."
+        "depth_downgrade_reason": "Original deep note contained Claude inferences. Cleaned per anti_hallucination_rules. class=['miss','upset_occurred'] retained.",
+        "facts": "Kopriva d. Rublev 2-0 (upset, Top10 Rublev 敗退)。出典: atptour stats centre ms036, sofascore。市場乖離度: WebSearch未確認。事実情報のみ・分析保留。",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
       }
     },
     {
@@ -4484,7 +4724,18 @@
           "hit_normal"
         ],
         "depth": "light",
-        "note": "予測通り Zverev が Navone を 3sets で振り切る (Q3_mid 本命的中)。"
+        "facts": "予測通り Zverev が Navone を 3sets で振り切る (Q3_mid 本命的中)。",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
       }
     }
   ],
