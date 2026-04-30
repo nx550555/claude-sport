@@ -18,3 +18,4 @@ env/
 *.tmp
 *.bak
 .debug_samples/
+_verification_aggregate*.json
