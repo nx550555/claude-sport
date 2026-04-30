@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-04-30T12:54:04.558109+09:00",
+  "fetched_at": "2026-04-30T23:19:26.511316+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -59,6 +59,14 @@
       "estimated_return": "Apr 30",
       "status": "Day-To-Day",
       "comment": ""
+    },
+    {
+      "player": "Max Jones",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "May 9",
+      "status": "Out",
+      "comment": "Apr 29: Jones (lower body) is expected to be available if the Oilers advance to the second round, Jason Gregor of Sports 1440 Edmonton reports Wednesday."
     },
     {
       "player": "Adam Henrique",
@@ -131,6 +139,22 @@
       "estimated_return": "Sep 15",
       "status": "Injured Reserve",
       "comment": "Sep 30: ir-lt"
+    },
+    {
+      "player": "Nick Paul",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "May 1",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Charle-Edouard D'Astous",
+      "team": null,
+      "position": "D",
+      "estimated_return": "May 1",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Victor Hedman",
