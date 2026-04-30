@@ -110,8 +110,80 @@
       "trigger_threshold": 3,
       "promoted_to_p_candidate_id": null,
       "weak_link_to_existing": "P_NHL_PO_close_out_home_fav_failure_candidate (種目特定型新規候補 ID 案B / 弱紐付け / 正式 evidence カウント対象外)"
+    },
+    "nba_po_g1_star_scorer_25ppg_off_pre_game_decision": {
+      "sport": "nba",
+      "context": "nba_playoffs_round1_g1",
+      "summary": "NBA PO R1 G1 で RS 25ppg+ star scorer が pre-game decision で ruled out (Durant 型) → star-heavy team 信頼度 -8〜-10% 補正候補。L1 NRtg は star ON baseline のため OFF で proxy 破綻。P024 差戻し (Session_64 2026-04-30) に伴い A029 evidence を独立 candidate 化。",
+      "evidence_count": 1,
+      "first_evidence": {
+        "session": "_47",
+        "match": "Los Angeles Lakers d. Houston Rockets PO R1 G1 (KD OFF / patellar tendon contusion)",
+        "date": "2026-04-18",
+        "result": "LAL 107-98 HOU (HOU @1.43 fav MISS)",
+        "round": "Playoffs R1 G1"
+      },
+      "alias": [],
+      "status": "watching",
+      "trigger_threshold": 3,
+      "promoted_to_p_candidate_id": "P_NBA_PO_g1_star_off_candidate",
+      "weak_link_to_existing": "元 P024 evidence (差戻し後の A029 単独再蓄積 / Session_64 2026-04-30 A-3 サブタスク6 commit 2 で分裂登録)",
+      "split_origin": {
+        "from_candidate": "P024",
+        "split_session": "_64_a3_sub6_step1_commit2",
+        "split_date": "2026-04-30",
+        "split_reason": "P024 案2 内部矛盾 + A031 adjacent reference 格下げによる議題1+1' 3件規定空洞化を回避する規定遵守正攻法として 3 evidence を分裂処理"
+      }
+    },
+    "nba_po_g2_in_game_star_loss_late_q4_collapse": {
+      "sport": "nba",
+      "context": "nba_playoffs_round1_g2",
+      "summary": "NBA PO R1 G2 で RS 24-25ppg+ star scorer が in-game injury (Wembanyama 型 concussion 等) → 4Q 終盤の execution collapse + 対戦相手 breakout で fav 逆転負け候補。事前 screening 不可のため発生後 live 補正 protocol 検討要。P024 差戻し (Session_64 2026-04-30) に伴い A031 evidence を独立 candidate 化。",
+      "evidence_count": 1,
+      "first_evidence": {
+        "session": "_50",
+        "match": "Portland Trail Blazers d. San Antonio Spurs PO R1 G2 (Wemby 2Q concussion 退場)",
+        "date": "2026-04-22",
+        "result": "POR 106-103 SAS (SAS 4Q 14pt リード → closing 3:37 無得点で逆転負け / Scoot Henderson 31pts POR breakout)",
+        "round": "Playoffs R1 G2"
+      },
+      "alias": [],
+      "status": "watching",
+      "trigger_threshold": 3,
+      "promoted_to_p_candidate_id": "P_NBA_PO_g2_in_game_star_loss_candidate",
+      "weak_link_to_existing": "元 P024 evidence (差戻し後の A031 単独再蓄積 / 案2「PO G1 限定」では論理的に捕捉できなかった adjacent reference を独立 candidate に格上げ / Session_64 2026-04-30 A-3 サブタスク6 commit 2 で分裂登録)",
+      "split_origin": {
+        "from_candidate": "P024",
+        "split_session": "_64_a3_sub6_step1_commit2",
+        "split_date": "2026-04-30",
+        "split_reason": "P024 案2 内部矛盾 + A031 adjacent reference 格下げによる議題1+1' 3件規定空洞化を回避する規定遵守正攻法として 3 evidence を分裂処理"
+      }
+    },
+    "nba_po_g4_star_scorer_return_home_dominance_blowout": {
+      "sport": "nba",
+      "context": "nba_playoffs_round1_g4",
+      "summary": "NBA PO R1 G4 で前 G で OFF だった RS 25ppg+ star scorer が return → home elimination avoid 試合で blowout HIT 候補 (Durant return 型 / +5〜+8% 補正)。P024 差戻し (Session_64 2026-04-30) に伴い A043 evidence を独立 candidate 化。",
+      "evidence_count": 1,
+      "first_evidence": {
+        "session": "_61",
+        "match": "Houston Rockets d. Los Angeles Lakers PO R1 G4 (KD return / 19pt blowout / avoid elimination)",
+        "date": "2026-04-26",
+        "result": "HOU 115-96 LAL (LAL -2 spread / fav_odds 1.65 / fav LAL MISS = HOU UPSET HIT)",
+        "round": "Playoffs R1 G4"
+      },
+      "alias": [],
+      "status": "watching",
+      "trigger_threshold": 3,
+      "promoted_to_p_candidate_id": "P_NBA_PO_g4_star_return_candidate",
+      "weak_link_to_existing": "元 P024 evidence (差戻し後の A043 単独再蓄積 / 案2 双方向 OFF/ON cycle の return 側 evidence を独立 candidate に分離 / Session_64 2026-04-30 A-3 サブタスク6 commit 2 で分裂登録)",
+      "split_origin": {
+        "from_candidate": "P024",
+        "split_session": "_64_a3_sub6_step1_commit2",
+        "split_date": "2026-04-30",
+        "split_reason": "P024 案2 内部矛盾 + A031 adjacent reference 格下げによる議題1+1' 3件規定空洞化を回避する規定遵守正攻法として 3 evidence を分裂処理"
+      }
     }
   },
-  "last_updated": "2026-04-29",
-  "updated_session": "_64_a3_review_agenda1+1prime"
+  "last_updated": "2026-04-30",
+  "updated_session": "_64_a3_sub6_step1_commit2"
 }

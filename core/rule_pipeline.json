@@ -698,7 +698,7 @@
     },
     {
       "candidate_id": "P024",
-      "status": "ready_to_implement",
+      "status": "watching",
       "target_rule_file": "core/rules_nba.json",
       "proposed_rule_id": "N_NBA_new2",
       "title": "NBA PO G1 star scorer (>25ppg RS) 欠場時の L4 下方補正",
@@ -743,7 +743,7 @@
         "nba_po_g1_star_scorer_absence",
         "nhl_po_g1_key_player_absence"
       ],
-      "note": "evidence 2/3 到達 (Session_50 2026-04-23): A029 (pre-game absence) + A031 (in-game injury)。3件目で N_NBA_new2 実装。in-game injury は事前 screening で検知不可のため、発生後のライブ補正 protocol として別rule 設計も検討。 [Session_51 2026-04-23] 補強示唆: NBA LAL vs HOU G2 (KD 復帰でも HOU 連敗 101-94) は star return G2 でも momentum carryover が L1 NRtg を上回る示唆。直接 evidence 加算ではなく subset として記録。3件目候補は今後の NBA G3-G4 で star scorer status 変動時に継続観察。 | [Session_61 2026-04-27] A043 KD return HOU G4 で evidence 3/3 到達 → N_NBA_new2 implement: star scorer (>25ppg RS) の OFF/ON 状態に応じて L4 -8〜+8% 補正 (return cycle 双方向)。"
+      "note": "evidence 2/3 到達 (Session_50 2026-04-23): A029 (pre-game absence) + A031 (in-game injury)。3件目で N_NBA_new2 実装。in-game injury は事前 screening で検知不可のため、発生後のライブ補正 protocol として別rule 設計も検討。 [Session_51 2026-04-23] 補強示唆: NBA LAL vs HOU G2 (KD 復帰でも HOU 連敗 101-94) は star return G2 でも momentum carryover が L1 NRtg を上回る示唆。直接 evidence 加算ではなく subset として記録。3件目候補は今後の NBA G3-G4 で star scorer status 変動時に継続観察。 | [Session_61 2026-04-27] A043 KD return HOU G4 で evidence 3/3 到達 → N_NBA_new2 implement: star scorer (>25ppg RS) の OFF/ON 状態に応じて L4 -8〜+8% 補正 (return cycle 双方向)。 | **[Session_64 2026-04-30 A-3 サブタスク6 step1 / Claude.ai 外部レビュー (3号) 受領後 / Ayumu 判断1: 分岐β (差戻し) 採用]**: 議題1+1' step4 実証本丸の柱A 承認制プロセス step1 で以下の論理破綻が確定 → 案2 推奨撤回 → P024 を `ready_to_implement` から `watching` に **差戻し** + 3 evidence を分裂処理 (registry に各々独立 candidate 化): (a) 案2「return G (G2-G4)」+「PO R1 G1 限定」サブ条件併用は内部矛盾 (return cycle 補正が死文化 / A043 補正対象外 = 実質案1 と等価 / レビュー懸念4); (b) A031 を adjacent reference に格下げると trigger evidence が A029 + A043 の 2件のみ = 議題1+1' 3件規定空洞化 + 「adjacent reference」概念は CLAUDE.md / rule_pipeline / registry いずれにも規定なし (レビュー懸念5); (c) 反例#2 (SAS G3 Wemby OUT HIT) と 3 evidence (A029 G1 OFF + A031 G2 in-game + A043 G4 return) の両立不可能性を案2 + PO G1 限定で擬似的に解消しようとした論理的破綻。差戻し処置: 3 evidence を分裂処理 (柱A 規定遵守正攻法 / 中間 status 値新設 = pending_redesign 等は採用せず): A029 → P_NBA_PO_g1_star_off_candidate (1件 / 再蓄積待ち) / A031 → P_NBA_PO_g2_in_game_star_loss_candidate (1件 / 再蓄積待ち) / A043 → P_NBA_PO_g4_star_return_candidate (1件 / 再蓄積待ち)。**本差戻し = 議題1+1' 規定層が機能した証 = step4 実証成功**: 「3件揃った candidate でも内部矛盾があれば step3 implement に進めない」ことを Session_61 R024 forbidden_practice (同一 turn 内 evidence 3/3 → implement) の再発防止構造が初めて本格運用テストで実証。三層防御 (機械検証層 + 規定層 + 記録層) のうち規定層 (柱A 3-1/3-2/3-3 + 5. 禁止事項 + 反例検証義務) が「都合の良い解釈」を防止する構造として機能。current_count は 3 のまま温存 (差戻し履歴の数値痕跡として / 将来の再蓄積で 4 件目 evidence を待つのではなく、分裂後の 3 candidate を各々独立蓄積する運用)。"
     },
     {
       "candidate_id": "P025",
