@@ -2691,13 +2691,13 @@
       "screened_session": "_48",
       "caution_type": "track",
       "actual_winner": "Jodar R.",
-      "actual_score": "2-1",
+      "actual_score": "2-6 7-5 6-4",
       "verification": {
         "class": [
           "hit_normal"
         ],
         "depth": "light",
-        "note": "予測通り Jodar (WC) が de Jong に勝利。caution tier 予測 HIT。"
+        "note": "Jodar d. de Jong 2-6 7-5 6-4 (R1, Manolo Santana stadium 17:35 UTC)。出典: atptour.com news/jodar-de-jong-madrid-2026-wednesday, atptour stats centre ms078。"
       }
     },
     {
@@ -2823,13 +2823,13 @@
       "screened_at": "2026-04-21",
       "screened_session": "_48",
       "actual_winner": "Machac T.",
-      "actual_score": "2-1",
+      "actual_score": "3-6 7-6(3) 6-3",
       "verification": {
         "class": [
           "hit_normal"
         ],
         "depth": "light",
-        "note": "予測通り Machac が Comesana にフルセットで勝利。"
+        "note": "Machac d. Comesana 3-6 7-6(3) 6-3 (R1, Stadium 3 16:40 UTC)。出典: atptour.com stats centre MS069 (Spanish version)。"
       }
     },
     {
@@ -3126,13 +3126,13 @@
       "hit": null,
       "actual_ev": null,
       "actual_winner": "Navone M.",
-      "actual_score": "advance to R2",
+      "actual_score": "6-3 6-4",
       "verification": {
         "class": [
           "hit_normal"
         ],
         "depth": "light",
-        "note": "予測通り Navone が Borges を破り R2 進出 (R2 で vs Zverev)。"
+        "note": "Navone d. Borges 6-3 6-4 (R1)。出典: atptour.com stats centre archive ms126, tennisabstract.com 2026ATPMadrid."
       }
     },
     {
@@ -4692,7 +4692,7 @@
       "details": "GO 3/3 HIT (+0.76u Khachanov/FAA/Mensik) + CAUTION 4 HIT (Rinderknech/Griekspoor/Ruud) / 4 MISS (Shelton/Diallo retire/Vacherot/Shapovalov). MISS 4件 miss_analysis 同時記入完了 (PA-PERM05)."
     }
   ],
-  "last_updated": "2026-05-01 (ATP verification cleanup: remove inferences + add anti_hallucination_rules)",
+  "last_updated": "2026-05-01 (B-group score backfill: 3 matches with primary source)",
   "log": [
     {
       "session": "_45",
