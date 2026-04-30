@@ -298,7 +298,79 @@
         "pending_actions.md に PA-PERM06 として常設タスク登録 (毎セッション冒頭に GEN007 意識チェック)"
       ],
       "note": "改善提案は控えめにせず、気付いた時点で積極的に出す。ユーザー側が『不要』と判断すれば即却下可。遠慮して提案しないことの方がルール違反。"
+    },
+    {
+      "id": "GEN008",
+      "name": "GO推奨ベットの両側オッズ必須記録 (Two-Sided Odds Mandate for Bets)",
+      "version": "v1.0",
+      "added": "2026-04-30",
+      "trigger": "Session_60+ 健全性診断: GO 31件中 19件 (61%) が rec_odds 単独記録のみで反対側オッズ欠落 → 段階4 fav-lost診断・市場乖離検証が事後的に不能",
+      "rule": "tier in {go, upset_pick, gamble_bet, output_a, provisional_go} のレコードは rec_odds と opponent_odds の両方を必須フィールドとする。片側のみで GO 確定することは禁止。",
+      "applies_to_quadrants": ["Q1_go", "Q2_upset_pick"],
+      "mandatory_fields": {
+        "rec_odds": "推奨側のオッズ (decimal)",
+        "opponent_odds": "反対側のオッズ (decimal)",
+        "market_fav": "市場fav側のラベル (recommendation と同じ場合は self / 反対の場合は opponent)",
+        "market_implied_rec": "1 / rec_odds (自動計算)",
+        "market_implied_opp": "1 / opponent_odds (自動計算)"
+      },
+      "validation": {
+        "rec_odds_range": "1.01 <= rec_odds <= 50.0",
+        "opponent_odds_range": "1.01 <= opponent_odds <= 50.0",
+        "overround_check": "1/rec_odds + 1/opponent_odds は 1.00〜1.15 の範囲 (典型 vig 5〜12%)。範囲外なら入力ミスを疑う"
+      },
+      "skip_record_policy": "tier=skip / caution / caution_margin の試合では両側オッズは任意 (記録漏れではなく意図的省略)。ただし Q4_upset_watch (アンダードッグ観察) では dog_odds の記録を推奨",
+      "enforcement": "Claude の自律遵守でスタート (validator 自動化は別タスク)。分析フロー ⑤ で GO 確定する直前に両側オッズの記録を確認する",
+      "backfill_policy": "過去 GO レコード 19件 (片側のみ) の補填は実施しない。本ルール施行日 (2026-04-30) 以降の新規 GO のみ強制対象",
+      "rationale": "市場fav-lost検証・段階4診断・cumulative EV の妥当性検証に必要。片側オッズだけでは GO の市場乖離度が事後測定できない"
+    },
+    {
+      "id": "GEN009",
+      "name": "全試合の区分別検証必須化 (Universal Verification Mandate)",
+      "version": "v2.0",
+      "added": "2026-04-30",
+      "supersedes": "GEN009 v1.0 (Q2/Q4 hit=True のみ対象、範囲が狭すぎたため v2 で全試合に拡張)",
+      "trigger": "Session_60+ 健全性診断: MISS は 96% 記録があるが『当てた upset』『弱い根拠で当たった hit』『市場乖離が発生した試合』が体系的に未記録 → 学習源が片側 (失敗) に偏り生存者バイアスが発生",
+      "rule": "prediction_hit が True/False で確定した全試合に、verification フィールドを必須記入する。class 配列で試合の性質を分類し、class に応じた depth (light/deep) で note を記載する。",
+      "verification_schema": {
+        "class": "string array — 以下の 5 値から該当するものを 1〜複数選択",
+        "depth": "string — 'light' or 'deep' (class 構成から自動判定)",
+        "note": "string — 区分判定の根拠記述 (light なら 20 文字以上 / deep なら 40 文字以上)"
+      },
+      "class_definitions": {
+        "hit_normal": "通常の HIT。予測通りに当たった。L1〜L4 のシグナルが期待通り機能した",
+        "hit_unexpected": "HIT したが想定超え。根拠が弱かった / 運の要素が大きい / 予測 confidence と実際の試合内容に乖離あり",
+        "miss": "予測を外した",
+        "upset_occurred": "アップセット発生。本命が負けた、または市場 fav が負けた試合",
+        "market_divergence": "市場との期待乖離。オッズ低い側が負けた / Q4_upset_watch の予測が当たった等"
+      },
+      "class_array_note": "class は配列。複数該当する場合は両方記述可 (例: ['miss', 'market_divergence'] / ['upset_occurred', 'hit_unexpected'])",
+      "depth_determination": {
+        "light": "class が ['hit_normal'] のみの場合 → note 20 文字以上、確認程度の記述で OK",
+        "deep": "class に hit_unexpected / miss / upset_occurred / market_divergence のいずれかが含まれる場合 → note 40 文字以上"
+      },
+      "deep_note_required_content": [
+        "決定要因: どのシグナル (L1 / L2 / L3 / L4 / External) が試合結果を左右したか",
+        "市場乖離の原因仮説: 市場が見落としていた / 見えていた要素は何か"
+      ],
+      "miss_analysis_compatibility": {
+        "policy": "後方互換のため既存の miss_analysis フィールドは維持する。新規記録は verification フィールドに集約する",
+        "miss_class_overlap": "verification.class に 'miss' が含まれる場合、verification.note と miss_analysis のどちらかに記述があれば OK (両方書く必要なし)",
+        "preference_for_new_records": "新規記録では verification.note 側に集約することを推奨"
+      },
+      "enforcement": "Claude の自律遵守でスタート (validator 自動化は別タスク)。結果反映フロー ⑥ の直後・⑦ の前に全確定試合に対して verification フィールドを記入する",
+      "scope_examples": {
+        "Q1_go HIT (本命通り)": "class=['hit_normal'], depth=light (例: '本命通りの勝利。L1 NRtg差 8pt 通り。')",
+        "Q1_go MISS (本命負け)": "class=['miss', 'upset_occurred', 'market_divergence'], depth=deep",
+        "Q3_output_a HIT (高信頼本命的中)": "class=['hit_normal'], depth=light",
+        "Q4_upset_watch HIT (アンダードッグ予測成功)": "class=['upset_occurred', 'market_divergence'], depth=deep",
+        "Q4_upset_watch MISS (本命勝利・upset 不発)": "class=['hit_normal' or 'miss' は予測対象次第], depth はそれに応じて判定",
+        "skip 試合 (予測通り本命勝利)": "class=['hit_normal'], depth=light",
+        "skip 試合 (予測外れ・upset)": "class=['miss', 'upset_occurred'], depth=deep"
+      },
+      "backfill_policy": "過去レコードへの遡及記入は実施しない。本ルール施行日 (2026-04-30) 以降の新規確定 (prediction_hit が True/False で確定したもの) のみ強制対象",
+      "rationale": "段階3診断で『成功 upset が 0/11 記録』『弱い根拠で当てた hit が未識別』が判明。全試合を区分判定することで MISS だけでなく『運で当てた hit』『市場乖離が発生した試合』も学習源化し、予測モデルの校正精度を上げる。配列型 class により『MISS かつ市場乖離』のような複合性質も自然に表現できる"
     }
   ],
-  "last_updated": "2026-04-23"
+  "last_updated": "2026-04-30"
 }
