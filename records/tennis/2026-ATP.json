@@ -4254,14 +4254,14 @@
         "source_tier": "primary",
         "facts": "Michelsen d. Struff 6-2 6-1 (R2, 57min sweep, 70% 1st serve, 26 of 28 first-serve points won)。Michelsen 自身が 'one of his finest clay-court performances' と発言。出典: atptour.com/en/scores/stats-centre/live/2026/1536/ms045 (一次), tennistonic 記事 (二次補助)。市場乖離度: WebSearch未確認。",
         "analysis": {
-          "decisive_factor": null,
-          "market_blind_spot": null,
-          "confidence_level": null
+          "decisive_factor": "L2 形仮説: Michelsen の 1st serve 精度 (70% 1st serve / 26 of 28 first-serve points won = 92.9% 1st serve win rate)。スニペット由来事実から直接導ける。",
+          "market_blind_spot": "Michelsen 自身が 'one of his finest clay-court performances' と発言 = 本人にとってもクレー best performance であり、市場・Claudeともに Michelsen のクレー上振れポテンシャルを過小評価していた可能性。",
+          "confidence_level": "high"
         },
         "rules_implication": {
-          "candidate_pattern": null,
+          "candidate_pattern": "若手 (Michelsen) のクレー上振れ vs ベテラン (Struff) パターン",
           "rule_candidate_id": null,
-          "replicability": null
+          "replicability": "medium"
         }
       }
     },

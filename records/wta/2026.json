@@ -1556,16 +1556,16 @@
             ],
             "depth": "deep",
             "source_tier": "primary",
-            "facts": "Zhang d. Lys 6-4 6-3 (R1, 81min)。出典: wtatennis.com Madrid 2026 R1 (一次, YouTube WTA Match Highlights), tennistemple 補助。",
+            "facts": "Zhang d. Lys 6-4 6-3 (R1, 81min)。出典: wtatennis.com Madrid 2026 R1 (一次, YouTube WTA Match Highlights), tennistemple 補助。 Zhang は本試合で 6 連敗 streak break (Merida 準決勝以降の連敗を脱出)。次戦 R2 で Madison Keys (16seed) と対戦予定 → R2 では LL Potapova に 6-3 6-1 で敗退 (R2 結果は本試合に直接関係しない参考情報)。出典: wtatennis.com videos/4491304 'Zhang powers past Lys in Madrid; sets second-round meeting vs. Keys' (一次)。",
             "analysis": {
-              "decisive_factor": null,
-              "market_blind_spot": null,
-              "confidence_level": null
+              "decisive_factor": "L3 直近フォーム仮説の解釈は分裂: (a) Zhang は 6 連敗中で逆境フォームのはずが streak break を達成 → L3 信号と逆ベクトル / (b) Lys が R1 本戦の若手プレッシャーで実力出せず (L4 経験差仮説)。どちらも具体的スタッツによる裏付けなし。",
+              "market_blind_spot": "Zhang の 6 連敗を市場が過大評価し Lys を過信した可能性。ただし事前オッズ未確認のため乖離度は不明。",
+              "confidence_level": "speculative"
             },
             "rules_implication": {
-              "candidate_pattern": null,
+              "candidate_pattern": "ベテラン連敗中 vs 若手の R1 試合での streak break パターン (再現性低)",
               "rule_candidate_id": null,
-              "replicability": null
+              "replicability": "unknown"
             }
           }
         },
@@ -2411,16 +2411,16 @@
             ],
             "depth": "deep",
             "source_tier": "primary",
-            "facts": "Pliskova d. Sakkari 6-4 7-6(6) (R1)。出典: wtatennis.com Madrid Open 2026 R1 results (一次)。",
+            "facts": "Pliskova d. Sakkari 6-4 7-6(6) (R1)。出典: wtatennis.com Madrid Open 2026 R1 results (一次)。 Pliskova 'eighth edition of rivalry with Sakkari' (H2H 通算8回目)、'two tight sets' と記事評。出典: wtatennis.com videos/4492679 (一次)。",
             "analysis": {
-              "decisive_factor": null,
-              "market_blind_spot": null,
-              "confidence_level": null
+              "decisive_factor": "L4 H2H 仮説: Pliskova vs Sakkari は H2H 8回目で Pliskova が長年の対戦パターンに慣れていた可能性。記事は 'two tight sets' と評価で僅差。タイブレーク (7-6(6)) を取れる経験差 (Pliskova 元 Top1) も寄与した可能性。",
+              "market_blind_spot": "No. 33 seed Sakkari fav 予測に対し、両者の H2H 履歴・元 Top1 経験を市場が過小評価していた可能性。ただし具体的な H2H 過去スコアと事前オッズは未確認。",
+              "confidence_level": "low"
             },
             "rules_implication": {
-              "candidate_pattern": null,
+              "candidate_pattern": "H2H 多回数 vs 現役 seed の試合 (経験差仮説)",
               "rule_candidate_id": null,
-              "replicability": null
+              "replicability": "low"
             }
           }
         },
@@ -3210,14 +3210,14 @@
             "source_tier": "primary",
             "facts": "McNally d. Mboko 6-4 6-1 (R2 of 64 / 1h19min)。Mboko upset 敗退、McNally first Top 10 win。出典: wtatennis.com news 'Lucky number nine! McNally stuns Mboko in Madrid for first Top 10 win' (一次), wtatennis.com scores LS051 (一次)。Q1_go_miss: 市場乖離発生 (Mboko @1.33 fav に対し McNally @3.45 dog が勝利)。",
             "analysis": {
-              "decisive_factor": null,
-              "market_blind_spot": null,
-              "confidence_level": null
+              "decisive_factor": "L4 momentum 仮説: スコア 6-4 6-1 から第1セットは接戦、第2セット大差 = McNally が試合中盤で流れを掴み Mboko が崩れた。スコア分布のみからの推論。",
+              "market_blind_spot": "Mboko @1.33 fav に対し記事タイトル 'McNally stuns Mboko' + 'first Top 10 win' = メディアは upset と認識。新興 Top10 選手 (Mboko) の R2 試合で Top10 経験不足を市場が見落としていた可能性。",
+              "confidence_level": "medium"
             },
             "rules_implication": {
-              "candidate_pattern": null,
+              "candidate_pattern": "新興 Top10 選手 (シーズン初期昇格) の初期 R2 試合での upset リスク",
               "rule_candidate_id": null,
-              "replicability": null
+              "replicability": "low"
             }
           }
         },
@@ -3313,14 +3313,14 @@
             "source_tier": "primary",
             "facts": "Li d. Swiatek 7-6(4) 2-6 3-0 (Swiatek retired due to illness in R3)。試合は成立後の途中棄権 (boundary_rules.exclusions.retired)、完了側 Li が勝利進出のため verification 対象、Q3_output_a 本命 Swiatek 予測 MISS。出典: wtatennis.com (一次), espn.com/tennis/story/_/id/48591168 (準一次), beIN SPORTS (準一次), washingtonpost.com (準一次)。",
             "analysis": {
-              "decisive_factor": null,
-              "market_blind_spot": null,
-              "confidence_level": null
+              "decisive_factor": "External 要因 (illness): Swiatek 体調不良で R3 第3セット 0-3 で途中棄権。L1〜L4 の予測信号は機能せず、外部不可抗力。複数準一次ソース (espn / WaPo / beIN) で illness が原因と確認。",
+              "market_blind_spot": "試合直前の体調 risk は market にも Claude にも事前織り込み不能な External factor。市場乖離というより 'predictable risk' の範疇外。",
+              "confidence_level": "high"
             },
             "rules_implication": {
-              "candidate_pattern": null,
+              "candidate_pattern": "Top seed illness retired は既に exclusions.retired で扱い済み。analysis 上の独自パターンなし",
               "rule_candidate_id": null,
-              "replicability": null
+              "replicability": "medium"
             }
           }
         },
