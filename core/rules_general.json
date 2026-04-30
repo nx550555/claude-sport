@@ -369,7 +369,73 @@
         "skip 試合 (予測外れ・upset)": "class=['miss', 'upset_occurred'], depth=deep"
       },
       "backfill_policy": "過去レコードへの遡及記入は実施しない。本ルール施行日 (2026-04-30) 以降の新規確定 (prediction_hit が True/False で確定したもの) のみ強制対象",
-      "rationale": "段階3診断で『成功 upset が 0/11 記録』『弱い根拠で当てた hit が未識別』が判明。全試合を区分判定することで MISS だけでなく『運で当てた hit』『市場乖離が発生した試合』も学習源化し、予測モデルの校正精度を上げる。配列型 class により『MISS かつ市場乖離』のような複合性質も自然に表現できる"
+      "rationale": "段階3診断で『成功 upset が 0/11 記録』『弱い根拠で当てた hit が未識別』が判明。全試合を区分判定することで MISS だけでなく『運で当てた hit』『市場乖離が発生した試合』も学習源化し、予測モデルの校正精度を上げる。配列型 class により『MISS かつ市場乖離』のような複合性質も自然に表現できる",
+      "boundary_rules": {
+        "principle": "判断に迷ったら『当たりは確認程度・それ以外は深掘り』の原則に立ち戻る。class配列の精密化より、note の質を優先する。",
+        "fixed_mappings": {
+          "Q1_go_hit": {
+            "class": ["hit_normal"],
+            "depth": "light",
+            "note_guideline": "L1差・主要シグナル名を1行で書く程度"
+          },
+          "Q1_go_miss": {
+            "class": ["miss", "upset_occurred", "market_divergence"],
+            "depth": "deep",
+            "note_guideline": "決定要因と市場乖離の原因仮説を必ず含む"
+          },
+          "Q3_output_a_hit": {
+            "class": ["hit_normal"],
+            "depth": "light",
+            "note": "market_divergence は付けない(高信頼本命的中は市場と一致)"
+          },
+          "Q3_output_a_miss": {
+            "class": ["miss", "upset_occurred"],
+            "depth": "deep"
+          },
+          "Q4_upset_watch_hit_dog_wins": {
+            "class": ["upset_occurred", "market_divergence"],
+            "depth": "deep",
+            "note": "アンダードッグ予測が当たった場合、両クラス自動付与"
+          },
+          "Q4_upset_watch_miss_fav_wins": {
+            "class": ["hit_normal"],
+            "depth": "light",
+            "note": "観察対象だったが本命勝ち。upset 不発として確認程度の記述で OK"
+          },
+          "Q2_upset_pick_hit": {
+            "class": ["upset_occurred", "market_divergence"],
+            "depth": "deep"
+          },
+          "Q2_upset_pick_miss": {
+            "class": ["miss"],
+            "depth": "deep",
+            "note": "アンダードッグ推奨が外れた場合、なぜ実力差を覆せなかったか"
+          },
+          "skip_hit_fav_wins": {
+            "class": ["hit_normal"],
+            "depth": "light"
+          },
+          "skip_miss_fav_loses": {
+            "class": ["miss", "upset_occurred"],
+            "depth": "deep"
+          }
+        },
+        "exclusions": {
+          "void": "VOID 試合は verification フィールド対象外。match_status='void' を付与して除外",
+          "walkover": "WALKOVER 試合は verification フィールド対象外。match_status='walkover' を付与",
+          "cancelled": "中止試合は verification フィールド対象外。match_status='cancelled' を付与",
+          "retired": "途中棄権試合は完了側の予測が当たれば verification 記入、ただし note に retired と明記"
+        },
+        "hit_unexpected_judgment": {
+          "definition": "デフォルトでは hit_unexpected を付けない。明らかに予測根拠と異なる経緯で勝った場合のみ追加付与",
+          "example": "L1差優位で予測したが、実際は L2 形のみで勝った / 主力欠場下での勝利 / オウンゴール頼み等",
+          "default_behavior": "迷ったら hit_normal のみで OK。後で見直して必要なら hit_unexpected を追加"
+        },
+        "complex_class_combinations": {
+          "principle": "class は意味のあるものだけ追加する。3つ以上付ける場合は note にその根拠を書く",
+          "redundancy_avoidance": "Q1_go MISS は ['miss', 'upset_occurred', 'market_divergence'] が標準セットのため冗長判定不要"
+        }
+      }
     }
   ],
   "last_updated": "2026-04-30"
