@@ -2736,7 +2736,7 @@
       "tournament": "Mutua Madrid Open 2026",
       "round": "R1",
       "match": "Landaluce M. vs Walton A.",
-      "date": "2026-04-22",
+      "date": "2026-04-23",
       "tier": "skip",
       "quadrant": "skip",
       "l1_metric": "clay_elo_diff",
@@ -2761,9 +2761,12 @@
           "miss",
           "upset_occurred"
         ],
-        "depth": "deep",
-        "note": "予測 Landaluce 外し。Walton が 2-0 ストレートで快勝。決定要因: Walton クレー適応とフィジカル優位 (L1 cElo 過小評価)。市場乖離: 軽度、本命勝率の見積もり過大。"
-      }
+        "depth": "light",
+        "note": "Walton d. Landaluce 6-2 6-3 (R1 of 128, 4/23 開催)。出典: atptour.com stats centre ms121, puntodebreak。事実情報のみ・分析保留。",
+        "depth_downgrade_reason": "Original deep note contained Claude inferences. Cleaned per anti_hallucination_rules. class=['miss','upset_occurred'] retained."
+      },
+      "date_corrected_from": "2026-04-22",
+      "date_correction_note": "Actual match date per atptour.com ms121 was 2026-04-23. Original entry incorrectly dated 2026-04-22."
     },
     {
       "tournament": "Mutua Madrid Open 2026",
@@ -2955,8 +2958,9 @@
           "miss",
           "upset_occurred"
         ],
-        "depth": "deep",
-        "note": "予測 Kecmanovic 外し。Atmane が 6-4 7-5 ストレート勝利。決定要因: Atmane のクレー適応とサーブ精度 (L2 形過小評価)。市場乖離: 軽度、Kecmanovic fav。"
+        "depth": "light",
+        "note": "Atmane Powers Past Kecmanovic in Straight Sets 6-4 7-5。出典: tennistemple, atptour stats centre ms125。事実情報のみ・分析保留。",
+        "depth_downgrade_reason": "Original deep note contained Claude inferences. Cleaned per anti_hallucination_rules. class=['miss','upset_occurred'] retained."
       }
     },
     {
@@ -3267,8 +3271,9 @@
           "miss",
           "upset_occurred"
         ],
-        "depth": "deep",
-        "note": "予測 Baez 外し。Q組 Gaubas が 7-5 6-1 で快勝。決定要因: Gaubas のクレー精度と Baez の復調遅れ (L2 形・L3 直近フォーム見落とし)。市場乖離: 中度、Baez 1.40前後 fav。"
+        "depth": "light",
+        "note": "Gaubas d. Baez 7-5 6-1。出典: perfect-tennis Day Two Recap, lastwordonsports。市場乖離度: WebSearch未確認。事実情報のみ・分析保留。",
+        "depth_downgrade_reason": "Original deep note contained Claude inferences. Cleaned per anti_hallucination_rules. class=['miss','upset_occurred'] retained."
       }
     },
     {
@@ -3505,7 +3510,7 @@
       "ev": null,
       "result": null,
       "score": null,
-      "prediction_hit": false,
+      "prediction_hit": null,
       "hit": null,
       "actual_ev": null,
       "actual_winner": "Walton A.",
@@ -3516,8 +3521,11 @@
           "upset_occurred"
         ],
         "depth": "deep",
-        "note": "予測 Landaluce 外し。Walton が 2-0 で勝利。注: 4/22 同カードと date 重複登録の可能性あり、別タスクで dedup 確認。決定要因: Landaluce のクレー速度差・フィジカル不足。市場乖離: 軽度。"
-      }
+        "note": "予測 Landaluce 外し。Walton が 2-0 で勝利。注: 4/22 同カードと date 重複登録の可能性あり、別タスクで dedup 確認。決定要因: Landaluce のクレー速度差・フィジカル不足。市場乖離: 軽度。",
+        "status_note": "duplicate_removed - excluded from aggregation"
+      },
+      "status": "duplicate_removed",
+      "duplicate_removed_reason": "Same match as 2026-04-22 entry. Actual match was 2026-04-23 (atptour ms121). Keeping 2026-04-22 entry as canonical."
     },
     {
       "tournament": "Mutua Madrid Open 2026",
@@ -3722,8 +3730,9 @@
           "miss",
           "upset_occurred"
         ],
-        "depth": "deep",
-        "note": "予測 Machac 外し。Norrie がフルセット接戦で勝利。決定要因: Norrie 左利きクレー適応 + Machac の R1 消耗 (3sets) を考慮不足 (L4 直近負荷見落とし)。"
+        "depth": "light",
+        "note": "Norrie d. Machac 6-2 6-7(6) 7-6(5)。出典: olympics.com Madrid Open 2026 Day Three 記事。事実情報のみ・分析保留。",
+        "depth_downgrade_reason": "Original deep note contained Claude inferences. Cleaned per anti_hallucination_rules. class=['miss','upset_occurred'] retained."
       }
     },
     {
@@ -4020,7 +4029,7 @@
           "upset_occurred"
         ],
         "depth": "deep",
-        "note": "予測 Struff 外し。Michelsen ストレート 6-2 6-1 で 57min 圧勝。決定要因: Michelsen のクレー成長 + Struff クレー苦手 (L1 cElo 拮抗だったが L2 適応差で乖離)。"
+        "note": "Michelsen d. Struff 6-2 6-1 (57min sweep, 70% 1st serve, 26 of 28 first-serve points won)。Michelsen 自身が 'one of his finest clay-court performances' と発言。出典: tennistonic 記事。市場乖離度: WebSearch未確認。"
       }
     },
     {
@@ -4146,8 +4155,9 @@
           "miss",
           "upset_occurred"
         ],
-        "depth": "deep",
-        "note": "予測 Rublev 外し。Kopriva が 2-0 ストレート圧勝。決定要因: Top10 Rublev のクレー不調 + Kopriva クレー特化 (L1 cElo + L2 形過小評価)。市場乖離: 大、Rublev 1.20前後 fav。"
+        "depth": "light",
+        "note": "Kopriva d. Rublev 2-0 (upset, Top10 Rublev 敗退)。出典: atptour stats centre ms036, sofascore。市場乖離度: WebSearch未確認。事実情報のみ・分析保留。",
+        "depth_downgrade_reason": "Original deep note contained Claude inferences. Cleaned per anti_hallucination_rules. class=['miss','upset_occurred'] retained."
       }
     },
     {
@@ -4682,7 +4692,7 @@
       "details": "GO 3/3 HIT (+0.76u Khachanov/FAA/Mensik) + CAUTION 4 HIT (Rinderknech/Griekspoor/Ruud) / 4 MISS (Shelton/Diallo retire/Vacherot/Shapovalov). MISS 4件 miss_analysis 同時記入完了 (PA-PERM05)."
     }
   ],
-  "last_updated": "2026-05-01 (Madrid R1/R2/Q backfill 25 matches with GEN009 v2 verification)",
+  "last_updated": "2026-05-01 (ATP verification cleanup: remove inferences + add anti_hallucination_rules)",
   "log": [
     {
       "session": "_45",

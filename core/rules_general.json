@@ -434,9 +434,25 @@
         "complex_class_combinations": {
           "principle": "class は意味のあるものだけ追加する。3つ以上付ける場合は note にその根拠を書く",
           "redundancy_avoidance": "Q1_go MISS は ['miss', 'upset_occurred', 'market_divergence'] が標準セットのため冗長判定不要"
+        },
+        "anti_hallucination_rules": {
+          "principle": "verification.note は WebSearch スニペットに直接書かれた事実のみ記述する。Claudeの推論で書き加えることは禁止。",
+          "forbidden_in_note": [
+            "WebSearchで確認していないオッズ数値(例: 「○○前後 fav」)",
+            "スニペットに書かれていない選手の強み・弱みの主観的評価",
+            "フィジカル状態・形・適応度等の推論記述(スニペット由来でない場合)",
+            "rec_odds以外の市場オッズ推定値"
+          ],
+          "required_in_note": [
+            "WebSearchスニペットの直接引用または明確な要約",
+            "引用元URLまたはメディア名",
+            "事実情報が不足する場合は『事実情報のみ・分析保留』と明記し、後日深掘りタスクとして残す"
+          ],
+          "fallback_when_insufficient_info": "深掘りに必要な事実情報が取れない場合、無理に分析を書かず、note は事実のみ記述しdepthをlightに格下げする。後日WebFetch等で詳細取得後に再度deepに昇格させる",
+          "rationale": "今日のATP結果反映で『一次ソース率12.5%』『MISS deep noteのほぼ全件にClaude推論が混入』『架空オッズ4件』が判明。CLAUDE.md『架空情報の完全禁止』に抵触する可能性があったため、note記述ルールを明示化"
         }
       }
     }
   ],
-  "last_updated": "2026-04-30"
+  "last_updated": "2026-05-01"
 }
