@@ -2763,7 +2763,8 @@
         ],
         "depth": "light",
         "note": "Walton d. Landaluce 6-2 6-3 (R1 of 128, 4/23 開催)。出典: atptour.com stats centre ms121, puntodebreak。事実情報のみ・分析保留。",
-        "depth_downgrade_reason": "Original deep note contained Claude inferences. Cleaned per anti_hallucination_rules. class=['miss','upset_occurred'] retained."
+        "depth_downgrade_reason": "Original deep note contained Claude inferences. Cleaned per anti_hallucination_rules. class=['miss','upset_occurred'] retained.",
+        "source_tier": "primary"
       },
       "date_corrected_from": "2026-04-22",
       "date_correction_note": "Actual match date per atptour.com ms121 was 2026-04-23. Original entry incorrectly dated 2026-04-22."
@@ -2797,7 +2798,8 @@
           "hit_normal"
         ],
         "depth": "light",
-        "note": "予測通り Buse が Mannarino をストレートで下し本戦初勝利。"
+        "note": "Buse d. Mannarino 6-4 6-2 (R1, Court 4 10:10 UTC)。出典: atptour.com/en/video highlights-buse-breezes-past-mannarino-for-madrid-2026-r2-spot (一次)。",
+        "source_tier": "primary"
       }
     },
     {
@@ -2872,7 +2874,8 @@
           "hit_normal"
         ],
         "depth": "light",
-        "note": "予測通り Hanfmann が Giron にフルセットで勝利。"
+        "note": "Hanfmann d. Giron 6-4 6-7(3) 7-5 (R1, Day 2 unlikely winners)。出典: atptour.com news/madrid-2026-best-hot-shots (Day 2 cat-and-mouse exchange 言及, 一次)。",
+        "source_tier": "primary"
       }
     },
     {
@@ -2909,14 +2912,16 @@
       "hit": null,
       "actual_ev": null,
       "actual_winner": "Blockx A.",
-      "actual_score": "4-6 7-5 7-5",
+      "actual_score": "3-6 6-3 6-4",
       "verification": {
         "class": [
           "hit_normal"
         ],
         "depth": "light",
-        "note": "予測通り Blockx が LL Garin にフルセットで勝利。"
-      }
+        "note": "Blockx d. Garin 3-6 6-3 6-4 (R1, comeback)。出典: atptour.com/en/video highlights-blockx-outlasts-garin-in-madrid-2026-r1 (一次)。",
+        "source_tier": "primary"
+      },
+      "score_correction_note": "Original score '4-6 7-5 7-5' (二次ソース perfect-tennis 由来) was incorrect. Corrected to atptour.com primary source."
     },
     {
       "tournament": "Mutua Madrid Open 2026",
@@ -3003,7 +3008,8 @@
           "hit_normal"
         ],
         "depth": "light",
-        "note": "予測通り Carreno Busta (WC) が復活戦で Fucsovics に逆転勝利。"
+        "note": "Carreno Busta d. Fucsovics 4-6 7-6(5) 6-2 (R1, WC entry)。出典: atptour.com results page (一次)。",
+        "source_tier": "primary"
       }
     },
     {
@@ -3046,7 +3052,8 @@
           "hit_normal"
         ],
         "depth": "light",
-        "note": "予測通り Munar が Shevchenko を 6-4 6-1 で下す。"
+        "note": "Munar d. Shevchenko 6-4 6-1 (R1)。出典: atptour.com/en/scores/stats-centre/live/2026/1536/ms102 (一次)。",
+        "source_tier": "primary"
       }
     },
     {
@@ -3083,14 +3090,16 @@
       "hit": null,
       "actual_ev": null,
       "actual_winner": "Marozsan F.",
-      "actual_score": "7-6(5) 7-6(5)",
+      "actual_score": "7-6(5) 7-6(6)",
       "verification": {
         "class": [
           "hit_normal"
         ],
         "depth": "light",
-        "note": "予測通り Marozsan が Quinn にダブルタイブレークの接戦で勝利。"
-      }
+        "note": "Marozsan d. Quinn 7-6(5) 7-6(6) (R1, double tiebreak)。出典: atptour.com/en/scores/stats-centre/live/2026/1536/ms113 (一次)。",
+        "source_tier": "primary"
+      },
+      "score_correction_note": "Original score '7-6(5) 7-6(5)' (検索要約由来) was incorrect. Corrected per atptour ms113 stats centre."
     },
     {
       "tournament": "Mutua Madrid Open 2026",
@@ -3272,8 +3281,9 @@
           "upset_occurred"
         ],
         "depth": "light",
-        "note": "Gaubas d. Baez 7-5 6-1。出典: perfect-tennis Day Two Recap, lastwordonsports。市場乖離度: WebSearch未確認。事実情報のみ・分析保留。",
-        "depth_downgrade_reason": "Original deep note contained Claude inferences. Cleaned per anti_hallucination_rules. class=['miss','upset_occurred'] retained."
+        "note": "Gaubas d. Baez 7-5 6-1 (R1, Lithuanian qualifier upset)。出典: atptour.com news (Auger-Aliassime meets upset maker Gaubas / 一次), 補助: rollingout.com (準一次)。市場乖離度: WebSearch未確認。",
+        "depth_downgrade_reason": "Original deep note contained Claude inferences. Cleaned per anti_hallucination_rules. class=['miss','upset_occurred'] retained.",
+        "source_tier": "primary"
       }
     },
     {
@@ -3354,7 +3364,8 @@
           "hit_normal"
         ],
         "depth": "light",
-        "note": "予測通り Merida (Q) が LL Trungelliti にフルセットで勝利。"
+        "note": "Merida d. Trungelliti 6-4 1-6 7-6(8-6) (R1, Trungelliti が LL で再対戦 - Q-final と同カード)。出典: ESPN Deportes (準一次), lanacion.com.ar (準一次), agenciafe.com (二次)。Merida saved 2 match points.",
+        "source_tier": "secondary_primary"
       }
     },
     {
@@ -3397,7 +3408,8 @@
           "hit_normal"
         ],
         "depth": "light",
-        "note": "予測通り Cerundolo J.M. が Altmaier をストレートで下す。"
+        "note": "Cerundolo (J.M.) d. Altmaier 6-4 6-4 (R1)。出典: atptour.com results page 検索要約 (準一次、stats centre URL 直接未確認)。",
+        "source_tier": "secondary_primary"
       }
     },
     {
@@ -3567,7 +3579,8 @@
           "hit_normal"
         ],
         "depth": "light",
-        "note": "予測通り Etcheverry が Ofner をストレートで下す。"
+        "note": "Etcheverry d. Ofner 6-4 6-4 (R1)。出典: atptour.com results page 検索要約 (準一次、stats centre URL 直接未確認、video highlights は vs Prizmic R2 / vs Fils R3 のみ)。",
+        "source_tier": "secondary_primary"
       }
     },
     {
@@ -3985,7 +3998,8 @@
           "hit_normal"
         ],
         "depth": "light",
-        "note": "予測通り Lehecka が Tabilo にフルセットで勝利。"
+        "note": "Lehecka d. Tabilo 3-6 7-6(3) 6-4 (R2, comeback)。出典: atptour.com/en/scores/stats-centre/live/2026/1536/ms044 (一次), sofascore.com news 補助 (準一次)。",
+        "source_tier": "primary"
       }
     },
     {
@@ -4029,7 +4043,8 @@
           "upset_occurred"
         ],
         "depth": "deep",
-        "note": "Michelsen d. Struff 6-2 6-1 (57min sweep, 70% 1st serve, 26 of 28 first-serve points won)。Michelsen 自身が 'one of his finest clay-court performances' と発言。出典: tennistonic 記事。市場乖離度: WebSearch未確認。"
+        "note": "Michelsen d. Struff 6-2 6-1 (R2, 57min sweep, 70% 1st serve, 26 of 28 first-serve points won)。Michelsen 自身が 'one of his finest clay-court performances' と発言。出典: atptour.com/en/scores/stats-centre/live/2026/1536/ms045 (一次), tennistonic 記事 (二次補助)。市場乖離度: WebSearch未確認。",
+        "source_tier": "primary"
       }
     },
     {
@@ -4692,7 +4707,7 @@
       "details": "GO 3/3 HIT (+0.76u Khachanov/FAA/Mensik) + CAUTION 4 HIT (Rinderknech/Griekspoor/Ruud) / 4 MISS (Shelton/Diallo retire/Vacherot/Shapovalov). MISS 4件 miss_analysis 同時記入完了 (PA-PERM05)."
     }
   ],
-  "last_updated": "2026-05-01 (B-group score backfill: 3 matches with primary source)",
+  "last_updated": "2026-05-01 (A-group source upgrade: 14 matches re-verified, 2 score corrections)",
   "log": [
     {
       "session": "_45",
