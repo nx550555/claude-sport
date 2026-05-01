@@ -129,6 +129,44 @@
         "Closer 連投状況",
         "IL 更新情報"
       ]
+    },
+    {
+      "id": "M012",
+      "name": "SP確定後の再L1判定 (Lineup-Triggered L1 Re-screening)",
+      "type": "extension",
+      "version": "v1.0",
+      "added": "2026-05-01",
+      "trigger": "Session_61 健全性診断: MLB pending 13件全件 conf<75% で provisional_go=0 → STEP 4.5 起動チャンスゼロ。team wRC+/FIP は daily SP variance を捕捉できない構造的限界が判明 (P_MLB_daily_SP_dominance evidence 6件)",
+      "rule": "MLB スクリーニング時、team L1 で conf<75% AND EV>+5% の試合は tier='awaiting_lineup' として記録。SP確定後 (JST 10:00 lineup_watch起動時) に M013 SP matchup差を含めて再L1判定する。",
+      "tier_definition_awaiting_lineup": {
+        "trigger_condition": "team L1 conf 60-74% AND EV>+5% AND SP未確定",
+        "fields_required": ["first_pitch", "predicted_winner", "rec_odds", "opponent_odds"],
+        "lineup_watch_target": true,
+        "post_lineup_action": "fetch_lineups → SP matchup差計算 (M013) → 再confidence算出 → tier昇格判定",
+        "promotion_path": "再conf>=75% AND EV>+5% → 'go' / 未達 → 'caution_waiting' or 'skip'"
+      },
+      "applies_to": "MLB only",
+      "rationale": "team統計値のみでは SP variance を捕捉できない。SP確定後の再判定により、daily matchup-driven な情報を活用してスクリーニング精度を向上させる",
+      "downstream_impact": "STEP 4.5 起動率がMLBで大幅向上 (Session_61: 0% → 推定30-50%)。lineup_watch のmlb-morning jobが実質的に機能するようになる"
+    },
+    {
+      "id": "M013",
+      "name": "SP matchup差をL1第3指標として追加 (SP Matchup Differential as L1 Component)",
+      "type": "extension",
+      "version": "v1.0",
+      "added": "2026-05-01",
+      "trigger": "M012 連携。team統計値だけではdaily SP variance を捕捉できない問題への構造的対応",
+      "rule": "MLB の L1判定に、両チーム先発投手のFIP差 (0.5以上) または xERA差 (0.5以上) を第3指標として追加する。SP確定後にのみ計算可能。",
+      "indicators": {
+        "primary": "team wRC+ (10pt以上差) + team FIP (0.4以上差)",
+        "secondary": "Baseball Savant xwOBA (0.020以上差) + xERA (0.5以上差)",
+        "tertiary_new": "SP matchup差 (FIP差 0.5以上 OR xERA差 0.5以上)"
+      },
+      "calculation_method": "両チーム先発投手の直近10試合FIPまたはシーズンFIPを比較。xERA は Baseball Savant ページから取得",
+      "weighting": "tertiary は primary + secondary と同等weight。3指標のうち2つ以上同じ方向 → confidence 5-10pt上乗せ",
+      "data_source": "fangraphs.com pitcher pages / baseball-savant.com pitcher pages",
+      "applies_to": "MLB only, M012適用試合のみ (SP確定後の再判定時)",
+      "rationale": "P_MLB_daily_SP_dominance (replicability=high) 仮説の構造的対応。team統計値だけでは捕捉できない daily 変動要因を第3軸として組み込む"
     }
   ],
   "accuracy_tier": "advanced",

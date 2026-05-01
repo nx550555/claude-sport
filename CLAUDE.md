@@ -94,6 +94,8 @@ MLBの作業をするとき:
 6. **M002 厳守**: 先発投手が未確定の状態で GO 判断は禁止
 7. **【新規】予測登録時に `first_pitch` フィールド (ISO 8601 UTC または ET) を必須記入**。`scripts/check_upcoming_games.py` の `parse_kickoff()` がこのフィールドを参照して `lineup_watch` ワークフローのトリガ判定を行う。`first_pitch` が無い MLB エントリは自動 STEP 4.5 パスから漏れる。
 8. **STEP 4.5 自動実行パス**: `provisional_go` (信頼度≥75% AND EV>+5%) としてスクリーニング登録 → `lineup_watch.yml` の `mlb-morning` job (JST 10:00) または 30分間隔 cron が `check_upcoming_games.py` 経由で検知 → `fetch_lineups.py` 起動 → (将来: EV 再計算 + tier 昇格スクリプト) → `notify_go_candidate.py --scan --mark-sent` でメール通知
+9. **【新tier】awaiting_lineup** (M012): team L1 で conf<75% AND EV>+5% の試合は `tier='awaiting_lineup'` として記録。SP確定後に M013 (SP matchup差) を含めて再L1判定する。中間tier のため verification 対象外 (最終昇格後の go/caution_waiting/skip で判定)
+10. **M012/M013 連携**: SP確定後にのみ tier 昇格 (`awaiting_lineup → go / caution_waiting / skip`)。M013 は team wRC+/FIP (primary) + Baseball Savant xwOBA/xERA (secondary) に加え、SP matchup FIP/xERA差を tertiary 指標として weight 等価で組み込む
 
 ---
 
