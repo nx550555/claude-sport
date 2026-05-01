@@ -18,11 +18,20 @@
 
 ## 未完了・作業中（次回セッション最優先）
 
-### 🎯 Session_61 行動順序 (次回)
+### 🎯 Session_62 行動順序 (次回)
 
-**STEP 0/0.5/1**: 通常通り (CLAUDE.md)
+**STEP 0/0.5/1**: 通常通り (CLAUDE.md + session_logs/2026-05-01_session_summary.md を読み込む)
 
-**Session_61 最優先タスク:**
+**Session_62 最優先タスク (Session_61 末尾起点):**
+- [ ] **PA_MLB_STAGE2-A**: `scripts/recalc_ev_from_lineup.py` 作成 (M013 適用、SP matchup差を tertiary 指標として EV 再計算)
+- [ ] **PA_MLB_STAGE2-B**: `scripts/promote_provisional_to_go.py` 作成 (M012 昇格判定、awaiting_lineup → go / caution_waiting / skip)
+- [ ] **PA_MLB_STAGE3**: `lineup_watch.yml` mlb-morning job のTODO解除 (Stage 2-A/B 完成後)
+- [ ] **PA_MLB_STAGE4 (オプション)**: 既存 MLB 15件への M012/M013 シミュレーション (provisional_go化件数測定)
+- [ ] 残スポーツ pending verified化 (NRL 14, Soccer 29, AHL 35, Premiership 8, Top14 14, Pro D2 7, Super League 5)
+- [ ] ATP/WTA verified deep のうち analysis null 残り 1件 (ATP #6 Landaluce) 補完
+- [ ] ルール候補 8件 (P_NHL_drought_g1_surge / P_NHL_finale_motivation_gap / P_NBA_roster_quality_gap / P_MLB_daily_SP_dominance / P_MLB_l1_contrarian_caution / P_UFL_undefeated_overpriced / P_UFL_home_edge_recalibration / P015 補強) の正式昇格判断
+
+**Session_61 持越し (上から継続):**
 - [ ] **Session_60 Provisional GO 6件 結果反映** (4/25-26 開催):
   - Soccer: Arsenal-Newcastle / Leeds-Burnley / Torino-Inter / Dortmund-Freiburg
   - NRL: Penrith @ Newcastle / Manly vs Parramatta
