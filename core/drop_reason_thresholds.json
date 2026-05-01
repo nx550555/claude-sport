@@ -1,0 +1,62 @@
+{
+  "_meta": {
+    "purpose": "awaiting_lineup tier(= 試合前のラインナップ確定待ちラベル)から go tier(= ベット推奨)への昇格判定で足切りされたベットの理由を分類するための閾値設定。drop_reason タグ判定に使用。",
+    "version": "v1.0",
+    "added": "2026-05-01",
+    "related_rules": ["M012", "M013"],
+    "related_files": ["core/awaiting_lineup_bet_schema.json", "core/rules_mlb.json"],
+    "tuning_policy": "初期値は経験則ベース。実運用で drop_reason タグ別の足切り件数と的中率を見ながらチューニングする。"
+  },
+  "tag_priority_order": [
+    "dropped_SP_quality_lower",
+    "dropped_lineup_weak",
+    "dropped_market_moved",
+    "dropped_other"
+  ],
+  "tags": {
+    "dropped_SP_quality_lower": {
+      "applies_to_sports": ["mlb"],
+      "condition": "確定 SP の推定 ERA が expected_sp_era より悪化",
+      "threshold": {
+        "field": "actual_sp_era - expected_sp_era",
+        "operator": ">=",
+        "value": 0.5,
+        "unit": "ERA points"
+      },
+      "rationale_initial_value": "SP の試合単位の ERA 変動幅(±0.3〜0.5)を考慮。+0.5 以上の悪化は無視できない劣化と判断。"
+    },
+    "dropped_lineup_weak": {
+      "applies_to_sports": ["mlb"],
+      "condition": "確定スタメンの wOBA 加重平均が expected_lineup_woba より低下",
+      "threshold": {
+        "field": "expected_lineup_woba - actual_lineup_woba",
+        "operator": ">=",
+        "value": 0.020,
+        "unit": "wOBA points"
+      },
+      "rationale_initial_value": "MLB 平均 wOBA が約 0.320。-0.020 は約 6% の打線質低下に相当し、勝率推定に有意な影響あり。"
+    },
+    "dropped_market_moved": {
+      "applies_to_sports": ["mlb"],
+      "condition": "EV 自体は変化少だが市場 odds が動いて閾値割れ",
+      "threshold": {
+        "delta_ev_abs_max": 1.0,
+        "delta_win_prob_abs_max": 0.010,
+        "unit": "delta_ev_abs_max=percentage points (例: 1.0 は |ΔEV| < 1.0pp) / delta_win_prob_abs_max=probability points (1pp = 0.01、例: 0.010 は |Δwin_prob| < 1pp)",
+        "implementation": "abs(actual_ev - base_ev) < delta_ev_abs_max AND abs(actual_win_prob - base_estimated_win_prob) < delta_win_prob_abs_max"
+      },
+      "rationale_initial_value": "delta_ev 1pp 未満かつ delta_win_prob 1pp 未満 = lineup 変動による予測変化はほぼ無し → 残る要因は市場変動のみと判断。"
+    },
+    "dropped_other": {
+      "applies_to_sports": ["mlb"],
+      "condition": "上記いずれにも該当しない場合の fallback タグ",
+      "threshold": null,
+      "rationale_initial_value": "fallback タグ。原因不明の足切りを記録するため、後の分析で「分類できなかったケース」を可視化する。"
+    }
+  },
+  "tag_assignment_rules": {
+    "multiple_tags_allowed": true,
+    "priority_logic": "lineup 起因タグ(dropped_SP_quality_lower / dropped_lineup_weak)が該当する場合は dropped_market_moved を付与しない。複数の lineup 起因タグが同時該当する場合は両方付与可。",
+    "dropped_other_exclusivity": "他のタグが 1 つでも付与された場合、dropped_other は付与されない。fallback タグとして排他的に扱う。実装: if not any(other_tags): tags.append('dropped_other')"
+  }
+}
