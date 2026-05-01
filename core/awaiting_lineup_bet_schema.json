@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "purpose": "awaiting_lineup tier(= 試合前のラインナップ確定待ちラベル)に登録するベット記録の必須フィールド定義。M012 によって導入された tier の運用に必要。",
+    "version": "v1.0",
+    "added": "2026-05-01",
+    "related_rules": ["M012", "M013"],
+    "related_files": ["core/rules_mlb.json", "core/drop_reason_thresholds.json"]
+  },
+  "common": {
+    "base_estimated_win_prob": {
+      "type": "number",
+      "range": [0.0, 1.0],
+      "description": "lineup 公開前時点での独自推定勝率。lineup 確定後の差分判定の基準値。",
+      "required_for_sports": ["mlb"]
+    },
+    "base_ev": {
+      "type": "number",
+      "description": "lineup 公開前時点での EV 値(percentage point 単位、例: +5.2 は +5.2%)。lineup 確定後の市場変動判定の基準値。",
+      "required_for_sports": ["mlb"]
+    }
+  },
+  "by_sport": {
+    "mlb": {
+      "expected_sp_era": {
+        "type": "number",
+        "description": "想定先発投手の推定 ERA(直近10試合または当該シーズン)。lineup 確定後の SP 質変動判定に使用。",
+        "data_source": "fangraphs.com pitcher pages"
+      },
+      "expected_lineup_woba": {
+        "type": "number",
+        "description": "想定スタメンの wOBA 加重平均。lineup 確定後の打線質変動判定に使用。",
+        "data_source": "fangraphs.com team batting / individual player pages"
+      }
+    }
+  }
+}
