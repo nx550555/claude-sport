@@ -20,13 +20,44 @@
 
 ### 🎯 Session_62 行動順序 (次回)
 
-**STEP 0/0.5/1**: 通常通り (CLAUDE.md + session_logs/2026-05-01_session_summary.md を読み込む)
+**STEP 0/0.5/1**: 通常通り (CLAUDE.md + session_logs/2026-05-01_session_summary.md + session_logs/2026-05-01_session_summary_part2.md を読み込む)
 
-**Session_62 最優先タスク (Session_61 末尾起点):**
+**🚨 Session_62 最優先タスク (2026-05-01 Part 2 末尾起点):**
+
+- [ ] **META_RECONFIG**: Claude Code 2 セッション体制への再構成 (最重要・他タスクより先行)
+  - 背景: 4/25-5/1 の 6 日間ベット実行ゼロ。設計議論膨張・引き継ぎ事故が再発防止対象
+  - 準備タスク (次セッション冒頭で実施):
+    1. `claude_sport_meta/` フォルダを新規作成 (claude_sport/ の外、別ディレクトリ)
+    2. `claude_sport_meta/CHARTER.md` 作成 (目的・やらないこと・スコープ制約・議論膨張防止セルフチェック)
+    3. `claude_sport_meta/conversations/` 作成 (設計議論記録用)
+    4. `claude_sport_meta/handoffs/` 作成 (セッション間引き継ぎ用)
+    5. claude_sport_meta/ で Claude Code を起動して動作確認
+  - 完成後: 設計役 ① (claude_sport_meta) → コピペ → 実装役 ② (claude_sport) のフロー確立
+
+**Session_62 次優先タスク (Approach C Stage 2 本体):**
+- [x] **PA_MLB_STAGE1.5-A**: `core/awaiting_lineup_bet_schema.json` 新設 (commit d8f8acd, 2026-05-01 Part 2)
+- [x] **PA_MLB_STAGE1.5-B**: `core/drop_reason_thresholds.json` 新設 (commit 51284b2, 2026-05-01 Part 2)
+- [x] **PA_MLB_STAGE1.5-C**: CLAUDE.md MLB セクション 3 段階パイプライン明文化 (commit 5940cde, 2026-05-01 Part 2)
 - [ ] **PA_MLB_STAGE2-A**: `scripts/recalc_ev_from_lineup.py` 作成 (M013 適用、SP matchup差を tertiary 指標として EV 再計算)
-- [ ] **PA_MLB_STAGE2-B**: `scripts/promote_provisional_to_go.py` 作成 (M012 昇格判定、awaiting_lineup → go / caution_waiting / skip)
+  - 前提: Stage 1.5 で schema 2 件 + CLAUDE.md 整備完了済み
+  - 入力: awaiting_lineup tier の bet 一覧 + lineups feed
+  - 出力: 再計算後 EV を付与した bet 一覧 (元データ保持)
+- [ ] **PA_MLB_STAGE2-B**: `scripts/promote_provisional_to_go.py` 作成 (M012 昇格判定、awaiting_lineup → provisional_go → go)
+  - 前提: Stage 1.5 で schema 2 件 + CLAUDE.md 整備完了済み
+  - drop_reason_thresholds.json を参照してタグ付与 + status='dropped_post_lineup' で履歴保持
+- [ ] **PA_MLB_STAGE2-C**: `check_upcoming_games.py` を `lineup_watch_target` フラグ判定方式に改修 (新 tier 対応)
+- [ ] **PA_MLB_STAGE2-D**: 既存 provisional_go 定義に `lineup_watch_target: true` を後付け追加
 - [ ] **PA_MLB_STAGE3**: `lineup_watch.yml` mlb-morning job のTODO解除 (Stage 2-A/B 完成後)
 - [ ] **PA_MLB_STAGE4 (オプション)**: 既存 MLB 15件への M012/M013 シミュレーション (provisional_go化件数測定)
+- [ ] **PA_MLB_STAGE5 (低優先・将来検討)**: tier 統合検討 (案 F)
+  - 内容: provisional_go と awaiting_lineup を統合する tier 体系の再設計
+  - 着手条件: Stage 2 が安定運用に乗ってから (dry-run + 本番 1 週間以上のデータ蓄積後)
+  - 現状: Stage 1.5 では案 D (並存) を採用済
+- [ ] **PA_MLB_STAGE6 (低優先・将来検討)**: 他スポーツへの awaiting_lineup tier 展開
+  - 対象: NBA / NFL / NHL / soccer など
+  - 着手条件: MLB Stage 2 が dry-run で問題なければ着手
+  - NHL は `expected_goalie` フィールド追加 + `dropped_goalie_change` タグ追加が必要
+  - common フィールド (base_estimated_win_prob / base_ev) の `required_for_sports` 拡張も同時実施
 - [ ] 残スポーツ pending verified化 (NRL 14, Soccer 29, AHL 35, Premiership 8, Top14 14, Pro D2 7, Super League 5)
 - [ ] ATP/WTA verified deep のうち analysis null 残り 1件 (ATP #6 Landaluce) 補完
 - [ ] ルール候補 8件 (P_NHL_drought_g1_surge / P_NHL_finale_motivation_gap / P_NBA_roster_quality_gap / P_MLB_daily_SP_dominance / P_MLB_l1_contrarian_caution / P_UFL_undefeated_overpriced / P_UFL_home_edge_recalibration / P015 補強) の正式昇格判断
