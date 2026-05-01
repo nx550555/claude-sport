@@ -84,18 +84,71 @@ MISSは損失ではなく学習の機会。`miss_analysis` に「なぜ実際の
 
 ## MLB(メジャーリーグベースボール)固有手順
 
-MLBの作業をするとき:
+MLB の作業をするとき:
+
+### 基本ルール
 
 1. `core/rules_mlb.json` を読み込む
 2. `records/mlb/2026.json` を読み込む
-3. **L1**: FanGraphs `wRC+`(10pt以上差) + `FIP`(0.4以上差) のクロスチェック
-4. **STEP 4.5 必須**: JST 10:00 頃に `python scripts/fetch_lineups.py --sport mlb` を実行 → 先発投手確定 + 打線左右 + 3-4-5番確認 → EV 再計算
-5. **データソース**: FanGraphs (FIP/wRC+) / Baseball Savant (xwOBA/xERA) / `rotowire.com/baseball/daily-lineups.php`
-6. **M002 厳守**: 先発投手が未確定の状態で GO 判断は禁止
-7. **【新規】予測登録時に `first_pitch` フィールド (ISO 8601 UTC または ET) を必須記入**。`scripts/check_upcoming_games.py` の `parse_kickoff()` がこのフィールドを参照して `lineup_watch` ワークフローのトリガ判定を行う。`first_pitch` が無い MLB エントリは自動 STEP 4.5 パスから漏れる。
-8. **STEP 4.5 自動実行パス**: `provisional_go` (信頼度≥75% AND EV>+5%) としてスクリーニング登録 → `lineup_watch.yml` の `mlb-morning` job (JST 10:00) または 30分間隔 cron が `check_upcoming_games.py` 経由で検知 → `fetch_lineups.py` 起動 → (将来: EV 再計算 + tier 昇格スクリプト) → `notify_go_candidate.py --scan --mark-sent` でメール通知
-9. **【新tier】awaiting_lineup** (M012): team L1 で conf<75% AND EV>+5% の試合は `tier='awaiting_lineup'` として記録。SP確定後に M013 (SP matchup差) を含めて再L1判定する。中間tier のため verification 対象外 (最終昇格後の go/caution_waiting/skip で判定)
-10. **M012/M013 連携**: SP確定後にのみ tier 昇格 (`awaiting_lineup → go / caution_waiting / skip`)。M013 は team wRC+/FIP (primary) + Baseball Savant xwOBA/xERA (secondary) に加え、SP matchup FIP/xERA差を tertiary 指標として weight 等価で組み込む
+3. **L1 (primary)**: FanGraphs `wRC+`(10pt以上差) + `FIP`(0.4以上差) のクロスチェック
+4. **L1 (secondary)**: Baseball Savant `xwOBA`(0.020以上差) + `xERA`(0.5以上差)
+5. **L1 (tertiary, M013)**: SP matchup 差 (FIP差 0.5以上 OR xERA差 0.5以上) — SP 確定後にのみ計算可能
+6. **データソース**: FanGraphs (FIP/wRC+) / Baseball Savant (xwOBA/xERA) / `rotowire.com/baseball/daily-lineups.php`
+7. **M002 厳守**: 先発投手が未確定の状態で `go` 判断は禁止
+8. **予測登録時に `first_pitch` フィールド (ISO 8601 UTC または ET) を必須記入**。`scripts/check_upcoming_games.py` の `parse_kickoff()` がこのフィールドを参照して `lineup_watch` ワークフローのトリガ判定を行う
+
+### 3 段階パイプライン (awaiting_lineup → provisional_go → go)
+
+MLB は SP の daily variance が大きいため、L1 判定を 2 段階に分けて運用する:
+
+| 段階 | tier | 条件 | スクリーニング時に必要な情報 | 次の遷移トリガ |
+|------|------|------|---------------------------|--------------|
+| 1 | `awaiting_lineup` | team L1 で conf 60-74% AND EV>+5% AND SP 未確定 | `awaiting_lineup_bet_schema.json` の MLB 必須フィールド | SP 確定 (JST 10:00 lineup_watch) |
+| 2 | `provisional_go` | M013 (SP matchup差) を加えた再判定で conf≥75% AND EV>+5% | (継承) | スタメン全確定 |
+| 3 | `go` | スタメン全確定後の EV 再計算で閾値維持 | (継承) + `notified` | (終端、メール通知発火) |
+
+### 昇格・足切りの判定
+
+- **awaiting_lineup → provisional_go**: M013 (SP FIP/xERA差) を tertiary 指標として weight 等価で組み込み、3 指標のうち 2 つ以上同方向 → confidence 5-10pt 上乗せ。再 conf≥75% AND EV>+5% で昇格
+- **provisional_go → go**: スタメン全確定後の EV 再計算で閾値維持。閾値割れの場合は `core/drop_reason_thresholds.json` に従い `status: dropped_post_lineup` + `drop_reason` タグを付与の上 drop:
+  - `dropped_SP_quality_lower` (actual ERA - expected ≥ +0.5)
+  - `dropped_lineup_weak` (expected wOBA - actual ≥ 0.020)
+  - `dropped_market_moved` (|ΔEV| < 1.0pp AND |Δwin_prob| < 1pp)
+  - `dropped_other` (fallback、他タグが付かない場合のみ排他付与)
+- 未昇格は `caution_waiting` (人手確認用) または `skip` (記録のみ) に格下げ
+
+### tier の verification 対象性
+
+- `awaiting_lineup` / `provisional_go` は中間 tier のため verification 対象外
+- 最終昇格後の `go` / `caution_waiting` / `skip` で verification を実施
+
+### STEP 4.5 自動実行パス
+スクリーニング → tier='awaiting_lineup' or 'provisional_go' で記録
+↓
+lineup_watch.yml mlb-morning job (JST 10:00 = UTC 01:00)
+↓
+fetch_lineups.py --sport mlb (rotowire 取得)
+↓
+recalc_ev_from_lineup.py [将来実装予定]
+↓ (M013 反映 + EV 再計算)
+promote_provisional_to_go.py [将来実装予定]
+↓ (drop_reason_thresholds.json 参照、昇格 or drop)
+notify_go_candidate.py --scan --mark-sent (tier='go' のみメール通知)
+
+**現状の運用に関する重要な注意**:
+`recalc_ev_from_lineup.py` と `promote_provisional_to_go.py` が未実装である間、MLB の `awaiting_lineup` / `provisional_go` 昇格判定は自動実行されない。スクリプト完成までは MLB の awaiting_lineup tier 経由のベット実行は実質停止する方針(検証データの汚染を避けるため、手動シミュレーションでの go 化は行わない)。
+
+### 【絶対禁止】架空情報の生成 (再掲)
+
+選手名・スコア・オッズ・先発投手・打順を架空生成しない。lineup feed に該当エントリが無い場合は「未確定」と書く。
+
+### 関連ファイル
+
+- `core/rules_mlb.json` (M001〜M013)
+- `core/awaiting_lineup_bet_schema.json` (段階 1 登録時のフィールド定義)
+- `core/drop_reason_thresholds.json` (段階 2 で drop した場合のタグ判定)
+- `core/framework.json` (step_4_5_lineup_check の汎用パイプライン定義)
+- `.github/workflows/lineup_watch.yml` (自動実行設定)
 
 ---
 
