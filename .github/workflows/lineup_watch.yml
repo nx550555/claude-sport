@@ -100,7 +100,7 @@ jobs:
           fi
 
   mlb-morning:
-    # MLB は JST 10:00 (UTC 01:00) 固定で先発投手・打線取得
+    # MLB は JST 10:00 (UTC 01:00) 固定で先発投手・打線取得 → EV再計算 → tier昇格 → 通知
     if: github.event.schedule == '0 1 * * *'
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -114,14 +114,46 @@ jobs:
           python -m pip install --upgrade pip
           pip install playwright
           playwright install --with-deps chromium
+
       - name: Fetch MLB lineups
         run: python scripts/fetch_lineups.py --sport mlb --days-stale 0 || true
-      - name: Commit
+
+      # TODO (Session_61 別タスク): scripts/recalc_ev_from_lineup.py 新規作成
+      # 取得した lineup feed (starting_pitcher / 打線左右) を使って provisional_go 試合の EV を再計算する。
+      # - run: python scripts/recalc_ev_from_lineup.py --sport mlb --date $(date -u +'%Y-%m-%d') || true
+
+      # TODO (Session_61 別タスク): scripts/promote_provisional_to_go.py 新規作成
+      # 再計算後 EV>+5% AND conf>=75% のものを tier='go' に昇格、未達は caution_waiting に格下げ。
+      # - run: python scripts/promote_provisional_to_go.py --sport mlb --date $(date -u +'%Y-%m-%d') || true
+
+      - name: Commit lineup feed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add stats/external_feeds/lineups_*.json 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "chore(lineups): MLB morning fetch ($(date -u +'%Y-%m-%dT%H:%MZ'))"
+            git push
+          fi
+
+      - name: Notify GO candidates (immediate, MLB)
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          NOTIFY_TO: ${{ secrets.NOTIFY_TO }}
+          NOTIFY_FROM: ${{ secrets.NOTIFY_FROM }}
+        run: |
+          # 注: tier='go' 到達済の試合のみ通知する。provisional_go は対象外 (上記 promote 後に発火)。
+          python scripts/notify_go_candidate.py --scan --mark-sent || true
+
+      - name: Commit notification marks
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add records/**/*.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(notify): MLB morning mark notified=true ($(date -u +'%Y-%m-%dT%H:%MZ'))"
             git push
           fi

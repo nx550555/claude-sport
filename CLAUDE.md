@@ -82,6 +82,21 @@ MISSは損失ではなく学習の機会。`miss_analysis` に「なぜ実際の
 
 ---
 
+## MLB(メジャーリーグベースボール)固有手順
+
+MLBの作業をするとき:
+
+1. `core/rules_mlb.json` を読み込む
+2. `records/mlb/2026.json` を読み込む
+3. **L1**: FanGraphs `wRC+`(10pt以上差) + `FIP`(0.4以上差) のクロスチェック
+4. **STEP 4.5 必須**: JST 10:00 頃に `python scripts/fetch_lineups.py --sport mlb` を実行 → 先発投手確定 + 打線左右 + 3-4-5番確認 → EV 再計算
+5. **データソース**: FanGraphs (FIP/wRC+) / Baseball Savant (xwOBA/xERA) / `rotowire.com/baseball/daily-lineups.php`
+6. **M002 厳守**: 先発投手が未確定の状態で GO 判断は禁止
+7. **【新規】予測登録時に `first_pitch` フィールド (ISO 8601 UTC または ET) を必須記入**。`scripts/check_upcoming_games.py` の `parse_kickoff()` がこのフィールドを参照して `lineup_watch` ワークフローのトリガ判定を行う。`first_pitch` が無い MLB エントリは自動 STEP 4.5 パスから漏れる。
+8. **STEP 4.5 自動実行パス**: `provisional_go` (信頼度≥75% AND EV>+5%) としてスクリーニング登録 → `lineup_watch.yml` の `mlb-morning` job (JST 10:00) または 30分間隔 cron が `check_upcoming_games.py` 経由で検知 → `fetch_lineups.py` 起動 → (将来: EV 再計算 + tier 昇格スクリプト) → `notify_go_candidate.py --scan --mark-sent` でメール通知
+
+---
+
 ## 4象限フレームワーク
 
 全試合は必ず以下4象限のいずれかに分類して `quadrant` フィールドを付与する。
