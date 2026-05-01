@@ -384,7 +384,26 @@
       "score": "6-2",
       "hit": null,
       "actual_ev": null,
-      "note": "retroactive prediction. predicted_winner=null (xGF%未確認のため予測未記録)。結果: VGK 6-2 WPG確認済。Stone 1G/Eichel 1G3A/Barbashev 1G1A/Andersson 1G1A/Smith 1G/Dorofeyev 1G。VGK Pacific Division title争い。"
+      "note": "retroactive prediction. predicted_winner=null (xGF%未確認のため予測未記録)。結果: VGK 6-2 WPG確認済。Stone 1G/Eichel 1G3A/Barbashev 1G1A/Andersson 1G1A/Smith 1G/Dorofeyev 1G。VGK Pacific Division title争い。",
+      "status": "completed",
+      "verification": {
+        "class": [
+          "hit_normal"
+        ],
+        "depth": "light",
+        "facts": "VGK 6-2 WPG (T-Mobile Arena, 2026-04-13 ET). Eichel 1G 3A. VGK closing in on Pacific Division title. Source: nhl.com/news/winnipeg-jets-vegas-golden-knights-game-recap-april-13-2026, espn gameId 401803641. (Note: predicted_winner null at screening time; verification logged retroactively for record completeness.)",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
+      }
     },
     {
       "date": "2026-04-15",
@@ -832,7 +851,29 @@
         "Utah": 1.83
       },
       "hit": null,
-      "result": null
+      "result": "Blues 5-3 Mammoth",
+      "prediction_hit": false,
+      "score": "STL 5 - UTA 3",
+      "status": "completed",
+      "verification": {
+        "class": [
+          "miss",
+          "upset_occurred"
+        ],
+        "depth": "deep",
+        "facts": "STL 5-3 UTA (2026-04-16 ET). Robert Thomas hat trick. Logan Mailloux go-ahead goal with 2:57 left. Blues 4th straight win. Source: nhl.com/news/st-louis-blues-utah-mammoth-game-recap-april-16-2026, espn gameId 401803660.",
+        "analysis": {
+          "decisive_factor": "External — Robert Thomas hat trick + late go-ahead goal (3rd period clutch). UTA late-collapse pattern.",
+          "market_blind_spot": "UTA market-favorite (home + playoff-bound seed advantage) had not weighted STL's 4-game streak momentum or Thomas individual form.",
+          "confidence_level": "speculative"
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": "unknown"
+        },
+        "source_tier": "primary"
+      }
     },
     {
       "date": "2026-04-17",
@@ -849,7 +890,28 @@
         "Ducks": 1.83
       },
       "hit": null,
-      "result": null
+      "result": "Ducks 5-4 Predators",
+      "prediction_hit": true,
+      "score": "ANA 5 - NSH 4",
+      "status": "completed",
+      "verification": {
+        "class": [
+          "hit_normal"
+        ],
+        "depth": "light",
+        "facts": "ANA 5-4 NSH (2026-04-16 ET, Bridgestone Arena). Terry late-3rd tie-breaking goal. Regular-season finale for both. Source: nhl.com/news/anaheim-ducks-nashville-predators-game-recap-april-16-2026, espn gameId 401803658.",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
+      }
     },
     {
       "date": "2026-04-17",
@@ -865,7 +927,29 @@
         "Jets": 1.59
       },
       "hit": null,
-      "result": null
+      "result": "Sharks 6-1 Jets",
+      "prediction_hit": false,
+      "score": "SJS 6 - WPG 1",
+      "status": "completed",
+      "verification": {
+        "class": [
+          "miss",
+          "upset_occurred"
+        ],
+        "depth": "deep",
+        "facts": "SJS 6-1 WPG (2026-04-16 ET, regular-season finale). Macklin Celebrini 1G 2A breaking Joe Thornton's Sharks single-season points record (115). Source: nhl.com/news/san-jose-sharks-winnipeg-jets-game-recap-april-16-2026, espn gameId 401803659.",
+        "analysis": {
+          "decisive_factor": "External — Celebrini individual record-chasing motivation + WPG meaningless-game (already locked playoff seed). 6-1 blowout magnitude exceeds any L1 expectation.",
+          "market_blind_spot": "WPG market-favorite based on standings/L1, but had no incentive to compete in finale; SJS had record-chase motivation. End-of-season meaningless-game effect unmodeled.",
+          "confidence_level": "medium"
+        },
+        "rules_implication": {
+          "candidate_pattern": "RS finale: playoff-locked team vs motivated non-playoff team — discount fav by significant margin",
+          "rule_candidate_id": "P_NHL_finale_motivation_gap (新候補)",
+          "replicability": "medium"
+        },
+        "source_tier": "primary"
+      }
     },
     {
       "date": "2026-04-17",
@@ -881,7 +965,29 @@
         "Flames": 2.1
       },
       "hit": null,
-      "result": null
+      "result": "Flames 3-1 Kings",
+      "prediction_hit": false,
+      "score": "CGY 3 - LAK 1",
+      "status": "completed",
+      "verification": {
+        "class": [
+          "miss",
+          "upset_occurred"
+        ],
+        "depth": "deep",
+        "facts": "CGY 3-1 LAK (2026-04-16 ET, Scotiabank Saddledome). Arsenii Sergeev 27 saves in NHL debut start. Frost / Parekh / Farabee scored for CGY. Source: nhl.com/news/los-angeles-kings-calgary-flames-game-recap-april-16-2026, espn gameId 401803661.",
+        "analysis": {
+          "decisive_factor": "External — Sergeev NHL-debut goalie with 27 saves; CGY rookie surge (Parekh NHL debut goal). LAK road-end-of-season motivation low.",
+          "market_blind_spot": "CGY eliminated/rookie-call-up lineup undervalued; debut-goalie 'unknown quantity' edge. LAK PO seed locked → low intensity unpriced.",
+          "confidence_level": "speculative"
+        },
+        "rules_implication": {
+          "candidate_pattern": "RS finale: PO-locked road team vs eliminated home with debut-goalie / rookie surge",
+          "rule_candidate_id": "P_NHL_finale_motivation_gap (P #2 evidence)",
+          "replicability": "medium"
+        },
+        "source_tier": "primary"
+      }
     },
     {
       "date": "2026-04-17",
@@ -897,7 +1003,28 @@
         "Oilers": 1.27
       },
       "hit": null,
-      "result": null
+      "result": "Oilers 6-1 Canucks",
+      "prediction_hit": true,
+      "score": "EDM 6 - VAN 1",
+      "status": "completed",
+      "verification": {
+        "class": [
+          "hit_normal"
+        ],
+        "depth": "light",
+        "facts": "EDM 6-1 VAN (2026-04-16 ET, Rogers Place, RS finale). Matt Savoie hat trick (career first). McDavid 4 assists. Source: nhl.com/news/vancouver-canucks-edmonton-oilers-game-recap-april-16-2026, espn gameId 401803662.",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
+      }
     },
     {
       "date": "2026-04-17",
@@ -913,7 +1040,28 @@
         "Avalanche": 1.52
       },
       "hit": null,
-      "result": null
+      "result": "Avalanche 2-0 Kraken",
+      "prediction_hit": true,
+      "score": "COL 2 - SEA 0",
+      "status": "completed",
+      "verification": {
+        "class": [
+          "hit_normal"
+        ],
+        "depth": "light",
+        "facts": "COL 2-0 SEA (2026-04-16 ET). Wedgewood 22 saves, 4th shutout of season. Nick Blankenburg 2nd-period goal. Source: nhl.com/news/seattle-kraken-colorado-avalanche-game-recap-april-16-2026, espn gameId 401803663.",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
+      }
     },
     {
       "date": "2026-04-20",
@@ -1004,13 +1152,33 @@
       "predicted_winner": "Boston Bruins",
       "prediction_confidence": 58,
       "prediction_basis": "手動データ: odds 1.60/2.30 (BOS市場本命). 5v5 xGF% は 4/16スクリーニング時点では差3pt未満でSKIP。手動2026-04-19.jsonに live 0-0 1st 52' 表示。",
-      "prediction_hit": null,
+      "prediction_hit": false,
       "rec": null,
       "rec_odds": null,
       "ev": null,
-      "result": null,
-      "status": "in_progress",
-      "note": "手動 2026-04-19.json live 0-0 1st 52'。結果確認要。"
+      "result": "Sabres 4-3 Bruins (UPSET)",
+      "status": "completed",
+      "note": "手動 2026-04-19.json live 0-0 1st 52'。結果確認要。",
+      "score": "BUF 4 - BOS 3",
+      "verification": {
+        "class": [
+          "miss",
+          "upset_occurred"
+        ],
+        "depth": "deep",
+        "facts": "BUF 4-3 BOS (2026-04-19 ET, KeyBank Center, PO R1 G1). Sabres scored 3 goals in 4:34 span late 3rd. Tage Thompson 2G NHL playoff debut. Mattias Samuelson decisive goal 3:24 left. BOS goals: Geekie (1st 10:52), Lindholm (3rd). Sabres' 1st playoff win in 15 years. Source: nhl.com/news/boston-bruins-buffalo-sabres-game-1-recap-april-19-2026, espn gameId 401869719.",
+        "analysis": {
+          "decisive_factor": "External — 3rd period late collapse / depth scoring (Thompson 2G + Samuelson clutch). BOS L1 (xGF%) edge erased after 14:00 of 3rd.",
+          "market_blind_spot": "Market (BOS -ML 1.60) reflected RS L1 strength; missed Sabres 15-year playoff-drought motivational edge and Thompson big-game capacity.",
+          "confidence_level": "speculative"
+        },
+        "rules_implication": {
+          "candidate_pattern": "long playoff-drought home team G1 motivational surge",
+          "rule_candidate_id": "P_NHL_drought_g1_surge (新候補)",
+          "replicability": "low"
+        },
+        "source_tier": "primary"
+      }
     },
     {
       "date": "2026-04-21",
@@ -1032,15 +1200,35 @@
       "ev_est": -3.98,
       "rec": null,
       "ev": null,
-      "status": "pending",
+      "status": "completed",
       "hit": null,
-      "result": null,
-      "prediction_hit": null,
+      "result": "Golden Knights 4-2 Mammoth",
+      "prediction_hit": true,
       "screening_session": "2026-04-20 Session_43",
-      "note": "手動データ2026-04-19.json起点。4/16スクリーニング結果(全SKIP)を継承。"
+      "note": "手動データ2026-04-19.json起点。4/16スクリーニング結果(全SKIP)を継承。",
+      "score": "VGK 4 - UTA 2",
+      "date_et": "2026-04-20",
+      "verification": {
+        "class": [
+          "hit_normal"
+        ],
+        "depth": "light",
+        "facts": "VGK 4-2 UTA G1 (2026-04-20 ET, T-Mobile Arena). VGK 3rd-period rally. Source: nhl.com/news/utah-mammoth-vegas-golden-knights-game-1-recap-april-19-2026, espn gameId 401869720.",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
+      }
     },
     {
-      "date": "2026-04-21",
+      "date": "2026-04-19",
       "match": "Pittsburgh Penguins vs Philadelphia Flyers (G1)",
       "home": "Pittsburgh Penguins",
       "away": "Philadelphia Flyers",
@@ -1059,15 +1247,37 @@
       "ev_est": -3.98,
       "rec": null,
       "ev": null,
-      "status": "pending",
+      "status": "completed",
       "hit": null,
-      "result": null,
-      "prediction_hit": null,
+      "result": "Flyers 3-2 Penguins (UPSET)",
+      "prediction_hit": false,
       "screening_session": "2026-04-20 Session_43",
-      "note": "手動データ2026-04-19.json起点。4/16スクリーニング結果(全SKIP)を継承。"
+      "note": "手動データ2026-04-19.json起点。4/16スクリーニング結果(全SKIP)を継承。",
+      "score": "PHI 3 - PIT 2",
+      "date_et": "2026-04-18",
+      "verification": {
+        "class": [
+          "miss",
+          "upset_occurred"
+        ],
+        "depth": "deep",
+        "facts": "PHI 3-2 PIT G1 (2026-04-18 ET). Flyers 'grand return to playoffs' G1 win. Source: espn gameId 401869717, espn.com/nhl/story/_/id/48528257/philadelphia-flyers-win-game-1-grand-return-playoffs.",
+        "analysis": {
+          "decisive_factor": "External — PHI playoff-return motivational edge. PIT veteran-core playoff fatigue suspected (Crosby/Malkin late-career window).",
+          "market_blind_spot": "Market PIT-favorite based on RS standings; missed PHI rookie/core playoff-debut energy and PIT veteran-fatigue narrative.",
+          "confidence_level": "speculative"
+        },
+        "rules_implication": {
+          "candidate_pattern": "long playoff-drought team G1 surge (P018 / P_NHL_drought_g1_surge convergent evidence)",
+          "rule_candidate_id": "P018 evidence reinforcement",
+          "replicability": "medium"
+        },
+        "source_tier": "primary"
+      },
+      "note_date_correction": "Session_61 date correction: 2026-04-21 -> 2026-04-19 (JST). Game ET 2026-04-18."
     },
     {
-      "date": "2026-04-21",
+      "date": "2026-04-19",
       "match": "Carolina Hurricanes vs Ottawa Senators (G1)",
       "home": "Carolina Hurricanes",
       "away": "Ottawa Senators",
@@ -1086,15 +1296,36 @@
       "ev_est": -3.74,
       "rec": null,
       "ev": null,
-      "status": "pending",
+      "status": "completed",
       "hit": null,
-      "result": null,
-      "prediction_hit": null,
+      "result": "Hurricanes 2-0 Senators",
+      "prediction_hit": true,
       "screening_session": "2026-04-20 Session_43",
-      "note": "手動データ2026-04-19.json起点。4/16スクリーニング結果(全SKIP)を継承。"
+      "note": "手動データ2026-04-19.json起点。4/16スクリーニング結果(全SKIP)を継承。",
+      "score": "CAR 2 - OTT 0",
+      "date_et": "2026-04-18",
+      "verification": {
+        "class": [
+          "hit_normal"
+        ],
+        "depth": "light",
+        "facts": "CAR 2-0 OTT G1 (2026-04-18 ET). Stankoven + Hall scored. Andersen strong in net. Source: espn gameId 401869715.",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
+      },
+      "note_date_correction": "Session_61 date correction: 2026-04-21 -> 2026-04-19 (JST). Game ET 2026-04-18."
     },
     {
-      "date": "2026-04-21",
+      "date": "2026-04-19",
       "match": "Dallas Stars vs Minnesota Wild (G1)",
       "home": "Dallas Stars",
       "away": "Minnesota Wild",
@@ -1113,12 +1344,34 @@
       "ev_est": -5.85,
       "rec": null,
       "ev": null,
-      "status": "pending",
+      "status": "completed",
       "hit": null,
-      "result": null,
-      "prediction_hit": null,
+      "result": "Wild 6-1 Stars (UPSET)",
+      "prediction_hit": false,
       "screening_session": "2026-04-20 Session_43",
-      "note": "手動データ2026-04-19.json起点。4/16スクリーニング結果(全SKIP)を継承。"
+      "note": "手動データ2026-04-19.json起点。4/16スクリーニング結果(全SKIP)を継承。",
+      "score": "MIN 6 - DAL 1",
+      "date_et": "2026-04-18",
+      "verification": {
+        "class": [
+          "miss",
+          "upset_occurred"
+        ],
+        "depth": "deep",
+        "facts": "MIN 6-1 DAL G1 (2026-04-18 ET). Boldy 2G+1A. Eriksson Ek 2 PP goals. Wallstedt rookie goalie 27 saves. Source: espn gameId 401869716.",
+        "analysis": {
+          "decisive_factor": "L2 — special teams (MIN 2 PP goals) + L4 goalie (Wallstedt rookie 27 saves). 6-1 blowout suggests deeper systemic edge than seed gap.",
+          "market_blind_spot": "DAL market-favorite based on seed (C2 vs C3); missed MIN xGF% edge over DAL (already noted in Session_32 screening).",
+          "confidence_level": "medium"
+        },
+        "rules_implication": {
+          "candidate_pattern": "PO seed ranking misleading; xGF% higher should override",
+          "rule_candidate_id": "P025/N021 (already implemented as evidence)",
+          "replicability": "high"
+        },
+        "source_tier": "primary"
+      },
+      "note_date_correction": "Session_61 date correction: 2026-04-21 -> 2026-04-19 (JST). Game ET 2026-04-18."
     },
     {
       "date": "2026-04-21",
@@ -1140,12 +1393,32 @@
       "ev_est": -5.78,
       "rec": null,
       "ev": null,
-      "status": "pending",
+      "status": "completed",
       "hit": null,
-      "result": null,
-      "prediction_hit": null,
+      "result": "Oilers 4-3 Ducks",
+      "prediction_hit": true,
       "screening_session": "2026-04-20 Session_43",
-      "note": "手動データ2026-04-19.json起点。4/16スクリーニング結果(全SKIP)を継承。"
+      "note": "手動データ2026-04-19.json起点。4/16スクリーニング結果(全SKIP)を継承。",
+      "score": "EDM 4 - ANA 3",
+      "date_et": "2026-04-20",
+      "verification": {
+        "class": [
+          "hit_normal"
+        ],
+        "depth": "light",
+        "facts": "EDM 4-3 ANA G1 (2026-04-20 ET). Kapanen 2G incl. game-winner with 1:54 left in 3rd. Source: nhl.com/news/anaheim-ducks-edmonton-oilers-game-1-recap-april-20-2026, espn gameId 401869722.",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
+      }
     },
     {
       "date": "2026-04-22",
@@ -1314,8 +1587,8 @@
       "dog_odds": 2.46,
       "predicted_winner": "Edmonton Oilers",
       "prediction_confidence": 60,
-      "tier": "skip_market",
-      "result": null,
+      "tier": "duplicate_closed",
+      "result": "Oilers 4-3 Ducks (canonical at [37])",
       "score": "pending (late 4/20)",
       "prediction_hit": null,
       "rec": null,
@@ -1324,7 +1597,27 @@
       "hit": null,
       "actual_ev": null,
       "source": "Session_45 WebSearch (NHL.com) 一次確認",
-      "quadrant": "skip"
+      "quadrant": "skip",
+      "old_tier_before_dedup": "skip_market",
+      "dedup_partner_index": 37,
+      "status": "duplicate_closed",
+      "note": "Duplicate of [37] EDM vs ANA G1 (Session_43 vs Session_45). Closed at Session_61 (2026-05-01) per dedup audit. Result reflected only on canonical [37].",
+      "verification": {
+        "class": [],
+        "depth": "light",
+        "facts": "Duplicate registration; see canonical [37] EDM vs ANA G1.",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
+      }
     },
     {
       "match": "MTL vs TBL G2",
