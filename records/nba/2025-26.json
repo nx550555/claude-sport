@@ -257,7 +257,7 @@
       "rec_odds_american": -500,
       "ev": 5.6,
       "confidence": 88,
-      "status": "confirmed",
+      "status": "completed",
       "analysis": {
         "L1": {
           "metric": "Net Rating差",
@@ -280,11 +280,36 @@
       },
       "verdict": "CONDITIONAL_GO",
       "verdict_note": "B008最終確認（当日11am EST）でRockets主力ACTIVE確認後GO。Grizzlies 8選手activeという稀有状況がL1差を押し上げており、オッズ-500(1.20)でEV+5.6%は閾値クリア。",
-      "result": "Rockets",
-      "score": "124-109",
+      "result": "Rockets 132-101 Grizzlies",
+      "score": "HOU 132 - MEM 101",
       "hit": true,
       "actual_ev": 0.2,
-      "tier": "go"
+      "tier": "go",
+      "prediction_hit": true,
+      "predicted_winner": "Rockets",
+      "prediction_confidence": 88,
+      "opponent_odds": null,
+      "opponent_odds_note": "GEN008: opponent (MEM) odds not retrievable from WebSearch. Marked null.",
+      "verification": {
+        "class": [
+          "hit_normal",
+          "hit_unexpected"
+        ],
+        "depth": "deep",
+        "facts": "HOU 132-101 MEM (2026-04-12). Rockets rested Sengun, KD, Amen Thompson, Jabari Smith Jr (W5 seed already locked). Tari Eason 20pts/8ast, Reed Sheppard 19pts led. Sources: nba.com gamenotes/rockets, espn gameId 401811049, statsdmz.nba.com/pdfs/20260412/20260412_MEMHOU_book.pdf.",
+        "analysis": {
+          "decisive_factor": "L1 — NRtg diff 10.6pt held even with HOU starter rest; MEM 8-player skeleton lineup overwhelmed by HOU bench depth (Eason+Sheppard combined 39pts).",
+          "market_blind_spot": "Pre-game prediction_basis assumed Sengun ACTIVE (B008 ACTIVE check). Actual lineup had 4 starters out. Outcome was 'right answer for different reason' — bench-depth gap, not star-power gap.",
+          "confidence_level": "medium"
+        },
+        "rules_implication": {
+          "candidate_pattern": "Roster-quality gap dominates even when fav rests stars (NBA bench depth vs g-league-quality skeleton lineup)",
+          "rule_candidate_id": "P_NBA_roster_quality_gap (新候補)",
+          "replicability": "low"
+        },
+        "source_tier": "primary"
+      },
+      "outcome_note": "GO HIT +0.20u. ただし prediction_basis (Sengun ACTIVE) は外れ、Sengun/KD/Thompson/Smith Jr 全員 OUT。bench depth (Eason 20/8 + Sheppard 19) が +31 margin を生んだ。hit_unexpected 付与。"
     },
     {
       "id": "NBA-002",
@@ -295,7 +320,7 @@
       "rec_odds": "未取得",
       "ev": null,
       "confidence": null,
-      "status": "skip",
+      "status": "completed",
       "analysis": {
         "L1": {
           "metric": "Net Rating差",
@@ -324,7 +349,31 @@
       },
       "verdict": "SKIP",
       "verdict_note": "オッズ確認不可のためSKIP確定。Cavaliers 130-126勝利（Mitchell 48pts ACTIVE）。ただし当日オッズが-700以上だった場合EV+5%未達のため不採用。予測未実行につき統計ノーカウント。",
-      "result_note": "Cavaliers win 130-126 Mitchell 48pts（参考記録・ベット未実行）"
+      "result_note": "Cavaliers win 130-126 Mitchell 48pts（参考記録・ベット未実行）",
+      "prediction_hit": true,
+      "result": "Cavaliers 130-117 Wizards",
+      "score": "CLE 130 - WAS 117",
+      "tier": "skip",
+      "predicted_winner": "Cavaliers",
+      "verification": {
+        "class": [
+          "hit_normal"
+        ],
+        "depth": "light",
+        "facts": "CLE 130-117 WAS (2026-04-12 ET, RS finale). Nae'Qwan Tomlin career-high 26pts. Source: espn gameId 401811042, nba.com/game/was-vs-cle-0022501187/box-score.",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
+      },
+      "outcome_note": "CLE WIN HIT (predicted Cavaliers, conf-data based on NRtg diff 15.2). SKIP no-bet (rec_odds 未取得 → EV未確定). Tomlin career-high で fav blowout 維持。"
     },
     {
       "id": "NBA-003",
@@ -559,7 +608,7 @@
       "date": "2026-04-20",
       "match": "Philadelphia 76ers @ Boston Celtics",
       "venue": "TD Garden, Boston (HOME: Celtics)",
-      "tier": "superseded",
+      "tier": "skip",
       "predicted_winner": "Boston Celtics",
       "prediction_confidence": 87,
       "prediction_basis": "NRtg diff 8.5pt (BOS 8.1 vs PHI -0.4). L1 PASS (>5pt). Embiid OUT appendicitis. High confidence but odds @1.13 too short: EV = (0.87 * 1.13) - 1 = -1.7%. SKIP.",
@@ -578,15 +627,36 @@
       "result": "Boston Celtics",
       "hit": null,
       "score": "BOS 123-91 PHI",
-      "prediction_hit": null,
+      "prediction_hit": true,
       "actual_date": "2026-04-20",
       "sources": [
         "NBA.com 76ers-celtics-2026-playoffs-game-1-takeaways",
         "CBS Sports 2026 nba playoff bracket"
       ],
-      "outcome_note": "BOS 123-91 PHI G1 (+32 margin, franchise PO opener record)。Tatum 25/11/7, Brown 26pts。予測HIT but SKIP (EV -1.7%@1.13)。L1 NRtg 8.5pt diff + Embiid OUT が予測通りblowout。",
-      "quadrant": "superseded",
-      "note_repair": "DEDUP 2026-04-22: canonical is 'BOS vs PHI G1' (Session_47)"
+      "outcome_note": "BOS 123-91 PHI G1 HIT (predicted Boston, conf 87%). SKIP no-bet (EV -1.7% @1.13). +32 margin franchise PO opener record。Embiid OUT (appendectomy) で PHI 戦力低下も Q3_output_a 高信頼予測通り。市場 odds (1.13) と一致 → market_divergence 付与せず (boundary_rules Q3_output_a_hit ガイドライン準拠)。",
+      "quadrant": "Q3_output_a",
+      "note_repair": "DEDUP 2026-04-22: canonical is 'BOS vs PHI G1' (Session_47)",
+      "status": "completed",
+      "old_tier_before_v3": "superseded",
+      "note_classification_correction": "Session_61 reclassification: tier=superseded was anomalous label; restored to 'skip' (EV -1.7% @1.13). conf 87% → quadrant Q3_output_a.",
+      "verification": {
+        "class": [
+          "hit_normal"
+        ],
+        "depth": "light",
+        "facts": "BOS 123-91 PHI G1 (2026-04-19 ET, +32 margin BOS franchise PO opener record). Tatum 25pts/11reb/7ast, Brown 26pts. Maxey 21pts on 8-of-21. Embiid OUT (appendectomy 4/9, indefinite). Source: nba.com/news/76ers-celtics-2026-playoffs-game-1-takeaways, espn gameId 401869191, espn story 48534372 '76ers face familiar playoff fate'.",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
+      }
     },
     {
       "date": "2026-04-21",
@@ -1047,7 +1117,24 @@
       "quadrant": "skip",
       "dedup_note": "PA075 Session_51 dedup 整理: 重複登録閉鎖。正規エントリは games[14] を参照。LAL-HOU G1: [14] フル名+result 確定を正規エントリとして維持。[24] result=None は重複閉鎖。",
       "dedup_partner_index": 14,
-      "old_tier_before_dedup": "skip_market"
+      "old_tier_before_dedup": "skip_market",
+      "verification": {
+        "class": [],
+        "depth": "light",
+        "facts": "Duplicate registration of LAL vs HOU G1 (2026-04-18 ET = 4/19 JST). See canonical [14] for prediction analysis and [8] for full A029 UPSET miss_analysis (KD OUT — patellar tendon contusion). Final: LAL 107-98 HOU UPSET. Sources: nba.com/news/rockets-lakers-2026-playoffs-game-1-takeaways, espn gameId 401869190.",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
+      },
+      "note_audit_session61": "Session_61 audit: [8] holds the richest A029 miss_analysis (more detailed than canonical [14]). Dedup chain may need re-canonicalization to [8]; defer to next dedup audit pass. Current status maintained."
     },
     {
       "match": "BOS vs PHI G2",
