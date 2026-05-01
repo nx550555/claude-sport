@@ -2,9 +2,21 @@
   "league": "superrugby",
   "source": "https://en.wikipedia.org/wiki/2026_Super_Rugby_Pacific_season",
   "strategy": "wikipedia_table",
-  "fetched_at": "2026-05-01T13:06:29.290271+09:00",
+  "fetched_at": "2026-05-01T22:47:23.876768+09:00",
   "team_count": 11,
   "teams": [
+    {
+      "team": "Hurricanes",
+      "gp": 10,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 406,
+      "pa": "Hurricanes",
+      "pd": 224,
+      "pts": 40,
+      "pd_per_game": 22.4
+    },
     {
       "team": "Chiefs",
       "gp": 10,
@@ -16,18 +28,6 @@
       "pd": 129,
       "pts": 36,
       "pd_per_game": 12.9
-    },
-    {
-      "team": "Hurricanes",
-      "gp": 9,
-      "w": null,
-      "l": null,
-      "d": null,
-      "pf": 368,
-      "pa": "Hurricanes",
-      "pd": 217,
-      "pts": 36,
-      "pd_per_game": 24.11
     },
     {
       "team": "Blues",
@@ -43,15 +43,15 @@
     },
     {
       "team": "Crusaders",
-      "gp": 10,
+      "gp": 11,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 338,
+      "pf": 369,
       "pa": "Crusaders",
-      "pd": 54,
-      "pts": 26,
-      "pd_per_game": 5.4
+      "pd": 47,
+      "pts": 27,
+      "pd_per_game": 4.27
     },
     {
       "team": "Brumbies",
@@ -89,14 +89,25 @@
     },
     {
       "team": "Waratahs",
-      "gp": 9,
+      "gp": 10,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 221,
+      "pf": 238,
       "pa": "Waratahs",
-      "pd": "−43",
-      "pts": 19
+      "pd": "−46",
+      "pts": 20
+    },
+    {
+      "team": "Force",
+      "gp": 10,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 274,
+      "pa": "Force",
+      "pd": "−23",
+      "pts": 18
     },
     {
       "team": "Drua",
@@ -108,17 +119,6 @@
       "pa": "Drua",
       "pd": "−113",
       "pts": 16
-    },
-    {
-      "team": "Force",
-      "gp": 9,
-      "w": null,
-      "l": null,
-      "d": null,
-      "pf": 254,
-      "pa": "Force",
-      "pd": "−26",
-      "pts": 14
     },
     {
       "team": "Moana Pasifika",

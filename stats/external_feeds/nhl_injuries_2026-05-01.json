@@ -1,17 +1,9 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-05-01T13:06:38.064782+09:00",
+  "fetched_at": "2026-05-01T22:47:33.497266+09:00",
   "starting_goalies": [],
   "injuries": [
-    {
-      "player": "Logan Stanley",
-      "team": null,
-      "position": "D",
-      "estimated_return": "May 1",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
     {
       "player": "Alexander Nikishin",
       "team": null,
@@ -85,14 +77,6 @@
       "comment": "Apr 14: Head coach Travis Green said Tuesday that Jensen (knee) is a long shot to play again this year, Bruce Garrioch of Postmedia reports."
     },
     {
-      "player": "Nikita Grebenkin",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "May 4",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Rodrigo Abols",
       "team": null,
       "position": "C",
@@ -107,22 +91,6 @@
       "estimated_return": "Sep 15",
       "status": "Injured Reserve",
       "comment": "Sep 30: ir-lt"
-    },
-    {
-      "player": "Nick Paul",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "May 1",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Charle-Edouard D'Astous",
-      "team": null,
-      "position": "D",
-      "estimated_return": "May 1",
-      "status": "Day-To-Day",
-      "comment": ""
     },
     {
       "player": "Victor Hedman",
