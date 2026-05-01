@@ -183,8 +183,8 @@
       "confidence": 78,
       "caution_reason": "conf 78% < Week4 threshold 80% (U008). L1 PASS: PD/G diff 18.7 (DC+16.7 vs STL-2.0). DC away -4% (U004). Ta'amu confirmed (W3 active). EV+12.3% (market 1.44). STL at home + Week3 comeback ability. Upgrade from 'QB unconfirmed' CAUTION to 'analyzed CAUTION'.",
       "status": "caution",
-      "result": "stale pre-screening CAUTION (Session_30 era); closed during audit 2026-04-22",
-      "score": null,
+      "result": "DC Defenders 28 - St. Louis Battlehawks 22",
+      "score": "DC 28 - STL 22",
       "hit": null,
       "actual_ev": null,
       "rules_applied": [
@@ -211,7 +211,28 @@
         "STL": "Harrison Frost (came off bench W3: 9/15 148yd 3TD comeback 34-30 vs Stallions)"
       },
       "ev_calc": "(0.78 x 1.44) - 1 = +12.3%",
-      "note_repair": "AUDIT CLOSE 2026-04-22 (no odds/conf, no-bet)"
+      "note_repair": "AUDIT CLOSE 2026-04-22 (no odds/conf, no-bet)",
+      "prediction_hit": null,
+      "date_et": "2026-04-18",
+      "note_correction": "Session_61: original date 2026-04-19, actual 2026-04-18. Note: records match label 'DC @ STL' but per recap game played at Audi Field (DC home). Score reflected without re-labeling home/away (out-of-scope).",
+      "verification": {
+        "class": [
+          "hit_normal"
+        ],
+        "depth": "light",
+        "facts": "DC 28 - STL 22 (2026-04-18). Defenders extended lead with back-to-back FGs in 4Q; Battlehawks pulled within 6 then Frost pass intercepted in red zone. Source: foxsports.com/ufl/week-4-st-louis-battlehawks-vs-dc-defenders-apr-18-2026-game-boxscore-101, theufl.com/scores/83.",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
+      }
     },
     {
       "week": 4,
@@ -227,15 +248,36 @@
       "confidence": 58,
       "skip_reason": "conf 58% < W4 threshold 80% (U008). Market implied Stallions 57.5% (1.74). Insufficient edge for Week 4 elevated threshold.",
       "status": "skip",
-      "result": null,
-      "score": null,
+      "result": "Orlando Storm 16 - Birmingham Stallions 0",
+      "score": "ORL 16 - BHM 0",
       "hit": null,
       "actual_ev": null,
       "rules_applied": [
         "GEN001",
         "U008"
       ],
-      "note": "SKIP: Stallions (away) vs Orlando Storm (home). Market near-even (1.74/2.06). U008 Week4 threshold 80% not met. conf 58%."
+      "note": "SKIP: Stallions (away) vs Orlando Storm (home). Market near-even (1.74/2.06). U008 Week4 threshold 80% not met. conf 58%.",
+      "prediction_hit": null,
+      "date_et": "2026-04-18",
+      "note_correction": "Session_61: original date 2026-04-19, actual 2026-04-18. Stallions shutout.",
+      "verification": {
+        "class": [
+          "hit_normal"
+        ],
+        "depth": "light",
+        "facts": "ORL 16 - BHM 0 (2026-04-18, Protective Stadium Birmingham). Orlando 4-0 unbeaten; Birmingham 1-3 shutout. Source: foxsports.com/ufl/week-4-orlando-storm-vs-birmingham-stallions-apr-18-2026-game-boxscore-102, theufl.com/scores/105.",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
+      }
     },
     {
       "date": "2026-04-24",
@@ -249,7 +291,7 @@
       "predicted_winner": "DC Defenders",
       "prediction_confidence": 70.0,
       "prediction_basis": "PD/G diff +19.00pt (DC +14 vs BHM -5) strong. Market DC fav implied 73%, vig-adj 68.6%. L4: DC home +3, BHM internal turmoil (player departure) +3, DC momentum +2 = raw conf 76%. U008_modified Week3-6 cap 70% enforced -> conf 70%. EV +70*1.37-1 = -4.1%. SKIP.",
-      "prediction_hit": null,
+      "prediction_hit": true,
       "l1_metric": "PD/G",
       "l1_data": {
         "home_pdg": 14.0,
@@ -278,14 +320,34 @@
       "market_fav": "DC",
       "status": "pending",
       "hit": null,
-      "result": null,
+      "result": "DC Defenders 45 - Birmingham Stallions 28",
       "screening_session": "2026-04-23 _53",
       "notes": "W5 完了後の DC Defenders 3連勝/Birmingham 3連敗。内部問題あり (player departure reports)。Stallions は historic dynasty だが 2026 cycle で弱体化。GO閾値 conf>=78 AND EV>+7 未達。",
       "rules_applied": [
         "UFL_L1_PD_G",
         "U008_modified_week3_6_cap",
         "UF_walkthrough"
-      ]
+      ],
+      "score": "DC 45 - BHM 28",
+      "verification": {
+        "class": [
+          "hit_normal"
+        ],
+        "depth": "light",
+        "facts": "DC 45 - BHM 28 (2026-04-24, Audi Field). Source: foxsports.com/ufl/week-5-dc-defenders-vs-birmingham-stallions-apr-24-2026-game-boxscore-103, theufl.com/scores/106.",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
+      },
+      "outcome_note": "HIT. SKIP no-bet. pred=DC Defenders ✓ (45-28 +17)."
     },
     {
       "date": "2026-04-25",
@@ -299,7 +361,7 @@
       "predicted_winner": "Orlando Storm",
       "prediction_confidence": 69.0,
       "prediction_basis": "PD/G diff +11.75pt. Market ORL implied 61.3%, vig 57.9%. L4: ORL home +3, ORL 4-0 momentum +3, STL road -2, STL last-game recovery +1 = conf 69%. Under cap 70%. EV 0.69*1.63-1 = +12.47%. But conf<78 GO threshold. SKIP.",
-      "prediction_hit": null,
+      "prediction_hit": false,
       "l1_metric": "PD/G",
       "l1_data": {
         "home_pdg": 8.75,
@@ -327,14 +389,35 @@
       "market_fav": "ORL",
       "status": "pending",
       "hit": null,
-      "result": null,
+      "result": "St. Louis Battlehawks 25 - Orlando Storm 17",
       "screening_session": "2026-04-23 _53",
       "notes": "Orlando 4-0 undefeated, home vs STL 2-2 road game. Week6 raw conf 69%. EV+12% but Basic Tier GO (conf>=78 AND EV>+7) 未達. Q3 output_a 85% threshold も未達.",
       "rules_applied": [
         "UFL_L1_PD_G",
         "U008_modified_week3_6_cap",
         "UF_walkthrough"
-      ]
+      ],
+      "score": "STL 25 - ORL 17",
+      "verification": {
+        "class": [
+          "miss",
+          "upset_occurred"
+        ],
+        "depth": "deep",
+        "facts": "STL 25 - ORL 17 (2026-04-25). St. Louis built 25-0 lead, held off late Orlando comeback; Storm's 1st loss of season. Source: theufl.com/videos/battlehawks-weather-late-surge-hand-storm-first-loss, foxsports.com/ufl/week-5-st-louis-battlehawks-vs-orlando-storm-apr-25-2026-game-boxscore-104.",
+        "analysis": {
+          "decisive_factor": "L4/External — Storm previously 4-0 unbeaten, suspected over-priced as fav; Battlehawks home momentum and early 25-0 surge defined game.",
+          "market_blind_spot": "Market priced ORL on undefeated record but L1 (PD/G) gap may not have warranted -fav line vs STL home.",
+          "confidence_level": "speculative"
+        },
+        "rules_implication": {
+          "candidate_pattern": "Undefeated UFL team early-season fav — market over-prices vs solid home team",
+          "rule_candidate_id": "P_UFL_undefeated_overpriced (新候補)",
+          "replicability": "low"
+        },
+        "source_tier": "primary"
+      },
+      "outcome_note": "MISS UPSET. SKIP no-bet. pred=Orlando, actual=St. Louis (Storm first loss)."
     },
     {
       "date": "2026-04-26",
@@ -348,7 +431,7 @@
       "predicted_winner": "Columbus Aviators",
       "prediction_confidence": 61.0,
       "prediction_basis": "PD/G diff -10.25pt (CAV -4 vs HOU -14.25, CAV ahead by 10.25pt). Market CAV implied 69.4%, vig 65.6%. L4: HOU home +3, CAV expansion team road -3 = conf 60%. EV CAV 0.60*1.44-1 = -13.6%. SKIP.",
-      "prediction_hit": null,
+      "prediction_hit": false,
       "l1_metric": "PD/G",
       "l1_data": {
         "home_pdg": -14.25,
@@ -377,14 +460,35 @@
       "market_fav": "CAV",
       "status": "pending",
       "hit": null,
-      "result": null,
+      "result": "Houston Gamblers 17 - Columbus Aviators 13",
       "screening_session": "2026-04-23 _53",
       "notes": "HOU league-worst PD/G -14.25 but home. CAV expansion team road travel concern. Market already prices CAV fav. EV negative.",
       "rules_applied": [
         "UFL_L1_PD_G",
         "U008_modified_week3_6_cap",
         "UF_walkthrough"
-      ]
+      ],
+      "score": "HOU 17 - COL 13",
+      "verification": {
+        "class": [
+          "miss",
+          "upset_occurred"
+        ],
+        "depth": "deep",
+        "facts": "HOU 17 - COL 13 (2026-04-26, Shell Energy Stadium Houston). Gamblers 2nd win of season, narrow margin. Source: foxsports.com/ufl/week-5-columbus-aviators-vs-houston-gamblers-apr-26-2026-game-boxscore-105, theufl.com/scores/108.",
+        "analysis": {
+          "decisive_factor": "L4/External — close game (4-pt margin) at HOU home. Gamblers home edge plus L1 PD/G gap insufficient for confident COL pick.",
+          "market_blind_spot": "Screening pred Columbus (away) — likely on PD/G or recent form. Home advantage L4 underweighted.",
+          "confidence_level": "speculative"
+        },
+        "rules_implication": {
+          "candidate_pattern": "UFL home edge underweighted in L1 PD/G screening (4-pt margin range)",
+          "rule_candidate_id": "P_UFL_home_edge_recalibration (新候補)",
+          "replicability": "medium"
+        },
+        "source_tier": "primary"
+      },
+      "outcome_note": "MISS. SKIP no-bet. pred=Columbus Aviators, actual=Houston Gamblers (4-pt home win)."
     },
     {
       "date": "2026-04-26",
@@ -398,7 +502,7 @@
       "predicted_winner": "Arlington Renegades",
       "prediction_confidence": 70.0,
       "prediction_basis": "PD/G diff +9.50pt (REN +6.5 vs LOU -3). Market REN implied 79.4%, vig 74.9%. L4: REN home +3 = raw 78%. U008_modified Week3-6 cap 70% enforced. EV 0.70*1.26-1 = -11.8%. SKIP.",
-      "prediction_hit": null,
+      "prediction_hit": false,
       "l1_metric": "PD/G",
       "l1_data": {
         "home_pdg": 6.5,
@@ -427,14 +531,36 @@
       "market_fav": "REN",
       "status": "pending",
       "hit": null,
-      "result": null,
+      "result": "Louisville Kings 47 - Dallas Renegades 19",
       "screening_session": "2026-04-23 _53",
       "notes": "Renegades 3-1 vs Louisville 1-3 PD/G diff moderate. A016 pattern memory (W4 Renegades UPSET loss vs Aviators). Market heavy fav 1.26. Cap 70% forced SKIP.",
       "rules_applied": [
         "UFL_L1_PD_G",
         "U008_modified_week3_6_cap",
         "UF_walkthrough"
-      ]
+      ],
+      "score": "LOU 47 - DAL 19",
+      "note_team_label": "Records label 'Arlington Renegades' but UFL official team name is 'Dallas Renegades' (Toyota Stadium Frisco). Same franchise; label refresh recommended in next data audit.",
+      "verification": {
+        "class": [
+          "miss",
+          "upset_occurred"
+        ],
+        "depth": "deep",
+        "facts": "LOU 47 - DAL/ARL 19 (2026-04-26, Toyota Stadium Frisco TX). Kings blowout +28. Source: foxsports.com/ufl/week-5-louisville-kings-vs-dallas-renegades-apr-26-2026-game-boxscore-106, foxsports.com/stories/ufl/2026-ufl-week-5-results, theufl.com/scores.",
+        "analysis": {
+          "decisive_factor": "L1 inverted — Louisville (expansion team, supposedly weaker) blew out Renegades by +28. Original screening pred Renegades as home fav per L1 PD/G + home advantage stack.",
+          "market_blind_spot": "Renegades pre-game L1/market screen failed to capture Kings momentum (P015 evolution) — UFL expansion team capable of major upsets vs established teams (CE013/A016 prior evidence).",
+          "confidence_level": "medium"
+        },
+        "rules_implication": {
+          "candidate_pattern": "UFL expansion team upset capability — extends P015 (Aviators home rematch) to Kings road blowout. Persistent expansion-team-undervalued pattern.",
+          "rule_candidate_id": "P015 evidence reinforcement (P_UFL_expansion_upset)",
+          "replicability": "medium"
+        },
+        "source_tier": "primary"
+      },
+      "outcome_note": "MISS UPSET. SKIP no-bet. pred=Arlington/Dallas Renegades, actual=Louisville Kings (47-19 +28 blowout). Expansion team upset (P015 evidence reinforcement)."
     }
   ],
   "screening_log": [

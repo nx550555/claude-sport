@@ -35,11 +35,31 @@
       "screening_date": "2026-04-25",
       "step45_required": false,
       "step45_status": "PENDING",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Boston Red Sox",
+      "score": "BOS 5 - BAL 3",
+      "prediction_hit": false,
       "actual_ev": null,
-      "notify_sent": false
+      "notify_sent": false,
+      "verification": {
+        "class": [
+          "miss",
+          "upset_occurred"
+        ],
+        "depth": "deep",
+        "facts": "BOS 5 - BAL 3 (2026-04-26). Source: mlb.com/gameday/red-sox-vs-orioles/2026/04/26/824852, espn 401815095.",
+        "analysis": {
+          "decisive_factor": "Insufficient information — single-game MLB result. wRC+/FIP L1 edge did not translate. Pitcher-of-day matchup (not pre-screened) likely dominant.",
+          "market_blind_spot": "L1 metric (wRC+/FIP team aggregates) cannot capture daily SP variance. Market may have priced day's SP correctly while screener used team averages.",
+          "confidence_level": "speculative"
+        },
+        "rules_implication": {
+          "candidate_pattern": "MLB single-game L1 (team wRC+/FIP) often overridden by daily SP matchup",
+          "rule_candidate_id": "P_MLB_daily_SP_dominance (新候補)",
+          "replicability": "high"
+        },
+        "source_tier": "primary"
+      },
+      "outcome_note": "MISS. SKIP no-bet. pred=Baltimore Orioles, actual=Boston Red Sox. pred_was_fav=True."
     },
     {
       "match": "St. Louis Cardinals vs Seattle Mariners",
@@ -61,11 +81,30 @@
       "screening_date": "2026-04-25",
       "step45_required": false,
       "step45_status": "PENDING",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Seattle Mariners",
+      "score": "SEA 3 - STL 2",
+      "prediction_hit": true,
       "actual_ev": null,
-      "notify_sent": false
+      "notify_sent": false,
+      "verification": {
+        "class": [
+          "hit_normal"
+        ],
+        "depth": "light",
+        "facts": "SEA 3 - STL 2 (2026-04-26). Source: mlb.com/gameday/mariners-vs-cardinals/2026/04/26/823068, espn 401815105.",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
+      },
+      "outcome_note": "HIT. SKIP no-bet. pred=Seattle Mariners, actual=Seattle Mariners. pred_was_fav=True."
     },
     {
       "match": "Toronto Blue Jays vs Cleveland Guardians",
@@ -87,11 +126,30 @@
       "screening_date": "2026-04-25",
       "step45_required": false,
       "step45_status": "PENDING",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Toronto Blue Jays",
+      "score": "TOR 4 - CLE 2",
+      "prediction_hit": true,
       "actual_ev": null,
-      "notify_sent": false
+      "notify_sent": false,
+      "verification": {
+        "class": [
+          "hit_normal"
+        ],
+        "depth": "light",
+        "facts": "TOR 4 - CLE 2 (2026-04-26). Source: mlb.com/gameday/guardians-vs-blue-jays/2026/04/26/822824, espn 401815096.",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
+      },
+      "outcome_note": "HIT. SKIP no-bet. pred=Toronto Blue Jays, actual=Toronto Blue Jays. pred_was_fav=True."
     },
     {
       "match": "San Francisco Giants vs Miami Marlins",
@@ -113,11 +171,30 @@
       "screening_date": "2026-04-25",
       "step45_required": false,
       "step45_status": "PENDING",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "San Francisco Giants",
+      "score": "SF 6 - MIA 3",
+      "prediction_hit": false,
       "actual_ev": null,
-      "notify_sent": false
+      "notify_sent": false,
+      "verification": {
+        "class": [
+          "miss"
+        ],
+        "depth": "deep",
+        "facts": "SF 6 - MIA 3 (2026-04-26). Source: mlb.com/gameday/marlins-vs-giants/2026/04/26/823230, espn 401815108.",
+        "analysis": {
+          "decisive_factor": "Insufficient information — predicted underdog by L1 (wRC+/FIP), market favorite prevailed. Likely SP matchup or short-form variance.",
+          "market_blind_spot": "Screening over-weighted L1 vs market read; market correctly priced fav.",
+          "confidence_level": "speculative"
+        },
+        "rules_implication": {
+          "candidate_pattern": "L1 contrarian dog pick failed — re-validate L1 weight calibration",
+          "rule_candidate_id": "P_MLB_l1_contrarian_caution (新候補)",
+          "replicability": "medium"
+        },
+        "source_tier": "primary"
+      },
+      "outcome_note": "MISS. SKIP no-bet. pred=Miami Marlins, actual=San Francisco Giants. pred_was_fav=False."
     },
     {
       "match": "Chicago White Sox vs Washington Nationals",
@@ -139,11 +216,31 @@
       "screening_date": "2026-04-25",
       "step45_required": false,
       "step45_status": "PENDING",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Washington Nationals",
+      "score": "WSH 2 - CHW 1",
+      "prediction_hit": false,
       "actual_ev": null,
-      "notify_sent": false
+      "notify_sent": false,
+      "verification": {
+        "class": [
+          "miss",
+          "upset_occurred"
+        ],
+        "depth": "deep",
+        "facts": "WSH 2 - CHW 1 (2026-04-26). Source: mlb.com/gameday/nationals-vs-white-sox/2026/04/26/824612, espn 401815106.",
+        "analysis": {
+          "decisive_factor": "Insufficient information — single-game MLB result. wRC+/FIP L1 edge did not translate. Pitcher-of-day matchup (not pre-screened) likely dominant.",
+          "market_blind_spot": "L1 metric (wRC+/FIP team aggregates) cannot capture daily SP variance. Market may have priced day's SP correctly while screener used team averages.",
+          "confidence_level": "speculative"
+        },
+        "rules_implication": {
+          "candidate_pattern": "MLB single-game L1 (team wRC+/FIP) often overridden by daily SP matchup",
+          "rule_candidate_id": "P_MLB_daily_SP_dominance (新候補)",
+          "replicability": "high"
+        },
+        "source_tier": "primary"
+      },
+      "outcome_note": "MISS. SKIP no-bet. pred=Chicago White Sox, actual=Washington Nationals. pred_was_fav=True."
     },
     {
       "match": "New York Mets vs Colorado Rockies",
@@ -165,11 +262,31 @@
       "screening_date": "2026-04-25",
       "step45_required": false,
       "step45_status": "PENDING",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Colorado Rockies",
+      "score": "COL 3 - NYM 1",
+      "prediction_hit": false,
       "actual_ev": null,
-      "notify_sent": false
+      "notify_sent": false,
+      "verification": {
+        "class": [
+          "miss",
+          "upset_occurred"
+        ],
+        "depth": "deep",
+        "facts": "COL 3 - NYM 1 (2026-04-26). Source: mlb.com/gameday/rockies-vs-mets/2026/04/26/823635, espn 401815097.",
+        "analysis": {
+          "decisive_factor": "Insufficient information — single-game MLB result. wRC+/FIP L1 edge did not translate. Pitcher-of-day matchup (not pre-screened) likely dominant.",
+          "market_blind_spot": "L1 metric (wRC+/FIP team aggregates) cannot capture daily SP variance. Market may have priced day's SP correctly while screener used team averages.",
+          "confidence_level": "speculative"
+        },
+        "rules_implication": {
+          "candidate_pattern": "MLB single-game L1 (team wRC+/FIP) often overridden by daily SP matchup",
+          "rule_candidate_id": "P_MLB_daily_SP_dominance (新候補)",
+          "replicability": "high"
+        },
+        "source_tier": "primary"
+      },
+      "outcome_note": "MISS. SKIP no-bet. pred=New York Mets, actual=Colorado Rockies. pred_was_fav=True."
     },
     {
       "match": "Tampa Bay Rays vs Minnesota Twins",
@@ -191,11 +308,30 @@
       "screening_date": "2026-04-25",
       "step45_required": false,
       "step45_status": "PENDING",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Tampa Bay Rays",
+      "score": "TB 4 - MIN 2",
+      "prediction_hit": true,
       "actual_ev": null,
-      "notify_sent": false
+      "notify_sent": false,
+      "verification": {
+        "class": [
+          "hit_normal"
+        ],
+        "depth": "light",
+        "facts": "TB 4 - MIN 2 (2026-04-26). Source: mlb.com/gameday/twins-vs-rays/2026/04/26/822991, espn 401815099.",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
+      },
+      "outcome_note": "HIT. SKIP no-bet. pred=Tampa Bay Rays, actual=Tampa Bay Rays. pred_was_fav=True."
     },
     {
       "match": "Arizona Diamondbacks vs San Diego Padres",
@@ -217,11 +353,30 @@
       "screening_date": "2026-04-25",
       "step45_required": false,
       "step45_status": "PENDING",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Arizona Diamondbacks",
+      "score": "ARI 12 - SD 7",
+      "prediction_hit": false,
       "actual_ev": null,
-      "notify_sent": false
+      "notify_sent": false,
+      "verification": {
+        "class": [
+          "miss"
+        ],
+        "depth": "deep",
+        "facts": "ARI 12 - SD 7 (2026-04-26). Source: mlb.com/stories/game/825094, espn 401815109.",
+        "analysis": {
+          "decisive_factor": "Insufficient information — predicted underdog by L1 (wRC+/FIP), market favorite prevailed. Likely SP matchup or short-form variance.",
+          "market_blind_spot": "Screening over-weighted L1 vs market read; market correctly priced fav.",
+          "confidence_level": "speculative"
+        },
+        "rules_implication": {
+          "candidate_pattern": "L1 contrarian dog pick failed — re-validate L1 weight calibration",
+          "rule_candidate_id": "P_MLB_l1_contrarian_caution (新候補)",
+          "replicability": "medium"
+        },
+        "source_tier": "primary"
+      },
+      "outcome_note": "MISS. SKIP no-bet. pred=San Diego Padres, actual=Arizona Diamondbacks. pred_was_fav=False."
     },
     {
       "match": "Texas Rangers vs Athletics",
@@ -243,11 +398,31 @@
       "screening_date": "2026-04-25",
       "step45_required": false,
       "step45_status": "PENDING",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Athletics",
+      "score": "OAK 2 - TEX 1",
+      "prediction_hit": false,
       "actual_ev": null,
-      "notify_sent": false
+      "notify_sent": false,
+      "verification": {
+        "class": [
+          "miss",
+          "upset_occurred"
+        ],
+        "depth": "deep",
+        "facts": "OAK 2 - TEX 1 (2026-04-26). Source: mlb.com/gameday/athletics-vs-rangers/2026/04/26/822911, espn 401815102.",
+        "analysis": {
+          "decisive_factor": "Insufficient information — single-game MLB result. wRC+/FIP L1 edge did not translate. Pitcher-of-day matchup (not pre-screened) likely dominant.",
+          "market_blind_spot": "L1 metric (wRC+/FIP team aggregates) cannot capture daily SP variance. Market may have priced day's SP correctly while screener used team averages.",
+          "confidence_level": "speculative"
+        },
+        "rules_implication": {
+          "candidate_pattern": "MLB single-game L1 (team wRC+/FIP) often overridden by daily SP matchup",
+          "rule_candidate_id": "P_MLB_daily_SP_dominance (新候補)",
+          "replicability": "high"
+        },
+        "source_tier": "primary"
+      },
+      "outcome_note": "MISS. SKIP no-bet. pred=Texas Rangers, actual=Athletics. pred_was_fav=True."
     },
     {
       "match": "Houston Astros vs New York Yankees",
@@ -300,11 +475,30 @@
       "screening_date": "2026-04-25",
       "step45_required": false,
       "step45_status": "PENDING",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Kansas City Royals",
+      "score": "KC 11 - LAA 9",
+      "prediction_hit": true,
       "actual_ev": null,
-      "notify_sent": false
+      "notify_sent": false,
+      "verification": {
+        "class": [
+          "hit_normal"
+        ],
+        "depth": "light",
+        "facts": "KC 11 - LAA 9 (2026-04-26). Source: mlb.com/gameday/angels-vs-royals/2026/04/26/824122, espn 401815101.",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
+      },
+      "outcome_note": "HIT. SKIP no-bet. pred=Kansas City Royals, actual=Kansas City Royals. pred_was_fav=True."
     },
     {
       "match": "Milwaukee Brewers vs Pittsburgh Pirates",
@@ -326,11 +520,30 @@
       "screening_date": "2026-04-25",
       "step45_required": false,
       "step45_status": "PENDING",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Milwaukee Brewers",
+      "score": "MIL 5 - PIT 0",
+      "prediction_hit": true,
       "actual_ev": null,
-      "notify_sent": false
+      "notify_sent": false,
+      "verification": {
+        "class": [
+          "hit_normal"
+        ],
+        "depth": "light",
+        "facts": "MIL 5 - PIT 0 (2026-04-26). Source: mlb.com/gameday/pirates-vs-brewers/2026/04/26/823797, espn 401815104.",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
+      },
+      "outcome_note": "HIT. SKIP no-bet. pred=Milwaukee Brewers, actual=Milwaukee Brewers. pred_was_fav=True."
     },
     {
       "match": "Cincinnati Reds vs Detroit Tigers",
@@ -352,11 +565,30 @@
       "screening_date": "2026-04-25",
       "step45_required": false,
       "step45_status": "PENDING",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Detroit Tigers",
+      "score": "DET 8 - CIN 3",
+      "prediction_hit": true,
       "actual_ev": null,
-      "notify_sent": false
+      "notify_sent": false,
+      "verification": {
+        "class": [
+          "hit_normal"
+        ],
+        "depth": "light",
+        "facts": "DET 8 - CIN 3 (2026-04-26). Source: mlb.com/gameday/tigers-vs-reds/2026/04/26/824528, espn 401815098.",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
+      },
+      "outcome_note": "HIT. SKIP no-bet. pred=Detroit Tigers, actual=Detroit Tigers. pred_was_fav=True."
     },
     {
       "match": "Los Angeles Dodgers vs Chicago Cubs",
@@ -406,11 +638,30 @@
       "screening_date": "2026-04-25",
       "step45_required": false,
       "step45_status": "PENDING",
-      "result": null,
-      "score": null,
-      "prediction_hit": null,
+      "result": "Atlanta Braves",
+      "score": "ATL 6 - PHI 2",
+      "prediction_hit": true,
       "actual_ev": null,
-      "notify_sent": false
+      "notify_sent": false,
+      "verification": {
+        "class": [
+          "hit_normal"
+        ],
+        "depth": "light",
+        "facts": "ATL 6 - PHI 2 (2026-04-26). Source: mlb.com/gameday/phillies-vs-braves/2026/04/26/824934, espn 401815100.",
+        "analysis": {
+          "decisive_factor": null,
+          "market_blind_spot": null,
+          "confidence_level": null
+        },
+        "rules_implication": {
+          "candidate_pattern": null,
+          "rule_candidate_id": null,
+          "replicability": null
+        },
+        "source_tier": "primary"
+      },
+      "outcome_note": "HIT. SKIP no-bet. pred=Atlanta Braves, actual=Atlanta Braves. pred_was_fav=True."
     }
   ],
   "screening_log": [
