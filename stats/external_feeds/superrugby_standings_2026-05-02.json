@@ -1,0 +1,135 @@
+{
+  "league": "superrugby",
+  "source": "https://en.wikipedia.org/wiki/2026_Super_Rugby_Pacific_season",
+  "strategy": "wikipedia_table",
+  "fetched_at": "2026-05-02T12:39:10.667325+09:00",
+  "team_count": 11,
+  "teams": [
+    {
+      "team": "Hurricanes",
+      "gp": 10,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 406,
+      "pa": "Hurricanes",
+      "pd": 224,
+      "pts": 40,
+      "pd_per_game": 22.4
+    },
+    {
+      "team": "Chiefs",
+      "gp": 10,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 351,
+      "pa": "Chiefs",
+      "pd": 129,
+      "pts": 36,
+      "pd_per_game": 12.9
+    },
+    {
+      "team": "Blues",
+      "gp": 10,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 333,
+      "pa": "Blues",
+      "pd": 82,
+      "pts": 33,
+      "pd_per_game": 8.2
+    },
+    {
+      "team": "Crusaders",
+      "gp": 11,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 369,
+      "pa": "Crusaders",
+      "pd": 47,
+      "pts": 27,
+      "pd_per_game": 4.27
+    },
+    {
+      "team": "Brumbies",
+      "gp": 10,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 309,
+      "pa": "Brumbies",
+      "pd": 16,
+      "pts": 25,
+      "pd_per_game": 1.6
+    },
+    {
+      "team": "Reds",
+      "gp": 9,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 221,
+      "pa": "Reds",
+      "pd": "−39",
+      "pts": 23
+    },
+    {
+      "team": "Highlanders",
+      "gp": 10,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 242,
+      "pa": "Highlanders",
+      "pd": "−45",
+      "pts": 20
+    },
+    {
+      "team": "Waratahs",
+      "gp": 10,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 238,
+      "pa": "Waratahs",
+      "pd": "−46",
+      "pts": 20
+    },
+    {
+      "team": "Force",
+      "gp": 10,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 274,
+      "pa": "Force",
+      "pd": "−23",
+      "pts": 18
+    },
+    {
+      "team": "Drua",
+      "gp": 10,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 232,
+      "pa": "Drua",
+      "pd": "−113",
+      "pts": 16
+    },
+    {
+      "team": "Moana Pasifika",
+      "gp": 10,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 188,
+      "pa": "Moana Pasifika",
+      "pd": "−232",
+      "pts": 4
+    }
+  ]
+}
