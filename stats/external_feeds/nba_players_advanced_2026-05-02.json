@@ -1,6 +1,6 @@
 {
   "source": "https://www.basketball-reference.com/leagues/NBA_2026_advanced.html",
-  "fetched_at": "2026-05-02T12:39:01.532263+09:00",
+  "fetched_at": "2026-05-02T22:40:25.215093+09:00",
   "kind": "advanced",
   "player_count": 763,
   "players": [
@@ -2117,7 +2117,7 @@
       "ranker": 63.0,
       "age": 31.0,
       "team_name_abbr": "DET",
-      "pos": "SF",
+      "pos": "SG",
       "games": 77.0,
       "games_started": 77.0,
       "mp": 2113.0,
@@ -2137,7 +2137,7 @@
       "dws": 2.3,
       "ws": 6.1,
       "ws_per_48": 0.139,
-      "obpm": 0.9,
+      "obpm": 0.8,
       "dbpm": -0.1,
       "bpm": 0.8,
       "vorp": 1.5,

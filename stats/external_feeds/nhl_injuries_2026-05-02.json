@@ -1,14 +1,14 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-05-02T12:39:20.010817+09:00",
+  "fetched_at": "2026-05-02T22:40:44.409405+09:00",
   "starting_goalies": [],
   "injuries": [
     {
       "player": "Jansen Harkins",
       "team": null,
       "position": "C",
-      "estimated_return": "May 2",
+      "estimated_return": "May 4",
       "status": "Day-To-Day",
       "comment": ""
     },
@@ -16,7 +16,7 @@
       "player": "Radko Gudas",
       "team": null,
       "position": "D",
-      "estimated_return": "May 2",
+      "estimated_return": "May 4",
       "status": "Day-To-Day",
       "comment": ""
     },
@@ -24,7 +24,23 @@
       "player": "Ross Johnston",
       "team": null,
       "position": "LW",
-      "estimated_return": "May 2",
+      "estimated_return": "May 4",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Sam Carrick",
+      "team": null,
+      "position": "C",
+      "estimated_return": "May 3",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Logan Stanley",
+      "team": null,
+      "position": "D",
+      "estimated_return": "May 5",
       "status": "Day-To-Day",
       "comment": ""
     },
@@ -64,7 +80,15 @@
       "player": "Jonas Brodin",
       "team": null,
       "position": "D",
-      "estimated_return": "May 2",
+      "estimated_return": "May 3",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Noah Dobson",
+      "team": null,
+      "position": "D",
+      "estimated_return": "May 3",
       "status": "Day-To-Day",
       "comment": ""
     },

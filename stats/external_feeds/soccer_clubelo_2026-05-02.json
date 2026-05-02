@@ -1,6 +1,6 @@
 {
   "source": "http://api.clubelo.com/2026-05-02",
-  "fetched_at": "2026-05-02T12:39:25.644042+09:00",
+  "fetched_at": "2026-05-02T22:40:50.580848+09:00",
   "snapshot_date": "2026-05-02",
   "leagues": {
     "Premier League": [
@@ -9,7 +9,7 @@
         "country": "ENG",
         "league": "Premier League",
         "rank": 1,
-        "elo": 2048.79785156,
+        "elo": 2048.81982422,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -19,7 +19,7 @@
         "country": "ENG",
         "league": "Premier League",
         "rank": 5,
-        "elo": 1970.24951172,
+        "elo": 1970.27075195,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-04"
@@ -29,7 +29,7 @@
         "country": "ENG",
         "league": "Premier League",
         "rank": 6,
-        "elo": 1933.19787598,
+        "elo": 1933.21911621,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -39,7 +39,7 @@
         "country": "ENG",
         "league": "Premier League",
         "rank": 9,
-        "elo": 1888.45056152,
+        "elo": 1888.47265625,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -49,7 +49,7 @@
         "country": "ENG",
         "league": "Premier League",
         "rank": 10,
-        "elo": 1886.92468262,
+        "elo": 1886.95043945,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -59,7 +59,7 @@
         "country": "ENG",
         "league": "Premier League",
         "rank": 11,
-        "elo": 1865.88305664,
+        "elo": 1865.9041748,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -68,8 +68,8 @@
         "club": "Bournemouth",
         "country": "ENG",
         "league": "Premier League",
-        "rank": 13,
-        "elo": 1847.76574707,
+        "rank": 12,
+        "elo": 1847.7869873,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -79,7 +79,7 @@
         "country": "ENG",
         "league": "Premier League",
         "rank": 15,
-        "elo": 1841.18457031,
+        "elo": 1841.20581055,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-04"
@@ -89,7 +89,7 @@
         "country": "ENG",
         "league": "Premier League",
         "rank": 18,
-        "elo": 1828.61120605,
+        "elo": 1828.62194824,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-04"
@@ -99,7 +99,7 @@
         "country": "ENG",
         "league": "Premier League",
         "rank": 19,
-        "elo": 1828.44921875,
+        "elo": 1828.46948242,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -109,7 +109,7 @@
         "country": "ENG",
         "league": "Premier League",
         "rank": 20,
-        "elo": 1825.70996094,
+        "elo": 1825.7310791,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -119,7 +119,7 @@
         "country": "ENG",
         "league": "Premier League",
         "rank": 21,
-        "elo": 1821.35424805,
+        "elo": 1821.38220215,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-04"
@@ -129,7 +129,7 @@
         "country": "ENG",
         "league": "Premier League",
         "rank": 23,
-        "elo": 1811.86303711,
+        "elo": 1811.88684082,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -139,7 +139,7 @@
         "country": "ENG",
         "league": "Premier League",
         "rank": 24,
-        "elo": 1809.63977051,
+        "elo": 1809.73657227,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -149,7 +149,7 @@
         "country": "ENG",
         "league": "Premier League",
         "rank": 27,
-        "elo": 1793.17163086,
+        "elo": 1793.19287109,
         "level": 1.0,
         "from": "2026-05-02",
         "to": "2026-05-11"
@@ -159,7 +159,7 @@
         "country": "ENG",
         "league": "Premier League",
         "rank": 32,
-        "elo": 1769.62902832,
+        "elo": 1769.64355469,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -169,7 +169,7 @@
         "country": "ENG",
         "league": "Premier League",
         "rank": 36,
-        "elo": 1758.68884277,
+        "elo": 1758.71289062,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -179,7 +179,7 @@
         "country": "ENG",
         "league": "Premier League",
         "rank": 55,
-        "elo": 1699.76220703,
+        "elo": 1699.78662109,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -189,7 +189,7 @@
         "country": "ENG",
         "league": "Premier League",
         "rank": 61,
-        "elo": 1678.31384277,
+        "elo": 1678.33215332,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -199,7 +199,7 @@
         "country": "ENG",
         "league": "Premier League",
         "rank": 69,
-        "elo": 1664.9440918,
+        "elo": 1664.96533203,
         "level": 1.0,
         "from": "2026-05-02",
         "to": "2026-05-10"
@@ -211,7 +211,7 @@
         "country": "ESP",
         "league": "La Liga",
         "rank": 4,
-        "elo": 1970.57824707,
+        "elo": 1970.57653809,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -221,7 +221,7 @@
         "country": "ESP",
         "league": "La Liga",
         "rank": 7,
-        "elo": 1916.27770996,
+        "elo": 1916.27600098,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -231,7 +231,7 @@
         "country": "ESP",
         "league": "La Liga",
         "rank": 14,
-        "elo": 1843.79187012,
+        "elo": 1843.78942871,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -241,7 +241,7 @@
         "country": "ESP",
         "league": "La Liga",
         "rank": 35,
-        "elo": 1759.60351562,
+        "elo": 1759.60192871,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -251,7 +251,7 @@
         "country": "ESP",
         "league": "La Liga",
         "rank": 43,
-        "elo": 1735.55053711,
+        "elo": 1735.54882812,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -261,7 +261,7 @@
         "country": "ESP",
         "league": "La Liga",
         "rank": 56,
-        "elo": 1692.19311523,
+        "elo": 1692.19140625,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -271,7 +271,7 @@
         "country": "ESP",
         "league": "La Liga",
         "rank": 58,
-        "elo": 1684.96972656,
+        "elo": 1684.96801758,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -281,7 +281,7 @@
         "country": "ESP",
         "league": "La Liga",
         "rank": 59,
-        "elo": 1684.64758301,
+        "elo": 1684.64587402,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-04"
@@ -291,7 +291,7 @@
         "country": "ESP",
         "league": "La Liga",
         "rank": 60,
-        "elo": 1683.35424805,
+        "elo": 1683.35253906,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -301,7 +301,7 @@
         "country": "ESP",
         "league": "La Liga",
         "rank": 66,
-        "elo": 1669.56396484,
+        "elo": 1669.56225586,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -311,7 +311,7 @@
         "country": "ESP",
         "league": "La Liga",
         "rank": 67,
-        "elo": 1666.6673584,
+        "elo": 1666.66125488,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -321,7 +321,7 @@
         "country": "ESP",
         "league": "La Liga",
         "rank": 68,
-        "elo": 1665.01806641,
+        "elo": 1665.01635742,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -331,7 +331,7 @@
         "country": "ESP",
         "league": "La Liga",
         "rank": 76,
-        "elo": 1646.96960449,
+        "elo": 1646.96789551,
         "level": 1.0,
         "from": "2026-05-02",
         "to": "2026-05-11"
@@ -341,7 +341,7 @@
         "country": "ESP",
         "league": "La Liga",
         "rank": 78,
-        "elo": 1639.88183594,
+        "elo": 1639.87756348,
         "level": 1.0,
         "from": "2026-05-02",
         "to": "2026-05-10"
@@ -350,18 +350,18 @@
         "club": "Alaves",
         "country": "ESP",
         "league": "La Liga",
-        "rank": 88,
-        "elo": 1629.01574707,
+        "rank": 89,
+        "elo": 1629.01660156,
         "level": 1.0,
-        "from": "2026-05-01",
+        "from": "2026-05-02",
         "to": "2026-05-02"
       },
       {
         "club": "Elche",
         "country": "ESP",
         "league": "La Liga",
-        "rank": 91,
-        "elo": 1623.98364258,
+        "rank": 92,
+        "elo": 1623.98400879,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -371,7 +371,7 @@
         "country": "ESP",
         "league": "La Liga",
         "rank": 94,
-        "elo": 1618.48925781,
+        "elo": 1618.48754883,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -381,7 +381,7 @@
         "country": "ESP",
         "league": "La Liga",
         "rank": 95,
-        "elo": 1616.12109375,
+        "elo": 1616.11877441,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -391,7 +391,7 @@
         "country": "ESP",
         "league": "La Liga",
         "rank": 96,
-        "elo": 1604.9564209,
+        "elo": 1604.95471191,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-04"
@@ -401,7 +401,7 @@
         "country": "ESP",
         "league": "La Liga",
         "rank": null,
-        "elo": 1580.05773926,
+        "elo": 1580.05407715,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -413,7 +413,7 @@
         "country": "GER",
         "league": "Bundesliga",
         "rank": 2,
-        "elo": 2017.45556641,
+        "elo": 2017.46264648,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -423,7 +423,7 @@
         "country": "GER",
         "league": "Bundesliga",
         "rank": 16,
-        "elo": 1839.14733887,
+        "elo": 1839.16711426,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -433,7 +433,7 @@
         "country": "GER",
         "league": "Bundesliga",
         "rank": 22,
-        "elo": 1812.73571777,
+        "elo": 1812.73120117,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -443,7 +443,7 @@
         "country": "GER",
         "league": "Bundesliga",
         "rank": 28,
-        "elo": 1785.078125,
+        "elo": 1785.0736084,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -453,7 +453,7 @@
         "country": "GER",
         "league": "Bundesliga",
         "rank": 38,
-        "elo": 1754.18969727,
+        "elo": 1754.19995117,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -463,7 +463,7 @@
         "country": "GER",
         "league": "Bundesliga",
         "rank": 49,
-        "elo": 1720.77001953,
+        "elo": 1720.71557617,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -473,7 +473,7 @@
         "country": "GER",
         "league": "Bundesliga",
         "rank": 52,
-        "elo": 1715.07910156,
+        "elo": 1715.07336426,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -483,7 +483,7 @@
         "country": "GER",
         "league": "Bundesliga",
         "rank": 62,
-        "elo": 1678.06958008,
+        "elo": 1678.06506348,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -493,7 +493,7 @@
         "country": "GER",
         "league": "Bundesliga",
         "rank": 65,
-        "elo": 1673.6574707,
+        "elo": 1673.65222168,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -502,20 +502,20 @@
         "club": "Augsburg",
         "country": "GER",
         "league": "Bundesliga",
-        "rank": 84,
-        "elo": 1631.3248291,
+        "rank": 85,
+        "elo": 1631.3203125,
         "level": 1.0,
-        "from": "2026-05-01",
+        "from": "2026-05-02",
         "to": "2026-05-02"
       },
       {
         "club": "Werder",
         "country": "GER",
         "league": "Bundesliga",
-        "rank": 86,
-        "elo": 1630.06958008,
+        "rank": 87,
+        "elo": 1630.05029297,
         "level": 1.0,
-        "from": "2026-05-01",
+        "from": "2026-05-02",
         "to": "2026-05-02"
       },
       {
@@ -523,7 +523,7 @@
         "country": "GER",
         "league": "Bundesliga",
         "rank": 93,
-        "elo": 1620.8079834,
+        "elo": 1620.8034668,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -533,7 +533,7 @@
         "country": "GER",
         "league": "Bundesliga",
         "rank": null,
-        "elo": 1589.13537598,
+        "elo": 1589.13085938,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -543,7 +543,7 @@
         "country": "GER",
         "league": "Bundesliga",
         "rank": null,
-        "elo": 1585.19873047,
+        "elo": 1585.19421387,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -553,7 +553,7 @@
         "country": "GER",
         "league": "Bundesliga",
         "rank": null,
-        "elo": 1583.80004883,
+        "elo": 1583.79541016,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -563,7 +563,7 @@
         "country": "GER",
         "league": "Bundesliga",
         "rank": null,
-        "elo": 1574.82568359,
+        "elo": 1574.8223877,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -583,7 +583,7 @@
         "country": "GER",
         "league": "Bundesliga",
         "rank": null,
-        "elo": 1539.23095703,
+        "elo": 1539.22192383,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -635,7 +635,7 @@
         "country": "ITA",
         "league": "Serie A",
         "rank": 31,
-        "elo": 1772.26062012,
+        "elo": 1772.26391602,
         "level": 1.0,
         "from": "2026-04-28",
         "to": "2026-05-02"
@@ -655,7 +655,7 @@
         "country": "ITA",
         "league": "Serie A",
         "rank": 41,
-        "elo": 1746.07458496,
+        "elo": 1746.08312988,
         "level": 1.0,
         "from": "2026-04-27",
         "to": "2026-05-02"
@@ -714,18 +714,18 @@
         "club": "Torino",
         "country": "ITA",
         "league": "Serie A",
-        "rank": 85,
+        "rank": 86,
         "elo": 1631.08581543,
         "level": 1.0,
-        "from": "2026-04-29",
+        "from": "2026-05-02",
         "to": "2026-05-02"
       },
       {
         "club": "Genoa",
         "country": "ITA",
         "league": "Serie A",
-        "rank": 89,
-        "elo": 1625.94750977,
+        "rank": 90,
+        "elo": 1625.93896484,
         "level": 1.0,
         "from": "2026-04-27",
         "to": "2026-05-02"
@@ -735,7 +735,7 @@
         "country": "ITA",
         "league": "Serie A",
         "rank": 97,
-        "elo": 1603.00366211,
+        "elo": 1603.00378418,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -745,7 +745,7 @@
         "country": "ITA",
         "league": "Serie A",
         "rank": null,
-        "elo": 1579.34460449,
+        "elo": 1579.34130859,
         "level": 1.0,
         "from": "2026-04-28",
         "to": "2026-05-03"
@@ -785,7 +785,7 @@
         "country": "ITA",
         "league": "Serie A",
         "rank": null,
-        "elo": 1480.30480957,
+        "elo": 1480.3046875,
         "level": 1.0,
         "from": "2026-05-02",
         "to": "2026-05-10"
@@ -797,7 +797,7 @@
         "country": "FRA",
         "league": "Ligue 1",
         "rank": 3,
-        "elo": 1972.5456543,
+        "elo": 1972.53271484,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -807,7 +807,7 @@
         "country": "FRA",
         "league": "Ligue 1",
         "rank": 34,
-        "elo": 1760.16967773,
+        "elo": 1760.17028809,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -817,7 +817,7 @@
         "country": "FRA",
         "league": "Ligue 1",
         "rank": 37,
-        "elo": 1755.06713867,
+        "elo": 1755.06530762,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -827,7 +827,7 @@
         "country": "FRA",
         "league": "Ligue 1",
         "rank": 40,
-        "elo": 1751.37902832,
+        "elo": 1751.37756348,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -837,7 +837,7 @@
         "country": "FRA",
         "league": "Ligue 1",
         "rank": 45,
-        "elo": 1731.50341797,
+        "elo": 1731.50146484,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -847,7 +847,7 @@
         "country": "FRA",
         "league": "Ligue 1",
         "rank": 46,
-        "elo": 1730.54968262,
+        "elo": 1730.54772949,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -857,7 +857,7 @@
         "country": "FRA",
         "league": "Ligue 1",
         "rank": 47,
-        "elo": 1724.66882324,
+        "elo": 1724.67675781,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -867,7 +867,7 @@
         "country": "FRA",
         "league": "Ligue 1",
         "rank": 48,
-        "elo": 1721.74853516,
+        "elo": 1721.7467041,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -877,7 +877,7 @@
         "country": "FRA",
         "league": "Ligue 1",
         "rank": 74,
-        "elo": 1649.81787109,
+        "elo": 1649.81604004,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -887,7 +887,7 @@
         "country": "FRA",
         "league": "Ligue 1",
         "rank": 79,
-        "elo": 1637.17016602,
+        "elo": 1637.16357422,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -897,7 +897,7 @@
         "country": "FRA",
         "league": "Ligue 1",
         "rank": 82,
-        "elo": 1633.53979492,
+        "elo": 1633.5378418,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -907,7 +907,7 @@
         "country": "FRA",
         "league": "Ligue 1",
         "rank": 98,
-        "elo": 1602.77990723,
+        "elo": 1602.7755127,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -917,7 +917,7 @@
         "country": "FRA",
         "league": "Ligue 1",
         "rank": null,
-        "elo": 1590.30371094,
+        "elo": 1590.3013916,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -927,7 +927,7 @@
         "country": "FRA",
         "league": "Ligue 1",
         "rank": null,
-        "elo": 1590.28515625,
+        "elo": 1590.2833252,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -937,7 +937,7 @@
         "country": "FRA",
         "league": "Ligue 1",
         "rank": null,
-        "elo": 1564.08898926,
+        "elo": 1564.08703613,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -947,7 +947,7 @@
         "country": "FRA",
         "league": "Ligue 1",
         "rank": null,
-        "elo": 1550.1685791,
+        "elo": 1550.16662598,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-03"
@@ -957,7 +957,7 @@
         "country": "FRA",
         "league": "Ligue 1",
         "rank": null,
-        "elo": 1525.15222168,
+        "elo": 1525.15026855,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -967,7 +967,7 @@
         "country": "FRA",
         "league": "Ligue 1",
         "rank": null,
-        "elo": 1500.72119141,
+        "elo": 1500.71923828,
         "level": 1.0,
         "from": "2026-05-01",
         "to": "2026-05-02"
@@ -980,7 +980,7 @@
       "country": "ENG",
       "league": "Premier League",
       "rank": 1,
-      "elo": 2048.79785156,
+      "elo": 2048.81982422,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -990,7 +990,7 @@
       "country": "GER",
       "league": "Bundesliga",
       "rank": 2,
-      "elo": 2017.45556641,
+      "elo": 2017.46264648,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1000,7 +1000,7 @@
       "country": "FRA",
       "league": "Ligue 1",
       "rank": 3,
-      "elo": 1972.5456543,
+      "elo": 1972.53271484,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1010,7 +1010,7 @@
       "country": "ESP",
       "league": "La Liga",
       "rank": 4,
-      "elo": 1970.57824707,
+      "elo": 1970.57653809,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1020,7 +1020,7 @@
       "country": "ENG",
       "league": "Premier League",
       "rank": 5,
-      "elo": 1970.24951172,
+      "elo": 1970.27075195,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-04"
@@ -1030,7 +1030,7 @@
       "country": "ENG",
       "league": "Premier League",
       "rank": 6,
-      "elo": 1933.19787598,
+      "elo": 1933.21911621,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1040,7 +1040,7 @@
       "country": "ESP",
       "league": "La Liga",
       "rank": 7,
-      "elo": 1916.27770996,
+      "elo": 1916.27600098,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1060,7 +1060,7 @@
       "country": "ENG",
       "league": "Premier League",
       "rank": 9,
-      "elo": 1888.45056152,
+      "elo": 1888.47265625,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1070,7 +1070,7 @@
       "country": "ENG",
       "league": "Premier League",
       "rank": 10,
-      "elo": 1886.92468262,
+      "elo": 1886.95043945,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1080,7 +1080,7 @@
       "country": "ENG",
       "league": "Premier League",
       "rank": 11,
-      "elo": 1865.88305664,
+      "elo": 1865.9041748,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1089,8 +1089,8 @@
       "club": "Bournemouth",
       "country": "ENG",
       "league": "Premier League",
-      "rank": 13,
-      "elo": 1847.76574707,
+      "rank": 12,
+      "elo": 1847.7869873,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1100,7 +1100,7 @@
       "country": "ESP",
       "league": "La Liga",
       "rank": 14,
-      "elo": 1843.79187012,
+      "elo": 1843.78942871,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1110,7 +1110,7 @@
       "country": "ENG",
       "league": "Premier League",
       "rank": 15,
-      "elo": 1841.18457031,
+      "elo": 1841.20581055,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-04"
@@ -1120,7 +1120,7 @@
       "country": "GER",
       "league": "Bundesliga",
       "rank": 16,
-      "elo": 1839.14733887,
+      "elo": 1839.16711426,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1130,7 +1130,7 @@
       "country": "ENG",
       "league": "Premier League",
       "rank": 18,
-      "elo": 1828.61120605,
+      "elo": 1828.62194824,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-04"
@@ -1140,7 +1140,7 @@
       "country": "ENG",
       "league": "Premier League",
       "rank": 19,
-      "elo": 1828.44921875,
+      "elo": 1828.46948242,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1150,7 +1150,7 @@
       "country": "ENG",
       "league": "Premier League",
       "rank": 20,
-      "elo": 1825.70996094,
+      "elo": 1825.7310791,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1160,7 +1160,7 @@
       "country": "ENG",
       "league": "Premier League",
       "rank": 21,
-      "elo": 1821.35424805,
+      "elo": 1821.38220215,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-04"
@@ -1170,7 +1170,7 @@
       "country": "GER",
       "league": "Bundesliga",
       "rank": 22,
-      "elo": 1812.73571777,
+      "elo": 1812.73120117,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1180,7 +1180,7 @@
       "country": "ENG",
       "league": "Premier League",
       "rank": 23,
-      "elo": 1811.86303711,
+      "elo": 1811.88684082,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1190,7 +1190,7 @@
       "country": "ENG",
       "league": "Premier League",
       "rank": 24,
-      "elo": 1809.63977051,
+      "elo": 1809.73657227,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1210,7 +1210,7 @@
       "country": "ENG",
       "league": "Premier League",
       "rank": 27,
-      "elo": 1793.17163086,
+      "elo": 1793.19287109,
       "level": 1.0,
       "from": "2026-05-02",
       "to": "2026-05-11"
@@ -1220,7 +1220,7 @@
       "country": "GER",
       "league": "Bundesliga",
       "rank": 28,
-      "elo": 1785.078125,
+      "elo": 1785.0736084,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1250,7 +1250,7 @@
       "country": "ITA",
       "league": "Serie A",
       "rank": 31,
-      "elo": 1772.26062012,
+      "elo": 1772.26391602,
       "level": 1.0,
       "from": "2026-04-28",
       "to": "2026-05-02"
@@ -1260,7 +1260,7 @@
       "country": "ENG",
       "league": "Premier League",
       "rank": 32,
-      "elo": 1769.62902832,
+      "elo": 1769.64355469,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1280,7 +1280,7 @@
       "country": "FRA",
       "league": "Ligue 1",
       "rank": 34,
-      "elo": 1760.16967773,
+      "elo": 1760.17028809,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1290,7 +1290,7 @@
       "country": "ESP",
       "league": "La Liga",
       "rank": 35,
-      "elo": 1759.60351562,
+      "elo": 1759.60192871,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1300,7 +1300,7 @@
       "country": "ENG",
       "league": "Premier League",
       "rank": 36,
-      "elo": 1758.68884277,
+      "elo": 1758.71289062,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1310,7 +1310,7 @@
       "country": "FRA",
       "league": "Ligue 1",
       "rank": 37,
-      "elo": 1755.06713867,
+      "elo": 1755.06530762,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1320,7 +1320,7 @@
       "country": "GER",
       "league": "Bundesliga",
       "rank": 38,
-      "elo": 1754.18969727,
+      "elo": 1754.19995117,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1330,7 +1330,7 @@
       "country": "FRA",
       "league": "Ligue 1",
       "rank": 40,
-      "elo": 1751.37902832,
+      "elo": 1751.37756348,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1340,7 +1340,7 @@
       "country": "ITA",
       "league": "Serie A",
       "rank": 41,
-      "elo": 1746.07458496,
+      "elo": 1746.08312988,
       "level": 1.0,
       "from": "2026-04-27",
       "to": "2026-05-02"
@@ -1350,7 +1350,7 @@
       "country": "ESP",
       "league": "La Liga",
       "rank": 43,
-      "elo": 1735.55053711,
+      "elo": 1735.54882812,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1360,7 +1360,7 @@
       "country": "FRA",
       "league": "Ligue 1",
       "rank": 45,
-      "elo": 1731.50341797,
+      "elo": 1731.50146484,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1370,7 +1370,7 @@
       "country": "FRA",
       "league": "Ligue 1",
       "rank": 46,
-      "elo": 1730.54968262,
+      "elo": 1730.54772949,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1380,7 +1380,7 @@
       "country": "FRA",
       "league": "Ligue 1",
       "rank": 47,
-      "elo": 1724.66882324,
+      "elo": 1724.67675781,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1390,7 +1390,7 @@
       "country": "FRA",
       "league": "Ligue 1",
       "rank": 48,
-      "elo": 1721.74853516,
+      "elo": 1721.7467041,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1400,7 +1400,7 @@
       "country": "GER",
       "league": "Bundesliga",
       "rank": 49,
-      "elo": 1720.77001953,
+      "elo": 1720.71557617,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1410,7 +1410,7 @@
       "country": "GER",
       "league": "Bundesliga",
       "rank": 52,
-      "elo": 1715.07910156,
+      "elo": 1715.07336426,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1430,7 +1430,7 @@
       "country": "ENG",
       "league": "Premier League",
       "rank": 55,
-      "elo": 1699.76220703,
+      "elo": 1699.78662109,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1440,7 +1440,7 @@
       "country": "ESP",
       "league": "La Liga",
       "rank": 56,
-      "elo": 1692.19311523,
+      "elo": 1692.19140625,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1450,7 +1450,7 @@
       "country": "ESP",
       "league": "La Liga",
       "rank": 58,
-      "elo": 1684.96972656,
+      "elo": 1684.96801758,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1460,7 +1460,7 @@
       "country": "ESP",
       "league": "La Liga",
       "rank": 59,
-      "elo": 1684.64758301,
+      "elo": 1684.64587402,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-04"
@@ -1470,7 +1470,7 @@
       "country": "ESP",
       "league": "La Liga",
       "rank": 60,
-      "elo": 1683.35424805,
+      "elo": 1683.35253906,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1480,7 +1480,7 @@
       "country": "ENG",
       "league": "Premier League",
       "rank": 61,
-      "elo": 1678.31384277,
+      "elo": 1678.33215332,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1490,7 +1490,7 @@
       "country": "GER",
       "league": "Bundesliga",
       "rank": 62,
-      "elo": 1678.06958008,
+      "elo": 1678.06506348,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1510,7 +1510,7 @@
       "country": "GER",
       "league": "Bundesliga",
       "rank": 65,
-      "elo": 1673.6574707,
+      "elo": 1673.65222168,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1520,7 +1520,7 @@
       "country": "ESP",
       "league": "La Liga",
       "rank": 66,
-      "elo": 1669.56396484,
+      "elo": 1669.56225586,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1530,7 +1530,7 @@
       "country": "ESP",
       "league": "La Liga",
       "rank": 67,
-      "elo": 1666.6673584,
+      "elo": 1666.66125488,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1540,7 +1540,7 @@
       "country": "ESP",
       "league": "La Liga",
       "rank": 68,
-      "elo": 1665.01806641,
+      "elo": 1665.01635742,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1550,7 +1550,7 @@
       "country": "ENG",
       "league": "Premier League",
       "rank": 69,
-      "elo": 1664.9440918,
+      "elo": 1664.96533203,
       "level": 1.0,
       "from": "2026-05-02",
       "to": "2026-05-10"
@@ -1570,7 +1570,7 @@
       "country": "FRA",
       "league": "Ligue 1",
       "rank": 74,
-      "elo": 1649.81787109,
+      "elo": 1649.81604004,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1580,7 +1580,7 @@
       "country": "ESP",
       "league": "La Liga",
       "rank": 76,
-      "elo": 1646.96960449,
+      "elo": 1646.96789551,
       "level": 1.0,
       "from": "2026-05-02",
       "to": "2026-05-11"
@@ -1600,7 +1600,7 @@
       "country": "ESP",
       "league": "La Liga",
       "rank": 78,
-      "elo": 1639.88183594,
+      "elo": 1639.87756348,
       "level": 1.0,
       "from": "2026-05-02",
       "to": "2026-05-10"
@@ -1610,7 +1610,7 @@
       "country": "FRA",
       "league": "Ligue 1",
       "rank": 79,
-      "elo": 1637.17016602,
+      "elo": 1637.16357422,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1630,7 +1630,7 @@
       "country": "FRA",
       "league": "Ligue 1",
       "rank": 82,
-      "elo": 1633.53979492,
+      "elo": 1633.5378418,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1639,48 +1639,48 @@
       "club": "Augsburg",
       "country": "GER",
       "league": "Bundesliga",
-      "rank": 84,
-      "elo": 1631.3248291,
+      "rank": 85,
+      "elo": 1631.3203125,
       "level": 1.0,
-      "from": "2026-05-01",
+      "from": "2026-05-02",
       "to": "2026-05-02"
     },
     "Torino": {
       "club": "Torino",
       "country": "ITA",
       "league": "Serie A",
-      "rank": 85,
+      "rank": 86,
       "elo": 1631.08581543,
       "level": 1.0,
-      "from": "2026-04-29",
+      "from": "2026-05-02",
       "to": "2026-05-02"
     },
     "Werder": {
       "club": "Werder",
       "country": "GER",
       "league": "Bundesliga",
-      "rank": 86,
-      "elo": 1630.06958008,
+      "rank": 87,
+      "elo": 1630.05029297,
       "level": 1.0,
-      "from": "2026-05-01",
+      "from": "2026-05-02",
       "to": "2026-05-02"
     },
     "Alaves": {
       "club": "Alaves",
       "country": "ESP",
       "league": "La Liga",
-      "rank": 88,
-      "elo": 1629.01574707,
+      "rank": 89,
+      "elo": 1629.01660156,
       "level": 1.0,
-      "from": "2026-05-01",
+      "from": "2026-05-02",
       "to": "2026-05-02"
     },
     "Genoa": {
       "club": "Genoa",
       "country": "ITA",
       "league": "Serie A",
-      "rank": 89,
-      "elo": 1625.94750977,
+      "rank": 90,
+      "elo": 1625.93896484,
       "level": 1.0,
       "from": "2026-04-27",
       "to": "2026-05-02"
@@ -1689,8 +1689,8 @@
       "club": "Elche",
       "country": "ESP",
       "league": "La Liga",
-      "rank": 91,
-      "elo": 1623.98364258,
+      "rank": 92,
+      "elo": 1623.98400879,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1700,7 +1700,7 @@
       "country": "GER",
       "league": "Bundesliga",
       "rank": 93,
-      "elo": 1620.8079834,
+      "elo": 1620.8034668,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1710,7 +1710,7 @@
       "country": "ESP",
       "league": "La Liga",
       "rank": 94,
-      "elo": 1618.48925781,
+      "elo": 1618.48754883,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1720,7 +1720,7 @@
       "country": "ESP",
       "league": "La Liga",
       "rank": 95,
-      "elo": 1616.12109375,
+      "elo": 1616.11877441,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1730,7 +1730,7 @@
       "country": "ESP",
       "league": "La Liga",
       "rank": 96,
-      "elo": 1604.9564209,
+      "elo": 1604.95471191,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-04"
@@ -1740,7 +1740,7 @@
       "country": "ITA",
       "league": "Serie A",
       "rank": 97,
-      "elo": 1603.00366211,
+      "elo": 1603.00378418,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1750,7 +1750,7 @@
       "country": "FRA",
       "league": "Ligue 1",
       "rank": 98,
-      "elo": 1602.77990723,
+      "elo": 1602.7755127,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1760,7 +1760,7 @@
       "country": "FRA",
       "league": "Ligue 1",
       "rank": null,
-      "elo": 1590.30371094,
+      "elo": 1590.3013916,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1770,7 +1770,7 @@
       "country": "FRA",
       "league": "Ligue 1",
       "rank": null,
-      "elo": 1590.28515625,
+      "elo": 1590.2833252,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1780,7 +1780,7 @@
       "country": "GER",
       "league": "Bundesliga",
       "rank": null,
-      "elo": 1589.13537598,
+      "elo": 1589.13085938,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1790,7 +1790,7 @@
       "country": "GER",
       "league": "Bundesliga",
       "rank": null,
-      "elo": 1585.19873047,
+      "elo": 1585.19421387,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1800,7 +1800,7 @@
       "country": "GER",
       "league": "Bundesliga",
       "rank": null,
-      "elo": 1583.80004883,
+      "elo": 1583.79541016,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1810,7 +1810,7 @@
       "country": "ESP",
       "league": "La Liga",
       "rank": null,
-      "elo": 1580.05773926,
+      "elo": 1580.05407715,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1820,7 +1820,7 @@
       "country": "ITA",
       "league": "Serie A",
       "rank": null,
-      "elo": 1579.34460449,
+      "elo": 1579.34130859,
       "level": 1.0,
       "from": "2026-04-28",
       "to": "2026-05-03"
@@ -1830,7 +1830,7 @@
       "country": "GER",
       "league": "Bundesliga",
       "rank": null,
-      "elo": 1574.82568359,
+      "elo": 1574.8223877,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1840,7 +1840,7 @@
       "country": "FRA",
       "league": "Ligue 1",
       "rank": null,
-      "elo": 1564.08898926,
+      "elo": 1564.08703613,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1860,7 +1860,7 @@
       "country": "FRA",
       "league": "Ligue 1",
       "rank": null,
-      "elo": 1550.1685791,
+      "elo": 1550.16662598,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-03"
@@ -1880,7 +1880,7 @@
       "country": "GER",
       "league": "Bundesliga",
       "rank": null,
-      "elo": 1539.23095703,
+      "elo": 1539.22192383,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1890,7 +1890,7 @@
       "country": "FRA",
       "league": "Ligue 1",
       "rank": null,
-      "elo": 1525.15222168,
+      "elo": 1525.15026855,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1910,7 +1910,7 @@
       "country": "FRA",
       "league": "Ligue 1",
       "rank": null,
-      "elo": 1500.72119141,
+      "elo": 1500.71923828,
       "level": 1.0,
       "from": "2026-05-01",
       "to": "2026-05-02"
@@ -1930,7 +1930,7 @@
       "country": "ITA",
       "league": "Serie A",
       "rank": null,
-      "elo": 1480.30480957,
+      "elo": 1480.3046875,
       "level": 1.0,
       "from": "2026-05-02",
       "to": "2026-05-10"

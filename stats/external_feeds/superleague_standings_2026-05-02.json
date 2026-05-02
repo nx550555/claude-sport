@@ -2,32 +2,32 @@
   "league": "superleague",
   "source": "https://en.wikipedia.org/wiki/2026_Super_League_season",
   "strategy": "wikipedia_table",
-  "fetched_at": "2026-05-02T12:39:11.504372+09:00",
+  "fetched_at": "2026-05-02T22:40:36.037995+09:00",
   "team_count": 14,
   "teams": [
     {
       "team": "Leeds Rhinos",
-      "gp": 9,
+      "gp": 10,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 308,
+      "pf": 348,
       "pa": "Leeds Rhinos",
-      "pd": 174,
-      "pts": 14,
-      "pd_per_game": 19.33
+      "pd": 192,
+      "pts": 16,
+      "pd_per_game": 19.2
     },
     {
       "team": "St Helens",
-      "gp": 9,
+      "gp": 10,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 212,
+      "pf": 252,
       "pa": "St Helens",
-      "pd": 26,
-      "pts": 14,
-      "pd_per_game": 2.89
+      "pd": 50,
+      "pts": 16,
+      "pd_per_game": 5.0
     },
     {
       "team": "Hull KR[a]",
@@ -55,15 +55,15 @@
     },
     {
       "team": "Wakefield Trinity",
-      "gp": 9,
+      "gp": 10,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 206,
+      "pf": 228,
       "pa": "Wakefield Trinity",
-      "pd": 77,
+      "pd": 59,
       "pts": 12,
-      "pd_per_game": 8.56
+      "pd_per_game": 5.9
     },
     {
       "team": "Wigan Warriors",
@@ -111,17 +111,6 @@
       "pts": 8
     },
     {
-      "team": "York Knights",
-      "gp": 9,
-      "w": null,
-      "l": null,
-      "d": null,
-      "pf": 174,
-      "pa": "York Knights",
-      "pd": "−59",
-      "pts": 6
-    },
-    {
       "team": "Bradford Bulls",
       "gp": 9,
       "w": null,
@@ -130,6 +119,17 @@
       "pf": 178,
       "pa": "Bradford Bulls",
       "pd": "−69",
+      "pts": 6
+    },
+    {
+      "team": "York Knights",
+      "gp": 10,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 190,
+      "pa": "York Knights",
+      "pd": "−83",
       "pts": 6
     },
     {
