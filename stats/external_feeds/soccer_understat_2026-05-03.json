@@ -1,6 +1,6 @@
 {
   "source_group": "understat.com",
-  "fetched_at": "2026-05-03T13:01:19.428287+09:00",
+  "fetched_at": "2026-05-03T22:42:22.175500+09:00",
   "season": "2025-2026",
   "leagues": {
     "Premier League": {
@@ -1245,20 +1245,20 @@
         {
           "team_slug": "Bologna",
           "team": "Bologna",
-          "games_played": 34,
+          "games_played": 35,
           "wins": 14,
-          "draws": 6,
+          "draws": 7,
           "losses": 14,
           "scored": 42,
           "missed": 41,
-          "points": 48,
-          "xG": 45.57,
-          "xGA": 46.75,
-          "xG_per_game": 1.34,
-          "xGA_per_game": 1.375,
-          "xGD": -1.18,
-          "xGD_per_game": -0.035,
-          "xPoints": 46.74
+          "points": 49,
+          "xG": 46.26,
+          "xGA": 47.62,
+          "xG_per_game": 1.322,
+          "xGA_per_game": 1.361,
+          "xGD": -1.36,
+          "xGD_per_game": -0.039,
+          "xPoints": 47.86
         },
         {
           "team_slug": "Genoa",
@@ -1353,20 +1353,20 @@
         {
           "team_slug": "Cagliari",
           "team": "Cagliari",
-          "games_played": 34,
+          "games_played": 35,
           "wins": 9,
-          "draws": 9,
+          "draws": 10,
           "losses": 16,
           "scored": 36,
           "missed": 49,
-          "points": 36,
-          "xG": 36.1,
-          "xGA": 54.28,
-          "xG_per_game": 1.062,
-          "xGA_per_game": 1.596,
-          "xGD": -18.18,
-          "xGD_per_game": -0.535,
-          "xPoints": 35.56
+          "points": 37,
+          "xG": 36.97,
+          "xGA": 54.96,
+          "xG_per_game": 1.056,
+          "xGA_per_game": 1.57,
+          "xGD": -17.99,
+          "xGD_per_game": -0.514,
+          "xPoints": 37.09
         },
         {
           "team_slug": "Parma_Calcio_1913",

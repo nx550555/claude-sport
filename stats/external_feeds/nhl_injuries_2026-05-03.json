@@ -1,17 +1,9 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-05-03T13:01:12.124370+09:00",
+  "fetched_at": "2026-05-03T22:42:16.476004+09:00",
   "starting_goalies": [],
   "injuries": [
-    {
-      "player": "Radko Gudas",
-      "team": null,
-      "position": "D",
-      "estimated_return": "May 6",
-      "status": "Day-To-Day",
-      "comment": "May 2: Gudas (lower body) skated on his own Saturday, and the Ducks hope to have him back at some point during their second-round series against Vegas, per Zach Cavanagh of The Sporting Tribune."
-    },
     {
       "player": "Jansen Harkins",
       "team": null,
@@ -43,30 +35,6 @@
       "estimated_return": "Jul 1",
       "status": "Injured Reserve",
       "comment": "Sep 30: ir-lt"
-    },
-    {
-      "player": "Josh Manson",
-      "team": null,
-      "position": "D",
-      "estimated_return": "May 3",
-      "status": "Day-To-Day",
-      "comment": "May 2: Manson (upper body) took part in Saturday's practice and is day-to-day, per Evan Rawal of the Denver Gazette."
-    },
-    {
-      "player": "Joel Kiviranta",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "May 3",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Joel Eriksson Ek",
-      "team": null,
-      "position": "C",
-      "estimated_return": "May 3",
-      "status": "Day-To-Day",
-      "comment": "May 2: Eriksson Ek (undisclosed) is questionable for Game 1 against Colorado on Sunday, Michael Russo of The Athletic reports."
     },
     {
       "player": "Brett Pesce",
