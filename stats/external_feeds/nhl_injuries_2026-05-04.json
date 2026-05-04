@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-05-04T12:58:36.686096+09:00",
+  "fetched_at": "2026-05-04T23:24:10.063417+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -21,6 +21,14 @@
       "comment": ""
     },
     {
+      "player": "Viktor Arvidsson",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Sep 15",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Alexander Nikishin",
       "team": null,
       "position": "D",
@@ -35,6 +43,30 @@
       "estimated_return": "Jul 1",
       "status": "Injured Reserve",
       "comment": "Sep 30: ir-lt"
+    },
+    {
+      "player": "Joel Kiviranta",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "May 9",
+      "status": "Out",
+      "comment": "May 3: Kiviranta (undisclosed) hasn't resumed skating yet, according to Bailey Curtis of DNVR Sports on Sunday."
+    },
+    {
+      "player": "Josh Manson",
+      "team": null,
+      "position": "D",
+      "estimated_return": "May 5",
+      "status": "Out",
+      "comment": "May 3: Manson (upper body) won't play in Game 1 against Minnesota on Sunday, Meghan Angley of Guerilla Sports reports."
+    },
+    {
+      "player": "Joel Eriksson Ek",
+      "team": null,
+      "position": "C",
+      "estimated_return": "May 9",
+      "status": "Out",
+      "comment": "May 3: Eriksson Ek (lower body) will miss the first two games of Minnesota's second-round series against Colorado, according to Michael Russo of The Athletic on Sunday."
     },
     {
       "player": "Brett Pesce",
@@ -104,7 +136,7 @@
       "player": "Victor Hedman",
       "team": null,
       "position": "D",
-      "estimated_return": "May 5",
+      "estimated_return": "Sep 15",
       "status": "Injured Reserve",
       "comment": "Apr 22: Hedman (personal) is expected to travel with the Lightning to Montreal ahead of Friday's Game 3 against the Canadiens, Eduardo A. Encina of the Tampa Bay Times reports."
     },
