@@ -1,9 +1,17 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-05-06T12:59:47.619558+09:00",
+  "fetched_at": "2026-05-06T23:35:18.682986+09:00",
   "starting_goalies": [],
   "injuries": [
+    {
+      "player": "Radko Gudas",
+      "team": null,
+      "position": "D",
+      "estimated_return": "May 8",
+      "status": "Out",
+      "comment": ""
+    },
     {
       "player": "Sam Carrick",
       "team": null,
@@ -21,12 +29,44 @@
       "comment": "Sep 30: ir-lt"
     },
     {
+      "player": "Josh Manson",
+      "team": null,
+      "position": "D",
+      "estimated_return": "May 9",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Tyler Seguin",
       "team": null,
       "position": "C",
       "estimated_return": "Sep 15",
       "status": "Injured Reserve",
       "comment": "May 4: Seguin (knee) expects to be available for the start of training camp in the fall, Lia Assimakopoulos of The Dallas Morning News reports Monday."
+    },
+    {
+      "player": "Jonas Brodin",
+      "team": null,
+      "position": "D",
+      "estimated_return": "May 9",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Joel Eriksson Ek",
+      "team": null,
+      "position": "C",
+      "estimated_return": "May 9",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Zach Bogosian",
+      "team": null,
+      "position": "D",
+      "estimated_return": "May 9",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Brett Pesce",
@@ -99,6 +139,14 @@
       "estimated_return": "Sep 15",
       "status": "Injured Reserve",
       "comment": "Sep 30: ir-lt"
+    },
+    {
+      "player": "Pontus Holmberg",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Sep 15",
+      "status": "Out",
+      "comment": "May 5: Holmberg sustained a fractured clavicle against Buffalo on April 6, per Evan Closky of 10 Tampa Bay News on Tuesday."
     },
     {
       "player": "Derek Forbort",
