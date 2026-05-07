@@ -1,9 +1,17 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-05-07T12:53:51.914893+09:00",
+  "fetched_at": "2026-05-07T23:42:30.322854+09:00",
   "starting_goalies": [],
   "injuries": [
+    {
+      "player": "Rasmus Dahlin",
+      "team": null,
+      "position": "D",
+      "estimated_return": "May 8",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
     {
       "player": "Shea Weber",
       "team": null,
@@ -27,22 +35,6 @@
       "estimated_return": "Sep 15",
       "status": "Injured Reserve",
       "comment": "May 4: Seguin (knee) expects to be available for the start of training camp in the fall, Lia Assimakopoulos of The Dallas Morning News reports Monday."
-    },
-    {
-      "player": "Jonas Brodin",
-      "team": null,
-      "position": "D",
-      "estimated_return": "May 9",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Joel Eriksson Ek",
-      "team": null,
-      "position": "C",
-      "estimated_return": "May 9",
-      "status": "Day-To-Day",
-      "comment": ""
     },
     {
       "player": "Zach Bogosian",
@@ -101,11 +93,11 @@
       "comment": "May 6: Tippett (undisclosed) will be a game-time decision for Game 3 against the Hurricanes on Thursday, Adam Kimelman of NHL.com reports."
     },
     {
-      "player": "Christian Dvorak",
+      "player": "Noah Cates",
       "team": null,
-      "position": "C",
-      "estimated_return": "May 7",
-      "status": "Day-To-Day",
+      "position": "LW",
+      "estimated_return": "May 18",
+      "status": "Out",
       "comment": ""
     },
     {

@@ -2,7 +2,7 @@
   "league": "nrl",
   "source": "https://www.nrl.com/ladder/",
   "strategy": "playwright_nrl",
-  "fetched_at": "2026-05-07T12:53:41.435922+09:00",
+  "fetched_at": "2026-05-07T23:42:16.499333+09:00",
   "team_count": 17,
   "teams": [
     {
@@ -21,11 +21,11 @@
     {
       "team": "Warriors",
       "gp": 9,
-      "pts": 14,
+      "pts": 16,
       "w": 7,
       "d": 0,
       "l": 2,
-      "byes": 0,
+      "byes": 1,
       "pf": 278,
       "pa": 170,
       "pd": 108,
@@ -110,6 +110,19 @@
       "pd_per_game": 4.5
     },
     {
+      "team": "Dolphins",
+      "gp": 9,
+      "pts": 10,
+      "w": 4,
+      "d": 0,
+      "l": 5,
+      "byes": 1,
+      "pf": 228,
+      "pa": 207,
+      "pd": 21,
+      "pd_per_game": 2.33
+    },
+    {
       "team": "Broncos",
       "gp": 9,
       "pts": 10,
@@ -136,32 +149,6 @@
       "pd_per_game": -3.33
     },
     {
-      "team": "Dolphins",
-      "gp": 8,
-      "pts": 8,
-      "w": 3,
-      "d": 0,
-      "l": 5,
-      "byes": 1,
-      "pf": 184,
-      "pa": 195,
-      "pd": -11,
-      "pd_per_game": -1.38
-    },
-    {
-      "team": "Bulldogs",
-      "gp": 8,
-      "pts": 8,
-      "w": 3,
-      "d": 0,
-      "l": 5,
-      "byes": 1,
-      "pf": 145,
-      "pa": 194,
-      "pd": -49,
-      "pd_per_game": -6.12
-    },
-    {
       "team": "Raiders",
       "gp": 9,
       "pts": 8,
@@ -173,6 +160,19 @@
       "pa": 249,
       "pd": -66,
       "pd_per_game": -7.33
+    },
+    {
+      "team": "Bulldogs",
+      "gp": 9,
+      "pts": 8,
+      "w": 3,
+      "d": 0,
+      "l": 6,
+      "byes": 1,
+      "pf": 157,
+      "pa": 238,
+      "pd": -81,
+      "pd_per_game": -9.0
     },
     {
       "team": "Titans",
