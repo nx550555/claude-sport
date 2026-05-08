@@ -1,17 +1,9 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-05-08T12:44:17.150940+09:00",
+  "fetched_at": "2026-05-08T23:09:06.032391+09:00",
   "starting_goalies": [],
   "injuries": [
-    {
-      "player": "Radko Gudas",
-      "team": null,
-      "position": "D",
-      "estimated_return": "May 8",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
     {
       "player": "Sam Carrick",
       "team": null,

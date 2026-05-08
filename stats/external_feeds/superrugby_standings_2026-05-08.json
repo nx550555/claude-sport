@@ -2,9 +2,21 @@
   "league": "superrugby",
   "source": "https://en.wikipedia.org/wiki/2026_Super_Rugby_Pacific_season",
   "strategy": "wikipedia_table",
-  "fetched_at": "2026-05-08T12:44:08.618098+09:00",
+  "fetched_at": "2026-05-08T23:08:57.015669+09:00",
   "team_count": 11,
   "teams": [
+    {
+      "team": "Chiefs",
+      "gp": 11,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 382,
+      "pa": "Chiefs",
+      "pd": 139,
+      "pts": 40,
+      "pd_per_game": 12.64
+    },
     {
       "team": "Hurricanes",
       "gp": 10,
@@ -19,50 +31,38 @@
     },
     {
       "team": "Blues",
-      "gp": 11,
+      "gp": 12,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 378,
+      "pf": 398,
       "pa": "Blues",
-      "pd": 108,
+      "pd": 92,
       "pts": 38,
-      "pd_per_game": 9.82
-    },
-    {
-      "team": "Chiefs",
-      "gp": 10,
-      "w": null,
-      "l": null,
-      "d": null,
-      "pf": 351,
-      "pa": "Chiefs",
-      "pd": 129,
-      "pts": 36,
-      "pd_per_game": 12.9
-    },
-    {
-      "team": "Reds",
-      "gp": 10,
-      "w": null,
-      "l": null,
-      "d": null,
-      "pf": 251,
-      "pa": "Reds",
-      "pd": "−30",
-      "pts": 27
+      "pd_per_game": 7.67
     },
     {
       "team": "Crusaders",
+      "gp": 12,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 405,
+      "pa": "Crusaders",
+      "pd": 63,
+      "pts": 32,
+      "pd_per_game": 5.25
+    },
+    {
+      "team": "Reds",
       "gp": 11,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 369,
-      "pa": "Crusaders",
-      "pd": 47,
-      "pts": 27,
-      "pd_per_game": 4.27
+      "pf": 272,
+      "pa": "Reds",
+      "pd": "−40",
+      "pts": 27
     },
     {
       "team": "Brumbies",

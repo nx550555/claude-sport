@@ -2,7 +2,7 @@
   "league": "nrl",
   "source": "https://www.nrl.com/ladder/",
   "strategy": "playwright_nrl",
-  "fetched_at": "2026-05-08T12:44:08.569305+09:00",
+  "fetched_at": "2026-05-08T23:08:56.846611+09:00",
   "team_count": 17,
   "teams": [
     {
@@ -33,16 +33,16 @@
     },
     {
       "team": "Roosters",
-      "gp": 8,
-      "pts": 14,
-      "w": 6,
+      "gp": 9,
+      "pts": 16,
+      "w": 7,
       "d": 0,
       "l": 2,
       "byes": 1,
-      "pf": 253,
-      "pa": 202,
-      "pd": 51,
-      "pd_per_game": 6.38
+      "pf": 281,
+      "pa": 214,
+      "pd": 67,
+      "pd_per_game": 7.44
     },
     {
       "team": "Rabbitohs",
@@ -72,16 +72,16 @@
     },
     {
       "team": "Cowboys",
-      "gp": 9,
+      "gp": 10,
       "pts": 12,
       "w": 6,
       "d": 0,
-      "l": 3,
+      "l": 4,
       "byes": 0,
-      "pf": 239,
-      "pa": 227,
-      "pd": 12,
-      "pd_per_game": 1.33
+      "pf": 269,
+      "pa": 260,
+      "pd": 9,
+      "pd_per_game": 0.9
     },
     {
       "team": "Sea Eagles",
@@ -175,30 +175,30 @@
       "pd_per_game": -9.0
     },
     {
-      "team": "Titans",
-      "gp": 8,
-      "pts": 6,
-      "w": 2,
-      "d": 0,
-      "l": 6,
-      "byes": 1,
-      "pf": 158,
-      "pa": 204,
-      "pd": -46,
-      "pd_per_game": -5.75
-    },
-    {
       "team": "Eels",
-      "gp": 9,
-      "pts": 6,
-      "w": 3,
+      "gp": 10,
+      "pts": 8,
+      "w": 4,
       "d": 0,
       "l": 6,
       "byes": 0,
-      "pf": 194,
-      "pa": 315,
-      "pd": -121,
-      "pd_per_game": -13.44
+      "pf": 227,
+      "pa": 345,
+      "pd": -118,
+      "pd_per_game": -11.8
+    },
+    {
+      "team": "Titans",
+      "gp": 9,
+      "pts": 6,
+      "w": 2,
+      "d": 0,
+      "l": 7,
+      "byes": 1,
+      "pf": 170,
+      "pa": 232,
+      "pd": -62,
+      "pd_per_game": -6.89
     },
     {
       "team": "Storm",
