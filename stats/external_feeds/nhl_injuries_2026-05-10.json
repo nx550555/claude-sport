@@ -1,17 +1,9 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-05-10T13:03:28.067105+09:00",
+  "fetched_at": "2026-05-10T22:48:08.427255+09:00",
   "starting_goalies": [],
   "injuries": [
-    {
-      "player": "Radko Gudas",
-      "team": null,
-      "position": "D",
-      "estimated_return": "May 10",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
     {
       "player": "Shea Weber",
       "team": null,
@@ -67,14 +59,6 @@
       "estimated_return": "Sep 15",
       "status": "Injured Reserve",
       "comment": "Apr 14: Head coach Travis Green said Tuesday that Jensen (knee) is a long shot to play again this year, Bruce Garrioch of Postmedia reports."
-    },
-    {
-      "player": "Rodrigo Abols",
-      "team": null,
-      "position": "C",
-      "estimated_return": "May 30",
-      "status": "Injured Reserve",
-      "comment": "May 9: Abols (ankle) isn't close to being an option for a return to the lineup. according to Jonathan Bailey of The Hockey News on Saturday."
     },
     {
       "player": "Logan Couture",

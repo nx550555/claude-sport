@@ -1,6 +1,6 @@
 {
   "source_group": "understat.com",
-  "fetched_at": "2026-05-10T13:03:33.988962+09:00",
+  "fetched_at": "2026-05-10T22:48:13.978996+09:00",
   "season": "2025-2026",
   "leagues": {
     "Premier League": {
@@ -1119,20 +1119,20 @@
         {
           "team_slug": "Como",
           "team": "Como",
-          "games_played": 35,
-          "wins": 17,
+          "games_played": 36,
+          "wins": 18,
           "draws": 11,
           "losses": 7,
-          "scored": 59,
+          "scored": 60,
           "missed": 28,
-          "points": 62,
-          "xG": 61.5,
-          "xGA": 36.79,
-          "xG_per_game": 1.757,
-          "xGA_per_game": 1.051,
-          "xGD": 24.71,
-          "xGD_per_game": 0.706,
-          "xPoints": 62.33
+          "points": 65,
+          "xG": 62.56,
+          "xGA": 38.08,
+          "xG_per_game": 1.738,
+          "xGA_per_game": 1.058,
+          "xGD": 24.48,
+          "xGD_per_game": 0.68,
+          "xPoints": 63.45
         },
         {
           "team_slug": "AC_Milan",
@@ -1317,20 +1317,20 @@
         {
           "team_slug": "Verona",
           "team": "Verona",
-          "games_played": 35,
+          "games_played": 36,
           "wins": 3,
           "draws": 11,
-          "losses": 21,
+          "losses": 22,
           "scored": 24,
-          "missed": 57,
+          "missed": 58,
           "points": 20,
-          "xG": 34.59,
-          "xGA": 48.12,
-          "xG_per_game": 0.988,
-          "xGA_per_game": 1.375,
-          "xGD": -13.53,
-          "xGD_per_game": -0.387,
-          "xPoints": 39.09
+          "xG": 35.88,
+          "xGA": 49.18,
+          "xG_per_game": 0.997,
+          "xGA_per_game": 1.366,
+          "xGD": -13.3,
+          "xGD_per_game": -0.369,
+          "xPoints": 40.64
         },
         {
           "team_slug": "Sassuolo",

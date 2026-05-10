@@ -2,21 +2,21 @@
   "league": "nrl",
   "source": "https://www.nrl.com/ladder/",
   "strategy": "playwright_nrl",
-  "fetched_at": "2026-05-10T13:03:16.078787+09:00",
+  "fetched_at": "2026-05-10T22:47:59.528265+09:00",
   "team_count": 17,
   "teams": [
     {
       "team": "Panthers",
-      "gp": 9,
-      "pts": 16,
-      "w": 8,
+      "gp": 10,
+      "pts": 18,
+      "w": 9,
       "d": 0,
       "l": 1,
       "byes": 0,
-      "pf": 291,
-      "pa": 122,
-      "pd": 169,
-      "pd_per_game": 18.78
+      "pf": 321,
+      "pa": 140,
+      "pd": 181,
+      "pd_per_game": 18.1
     },
     {
       "team": "Warriors",
@@ -72,16 +72,16 @@
     },
     {
       "team": "Wests Tigers",
-      "gp": 8,
+      "gp": 9,
       "pts": 12,
       "w": 5,
       "d": 0,
-      "l": 3,
+      "l": 4,
       "byes": 1,
-      "pf": 219,
-      "pa": 179,
-      "pd": 40,
-      "pd_per_game": 5.0
+      "pf": 235,
+      "pa": 223,
+      "pd": 12,
+      "pd_per_game": 1.33
     },
     {
       "team": "Cowboys",
@@ -150,16 +150,16 @@
     },
     {
       "team": "Raiders",
-      "gp": 9,
+      "gp": 10,
       "pts": 8,
       "w": 4,
       "d": 0,
-      "l": 5,
+      "l": 6,
       "byes": 0,
-      "pf": 183,
-      "pa": 249,
-      "pd": -66,
-      "pd_per_game": -7.33
+      "pf": 201,
+      "pa": 279,
+      "pd": -78,
+      "pd_per_game": -7.8
     },
     {
       "team": "Bulldogs",
@@ -188,6 +188,19 @@
       "pd_per_game": -11.8
     },
     {
+      "team": "Storm",
+      "gp": 10,
+      "pts": 6,
+      "w": 3,
+      "d": 0,
+      "l": 7,
+      "byes": 0,
+      "pf": 242,
+      "pa": 276,
+      "pd": -34,
+      "pd_per_game": -3.4
+    },
+    {
       "team": "Titans",
       "gp": 9,
       "pts": 6,
@@ -197,19 +210,6 @@
       "byes": 1,
       "pf": 170,
       "pa": 232,
-      "pd": -62,
-      "pd_per_game": -6.89
-    },
-    {
-      "team": "Storm",
-      "gp": 9,
-      "pts": 4,
-      "w": 2,
-      "d": 0,
-      "l": 7,
-      "byes": 0,
-      "pf": 198,
-      "pa": 260,
       "pd": -62,
       "pd_per_game": -6.89
     },
