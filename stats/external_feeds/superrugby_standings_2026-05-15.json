@@ -2,9 +2,21 @@
   "league": "superrugby",
   "source": "https://en.wikipedia.org/wiki/2026_Super_Rugby_Pacific_season",
   "strategy": "wikipedia_table",
-  "fetched_at": "2026-05-15T13:10:28.560981+09:00",
+  "fetched_at": "2026-05-15T23:28:24.924170+09:00",
   "team_count": 11,
   "teams": [
+    {
+      "team": "Chiefs",
+      "gp": 12,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 424,
+      "pa": "Chiefs",
+      "pd": 169,
+      "pts": 45,
+      "pd_per_game": 14.08
+    },
     {
       "team": "Hurricanes",
       "gp": 11,
@@ -16,18 +28,6 @@
       "pd": 257,
       "pts": 45,
       "pd_per_game": 23.36
-    },
-    {
-      "team": "Chiefs",
-      "gp": 11,
-      "w": null,
-      "l": null,
-      "d": null,
-      "pf": 382,
-      "pa": "Chiefs",
-      "pd": 139,
-      "pts": 40,
-      "pd_per_game": 12.64
     },
     {
       "team": "Blues",
@@ -78,13 +78,13 @@
     },
     {
       "team": "Highlanders",
-      "gp": 12,
+      "gp": 13,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 287,
+      "pf": 299,
       "pa": "Highlanders",
-      "pd": "−50",
+      "pd": "−80",
       "pts": 24
     },
     {
