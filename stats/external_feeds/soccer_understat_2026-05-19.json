@@ -1,6 +1,6 @@
 {
   "source_group": "understat.com",
-  "fetched_at": "2026-05-19T00:53:08.998705+09:00",
+  "fetched_at": "2026-05-19T13:18:23.572157+09:00",
   "season": "2025-2026",
   "leagues": {
     "Premier League": {
@@ -12,20 +12,20 @@
         {
           "team_slug": "Arsenal",
           "team": "Arsenal",
-          "games_played": 36,
-          "wins": 24,
+          "games_played": 37,
+          "wins": 25,
           "draws": 7,
           "losses": 5,
-          "scored": 68,
+          "scored": 69,
           "missed": 26,
-          "points": 79,
-          "xG": 72.35,
-          "xGA": 31.93,
-          "xG_per_game": 2.01,
-          "xGA_per_game": 0.887,
-          "xGD": 40.42,
-          "xGD_per_game": 1.123,
-          "xPoints": 74.71
+          "points": 82,
+          "xG": 73.58,
+          "xGA": 32.13,
+          "xG_per_game": 1.989,
+          "xGA_per_game": 0.868,
+          "xGD": 41.45,
+          "xGD_per_game": 1.12,
+          "xPoints": 77.04
         },
         {
           "team_slug": "Manchester_City",
@@ -354,20 +354,20 @@
         {
           "team_slug": "Burnley",
           "team": "Burnley",
-          "games_played": 36,
+          "games_played": 37,
           "wins": 4,
           "draws": 9,
-          "losses": 23,
+          "losses": 24,
           "scored": 37,
-          "missed": 73,
+          "missed": 74,
           "points": 21,
-          "xG": 35.46,
-          "xGA": 78.51,
-          "xG_per_game": 0.985,
-          "xGA_per_game": 2.181,
-          "xGD": -43.05,
-          "xGD_per_game": -1.196,
-          "xPoints": 23.48
+          "xG": 35.66,
+          "xGA": 79.74,
+          "xG_per_game": 0.964,
+          "xGA_per_game": 2.155,
+          "xGD": -44.08,
+          "xGD_per_game": -1.191,
+          "xPoints": 23.89
         }
       ],
       "team_count": 20
