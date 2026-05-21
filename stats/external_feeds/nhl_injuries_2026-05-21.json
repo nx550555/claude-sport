@@ -1,9 +1,25 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-05-21T00:49:29.824229+09:00",
+  "fetched_at": "2026-05-21T13:26:51.095515+09:00",
   "starting_goalies": [],
   "injuries": [
+    {
+      "player": "Justin Danforth",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": "May 20: Danforth (kneecap) was nearly healthy at the end of the Sabres' playoff run, Heather Engel of NHL.com reports Wednesday."
+    },
+    {
+      "player": "Jiri Kulich",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": "May 19: Kulich (ear) said Tuesday that he had his blood clot removed and will be able to play hockey again, per Bill Hoppe of the Olean Times Herald."
+    },
     {
       "player": "Shea Weber",
       "team": null,
@@ -11,22 +27,6 @@
       "estimated_return": "Jul 1",
       "status": "Injured Reserve",
       "comment": "Sep 30: ir-lt"
-    },
-    {
-      "player": "Sam Malinski",
-      "team": null,
-      "position": "D",
-      "estimated_return": "May 20",
-      "status": "Day-To-Day",
-      "comment": "May 17: Malinski (upper body) participated fully in Sunday's practice and is trending toward being ready for Game 1 against Vegas on Wednesday, Evan Rawal of the Denver Gazette reports."
-    },
-    {
-      "player": "Artturi Lehkonen",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "May 20",
-      "status": "Day-To-Day",
-      "comment": ""
     },
     {
       "player": "Tyler Seguin",
