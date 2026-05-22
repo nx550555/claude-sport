@@ -2,7 +2,7 @@
   "league": "superrugby",
   "source": "https://en.wikipedia.org/wiki/2026_Super_Rugby_Pacific_season",
   "strategy": "wikipedia_table",
-  "fetched_at": "2026-05-22T13:21:25.068883+09:00",
+  "fetched_at": "2026-05-22T23:57:06.642967+09:00",
   "team_count": 11,
   "teams": [
     {
@@ -19,15 +19,15 @@
     },
     {
       "team": "Chiefs",
-      "gp": 12,
+      "gp": 13,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 424,
+      "pf": 456,
       "pa": "Chiefs",
-      "pd": 169,
-      "pts": 45,
-      "pd_per_game": 14.08
+      "pd": 165,
+      "pts": 46,
+      "pd_per_game": 12.69
     },
     {
       "team": "Blues",
@@ -43,27 +43,27 @@
     },
     {
       "team": "Crusaders",
-      "gp": 12,
+      "gp": 13,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 405,
+      "pf": 441,
       "pa": "Crusaders",
-      "pd": 63,
-      "pts": 32,
-      "pd_per_game": 5.25
+      "pd": 67,
+      "pts": 36,
+      "pd_per_game": 5.15
     },
     {
       "team": "Brumbies",
-      "gp": 12,
+      "gp": 13,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 362,
+      "pf": 383,
       "pa": "Brumbies",
-      "pd": 24,
-      "pts": 29,
-      "pd_per_game": 2.0
+      "pd": 31,
+      "pts": 33,
+      "pd_per_game": 2.38
     },
     {
       "team": "Reds",
@@ -78,14 +78,14 @@
     },
     {
       "team": "Waratahs",
-      "gp": 12,
+      "gp": 13,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 314,
+      "pf": 328,
       "pa": "Waratahs",
-      "pd": "−36",
-      "pts": 26
+      "pd": "−43",
+      "pts": 27
     },
     {
       "team": "Highlanders",

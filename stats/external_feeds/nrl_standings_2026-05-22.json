@@ -2,7 +2,7 @@
   "league": "nrl",
   "source": "https://www.nrl.com/ladder/",
   "strategy": "playwright_nrl",
-  "fetched_at": "2026-05-22T13:21:24.855641+09:00",
+  "fetched_at": "2026-05-22T23:57:06.498773+09:00",
   "team_count": 17,
   "teams": [
     {
@@ -162,6 +162,19 @@
       "pd_per_game": -7.82
     },
     {
+      "team": "Bulldogs",
+      "gp": 11,
+      "pts": 10,
+      "w": 4,
+      "d": 0,
+      "l": 7,
+      "byes": 1,
+      "pf": 203,
+      "pa": 296,
+      "pd": -93,
+      "pd_per_game": -8.45
+    },
+    {
       "team": "Eels",
       "gp": 11,
       "pts": 10,
@@ -176,29 +189,16 @@
     },
     {
       "team": "Storm",
-      "gp": 11,
+      "gp": 12,
       "pts": 8,
       "w": 4,
       "d": 0,
-      "l": 7,
+      "l": 8,
       "byes": 0,
-      "pf": 276,
-      "pa": 284,
-      "pd": -8,
-      "pd_per_game": -0.73
-    },
-    {
-      "team": "Bulldogs",
-      "gp": 10,
-      "pts": 8,
-      "w": 3,
-      "d": 0,
-      "l": 7,
-      "byes": 1,
-      "pf": 173,
-      "pa": 276,
-      "pd": -103,
-      "pd_per_game": -10.3
+      "pf": 296,
+      "pa": 314,
+      "pd": -18,
+      "pd_per_game": -1.5
     },
     {
       "team": "Titans",
