@@ -2,7 +2,7 @@
   "league": "superleague",
   "source": "https://en.wikipedia.org/wiki/2026_Super_League_season",
   "strategy": "wikipedia_table",
-  "fetched_at": "2026-05-22T00:46:43.005839+09:00",
+  "fetched_at": "2026-05-22T13:21:25.574653+09:00",
   "team_count": 14,
   "teams": [
     {
@@ -16,6 +16,18 @@
       "pd": 58,
       "pts": 18,
       "pd_per_game": 5.27
+    },
+    {
+      "team": "Hull KR[a]",
+      "gp": 11,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 378,
+      "pa": "Hull KR[a]",
+      "pd": 215,
+      "pts": 16,
+      "pd_per_game": 19.55
     },
     {
       "team": "Leeds Rhinos",
@@ -42,30 +54,6 @@
       "pd_per_game": 16.6
     },
     {
-      "team": "Hull KR[a]",
-      "gp": 10,
-      "w": null,
-      "l": null,
-      "d": null,
-      "pf": 316,
-      "pa": "Hull KR[a]",
-      "pd": 157,
-      "pts": 14,
-      "pd_per_game": 15.7
-    },
-    {
-      "team": "Wigan Warriors",
-      "gp": 11,
-      "w": null,
-      "l": null,
-      "d": null,
-      "pf": 295,
-      "pa": "Wigan Warriors",
-      "pd": 102,
-      "pts": 14,
-      "pd_per_game": 9.27
-    },
-    {
       "team": "Wakefield Trinity",
       "gp": 11,
       "w": null,
@@ -76,6 +64,18 @@
       "pd": 107,
       "pts": 14,
       "pd_per_game": 9.73
+    },
+    {
+      "team": "Wigan Warriors",
+      "gp": 12,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 299,
+      "pa": "Wigan Warriors",
+      "pd": 44,
+      "pts": 14,
+      "pd_per_game": 3.67
     },
     {
       "team": "Leigh Leopards",

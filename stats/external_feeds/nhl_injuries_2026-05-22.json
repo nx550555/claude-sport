@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-05-22T00:46:51.411251+09:00",
+  "fetched_at": "2026-05-22T13:21:35.962271+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -275,6 +275,14 @@
       "estimated_return": "Sep 15",
       "status": "Injured Reserve",
       "comment": "Oct 28: Forbort (undisclosed) was placed on long-term injured reserve Tuesday."
+    },
+    {
+      "player": "Mark Stone",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "May 22",
+      "status": "Day-To-Day",
+      "comment": ""
     }
   ]
 }
