@@ -2,7 +2,7 @@
   "league": "nrl",
   "source": "https://www.nrl.com/ladder/",
   "strategy": "playwright_nrl",
-  "fetched_at": "2026-05-24T13:21:15.897271+09:00",
+  "fetched_at": "2026-05-24T22:52:08.815878+09:00",
   "team_count": 17,
   "teams": [
     {
@@ -71,17 +71,30 @@
       "pd_per_game": 2.55
     },
     {
+      "team": "Cowboys",
+      "gp": 12,
+      "pts": 16,
+      "w": 8,
+      "d": 0,
+      "l": 4,
+      "byes": 0,
+      "pf": 317,
+      "pa": 290,
+      "pd": 27,
+      "pd_per_game": 2.25
+    },
+    {
       "team": "Rabbitohs",
-      "gp": 10,
+      "gp": 11,
       "pts": 14,
       "w": 6,
       "d": 0,
-      "l": 4,
+      "l": 5,
       "byes": 1,
-      "pf": 306,
-      "pa": 236,
-      "pd": 70,
-      "pd_per_game": 7.0
+      "pf": 324,
+      "pa": 266,
+      "pd": 58,
+      "pd_per_game": 5.27
     },
     {
       "team": "Dolphins",
@@ -108,19 +121,6 @@
       "pa": 260,
       "pd": 34,
       "pd_per_game": 3.4
-    },
-    {
-      "team": "Cowboys",
-      "gp": 11,
-      "pts": 14,
-      "w": 7,
-      "d": 0,
-      "l": 4,
-      "byes": 0,
-      "pf": 287,
-      "pa": 272,
-      "pd": 15,
-      "pd_per_game": 1.36
     },
     {
       "team": "Wests Tigers",

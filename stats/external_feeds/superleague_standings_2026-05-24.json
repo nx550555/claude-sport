@@ -2,7 +2,7 @@
   "league": "superleague",
   "source": "https://en.wikipedia.org/wiki/2026_Super_League_season",
   "strategy": "wikipedia_table",
-  "fetched_at": "2026-05-24T13:21:16.974736+09:00",
+  "fetched_at": "2026-05-24T22:52:09.117826+09:00",
   "team_count": 14,
   "teams": [
     {
@@ -55,15 +55,15 @@
     },
     {
       "team": "Wakefield Trinity",
-      "gp": 11,
+      "gp": 12,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 286,
+      "pf": 308,
       "pa": "Wakefield Trinity",
-      "pd": 107,
-      "pts": 14,
-      "pd_per_game": 9.73
+      "pd": 111,
+      "pts": 16,
+      "pd_per_game": 9.25
     },
     {
       "team": "Wigan Warriors",
@@ -90,14 +90,14 @@
     },
     {
       "team": "Catalans Dragons",
-      "gp": 11,
+      "gp": 12,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 211,
+      "pf": 247,
       "pa": "Catalans Dragons",
-      "pd": "−108",
-      "pts": 10
+      "pd": "−94",
+      "pts": 12
     },
     {
       "team": "Castleford Tigers",
@@ -134,24 +134,24 @@
     },
     {
       "team": "York Knights",
-      "gp": 11,
+      "gp": 12,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 208,
+      "pf": 230,
       "pa": "York Knights",
-      "pd": "−89",
+      "pd": "−103",
       "pts": 6
     },
     {
       "team": "Toulouse Olympique",
-      "gp": 11,
+      "gp": 12,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 168,
+      "pf": 186,
       "pa": "Toulouse Olympique",
-      "pd": "−110",
+      "pd": "−114",
       "pts": 6
     },
     {
