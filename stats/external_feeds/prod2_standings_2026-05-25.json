@@ -1,0 +1,192 @@
+{
+  "league": "prod2",
+  "source": "https://en.wikipedia.org/wiki/2025%E2%80%9326_Rugby_Pro_D2_season",
+  "strategy": "wikipedia_table",
+  "fetched_at": "2026-05-25T13:43:32.928724+09:00",
+  "team_count": 16,
+  "teams": [
+    {
+      "team": "Vannes",
+      "gp": 30,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 1092,
+      "pa": 543,
+      "pd": 549,
+      "pts": 116,
+      "pd_per_game": 18.3
+    },
+    {
+      "team": "Colomiers",
+      "gp": 30,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 847,
+      "pa": 522,
+      "pd": 325,
+      "pts": 95,
+      "pd_per_game": 10.83
+    },
+    {
+      "team": "Provence",
+      "gp": 30,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 905,
+      "pa": 726,
+      "pd": 179,
+      "pts": 92,
+      "pd_per_game": 5.97
+    },
+    {
+      "team": "Oyonnax",
+      "gp": 30,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 953,
+      "pa": 659,
+      "pd": 294,
+      "pts": 86,
+      "pd_per_game": 9.8
+    },
+    {
+      "team": "Valence Romans",
+      "gp": 30,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 803,
+      "pa": 760,
+      "pd": 43,
+      "pts": 84,
+      "pd_per_game": 1.43
+    },
+    {
+      "team": "Brive",
+      "gp": 30,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 906,
+      "pa": 642,
+      "pd": 264,
+      "pts": 83,
+      "pd_per_game": 8.8
+    },
+    {
+      "team": "Agen",
+      "gp": 30,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 796,
+      "pa": 750,
+      "pd": 46,
+      "pts": 72,
+      "pd_per_game": 1.53
+    },
+    {
+      "team": "Grenoble",
+      "gp": 30,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 739,
+      "pa": 829,
+      "pd": "−90",
+      "pts": 62
+    },
+    {
+      "team": "Soyaux Angoulême",
+      "gp": 30,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 576,
+      "pa": 770,
+      "pd": "−194",
+      "pts": 59
+    },
+    {
+      "team": "Biarritz",
+      "gp": 30,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 762,
+      "pa": 879,
+      "pd": "−117",
+      "pts": 54
+    },
+    {
+      "team": "Dax",
+      "gp": 30,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 706,
+      "pa": 742,
+      "pd": "−36",
+      "pts": 55
+    },
+    {
+      "team": "Béziers",
+      "gp": 30,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 657,
+      "pa": 804,
+      "pd": "−147",
+      "pts": 56
+    },
+    {
+      "team": "Nevers",
+      "gp": 30,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 760,
+      "pa": 1024,
+      "pd": "−264",
+      "pts": 53
+    },
+    {
+      "team": "Aurillac",
+      "gp": 30,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 718,
+      "pa": 908,
+      "pd": "−190",
+      "pts": 53
+    },
+    {
+      "team": "Mont-de-Marsan",
+      "gp": 30,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 701,
+      "pa": 950,
+      "pd": "−249",
+      "pts": 51
+    },
+    {
+      "team": "Carcassonne",
+      "gp": 30,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 572,
+      "pa": 985,
+      "pd": "−413",
+      "pts": 35
+    }
+  ]
+}
