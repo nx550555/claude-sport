@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-05-27T01:02:16.652381+09:00",
+  "fetched_at": "2026-05-27T13:41:48.776581+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -27,22 +27,6 @@
       "estimated_return": "Jul 1",
       "status": "Injured Reserve",
       "comment": "Sep 30: ir-lt"
-    },
-    {
-      "player": "Valeri Nichushkin",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "May 26",
-      "status": "Day-To-Day",
-      "comment": "May 25: Nichushkin underwent treatment Monday for a lower-body injury, Eric Francis of Sportsnet reports."
-    },
-    {
-      "player": "Nathan MacKinnon",
-      "team": null,
-      "position": "C",
-      "estimated_return": "May 26",
-      "status": "Day-To-Day",
-      "comment": "May 25: MacKinnon (lower body) is undergoing evaluations and treatments, according to Evan Rawal of the Denver Gazette on Monday."
     },
     {
       "player": "Tyler Seguin",
