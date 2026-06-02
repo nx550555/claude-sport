@@ -1,0 +1,21 @@
+{
+  "source": "http://api.clubelo.com/2026-06-03",
+  "fetched_at": "2026-06-03T01:50:28.464430+09:00",
+  "snapshot_date": "2026-06-03",
+  "leagues": {
+    "Premier League": [],
+    "La Liga": [],
+    "Bundesliga": [],
+    "Serie A": [],
+    "Ligue 1": []
+  },
+  "clubs": {},
+  "club_count": 0,
+  "league_counts": {
+    "Premier League": 0,
+    "La Liga": 0,
+    "Bundesliga": 0,
+    "Serie A": 0,
+    "Ligue 1": 0
+  }
+}
