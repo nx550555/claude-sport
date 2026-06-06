@@ -2,7 +2,7 @@
   "league": "superleague",
   "source": "https://en.wikipedia.org/wiki/2026_Super_League_season",
   "strategy": "wikipedia_table",
-  "fetched_at": "2026-06-06T00:22:28.545333+09:00",
+  "fetched_at": "2026-06-06T13:13:14.209874+09:00",
   "team_count": 14,
   "teams": [
     {
@@ -19,15 +19,15 @@
     },
     {
       "team": "Warrington Wolves[a]",
-      "gp": 11,
+      "gp": 12,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 354,
+      "pf": 366,
       "pa": "Warrington Wolves[a]",
-      "pd": 180,
-      "pts": 18,
-      "pd_per_game": 16.36
+      "pd": 188,
+      "pts": 20,
+      "pd_per_game": 15.67
     },
     {
       "team": "St Helens",
@@ -79,14 +79,14 @@
     },
     {
       "team": "Leigh Leopards",
-      "gp": 12,
+      "gp": 13,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 240,
+      "pf": 264,
       "pa": "Leigh Leopards",
-      "pd": "−16",
-      "pts": 12
+      "pd": "−6",
+      "pts": 14
     },
     {
       "team": "Catalans Dragons",
@@ -100,47 +100,47 @@
       "pts": 12
     },
     {
-      "team": "Castleford Tigers",
-      "gp": 12,
+      "team": "Bradford Bulls",
+      "gp": 13,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 206,
-      "pa": "Castleford Tigers",
-      "pd": "−150",
+      "pf": 250,
+      "pa": "Bradford Bulls",
+      "pd": "−95",
       "pts": 10
     },
     {
-      "team": "Hull F.C.",
-      "gp": 12,
-      "w": null,
-      "l": null,
-      "d": null,
-      "pf": 201,
-      "pa": "Hull F.C.",
-      "pd": "−48",
-      "pts": 8
-    },
-    {
-      "team": "Bradford Bulls",
-      "gp": 12,
+      "team": "Castleford Tigers",
+      "gp": 13,
       "w": null,
       "l": null,
       "d": null,
       "pf": 220,
-      "pa": "Bradford Bulls",
-      "pd": "−105",
+      "pa": "Castleford Tigers",
+      "pd": "−160",
+      "pts": 10
+    },
+    {
+      "team": "Hull F.C.",
+      "gp": 13,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 205,
+      "pa": "Hull F.C.",
+      "pd": "−56",
       "pts": 8
     },
     {
       "team": "York Knights",
-      "gp": 12,
+      "gp": 13,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 230,
+      "pf": 250,
       "pa": "York Knights",
-      "pd": "−103",
+      "pd": "−113",
       "pts": 6
     },
     {
