@@ -2,21 +2,21 @@
   "league": "nrl",
   "source": "https://www.nrl.com/ladder/",
   "strategy": "playwright_nrl",
-  "fetched_at": "2026-06-07T13:49:03.832143+09:00",
+  "fetched_at": "2026-06-07T23:12:20.579160+09:00",
   "team_count": 17,
   "teams": [
     {
       "team": "Panthers",
-      "gp": 12,
-      "pts": 24,
-      "w": 11,
+      "gp": 13,
+      "pts": 26,
+      "w": 12,
       "d": 0,
       "l": 1,
       "byes": 1,
-      "pf": 369,
+      "pf": 437,
       "pa": 164,
-      "pd": 205,
-      "pd_per_game": 17.08
+      "pd": 273,
+      "pd_per_game": 21.0
     },
     {
       "team": "Warriors",
@@ -71,6 +71,19 @@
       "pd_per_game": 6.42
     },
     {
+      "team": "Sharks",
+      "gp": 12,
+      "pts": 18,
+      "w": 7,
+      "d": 0,
+      "l": 5,
+      "byes": 2,
+      "pf": 356,
+      "pa": 294,
+      "pd": 62,
+      "pd_per_game": 5.17
+    },
+    {
       "team": "Knights",
       "gp": 13,
       "pts": 18,
@@ -97,32 +110,6 @@
       "pd_per_game": 3.67
     },
     {
-      "team": "Sharks",
-      "gp": 11,
-      "pts": 16,
-      "w": 6,
-      "d": 0,
-      "l": 5,
-      "byes": 2,
-      "pf": 322,
-      "pa": 282,
-      "pd": 40,
-      "pd_per_game": 3.64
-    },
-    {
-      "team": "Wests Tigers",
-      "gp": 11,
-      "pts": 16,
-      "w": 6,
-      "d": 0,
-      "l": 5,
-      "byes": 2,
-      "pf": 275,
-      "pa": 285,
-      "pd": -10,
-      "pd_per_game": -0.91
-    },
-    {
       "team": "Cowboys",
       "gp": 14,
       "pts": 16,
@@ -134,6 +121,19 @@
       "pa": 356,
       "pd": -13,
       "pd_per_game": -0.93
+    },
+    {
+      "team": "Wests Tigers",
+      "gp": 12,
+      "pts": 16,
+      "w": 6,
+      "d": 0,
+      "l": 6,
+      "byes": 2,
+      "pf": 275,
+      "pa": 353,
+      "pd": -78,
+      "pd_per_game": -6.5
     },
     {
       "team": "Storm",
@@ -215,16 +215,16 @@
     },
     {
       "team": "Dragons",
-      "gp": 12,
+      "gp": 13,
       "pts": 4,
       "w": 1,
       "d": 0,
-      "l": 11,
+      "l": 12,
       "byes": 1,
-      "pf": 172,
-      "pa": 393,
-      "pd": -221,
-      "pd_per_game": -18.42
+      "pf": 184,
+      "pa": 427,
+      "pd": -243,
+      "pd_per_game": -18.69
     }
   ]
 }
