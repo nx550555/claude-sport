@@ -1,0 +1,86 @@
+{
+  "league": "ufl",
+  "source": "https://en.wikipedia.org/wiki/2026_UFL_season",
+  "strategy": "wikipedia_table",
+  "fetched_at": "2026-06-10T00:22:51.314520+09:00",
+  "team_count": 7,
+  "teams": [
+    {
+      "team": "Columbus Aviators",
+      "gp": null,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": "—N/a",
+      "pa": "—.mw-parser-output .sr-only{border:0;clip:rect(0,0,0,0);clip-path:polygon(0px 0px,0px 0px,0px 0px);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap}N/a",
+      "pd": null,
+      "pts": null
+    },
+    {
+      "team": "Louisville Kings",
+      "gp": null,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": "—N/a",
+      "pa": "—N/a",
+      "pd": null,
+      "pts": null
+    },
+    {
+      "team": "Orlando Storm",
+      "gp": null,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": "Reassigned",
+      "pa": "—N/a",
+      "pd": null,
+      "pts": null
+    },
+    {
+      "team": "St. Louis Battlehawks",
+      "gp": null,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": null,
+      "pa": "Anthony Becht",
+      "pd": null,
+      "pts": null
+    },
+    {
+      "team": "Houston Gamblers",
+      "gp": null,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": "Fired",
+      "pa": "Curtis Johnson",
+      "pd": null,
+      "pts": null
+    },
+    {
+      "team": "Dallas Renegades",
+      "gp": null,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": "Retired",
+      "pa": "Bob Stoops",
+      "pd": null,
+      "pts": null
+    },
+    {
+      "team": "Birmingham Stallions",
+      "gp": null,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": "Unclear",
+      "pa": "Skip Holtz",
+      "pd": null,
+      "pts": null
+    }
+  ]
+}
