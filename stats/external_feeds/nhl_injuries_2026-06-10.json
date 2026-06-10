@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-06-10T00:22:59.926284+09:00",
+  "fetched_at": "2026-06-10T13:27:32.811590+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -51,14 +51,6 @@
       "estimated_return": "Sep 15",
       "status": "Injured Reserve",
       "comment": "Dec 18: Bean (undisclosed) will need to undergo surgery and is expected to be sidelined indefinitely, Pat Steinberg of Sportsnet 960 The Fan reports Thursday."
-    },
-    {
-      "player": "William Carrier",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Jun 9",
-      "status": "Day-To-Day",
-      "comment": ""
     },
     {
       "player": "Ryan Ellis",

@@ -1,7 +1,7 @@
 {
   "tour": "atp",
   "source_note": "tennisabstract Match Charting Project (MCP) Leaders - last 52 weeks",
-  "fetched_at": "2026-06-10T00:22:43.205875+09:00",
+  "fetched_at": "2026-06-10T13:27:14.212615+09:00",
   "serve": {
     "source": "https://tennisabstract.com/reports/mcp_leaders_serve_men_last52.html",
     "headers": [
