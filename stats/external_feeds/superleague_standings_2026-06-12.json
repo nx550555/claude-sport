@@ -2,9 +2,21 @@
   "league": "superleague",
   "source": "https://en.wikipedia.org/wiki/2026_Super_League_season",
   "strategy": "wikipedia_table",
-  "fetched_at": "2026-06-12T01:20:39.143850+09:00",
+  "fetched_at": "2026-06-12T13:52:23.588462+09:00",
   "team_count": 14,
   "teams": [
+    {
+      "team": "Warrington Wolves[a]",
+      "gp": 13,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 384,
+      "pa": "Warrington Wolves[a]",
+      "pd": 200,
+      "pts": 22,
+      "pd_per_game": 15.38
+    },
     {
       "team": "Leeds Rhinos",
       "gp": 13,
@@ -16,18 +28,6 @@
       "pd": 232,
       "pts": 20,
       "pd_per_game": 17.85
-    },
-    {
-      "team": "Warrington Wolves[a]",
-      "gp": 12,
-      "w": null,
-      "l": null,
-      "d": null,
-      "pf": 366,
-      "pa": "Warrington Wolves[a]",
-      "pd": 188,
-      "pts": 20,
-      "pd_per_game": 15.67
     },
     {
       "team": "Wakefield Trinity",
@@ -43,15 +43,15 @@
     },
     {
       "team": "St Helens",
-      "gp": 13,
+      "gp": 14,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 304,
+      "pf": 310,
       "pa": "St Helens",
-      "pd": 30,
+      "pd": 18,
       "pts": 18,
-      "pd_per_game": 2.31
+      "pd_per_game": 1.29
     },
     {
       "team": "Hull KR[a]",
