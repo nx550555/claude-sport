@@ -2,9 +2,21 @@
   "league": "superleague",
   "source": "https://en.wikipedia.org/wiki/2026_Super_League_season",
   "strategy": "wikipedia_table",
-  "fetched_at": "2026-06-13T00:34:10.571657+09:00",
+  "fetched_at": "2026-06-13T13:40:58.361443+09:00",
   "team_count": 14,
   "teams": [
+    {
+      "team": "Leeds Rhinos",
+      "gp": 14,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 476,
+      "pa": "Leeds Rhinos",
+      "pd": 256,
+      "pts": 22,
+      "pd_per_game": 18.29
+    },
     {
       "team": "Warrington Wolves[a]",
       "gp": 13,
@@ -18,28 +30,40 @@
       "pd_per_game": 15.38
     },
     {
-      "team": "Leeds Rhinos",
+      "team": "Hull KR[a]",
       "gp": 13,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 428,
-      "pa": "Leeds Rhinos",
-      "pd": 232,
-      "pts": 20,
-      "pd_per_game": 17.85
+      "pf": 440,
+      "pa": "Hull KR[a]",
+      "pd": 245,
+      "pts": 18,
+      "pd_per_game": 18.85
+    },
+    {
+      "team": "Wigan Warriors",
+      "gp": 14,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 387,
+      "pa": "Wigan Warriors",
+      "pd": 106,
+      "pts": 18,
+      "pd_per_game": 7.57
     },
     {
       "team": "Wakefield Trinity",
-      "gp": 13,
+      "gp": 14,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 334,
+      "pf": 344,
       "pa": "Wakefield Trinity",
-      "pd": 113,
+      "pd": 75,
       "pts": 18,
-      "pd_per_game": 8.69
+      "pd_per_game": 5.36
     },
     {
       "team": "St Helens",
@@ -52,30 +76,6 @@
       "pd": 18,
       "pts": 18,
       "pd_per_game": 1.29
-    },
-    {
-      "team": "Hull KR[a]",
-      "gp": 12,
-      "w": null,
-      "l": null,
-      "d": null,
-      "pf": 402,
-      "pa": "Hull KR[a]",
-      "pd": 213,
-      "pts": 16,
-      "pd_per_game": 17.75
-    },
-    {
-      "team": "Wigan Warriors",
-      "gp": 13,
-      "w": null,
-      "l": null,
-      "d": null,
-      "pf": 339,
-      "pa": "Wigan Warriors",
-      "pd": 68,
-      "pts": 16,
-      "pd_per_game": 5.23
     },
     {
       "team": "Leigh Leopards",
@@ -134,24 +134,24 @@
     },
     {
       "team": "Toulouse Olympique",
-      "gp": 13,
+      "gp": 14,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 222,
+      "pf": 246,
       "pa": "Toulouse Olympique",
-      "pd": "−94",
+      "pd": "−118",
       "pts": 8
     },
     {
       "team": "York Knights",
-      "gp": 13,
+      "gp": 14,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 250,
+      "pf": 256,
       "pa": "York Knights",
-      "pd": "−113",
+      "pd": "−145",
       "pts": 6
     },
     {
