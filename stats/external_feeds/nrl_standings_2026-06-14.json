@@ -2,7 +2,7 @@
   "league": "nrl",
   "source": "https://www.nrl.com/ladder/",
   "strategy": "playwright_nrl",
-  "fetched_at": "2026-06-14T13:59:31.277361+09:00",
+  "fetched_at": "2026-06-14T23:22:36.827942+09:00",
   "team_count": 17,
   "teams": [
     {
@@ -124,16 +124,16 @@
     },
     {
       "team": "Wests Tigers",
-      "gp": 12,
-      "pts": 16,
-      "w": 6,
+      "gp": 13,
+      "pts": 18,
+      "w": 7,
       "d": 0,
       "l": 6,
       "byes": 2,
-      "pf": 275,
-      "pa": 353,
-      "pd": -78,
-      "pd_per_game": -6.5
+      "pf": 311,
+      "pa": 381,
+      "pd": -70,
+      "pd_per_game": -5.38
     },
     {
       "team": "Storm",
@@ -202,16 +202,16 @@
     },
     {
       "team": "Titans",
-      "gp": 12,
+      "gp": 13,
       "pts": 10,
       "w": 3,
       "d": 0,
-      "l": 9,
+      "l": 10,
       "byes": 2,
-      "pf": 220,
-      "pa": 303,
-      "pd": -83,
-      "pd_per_game": -6.92
+      "pf": 248,
+      "pa": 339,
+      "pd": -91,
+      "pd_per_game": -7.0
     },
     {
       "team": "Dragons",
