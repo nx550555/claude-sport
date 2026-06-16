@@ -1,7 +1,7 @@
 {
   "source": "https://tennisabstract.com/reports/atp_elo_ratings.html",
   "tour": "atp",
-  "fetched_at": "2026-06-16T02:25:29.143391+09:00",
+  "fetched_at": "2026-06-16T14:21:34.547143+09:00",
   "player_count": 526,
   "columns_note": "elo=全体 / hard_elo=ハード / clay_elo=クレー / grass_elo=芝。いずれも rank と レーティング値。",
   "players": [
