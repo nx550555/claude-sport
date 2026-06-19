@@ -1,0 +1,171 @@
+{
+  "league": "top14",
+  "source": "https://en.wikipedia.org/wiki/2025%E2%80%9326_Top_14_season",
+  "strategy": "wikipedia_table",
+  "fetched_at": "2026-06-20T00:38:02.011110+09:00",
+  "team_count": 14,
+  "teams": [
+    {
+      "team": "Toulouse",
+      "gp": 26,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 981,
+      "pa": 617,
+      "pd": 364,
+      "pts": "86[a]",
+      "pd_per_game": 14.0
+    },
+    {
+      "team": "Montpellier",
+      "gp": 26,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 824,
+      "pa": 587,
+      "pd": 237,
+      "pts": 82,
+      "pd_per_game": 9.12
+    },
+    {
+      "team": "Stade Français",
+      "gp": 26,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 869,
+      "pa": 664,
+      "pd": 205,
+      "pts": 79,
+      "pd_per_game": 7.88
+    },
+    {
+      "team": "Pau",
+      "gp": 26,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 817,
+      "pa": 665,
+      "pd": 152,
+      "pts": 78,
+      "pd_per_game": 5.85
+    },
+    {
+      "team": "Racing 92",
+      "gp": 26,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 828,
+      "pa": 723,
+      "pd": 105,
+      "pts": 74,
+      "pd_per_game": 4.04
+    },
+    {
+      "team": "La Rochelle",
+      "gp": 26,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 824,
+      "pa": 634,
+      "pd": 190,
+      "pts": 72,
+      "pd_per_game": 7.31
+    },
+    {
+      "team": "Clermont",
+      "gp": 26,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 812,
+      "pa": 708,
+      "pd": 104,
+      "pts": 71,
+      "pd_per_game": 4.0
+    },
+    {
+      "team": "Bordeaux Bègles",
+      "gp": 26,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 822,
+      "pa": 719,
+      "pd": 103,
+      "pts": 70,
+      "pd_per_game": 3.96
+    },
+    {
+      "team": "Toulon",
+      "gp": 26,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 714,
+      "pa": 820,
+      "pd": "−106",
+      "pts": 59
+    },
+    {
+      "team": "Castres",
+      "gp": 26,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 660,
+      "pa": 751,
+      "pd": "−91",
+      "pts": 55
+    },
+    {
+      "team": "Lyon",
+      "gp": 26,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 734,
+      "pa": 774,
+      "pd": "−40",
+      "pts": 52
+    },
+    {
+      "team": "Bayonne",
+      "gp": 26,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 747,
+      "pa": 869,
+      "pd": "−122",
+      "pts": 51
+    },
+    {
+      "team": "Perpignan",
+      "gp": 26,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 550,
+      "pa": 797,
+      "pd": "−247",
+      "pts": 29
+    },
+    {
+      "team": "Montauban",
+      "gp": 26,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 495,
+      "pa": 1349,
+      "pd": "−854",
+      "pts": 7
+    }
+  ]
+}
