@@ -1,0 +1,170 @@
+{
+  "league": "superleague",
+  "source": "https://en.wikipedia.org/wiki/2026_Super_League_season",
+  "strategy": "wikipedia_table",
+  "fetched_at": "2026-06-23T02:09:11.392552+09:00",
+  "team_count": 14,
+  "teams": [
+    {
+      "team": "Leeds Rhinos",
+      "gp": 15,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 510,
+      "pa": "Leeds Rhinos",
+      "pd": 284,
+      "pts": 24,
+      "pd_per_game": 18.93
+    },
+    {
+      "team": "Warrington Wolves[b]",
+      "gp": 14,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 390,
+      "pa": "Warrington Wolves[b]",
+      "pd": 172,
+      "pts": 22,
+      "pd_per_game": 12.29
+    },
+    {
+      "team": "Hull KR[b]",
+      "gp": 14,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 462,
+      "pa": "Hull KR[b]",
+      "pd": 259,
+      "pts": 20,
+      "pd_per_game": 18.5
+    },
+    {
+      "team": "Wigan Warriors",
+      "gp": 15,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 459,
+      "pa": "Wigan Warriors",
+      "pd": 158,
+      "pts": 20,
+      "pd_per_game": 10.53
+    },
+    {
+      "team": "Wakefield Trinity",
+      "gp": 15,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 380,
+      "pa": "Wakefield Trinity",
+      "pd": 101,
+      "pts": 20,
+      "pd_per_game": 6.73
+    },
+    {
+      "team": "St Helens",
+      "gp": 15,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 348,
+      "pa": "St Helens",
+      "pd": 50,
+      "pts": 20,
+      "pd_per_game": 3.33
+    },
+    {
+      "team": "Leigh Leopards",
+      "gp": 15,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 310,
+      "pa": "Leigh Leopards",
+      "pd": 6,
+      "pts": 16,
+      "pd_per_game": 0.4
+    },
+    {
+      "team": "Catalans Dragons",
+      "gp": 15,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 331,
+      "pa": "Catalans Dragons",
+      "pd": "−102",
+      "pts": 16
+    },
+    {
+      "team": "Castleford Tigers",
+      "gp": 15,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 284,
+      "pa": "Castleford Tigers",
+      "pd": "−148",
+      "pts": 12
+    },
+    {
+      "team": "Hull F.C.",
+      "gp": 15,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 251,
+      "pa": "Hull F.C.",
+      "pd": "−58",
+      "pts": 10
+    },
+    {
+      "team": "Bradford Bulls",
+      "gp": 15,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 286,
+      "pa": "Bradford Bulls",
+      "pd": "−131",
+      "pts": 10
+    },
+    {
+      "team": "Toulouse Olympique",
+      "gp": 15,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 264,
+      "pa": "Toulouse Olympique",
+      "pd": "−136",
+      "pts": 8
+    },
+    {
+      "team": "York Knights",
+      "gp": 15,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 276,
+      "pa": "York Knights",
+      "pd": "−197",
+      "pts": 6
+    },
+    {
+      "team": "Huddersfield Giants",
+      "gp": 15,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 216,
+      "pa": "Huddersfield Giants",
+      "pd": "−258",
+      "pts": 4
+    }
+  ]
+}

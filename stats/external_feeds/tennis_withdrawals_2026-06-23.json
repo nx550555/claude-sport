@@ -1,0 +1,6 @@
+{
+  "source": "WebSearch-based (no structured feed available)",
+  "fetched_at": "2026-06-23T02:09:23.835470+09:00",
+  "note": "テニス選手の大会途中棄権は tennisabstract や ATP/WTA 公式でも構造化フィード提供なし。試合24h前に大会 Order of Play を WebSearch する運用を継続。",
+  "withdrawals": []
+}
