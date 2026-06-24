@@ -1,7 +1,7 @@
 {
   "source": "https://tennisabstract.com/reports/wta_elo_ratings.html",
   "tour": "wta",
-  "fetched_at": "2026-06-24T13:15:35.592595+09:00",
+  "fetched_at": "2026-06-24T23:49:54.385398+09:00",
   "player_count": 533,
   "columns_note": "elo=全体 / hard_elo=ハード / clay_elo=クレー / grass_elo=芝。いずれも rank と レーティング値。",
   "players": [
