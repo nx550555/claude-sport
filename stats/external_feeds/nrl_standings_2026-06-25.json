@@ -2,7 +2,7 @@
   "league": "nrl",
   "source": "https://www.nrl.com/ladder/",
   "strategy": "playwright_nrl",
-  "fetched_at": "2026-06-25T13:16:05.075180+09:00",
+  "fetched_at": "2026-06-25T23:49:41.566454+09:00",
   "team_count": 17,
   "teams": [
     {
@@ -45,6 +45,19 @@
       "pd_per_game": 9.21
     },
     {
+      "team": "Rabbitohs",
+      "gp": 14,
+      "pts": 22,
+      "w": 8,
+      "d": 0,
+      "l": 6,
+      "byes": 3,
+      "pf": 418,
+      "pa": 312,
+      "pd": 106,
+      "pd_per_game": 7.57
+    },
+    {
       "team": "Roosters",
       "gp": 14,
       "pts": 22,
@@ -56,6 +69,19 @@
       "pa": 306,
       "pd": 54,
       "pd_per_game": 3.86
+    },
+    {
+      "team": "Sharks",
+      "gp": 14,
+      "pts": 22,
+      "w": 8,
+      "d": 0,
+      "l": 6,
+      "byes": 3,
+      "pf": 374,
+      "pa": 329,
+      "pd": 45,
+      "pd_per_game": 3.21
     },
     {
       "team": "Knights",
@@ -82,32 +108,6 @@
       "pa": 263,
       "pd": 116,
       "pd_per_game": 8.29
-    },
-    {
-      "team": "Rabbitohs",
-      "gp": 13,
-      "pts": 20,
-      "w": 7,
-      "d": 0,
-      "l": 6,
-      "byes": 3,
-      "pf": 386,
-      "pa": 300,
-      "pd": 86,
-      "pd_per_game": 6.62
-    },
-    {
-      "team": "Sharks",
-      "gp": 14,
-      "pts": 20,
-      "w": 8,
-      "d": 0,
-      "l": 6,
-      "byes": 2,
-      "pf": 374,
-      "pa": 329,
-      "pd": 45,
-      "pd_per_game": 3.21
     },
     {
       "team": "Cowboys",
@@ -176,16 +176,16 @@
     },
     {
       "team": "Eels",
-      "gp": 14,
+      "gp": 15,
       "pts": 14,
       "w": 5,
       "d": 0,
-      "l": 9,
+      "l": 10,
       "byes": 2,
-      "pf": 284,
-      "pa": 433,
-      "pd": -149,
-      "pd_per_game": -10.64
+      "pf": 296,
+      "pa": 465,
+      "pd": -169,
+      "pd_per_game": -11.27
     },
     {
       "team": "Titans",
