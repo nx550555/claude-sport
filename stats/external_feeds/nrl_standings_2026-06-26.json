@@ -2,7 +2,7 @@
   "league": "nrl",
   "source": "https://www.nrl.com/ladder/",
   "strategy": "playwright_nrl",
-  "fetched_at": "2026-06-26T13:22:16.833599+09:00",
+  "fetched_at": "2026-06-26T23:42:15.578527+09:00",
   "team_count": 17,
   "teams": [
     {
@@ -32,6 +32,19 @@
       "pd_per_game": 12.14
     },
     {
+      "team": "Roosters",
+      "gp": 15,
+      "pts": 24,
+      "w": 10,
+      "d": 0,
+      "l": 5,
+      "byes": 2,
+      "pf": 384,
+      "pa": 324,
+      "pd": 60,
+      "pd_per_game": 4.0
+    },
+    {
       "team": "Dolphins",
       "gp": 14,
       "pts": 22,
@@ -56,19 +69,6 @@
       "pa": 312,
       "pd": 106,
       "pd_per_game": 7.57
-    },
-    {
-      "team": "Roosters",
-      "gp": 14,
-      "pts": 22,
-      "w": 9,
-      "d": 0,
-      "l": 5,
-      "byes": 2,
-      "pf": 360,
-      "pa": 306,
-      "pd": 54,
-      "pd_per_game": 3.86
     },
     {
       "team": "Sharks",
@@ -123,6 +123,19 @@
       "pd_per_game": -2.07
     },
     {
+      "team": "Bulldogs",
+      "gp": 15,
+      "pts": 18,
+      "w": 7,
+      "d": 0,
+      "l": 8,
+      "byes": 2,
+      "pf": 276,
+      "pa": 354,
+      "pd": -78,
+      "pd_per_game": -5.2
+    },
+    {
       "team": "Wests Tigers",
       "gp": 14,
       "pts": 18,
@@ -149,30 +162,17 @@
       "pd_per_game": 1.33
     },
     {
-      "team": "Bulldogs",
-      "gp": 14,
-      "pts": 16,
-      "w": 6,
-      "d": 0,
-      "l": 8,
-      "byes": 2,
-      "pf": 246,
-      "pa": 342,
-      "pd": -96,
-      "pd_per_game": -6.86
-    },
-    {
       "team": "Broncos",
-      "gp": 14,
+      "gp": 15,
       "pts": 14,
       "w": 5,
       "d": 0,
-      "l": 9,
+      "l": 10,
       "byes": 2,
-      "pf": 281,
-      "pa": 389,
-      "pd": -108,
-      "pd_per_game": -7.71
+      "pf": 299,
+      "pa": 413,
+      "pd": -114,
+      "pd_per_game": -7.6
     },
     {
       "team": "Eels",
@@ -189,16 +189,16 @@
     },
     {
       "team": "Titans",
-      "gp": 14,
+      "gp": 15,
       "pts": 12,
       "w": 4,
       "d": 0,
-      "l": 10,
+      "l": 11,
       "byes": 2,
-      "pf": 267,
-      "pa": 357,
-      "pd": -90,
-      "pd_per_game": -6.43
+      "pf": 279,
+      "pa": 387,
+      "pd": -108,
+      "pd_per_game": -7.2
     },
     {
       "team": "Raiders",
