@@ -2,34 +2,47 @@
   "league": "nrl",
   "source": "https://www.nrl.com/ladder/",
   "strategy": "playwright_nrl",
-  "fetched_at": "2026-06-27T13:09:53.564340+09:00",
+  "fetched_at": "2026-06-27T23:00:51.004614+09:00",
   "team_count": 17,
   "teams": [
     {
       "team": "Panthers",
-      "gp": 14,
+      "gp": 15,
       "pts": 28,
       "w": 12,
       "d": 0,
-      "l": 2,
+      "l": 3,
       "byes": 2,
-      "pf": 455,
-      "pa": 183,
-      "pd": 272,
-      "pd_per_game": 19.43
+      "pf": 467,
+      "pa": 209,
+      "pd": 258,
+      "pd_per_game": 17.2
     },
     {
       "team": "Warriors",
-      "gp": 14,
+      "gp": 15,
       "pts": 24,
       "w": 10,
       "d": 0,
-      "l": 4,
+      "l": 5,
       "byes": 2,
-      "pf": 414,
-      "pa": 244,
-      "pd": 170,
-      "pd_per_game": 12.14
+      "pf": 438,
+      "pa": 270,
+      "pd": 168,
+      "pd_per_game": 11.2
+    },
+    {
+      "team": "Dolphins",
+      "gp": 15,
+      "pts": 24,
+      "w": 10,
+      "d": 0,
+      "l": 5,
+      "byes": 2,
+      "pf": 440,
+      "pa": 309,
+      "pd": 131,
+      "pd_per_game": 8.73
     },
     {
       "team": "Roosters",
@@ -45,17 +58,17 @@
       "pd_per_game": 4.0
     },
     {
-      "team": "Dolphins",
-      "gp": 14,
+      "team": "Sea Eagles",
+      "gp": 15,
       "pts": 22,
       "w": 9,
       "d": 0,
-      "l": 5,
+      "l": 6,
       "byes": 2,
-      "pf": 414,
-      "pa": 285,
-      "pd": 129,
-      "pd_per_game": 9.21
+      "pf": 409,
+      "pa": 267,
+      "pd": 142,
+      "pd_per_game": 9.47
     },
     {
       "team": "Rabbitohs",
@@ -97,30 +110,17 @@
       "pd_per_game": 2.43
     },
     {
-      "team": "Sea Eagles",
-      "gp": 14,
-      "pts": 20,
-      "w": 8,
-      "d": 0,
-      "l": 6,
-      "byes": 2,
-      "pf": 379,
-      "pa": 263,
-      "pd": 116,
-      "pd_per_game": 8.29
-    },
-    {
       "team": "Cowboys",
-      "gp": 15,
-      "pts": 18,
-      "w": 8,
+      "gp": 16,
+      "pts": 20,
+      "w": 9,
       "d": 0,
       "l": 7,
       "byes": 1,
-      "pf": 363,
-      "pa": 394,
-      "pd": -31,
-      "pd_per_game": -2.07
+      "pf": 389,
+      "pa": 406,
+      "pd": -17,
+      "pd_per_game": -1.06
     },
     {
       "team": "Bulldogs",
@@ -150,16 +150,16 @@
     },
     {
       "team": "Storm",
-      "gp": 15,
+      "gp": 16,
       "pts": 16,
       "w": 7,
       "d": 0,
-      "l": 8,
+      "l": 9,
       "byes": 1,
-      "pf": 388,
-      "pa": 368,
-      "pd": 20,
-      "pd_per_game": 1.33
+      "pf": 392,
+      "pa": 398,
+      "pd": -6,
+      "pd_per_game": -0.38
     },
     {
       "team": "Broncos",
