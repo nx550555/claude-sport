@@ -1,17 +1,9 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-06-30T01:03:49.827106+09:00",
+  "fetched_at": "2026-06-30T13:17:47.971945+09:00",
   "starting_goalies": [],
   "injuries": [
-    {
-      "player": "Petr Mrazek",
-      "team": null,
-      "position": "G",
-      "estimated_return": "Sep 15",
-      "status": "Injured Reserve",
-      "comment": "Feb 18: Mrazek underwent season-ending hip surgery Tuesday."
-    },
     {
       "player": "Justin Danforth",
       "team": null,
@@ -187,14 +179,6 @@
       "estimated_return": "Sep 15",
       "status": "Injured Reserve",
       "comment": "Apr 14: Head coach Travis Green said Tuesday that Jensen (knee) is a long shot to play again this year, Bruce Garrioch of Postmedia reports."
-    },
-    {
-      "player": "Rodrigo Abols",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Sep 15",
-      "status": "Injured Reserve",
-      "comment": "May 9: Abols (ankle) isn't close to being an option for a return to the lineup. according to Jonathan Bailey of The Hockey News on Saturday."
     },
     {
       "player": "Caleb Jones",
