@@ -2,7 +2,7 @@
   "league": "nrl",
   "source": "https://www.nrl.com/ladder/",
   "strategy": "playwright_nrl",
-  "fetched_at": "2026-07-04T12:53:31.122187+09:00",
+  "fetched_at": "2026-07-04T23:11:27.154256+09:00",
   "team_count": 17,
   "teams": [
     {
@@ -58,6 +58,19 @@
       "pd_per_game": 8.73
     },
     {
+      "team": "Sharks",
+      "gp": 15,
+      "pts": 24,
+      "w": 9,
+      "d": 0,
+      "l": 6,
+      "byes": 3,
+      "pf": 402,
+      "pa": 345,
+      "pd": 57,
+      "pd_per_game": 3.8
+    },
+    {
       "team": "Knights",
       "gp": 15,
       "pts": 24,
@@ -95,19 +108,6 @@
       "pa": 348,
       "pd": 84,
       "pd_per_game": 5.6
-    },
-    {
-      "team": "Sharks",
-      "gp": 14,
-      "pts": 22,
-      "w": 8,
-      "d": 0,
-      "l": 6,
-      "byes": 3,
-      "pf": 374,
-      "pa": 329,
-      "pd": 45,
-      "pd_per_game": 3.21
     },
     {
       "team": "Cowboys",
@@ -150,16 +150,16 @@
     },
     {
       "team": "Wests Tigers",
-      "gp": 15,
+      "gp": 16,
       "pts": 18,
       "w": 7,
       "d": 0,
-      "l": 8,
+      "l": 9,
       "byes": 2,
-      "pf": 339,
-      "pa": 429,
-      "pd": -90,
-      "pd_per_game": -6.0
+      "pf": 349,
+      "pa": 453,
+      "pd": -104,
+      "pd_per_game": -6.5
     },
     {
       "team": "Raiders",
@@ -189,16 +189,16 @@
     },
     {
       "team": "Broncos",
-      "gp": 15,
+      "gp": 16,
       "pts": 14,
       "w": 5,
       "d": 0,
-      "l": 10,
+      "l": 11,
       "byes": 2,
-      "pf": 299,
-      "pa": 413,
-      "pd": -114,
-      "pd_per_game": -7.6
+      "pf": 315,
+      "pa": 441,
+      "pd": -126,
+      "pd_per_game": -7.88
     },
     {
       "team": "Eels",
@@ -215,16 +215,16 @@
     },
     {
       "team": "Dragons",
-      "gp": 15,
-      "pts": 6,
-      "w": 1,
+      "gp": 16,
+      "pts": 8,
+      "w": 2,
       "d": 0,
       "l": 14,
       "byes": 2,
-      "pf": 220,
-      "pa": 473,
-      "pd": -253,
-      "pd_per_game": -16.87
+      "pf": 244,
+      "pa": 483,
+      "pd": -239,
+      "pd_per_game": -14.94
     }
   ]
 }
