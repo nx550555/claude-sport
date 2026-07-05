@@ -2,7 +2,7 @@
   "league": "nrl",
   "source": "https://www.nrl.com/ladder/",
   "strategy": "playwright_nrl",
-  "fetched_at": "2026-07-05T13:12:00.044440+09:00",
+  "fetched_at": "2026-07-05T22:58:22.027684+09:00",
   "team_count": 17,
   "teams": [
     {
@@ -45,17 +45,30 @@
       "pd_per_game": 4.0
     },
     {
-      "team": "Dolphins",
-      "gp": 15,
-      "pts": 24,
-      "w": 10,
+      "team": "Knights",
+      "gp": 16,
+      "pts": 26,
+      "w": 11,
       "d": 0,
       "l": 5,
       "byes": 2,
-      "pf": 440,
-      "pa": 309,
-      "pd": 131,
-      "pd_per_game": 8.73
+      "pf": 417,
+      "pa": 376,
+      "pd": 41,
+      "pd_per_game": 2.56
+    },
+    {
+      "team": "Dolphins",
+      "gp": 16,
+      "pts": 24,
+      "w": 10,
+      "d": 0,
+      "l": 6,
+      "byes": 2,
+      "pf": 452,
+      "pa": 322,
+      "pd": 130,
+      "pd_per_game": 8.12
     },
     {
       "team": "Sharks",
@@ -71,30 +84,17 @@
       "pd_per_game": 3.8
     },
     {
-      "team": "Knights",
-      "gp": 15,
-      "pts": 24,
-      "w": 10,
-      "d": 0,
-      "l": 5,
-      "byes": 2,
-      "pf": 404,
-      "pa": 364,
-      "pd": 40,
-      "pd_per_game": 2.67
-    },
-    {
       "team": "Sea Eagles",
-      "gp": 15,
+      "gp": 16,
       "pts": 22,
       "w": 9,
       "d": 0,
-      "l": 6,
+      "l": 7,
       "byes": 2,
-      "pf": 409,
-      "pa": 267,
-      "pd": 142,
-      "pd_per_game": 9.47
+      "pf": 423,
+      "pa": 290,
+      "pd": 133,
+      "pd_per_game": 8.31
     },
     {
       "team": "Rabbitohs",
@@ -175,6 +175,19 @@
       "pd_per_game": -7.19
     },
     {
+      "team": "Eels",
+      "gp": 16,
+      "pts": 16,
+      "w": 6,
+      "d": 0,
+      "l": 10,
+      "byes": 2,
+      "pf": 319,
+      "pa": 479,
+      "pd": -160,
+      "pd_per_game": -10.0
+    },
+    {
       "team": "Titans",
       "gp": 15,
       "pts": 14,
@@ -199,19 +212,6 @@
       "pa": 441,
       "pd": -126,
       "pd_per_game": -7.88
-    },
-    {
-      "team": "Eels",
-      "gp": 15,
-      "pts": 14,
-      "w": 5,
-      "d": 0,
-      "l": 10,
-      "byes": 2,
-      "pf": 296,
-      "pa": 465,
-      "pd": -169,
-      "pd_per_game": -11.27
     },
     {
       "team": "Dragons",
