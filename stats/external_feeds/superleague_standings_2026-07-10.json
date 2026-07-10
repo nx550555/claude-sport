@@ -2,7 +2,7 @@
   "league": "superleague",
   "source": "https://en.wikipedia.org/wiki/2026_Super_League_season",
   "strategy": "wikipedia_table",
-  "fetched_at": "2026-07-10T00:28:51.440580+09:00",
+  "fetched_at": "2026-07-10T13:02:49.354932+09:00",
   "team_count": 14,
   "teams": [
     {
@@ -101,6 +101,17 @@
       "pts": 16
     },
     {
+      "team": "York Knights",
+      "gp": 18,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 352,
+      "pa": "York Knights",
+      "pd": "−175",
+      "pts": 12
+    },
+    {
       "team": "Castleford Tigers",
       "gp": 17,
       "w": null,
@@ -113,13 +124,13 @@
     },
     {
       "team": "Hull F.C.",
-      "gp": 17,
+      "gp": 18,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 279,
+      "pf": 295,
       "pa": "Hull F.C.",
-      "pd": "−76",
+      "pd": "−80",
       "pts": 10
     },
     {
@@ -131,17 +142,6 @@
       "pf": 340,
       "pa": "Toulouse Olympique",
       "pd": "−118",
-      "pts": 10
-    },
-    {
-      "team": "York Knights",
-      "gp": 17,
-      "w": null,
-      "l": null,
-      "d": null,
-      "pf": 332,
-      "pa": "York Knights",
-      "pd": "−179",
       "pts": 10
     },
     {
