@@ -1,0 +1,31 @@
+{
+  "league": "cfl",
+  "source": "https://en.wikipedia.org/wiki/2026_CFL_season",
+  "strategy": "wikipedia_table",
+  "fetched_at": "2026-07-13T12:43:44.917185+09:00",
+  "team_count": 2,
+  "teams": [
+    {
+      "team": "Ottawa Redblacks",
+      "gp": null,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": null,
+      "pa": null,
+      "pd": null,
+      "pts": null
+    },
+    {
+      "team": "Toronto Argonauts",
+      "gp": null,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": null,
+      "pa": null,
+      "pd": null,
+      "pts": null
+    }
+  ]
+}
