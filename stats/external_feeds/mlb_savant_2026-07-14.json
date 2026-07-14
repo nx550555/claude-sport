@@ -1,7 +1,7 @@
 {
   "source_batting": "https://baseballsavant.mlb.com/leaderboard/expected_statistics?type=batter-team&year=2026&position=&team=&filter=&min=q&csv=true",
   "source_pitching": "https://baseballsavant.mlb.com/leaderboard/expected_statistics?type=pitcher-team&year=2026&position=&team=&filter=&min=q&csv=true",
-  "fetched_at": "2026-07-14T12:20:07.368410+09:00",
+  "fetched_at": "2026-07-14T23:05:33.491529+09:00",
   "year": "2026",
   "teams": [
     {
@@ -88,8 +88,8 @@
       "PA": 3602.0,
       "diff_wOBA_xwOBA": -0.0010000000000000009,
       "p_xBA": 0.232,
-      "p_xSLG": 0.368,
-      "p_xwOBA": 0.297,
+      "p_xSLG": 0.369,
+      "p_xwOBA": 0.298,
       "p_BA": 0.228,
       "p_SLG": 0.369,
       "p_wOBA": 0.294
@@ -203,6 +203,24 @@
       "p_wOBA": 0.301
     },
     {
+      "team": "CIN",
+      "team_id": "CIN",
+      "xBA": 0.24,
+      "xSLG": 0.405,
+      "xwOBA": 0.321,
+      "BA": 0.23,
+      "SLG": 0.393,
+      "wOBA": 0.31,
+      "PA": 3597.0,
+      "diff_wOBA_xwOBA": -0.01100000000000001,
+      "p_xBA": 0.253,
+      "p_xSLG": 0.426,
+      "p_xwOBA": 0.342,
+      "p_BA": 0.247,
+      "p_SLG": 0.42,
+      "p_wOBA": 0.334
+    },
+    {
       "team": "SEA",
       "team_id": "SEA",
       "xBA": 0.243,
@@ -219,24 +237,6 @@
       "p_BA": 0.24,
       "p_SLG": 0.378,
       "p_wOBA": 0.298
-    },
-    {
-      "team": "CIN",
-      "team_id": "CIN",
-      "xBA": 0.239,
-      "xSLG": 0.404,
-      "xwOBA": 0.32,
-      "BA": 0.23,
-      "SLG": 0.393,
-      "wOBA": 0.31,
-      "PA": 3597.0,
-      "diff_wOBA_xwOBA": -0.010000000000000009,
-      "p_xBA": 0.253,
-      "p_xSLG": 0.426,
-      "p_xwOBA": 0.342,
-      "p_BA": 0.247,
-      "p_SLG": 0.42,
-      "p_wOBA": 0.334
     },
     {
       "team": "ATL",
@@ -286,7 +286,7 @@
       "PA": 3656.0,
       "diff_wOBA_xwOBA": -0.0040000000000000036,
       "p_xBA": 0.261,
-      "p_xSLG": 0.429,
+      "p_xSLG": 0.43,
       "p_xwOBA": 0.338,
       "p_BA": 0.264,
       "p_SLG": 0.447,
