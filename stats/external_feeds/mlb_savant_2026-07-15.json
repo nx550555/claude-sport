@@ -1,7 +1,7 @@
 {
   "source_batting": "https://baseballsavant.mlb.com/leaderboard/expected_statistics?type=batter-team&year=2026&position=&team=&filter=&min=q&csv=true",
   "source_pitching": "https://baseballsavant.mlb.com/leaderboard/expected_statistics?type=pitcher-team&year=2026&position=&team=&filter=&min=q&csv=true",
-  "fetched_at": "2026-07-15T12:19:30.970620+09:00",
+  "fetched_at": "2026-07-15T23:01:58.840473+09:00",
   "year": "2026",
   "teams": [
     {
@@ -73,7 +73,7 @@
       "p_xSLG": 0.4,
       "p_xwOBA": 0.317,
       "p_BA": 0.252,
-      "p_SLG": 0.413,
+      "p_SLG": 0.414,
       "p_wOBA": 0.322
     },
     {
@@ -92,7 +92,7 @@
       "p_xwOBA": 0.298,
       "p_BA": 0.228,
       "p_SLG": 0.369,
-      "p_wOBA": 0.294
+      "p_wOBA": 0.295
     },
     {
       "team": "CWS",
@@ -281,7 +281,7 @@
       "xSLG": 0.399,
       "xwOBA": 0.317,
       "BA": 0.246,
-      "SLG": 0.396,
+      "SLG": 0.397,
       "wOBA": 0.313,
       "PA": 3656.0,
       "diff_wOBA_xwOBA": -0.0040000000000000036,
@@ -314,13 +314,13 @@
       "team": "TEX",
       "team_id": "TEX",
       "xBA": 0.242,
-      "xSLG": 0.392,
+      "xSLG": 0.393,
       "xwOBA": 0.315,
       "BA": 0.245,
       "SLG": 0.399,
-      "wOBA": 0.317,
+      "wOBA": 0.318,
       "PA": 3599.0,
-      "diff_wOBA_xwOBA": 0.0020000000000000018,
+      "diff_wOBA_xwOBA": 0.0030000000000000027,
       "p_xBA": 0.247,
       "p_xSLG": 0.405,
       "p_xwOBA": 0.314,
@@ -361,8 +361,8 @@
       "p_xSLG": 0.405,
       "p_xwOBA": 0.323,
       "p_BA": 0.266,
-      "p_SLG": 0.463,
-      "p_wOBA": 0.351
+      "p_SLG": 0.462,
+      "p_wOBA": 0.35
     },
     {
       "team": "LAA",
@@ -371,7 +371,7 @@
       "xSLG": 0.395,
       "xwOBA": 0.312,
       "BA": 0.24,
-      "SLG": 0.393,
+      "SLG": 0.392,
       "wOBA": 0.312,
       "PA": 3669.0,
       "diff_wOBA_xwOBA": 0.0,
