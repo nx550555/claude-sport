@@ -2,21 +2,21 @@
   "league": "nrl",
   "source": "https://www.nrl.com/ladder/",
   "strategy": "playwright_nrl",
-  "fetched_at": "2026-07-16T12:25:29.084731+09:00",
+  "fetched_at": "2026-07-16T23:12:48.472575+09:00",
   "team_count": 17,
   "teams": [
     {
       "team": "Panthers",
-      "gp": 16,
+      "gp": 17,
       "pts": 32,
       "w": 13,
       "d": 0,
-      "l": 3,
+      "l": 4,
       "byes": 3,
-      "pf": 503,
-      "pa": 223,
-      "pd": 280,
-      "pd_per_game": 17.5
+      "pf": 515,
+      "pa": 237,
+      "pd": 278,
+      "pd_per_game": 16.35
     },
     {
       "team": "Warriors",
@@ -162,6 +162,19 @@
       "pd_per_game": -5.35
     },
     {
+      "team": "Broncos",
+      "gp": 17,
+      "pts": 18,
+      "w": 6,
+      "d": 0,
+      "l": 11,
+      "byes": 3,
+      "pf": 329,
+      "pa": 453,
+      "pd": -124,
+      "pd_per_game": -7.29
+    },
+    {
       "team": "Wests Tigers",
       "gp": 17,
       "pts": 18,
@@ -175,26 +188,13 @@
       "pd_per_game": -7.65
     },
     {
-      "team": "Broncos",
-      "gp": 16,
-      "pts": 16,
-      "w": 5,
-      "d": 0,
-      "l": 11,
-      "byes": 3,
-      "pf": 315,
-      "pa": 441,
-      "pd": -126,
-      "pd_per_game": -7.88
-    },
-    {
       "team": "Eels",
       "gp": 17,
-      "pts": 16,
+      "pts": 18,
       "w": 6,
       "d": 0,
       "l": 11,
-      "byes": 2,
+      "byes": 3,
       "pf": 331,
       "pa": 507,
       "pd": -176,
