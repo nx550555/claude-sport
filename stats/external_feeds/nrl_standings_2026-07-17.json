@@ -2,7 +2,7 @@
   "league": "nrl",
   "source": "https://www.nrl.com/ladder/",
   "strategy": "playwright_nrl",
-  "fetched_at": "2026-07-17T12:28:11.028373+09:00",
+  "fetched_at": "2026-07-17T22:56:19.131534+09:00",
   "team_count": 17,
   "teams": [
     {
@@ -19,6 +19,19 @@
       "pd_per_game": 16.35
     },
     {
+      "team": "Roosters",
+      "gp": 17,
+      "pts": 30,
+      "w": 12,
+      "d": 0,
+      "l": 5,
+      "byes": 3,
+      "pf": 426,
+      "pa": 342,
+      "pd": 84,
+      "pd_per_game": 4.94
+    },
+    {
       "team": "Warriors",
       "gp": 16,
       "pts": 28,
@@ -32,43 +45,30 @@
       "pd_per_game": 12.12
     },
     {
-      "team": "Roosters",
-      "gp": 16,
+      "team": "Sharks",
+      "gp": 17,
       "pts": 28,
       "w": 11,
       "d": 0,
-      "l": 5,
-      "byes": 3,
-      "pf": 412,
-      "pa": 336,
-      "pd": 76,
-      "pd_per_game": 4.75
-    },
-    {
-      "team": "Sharks",
-      "gp": 16,
-      "pts": 26,
-      "w": 10,
-      "d": 0,
       "l": 6,
       "byes": 3,
-      "pf": 468,
-      "pa": 345,
-      "pd": 123,
-      "pd_per_game": 7.69
+      "pf": 488,
+      "pa": 363,
+      "pd": 125,
+      "pd_per_game": 7.35
     },
     {
       "team": "Knights",
-      "gp": 17,
+      "gp": 18,
       "pts": 26,
       "w": 11,
       "d": 0,
-      "l": 6,
+      "l": 7,
       "byes": 2,
-      "pf": 441,
-      "pa": 402,
-      "pd": 39,
-      "pd_per_game": 2.29
+      "pf": 459,
+      "pa": 422,
+      "pd": 37,
+      "pd_per_game": 2.06
     },
     {
       "team": "Rabbitohs",
@@ -124,16 +124,16 @@
     },
     {
       "team": "Storm",
-      "gp": 17,
+      "gp": 18,
       "pts": 20,
       "w": 8,
       "d": 0,
-      "l": 9,
+      "l": 10,
       "byes": 2,
-      "pf": 414,
-      "pa": 416,
-      "pd": -2,
-      "pd_per_game": -0.12
+      "pf": 420,
+      "pa": 430,
+      "pd": -10,
+      "pd_per_game": -0.56
     },
     {
       "team": "Bulldogs",
