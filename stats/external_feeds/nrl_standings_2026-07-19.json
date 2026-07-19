@@ -2,7 +2,7 @@
   "league": "nrl",
   "source": "https://www.nrl.com/ladder/",
   "strategy": "playwright_nrl",
-  "fetched_at": "2026-07-19T12:38:02.145463+09:00",
+  "fetched_at": "2026-07-19T22:42:44.430277+09:00",
   "team_count": 17,
   "teams": [
     {
@@ -58,6 +58,19 @@
       "pd_per_game": 7.35
     },
     {
+      "team": "Dolphins",
+      "gp": 18,
+      "pts": 26,
+      "w": 11,
+      "d": 0,
+      "l": 7,
+      "byes": 2,
+      "pf": 488,
+      "pa": 404,
+      "pd": 84,
+      "pd_per_game": 4.67
+    },
+    {
       "team": "Knights",
       "gp": 18,
       "pts": 26,
@@ -84,43 +97,30 @@
       "pd_per_game": 4.47
     },
     {
-      "team": "Dolphins",
-      "gp": 17,
-      "pts": 24,
-      "w": 10,
-      "d": 0,
-      "l": 7,
-      "byes": 2,
-      "pf": 452,
-      "pa": 388,
-      "pd": 64,
-      "pd_per_game": 3.76
-    },
-    {
       "team": "Cowboys",
-      "gp": 17,
+      "gp": 18,
       "pts": 24,
       "w": 10,
-      "d": 0,
-      "l": 7,
-      "byes": 2,
-      "pf": 408,
-      "pa": 424,
-      "pd": -16,
-      "pd_per_game": -0.94
-    },
-    {
-      "team": "Sea Eagles",
-      "gp": 17,
-      "pts": 22,
-      "w": 9,
       "d": 0,
       "l": 8,
       "byes": 2,
-      "pf": 441,
-      "pa": 309,
-      "pd": 132,
-      "pd_per_game": 7.76
+      "pf": 424,
+      "pa": 460,
+      "pd": -36,
+      "pd_per_game": -2.0
+    },
+    {
+      "team": "Sea Eagles",
+      "gp": 18,
+      "pts": 22,
+      "w": 9,
+      "d": 0,
+      "l": 9,
+      "byes": 2,
+      "pf": 473,
+      "pa": 347,
+      "pd": 126,
+      "pd_per_game": 7.0
     },
     {
       "team": "Bulldogs",
@@ -202,16 +202,16 @@
     },
     {
       "team": "Titans",
-      "gp": 16,
-      "pts": 14,
-      "w": 4,
+      "gp": 17,
+      "pts": 16,
+      "w": 5,
       "d": 0,
       "l": 12,
       "byes": 3,
-      "pf": 297,
-      "pa": 409,
-      "pd": -112,
-      "pd_per_game": -7.0
+      "pf": 335,
+      "pa": 441,
+      "pd": -106,
+      "pd_per_game": -6.24
     },
     {
       "team": "Dragons",
