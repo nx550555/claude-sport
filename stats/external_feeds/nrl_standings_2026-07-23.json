@@ -2,21 +2,21 @@
   "league": "nrl",
   "source": "https://www.nrl.com/ladder/",
   "strategy": "playwright_nrl",
-  "fetched_at": "2026-07-23T12:35:34.316567+09:00",
+  "fetched_at": "2026-07-23T23:24:35.940186+09:00",
   "team_count": 17,
   "teams": [
     {
       "team": "Panthers",
-      "gp": 17,
-      "pts": 32,
-      "w": 13,
+      "gp": 18,
+      "pts": 34,
+      "w": 14,
       "d": 0,
       "l": 4,
       "byes": 3,
-      "pf": 515,
-      "pa": 237,
-      "pd": 278,
-      "pd_per_game": 16.35
+      "pf": 539,
+      "pa": 255,
+      "pd": 284,
+      "pd_per_game": 15.78
     },
     {
       "team": "Warriors",
@@ -60,11 +60,11 @@
     {
       "team": "Dolphins",
       "gp": 18,
-      "pts": 26,
+      "pts": 28,
       "w": 11,
       "d": 0,
       "l": 7,
-      "byes": 2,
+      "byes": 3,
       "pf": 488,
       "pa": 404,
       "pd": 84,
@@ -189,16 +189,16 @@
     },
     {
       "team": "Eels",
-      "gp": 17,
+      "gp": 18,
       "pts": 18,
       "w": 6,
       "d": 0,
-      "l": 11,
+      "l": 12,
       "byes": 3,
-      "pf": 331,
-      "pa": 507,
-      "pd": -176,
-      "pd_per_game": -10.35
+      "pf": 349,
+      "pa": 531,
+      "pd": -182,
+      "pd_per_game": -10.11
     },
     {
       "team": "Titans",
