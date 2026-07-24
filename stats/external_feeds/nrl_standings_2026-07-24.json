@@ -2,7 +2,7 @@
   "league": "nrl",
   "source": "https://www.nrl.com/ladder/",
   "strategy": "playwright_nrl",
-  "fetched_at": "2026-07-24T12:31:59.428808+09:00",
+  "fetched_at": "2026-07-24T23:04:01.898651+09:00",
   "team_count": 17,
   "teams": [
     {
@@ -19,6 +19,19 @@
       "pd_per_game": 15.78
     },
     {
+      "team": "Roosters",
+      "gp": 18,
+      "pts": 32,
+      "w": 13,
+      "d": 0,
+      "l": 5,
+      "byes": 3,
+      "pf": 449,
+      "pa": 364,
+      "pd": 85,
+      "pd_per_game": 4.72
+    },
+    {
       "team": "Warriors",
       "gp": 17,
       "pts": 30,
@@ -30,19 +43,6 @@
       "pa": 288,
       "pd": 202,
       "pd_per_game": 11.88
-    },
-    {
-      "team": "Roosters",
-      "gp": 17,
-      "pts": 30,
-      "w": 12,
-      "d": 0,
-      "l": 5,
-      "byes": 3,
-      "pf": 426,
-      "pa": 342,
-      "pd": 84,
-      "pd_per_game": 4.94
     },
     {
       "team": "Sharks",
@@ -72,16 +72,16 @@
     },
     {
       "team": "Knights",
-      "gp": 18,
+      "gp": 19,
       "pts": 26,
       "w": 11,
       "d": 0,
-      "l": 7,
+      "l": 8,
       "byes": 2,
-      "pf": 459,
-      "pa": 422,
-      "pd": 37,
-      "pd_per_game": 2.06
+      "pf": 481,
+      "pa": 445,
+      "pd": 36,
+      "pd_per_game": 1.89
     },
     {
       "team": "Rabbitohs",
