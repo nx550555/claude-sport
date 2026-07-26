@@ -2,7 +2,7 @@
   "league": "nrl",
   "source": "https://www.nrl.com/ladder/",
   "strategy": "playwright_nrl",
-  "fetched_at": "2026-07-26T12:42:47.499033+09:00",
+  "fetched_at": "2026-07-26T22:46:45.045944+09:00",
   "team_count": 17,
   "teams": [
     {
@@ -46,16 +46,16 @@
     },
     {
       "team": "Sharks",
-      "gp": 17,
-      "pts": 28,
-      "w": 11,
+      "gp": 18,
+      "pts": 30,
+      "w": 12,
       "d": 0,
       "l": 6,
       "byes": 3,
-      "pf": 488,
-      "pa": 363,
-      "pd": 125,
-      "pd_per_game": 7.35
+      "pf": 536,
+      "pa": 375,
+      "pd": 161,
+      "pd_per_game": 8.94
     },
     {
       "team": "Dolphins",
@@ -124,16 +124,16 @@
     },
     {
       "team": "Sea Eagles",
-      "gp": 18,
+      "gp": 19,
       "pts": 22,
       "w": 9,
       "d": 0,
-      "l": 9,
+      "l": 10,
       "byes": 2,
-      "pf": 473,
-      "pa": 347,
-      "pd": 126,
-      "pd_per_game": 7.0
+      "pf": 485,
+      "pa": 395,
+      "pd": 90,
+      "pd_per_game": 4.74
     },
     {
       "team": "Raiders",
@@ -160,6 +160,19 @@
       "pa": 458,
       "pd": -12,
       "pd_per_game": -0.63
+    },
+    {
+      "team": "Titans",
+      "gp": 18,
+      "pts": 18,
+      "w": 6,
+      "d": 0,
+      "l": 12,
+      "byes": 3,
+      "pf": 373,
+      "pa": 459,
+      "pd": -86,
+      "pd_per_game": -4.78
     },
     {
       "team": "Broncos",
@@ -201,30 +214,17 @@
       "pd_per_game": -10.95
     },
     {
-      "team": "Titans",
-      "gp": 17,
-      "pts": 16,
-      "w": 5,
-      "d": 0,
-      "l": 12,
-      "byes": 3,
-      "pf": 335,
-      "pa": 441,
-      "pd": -106,
-      "pd_per_game": -6.24
-    },
-    {
       "team": "Dragons",
-      "gp": 17,
+      "gp": 18,
       "pts": 10,
       "w": 2,
       "d": 0,
-      "l": 15,
+      "l": 16,
       "byes": 3,
-      "pf": 256,
-      "pa": 503,
-      "pd": -247,
-      "pd_per_game": -14.53
+      "pf": 274,
+      "pa": 541,
+      "pd": -267,
+      "pd_per_game": -14.83
     }
   ]
 }

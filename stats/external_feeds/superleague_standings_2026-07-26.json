@@ -2,7 +2,7 @@
   "league": "superleague",
   "source": "https://en.wikipedia.org/wiki/2026_Super_League_season",
   "strategy": "wikipedia_table",
-  "fetched_at": "2026-07-26T12:42:47.890542+09:00",
+  "fetched_at": "2026-07-26T22:46:46.155417+09:00",
   "team_count": 14,
   "teams": [
     {
@@ -91,24 +91,24 @@
     },
     {
       "team": "Catalans Dragons",
-      "gp": 19,
+      "gp": 20,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 389,
+      "pf": 405,
       "pa": "Catalans Dragons",
-      "pd": "−182",
-      "pts": 16
+      "pd": "−180",
+      "pts": 18
     },
     {
       "team": "Toulouse Olympique",
-      "gp": 19,
+      "gp": 20,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 416,
+      "pf": 430,
       "pa": "Toulouse Olympique",
-      "pd": "−64",
+      "pd": "−66",
       "pts": 14
     },
     {
