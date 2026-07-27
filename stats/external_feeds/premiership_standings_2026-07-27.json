@@ -2,11 +2,11 @@
   "league": "premiership",
   "source": "https://en.wikipedia.org/wiki/2025%E2%80%9326_Premiership_Rugby",
   "strategy": "wikipedia_table",
-  "fetched_at": "2026-07-27T12:52:31.884177+09:00",
+  "fetched_at": "2026-07-27T23:55:32.596564+09:00",
   "team_count": 10,
   "teams": [
     {
-      "team": "Northampton Saints (Q)",
+      "team": "Northampton Saints (C)",
       "gp": 18,
       "w": null,
       "l": null,
@@ -18,7 +18,7 @@
       "pd_per_game": 8.72
     },
     {
-      "team": "Bath (Q)",
+      "team": "Bath (SF)",
       "gp": 18,
       "w": null,
       "l": null,
@@ -30,7 +30,7 @@
       "pd_per_game": 12.33
     },
     {
-      "team": "Exeter Chiefs (Q)",
+      "team": "Exeter Chiefs (RU)",
       "gp": 18,
       "w": null,
       "l": null,
@@ -42,7 +42,7 @@
       "pd_per_game": 8.56
     },
     {
-      "team": "Leicester Tigers (Q)",
+      "team": "Leicester Tigers (SF)",
       "gp": 18,
       "w": null,
       "l": null,
