@@ -2,7 +2,7 @@
   "league": "nrl",
   "source": "https://www.nrl.com/ladder/",
   "strategy": "playwright_nrl",
-  "fetched_at": "2026-07-30T11:58:00.634591+09:00",
+  "fetched_at": "2026-07-30T23:24:23.573079+09:00",
   "team_count": 17,
   "teams": [
     {
@@ -110,6 +110,19 @@
       "pd_per_game": -1.47
     },
     {
+      "team": "Sea Eagles",
+      "gp": 19,
+      "pts": 24,
+      "w": 9,
+      "d": 0,
+      "l": 10,
+      "byes": 3,
+      "pf": 485,
+      "pa": 395,
+      "pd": 90,
+      "pd_per_game": 4.74
+    },
+    {
       "team": "Bulldogs",
       "gp": 18,
       "pts": 24,
@@ -121,19 +134,6 @@
       "pa": 400,
       "pd": -58,
       "pd_per_game": -3.22
-    },
-    {
-      "team": "Sea Eagles",
-      "gp": 19,
-      "pts": 22,
-      "w": 9,
-      "d": 0,
-      "l": 10,
-      "byes": 2,
-      "pf": 485,
-      "pa": 395,
-      "pd": 90,
-      "pd_per_game": 4.74
     },
     {
       "team": "Raiders",
