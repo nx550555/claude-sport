@@ -1,6 +1,6 @@
 {
   "source_group": "understat.com",
-  "fetched_at": "2026-08-04T12:27:14.507936+09:00",
+  "fetched_at": "2026-08-04T23:39:08.724347+09:00",
   "season": "2025-2026",
   "leagues": {
     "Premier League": {
@@ -1578,20 +1578,20 @@
         {
           "team_slug": "Toulouse",
           "team": "Toulouse",
-          "games_played": 33,
+          "games_played": 34,
           "wins": 12,
-          "draws": 8,
+          "draws": 9,
           "losses": 13,
           "scored": 47,
           "missed": 46,
-          "points": 44,
-          "xG": 46.29,
-          "xGA": 44.32,
-          "xG_per_game": 1.403,
-          "xGA_per_game": 1.343,
-          "xGD": 1.97,
-          "xGD_per_game": 0.06,
-          "xPoints": 48.21
+          "points": 45,
+          "xG": 46.61,
+          "xGA": 44.4,
+          "xG_per_game": 1.371,
+          "xGA_per_game": 1.306,
+          "xGD": 2.21,
+          "xGD_per_game": 0.065,
+          "xPoints": 49.73
         },
         {
           "team_slug": "Lorient",
@@ -1704,20 +1704,20 @@
         {
           "team_slug": "Nantes",
           "team": "Nantes",
-          "games_played": 33,
+          "games_played": 34,
           "wins": 5,
-          "draws": 8,
+          "draws": 9,
           "losses": 20,
           "scored": 29,
           "missed": 52,
-          "points": 23,
-          "xG": 37.82,
-          "xGA": 52.75,
-          "xG_per_game": 1.146,
-          "xGA_per_game": 1.598,
-          "xGD": -14.93,
-          "xGD_per_game": -0.452,
-          "xPoints": 35.45
+          "points": 24,
+          "xG": 37.91,
+          "xGA": 53.07,
+          "xG_per_game": 1.115,
+          "xGA_per_game": 1.561,
+          "xGD": -15.16,
+          "xGD_per_game": -0.446,
+          "xPoints": 36.28
         },
         {
           "team_slug": "Le_Havre",
