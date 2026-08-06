@@ -2,7 +2,7 @@
   "league": "nrl",
   "source": "https://www.nrl.com/ladder/",
   "strategy": "playwright_nrl",
-  "fetched_at": "2026-08-06T12:24:53.662146+09:00",
+  "fetched_at": "2026-08-06T23:30:35.771906+09:00",
   "team_count": 17,
   "teams": [
     {
@@ -84,6 +84,19 @@
       "pd_per_game": 3.0
     },
     {
+      "team": "Cowboys",
+      "gp": 21,
+      "pts": 28,
+      "w": 12,
+      "d": 0,
+      "l": 9,
+      "byes": 2,
+      "pf": 484,
+      "pa": 560,
+      "pd": -76,
+      "pd_per_game": -3.62
+    },
+    {
       "team": "Rabbitohs",
       "gp": 19,
       "pts": 26,
@@ -108,19 +121,6 @@
       "pa": 422,
       "pd": -44,
       "pd_per_game": -2.32
-    },
-    {
-      "team": "Cowboys",
-      "gp": 20,
-      "pts": 26,
-      "w": 11,
-      "d": 0,
-      "l": 9,
-      "byes": 2,
-      "pf": 454,
-      "pa": 552,
-      "pd": -98,
-      "pd_per_game": -4.9
     },
     {
       "team": "Sea Eagles",
@@ -175,17 +175,30 @@
       "pd_per_game": -9.42
     },
     {
-      "team": "Titans",
-      "gp": 19,
-      "pts": 18,
-      "w": 6,
+      "team": "Wests Tigers",
+      "gp": 20,
+      "pts": 20,
+      "w": 7,
       "d": 0,
       "l": 13,
       "byes": 3,
-      "pf": 379,
-      "pa": 501,
-      "pd": -122,
-      "pd_per_game": -6.42
+      "pf": 378,
+      "pa": 589,
+      "pd": -211,
+      "pd_per_game": -10.55
+    },
+    {
+      "team": "Titans",
+      "gp": 20,
+      "pts": 18,
+      "w": 6,
+      "d": 0,
+      "l": 14,
+      "byes": 3,
+      "pf": 387,
+      "pa": 531,
+      "pd": -144,
+      "pd_per_game": -7.2
     },
     {
       "team": "Broncos",
@@ -199,19 +212,6 @@
       "pa": 501,
       "pd": -156,
       "pd_per_game": -8.21
-    },
-    {
-      "team": "Wests Tigers",
-      "gp": 20,
-      "pts": 18,
-      "w": 7,
-      "d": 0,
-      "l": 13,
-      "byes": 2,
-      "pf": 378,
-      "pa": 589,
-      "pd": -211,
-      "pd_per_game": -10.55
     },
     {
       "team": "Dragons",
