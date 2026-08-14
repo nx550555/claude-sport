@@ -2,7 +2,7 @@
   "league": "nrl",
   "source": "https://www.nrl.com/ladder/",
   "strategy": "playwright_nrl",
-  "fetched_at": "2026-08-14T11:33:26.994285+09:00",
+  "fetched_at": "2026-08-14T22:23:55.359851+09:00",
   "team_count": 17,
   "teams": [
     {
@@ -45,6 +45,19 @@
       "pd_per_game": 12.1
     },
     {
+      "team": "Dolphins",
+      "gp": 21,
+      "pts": 34,
+      "w": 14,
+      "d": 0,
+      "l": 7,
+      "byes": 3,
+      "pf": 578,
+      "pa": 458,
+      "pd": 120,
+      "pd_per_game": 5.71
+    },
+    {
       "team": "Sharks",
       "gp": 20,
       "pts": 32,
@@ -58,17 +71,17 @@
       "pd_per_game": 8.45
     },
     {
-      "team": "Dolphins",
-      "gp": 20,
-      "pts": 32,
-      "w": 13,
+      "team": "Rabbitohs",
+      "gp": 21,
+      "pts": 30,
+      "w": 12,
       "d": 0,
-      "l": 7,
+      "l": 9,
       "byes": 3,
-      "pf": 556,
-      "pa": 458,
-      "pd": 98,
-      "pd_per_game": 4.9
+      "pf": 576,
+      "pa": 494,
+      "pd": 82,
+      "pd_per_game": 3.9
     },
     {
       "team": "Knights",
@@ -82,19 +95,6 @@
       "pa": 475,
       "pd": 66,
       "pd_per_game": 3.14
-    },
-    {
-      "team": "Rabbitohs",
-      "gp": 20,
-      "pts": 28,
-      "w": 11,
-      "d": 0,
-      "l": 9,
-      "byes": 3,
-      "pf": 554,
-      "pa": 488,
-      "pd": 66,
-      "pd_per_game": 3.3
     },
     {
       "team": "Cowboys",
@@ -111,29 +111,29 @@
     },
     {
       "team": "Bulldogs",
-      "gp": 20,
+      "gp": 21,
       "pts": 26,
       "w": 10,
       "d": 0,
-      "l": 10,
+      "l": 11,
       "byes": 3,
-      "pf": 396,
-      "pa": 442,
-      "pd": -46,
-      "pd_per_game": -2.3
+      "pf": 402,
+      "pa": 464,
+      "pd": -62,
+      "pd_per_game": -2.95
     },
     {
       "team": "Sea Eagles",
-      "gp": 20,
+      "gp": 21,
       "pts": 24,
       "w": 9,
       "d": 0,
-      "l": 11,
+      "l": 12,
       "byes": 3,
       "pf": 505,
-      "pa": 437,
-      "pd": 68,
-      "pd_per_game": 3.4
+      "pa": 459,
+      "pd": 46,
+      "pd_per_game": 2.19
     },
     {
       "team": "Storm",
