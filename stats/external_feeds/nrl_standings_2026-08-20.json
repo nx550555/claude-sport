@@ -2,9 +2,22 @@
   "league": "nrl",
   "source": "https://www.nrl.com/ladder/",
   "strategy": "playwright_nrl",
-  "fetched_at": "2026-08-20T10:43:50.388768+09:00",
+  "fetched_at": "2026-08-20T22:04:14.964506+09:00",
   "team_count": 17,
   "teams": [
+    {
+      "team": "Panthers",
+      "gp": 22,
+      "pts": 38,
+      "w": 16,
+      "d": 0,
+      "l": 6,
+      "byes": 3,
+      "pf": 621,
+      "pa": 327,
+      "pd": 294,
+      "pd_per_game": 13.36
+    },
     {
       "team": "Roosters",
       "gp": 21,
@@ -17,19 +30,6 @@
       "pa": 400,
       "pd": 163,
       "pd_per_game": 7.76
-    },
-    {
-      "team": "Panthers",
-      "gp": 21,
-      "pts": 36,
-      "w": 15,
-      "d": 0,
-      "l": 6,
-      "byes": 3,
-      "pf": 599,
-      "pa": 313,
-      "pd": 286,
-      "pd_per_game": 13.62
     },
     {
       "team": "Warriors",
@@ -99,11 +99,11 @@
     {
       "team": "Cowboys",
       "gp": 22,
-      "pts": 28,
+      "pts": 30,
       "w": 12,
       "d": 0,
       "l": 10,
-      "byes": 2,
+      "byes": 3,
       "pf": 514,
       "pa": 592,
       "pd": -78,
@@ -137,16 +137,16 @@
     },
     {
       "team": "Storm",
-      "gp": 21,
+      "gp": 22,
       "pts": 24,
       "w": 9,
       "d": 0,
-      "l": 12,
+      "l": 13,
       "byes": 3,
-      "pf": 510,
-      "pa": 514,
-      "pd": -4,
-      "pd_per_game": -0.19
+      "pf": 524,
+      "pa": 536,
+      "pd": -12,
+      "pd_per_game": -0.55
     },
     {
       "team": "Raiders",
