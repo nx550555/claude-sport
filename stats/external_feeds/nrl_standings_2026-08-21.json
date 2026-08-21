@@ -2,7 +2,7 @@
   "league": "nrl",
   "source": "https://www.nrl.com/ladder/",
   "strategy": "playwright_nrl",
-  "fetched_at": "2026-08-21T10:49:14.934072+09:00",
+  "fetched_at": "2026-08-21T22:03:26.279067+09:00",
   "team_count": 17,
   "teams": [
     {
@@ -46,16 +46,16 @@
     },
     {
       "team": "Dolphins",
-      "gp": 21,
-      "pts": 34,
-      "w": 14,
+      "gp": 22,
+      "pts": 36,
+      "w": 15,
       "d": 0,
       "l": 7,
       "byes": 3,
-      "pf": 578,
-      "pa": 458,
-      "pd": 120,
-      "pd_per_game": 5.71
+      "pf": 612,
+      "pa": 474,
+      "pd": 138,
+      "pd_per_game": 6.27
     },
     {
       "team": "Sharks",
@@ -150,29 +150,42 @@
     },
     {
       "team": "Raiders",
-      "gp": 22,
+      "gp": 23,
       "pts": 24,
       "w": 10,
       "d": 0,
-      "l": 12,
+      "l": 13,
       "byes": 2,
-      "pf": 501,
-      "pa": 562,
-      "pd": -61,
-      "pd_per_game": -2.77
+      "pf": 531,
+      "pa": 596,
+      "pd": -65,
+      "pd_per_game": -2.83
     },
     {
       "team": "Eels",
-      "gp": 21,
+      "gp": 22,
       "pts": 22,
       "w": 8,
       "d": 0,
-      "l": 13,
+      "l": 14,
       "byes": 3,
-      "pf": 421,
-      "pa": 602,
-      "pd": -181,
-      "pd_per_game": -8.62
+      "pf": 437,
+      "pa": 636,
+      "pd": -199,
+      "pd_per_game": -9.05
+    },
+    {
+      "team": "Broncos",
+      "gp": 22,
+      "pts": 20,
+      "w": 7,
+      "d": 0,
+      "l": 15,
+      "byes": 3,
+      "pf": 417,
+      "pa": 611,
+      "pd": -194,
+      "pd_per_game": -8.82
     },
     {
       "team": "Wests Tigers",
@@ -199,19 +212,6 @@
       "pa": 567,
       "pd": -154,
       "pd_per_game": -7.33
-    },
-    {
-      "team": "Broncos",
-      "gp": 21,
-      "pts": 18,
-      "w": 6,
-      "d": 0,
-      "l": 15,
-      "byes": 3,
-      "pf": 383,
-      "pa": 581,
-      "pd": -198,
-      "pd_per_game": -9.43
     },
     {
       "team": "Dragons",
