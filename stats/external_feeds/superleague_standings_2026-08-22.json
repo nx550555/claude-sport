@@ -2,7 +2,7 @@
   "league": "superleague",
   "source": "https://en.wikipedia.org/wiki/2026_Super_League_season",
   "strategy": "wikipedia_table",
-  "fetched_at": "2026-08-22T10:42:27.463811+09:00",
+  "fetched_at": "2026-08-22T21:54:33.882000+09:00",
   "team_count": 14,
   "teams": [
     {
@@ -30,13 +30,13 @@
       "pd_per_game": 19.04
     },
     {
-      "team": "Warrington Wolves (T)",
+      "team": "Warrington Wolves",
       "gp": 23,
       "w": null,
       "l": null,
       "d": null,
       "pf": 632,
-      "pa": "Warrington Wolves (T)",
+      "pa": "Warrington Wolves",
       "pd": 244,
       "pts": 34,
       "pd_per_game": 10.61
