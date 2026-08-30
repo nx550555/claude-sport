@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-08-30T01:39:37.041284+09:00",
+  "fetched_at": "2026-08-30T14:07:44.628166+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -101,6 +101,38 @@
       "comment": "Apr 14: Kuznetsov (upper body) will miss the rest of the 2025-26 regular season, according to Pat Steinberg of Sportsnet 960 The Fan on Tuesday."
     },
     {
+      "player": "Joel Hanley",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 15",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Samuel Honzek",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": "Mar 27: Honzek (upper body) will not return this season, per Pat Steinberg of Sportsnet 960 The Fan on Friday."
+    },
+    {
+      "player": "Jonathan Huberdeau",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": "Feb 21: Huberdeau (hip) was put on injured reserve Saturday, per the NHL media site."
+    },
+    {
+      "player": "Jake Bean",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": "Dec 18: Bean (undisclosed) will need to undergo surgery and is expected to be sidelined indefinitely, Pat Steinberg of Sportsnet 960 The Fan reports Thursday."
+    },
+    {
       "player": "Henry Mews",
       "team": null,
       "position": "D",
@@ -131,6 +163,30 @@
       "estimated_return": "Nov 7",
       "status": "Out",
       "comment": "Jul 18: Bedard (shoulder) signed a five-year, $75 million contract with Chicago on Saturday."
+    },
+    {
+      "player": "Matt Grzelcyk",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 15",
+      "status": "Out",
+      "comment": "Mar 31: Grzelcyk (upper body) will miss the remainder of the 2025-26 regular season, according to Ben Pope of the Chicago Sun-Times on Tuesday."
+    },
+    {
+      "player": "Artyom Levshunov",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 15",
+      "status": "Out",
+      "comment": "Mar 31: Levshunov (hand) will not play again in 2025-26, according to Ben Pope of the Chicago Sun-Times on Tuesday."
+    },
+    {
+      "player": "Ryan Ellis",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Jul 1",
+      "status": "Injured Reserve",
+      "comment": "Jan 8: Ellis (back) and his contract have been traded to Chicago from San Jose, along with Jake Furlong and a 2028 fourth-round pick in exchange for Laurent Brossoit, Nolan Allan and a 2028 seventh-round pick Thursday."
     },
     {
       "player": "Elvis Merzlikins",
@@ -229,6 +285,14 @@
       "comment": "Aug 26: Regula, who underwent a procedure shortly after the season, will not be available for training camp, the team announced Wednesday."
     },
     {
+      "player": "Frederik Andersen",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Oct 20",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Adam Henrique",
       "team": null,
       "position": "C",
@@ -301,12 +365,44 @@
       "comment": ""
     },
     {
+      "player": "Jonah Gadjovich",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": "Mar 31: Gadjovich (upper body) is not expected to suit up again this season, per Jameson Olive of the Panthers' official site on Tuesday."
+    },
+    {
+      "player": "Niko Mikkola",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": ""
+    },
+    {
       "player": "Uvis Balinskis",
       "team": null,
       "position": "D",
       "estimated_return": "Sep 15",
       "status": "Out",
       "comment": "Mar 23: Balinskis (lower body) has a fracture and is slated to miss 4-6 weeks, Jameson Olive of the Panthers' official site reports Monday."
+    },
+    {
+      "player": "Kevin Fiala",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": "Mar 6: Fiala (lower leg fracture) won't be available before training camp for the 2026-27 campaign, per John Hoven of SiriusXM NHL Network Radio."
+    },
+    {
+      "player": "Zach Bogosian",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 15",
+      "status": "Out",
+      "comment": "Jul 1: Bogosian (lower body) signed a one-year, $1.25 million contract with the Wild on Wednesday, Michael Russo of The Athletic reports."
     },
     {
       "player": "Filip Gustavsson",
@@ -365,6 +461,14 @@
       "comment": "Apr 9: Hughes (undisclosed)  will undergo a procedure and will miss the remainder of the season, it was announced Thursday."
     },
     {
+      "player": "Stefan Noesen",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Oct 15",
+      "status": "Injured Reserve",
+      "comment": "Mar 22: Noesen (knee) has been ruled out for the rest of the season, Kristy Flannery of The Hockey News reports Sunday."
+    },
+    {
       "player": "Mathew Barzal",
       "team": null,
       "position": "C",
@@ -387,6 +491,22 @@
       "estimated_return": "Sep 15",
       "status": "Injured Reserve",
       "comment": "Apr 15: Palmieri (knee) told reporters Wednesday that he should be ready to go for the start of training camp, Stefen Rosner of NHL.com reports."
+    },
+    {
+      "player": "Pierre Engvall",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": "Mar 12: Engvall (ankle) will miss the remainder of the 2025-26 campaign, per Stefen Rosner of NHL.com."
+    },
+    {
+      "player": "Matt Rempe",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": "Mar 23: Rempe (thumb) probably won't be ready to return before the end of the 2025-26 regular season, according to Vince Z. Mercogliano of The Athletic on Monday."
     },
     {
       "player": "Artem Zub",
@@ -421,6 +541,30 @@
       "comment": "May 11: Tippett (undisclosed) was contending with several injuries, including a sports hernia, during the 2026 postseason, Kevin Kurz of The Athletic reports Monday."
     },
     {
+      "player": "Ty Murchison",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 15",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Caleb Jones",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": ""
+    },
+    {
+      "player": "Filip Hallander",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": "Feb 27: Hallander (leg) was recalled from his conditioning stint with AHL Wilkes-Barre/Scranton on Friday, Seth Rorabaugh of Tribune-Review Sports reports."
+    },
+    {
       "player": "Ryan Reaves",
       "team": null,
       "position": "RW",
@@ -435,14 +579,6 @@
       "estimated_return": "Jul 1",
       "status": "Injured Reserve",
       "comment": "Sep 30: ir-lt"
-    },
-    {
-      "player": "Joey Daccord",
-      "team": null,
-      "position": "G",
-      "estimated_return": "Sep 15",
-      "status": "Out",
-      "comment": ""
     },
     {
       "player": "Brandon Carlo",
@@ -493,12 +629,36 @@
       "comment": "Apr 11: Joshua (upper body) will not return to the lineup for the rest of the season, according to David Alter of The Hockey News on Saturday."
     },
     {
+      "player": "Auston Matthews",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 15",
+      "status": "Out",
+      "comment": "Mar 19: Matthews underwent successful MCL knee repair surgery Thursday."
+    },
+    {
+      "player": "Chris Tanev",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": "Mar 4: Tanev underwent core muscle surgery Wednesday and will miss the remainder of the 2025-26 campaign."
+    },
+    {
       "player": "Caleb Desnoyers",
       "team": null,
       "position": "C",
       "estimated_return": "Sep 15",
       "status": "Day-To-Day",
       "comment": ""
+    },
+    {
+      "player": "Barrett Hayton",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 15",
+      "status": "Out",
+      "comment": "Jul 8: Hayton (upper body) signed a one-year, $4.775 million contract with Utah on Wednesday."
     },
     {
       "player": "Thatcher Demko",
@@ -515,6 +675,14 @@
       "estimated_return": "Sep 15",
       "status": "Out",
       "comment": "Apr 14: Kane (upper body) will most likely miss the Canucks' final two games of the 2025-26 season, Farhan Lalji of TSN reports."
+    },
+    {
+      "player": "Filip Chytil",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": ""
     },
     {
       "player": "Derek Forbort",
@@ -544,6 +712,14 @@
       "player": "Charlie Lindgren",
       "team": null,
       "position": "G",
+      "estimated_return": "Sep 15",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Eriks Mateiko",
+      "team": null,
+      "position": "LW",
       "estimated_return": "Sep 15",
       "status": "Out",
       "comment": ""

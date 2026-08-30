@@ -2,7 +2,7 @@
   "league": "superleague",
   "source": "https://en.wikipedia.org/wiki/2026_Super_League_season",
   "strategy": "wikipedia_table",
-  "fetched_at": "2026-08-30T01:39:28.205582+09:00",
+  "fetched_at": "2026-08-30T14:07:35.003835+09:00",
   "team_count": 14,
   "teams": [
     {
@@ -31,27 +31,27 @@
     },
     {
       "team": "Warrington Wolves (T)",
-      "gp": 24,
+      "gp": 25,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 666,
+      "pf": 682,
       "pa": "Warrington Wolves (T)",
-      "pd": 254,
-      "pts": 36,
-      "pd_per_game": 10.58
+      "pd": 256,
+      "pts": 38,
+      "pd_per_game": 10.24
     },
     {
-      "team": "Wakefield Trinity",
-      "gp": 24,
+      "team": "Wakefield Trinity (Q)",
+      "gp": 25,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 637,
-      "pa": "Wakefield Trinity",
-      "pd": 189,
-      "pts": 32,
-      "pd_per_game": 7.88
+      "pf": 665,
+      "pa": "Wakefield Trinity (Q)",
+      "pd": 205,
+      "pts": 34,
+      "pd_per_game": 8.2
     },
     {
       "team": "Leigh Leopards",
@@ -102,14 +102,14 @@
     },
     {
       "team": "Toulouse Olympique (E)",
-      "gp": 24,
+      "gp": 25,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 492,
+      "pf": 520,
       "pa": "Toulouse Olympique (E)",
-      "pd": "−138",
-      "pts": 16
+      "pd": "−128",
+      "pts": 18
     },
     {
       "team": "Castleford Tigers (E)",
@@ -124,13 +124,13 @@
     },
     {
       "team": "Hull F.C. (E)",
-      "gp": 24,
+      "gp": 25,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 426,
+      "pf": 440,
       "pa": "Hull F.C. (E)",
-      "pd": "−99",
+      "pd": "−101",
       "pts": 14
     },
     {
@@ -146,24 +146,24 @@
     },
     {
       "team": "York Knights (E)",
-      "gp": 24,
+      "gp": 25,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 470,
+      "pf": 482,
       "pa": "York Knights (E)",
-      "pd": "−261",
+      "pd": "−277",
       "pts": 14
     },
     {
       "team": "Bradford Bulls (E)",
-      "gp": 24,
+      "gp": 25,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 402,
+      "pf": 420,
       "pa": "Bradford Bulls (E)",
-      "pd": "−365",
+      "pd": "−375",
       "pts": 12
     }
   ]
