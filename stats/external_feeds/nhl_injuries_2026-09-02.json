@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-09-02T01:30:15.221580+09:00",
+  "fetched_at": "2026-09-02T13:11:51.572816+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -192,7 +192,7 @@
       "player": "Elvis Merzlikins",
       "team": null,
       "position": "G",
-      "estimated_return": "Sep 21",
+      "estimated_return": "Oct 24",
       "status": "Out",
       "comment": ""
     },
@@ -573,14 +573,6 @@
       "comment": "Sep 30: ir-lt"
     },
     {
-      "player": "Brandon Carlo",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Sep 15",
-      "status": "Out",
-      "comment": "Jun 27: Carlo (lower body) has been traded to the St. Louis Blues for two third round draft picks, reports Elliotte Friedman of Sportsnet.ca."
-    },
-    {
       "player": "Pontus Holmberg",
       "team": null,
       "position": "RW",
@@ -600,7 +592,7 @@
       "player": "Max Domi",
       "team": null,
       "position": "C",
-      "estimated_return": "Sep 15",
+      "estimated_return": "Oct 3",
       "status": "Out",
       "comment": ""
     },
@@ -648,7 +640,7 @@
       "player": "Thatcher Demko",
       "team": null,
       "position": "G",
-      "estimated_return": "Sep 19",
+      "estimated_return": "Sep 29",
       "status": "Out",
       "comment": ""
     },
