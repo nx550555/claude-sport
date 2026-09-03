@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-09-03T01:28:49.555057+09:00",
+  "fetched_at": "2026-09-03T13:08:26.957864+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -469,30 +469,6 @@
       "comment": "Mar 22: Noesen (knee) has been ruled out for the rest of the season, Kristy Flannery of The Hockey News reports Sunday."
     },
     {
-      "player": "Semyon Varlamov",
-      "team": null,
-      "position": "G",
-      "estimated_return": "Sep 15",
-      "status": "Injured Reserve",
-      "comment": "Apr 19: Varlamov (knee) has been returned from his conditioning role with AHL Bridgeport, per the AHL transaction log."
-    },
-    {
-      "player": "Kyle Palmieri",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Sep 15",
-      "status": "Injured Reserve",
-      "comment": "Apr 15: Palmieri (knee) told reporters Wednesday that he should be ready to go for the start of training camp, Stefen Rosner of NHL.com reports."
-    },
-    {
-      "player": "Pierre Engvall",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Sep 15",
-      "status": "Injured Reserve",
-      "comment": "Mar 12: Engvall (ankle) will miss the remainder of the 2025-26 campaign, per Stefen Rosner of NHL.com."
-    },
-    {
       "player": "Matt Rempe",
       "team": null,
       "position": "C",
@@ -547,14 +523,6 @@
       "estimated_return": "Sep 15",
       "status": "Injured Reserve",
       "comment": ""
-    },
-    {
-      "player": "Filip Hallander",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Sep 15",
-      "status": "Injured Reserve",
-      "comment": "Feb 27: Hallander (leg) was recalled from his conditioning stint with AHL Wilkes-Barre/Scranton on Friday, Seth Rorabaugh of Tribune-Review Sports reports."
     },
     {
       "player": "Ryan Reaves",
@@ -651,14 +619,6 @@
       "estimated_return": "Sep 15",
       "status": "Out",
       "comment": "Apr 14: Kane (upper body) will most likely miss the Canucks' final two games of the 2025-26 season, Farhan Lalji of TSN reports."
-    },
-    {
-      "player": "Filip Chytil",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Sep 15",
-      "status": "Injured Reserve",
-      "comment": ""
     },
     {
       "player": "Derek Forbort",
