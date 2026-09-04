@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-09-04T01:18:54.228165+09:00",
+  "fetched_at": "2026-09-04T13:14:43.836726+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -219,14 +219,6 @@
       "estimated_return": "Sep 15",
       "status": "Out",
       "comment": "May 4: Hintz (hamstring) believes he was close to returning to the lineup after dealing with a setback in his recovery, according to Lia Assimakopoulos of The Dallas Morning News on Monday."
-    },
-    {
-      "player": "Tyler Seguin",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Sep 15",
-      "status": "Injured Reserve",
-      "comment": "May 4: Seguin (knee) expects to be available for the start of training camp in the fall, Lia Assimakopoulos of The Dallas Morning News reports Monday."
     },
     {
       "player": "Nils Lundkvist",
@@ -509,14 +501,6 @@
       "comment": "May 11: Tippett (undisclosed) was contending with several injuries, including a sports hernia, during the 2026 postseason, Kevin Kurz of The Athletic reports Monday."
     },
     {
-      "player": "Ty Murchison",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Sep 15",
-      "status": "Out",
-      "comment": ""
-    },
-    {
       "player": "Caleb Jones",
       "team": null,
       "position": "D",
@@ -589,14 +573,6 @@
       "comment": "Mar 4: Tanev underwent core muscle surgery Wednesday and will miss the remainder of the 2025-26 campaign."
     },
     {
-      "player": "Caleb Desnoyers",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Sep 15",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Barrett Hayton",
       "team": null,
       "position": "C",
@@ -648,14 +624,6 @@
       "player": "Charlie Lindgren",
       "team": null,
       "position": "G",
-      "estimated_return": "Sep 15",
-      "status": "Out",
-      "comment": ""
-    },
-    {
-      "player": "Eriks Mateiko",
-      "team": null,
-      "position": "LW",
       "estimated_return": "Sep 15",
       "status": "Out",
       "comment": ""
