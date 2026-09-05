@@ -2,7 +2,7 @@
   "league": "superleague",
   "source": "https://en.wikipedia.org/wiki/2026_Super_League_season",
   "strategy": "wikipedia_table",
-  "fetched_at": "2026-09-05T01:14:26.436476+09:00",
+  "fetched_at": "2026-09-05T13:10:34.829025+09:00",
   "team_count": 14,
   "teams": [
     {
@@ -54,40 +54,50 @@
       "pd_per_game": 8.2
     },
     {
-      "team": "Leigh Leopards",
-      "gp": 25,
+      "team": "Leigh Leopards (Q)",
+      "gp": 26,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 588,
-      "pa": "Leigh Leopards",
-      "pd": 120,
+      "pf": 636,
+      "pa": "Leigh Leopards (Q)",
+      "pd": 158,
+      "pts": 34,
+      "pd_per_game": 6.08
+    },
+    {
+      "team": "Hull KR (Q)",
+      "gp": 26,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 736,
+      "pa": "Hull KR (Q)",
+      "pd": 269,
       "pts": 32,
-      "pd_per_game": 4.8
+      "pd_per_game": 10.35
     },
     {
-      "team": "Hull KR",
-      "gp": 25,
+      "team": "St Helens (E)",
+      "gp": 26,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 700,
-      "pa": "Hull KR",
-      "pd": 239,
-      "pts": 30,
-      "pd_per_game": 9.56
+      "pf": 600,
+      "pa": "St Helens (E)",
+      "pd": "−2",
+      "pts": 28
     },
     {
-      "team": "St Helens",
-      "gp": 25,
+      "team": "Toulouse Olympique (E)",
+      "gp": 26,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 590,
-      "pa": "St Helens",
-      "pd": 36,
-      "pts": 28,
-      "pd_per_game": 1.44
+      "pf": 564,
+      "pa": "Toulouse Olympique (E)",
+      "pd": "−114",
+      "pts": 20
     },
     {
       "team": "Catalans Dragons (E)",
@@ -99,17 +109,6 @@
       "pa": "Catalans Dragons (E)",
       "pd": "−215",
       "pts": 20
-    },
-    {
-      "team": "Toulouse Olympique (E)",
-      "gp": 25,
-      "w": null,
-      "l": null,
-      "d": null,
-      "pf": 520,
-      "pa": "Toulouse Olympique (E)",
-      "pd": "−128",
-      "pts": 18
     },
     {
       "team": "Castleford Tigers (E)",
@@ -124,24 +123,24 @@
     },
     {
       "team": "Hull F.C. (E)",
-      "gp": 25,
+      "gp": 26,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 440,
+      "pf": 470,
       "pa": "Hull F.C. (E)",
-      "pd": "−101",
+      "pd": "−115",
       "pts": 14
     },
     {
       "team": "Huddersfield Giants (E)",
-      "gp": 25,
+      "gp": 26,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 455,
+      "pf": 461,
       "pa": "Huddersfield Giants (E)",
-      "pd": "−258",
+      "pd": "−288",
       "pts": 14
     },
     {
