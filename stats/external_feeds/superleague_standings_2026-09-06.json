@@ -2,56 +2,56 @@
   "league": "superleague",
   "source": "https://en.wikipedia.org/wiki/2026_Super_League_season",
   "strategy": "wikipedia_table",
-  "fetched_at": "2026-09-06T00:02:06.194150+09:00",
+  "fetched_at": "2026-09-06T13:18:26.456124+09:00",
   "team_count": 14,
   "teams": [
     {
-      "team": "Leeds Rhinos (T)",
-      "gp": 25,
+      "team": "Wigan Warriors (Q)",
+      "gp": 26,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 884,
-      "pa": "Leeds Rhinos (T)",
-      "pd": 516,
-      "pts": 40,
-      "pd_per_game": 20.64
+      "pf": 801,
+      "pa": "Wigan Warriors (Q)",
+      "pd": 374,
+      "pts": 42,
+      "pd_per_game": 14.38
     },
     {
-      "team": "Wigan Warriors (T)",
-      "gp": 25,
+      "team": "Leeds Rhinos (Q)",
+      "gp": 26,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 761,
-      "pa": "Wigan Warriors (T)",
-      "pd": 342,
+      "pf": 892,
+      "pa": "Leeds Rhinos (Q)",
+      "pd": 484,
       "pts": 40,
-      "pd_per_game": 13.68
+      "pd_per_game": 18.62
     },
     {
-      "team": "Warrington Wolves (T)",
-      "gp": 25,
+      "team": "Warrington Wolves (Q)",
+      "gp": 26,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 682,
-      "pa": "Warrington Wolves (T)",
-      "pd": 256,
+      "pf": 700,
+      "pa": "Warrington Wolves (Q)",
+      "pd": 249,
       "pts": 38,
-      "pd_per_game": 10.24
+      "pd_per_game": 9.58
     },
     {
       "team": "Wakefield Trinity (Q)",
-      "gp": 25,
+      "gp": 26,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 665,
+      "pf": 690,
       "pa": "Wakefield Trinity (Q)",
-      "pd": 205,
-      "pts": 34,
-      "pd_per_game": 8.2
+      "pd": 212,
+      "pts": 36,
+      "pd_per_game": 8.15
     },
     {
       "team": "Leigh Leopards (Q)",
@@ -101,14 +101,25 @@
     },
     {
       "team": "Catalans Dragons (E)",
-      "gp": 25,
+      "gp": 26,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 509,
+      "pf": 525,
       "pa": "Catalans Dragons (E)",
-      "pd": "−215",
+      "pd": "−227",
       "pts": 20
+    },
+    {
+      "team": "York Knights (E)",
+      "gp": 26,
+      "w": null,
+      "l": null,
+      "d": null,
+      "pf": 510,
+      "pa": "York Knights (E)",
+      "pd": "−265",
+      "pts": 16
     },
     {
       "team": "Castleford Tigers (E)",
@@ -141,17 +152,6 @@
       "pf": 461,
       "pa": "Huddersfield Giants (E)",
       "pd": "−288",
-      "pts": 14
-    },
-    {
-      "team": "York Knights (E)",
-      "gp": 25,
-      "w": null,
-      "l": null,
-      "d": null,
-      "pf": 482,
-      "pa": "York Knights (E)",
-      "pd": "−277",
       "pts": 14
     },
     {
