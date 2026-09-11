@@ -2,7 +2,7 @@
   "league": "superleague",
   "source": "https://en.wikipedia.org/wiki/2026_Super_League_season",
   "strategy": "wikipedia_table",
-  "fetched_at": "2026-09-11T01:18:09.061308+09:00",
+  "fetched_at": "2026-09-11T13:21:22.560602+09:00",
   "team_count": 14,
   "teams": [
     {
@@ -112,14 +112,14 @@
     },
     {
       "team": "York Knights (E)",
-      "gp": 26,
+      "gp": 27,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 510,
+      "pf": 545,
       "pa": "York Knights (E)",
-      "pd": "−265",
-      "pts": 16
+      "pd": "−246",
+      "pts": 18
     },
     {
       "team": "Castleford Tigers (E)",
@@ -156,13 +156,13 @@
     },
     {
       "team": "Bradford Bulls (E)",
-      "gp": 26,
+      "gp": 27,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 452,
+      "pf": 468,
       "pa": "Bradford Bulls (E)",
-      "pd": "−365",
+      "pd": "−384",
       "pts": 14
     }
   ]

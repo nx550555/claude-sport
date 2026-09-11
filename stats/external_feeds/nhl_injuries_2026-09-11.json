@@ -1,37 +1,37 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-09-11T01:18:18.095778+09:00",
+  "fetched_at": "2026-09-11T13:21:31.317596+09:00",
   "starting_goalies": [],
   "injuries": [
     {
       "player": "Nick Jensen",
       "team": null,
       "position": "D",
-      "estimated_return": "Sep 15",
-      "status": "Out",
-      "comment": ""
-    },
-    {
-      "player": "Petr Mrazek",
-      "team": null,
-      "position": "G",
-      "estimated_return": "Sep 15",
-      "status": "Out",
-      "comment": ""
-    },
-    {
-      "player": "Drew Helleson",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Sep 15",
-      "status": "Out",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
       "comment": ""
     },
     {
       "player": "Ryan Poehling",
       "team": null,
       "position": "C",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Drew Helleson",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Petr Mrazek",
+      "team": null,
+      "position": "G",
       "estimated_return": "Sep 15",
       "status": "Out",
       "comment": ""
@@ -72,40 +72,48 @@
       "player": "Jonathan Huberdeau",
       "team": null,
       "position": "LW",
-      "estimated_return": "Oct 1",
+      "estimated_return": "Oct 8",
       "status": "Out",
+      "comment": "Sep 10: Huberdeau (hip) will miss the start of the 2026-27 season, Pat Steinberg of QR Calgary 770 AM reports Thursday."
+    },
+    {
+      "player": "Joel Hanley",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
       "comment": ""
     },
     {
       "player": "Kevin Bahl",
       "team": null,
       "position": "D",
-      "estimated_return": "Sep 15",
-      "status": "Out",
-      "comment": "Apr 16: Bahl (lower body) won't play in Calgary's season finale against Los Angeles on Thursday, per Pat Steinberg of Sportsnet 960 The Fan."
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Connor Zary",
       "team": null,
       "position": "C",
-      "estimated_return": "Sep 15",
-      "status": "Out",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
       "comment": ""
     },
     {
       "player": "Yan Kuznetsov",
       "team": null,
       "position": "D",
-      "estimated_return": "Sep 15",
-      "status": "Out",
-      "comment": "Apr 14: Kuznetsov (upper body) will miss the rest of the 2025-26 regular season, according to Pat Steinberg of Sportsnet 960 The Fan on Tuesday."
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Henry Mews",
       "team": null,
       "position": "D",
-      "estimated_return": "Sep 15",
-      "status": "Out",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
       "comment": ""
     },
     {
@@ -113,6 +121,14 @@
       "team": null,
       "position": "LW",
       "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Artyom Levshunov",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 19",
       "status": "Day-To-Day",
       "comment": ""
     },
@@ -165,35 +181,35 @@
       "comment": ""
     },
     {
-      "player": "Arttu Hyry",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Sep 15",
-      "status": "Out",
-      "comment": "Jul 1: Hyry (lower body) signed a two-year, $1.8 million contract with the Stars on Wednesday."
-    },
-    {
       "player": "Roope Hintz",
       "team": null,
       "position": "C",
-      "estimated_return": "Sep 15",
-      "status": "Out",
-      "comment": "May 4: Hintz (hamstring) believes he was close to returning to the lineup after dealing with a setback in his recovery, according to Lia Assimakopoulos of The Dallas Morning News on Monday."
+      "estimated_return": "Sep 19",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
-      "player": "Mason Appleton",
+      "player": "Arttu Hyry",
       "team": null,
-      "position": "C",
-      "estimated_return": "Sep 15",
-      "status": "Out",
-      "comment": "Apr 15: Appleton (upper body) won't play Wednesday versus the Panthers."
+      "position": "RW",
+      "estimated_return": "Sep 19",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Michael Rasmussen",
       "team": null,
       "position": "C",
-      "estimated_return": "Sep 15",
-      "status": "Out",
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Mason Appleton",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
       "comment": ""
     },
     {
@@ -285,28 +301,52 @@
       "comment": ""
     },
     {
-      "player": "Evan Rodrigues",
+      "player": "Kevin Fiala",
       "team": null,
-      "position": "C",
-      "estimated_return": "Sep 20",
+      "position": "LW",
+      "estimated_return": "Sep 30",
       "status": "Injured Reserve",
-      "comment": "Jun 30: Rodrigues (finger) was traded to the Devils from the Panthers on Tuesday along with Jesper Boqvist and Ben Steeves, in exchange for Jacob Markstrom and Angus Crookshank, Pierre LeBrun of TSN reports."
+      "comment": "Sep 10: Fiala (lower leg fracture) has undergone an additional procedure and won't be ready for the start of training camp, the team announced Thursday."
+    },
+    {
+      "player": "Filip Gustavsson",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Sep 19",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Jonas Siegenthaler",
       "team": null,
       "position": "D",
-      "estimated_return": "Sep 15",
-      "status": "Out",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
       "comment": ""
     },
     {
       "player": "Luke Hughes",
       "team": null,
       "position": "D",
-      "estimated_return": "Sep 15",
-      "status": "Out",
-      "comment": "Apr 9: Hughes (undisclosed)  will undergo a procedure and will miss the remainder of the season, it was announced Thursday."
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Arseny Gritsyuk",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Evan Rodrigues",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 20",
+      "status": "Injured Reserve",
+      "comment": "Jun 30: Rodrigues (finger) was traded to the Devils from the Panthers on Tuesday along with Jesper Boqvist and Ben Steeves, in exchange for Jacob Markstrom and Angus Crookshank, Pierre LeBrun of TSN reports."
     },
     {
       "player": "Jake Sanderson",
@@ -325,20 +365,20 @@
       "comment": ""
     },
     {
-      "player": "Noah Cates",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Sep 15",
-      "status": "Out",
-      "comment": "May 12: Cates will not need to have a procedure for the foot injury he sustained during the 2026 playoffs, per Charlie O'Connor of PHLY Sports on Tuesday."
-    },
-    {
       "player": "Owen Tippett",
       "team": null,
       "position": "RW",
-      "estimated_return": "Sep 15",
-      "status": "Out",
-      "comment": "May 11: Tippett (undisclosed) was contending with several injuries, including a sports hernia, during the 2026 postseason, Kevin Kurz of The Athletic reports Monday."
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Noah Cates",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Ryan Reaves",
@@ -389,6 +429,14 @@
       "comment": ""
     },
     {
+      "player": "Barrett Hayton",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 19",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Thatcher Demko",
       "team": null,
       "position": "G",
@@ -429,52 +477,44 @@
       "comment": "Apr 22: Sandin underwent right knee surgery Tuesday for a torn ACL."
     },
     {
-      "player": "Elias Salomonsson",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 30",
-      "status": "Out",
-      "comment": "Apr 30: Salomonsson underwent shoulder surgery Thursday and is expected to be out for 5-6 months, per Mitchell Clinton of the Jets' official site."
-    },
-    {
-      "player": "Neal Pionk",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Sep 15",
-      "status": "Out",
-      "comment": "Apr 16: Pionk (undisclosed) is slated to miss the Jets' season finale against San Jose on Thursday."
-    },
-    {
       "player": "Vladislav Namestnikov",
       "team": null,
       "position": "C",
-      "estimated_return": "Sep 15",
-      "status": "Out",
+      "estimated_return": "Sep 19",
+      "status": "Day-To-Day",
       "comment": ""
-    },
-    {
-      "player": "Gustav Nyquist",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Sep 15",
-      "status": "Out",
-      "comment": "Apr 16: Nyquist (undisclosed) has been ruled out of Thursday's tilt versus San Jose."
     },
     {
       "player": "Alex Iafallo",
       "team": null,
       "position": "LW",
-      "estimated_return": "Sep 15",
-      "status": "Out",
+      "estimated_return": "Sep 19",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Neal Pionk",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 19",
+      "status": "Day-To-Day",
       "comment": ""
     },
     {
       "player": "Morgan Barron",
       "team": null,
       "position": "C",
-      "estimated_return": "Sep 15",
+      "estimated_return": "Sep 19",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Elias Salomonsson",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 30",
       "status": "Out",
-      "comment": "Apr 11: Barron (lower body) won't be an option for Winnipeg's final four games of the regular season, according to Ken Wiebe of The Winnipeg Free Press on Saturday."
+      "comment": "Apr 30: Salomonsson underwent shoulder surgery Thursday and is expected to be out for 5-6 months, per Mitchell Clinton of the Jets' official site."
     }
   ]
 }
