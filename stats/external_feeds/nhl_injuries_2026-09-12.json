@@ -1,0 +1,520 @@
+{
+  "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
+  "source_injuries": "https://www.espn.com/nhl/injuries",
+  "fetched_at": "2026-09-12T01:21:55.155430+09:00",
+  "starting_goalies": [],
+  "injuries": [
+    {
+      "player": "Nick Jensen",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Ryan Poehling",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Drew Helleson",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Petr Mrazek",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Sep 15",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Nikita Zadorov",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Noah Ostlund",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Justin Danforth",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Sep 21",
+      "status": "Injured Reserve",
+      "comment": "May 20: Danforth (kneecap) was nearly healthy at the end of the Sabres' playoff run, Heather Engel of NHL.com reports Wednesday."
+    },
+    {
+      "player": "Jiri Kulich",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 21",
+      "status": "Injured Reserve",
+      "comment": "May 19: Kulich (ear) said Tuesday that he had his blood clot removed and will be able to play hockey again, per Bill Hoppe of the Olean Times Herald."
+    },
+    {
+      "player": "Jonathan Huberdeau",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 8",
+      "status": "Out",
+      "comment": "Sep 10: Huberdeau (hip) will miss the start of the 2026-27 season, Pat Steinberg of QR Calgary 770 AM reports Thursday."
+    },
+    {
+      "player": "Joel Hanley",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Kevin Bahl",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Connor Zary",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Yan Kuznetsov",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Henry Mews",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Eric Robinson",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Artyom Levshunov",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 19",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Connor Bedard",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 7",
+      "status": "Out",
+      "comment": "Sep 8: Bedard's recovery from shoulder surgery is going as planned, Scott Powers of The Athletic reports Tuesday."
+    },
+    {
+      "player": "Damon Severson",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Valeri Nichushkin",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Dmitri Voronkov",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Elvis Merzlikins",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Oct 24",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Isac Lundestrom",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 10",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Roope Hintz",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 19",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Arttu Hyry",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Sep 19",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Michael Rasmussen",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Mason Appleton",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Matt Savoie",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 20",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Alec Regula",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 29",
+      "status": "Out",
+      "comment": "Aug 26: Regula, who underwent a procedure shortly after the season, will not be available for training camp, the team announced Wednesday."
+    },
+    {
+      "player": "Frederik Andersen",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Oct 20",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Adam Henrique",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 15",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Jacob Markstrom",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Dmitry Kulikov",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Seth Jones",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Radko Gudas",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Carter Verhaeghe",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Sam Bennett",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Uvis Balinskis",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Kevin Fiala",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Sep 30",
+      "status": "Injured Reserve",
+      "comment": "Sep 10: Fiala (lower leg fracture) has undergone an additional procedure and won't be ready for the start of training camp, the team announced Thursday."
+    },
+    {
+      "player": "Filip Gustavsson",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Sep 19",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Jonas Siegenthaler",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Luke Hughes",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Arseny Gritsyuk",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Evan Rodrigues",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 20",
+      "status": "Injured Reserve",
+      "comment": "Jun 30: Rodrigues (finger) was traded to the Devils from the Panthers on Tuesday along with Jesper Boqvist and Ben Steeves, in exchange for Jacob Markstrom and Angus Crookshank, Pierre LeBrun of TSN reports."
+    },
+    {
+      "player": "Jake Sanderson",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Artem Zub",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Owen Tippett",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Noah Cates",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Ryan Reaves",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Sep 15",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Logan Couture",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Jul 1",
+      "status": "Injured Reserve",
+      "comment": "Sep 30: ir-lt"
+    },
+    {
+      "player": "Pontus Holmberg",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Dakota Joshua",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 19",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Chris Tanev",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 29",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Max Domi",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 3",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Barrett Hayton",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 19",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Thatcher Demko",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Sep 29",
+      "status": "Out",
+      "comment": "Sep 8: Demko (hip) still doesn't have a timeline for his return, per Rick Dhaliwal of CHEK on Tuesday."
+    },
+    {
+      "player": "Evander Kane",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Sep 15",
+      "status": "Out",
+      "comment": "Apr 14: Kane (upper body) will most likely miss the Canucks' final two games of the 2025-26 season, Farhan Lalji of TSN reports."
+    },
+    {
+      "player": "Derek Forbort",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": "Oct 28: Forbort (undisclosed) was placed on long-term injured reserve Tuesday."
+    },
+    {
+      "player": "William Karlsson",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 19",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Rasmus Sandin",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Dec 21",
+      "status": "Out",
+      "comment": "Apr 22: Sandin underwent right knee surgery Tuesday for a torn ACL."
+    },
+    {
+      "player": "Vladislav Namestnikov",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 19",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Alex Iafallo",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Sep 19",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Neal Pionk",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 19",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Morgan Barron",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 19",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Elias Salomonsson",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 30",
+      "status": "Out",
+      "comment": "Apr 30: Salomonsson underwent shoulder surgery Thursday and is expected to be out for 5-6 months, per Mitchell Clinton of the Jets' official site."
+    }
+  ]
+}
