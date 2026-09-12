@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-09-12T01:21:55.155430+09:00",
+  "fetched_at": "2026-09-12T13:19:49.766372+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -43,6 +43,14 @@
       "estimated_return": "Sep 20",
       "status": "Day-To-Day",
       "comment": ""
+    },
+    {
+      "player": "Topias Leinonen",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Oct 1",
+      "status": "Out",
+      "comment": "Sep 11: Leinonen will miss some time due to a lower-body injury he sustained over the summer, Rachel Lenzi of The Buffalo News reports."
     },
     {
       "player": "Noah Ostlund",
@@ -144,14 +152,6 @@
       "player": "Damon Severson",
       "team": null,
       "position": "D",
-      "estimated_return": "Sep 21",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Valeri Nichushkin",
-      "team": null,
-      "position": "RW",
       "estimated_return": "Sep 21",
       "status": "Day-To-Day",
       "comment": ""
@@ -349,6 +349,14 @@
       "comment": "Jun 30: Rodrigues (finger) was traded to the Devils from the Panthers on Tuesday along with Jesper Boqvist and Ben Steeves, in exchange for Jacob Markstrom and Angus Crookshank, Pierre LeBrun of TSN reports."
     },
     {
+      "player": "Aidan Thompson",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
+      "comment": "Sep 11: Thompson is dealing with an undisclosed injury and hasn't been cleared to be on the ice for the start of rookie camp, Mollie Walker of the New York Post reports."
+    },
+    {
       "player": "Jake Sanderson",
       "team": null,
       "position": "D",
@@ -381,6 +389,22 @@
       "comment": ""
     },
     {
+      "player": "Leo Sahlin Wallenius",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 12",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Mattias Havelid",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": "Sep 11: Havelid has been ruled out for the Sharks' upcoming rookie showcase due to an upper-body injury, Sheng Peng of San Jose Hockey Now reports Friday."
+    },
+    {
       "player": "Ryan Reaves",
       "team": null,
       "position": "RW",
@@ -397,12 +421,28 @@
       "comment": "Sep 30: ir-lt"
     },
     {
+      "player": "Adam Jecho",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 3",
+      "status": "Injured Reserve",
+      "comment": "Sep 11: Jecho has entered the NHL/NHLPA Player Assistance Program, Mark Scheig of The Hockey Writers reports Friday."
+    },
+    {
       "player": "Pontus Holmberg",
       "team": null,
       "position": "RW",
       "estimated_return": "Sep 20",
       "status": "Day-To-Day",
       "comment": ""
+    },
+    {
+      "player": "Max Domi",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 3",
+      "status": "Out",
+      "comment": "Sep 11: General manager John Chayka said Friday that Domi (back) won't be ready for the start of training camp, Joshua Clipperton of The Canadian Press reports."
     },
     {
       "player": "Dakota Joshua",
@@ -421,12 +461,20 @@
       "comment": ""
     },
     {
-      "player": "Max Domi",
+      "player": "Caleb Desnoyers",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 3",
-      "status": "Out",
-      "comment": ""
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": "Sep 11: General manager Bill Armstrong said Friday that Desnoyers (leg) is considered day-to-day and won't participate in rookie camp, Cole Bagley of KSL Sports reports."
+    },
+    {
+      "player": "Tij Iginla",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": "Sep 11: Iginla will not participate in rookie camp games due to an undisclosed injury, but he should be ready for training camp, Cole Bagley of KSL Sports reports."
     },
     {
       "player": "Barrett Hayton",
