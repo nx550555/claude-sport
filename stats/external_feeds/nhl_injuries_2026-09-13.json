@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-09-13T00:27:23.507312+09:00",
+  "fetched_at": "2026-09-13T13:32:53.915580+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -37,6 +37,14 @@
       "comment": ""
     },
     {
+      "player": "Troy Terry",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Nov 15",
+      "status": "Out",
+      "comment": "Jun 18: Terry underwent hip surgery and is expected to need 5-6 months to recover, Chris Johnston of The Athletic reports Thursday."
+    },
+    {
       "player": "Nikita Zadorov",
       "team": null,
       "position": "D",
@@ -59,22 +67,6 @@
       "estimated_return": "Sep 21",
       "status": "Day-To-Day",
       "comment": ""
-    },
-    {
-      "player": "Justin Danforth",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Sep 21",
-      "status": "Injured Reserve",
-      "comment": "May 20: Danforth (kneecap) was nearly healthy at the end of the Sabres' playoff run, Heather Engel of NHL.com reports Wednesday."
-    },
-    {
-      "player": "Jiri Kulich",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Sep 21",
-      "status": "Injured Reserve",
-      "comment": "May 19: Kulich (ear) said Tuesday that he had his blood clot removed and will be able to play hockey again, per Bill Hoppe of the Olean Times Herald."
     },
     {
       "player": "Jonathan Huberdeau",
@@ -125,11 +117,27 @@
       "comment": ""
     },
     {
+      "player": "Jake Bean",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 15",
+      "status": "Injured Reserve",
+      "comment": "Dec 18: Bean (undisclosed) will need to undergo surgery and is expected to be sidelined indefinitely, Pat Steinberg of Sportsnet 960 The Fan reports Thursday."
+    },
+    {
       "player": "Eric Robinson",
       "team": null,
       "position": "LW",
       "estimated_return": "Sep 20",
       "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Seth Jarvis",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Dec 26",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -149,10 +157,26 @@
       "comment": "Sep 8: Bedard's recovery from shoulder surgery is going as planned, Scott Powers of The Athletic reports Tuesday."
     },
     {
+      "player": "Matt Grzelcyk",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 15",
+      "status": "Out",
+      "comment": "Mar 31: Grzelcyk (upper body) will miss the remainder of the 2025-26 regular season, according to Ben Pope of the Chicago Sun-Times on Tuesday."
+    },
+    {
+      "player": "Ryan Ellis",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Jul 1",
+      "status": "Injured Reserve",
+      "comment": "Jan 8: Ellis (back) and his contract have been traded to Chicago from San Jose, along with Jake Furlong and a 2028 fourth-round pick in exchange for Laurent Brossoit, Nolan Allan and a 2028 seventh-round pick Thursday."
+    },
+    {
       "player": "Damon Severson",
       "team": null,
       "position": "D",
-      "estimated_return": "Sep 21",
+      "estimated_return": "Sep 18",
       "status": "Day-To-Day",
       "comment": ""
     },
@@ -176,7 +200,7 @@
       "player": "Elvis Merzlikins",
       "team": null,
       "position": "G",
-      "estimated_return": "Oct 24",
+      "estimated_return": "Oct 31",
       "status": "Out",
       "comment": ""
     },
@@ -211,6 +235,14 @@
       "estimated_return": "Oct 20",
       "status": "Out",
       "comment": ""
+    },
+    {
+      "player": "Mattias Janmark",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 29",
+      "status": "Out",
+      "comment": "Aug 26: The Oilers announced Wednesday that Janmark (undisclosed) isn't expected to participate in training camp ahead of the 2026-27 season."
     },
     {
       "player": "Alec Regula",
@@ -293,6 +325,30 @@
       "comment": ""
     },
     {
+      "player": "Brad Marchand",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 10",
+      "status": "Injured Reserve",
+      "comment": "Aug 15: Marchand (lower body) had offseason surgery and could be unavailable for the start of the 2026-27 campaign, according to George Richards of Florida Hockey Now on Saturday."
+    },
+    {
+      "player": "Jonah Gadjovich",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Sep 20",
+      "status": "Injured Reserve",
+      "comment": "Mar 31: Gadjovich (upper body) is not expected to suit up again this season, per Jameson Olive of the Panthers' official site on Tuesday."
+    },
+    {
+      "player": "Niko Mikkola",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 20",
+      "status": "Injured Reserve",
+      "comment": ""
+    },
+    {
       "player": "Kevin Fiala",
       "team": null,
       "position": "LW",
@@ -341,12 +397,28 @@
       "comment": "Jun 30: Rodrigues (finger) was traded to the Devils from the Panthers on Tuesday along with Jesper Boqvist and Ben Steeves, in exchange for Jacob Markstrom and Angus Crookshank, Pierre LeBrun of TSN reports."
     },
     {
+      "player": "Stefan Noesen",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Oct 15",
+      "status": "Injured Reserve",
+      "comment": "Mar 22: Noesen (knee) has been ruled out for the rest of the season, Kristy Flannery of The Hockey News reports Sunday."
+    },
+    {
       "player": "Aidan Thompson",
       "team": null,
       "position": "C",
       "estimated_return": "Sep 21",
       "status": "Day-To-Day",
       "comment": "Sep 11: Thompson is dealing with an undisclosed injury and hasn't been cleared to be on the ice for the start of rookie camp, Mollie Walker of the New York Post reports."
+    },
+    {
+      "player": "Matt Rempe",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 21",
+      "status": "Injured Reserve",
+      "comment": "Mar 23: Rempe (thumb) probably won't be ready to return before the end of the 2025-26 regular season, according to Vince Z. Mercogliano of The Athletic on Monday."
     },
     {
       "player": "Jake Sanderson",
@@ -378,6 +450,14 @@
       "position": "LW",
       "estimated_return": "Sep 21",
       "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Caleb Jones",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 21",
+      "status": "Injured Reserve",
       "comment": ""
     },
     {
@@ -451,6 +531,14 @@
       "estimated_return": "Sep 29",
       "status": "Out",
       "comment": ""
+    },
+    {
+      "player": "Zack MacEwen",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 19",
+      "status": "Injured Reserve",
+      "comment": "Jul 1: MacEwen (knee) signed a two-year contract with the Maple Leafs on Wednesday."
     },
     {
       "player": "Caleb Desnoyers",

@@ -2,7 +2,7 @@
   "league": "superleague",
   "source": "https://en.wikipedia.org/wiki/2026_Super_League_season",
   "strategy": "wikipedia_table",
-  "fetched_at": "2026-09-13T00:27:14.258001+09:00",
+  "fetched_at": "2026-09-13T13:32:44.758087+09:00",
   "team_count": 14,
   "teams": [
     {
@@ -134,26 +134,26 @@
       "pts": 16
     },
     {
-      "team": "Castleford Tigers",
-      "gp": 26,
+      "team": "Huddersfield Giants",
+      "gp": 27,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 448,
-      "pa": "Castleford Tigers",
-      "pd": "−370",
+      "pf": 509,
+      "pa": "Huddersfield Giants",
+      "pd": "−256",
       "pts": 16
     },
     {
-      "team": "Huddersfield Giants",
-      "gp": 26,
+      "team": "Castleford Tigers",
+      "gp": 27,
       "w": null,
       "l": null,
       "d": null,
-      "pf": 461,
-      "pa": "Huddersfield Giants",
-      "pd": "−288",
-      "pts": 14
+      "pf": 464,
+      "pa": "Castleford Tigers",
+      "pd": "−402",
+      "pts": 16
     },
     {
       "team": "Bradford Bulls",
