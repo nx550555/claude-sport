@@ -1,9 +1,17 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-09-14T01:06:40.634062+09:00",
+  "fetched_at": "2026-09-14T13:39:03.202281+09:00",
   "starting_goalies": [],
   "injuries": [
+    {
+      "player": "Nick Jensen",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
     {
       "player": "Ryan Poehling",
       "team": null,
@@ -120,16 +128,8 @@
       "player": "Damon Severson",
       "team": null,
       "position": "D",
-      "estimated_return": "Sep 18",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Valeri Nichushkin",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Sep 21",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 1",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -264,9 +264,9 @@
       "player": "Jakub Dvorak",
       "team": null,
       "position": "D",
-      "estimated_return": "Sep 19",
-      "status": "Day-To-Day",
-      "comment": "Sep 12: Dvorak (upper body) was injured in Saturday's prospects game versus the Sharks and is set to be evaluated further Sunday, John Hoven of SiriusXM NHL Network Radio reports."
+      "estimated_return": "Sep 26",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Kevin Fiala",
@@ -317,15 +317,39 @@
       "comment": "Jun 30: Rodrigues (finger) was traded to the Devils from the Panthers on Tuesday along with Jesper Boqvist and Ben Steeves, in exchange for Jacob Markstrom and Angus Crookshank, Pierre LeBrun of TSN reports."
     },
     {
+      "player": "Quinn Finley",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": "Sep 13: Finley is questionable to be cleared for contact ahead of the Islanders' training camp, per Andrew Gross of Newsday."
+    },
+    {
       "player": "Aidan Thompson",
       "team": null,
       "position": "C",
-      "estimated_return": "Sep 21",
-      "status": "Day-To-Day",
-      "comment": "Sep 11: Thompson is dealing with an undisclosed injury and hasn't been cleared to be on the ice for the start of rookie camp, Mollie Walker of the New York Post reports."
+      "estimated_return": "Sep 24",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Cole Beaudoin",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 25",
+      "status": "Out",
+      "comment": "Sep 13: Beaudoin (undisclosed) is day-to-day, per Vince Z. Mercogliano of The Athletic on Sunday."
     },
     {
       "player": "Jake Sanderson",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Artem Zub",
       "team": null,
       "position": "D",
       "estimated_return": "Sep 21",
@@ -352,9 +376,9 @@
       "player": "Cam Lund",
       "team": null,
       "position": "C",
-      "estimated_return": "Sep 20",
-      "status": "Day-To-Day",
-      "comment": "Sep 12: Lund sustained an apparent upper-body injury during Saturday's prospect game versus the Kings, Max Miller of NHL.com reports."
+      "estimated_return": "Sep 26",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Leo Sahlin Wallenius",
@@ -432,9 +456,9 @@
       "player": "Max Psenicka",
       "team": null,
       "position": "D",
-      "estimated_return": "Sep 20",
-      "status": "Day-To-Day",
-      "comment": "Sep 12: Psenicka (undisclosed) left Saturday's prospects game versus the Golden Knights, and there was no update on his status after the contest."
+      "estimated_return": "Sep 26",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Caleb Desnoyers",
