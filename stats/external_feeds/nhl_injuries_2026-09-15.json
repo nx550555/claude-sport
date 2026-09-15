@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-09-15T03:02:47.735200+09:00",
+  "fetched_at": "2026-09-15T13:40:08.819346+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -69,42 +69,10 @@
       "comment": "Sep 10: Huberdeau (hip) will miss the start of the 2026-27 season, Pat Steinberg of QR Calgary 770 AM reports Thursday."
     },
     {
-      "player": "Joel Hanley",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Sep 20",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Kevin Bahl",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Sep 20",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Connor Zary",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Sep 20",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Yan Kuznetsov",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Sep 20",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Henry Mews",
       "team": null,
       "position": "D",
-      "estimated_return": "Sep 20",
+      "estimated_return": "Oct 2",
       "status": "Day-To-Day",
       "comment": ""
     },
