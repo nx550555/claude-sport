@@ -1,0 +1,24 @@
+{
+  "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
+  "source_injuries": "https://www.espn.com/nhl/injuries",
+  "fetched_at": "2026-09-17T01:43:18.955895+09:00",
+  "starting_goalies": [],
+  "injuries": [
+    {
+      "player": "Brad Marchand",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 10",
+      "status": "Injured Reserve",
+      "comment": "Sep 16: Marchand (lower body) will return \"early in the season,\" according to GM Bill Zito, while confirming the veteran forward won't be ready for Opening Night, Jordan McPherson of the Miami Herald reports."
+    },
+    {
+      "player": "Nikita Grebenkin",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
+      "comment": ""
+    }
+  ]
+}
