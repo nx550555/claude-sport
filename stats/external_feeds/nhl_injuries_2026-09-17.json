@@ -1,9 +1,113 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-09-17T01:43:18.955895+09:00",
+  "fetched_at": "2026-09-17T13:40:22.739417+09:00",
   "starting_goalies": [],
   "injuries": [
+    {
+      "player": "Tyson Hinds",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Jason Zucker",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 15",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Louis Crevier",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Alexander Nikishin",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 26",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Trent Miner",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Sep 26",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Cale Makar",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Riley Bezeau",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Adam Fantilli",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 26",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Tristan Bertucci",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Jaxon Fuder",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 19",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Dylan Larkin",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Alec Regula",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 29",
+      "status": "Out",
+      "comment": "Sep 16: Regula (undisclosed) is expected to skate during training camp but won't participate in any preseason games, Jason Gregor of Sports 1440 Edmonton reports Wednesday."
+    },
+    {
+      "player": "Mattias Janmark",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 29",
+      "status": "Out",
+      "comment": "Sep 16: Janmark (undisclosed) will skate during training camp but won't appear in preseason games, Jason Gregor of Sports 1440 Edmonton reports."
+    },
     {
       "player": "Brad Marchand",
       "team": null,
@@ -13,12 +117,124 @@
       "comment": "Sep 16: Marchand (lower body) will return \"early in the season,\" according to GM Bill Zito, while confirming the veteran forward won't be ready for Opening Night, Jordan McPherson of the Miami Herald reports."
     },
     {
+      "player": "Jan Jenik",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 26",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Kaiden Guhle",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 23",
+      "status": "Out",
+      "comment": "Sep 16: The Canadiens announced Wednesday that Guhle is recovering from a minor surgery to his adductor muscle that he underwent over the summer, and he's expected to return in 4-5 weeks."
+    },
+    {
+      "player": "Mathew Barzal",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 30",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Aidan Thompson",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 29",
+      "status": "Out",
+      "comment": "Sep 16: Thompson (undisclosed) is considered week-to-week heading into training camp, Peter Baugh of The Athletic reports Wednesday."
+    },
+    {
+      "player": "Warren Foegele",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
+      "comment": "Sep 16: Foegele is dealing with an undisclosed injury, Bruce Garrioch of Postmedia reports Wednesday."
+    },
+    {
+      "player": "Artem Zub",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
+      "comment": "Sep 16: Zub (lower body) won't skate for the first day of training camp Wednesday, Bruce Garrioch of Postmedia reports."
+    },
+    {
       "player": "Nikita Grebenkin",
       "team": null,
       "position": "RW",
       "estimated_return": "Sep 21",
       "status": "Day-To-Day",
       "comment": ""
+    },
+    {
+      "player": "Melvin Fernström",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
+      "comment": "Sep 16: Fernstrom was listed on the Penguins' injury report with an undisclosed injury Wednesday."
+    },
+    {
+      "player": "Dominic James",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 13",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Yanni Gourde",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Dec 2",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "William Villeneuve",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 29",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Morgan Rielly",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 29",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Max Domi",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 7",
+      "status": "Out",
+      "comment": "Sep 16: General manager John Chayka said Wednesday that Domi (back) failed his physical and will be out indefinitely, David Pagnotta of The Fourth Period reports."
+    },
+    {
+      "player": "Mackenzie MacEachern",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Sep 19",
+      "status": "Day-To-Day",
+      "comment": "Sep 16: MacEachern (undisclosed) is listed as injured on the Canucks' training camp roster released Wednesday."
+    },
+    {
+      "player": "Thatcher Demko",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Sep 29",
+      "status": "Out",
+      "comment": "Sep 16: General manager Ryan Johnson said Wednesday that Demko (hip) won't be a full participant in training camp, Canucks play-by-play announcer Brendan Batchelor reports."
     }
   ]
 }
