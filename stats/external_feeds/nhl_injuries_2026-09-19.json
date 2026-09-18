@@ -1,0 +1,384 @@
+{
+  "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
+  "source_injuries": "https://www.espn.com/nhl/injuries",
+  "fetched_at": "2026-09-19T01:18:06.391865+09:00",
+  "starting_goalies": [],
+  "injuries": [
+    {
+      "player": "Ian Moore",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": "Sep 17: Head coach Joel Quenneville said that Moore sustained an injury early in Thursday's practice session to begin training camp, Zach Cavanagh of The Sporting Tribune reports."
+    },
+    {
+      "player": "Tyson Hinds",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Jason Zucker",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 15",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Louis Crevier",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Seth Jarvis",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 24",
+      "status": "Out",
+      "comment": "Sep 17: Jarvis (shoulder) was on the ice for practice Thursday, Ryan Henkel of The Hockey News reports."
+    },
+    {
+      "player": "Alexander Nikishin",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 26",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Cale Makar",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 30",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Trent Miner",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Sep 26",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Riley Bezeau",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Adam Fantilli",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 26",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Tristan Bertucci",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Jaxon Fuder",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 19",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Dylan Larkin",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 2",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Alec Regula",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 29",
+      "status": "Out",
+      "comment": "Sep 16: Regula (undisclosed) is expected to skate during training camp but won't participate in any preseason games, Jason Gregor of Sports 1440 Edmonton reports Wednesday."
+    },
+    {
+      "player": "Mattias Janmark",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 29",
+      "status": "Out",
+      "comment": "Sep 16: Janmark (undisclosed) will skate during training camp but won't appear in preseason games, Jason Gregor of Sports 1440 Edmonton reports."
+    },
+    {
+      "player": "Jonah Gadjovich",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 17",
+      "status": "Injured Reserve",
+      "comment": "Sep 17: Gadjovich (upper body) is out indefinitely, the team announced Thursday."
+    },
+    {
+      "player": "Brad Marchand",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Nov 2",
+      "status": "Injured Reserve",
+      "comment": "Sep 17: Marchand (lower body) is expected to spend October rehabbing, per Panthers TV Rinkside Reporter Katie Engleson on Thursday."
+    },
+    {
+      "player": "Brian Dumoulin",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 19",
+      "status": "Day-To-Day",
+      "comment": "Sep 17: Dumoulin (undisclosed) failed his physical and is undergoing further testing, Zach Dooley of the Kings' official site reports Thursday."
+    },
+    {
+      "player": "Mats Zuccarello",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Sep 22",
+      "status": "Out",
+      "comment": "Sep 17: The Kings announced Thursday that Zuccarello is dealing with a minor shoulder injury but should be healthy at some point next week, Zach Dooley of the Kings' official site reports."
+    },
+    {
+      "player": "Kevin Fiala",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 3",
+      "status": "Injured Reserve",
+      "comment": "Sep 17: Fiala (lower leg fracture) is at least three weeks away from being ready to play, Zach Dooley of the Kings' official site reports Thursday."
+    },
+    {
+      "player": "Jan Jenik",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 26",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Filip Gustavsson",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Oct 1",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Kaiden Guhle",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 23",
+      "status": "Out",
+      "comment": "Sep 16: The Canadiens announced Wednesday that Guhle is recovering from a minor surgery to his adductor muscle that he underwent over the summer, and he's expected to return in 4-5 weeks."
+    },
+    {
+      "player": "Johnathan Kovacevic",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 1",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Nick Bjugstad",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Jan 19",
+      "status": "Out",
+      "comment": "Sep 17: The Devils announced Thursday that Bjugstad underwent successful surgery to repair a torn left pectoral muscle last week and will be sidelined for approximately 4-6 months."
+    },
+    {
+      "player": "Quinn Finley",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Sep 26",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Mathew Barzal",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 3",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Cole Beaudoin",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Aidan Thompson",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 29",
+      "status": "Out",
+      "comment": "Sep 16: Thompson (undisclosed) is considered week-to-week heading into training camp, Peter Baugh of The Athletic reports Wednesday."
+    },
+    {
+      "player": "Artem Zub",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 3",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Warren Foegele",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Sep 21",
+      "status": "Day-To-Day",
+      "comment": "Sep 16: Foegele is dealing with an undisclosed injury, Bruce Garrioch of Postmedia reports Wednesday."
+    },
+    {
+      "player": "Nikita Grebenkin",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Sep 26",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Melvin Fernström",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Sep 26",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Cam Lund",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 19",
+      "status": "Out",
+      "comment": "Sep 17: Lund (upper body) is expected to miss around a month, Curtis Pashelka of The San Jose Mercury News reports Thursday."
+    },
+    {
+      "player": "Quentin Musty",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Dec 1",
+      "status": "Out",
+      "comment": "Sep 17: Musty will be out long-term due to his upper-body injury, Curtis Pashelka of The San Jose Mercury News reports Thursday."
+    },
+    {
+      "player": "Kyle Keyser",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Dec 1",
+      "status": "Out",
+      "comment": "Sep 17: Keyser has suffered a long-term upper-body injury, Curtis Pashelka of The San Jose Mercury News reports Thursday."
+    },
+    {
+      "player": "Dominic James",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 13",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Yanni Gourde",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Dec 2",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "William Villeneuve",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 31",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Morgan Rielly",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 19",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Max Domi",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 7",
+      "status": "Out",
+      "comment": "Sep 16: General manager John Chayka said Wednesday that Domi (back) failed his physical and will be out indefinitely, David Pagnotta of The Fourth Period reports."
+    },
+    {
+      "player": "Mackenzie MacEachern",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Sep 26",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Thatcher Demko",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Sep 29",
+      "status": "Out",
+      "comment": "Sep 16: General manager Ryan Johnson said Wednesday that Demko (hip) won't be a full participant in training camp, Canucks play-by-play announcer Brendan Batchelor reports."
+    },
+    {
+      "player": "Lukas Cormier",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 29",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Garrett Brown",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 25",
+      "status": "Out",
+      "comment": "Sep 17: Brown (lower body) was initially expected to be out long term, but he'll now be reevaluated in a couple of weeks, Mitchell Clinton of the Jets' official site reports Thursday."
+    },
+    {
+      "player": "Walker Duehr",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Sep 19",
+      "status": "Day-To-Day",
+      "comment": "Sep 17: Duehr is dealing with a lower-body injury, but he is skating, per Mitchell Clinton of the Jets' official site on Thursday."
+    },
+    {
+      "player": "Elias Salomonsson",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 29",
+      "status": "Out",
+      "comment": "Sep 17: Head coach Scott Arniel said Thursday that Salomonsson (shoulder) is targeting the end of October for a return date, Mitchell Clinton of the Jets' official site reports."
+    }
+  ]
+}
