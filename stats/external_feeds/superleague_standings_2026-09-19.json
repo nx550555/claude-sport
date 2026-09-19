@@ -2,7 +2,7 @@
   "league": "superleague",
   "source": "https://en.wikipedia.org/wiki/2026_Super_League_season",
   "strategy": "wikipedia_table",
-  "fetched_at": "2026-09-19T01:17:57.542906+09:00",
+  "fetched_at": "2026-09-19T13:22:21.396063+09:00",
   "team_count": 14,
   "teams": [
     {
@@ -42,25 +42,25 @@
       "pd_per_game": 9.67
     },
     {
-      "team": "Wakefield Trinity",
+      "team": "Wakefield Trinity (A)",
       "gp": 27,
       "w": null,
       "l": null,
       "d": null,
       "pf": 709,
-      "pa": "Wakefield Trinity",
+      "pa": "Wakefield Trinity (A)",
       "pd": 223,
       "pts": 38,
       "pd_per_game": 8.26
     },
     {
-      "team": "Leigh Leopards",
+      "team": "Leigh Leopards (E)",
       "gp": 27,
       "w": null,
       "l": null,
       "d": null,
       "pf": 644,
-      "pa": "Leigh Leopards",
+      "pa": "Leigh Leopards (E)",
       "pd": 147,
       "pts": 34,
       "pd_per_game": 5.44

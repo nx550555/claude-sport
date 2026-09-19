@@ -1,16 +1,32 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-09-19T01:18:06.391865+09:00",
+  "fetched_at": "2026-09-19T13:22:29.858713+09:00",
   "starting_goalies": [],
   "injuries": [
+    {
+      "player": "Ryan Poehling",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": "Sep 18: The Ducks announced that Poehling will miss practice Friday due to a lower-body injury, and he's considered day-to-day moving forward."
+    },
+    {
+      "player": "Herman Traff",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Sep 20",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
     {
       "player": "Ian Moore",
       "team": null,
       "position": "D",
-      "estimated_return": "Sep 20",
-      "status": "Day-To-Day",
-      "comment": "Sep 17: Head coach Joel Quenneville said that Moore sustained an injury early in Thursday's practice session to begin training camp, Zach Cavanagh of The Sporting Tribune reports."
+      "estimated_return": "Oct 7",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Tyson Hinds",
@@ -176,9 +192,9 @@
       "player": "Filip Gustavsson",
       "team": null,
       "position": "G",
-      "estimated_return": "Oct 1",
+      "estimated_return": "Nov 1",
       "status": "Out",
-      "comment": ""
+      "comment": "Sep 18: Gustavsson (hip) is expected to return around early November, Joe Smith of The Athletic reports Friday."
     },
     {
       "player": "Kaiden Guhle",
@@ -309,18 +325,18 @@
       "comment": ""
     },
     {
-      "player": "William Villeneuve",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 31",
-      "status": "Out",
-      "comment": ""
-    },
-    {
       "player": "Morgan Rielly",
       "team": null,
       "position": "D",
       "estimated_return": "Sep 19",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "William Villeneuve",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 31",
       "status": "Out",
       "comment": ""
     },
