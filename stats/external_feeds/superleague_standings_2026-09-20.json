@@ -2,7 +2,7 @@
   "league": "superleague",
   "source": "https://en.wikipedia.org/wiki/2026_Super_League_season",
   "strategy": "wikipedia_table",
-  "fetched_at": "2026-09-20T00:48:17.456675+09:00",
+  "fetched_at": "2026-09-20T13:40:50.772610+09:00",
   "team_count": 14,
   "teams": [
     {
@@ -30,13 +30,13 @@
       "pd_per_game": 17.7
     },
     {
-      "team": "Warrington Wolves",
+      "team": "Warrington Wolves (A)",
       "gp": 27,
       "w": null,
       "l": null,
       "d": null,
       "pf": 726,
-      "pa": "Warrington Wolves",
+      "pa": "Warrington Wolves (A)",
       "pd": 261,
       "pts": 40,
       "pd_per_game": 9.67
@@ -66,13 +66,13 @@
       "pd_per_game": 5.44
     },
     {
-      "team": "Hull KR",
+      "team": "Hull KR (E)",
       "gp": 27,
       "w": null,
       "l": null,
       "d": null,
       "pf": 748,
-      "pa": "Hull KR",
+      "pa": "Hull KR (E)",
       "pd": 245,
       "pts": 32,
       "pd_per_game": 9.07
