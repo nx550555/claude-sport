@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-09-21T00:57:09.962035+09:00",
+  "fetched_at": "2026-09-21T13:40:34.491650+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -50,6 +50,14 @@
       "position": "LW",
       "estimated_return": "Oct 15",
       "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Jonathan Huberdeau",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 8",
+      "status": "Injured Reserve",
       "comment": ""
     },
     {
@@ -133,20 +141,20 @@
       "comment": ""
     },
     {
+      "player": "Mattias Janmark",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 29",
+      "status": "Injured Reserve",
+      "comment": ""
+    },
+    {
       "player": "Alec Regula",
       "team": null,
       "position": "D",
       "estimated_return": "Sep 29",
       "status": "Out",
       "comment": "Sep 16: Regula (undisclosed) is expected to skate during training camp but won't participate in any preseason games, Jason Gregor of Sports 1440 Edmonton reports Wednesday."
-    },
-    {
-      "player": "Mattias Janmark",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Sep 29",
-      "status": "Out",
-      "comment": "Sep 16: Janmark (undisclosed) will skate during training camp but won't appear in preseason games, Jason Gregor of Sports 1440 Edmonton reports."
     },
     {
       "player": "Jonah Gadjovich",
@@ -185,14 +193,6 @@
       "team": null,
       "position": "C",
       "estimated_return": "Sep 26",
-      "status": "Out",
-      "comment": ""
-    },
-    {
-      "player": "Viking Gustafsson Nyberg",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Sep 25",
       "status": "Out",
       "comment": ""
     },
@@ -240,7 +240,7 @@
       "player": "Mathew Barzal",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 3",
+      "estimated_return": "Sep 30",
       "status": "Out",
       "comment": ""
     },
@@ -251,6 +251,14 @@
       "estimated_return": "Sep 29",
       "status": "Out",
       "comment": "Sep 16: Thompson (undisclosed) is considered week-to-week heading into training camp, Peter Baugh of The Athletic reports Wednesday."
+    },
+    {
+      "player": "Thomas Chabot",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 23",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Artem Zub",
@@ -288,7 +296,7 @@
       "player": "Adam Gaudette",
       "team": null,
       "position": "RW",
-      "estimated_return": "Sep 22",
+      "estimated_return": "Sep 24",
       "status": "Out",
       "comment": "Sep 19: Gaudette (upper body) is day-to-day, per Max Miller of NHL.com on Saturday."
     },
@@ -363,6 +371,14 @@
       "estimated_return": "Nov 7",
       "status": "Out",
       "comment": "Sep 16: General manager John Chayka said Wednesday that Domi (back) failed his physical and will be out indefinitely, David Pagnotta of The Fourth Period reports."
+    },
+    {
+      "player": "Tij Iginla",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 22",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Mackenzie MacEachern",
