@@ -1,29 +1,13 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-09-22T03:11:12.078420+09:00",
+  "fetched_at": "2026-09-22T13:35:27.176034+09:00",
   "starting_goalies": [],
   "injuries": [
-    {
-      "player": "Ryan Poehling",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Sep 23",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
     {
       "player": "A.J. Greer",
       "team": null,
       "position": "LW",
-      "estimated_return": "Sep 23",
-      "status": "Out",
-      "comment": ""
-    },
-    {
-      "player": "Nick Jensen",
-      "team": null,
-      "position": "D",
       "estimated_return": "Sep 23",
       "status": "Out",
       "comment": ""
@@ -93,6 +77,14 @@
       "comment": ""
     },
     {
+      "player": "Dante Fabbro",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 22",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Riley Bezeau",
       "team": null,
       "position": "RW",
@@ -105,6 +97,14 @@
       "team": null,
       "position": "C",
       "estimated_return": "Sep 26",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Arno Tiefensee",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Sep 23",
       "status": "Out",
       "comment": ""
     },
@@ -173,12 +173,20 @@
       "comment": "Sep 17: Marchand (lower body) is expected to spend October rehabbing, per Panthers TV Rinkside Reporter Katie Engleson on Thursday."
     },
     {
+      "player": "Corey Perry",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Sep 26",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Mats Zuccarello",
       "team": null,
       "position": "RW",
       "estimated_return": "Sep 22",
-      "status": "Out",
-      "comment": "Sep 17: The Kings announced Thursday that Zuccarello is dealing with a minor shoulder injury but should be healthy at some point next week, Zach Dooley of the Kings' official site reports."
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Kevin Fiala",
@@ -253,6 +261,14 @@
       "comment": ""
     },
     {
+      "player": "Adam Sykora",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Sep 22",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Aidan Thompson",
       "team": null,
       "position": "C",
@@ -293,10 +309,26 @@
       "comment": ""
     },
     {
+      "player": "Denver Barkey",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 22",
+      "status": "Out",
+      "comment": "Sep 21: Barkey (lower body) has been ruled out for the remainder of Monday's exhibition game versus the Capitals."
+    },
+    {
       "player": "Nikita Grebenkin",
       "team": null,
       "position": "RW",
       "estimated_return": "Sep 26",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Ben Kindel",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 22",
       "status": "Out",
       "comment": ""
     },
@@ -357,6 +389,14 @@
       "comment": "Sep 17: Keyser has suffered a long-term upper-body injury, Curtis Pashelka of The San Jose Mercury News reports Thursday."
     },
     {
+      "player": "Tyler Tucker",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 26",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Dominic James",
       "team": null,
       "position": "C",
@@ -376,8 +416,8 @@
       "player": "Dakota Joshua",
       "team": null,
       "position": "C",
-      "estimated_return": "Sep 23",
-      "status": "Day-To-Day",
+      "estimated_return": "Sep 29",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -401,7 +441,7 @@
       "team": null,
       "position": "C",
       "estimated_return": "Sep 22",
-      "status": "Out",
+      "status": "Day-To-Day",
       "comment": ""
     },
     {
