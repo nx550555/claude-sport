@@ -1,14 +1,22 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-09-23T01:47:30.628753+09:00",
+  "fetched_at": "2026-09-23T13:31:52.651601+09:00",
   "starting_goalies": [],
   "injuries": [
+    {
+      "player": "Drew Helleson",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 2",
+      "status": "Out",
+      "comment": "Sep 22: Helleson (lower body) will be out for at least one week, but he could be available for the start of the regular season, Zach Cavanagh of The Sporting Tribune reports."
+    },
     {
       "player": "A.J. Greer",
       "team": null,
       "position": "LW",
-      "estimated_return": "Sep 23",
+      "estimated_return": "Oct 2",
       "status": "Out",
       "comment": ""
     },
@@ -24,8 +32,24 @@
       "player": "Ian Moore",
       "team": null,
       "position": "D",
-      "estimated_return": "Oct 7",
+      "estimated_return": "Oct 16",
       "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Mattias Samuelsson",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 24",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Olen Zellweger",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 24",
+      "status": "Day-To-Day",
       "comment": ""
     },
     {
@@ -74,7 +98,7 @@
       "position": "D",
       "estimated_return": "Sep 26",
       "status": "Out",
-      "comment": ""
+      "comment": "Sep 22: Makar (lower body) was a full participant in Tuesday's training camp session and could suit up for one of Colorado's upcoming preseason games, per Evan Rawal of the Denver Gazette."
     },
     {
       "player": "Trent Miner",
@@ -82,6 +106,14 @@
       "position": "G",
       "estimated_return": "Sep 26",
       "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Mikael Pyyhtia",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Sep 24",
+      "status": "Day-To-Day",
       "comment": ""
     },
     {
@@ -106,14 +138,6 @@
       "position": "C",
       "estimated_return": "Oct 1",
       "status": "Out",
-      "comment": ""
-    },
-    {
-      "player": "Arno Tiefensee",
-      "team": null,
-      "position": "G",
-      "estimated_return": "Sep 23",
-      "status": "Day-To-Day",
       "comment": ""
     },
     {
@@ -173,6 +197,14 @@
       "comment": "Sep 16: Regula (undisclosed) is expected to skate during training camp but won't participate in any preseason games, Jason Gregor of Sports 1440 Edmonton reports Wednesday."
     },
     {
+      "player": "Brady Tkachuk",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Sep 29",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Jonah Gadjovich",
       "team": null,
       "position": "LW",
@@ -189,7 +221,7 @@
       "comment": "Sep 17: Marchand (lower body) is expected to spend October rehabbing, per Panthers TV Rinkside Reporter Katie Engleson on Thursday."
     },
     {
-      "player": "Corey Perry",
+      "player": "Mats Zuccarello",
       "team": null,
       "position": "RW",
       "estimated_return": "Sep 26",
@@ -197,11 +229,11 @@
       "comment": ""
     },
     {
-      "player": "Mats Zuccarello",
+      "player": "Corey Perry",
       "team": null,
       "position": "RW",
       "estimated_return": "Sep 26",
-      "status": "Day-To-Day",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -333,18 +365,18 @@
       "comment": ""
     },
     {
+      "player": "Dan Vladar",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Sep 24",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Denver Barkey",
       "team": null,
       "position": "C",
       "estimated_return": "Sep 24",
-      "status": "Out",
-      "comment": ""
-    },
-    {
-      "player": "Nikita Grebenkin",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Sep 26",
       "status": "Out",
       "comment": ""
     },
@@ -429,6 +461,14 @@
       "comment": "Sep 17: Keyser has suffered a long-term upper-body injury, Curtis Pashelka of The San Jose Mercury News reports Thursday."
     },
     {
+      "player": "Jake O'Brien",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 24",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Tyler Tucker",
       "team": null,
       "position": "D",
@@ -475,14 +515,6 @@
       "estimated_return": "Nov 7",
       "status": "Out",
       "comment": "Sep 16: General manager John Chayka said Wednesday that Domi (back) failed his physical and will be out indefinitely, David Pagnotta of The Fourth Period reports."
-    },
-    {
-      "player": "Tij Iginla",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Sep 22",
-      "status": "Day-To-Day",
-      "comment": ""
     },
     {
       "player": "Mackenzie MacEachern",
