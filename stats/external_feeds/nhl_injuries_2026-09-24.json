@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-09-24T01:44:02.235504+09:00",
+  "fetched_at": "2026-09-24T13:29:07.402493+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -37,19 +37,35 @@
       "comment": ""
     },
     {
-      "player": "Mattias Samuelsson",
+      "player": "Mason Lohrei",
       "team": null,
       "position": "D",
-      "estimated_return": "Sep 24",
-      "status": "Day-To-Day",
+      "estimated_return": "Sep 25",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Matthew Poitras",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 25",
+      "status": "Out",
       "comment": ""
     },
     {
       "player": "Olen Zellweger",
       "team": null,
       "position": "D",
-      "estimated_return": "Sep 24",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 1",
+      "status": "Out",
+      "comment": "Sep 23: Head coach Lindy Ruff said Wednesday that Zellweger has entered the concussion protocol, Paul Hamilton of WGR Sports Radio 550 reports."
+    },
+    {
+      "player": "Mattias Samuelsson",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 8",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -93,6 +109,22 @@
       "comment": ""
     },
     {
+      "player": "Jordan Greenway",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Sep 29",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Connor Bedard",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 7",
+      "status": "Out",
+      "comment": "Sep 23: Head coach Jeff Blashill said Wednesday that Bedard (shoulder) isn't yet close to joining the Blackhawks for practice, Scott Powers of The Athletic reports."
+    },
+    {
       "player": "Cale Makar",
       "team": null,
       "position": "D",
@@ -106,14 +138,6 @@
       "position": "G",
       "estimated_return": "Sep 26",
       "status": "Out",
-      "comment": ""
-    },
-    {
-      "player": "Dante Fabbro",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Sep 24",
-      "status": "Day-To-Day",
       "comment": ""
     },
     {
@@ -133,14 +157,6 @@
       "comment": ""
     },
     {
-      "player": "Riley Bezeau",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Sep 26",
-      "status": "Out",
-      "comment": ""
-    },
-    {
       "player": "Adam Fantilli",
       "team": null,
       "position": "C",
@@ -149,11 +165,19 @@
       "comment": ""
     },
     {
+      "player": "Jake Oettinger",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Sep 25",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Cameron Hughes",
       "team": null,
       "position": "C",
-      "estimated_return": "Sep 23",
-      "status": "Day-To-Day",
+      "estimated_return": "Sep 25",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -181,12 +205,20 @@
       "comment": ""
     },
     {
+      "player": "Carter Bear",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 2",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Dylan Larkin",
       "team": null,
       "position": "C",
       "estimated_return": "Oct 2",
       "status": "Out",
-      "comment": ""
+      "comment": "Sep 23: Larkin (upper body) participated in Wednesday's practice session but won't play in Thursday's preseason matchup against the Sabres, Ted Kulfan of The Detroit News reports."
     },
     {
       "player": "Mattias Janmark",
@@ -210,7 +242,7 @@
       "position": "LW",
       "estimated_return": "Sep 29",
       "status": "Out",
-      "comment": ""
+      "comment": "Sep 23: Tkachuk (undisclosed) is considered day-to-day, Jameson Olive of the Panthers' official site reports Wednesday."
     },
     {
       "player": "Jonah Gadjovich",
@@ -341,23 +373,39 @@
       "comment": "Sep 16: Thompson (undisclosed) is considered week-to-week heading into training camp, Peter Baugh of The Athletic reports Wednesday."
     },
     {
-      "player": "Kurtis MacDermid",
+      "player": "Warren Foegele",
       "team": null,
       "position": "LW",
-      "estimated_return": "Sep 23",
-      "status": "Day-To-Day",
-      "comment": ""
+      "estimated_return": "Sep 26",
+      "status": "Out",
+      "comment": "Sep 23: Foegele (undisclosed) won't appear in either of the Senators' split-squad preseason games against Toronto on Wednesday, Claire Hanna of TSN reports."
     },
     {
-      "player": "Thomas Chabot",
+      "player": "Artem Zub",
       "team": null,
       "position": "D",
-      "estimated_return": "Sep 23",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 5",
+      "status": "Out",
+      "comment": "Sep 23: Zub (knee) isn't expected to be ready for Ottawa's season opener in Toronto on Oct. 3, per TSN 1200 Ottawa on Wednesday."
+    },
+    {
+      "player": "Jordan Spence",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 26",
+      "status": "Out",
       "comment": ""
     },
     {
-      "player": "Warren Foegele",
+      "player": "Jake Sanderson",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 26",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Kurtis MacDermid",
       "team": null,
       "position": "LW",
       "estimated_return": "Sep 26",
@@ -365,12 +413,12 @@
       "comment": ""
     },
     {
-      "player": "Artem Zub",
+      "player": "Dan Vladar",
       "team": null,
-      "position": "D",
-      "estimated_return": "Oct 3",
-      "status": "Out",
-      "comment": ""
+      "position": "G",
+      "estimated_return": "Sep 24",
+      "status": "Day-To-Day",
+      "comment": "Sep 23: Vladar is day-to-day because of an upper-body injury, Jackie Spiegel of The Philadelphia Inquirer reports Wednesday."
     },
     {
       "player": "Denver Barkey",
@@ -381,36 +429,20 @@
       "comment": ""
     },
     {
-      "player": "Dan Vladar",
-      "team": null,
-      "position": "G",
-      "estimated_return": "Sep 24",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Ville Koivunen",
+      "player": "Justin Brazeau",
       "team": null,
       "position": "RW",
-      "estimated_return": "Sep 24",
-      "status": "Day-To-Day",
+      "estimated_return": "Sep 26",
+      "status": "Out",
       "comment": ""
     },
     {
       "player": "Ben Kindel",
       "team": null,
       "position": "C",
-      "estimated_return": "Sep 24",
-      "status": "Day-To-Day",
+      "estimated_return": "Sep 26",
+      "status": "Out",
       "comment": ""
-    },
-    {
-      "player": "Justin Brazeau",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Sep 24",
-      "status": "Day-To-Day",
-      "comment": "Sep 22: Brazeau (lower body) has been deemed day-to-day and will not participate in Penguins' training camp Tuesday."
     },
     {
       "player": "Oliver Okuliar",
@@ -435,6 +467,22 @@
       "estimated_return": "Sep 26",
       "status": "Out",
       "comment": ""
+    },
+    {
+      "player": "Alex Barre-Boulet",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 24",
+      "status": "Day-To-Day",
+      "comment": "Sep 23: Barre-Boulet didn't skate Wednesday for an undisclosed reason and is considered day-to-day, Sheng Peng of San Jose Hockey Now reports."
+    },
+    {
+      "player": "Patrick Giles",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Sep 24",
+      "status": "Day-To-Day",
+      "comment": "Sep 23: Giles is considered day-to-day because of an upper-body injury, per Sheng Peng of San Jose Hockey Now."
     },
     {
       "player": "Adam Gaudette",
@@ -501,6 +549,14 @@
       "comment": ""
     },
     {
+      "player": "Nick Paul",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Sep 29",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Dakota Joshua",
       "team": null,
       "position": "C",
@@ -525,12 +581,20 @@
       "comment": "Sep 16: General manager John Chayka said Wednesday that Domi (back) failed his physical and will be out indefinitely, David Pagnotta of The Fourth Period reports."
     },
     {
+      "player": "Michael Carcone",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 1",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Maveric Lamoureux",
       "team": null,
       "position": "D",
-      "estimated_return": "Sep 24",
-      "status": "Day-To-Day",
-      "comment": ""
+      "estimated_return": "Oct 1",
+      "status": "Out",
+      "comment": "Sep 23: Lamoureux is expected to miss some time due to his upper-body injury, per Brogan Houston of the Deseret News on Wednesday."
     },
     {
       "player": "Mackenzie MacEachern",
