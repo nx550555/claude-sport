@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-09-26T02:03:37.308281+09:00",
+  "fetched_at": "2026-09-26T13:43:20.417360+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -42,15 +42,31 @@
       "position": "C",
       "estimated_return": "Sep 29",
       "status": "Out",
-      "comment": ""
+      "comment": "Sep 25: Poitras (lower body) isn't on the roster for Friday's preseason finale against the Capitals, Scott McLaughlin of WEEI reports."
     },
     {
       "player": "Jiri Kulich",
       "team": null,
       "position": "C",
-      "estimated_return": "Sep 26",
-      "status": "Day-To-Day",
-      "comment": ""
+      "estimated_return": "Oct 1",
+      "status": "Out",
+      "comment": "Sep 25: Kulich (undisclosed) will not play in Saturday's preseason finale against the Penguins."
+    },
+    {
+      "player": "Mattias Samuelsson",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 1",
+      "status": "Out",
+      "comment": "Sep 25: Head coach Lindy Ruff said Friday that Samuelsson (lower body) could return on the early end of his week-to-week timetable."
+    },
+    {
+      "player": "Olen Zellweger",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 1",
+      "status": "Out",
+      "comment": "Sep 25: Head coach Lindy Ruff that Zellweger (concussion) felt good after skating Friday and will likely be ready for Thursday's Opening Night matchup against Columbus, Paul Hamilton of WGR Sports Radio 550 reports."
     },
     {
       "player": "Alex Lyon",
@@ -61,26 +77,18 @@
       "comment": ""
     },
     {
-      "player": "Olen Zellweger",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 1",
-      "status": "Out",
-      "comment": "Sep 23: Head coach Lindy Ruff said Wednesday that Zellweger has entered the concussion protocol, Paul Hamilton of WGR Sports Radio 550 reports."
-    },
-    {
-      "player": "Mattias Samuelsson",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 8",
-      "status": "Out",
-      "comment": ""
-    },
-    {
       "player": "Jason Zucker",
       "team": null,
       "position": "LW",
       "estimated_return": "Oct 15",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Henry Mews",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 2",
       "status": "Out",
       "comment": ""
     },
@@ -125,27 +133,11 @@
       "comment": "Sep 23: Head coach Jeff Blashill said Wednesday that Bedard (shoulder) isn't yet close to joining the Blackhawks for practice, Scott Powers of The Athletic reports."
     },
     {
-      "player": "Cale Makar",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Sep 26",
-      "status": "Out",
-      "comment": "Sep 22: Makar (lower body) was a full participant in Tuesday's training camp session and could suit up for one of Colorado's upcoming preseason games, per Evan Rawal of the Denver Gazette."
-    },
-    {
       "player": "Trent Miner",
       "team": null,
       "position": "G",
       "estimated_return": "Sep 26",
       "status": "Out",
-      "comment": ""
-    },
-    {
-      "player": "Mikael Pyyhtia",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Sep 26",
-      "status": "Day-To-Day",
       "comment": ""
     },
     {
@@ -165,6 +157,30 @@
       "comment": "Sep 25: ir-nr"
     },
     {
+      "player": "Cameron Hughes",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 2",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Jaxon Fuder",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 2",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Tristan Bertucci",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 2",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Jake Oettinger",
       "team": null,
       "position": "G",
@@ -181,36 +197,28 @@
       "comment": "Sep 24: Duchene will not play in Friday's preseason finale against the Wild, Stars TV host Brien Rea reports."
     },
     {
-      "player": "Jaxon Fuder",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Sep 25",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Cameron Hughes",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Sep 25",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Tristan Bertucci",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Sep 25",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Colin Blackwell",
       "team": null,
       "position": "C",
       "estimated_return": "Oct 2",
       "status": "Out",
       "comment": "Sep 21: Blackwell is dealing with a lower-body injury but should return before Opening Night, Robert Tiffin of NHL.com reports Monday."
+    },
+    {
+      "player": "Jacob Bernard-Docker",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 2",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Dylan Larkin",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 2",
+      "status": "Out",
+      "comment": "Sep 25: Larkin (upper body) has been ruled out for Saturday's preseason finale against the Blue Jackets, Helene St. James of the Detroit Free Press reports."
     },
     {
       "player": "Carter Bear",
@@ -221,12 +229,12 @@
       "comment": "Sep 24: Bear (upper body) is expected to be out for the next seven to 10 days, per Max Bultman of The Athletic."
     },
     {
-      "player": "Dylan Larkin",
+      "player": "Jason Dickinson",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 2",
+      "estimated_return": "Oct 7",
       "status": "Out",
-      "comment": "Sep 23: Larkin (upper body) participated in Wednesday's practice session but won't play in Thursday's preseason matchup against the Sabres, Ted Kulfan of The Detroit News reports."
+      "comment": ""
     },
     {
       "player": "Mattias Janmark",
@@ -269,6 +277,14 @@
       "comment": "Sep 17: Marchand (lower body) is expected to spend October rehabbing, per Panthers TV Rinkside Reporter Katie Engleson on Thursday."
     },
     {
+      "player": "Mats Zuccarello",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Sep 26",
+      "status": "Day-To-Day",
+      "comment": "Sep 25: Zuccarello (shoulder) is probable for Saturday's preseason game against Anaheim, per Zach Dooley of the Kings' official site."
+    },
+    {
       "player": "Jakub Dvorak",
       "team": null,
       "position": "D",
@@ -294,14 +310,6 @@
     },
     {
       "player": "Corey Perry",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Sep 26",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Mats Zuccarello",
       "team": null,
       "position": "RW",
       "estimated_return": "Sep 26",
@@ -365,14 +373,6 @@
       "comment": "Sep 17: The Devils announced Thursday that Bjugstad underwent successful surgery to repair a torn left pectoral muscle last week and will be sidelined for approximately 4-6 months."
     },
     {
-      "player": "Daylan Kuefler",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Sep 25",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Quinn Finley",
       "team": null,
       "position": "RW",
@@ -392,8 +392,8 @@
       "player": "Vincent Iorio",
       "team": null,
       "position": "D",
-      "estimated_return": "Sep 25",
-      "status": "Day-To-Day",
+      "estimated_return": "Sep 29",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -445,14 +445,6 @@
       "comment": "Sep 23: Zub (knee) isn't expected to be ready for Ottawa's season opener in Toronto on Oct. 3, per TSN 1200 Ottawa on Wednesday."
     },
     {
-      "player": "Jordan Spence",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Sep 26",
-      "status": "Out",
-      "comment": ""
-    },
-    {
       "player": "Jake Sanderson",
       "team": null,
       "position": "D",
@@ -469,19 +461,19 @@
       "comment": ""
     },
     {
-      "player": "Helge Grans",
+      "player": "Denver Barkey",
       "team": null,
-      "position": "D",
+      "position": "C",
       "estimated_return": "Sep 26",
       "status": "Day-To-Day",
       "comment": ""
     },
     {
-      "player": "Denver Barkey",
+      "player": "Helge Grans",
       "team": null,
-      "position": "C",
+      "position": "D",
       "estimated_return": "Sep 26",
-      "status": "Out",
+      "status": "Day-To-Day",
       "comment": ""
     },
     {
@@ -496,9 +488,17 @@
       "player": "Justin Brazeau",
       "team": null,
       "position": "RW",
-      "estimated_return": "Sep 26",
-      "status": "Day-To-Day",
+      "estimated_return": "Sep 30",
+      "status": "Out",
       "comment": ""
+    },
+    {
+      "player": "Oliver Okuliar",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 13",
+      "status": "Injured Reserve",
+      "comment": "Sep 25: Okuliar (lower body) was placed on non-roster injured reserve Friday."
     },
     {
       "player": "Gabriel D'Aigle",
@@ -531,14 +531,6 @@
       "estimated_return": "Sep 30",
       "status": "Out",
       "comment": "Sep 24: Kuzmenko is returning to Russia following the death of his father, the team announced Thursday."
-    },
-    {
-      "player": "Oliver Okuliar",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Sep 30",
-      "status": "Out",
-      "comment": ""
     },
     {
       "player": "Blake Lizotte",
@@ -608,7 +600,7 @@
       "player": "Tyler Tucker",
       "team": null,
       "position": "D",
-      "estimated_return": "Sep 26",
+      "estimated_return": "Oct 6",
       "status": "Out",
       "comment": ""
     },
@@ -664,8 +656,8 @@
       "player": "Michael Carcone",
       "team": null,
       "position": "LW",
-      "estimated_return": "Oct 1",
-      "status": "Out",
+      "estimated_return": "Sep 26",
+      "status": "Day-To-Day",
       "comment": ""
     },
     {
@@ -677,27 +669,35 @@
       "comment": "Sep 23: Lamoureux is expected to miss some time due to his upper-body injury, per Brogan Houston of the Deseret News on Wednesday."
     },
     {
-      "player": "Filip Chytil",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Sep 26",
-      "status": "Day-To-Day",
-      "comment": "Sep 25: Chytil's injury sustained Thursday versus the Oilers is to his shoulder, and he'll be examined further Friday, Thomas Drance of The Athletic reports."
-    },
-    {
       "player": "Thatcher Demko",
       "team": null,
       "position": "G",
-      "estimated_return": "Sep 29",
+      "estimated_return": "Oct 3",
       "status": "Injured Reserve",
-      "comment": "Sep 24: Demko (hip) has been designated for injured reserve, per the NHL media site Thursday."
+      "comment": "Sep 25: Demko (hip) isn't expected to be ready for the start of the regular season, per Thomas Drance of The Athletic on Friday."
+    },
+    {
+      "player": "Filip Chytil",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 8",
+      "status": "Injured Reserve",
+      "comment": ""
     },
     {
       "player": "Mackenzie MacEachern",
       "team": null,
       "position": "LW",
       "estimated_return": "Sep 26",
-      "status": "Out",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Raphael Lavoie",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 26",
+      "status": "Day-To-Day",
       "comment": ""
     },
     {
@@ -714,7 +714,7 @@
       "position": "LW",
       "estimated_return": "Oct 2",
       "status": "Out",
-      "comment": "Sep 24: Ovechkin (lower body) was a full participant in Thursday's practice and has a chance to play in Friday's preseason game against the Bruins, per Tom Gulitti."
+      "comment": "Sep 25: Ovechkin (lower body) has been ruled out for Friday's preseason game against the Bruins and Saturday's preseason game against Philadelphia, Sammi Silber of The Hockey News reports."
     },
     {
       "player": "Patrick Thomas",
@@ -725,28 +725,20 @@
       "comment": ""
     },
     {
-      "player": "Walker Duehr",
+      "player": "Elias Salomonsson",
       "team": null,
-      "position": "RW",
-      "estimated_return": "Sep 25",
-      "status": "Day-To-Day",
-      "comment": ""
+      "position": "D",
+      "estimated_return": "Oct 15",
+      "status": "Out",
+      "comment": "Sep 25: Head coach Scott Arniel said Friday that Salomonsson (shoulder) is ahead of schedule in his recovery and could be ready to play by mid-October, Mike McIntyre of the Winnipeg Free Press reports."
     },
     {
       "player": "Garrett Brown",
       "team": null,
       "position": "C",
-      "estimated_return": "Sep 25",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Elias Salomonsson",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 29",
+      "estimated_return": "Oct 2",
       "status": "Out",
-      "comment": "Sep 17: Head coach Scott Arniel said Thursday that Salomonsson (shoulder) is targeting the end of October for a return date, Mitchell Clinton of the Jets' official site reports."
+      "comment": ""
     }
   ]
 }
