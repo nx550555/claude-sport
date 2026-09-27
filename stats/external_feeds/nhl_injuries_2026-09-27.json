@@ -1,9 +1,17 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-09-27T01:16:57.126120+09:00",
+  "fetched_at": "2026-09-27T14:04:41.467734+09:00",
   "starting_goalies": [],
   "injuries": [
+    {
+      "player": "Pavel Mintyukov",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 2",
+      "status": "Out",
+      "comment": ""
+    },
     {
       "player": "Drew Helleson",
       "team": null,
@@ -43,6 +51,14 @@
       "estimated_return": "Sep 29",
       "status": "Out",
       "comment": "Sep 25: Poitras (lower body) isn't on the roster for Friday's preseason finale against the Capitals, Scott McLaughlin of WEEI reports."
+    },
+    {
+      "player": "Ukko-Pekka Luukkonen",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Oct 1",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Jiri Kulich",
@@ -112,14 +128,6 @@
       "player": "Alexander Nikishin",
       "team": null,
       "position": "D",
-      "estimated_return": "Sep 29",
-      "status": "Out",
-      "comment": ""
-    },
-    {
-      "player": "Jordan Greenway",
-      "team": null,
-      "position": "LW",
       "estimated_return": "Sep 29",
       "status": "Out",
       "comment": ""
@@ -216,7 +224,7 @@
       "player": "Carter Bear",
       "team": null,
       "position": "LW",
-      "estimated_return": "Oct 2",
+      "estimated_return": "Oct 6",
       "status": "Out",
       "comment": "Sep 24: Bear (upper body) is expected to be out for the next seven to 10 days, per Max Bultman of The Athletic."
     },
@@ -224,7 +232,7 @@
       "player": "Jason Dickinson",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 7",
+      "estimated_return": "Oct 17",
       "status": "Out",
       "comment": ""
     },
@@ -269,20 +277,28 @@
       "comment": "Sep 17: Marchand (lower body) is expected to spend October rehabbing, per Panthers TV Rinkside Reporter Katie Engleson on Thursday."
     },
     {
+      "player": "Joel Edmundson",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Sep 30",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Corey Perry",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Sep 30",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Otto Salin",
       "team": null,
       "position": "D",
       "estimated_return": "Sep 30",
       "status": "Out",
       "comment": ""
-    },
-    {
-      "player": "Mats Zuccarello",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Sep 26",
-      "status": "Day-To-Day",
-      "comment": "Sep 25: Zuccarello (shoulder) is probable for Saturday's preseason game against Anaheim, per Zach Dooley of the Kings' official site."
     },
     {
       "player": "Jakub Dvorak",
@@ -299,14 +315,6 @@
       "estimated_return": "Oct 6",
       "status": "Injured Reserve",
       "comment": "Sep 24: Jenik (undisclosed) was placed on non-roster injured reserve by Los Angeles on Thursday, per Zach Dooley of LA Kings Insider."
-    },
-    {
-      "player": "Corey Perry",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Sep 26",
-      "status": "Day-To-Day",
-      "comment": ""
     },
     {
       "player": "Kevin Fiala",
@@ -336,9 +344,9 @@
       "player": "Ivan Demidov",
       "team": null,
       "position": "RW",
-      "estimated_return": "Sep 26",
-      "status": "Day-To-Day",
-      "comment": "Sep 24: Demidov (foot) was deemed day-to-day, but is not expected to miss the start of the regular season, per Stu Cowan of The Montreal Gazette."
+      "estimated_return": "Sep 29",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Kaiden Guhle",
@@ -373,14 +381,6 @@
       "comment": "Sep 17: The Devils announced Thursday that Bjugstad underwent successful surgery to repair a torn left pectoral muscle last week and will be sidelined for approximately 4-6 months."
     },
     {
-      "player": "Quinn Finley",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Sep 26",
-      "status": "Out",
-      "comment": ""
-    },
-    {
       "player": "Mathew Barzal",
       "team": null,
       "position": "C",
@@ -413,10 +413,10 @@
       "comment": "Sep 16: Thompson (undisclosed) is considered week-to-week heading into training camp, Peter Baugh of The Athletic reports Wednesday."
     },
     {
-      "player": "Shane Pinto",
+      "player": "Jake Sanderson",
       "team": null,
-      "position": "C",
-      "estimated_return": "Sep 26",
+      "position": "D",
+      "estimated_return": "Oct 3",
       "status": "Day-To-Day",
       "comment": ""
     },
@@ -424,15 +424,23 @@
       "player": "Jorian Donovan",
       "team": null,
       "position": "D",
-      "estimated_return": "Sep 26",
-      "status": "Day-To-Day",
-      "comment": "Sep 24: Donovan was absent from practice Thursday due to an undisclosed injury, Bruce Garrioch of Postmedia reports."
+      "estimated_return": "Oct 3",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Shane Pinto",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 3",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Warren Foegele",
       "team": null,
       "position": "LW",
-      "estimated_return": "Sep 26",
+      "estimated_return": "Oct 3",
       "status": "Out",
       "comment": "Sep 23: Foegele (undisclosed) won't appear in either of the Senators' split-squad preseason games against Toronto on Wednesday, Claire Hanna of TSN reports."
     },
@@ -445,18 +453,18 @@
       "comment": "Sep 23: Zub (knee) isn't expected to be ready for Ottawa's season opener in Toronto on Oct. 3, per TSN 1200 Ottawa on Wednesday."
     },
     {
-      "player": "Jake Sanderson",
+      "player": "Kurtis MacDermid",
       "team": null,
-      "position": "D",
-      "estimated_return": "Sep 26",
+      "position": "LW",
+      "estimated_return": "Oct 3",
       "status": "Out",
       "comment": ""
     },
     {
-      "player": "Kurtis MacDermid",
+      "player": "Helge Grans",
       "team": null,
-      "position": "LW",
-      "estimated_return": "Sep 26",
+      "position": "D",
+      "estimated_return": "Sep 30",
       "status": "Out",
       "comment": ""
     },
@@ -469,19 +477,19 @@
       "comment": ""
     },
     {
-      "player": "Helge Grans",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Sep 26",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Dan Vladar",
       "team": null,
       "position": "G",
       "estimated_return": "Sep 30",
       "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Bryan Rust",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Sep 30",
+      "status": "Day-To-Day",
       "comment": ""
     },
     {
@@ -549,27 +557,27 @@
       "comment": ""
     },
     {
-      "player": "Adam Gaudette",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Sep 26",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Alex Barre-Boulet",
       "team": null,
       "position": "C",
-      "estimated_return": "Sep 26",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 1",
+      "status": "Out",
       "comment": ""
     },
     {
       "player": "Patrick Giles",
       "team": null,
       "position": "RW",
-      "estimated_return": "Sep 26",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 1",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Adam Gaudette",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Oct 1",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -600,7 +608,23 @@
       "player": "Jake O'Brien",
       "team": null,
       "position": "C",
-      "estimated_return": "Sep 26",
+      "estimated_return": "Oct 1",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Mackie Samoskevich",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Oct 1",
+      "status": "Out",
+      "comment": "Sep 26: Samoskevich (upper body) won't play in Saturday's preseason finale against Colorado."
+    },
+    {
+      "player": "Logan Mailloux",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 2",
       "status": "Day-To-Day",
       "comment": ""
     },
@@ -661,20 +685,20 @@
       "comment": "Sep 16: General manager John Chayka said Wednesday that Domi (back) failed his physical and will be out indefinitely, David Pagnotta of The Fourth Period reports."
     },
     {
-      "player": "Michael Carcone",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Sep 26",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Maveric Lamoureux",
       "team": null,
       "position": "D",
       "estimated_return": "Oct 1",
       "status": "Out",
       "comment": "Sep 23: Lamoureux is expected to miss some time due to his upper-body injury, per Brogan Houston of the Deseret News on Wednesday."
+    },
+    {
+      "player": "Mackenzie MacEachern",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 4",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Thatcher Demko",
@@ -693,19 +717,11 @@
       "comment": ""
     },
     {
-      "player": "Mackenzie MacEachern",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Sep 26",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Raphael Lavoie",
       "team": null,
       "position": "C",
-      "estimated_return": "Sep 26",
-      "status": "Day-To-Day",
+      "estimated_return": "Sep 29",
+      "status": "Out",
       "comment": ""
     },
     {

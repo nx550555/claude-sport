@@ -2,17 +2,17 @@
   "league": "superleague",
   "source": "https://en.wikipedia.org/wiki/2026_Super_League_season",
   "strategy": "wikipedia_table",
-  "fetched_at": "2026-09-27T01:16:46.252238+09:00",
+  "fetched_at": "2026-09-27T14:04:32.570465+09:00",
   "team_count": 14,
   "teams": [
     {
-      "team": "Wigan Warriors (L)",
+      "team": "Wigan Warriors (L, E)",
       "gp": 27,
       "w": null,
       "l": null,
       "d": null,
       "pf": 851,
-      "pa": "Wigan Warriors (L)",
+      "pa": "Wigan Warriors (L, E)",
       "pd": 412,
       "pts": 44,
       "pd_per_game": 15.26
@@ -42,13 +42,13 @@
       "pd_per_game": 9.67
     },
     {
-      "team": "Wakefield Trinity (A)",
+      "team": "Wakefield Trinity (F)",
       "gp": 27,
       "w": null,
       "l": null,
       "d": null,
       "pf": 709,
-      "pa": "Wakefield Trinity (A)",
+      "pa": "Wakefield Trinity (F)",
       "pd": 223,
       "pts": 38,
       "pd_per_game": 8.26
