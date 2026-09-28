@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-09-28T01:52:27.929599+09:00",
+  "fetched_at": "2026-09-28T14:06:38.252041+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -48,9 +48,9 @@
       "player": "Matthew Poitras",
       "team": null,
       "position": "C",
-      "estimated_return": "Sep 29",
-      "status": "Day-To-Day",
-      "comment": ""
+      "estimated_return": "Oct 5",
+      "status": "Injured Reserve",
+      "comment": "Sep 27: Poitras (lower body) was placed on injured reserve by the Bruins on Sunday, per Conor Ryan of The Boston Globe."
     },
     {
       "player": "Olen Zellweger",
@@ -104,7 +104,7 @@
       "player": "Jonathan Huberdeau",
       "team": null,
       "position": "LW",
-      "estimated_return": "Oct 8",
+      "estimated_return": "Oct 10",
       "status": "Injured Reserve",
       "comment": ""
     },
@@ -113,8 +113,8 @@
       "team": null,
       "position": "C",
       "estimated_return": "Oct 24",
-      "status": "Out",
-      "comment": "Sep 17: Jarvis (shoulder) was on the ice for practice Thursday, Ryan Henkel of The Hockey News reports."
+      "status": "Injured Reserve",
+      "comment": "Sep 27: Jarvis (shoulder) was placed on the injured non-roster list Sunday."
     },
     {
       "player": "Alexander Nikishin",
@@ -131,6 +131,22 @@
       "estimated_return": "Nov 7",
       "status": "Out",
       "comment": "Sep 23: Head coach Jeff Blashill said Wednesday that Bedard (shoulder) isn't yet close to joining the Blackhawks for practice, Scott Powers of The Athletic reports."
+    },
+    {
+      "player": "Logan O'Connor",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Sep 30",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Zachary L'Heureux",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Sep 30",
+      "status": "Day-To-Day",
+      "comment": "Sep 27: L'Heureux (lower body) is day-to-day and didn't participate in Sunday's practice, Corey Masisak of The Denver Post reports."
     },
     {
       "player": "Trent Miner",
@@ -166,14 +182,6 @@
     },
     {
       "player": "Cameron Hughes",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 2",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Colin Blackwell",
       "team": null,
       "position": "C",
       "estimated_return": "Oct 2",
@@ -293,6 +301,14 @@
       "comment": "Sep 17: Marchand (lower body) is expected to spend October rehabbing, per Panthers TV Rinkside Reporter Katie Engleson on Thursday."
     },
     {
+      "player": "Otto Salin",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 6",
+      "status": "Injured Reserve",
+      "comment": "Sep 27: Salin (undisclosed) was placed on the injured non-roster list Sunday."
+    },
+    {
       "player": "Corey Perry",
       "team": null,
       "position": "RW",
@@ -306,14 +322,6 @@
       "position": "D",
       "estimated_return": "Sep 30",
       "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Otto Salin",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Sep 30",
-      "status": "Out",
       "comment": ""
     },
     {
@@ -361,7 +369,7 @@
       "team": null,
       "position": "RW",
       "estimated_return": "Sep 29",
-      "status": "Out",
+      "status": "Day-To-Day",
       "comment": ""
     },
     {
@@ -409,7 +417,7 @@
       "team": null,
       "position": "D",
       "estimated_return": "Sep 29",
-      "status": "Out",
+      "status": "Day-To-Day",
       "comment": ""
     },
     {
@@ -424,9 +432,41 @@
       "player": "Aidan Thompson",
       "team": null,
       "position": "C",
-      "estimated_return": "Sep 29",
+      "estimated_return": "Oct 1",
       "status": "Out",
       "comment": "Sep 16: Thompson (undisclosed) is considered week-to-week heading into training camp, Peter Baugh of The Athletic reports Wednesday."
+    },
+    {
+      "player": "Warren Foegele",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 3",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Kurtis MacDermid",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 3",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Shane Pinto",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 3",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Jorian Donovan",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 3",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Jake Sanderson",
@@ -437,57 +477,25 @@
       "comment": ""
     },
     {
-      "player": "Jorian Donovan",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 3",
-      "status": "Out",
-      "comment": ""
-    },
-    {
-      "player": "Shane Pinto",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 3",
-      "status": "Out",
-      "comment": ""
-    },
-    {
-      "player": "Warren Foegele",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Oct 3",
-      "status": "Out",
-      "comment": "Sep 23: Foegele (undisclosed) won't appear in either of the Senators' split-squad preseason games against Toronto on Wednesday, Claire Hanna of TSN reports."
-    },
-    {
       "player": "Artem Zub",
       "team": null,
       "position": "D",
-      "estimated_return": "Oct 5",
+      "estimated_return": "Oct 10",
       "status": "Out",
       "comment": "Sep 23: Zub (knee) isn't expected to be ready for Ottawa's season opener in Toronto on Oct. 3, per TSN 1200 Ottawa on Wednesday."
-    },
-    {
-      "player": "Kurtis MacDermid",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Oct 3",
-      "status": "Out",
-      "comment": ""
-    },
-    {
-      "player": "Denver Barkey",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Sep 30",
-      "status": "Day-To-Day",
-      "comment": ""
     },
     {
       "player": "Dan Vladar",
       "team": null,
       "position": "G",
+      "estimated_return": "Sep 30",
+      "status": "Day-To-Day",
+      "comment": "Sep 27: Vladar (upper body) was a full participant in Sunday's practice and is on track to be ready for the Flyers' season opener against the Penguins on Wednesday, Jackie Spiegel of The Philadelphia Inquirer reports."
+    },
+    {
+      "player": "Denver Barkey",
+      "team": null,
+      "position": "C",
       "estimated_return": "Sep 30",
       "status": "Day-To-Day",
       "comment": ""
@@ -501,33 +509,57 @@
       "comment": ""
     },
     {
-      "player": "Ryan Graves",
+      "player": "Ben Kindel",
       "team": null,
-      "position": "D",
-      "estimated_return": "Sep 30",
-      "status": "Day-To-Day",
-      "comment": ""
+      "position": "C",
+      "estimated_return": "Oct 7",
+      "status": "Injured Reserve",
+      "comment": "Sep 27: Kindel (lower body) was placed on injured reserve by the Penguins on Sunday."
+    },
+    {
+      "player": "Blake Lizotte",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 5",
+      "status": "Injured Reserve",
+      "comment": "Sep 27: Lizotte (upper body) was placed on injured reserve Sunday."
     },
     {
       "player": "Justin Brazeau",
       "team": null,
       "position": "RW",
-      "estimated_return": "Sep 30",
-      "status": "Day-To-Day",
-      "comment": ""
+      "estimated_return": "Oct 7",
+      "status": "Injured Reserve",
+      "comment": "Sep 27: Brazeau (lower body) was placed on injured reserve by the Penguins on Sunday."
     },
     {
-      "player": "Andrei Kuzmenko",
+      "player": "Ryan Graves",
       "team": null,
-      "position": "LW",
+      "position": "D",
+      "estimated_return": "Oct 24",
+      "status": "Injured Reserve",
+      "comment": "Sep 27: Graves (lower body) is out indefinitely and was placed on injured reserve Sunday."
+    },
+    {
+      "player": "Tristan Broz",
+      "team": null,
+      "position": "C",
       "estimated_return": "Sep 30",
       "status": "Day-To-Day",
-      "comment": ""
+      "comment": "Sep 27: Broz (lower body) won't take part in Sunday's practice."
     },
     {
       "player": "Bryan Rust",
       "team": null,
       "position": "RW",
+      "estimated_return": "Sep 30",
+      "status": "Day-To-Day",
+      "comment": "Sep 27: Rust (upper body) is being evaluated and won't participate in Sunday's practice."
+    },
+    {
+      "player": "Andrei Kuzmenko",
+      "team": null,
+      "position": "LW",
       "estimated_return": "Sep 30",
       "status": "Day-To-Day",
       "comment": ""
@@ -555,22 +587,6 @@
       "estimated_return": "Oct 13",
       "status": "Injured Reserve",
       "comment": "Sep 24: ir-nr"
-    },
-    {
-      "player": "Ben Kindel",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 3",
-      "status": "Out",
-      "comment": "Sep 24: The Penguins announced Thursday that Kindel (lower body) is undergoing further testing and is considered week-to-week, Josh Yohe of The Athletic reports."
-    },
-    {
-      "player": "Blake Lizotte",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 5",
-      "status": "Out",
-      "comment": ""
     },
     {
       "player": "Adam Gaudette",
@@ -624,16 +640,16 @@
       "player": "Jake O'Brien",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 1",
-      "status": "Day-To-Day",
-      "comment": ""
+      "estimated_return": "Oct 6",
+      "status": "Injured Reserve",
+      "comment": "Sep 27: O'Brien (lower body) was placed on injured reserve on Sunday."
     },
     {
       "player": "Mackie Samoskevich",
       "team": null,
       "position": "RW",
-      "estimated_return": "Oct 1",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 3",
+      "status": "Injured Reserve",
       "comment": ""
     },
     {
@@ -669,20 +685,20 @@
       "comment": ""
     },
     {
+      "player": "Dakota Joshua",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Sep 29",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Nick Paul",
       "team": null,
       "position": "LW",
       "estimated_return": "Sep 29",
       "status": "Day-To-Day",
       "comment": "Sep 24: Head coach Jim Hiller said Thursday that Paul (undisclosed) is considered day-to-day, David Alter of The Hockey News reports."
-    },
-    {
-      "player": "Dakota Joshua",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Sep 29",
-      "status": "Out",
-      "comment": "Sep 23: Joshua is dealing with a core muscle injury and remains day-to-day, Luke Fox of Sportsnet reports Wednesday."
     },
     {
       "player": "William Villeneuve",
@@ -720,7 +736,7 @@
       "player": "Thatcher Demko",
       "team": null,
       "position": "G",
-      "estimated_return": "Oct 3",
+      "estimated_return": "Oct 10",
       "status": "Injured Reserve",
       "comment": "Sep 25: Demko (hip) isn't expected to be ready for the start of the regular season, per Thomas Drance of The Athletic on Friday."
     },
