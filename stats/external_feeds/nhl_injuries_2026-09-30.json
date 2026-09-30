@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-09-30T03:00:46.284883+09:00",
+  "fetched_at": "2026-09-30T14:18:36.473212+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -85,14 +85,6 @@
       "comment": "Sep 28: ir-nr"
     },
     {
-      "player": "Conor Sheary",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Oct 6",
-      "status": "Injured Reserve",
-      "comment": "Sep 28: Sheary was placed on injured reserve by the Sabres on Monday with an undisclosed injury."
-    },
-    {
       "player": "Jason Zucker",
       "team": null,
       "position": "LW",
@@ -149,12 +141,36 @@
       "comment": ""
     },
     {
+      "player": "Andrew Mangiapane",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 1",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Connor Bedard",
       "team": null,
       "position": "C",
       "estimated_return": "Nov 7",
       "status": "Injured Reserve",
-      "comment": "Sep 28: Bedard (shoulder) will begin the 2026-27 regular season on the injured non-roster list."
+      "comment": "Sep 29: General manager Kyle Davidson told reporters Tuesday that the Blackhawks don't have a firm timeline for Bedard's return from shoulder surgery, Ben Pope of the Chicago Sun-Times reports."
+    },
+    {
+      "player": "Zachary L'Heureux",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 3",
+      "status": "Injured Reserve",
+      "comment": "Sep 29: L'Heureux (lower body) won't be available for the start of the 2026-27 campaign, per Aarif Deen of Colorado Hockey Now on Tuesday."
+    },
+    {
+      "player": "Logan O'Connor",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Oct 3",
+      "status": "Injured Reserve",
+      "comment": "Sep 29: O'Connor (lower body) won't play at the beginning of the 2026-27 campaign, Aarif Deen of Colorado Hockey Now reports."
     },
     {
       "player": "Trent Miner",
@@ -179,22 +195,6 @@
       "estimated_return": "Oct 7",
       "status": "Injured Reserve",
       "comment": "Sep 28: ir-nr"
-    },
-    {
-      "player": "Zachary L'Heureux",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Sep 30",
-      "status": "Injured Reserve",
-      "comment": ""
-    },
-    {
-      "player": "Logan O'Connor",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Sep 30",
-      "status": "Injured Reserve",
-      "comment": "Sep 28: O'Connor (lower body) was put on injured reserve Monday, according to Evan Rawal of the Denver Gazette."
     },
     {
       "player": "Damon Severson",
@@ -309,6 +309,22 @@
       "comment": ""
     },
     {
+      "player": "Matt Savoie",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 27",
+      "status": "Injured Reserve",
+      "comment": "Sep 29: Savoie (lower body) is expected to be sidelined for around eight weeks."
+    },
+    {
+      "player": "Jason Dickinson",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 10",
+      "status": "Injured Reserve",
+      "comment": "Sep 29: Dickinson (foot) is still \"a bit\" away from being ready to return, head coach Mike Babcock told NHL.com on Tuesday."
+    },
+    {
       "player": "Frederik Andersen",
       "team": null,
       "position": "G",
@@ -347,22 +363,6 @@
       "estimated_return": "Oct 17",
       "status": "Injured Reserve",
       "comment": "Sep 29: ir-nr"
-    },
-    {
-      "player": "Jason Dickinson",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 17",
-      "status": "Injured Reserve",
-      "comment": "Sep 27: ir-nr"
-    },
-    {
-      "player": "Matt Savoie",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 20",
-      "status": "Injured Reserve",
-      "comment": "Sep 27: ir-nr"
     },
     {
       "player": "Alec Regula",
@@ -461,6 +461,14 @@
       "comment": "Sep 28: Gustavsson (hip) was placed on injured reserve Monday, according to Dylan Loucks of The Hockey News."
     },
     {
+      "player": "Oliver Kapanen",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 3",
+      "status": "Out",
+      "comment": "Sep 29: Kapanen (lower body) won't be in the lineup for Tuesday's season opener against Toronto, according to Stu Cowan of The Montreal Gazette."
+    },
+    {
       "player": "Bryce Pickford",
       "team": null,
       "position": "D",
@@ -483,22 +491,6 @@
       "estimated_return": "Oct 23",
       "status": "Injured Reserve",
       "comment": "Sep 28: Guhle (groin) was placed on injured reserve by the Canadiens on Monday."
-    },
-    {
-      "player": "Oliver Kapanen",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Sep 29",
-      "status": "Day-To-Day",
-      "comment": "Sep 28: Kapanen (lower body) is day-to-day and won't participate in Monday's practice."
-    },
-    {
-      "player": "Ivan Demidov",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Sep 29",
-      "status": "Day-To-Day",
-      "comment": ""
     },
     {
       "player": "Johnathan Kovacevic",
@@ -539,14 +531,6 @@
       "estimated_return": "Oct 1",
       "status": "Injured Reserve",
       "comment": "Sep 29: ir-nr"
-    },
-    {
-      "player": "Vincent Iorio",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 1",
-      "status": "Injured Reserve",
-      "comment": ""
     },
     {
       "player": "Adam Sykora",
@@ -712,7 +696,7 @@
       "player": "Adam Gaudette",
       "team": null,
       "position": "RW",
-      "estimated_return": "Oct 5",
+      "estimated_return": "Oct 10",
       "status": "Injured Reserve",
       "comment": "Sep 28: Gaudette (upper body) will begin the 2026-27 regular season on the injured non-roster list, per Curtis Pashelka of The San Jose Mercury News."
     },
@@ -747,14 +731,6 @@
       "estimated_return": "Dec 1",
       "status": "Injured Reserve",
       "comment": "Sep 28: Keyser (upper body) was placed on non-roster injured reserve by the Sharks on Monday, Curtis Pashelka of The San Jose Mercury News reports."
-    },
-    {
-      "player": "Mattias Havelid",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 3",
-      "status": "Injured Reserve",
-      "comment": "Sep 28: Havelid was placed on non-roster injured reserve by the Sharks on Monday, Curtis Pashelka of The San Jose Mercury News reports."
     },
     {
       "player": "Patrick Giles",
@@ -837,14 +813,6 @@
       "comment": "Sep 29: Merzlikins is expected to miss 4-6 months to begin the 2026-27 regular season while recovering from a shoulder injury, per Luke Fox of Sportsnet."
     },
     {
-      "player": "Kirill Marchenko",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Sep 29",
-      "status": "Day-To-Day",
-      "comment": "Sep 29: Marchenko may not be available versus the Canadiens on Tuesday while awaiting a work visa, Chris Johnston of The Athletic reports."
-    },
-    {
       "player": "William Villeneuve",
       "team": null,
       "position": "D",
@@ -867,14 +835,6 @@
       "estimated_return": "Oct 17",
       "status": "Injured Reserve",
       "comment": ""
-    },
-    {
-      "player": "Nick Paul",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Sep 29",
-      "status": "Day-To-Day",
-      "comment": "Sep 24: Head coach Jim Hiller said Thursday that Paul (undisclosed) is considered day-to-day, David Alter of The Hockey News reports."
     },
     {
       "player": "Maveric Lamoureux",
@@ -930,14 +890,6 @@
       "position": "D",
       "estimated_return": "Oct 6",
       "status": "Injured Reserve",
-      "comment": ""
-    },
-    {
-      "player": "Raphael Lavoie",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Sep 29",
-      "status": "Day-To-Day",
       "comment": ""
     },
     {

@@ -1,6 +1,6 @@
 {
   "source": "https://www.basketball-reference.com/leagues/NBA_2026_ratings.html",
-  "fetched_at": "2026-09-30T03:00:18.080145+09:00",
+  "fetched_at": "2026-09-30T14:17:05.351399+09:00",
   "note": "NRtg = possession-adjusted net rating. *_adj = SOS adjusted values (preferred for L1 screening).",
   "teams": [
     {
@@ -324,6 +324,22 @@
       "nrtg_adj": -0.33
     },
     {
+      "team": "Team",
+      "conf": "Conf",
+      "div": "Div",
+      "wins": "W",
+      "losses": "L",
+      "win_pct": "W/L%",
+      "mov": "MOV",
+      "ortg": "ORtg",
+      "drtg": "DRtg",
+      "nrtg": "NRtg",
+      "mov_adj": "MOV/A",
+      "ortg_adj": "ORtg/A",
+      "drtg_adj": "DRtg/A",
+      "nrtg_adj": "NRtg/A"
+    },
+    {
       "team": "New Orleans Pelicans",
       "conf": "W",
       "div": "SW",
@@ -484,5 +500,5 @@
       "nrtg_adj": -11.49
     }
   ],
-  "team_count": 30
+  "team_count": 31
 }
