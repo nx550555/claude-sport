@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-10-02T03:27:54.276086+09:00",
+  "fetched_at": "2026-10-02T14:21:01.642044+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -45,6 +45,14 @@
       "comment": "Sep 27: Poitras (lower body) was placed on injured reserve by the Bruins on Sunday, per Conor Ryan of The Boston Globe."
     },
     {
+      "player": "Alex Lyon",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Oct 3",
+      "status": "Injured Reserve",
+      "comment": ""
+    },
+    {
       "player": "Olen Zellweger",
       "team": null,
       "position": "D",
@@ -59,14 +67,6 @@
       "estimated_return": "Oct 17",
       "status": "Injured Reserve",
       "comment": "Sep 29: Timmins (lower body) doesn't have a timeline for his return yet, according to Heather Engel of NHL.com on Tuesday."
-    },
-    {
-      "player": "Alex Lyon",
-      "team": null,
-      "position": "G",
-      "estimated_return": "Oct 1",
-      "status": "Day-To-Day",
-      "comment": "Sep 29: Head coach Lindy Ruff stated that Lyon (upper body) is expected to miss a couple of days, per Heather Engel of NHL.com."
     },
     {
       "player": "Topias Leinonen",
@@ -173,14 +173,6 @@
       "comment": "Sep 28: Merkulov (undisclosed) was put on non-roster injured reserve Monday."
     },
     {
-      "player": "Taylor Makar",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Oct 7",
-      "status": "Injured Reserve",
-      "comment": "Sep 28: ir-nr"
-    },
-    {
       "player": "Matt Duchene",
       "team": null,
       "position": "C",
@@ -277,6 +269,14 @@
       "comment": "Sep 28: The Red Wings placed Bernard-Docker (upper body) on injured reserve Monday, Ansar Khan of MLive.com reports."
     },
     {
+      "player": "Zach Hyman",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 17",
+      "status": "Out",
+      "comment": "Oct 1: Hyman (undisclosed) is expected to be out of action for two weeks, Oilers play-by-play announcer Jack Michaels reports Thursday."
+    },
+    {
       "player": "Alec Regula",
       "team": null,
       "position": "D",
@@ -296,7 +296,7 @@
       "player": "Matt Savoie",
       "team": null,
       "position": "C",
-      "estimated_return": "Nov 27",
+      "estimated_return": "Nov 24",
       "status": "Injured Reserve",
       "comment": "Oct 1: Savoie (lower body) was shifted to long-term injured reserve Thursday."
     },
@@ -339,6 +339,14 @@
       "estimated_return": "Oct 17",
       "status": "Injured Reserve",
       "comment": "Sep 29: ir-nr"
+    },
+    {
+      "player": "Gustav Forsling",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 4",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Brad Marchand",
@@ -605,14 +613,6 @@
       "comment": ""
     },
     {
-      "player": "Tristan Broz",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 3",
-      "status": "Injured Reserve",
-      "comment": "Sep 28: Broz (lower body) was designated for non-roster, injured reserve Monday."
-    },
-    {
       "player": "Andrei Kuzmenko",
       "team": null,
       "position": "LW",
@@ -643,30 +643,6 @@
       "estimated_return": "Oct 24",
       "status": "Injured Reserve",
       "comment": "Sep 27: Graves (lower body) is out indefinitely and was placed on injured reserve Sunday."
-    },
-    {
-      "player": "Oliver Okuliar",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Oct 13",
-      "status": "Injured Reserve",
-      "comment": "Sep 25: Okuliar (lower body) was placed on non-roster injured reserve Friday."
-    },
-    {
-      "player": "Gabriel D'Aigle",
-      "team": null,
-      "position": "G",
-      "estimated_return": "Oct 29",
-      "status": "Injured Reserve",
-      "comment": "Sep 24: ir-nr"
-    },
-    {
-      "player": "Melvin Fernström",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Oct 13",
-      "status": "Injured Reserve",
-      "comment": "Sep 24: ir-nr"
     },
     {
       "player": "Adam Gaudette",
