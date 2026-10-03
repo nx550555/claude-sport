@@ -1,17 +1,9 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-10-03T02:48:30.578564+09:00",
+  "fetched_at": "2026-10-03T14:03:53.722704+09:00",
   "starting_goalies": [],
   "injuries": [
-    {
-      "player": "A.J. Greer",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Oct 2",
-      "status": "Day-To-Day",
-      "comment": "Sep 30: Greer (upper body) took contact during Wednesday's practice, per Derek Lee of The Hockey News."
-    },
     {
       "player": "Drew Helleson",
       "team": null,
@@ -82,14 +74,6 @@
       "position": "LW",
       "estimated_return": "Oct 15",
       "status": "Injured Reserve",
-      "comment": ""
-    },
-    {
-      "player": "Henry Mews",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 3",
-      "status": "Day-To-Day",
       "comment": ""
     },
     {
@@ -217,8 +201,8 @@
       "team": null,
       "position": "C",
       "estimated_return": "Oct 6",
-      "status": "Out",
-      "comment": "Oct 1: Head coach Todd McLellan said Thursday that Larkin (upper body) will be out for Friday's game against the Rangers and Sunday's game against the Jets, Max Bultman of The Athletic reports."
+      "status": "Injured Reserve",
+      "comment": "Oct 2: Larkin (upper body) was placed on non-roster injured reserve Friday, per the NHL media site."
     },
     {
       "player": "Simon Edvinsson",
@@ -227,14 +211,6 @@
       "estimated_return": "Oct 4",
       "status": "Out",
       "comment": "Sep 30: Edvinsson, who is a restricted free agent, has returned to Sweden to resume his training, per Andreas III Johnsson of Goteborgs-Posten on Wednesday."
-    },
-    {
-      "player": "Andreas Englund",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 2",
-      "status": "Injured Reserve",
-      "comment": "Sep 28: ir-nr"
     },
     {
       "player": "Chase Stillman",
@@ -693,6 +669,14 @@
       "comment": ""
     },
     {
+      "player": "Alexey Toropchenko",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Oct 6",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Tyler Tucker",
       "team": null,
       "position": "D",
@@ -824,8 +808,8 @@
       "player": "Raphael Lavoie",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 2",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 4",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -851,6 +835,14 @@
       "estimated_return": "Dec 26",
       "status": "Injured Reserve",
       "comment": "Sep 28: Sandin (knee) will begin the 2026-27 regular season on the injured non-roster list."
+    },
+    {
+      "player": "Connor Hellebuyck",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Oct 17",
+      "status": "Injured Reserve",
+      "comment": "Oct 2: ir-nr"
     },
     {
       "player": "Garrett Brown",
