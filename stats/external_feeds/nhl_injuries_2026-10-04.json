@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-10-04T01:08:05.378812+09:00",
+  "fetched_at": "2026-10-04T14:36:24.037933+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -101,6 +101,14 @@
       "comment": ""
     },
     {
+      "player": "Bowen Byram",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 6",
+      "status": "Out",
+      "comment": "Oct 3: Byram is attending to a family matter and won't play against Buffalo on Saturday, Ben Pope of the Chicago Sun-Times reports."
+    },
+    {
       "player": "Andrew Mangiapane",
       "team": null,
       "position": "LW",
@@ -120,7 +128,7 @@
       "player": "Zachary L'Heureux",
       "team": null,
       "position": "LW",
-      "estimated_return": "Oct 3",
+      "estimated_return": "Oct 7",
       "status": "Injured Reserve",
       "comment": "Sep 29: L'Heureux (lower body) won't be available for the start of the 2026-27 campaign, per Aarif Deen of Colorado Hockey Now on Tuesday."
     },
@@ -195,6 +203,14 @@
       "estimated_return": "Oct 5",
       "status": "Injured Reserve",
       "comment": "Sep 29: ir-nr"
+    },
+    {
+      "player": "Marco Kasper",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 6",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Dylan Larkin",
@@ -309,20 +325,20 @@
       "comment": "Sep 29: ir-nr"
     },
     {
-      "player": "Aleksander Barkov",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 4",
-      "status": "Day-To-Day",
-      "comment": "Oct 2: Barkov (knee) is scheduled to have an MRI on Friday, Pierre LeBrun of TSN reports."
-    },
-    {
       "player": "Gustav Forsling",
       "team": null,
       "position": "D",
       "estimated_return": "Oct 4",
       "status": "Day-To-Day",
-      "comment": ""
+      "comment": "Oct 3: Forsling (upper body) is expected to be a game-time decision for Sunday's tilt in Anaheim, per Jameson Olive of the Panthers' official site."
+    },
+    {
+      "player": "Aleksander Barkov",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 27",
+      "status": "Injured Reserve",
+      "comment": "Oct 3: ir-lt"
     },
     {
       "player": "Brad Marchand",
@@ -397,11 +413,19 @@
       "comment": "Sep 28: Gustavsson (hip) was placed on injured reserve Monday, according to Dylan Loucks of The Hockey News."
     },
     {
+      "player": "Alexandre Carrier",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 6",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Oliver Kapanen",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 3",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 6",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -427,6 +451,14 @@
       "estimated_return": "Oct 23",
       "status": "Injured Reserve",
       "comment": "Sep 28: Guhle (groin) was placed on injured reserve by the Canadiens on Monday."
+    },
+    {
+      "player": "Justus Annunen",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Oct 6",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Seamus Casey",
@@ -496,9 +528,9 @@
       "player": "Jake Sanderson",
       "team": null,
       "position": "D",
-      "estimated_return": "Oct 3",
+      "estimated_return": "Oct 5",
       "status": "Day-To-Day",
-      "comment": "Oct 2: Sanderson (undisclosed) might be available for Saturday's clash with the Maple Leafs after returning to practice Friday, Graeme Nichols of The Hockey News reports."
+      "comment": "Oct 3: Sanderson departed Saturday's game versus the Maple Leafs due to a lower-body injury, Julian McKenzie of The Athletic reports."
     },
     {
       "player": "Andre Burakovsky",
@@ -533,6 +565,14 @@
       "comment": "Sep 28: ir-nr"
     },
     {
+      "player": "Rasmus Ristolainen",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 5",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Nikita Grebenkin",
       "team": null,
       "position": "RW",
@@ -555,14 +595,6 @@
       "estimated_return": "Oct 13",
       "status": "Injured Reserve",
       "comment": "Sep 28: Barkey (lower body) was placed on injured reserve Monday."
-    },
-    {
-      "player": "Ben Kindel",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 7",
-      "status": "Injured Reserve",
-      "comment": "Oct 1: Kindel (lower body) was cleared to take contact during Thursday's practice, Wes Crosby of NHL.com reports."
     },
     {
       "player": "Bryan Rust",
@@ -637,6 +669,14 @@
       "comment": "Sep 28: Giles (upper body) was placed on non-roster injured reserve by the Sharks on Monday, Curtis Pashelka of The San Jose Mercury News reports."
     },
     {
+      "player": "Jacob Melanson",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Oct 17",
+      "status": "Injured Reserve",
+      "comment": "Oct 3: Melanson (upper body) was placed on injured reserve Saturday."
+    },
+    {
       "player": "Jake O'Brien",
       "team": null,
       "position": "C",
@@ -674,6 +714,14 @@
       "position": "D",
       "estimated_return": "Nov 25",
       "status": "Injured Reserve",
+      "comment": ""
+    },
+    {
+      "player": "Emil Lilleberg",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 5",
+      "status": "Day-To-Day",
       "comment": ""
     },
     {
@@ -741,6 +789,14 @@
       "comment": ""
     },
     {
+      "player": "Jake DeBrusk",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 4",
+      "status": "Out",
+      "comment": "Oct 3: DeBrusk will miss Saturday's game against Calgary because of an illness, per Canucks play-by-play announcer Brendan Batchelor."
+    },
+    {
       "player": "Jack Thompson",
       "team": null,
       "position": "D",
@@ -794,6 +850,14 @@
       "position": "D",
       "estimated_return": "Oct 6",
       "status": "Injured Reserve",
+      "comment": ""
+    },
+    {
+      "player": "Matt Roy",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 7",
+      "status": "Day-To-Day",
       "comment": ""
     },
     {
