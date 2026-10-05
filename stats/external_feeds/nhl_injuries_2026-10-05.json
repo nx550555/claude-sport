@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-10-05T01:48:10.890944+09:00",
+  "fetched_at": "2026-10-05T14:20:12.466126+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -325,12 +325,12 @@
       "comment": "Sep 29: ir-nr"
     },
     {
-      "player": "Gustav Forsling",
+      "player": "Aaron Ekblad",
       "team": null,
       "position": "D",
-      "estimated_return": "Oct 4",
+      "estimated_return": "Oct 6",
       "status": "Day-To-Day",
-      "comment": "Oct 3: Forsling (upper body) is expected to be a game-time decision for Sunday's tilt in Anaheim, per Jameson Olive of the Panthers' official site."
+      "comment": ""
     },
     {
       "player": "Aleksander Barkov",
@@ -339,14 +339,6 @@
       "estimated_return": "Oct 27",
       "status": "Injured Reserve",
       "comment": "Oct 3: ir-lt"
-    },
-    {
-      "player": "Brad Marchand",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Oct 25",
-      "status": "Injured Reserve",
-      "comment": "Sep 30: Marchand (lower body) might be able to play before the end of October, Max Miller of NHL.com reports Wednesday."
     },
     {
       "player": "MacKenzie Entwistle",
@@ -501,6 +493,14 @@
       "comment": "Sep 30: Barzal (knee) might resume skating this weekend or early next week, Andrew Gross of Newsday reports Wednesday."
     },
     {
+      "player": "Joe Veleno",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 6",
+      "status": "Out",
+      "comment": "Oct 4: Veleno (lower body) has been ruled out for the remainder of Sunday's home game versus the Mammoth."
+    },
+    {
       "player": "Joonas Korpisalo",
       "team": null,
       "position": "G",
@@ -592,7 +592,7 @@
       "player": "Denver Barkey",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 13",
+      "estimated_return": "Oct 10",
       "status": "Injured Reserve",
       "comment": "Sep 28: Barkey (lower body) was placed on injured reserve Monday."
     },
@@ -661,14 +661,6 @@
       "comment": "Sep 28: Keyser (upper body) was placed on non-roster injured reserve by the Sharks on Monday, Curtis Pashelka of The San Jose Mercury News reports."
     },
     {
-      "player": "Patrick Giles",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Oct 8",
-      "status": "Injured Reserve",
-      "comment": "Sep 28: Giles (upper body) was placed on non-roster injured reserve by the Sharks on Monday, Curtis Pashelka of The San Jose Mercury News reports."
-    },
-    {
       "player": "Jacob Melanson",
       "team": null,
       "position": "RW",
@@ -688,9 +680,9 @@
       "player": "Alexey Toropchenko",
       "team": null,
       "position": "RW",
-      "estimated_return": "Oct 10",
+      "estimated_return": "Nov 14",
       "status": "Out",
-      "comment": ""
+      "comment": "Oct 4: Toropchenko (upper body) will miss at least six weeks, the team announced Sunday."
     },
     {
       "player": "Tyler Tucker",
@@ -792,9 +784,9 @@
       "player": "Jake DeBrusk",
       "team": null,
       "position": "LW",
-      "estimated_return": "Oct 4",
-      "status": "Day-To-Day",
-      "comment": ""
+      "estimated_return": "Oct 8",
+      "status": "Out",
+      "comment": "Oct 4: DeBrusk (illness) has been ruled out for Sunday's game against the Golden Knights, Ben Kuzma of Postmedia reports."
     },
     {
       "player": "Jack Thompson",
@@ -834,14 +826,6 @@
       "position": "C",
       "estimated_return": "Oct 8",
       "status": "Injured Reserve",
-      "comment": ""
-    },
-    {
-      "player": "Raphael Lavoie",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 4",
-      "status": "Day-To-Day",
       "comment": ""
     },
     {
