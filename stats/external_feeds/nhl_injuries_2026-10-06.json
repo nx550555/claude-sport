@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-10-06T05:31:45.492102+09:00",
+  "fetched_at": "2026-10-06T15:03:52.877046+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -221,6 +221,14 @@
       "comment": "Sep 28: The Red Wings placed Bernard-Docker (upper body) on injured reserve Monday, Ansar Khan of MLive.com reports."
     },
     {
+      "player": "Jason Dickinson",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 7",
+      "status": "Injured Reserve",
+      "comment": "Oct 5: Dickinson (foot) is working his way toward full health and might make his season debut in Anaheim on Wednesday, per Jamie Umbach of the Oilers' official site."
+    },
+    {
       "player": "Zach Hyman",
       "team": null,
       "position": "LW",
@@ -251,14 +259,6 @@
       "estimated_return": "Nov 24",
       "status": "Injured Reserve",
       "comment": "Oct 1: Savoie (lower body) was shifted to long-term injured reserve Thursday."
-    },
-    {
-      "player": "Jason Dickinson",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 7",
-      "status": "Injured Reserve",
-      "comment": "Sep 29: Dickinson (foot) is still \"a bit\" away from being ready to return, head coach Mike Babcock told NHL.com on Tuesday."
     },
     {
       "player": "Frederik Andersen",
@@ -501,6 +501,14 @@
       "comment": ""
     },
     {
+      "player": "Linus Ullmark",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Oct 6",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Jake Sanderson",
       "team": null,
       "position": "D",
@@ -541,20 +549,20 @@
       "comment": "Sep 28: ir-nr"
     },
     {
+      "player": "Rasmus Ristolainen",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 8",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Nikita Grebenkin",
       "team": null,
       "position": "RW",
       "estimated_return": "Oct 8",
       "status": "Injured Reserve",
       "comment": ""
-    },
-    {
-      "player": "Rasmus Ristolainen",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 5",
-      "status": "Day-To-Day",
-      "comment": "Oct 5: Ristolainen (undisclosed) will be a game-time call against Tampa Bay on Monday, Jackie Spiegel of The Philadelphia Inquirer reports."
     },
     {
       "player": "Helge Grans",
@@ -587,6 +595,14 @@
       "estimated_return": "Oct 24",
       "status": "Injured Reserve",
       "comment": "Sep 27: Graves (lower body) is out indefinitely and was placed on injured reserve Sunday."
+    },
+    {
+      "player": "Macklin Celebrini",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 8",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Adam Gaudette",
@@ -649,8 +665,8 @@
       "team": null,
       "position": "RW",
       "estimated_return": "Nov 14",
-      "status": "Out",
-      "comment": "Oct 4: Toropchenko (upper body) will miss at least six weeks, the team announced Sunday."
+      "status": "Injured Reserve",
+      "comment": ""
     },
     {
       "player": "Tyler Tucker",
