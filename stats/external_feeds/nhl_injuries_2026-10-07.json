@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-10-07T03:17:22.672720+09:00",
+  "fetched_at": "2026-10-07T14:39:13.283332+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -26,6 +26,14 @@
       "position": "D",
       "estimated_return": "Oct 16",
       "status": "Injured Reserve",
+      "comment": ""
+    },
+    {
+      "player": "Josh Doan",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Oct 8",
+      "status": "Day-To-Day",
       "comment": ""
     },
     {
@@ -93,6 +101,14 @@
       "comment": ""
     },
     {
+      "player": "Teuvo Teravainen",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 10",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Andrew Mangiapane",
       "team": null,
       "position": "LW",
@@ -136,7 +152,7 @@
       "player": "Georgii Merkulov",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 7",
+      "estimated_return": "Oct 16",
       "status": "Injured Reserve",
       "comment": "Sep 28: Merkulov (undisclosed) was put on non-roster injured reserve Monday."
     },
@@ -173,6 +189,14 @@
       "comment": "Sep 29: ir-nr"
     },
     {
+      "player": "Mason Appleton",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 13",
+      "status": "Injured Reserve",
+      "comment": ""
+    },
+    {
       "player": "J.T. Compher",
       "team": null,
       "position": "LW",
@@ -187,14 +211,6 @@
       "estimated_return": "Oct 20",
       "status": "Injured Reserve",
       "comment": "Oct 6: Kasper (upper body) has been given a week-to-week timetable for return."
-    },
-    {
-      "player": "Mason Appleton",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 13",
-      "status": "Out",
-      "comment": ""
     },
     {
       "player": "Simon Edvinsson",
@@ -304,17 +320,17 @@
       "player": "Aaron Ekblad",
       "team": null,
       "position": "D",
-      "estimated_return": "Oct 6",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 10",
+      "status": "Out",
       "comment": ""
     },
     {
       "player": "Aleksander Barkov",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 27",
+      "estimated_return": "Nov 27",
       "status": "Injured Reserve",
-      "comment": "Oct 3: ir-lt"
+      "comment": "Oct 6: Barkov (lower body) will be out for approximately 6-8 weeks, Jameson Olive of the Panthers' official site reports Tuesday."
     },
     {
       "player": "MacKenzie Entwistle",
@@ -357,10 +373,10 @@
       "comment": "Sep 17: Fiala (lower leg fracture) is at least three weeks away from being ready to play, Zach Dooley of the Kings' official site reports Thursday."
     },
     {
-      "player": "Danila Yurov",
+      "player": "Nick Foligno",
       "team": null,
-      "position": "RW",
-      "estimated_return": "Oct 6",
+      "position": "LW",
+      "estimated_return": "Oct 8",
       "status": "Day-To-Day",
       "comment": ""
     },
@@ -381,20 +397,20 @@
       "comment": "Sep 28: Gustavsson (hip) was placed on injured reserve Monday, according to Dylan Loucks of The Hockey News."
     },
     {
+      "player": "Ivan Demidov",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Oct 31",
+      "status": "Injured Reserve",
+      "comment": "Oct 6: Demidov (lower body) was placed on injured reserve by the Canadiens on Tuesday, per the NHL media site."
+    },
+    {
       "player": "Oliver Kapanen",
       "team": null,
       "position": "C",
       "estimated_return": "Oct 8",
       "status": "Out",
       "comment": ""
-    },
-    {
-      "player": "Ivan Demidov",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Oct 20",
-      "status": "Out",
-      "comment": "Oct 6: The Canadiens announced Tuesday that Demidov will be out for 2-4 weeks due to a lower-body injury."
     },
     {
       "player": "Kaiden Guhle",
@@ -429,6 +445,14 @@
       "comment": ""
     },
     {
+      "player": "Jonas Siegenthaler",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 10",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Connor Brown",
       "team": null,
       "position": "RW",
@@ -459,6 +483,14 @@
       "estimated_return": "Jan 19",
       "status": "Injured Reserve",
       "comment": "Sep 28: ir-nr"
+    },
+    {
+      "player": "Alexander Romanov",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 8",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Mathew Barzal",
@@ -504,8 +536,8 @@
       "player": "Linus Ullmark",
       "team": null,
       "position": "G",
-      "estimated_return": "Oct 6",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 8",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -602,7 +634,7 @@
       "position": "C",
       "estimated_return": "Oct 8",
       "status": "Day-To-Day",
-      "comment": ""
+      "comment": "Oct 6: Head coach Ryan Warsofsky said Tuesday that Celebrini (lower body) is considered day-to-day, Sheng Peng of San Jose Hockey Now reports."
     },
     {
       "player": "Adam Gaudette",
@@ -643,6 +675,14 @@
       "estimated_return": "Dec 1",
       "status": "Injured Reserve",
       "comment": "Sep 28: Keyser (upper body) was placed on non-roster injured reserve by the Sharks on Monday, Curtis Pashelka of The San Jose Mercury News reports."
+    },
+    {
+      "player": "Ryan Lindgren",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 9",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Jacob Melanson",
@@ -757,6 +797,14 @@
       "comment": "Sep 29: ir-nr"
     },
     {
+      "player": "Mikhail Sergachev",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 8",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Maveric Lamoureux",
       "team": null,
       "position": "D",
@@ -805,11 +853,19 @@
       "comment": ""
     },
     {
+      "player": "Victor Olofsson",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 8",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Raphael Lavoie",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 6",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 8",
+      "status": "Out",
       "comment": ""
     },
     {
