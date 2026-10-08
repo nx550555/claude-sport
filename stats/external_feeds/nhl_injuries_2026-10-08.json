@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-10-08T03:51:29.778340+09:00",
+  "fetched_at": "2026-10-08T14:47:31.185164+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -243,6 +243,14 @@
       "estimated_return": "Oct 9",
       "status": "Injured Reserve",
       "comment": "Sep 28: The Red Wings placed Bernard-Docker (upper body) on injured reserve Monday, Ansar Khan of MLive.com reports."
+    },
+    {
+      "player": "Colton Dach",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 13",
+      "status": "Injured Reserve",
+      "comment": ""
     },
     {
       "player": "Zach Hyman",
@@ -613,14 +621,6 @@
       "comment": "Oct 7: ir-nr"
     },
     {
-      "player": "Bryan Rust",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Oct 7",
-      "status": "Injured Reserve",
-      "comment": "Oct 7: Rust (upper body) is considered a game-time decision ahead of Wednesday's matchup with Washington, Josh Yohe of The Athletic reports."
-    },
-    {
       "player": "Justin Brazeau",
       "team": null,
       "position": "RW",
@@ -907,6 +907,14 @@
       "estimated_return": "Dec 26",
       "status": "Injured Reserve",
       "comment": "Sep 28: Sandin (knee) will begin the 2026-27 regular season on the injured non-roster list."
+    },
+    {
+      "player": "Josh Morrissey",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 9",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Connor Hellebuyck",
