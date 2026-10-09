@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-10-09T03:48:13.371445+09:00",
+  "fetched_at": "2026-10-09T14:52:03.628045+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -26,14 +26,6 @@
       "position": "D",
       "estimated_return": "Oct 16",
       "status": "Injured Reserve",
-      "comment": ""
-    },
-    {
-      "player": "Josh Doan",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Oct 8",
-      "status": "Day-To-Day",
       "comment": ""
     },
     {
@@ -128,9 +120,9 @@
       "player": "Logan O'Connor",
       "team": null,
       "position": "RW",
-      "estimated_return": "Oct 8",
+      "estimated_return": "Oct 10",
       "status": "Injured Reserve",
-      "comment": "Oct 7: O'Connor (lower body) won't play Wednesday in Winnipeg, but he might be an option Thursday in Calgary, per Evan Rawal of the Denver Gazette."
+      "comment": "Oct 8: O'Connor (lower body) will not play Thursday in Calgary following the sudden passing of his father, Myles."
     },
     {
       "player": "Trent Miner",
@@ -357,6 +349,14 @@
       "comment": "Sep 17: Fiala (lower leg fracture) is at least three weeks away from being ready to play, Zach Dooley of the Kings' official site reports Thursday."
     },
     {
+      "player": "Olli Maatta",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 10",
+      "status": "Out",
+      "comment": "Oct 8: Maatta (lower body) won't play Thursday versus the Lightning."
+    },
+    {
       "player": "Nick Foligno",
       "team": null,
       "position": "LW",
@@ -381,19 +381,19 @@
       "comment": "Sep 28: Gustavsson (hip) was placed on injured reserve Monday, according to Dylan Loucks of The Hockey News."
     },
     {
-      "player": "Sam Montembeault",
+      "player": "Oliver Kapanen",
       "team": null,
-      "position": "G",
+      "position": "C",
       "estimated_return": "Oct 10",
       "status": "Out",
       "comment": ""
     },
     {
-      "player": "Oliver Kapanen",
+      "player": "Sam Montembeault",
       "team": null,
-      "position": "C",
-      "estimated_return": "Oct 8",
-      "status": "Day-To-Day",
+      "position": "G",
+      "estimated_return": "Oct 10",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -427,6 +427,22 @@
       "estimated_return": "Oct 10",
       "status": "Injured Reserve",
       "comment": "Sep 29: ir-nr"
+    },
+    {
+      "player": "William Trudeau",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 10",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Mavrik Bourque",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 10",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Justus Annunen",
@@ -477,6 +493,14 @@
       "comment": "Sep 28: ir-nr"
     },
     {
+      "player": "Bo Horvat",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 10",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Alexander Romanov",
       "team": null,
       "position": "D",
@@ -525,6 +549,22 @@
       "comment": ""
     },
     {
+      "player": "William Eklund",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 10",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Cameron Crotty",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 10",
+      "status": "Out",
+      "comment": "Oct 8: Crotty (illness) won't play Thursday versus the Flyers, per TSN 1200 Ottawa."
+    },
+    {
       "player": "Jake Sanderson",
       "team": null,
       "position": "D",
@@ -560,8 +600,8 @@
       "player": "Rasmus Ristolainen",
       "team": null,
       "position": "D",
-      "estimated_return": "Oct 8",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 10",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -608,9 +648,9 @@
       "player": "Macklin Celebrini",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 8",
-      "status": "Day-To-Day",
-      "comment": "Oct 8: Celebrini (lower body) is considered a game-time decision for Thursday's game against the Blues, Sheng Peng of San Jose Hockey Now reports."
+      "estimated_return": "Oct 10",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Adam Gaudette",
@@ -733,6 +773,14 @@
       "comment": "Sep 28: Gourde (hip) was placed on the injured non-roster list Monday."
     },
     {
+      "player": "Oliver Ekman-Larsson",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 10",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Dakota Joshua",
       "team": null,
       "position": "C",
@@ -821,19 +869,11 @@
       "comment": ""
     },
     {
-      "player": "Raphael Lavoie",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 8",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Victor Olofsson",
       "team": null,
       "position": "LW",
-      "estimated_return": "Oct 8",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 15",
+      "status": "Out",
       "comment": ""
     },
     {
