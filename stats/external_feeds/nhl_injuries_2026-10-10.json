@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-10-10T03:18:14.550927+09:00",
+  "fetched_at": "2026-10-10T14:34:41.048829+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -213,14 +213,6 @@
       "comment": "Sep 30: Edvinsson, who is a restricted free agent, has returned to Sweden to resume his training, per Andreas III Johnsson of Goteborgs-Posten on Wednesday."
     },
     {
-      "player": "Carter Bear",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Oct 10",
-      "status": "Injured Reserve",
-      "comment": "Sep 28: Bear (upper body) was placed on the injured non-roster list Monday."
-    },
-    {
       "player": "Colton Dach",
       "team": null,
       "position": "C",
@@ -301,14 +293,6 @@
       "comment": ""
     },
     {
-      "player": "Aaron Ekblad",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 10",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Aleksander Barkov",
       "team": null,
       "position": "C",
@@ -323,6 +307,22 @@
       "estimated_return": "Oct 17",
       "status": "Injured Reserve",
       "comment": "Sep 17: Gadjovich (upper body) is out indefinitely, the team announced Thursday."
+    },
+    {
+      "player": "Alex Turcotte",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 10",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Mats Zuccarello",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Oct 17",
+      "status": "Out",
+      "comment": "Oct 9: Zuccarello (undisclosed) was labeled week-to-week by head coach Peter Laviolette on Friday, Alexander Legget of Mayors Manor reports."
     },
     {
       "player": "Jakub Dvorak",
@@ -349,6 +349,14 @@
       "comment": "Sep 17: Fiala (lower leg fracture) is at least three weeks away from being ready to play, Zach Dooley of the Kings' official site reports Thursday."
     },
     {
+      "player": "Filip Gustavsson",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Nov 1",
+      "status": "Injured Reserve",
+      "comment": "Oct 9: Gustavsson (hip) was placed on long-term injured reserve Friday."
+    },
+    {
       "player": "Nick Foligno",
       "team": null,
       "position": "LW",
@@ -371,14 +379,6 @@
       "estimated_return": "Oct 15",
       "status": "Injured Reserve",
       "comment": "Sep 29: Faber underwent a procedure to repair his fractured skull and is without a timetable to return, per Michael Russo of The Athletic."
-    },
-    {
-      "player": "Filip Gustavsson",
-      "team": null,
-      "position": "G",
-      "estimated_return": "Nov 1",
-      "status": "Injured Reserve",
-      "comment": "Sep 28: Gustavsson (hip) was placed on injured reserve Monday, according to Dylan Loucks of The Hockey News."
     },
     {
       "player": "Sam Montembeault",
@@ -429,14 +429,6 @@
       "comment": "Sep 29: ir-nr"
     },
     {
-      "player": "William Trudeau",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 10",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Mavrik Bourque",
       "team": null,
       "position": "C",
@@ -451,6 +443,14 @@
       "estimated_return": "Oct 13",
       "status": "Injured Reserve",
       "comment": ""
+    },
+    {
+      "player": "Nick Bjugstad",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Jan 19",
+      "status": "Injured Reserve",
+      "comment": "Oct 9: Bjugstad (pectoral) was transferred to long-term injured reserve Friday, per PuckPedia."
     },
     {
       "player": "Jonas Siegenthaler",
@@ -485,14 +485,6 @@
       "comment": "Sep 28: Kovacevic (knee) will begin the 2026-27 regular season on the injured non-roster list, per Mike Morreale of NHL.com."
     },
     {
-      "player": "Nick Bjugstad",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Jan 19",
-      "status": "Injured Reserve",
-      "comment": "Sep 28: ir-nr"
-    },
-    {
       "player": "Bo Horvat",
       "team": null,
       "position": "C",
@@ -515,6 +507,22 @@
       "estimated_return": "Oct 10",
       "status": "Injured Reserve",
       "comment": "Sep 30: Barzal (knee) might resume skating this weekend or early next week, Andrew Gross of Newsday reports Wednesday."
+    },
+    {
+      "player": "Igor Shesterkin",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Oct 11",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Spencer Martin",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Oct 17",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Joe Veleno",
@@ -645,20 +653,28 @@
       "comment": "Sep 27: Graves (lower body) is out indefinitely and was placed on injured reserve Sunday."
     },
     {
-      "player": "Macklin Celebrini",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 10",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Adam Gaudette",
       "team": null,
       "position": "RW",
       "estimated_return": "Oct 10",
       "status": "Injured Reserve",
-      "comment": "Sep 28: Gaudette (upper body) will begin the 2026-27 regular season on the injured non-roster list, per Curtis Pashelka of The San Jose Mercury News."
+      "comment": "Oct 9: Gaudette (upper body) might be available for Saturday's game against Edmonton, per Curtis Pashelka of The San Jose Mercury News."
+    },
+    {
+      "player": "Kiefer Sherwood",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 10",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Macklin Celebrini",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 10",
+      "status": "Day-To-Day",
+      "comment": "Oct 9: Head coach Ryan Warsofsky said Friday that Celebrini (lower body) is a game-time decision for Saturday's matchup against Edmonton, Curtis Pashelka of The San Jose Mercury News reports."
     },
     {
       "player": "Alex Barre-Boulet",
@@ -773,6 +789,14 @@
       "comment": "Sep 28: Gourde (hip) was placed on the injured non-roster list Monday."
     },
     {
+      "player": "John Tavares",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 13",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Oliver Ekman-Larsson",
       "team": null,
       "position": "D",
@@ -819,6 +843,14 @@
       "estimated_return": "Oct 31",
       "status": "Injured Reserve",
       "comment": "Sep 29: ir-nr"
+    },
+    {
+      "player": "Michael Carcone",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 10",
+      "status": "Day-To-Day",
+      "comment": "Oct 9: Carcone is questionable for Saturday's game against Buffalo due to an undisclosed injury, per Brogan Houston of the Deseret News."
     },
     {
       "player": "Maveric Lamoureux",
