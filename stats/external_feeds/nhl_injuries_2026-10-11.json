@@ -1,14 +1,22 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-10-11T02:17:20.363026+09:00",
+  "fetched_at": "2026-10-11T14:30:32.269499+09:00",
   "starting_goalies": [],
   "injuries": [
+    {
+      "player": "Cutter Gauthier",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 13",
+      "status": "Day-To-Day",
+      "comment": "Oct 10: Gauthier (upper body) won't return to Saturday's game versus the Flames."
+    },
     {
       "player": "Drew Helleson",
       "team": null,
       "position": "D",
-      "estimated_return": "Oct 10",
+      "estimated_return": "Oct 13",
       "status": "Injured Reserve",
       "comment": "Oct 7: Helleson (lower body) hopes to return at the end of Anaheim's upcoming road trip, per Zach Cavanagh of The Sporting Tribune on Wednesday."
     },
@@ -69,6 +77,14 @@
       "comment": "Sep 28: ir-nr"
     },
     {
+      "player": "Samuel Honzek",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 13",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Jonathan Huberdeau",
       "team": null,
       "position": "LW",
@@ -117,20 +133,20 @@
       "comment": "Oct 8: O'Connor (lower body) will not play Thursday in Calgary following the sudden passing of his father, Myles."
     },
     {
-      "player": "Trent Miner",
-      "team": null,
-      "position": "G",
-      "estimated_return": "Oct 31",
-      "status": "Injured Reserve",
-      "comment": "Sep 29: ir-nr"
-    },
-    {
       "player": "Georgii Merkulov",
       "team": null,
       "position": "C",
       "estimated_return": "Oct 16",
       "status": "Injured Reserve",
       "comment": "Sep 28: Merkulov (undisclosed) was put on non-roster injured reserve Monday."
+    },
+    {
+      "player": "Radek Faksa",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 13",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Joel Kiviranta",
@@ -205,6 +221,14 @@
       "comment": "Sep 30: Edvinsson, who is a restricted free agent, has returned to Sweden to resume his training, per Andreas III Johnsson of Goteborgs-Posten on Wednesday."
     },
     {
+      "player": "Jake Walman",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 13",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Colton Dach",
       "team": null,
       "position": "C",
@@ -216,7 +240,7 @@
       "player": "Zach Hyman",
       "team": null,
       "position": "LW",
-      "estimated_return": "Oct 17",
+      "estimated_return": "Oct 13",
       "status": "Out",
       "comment": "Oct 1: Hyman (undisclosed) is expected to be out of action for two weeks, Oilers play-by-play announcer Jack Michaels reports Thursday."
     },
@@ -277,6 +301,14 @@
       "comment": "Sep 29: ir-nr"
     },
     {
+      "player": "Eetu Luostarinen",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 12",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Brad Marchand",
       "team": null,
       "position": "LW",
@@ -304,17 +336,17 @@
       "player": "Alex Turcotte",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 10",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 17",
+      "status": "Injured Reserve",
       "comment": ""
     },
     {
       "player": "Mats Zuccarello",
       "team": null,
       "position": "RW",
-      "estimated_return": "Oct 17",
-      "status": "Out",
-      "comment": "Oct 9: Zuccarello (undisclosed) was labeled week-to-week by head coach Peter Laviolette on Friday, Alexander Legget of Mayors Manor reports."
+      "estimated_return": "Oct 20",
+      "status": "Injured Reserve",
+      "comment": ""
     },
     {
       "player": "Jakub Dvorak",
@@ -341,6 +373,22 @@
       "comment": "Sep 17: Fiala (lower leg fracture) is at least three weeks away from being ready to play, Zach Dooley of the Kings' official site reports Thursday."
     },
     {
+      "player": "Marcus Foligno",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 12",
+      "status": "Out",
+      "comment": "Oct 10: Foligno (lower body) won't play against Florida on Saturday."
+    },
+    {
+      "player": "Zach Bogosian",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 12",
+      "status": "Out",
+      "comment": "Oct 10: Bogosian (lower body) will miss Saturday's game in Florida."
+    },
+    {
       "player": "Filip Gustavsson",
       "team": null,
       "position": "G",
@@ -357,14 +405,6 @@
       "comment": ""
     },
     {
-      "player": "Olli Maatta",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 10",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Brock Faber",
       "team": null,
       "position": "D",
@@ -373,27 +413,27 @@
       "comment": "Sep 29: Faber underwent a procedure to repair his fractured skull and is without a timetable to return, per Michael Russo of The Athletic."
     },
     {
-      "player": "Florian Xhekaj",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Oct 13",
-      "status": "Out",
-      "comment": ""
-    },
-    {
       "player": "Sam Montembeault",
       "team": null,
       "position": "G",
       "estimated_return": "Oct 20",
-      "status": "Out",
+      "status": "Injured Reserve",
       "comment": ""
     },
     {
       "player": "Oliver Kapanen",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 10",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 13",
+      "status": "Injured Reserve",
+      "comment": ""
+    },
+    {
+      "player": "Florian Xhekaj",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 13",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -424,8 +464,8 @@
       "player": "Mavrik Bourque",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 10",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 13",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -445,14 +485,6 @@
       "comment": "Oct 9: Bjugstad (pectoral) was transferred to long-term injured reserve Friday, per PuckPedia."
     },
     {
-      "player": "Jonas Siegenthaler",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 10",
-      "status": "Day-To-Day",
-      "comment": "Oct 8: Siegenthaler (undisclosed) is improving and hasn't been ruled out against Vancouver on Saturday, Kristy Flannery of The Hockey News reports."
-    },
-    {
       "player": "Connor Brown",
       "team": null,
       "position": "RW",
@@ -467,14 +499,6 @@
       "estimated_return": "Nov 21",
       "status": "Injured Reserve",
       "comment": "Oct 2: Casey will be out of action for 6-8 weeks after undergoing a knee procedure, Kristy Flannery of The Hockey News reports Friday."
-    },
-    {
-      "player": "Johnathan Kovacevic",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 24",
-      "status": "Injured Reserve",
-      "comment": "Sep 28: Kovacevic (knee) will begin the 2026-27 regular season on the injured non-roster list, per Mike Morreale of NHL.com."
     },
     {
       "player": "Alexander Romanov",
@@ -497,32 +521,24 @@
       "team": null,
       "position": "G",
       "estimated_return": "Sep 15",
-      "status": "Out",
-      "comment": ""
-    },
-    {
-      "player": "Spencer Martin",
-      "team": null,
-      "position": "G",
-      "estimated_return": "Oct 17",
-      "status": "Out",
+      "status": "Injured Reserve",
       "comment": ""
     },
     {
       "player": "Joe Veleno",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 13",
+      "estimated_return": "Jan 3",
       "status": "Injured Reserve",
-      "comment": ""
+      "comment": "Oct 10: Veleno (lower body) was placed on long-term injured reserve Saturday, Vince Z. Mercogliano of The Athletic reports."
     },
     {
       "player": "Joonas Korpisalo",
       "team": null,
       "position": "G",
-      "estimated_return": "Oct 19",
+      "estimated_return": "Nov 9",
       "status": "Injured Reserve",
-      "comment": ""
+      "comment": "Oct 10: Korpisalo (lower body) will miss at least four more weeks, per Elliotte Friedman of Sportsnet on Saturday."
     },
     {
       "player": "Aidan Thompson",
@@ -541,28 +557,28 @@
       "comment": ""
     },
     {
-      "player": "William Eklund",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Jan 2",
-      "status": "Injured Reserve",
-      "comment": "Oct 10: Eklund (ankle) was moved to injured reserve Saturday, according to Claire Hanna of TSN."
-    },
-    {
       "player": "Cameron Crotty",
       "team": null,
       "position": "D",
-      "estimated_return": "Oct 10",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 12",
+      "status": "Out",
       "comment": ""
     },
     {
       "player": "Jake Sanderson",
       "team": null,
       "position": "D",
-      "estimated_return": "Oct 10",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 12",
+      "status": "Out",
       "comment": ""
+    },
+    {
+      "player": "William Eklund",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Jan 2",
+      "status": "Injured Reserve",
+      "comment": "Oct 10: Eklund (ankle) was moved to injured reserve Saturday, according to Claire Hanna of TSN."
     },
     {
       "player": "Artem Zub",
@@ -613,6 +629,14 @@
       "comment": ""
     },
     {
+      "player": "Trevor van Riemsdyk",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 13",
+      "status": "Out",
+      "comment": "Oct 10: Van Riemsdyk (lower body) won't play Saturday versus the Stars."
+    },
+    {
       "player": "Andrei Kuzmenko",
       "team": null,
       "position": "LW",
@@ -635,30 +659,6 @@
       "estimated_return": "Oct 24",
       "status": "Injured Reserve",
       "comment": "Sep 27: Graves (lower body) is out indefinitely and was placed on injured reserve Sunday."
-    },
-    {
-      "player": "Adam Gaudette",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Oct 10",
-      "status": "Injured Reserve",
-      "comment": "Oct 9: Gaudette (upper body) might be available for Saturday's game against Edmonton, per Curtis Pashelka of The San Jose Mercury News."
-    },
-    {
-      "player": "Kiefer Sherwood",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Oct 10",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Macklin Celebrini",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 10",
-      "status": "Day-To-Day",
-      "comment": "Oct 9: Head coach Ryan Warsofsky said Friday that Celebrini (lower body) is a game-time decision for Saturday's matchup against Edmonton, Curtis Pashelka of The San Jose Mercury News reports."
     },
     {
       "player": "Alex Barre-Boulet",
@@ -693,20 +693,20 @@
       "comment": "Sep 28: Keyser (upper body) was placed on non-roster injured reserve by the Sharks on Monday, Curtis Pashelka of The San Jose Mercury News reports."
     },
     {
+      "player": "Jacob Melanson",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Dec 1",
+      "status": "Injured Reserve",
+      "comment": "Oct 10: Melanson's upper-body injury was diagnosed Saturday as an anterior mediastinum hematoma with vascular pseudo aneurysm. He will continue to be evaluated and is out indefinitely."
+    },
+    {
       "player": "Ryan Lindgren",
       "team": null,
       "position": "D",
       "estimated_return": "Nov 19",
       "status": "Injured Reserve",
       "comment": "Oct 8: Lindgren (upper body) was placed on injured reserve by the Kraken on Thursday and is expected to miss four to six weeks."
-    },
-    {
-      "player": "Jacob Melanson",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Oct 17",
-      "status": "Injured Reserve",
-      "comment": "Oct 3: Melanson (upper body) was placed on injured reserve Saturday."
     },
     {
       "player": "Jake O'Brien",
@@ -721,8 +721,8 @@
       "team": null,
       "position": "C",
       "estimated_return": "Dec 4",
-      "status": "Out",
-      "comment": "Oct 10: Dube (neck) will be out of action for at least eight weeks, the team announced Saturday."
+      "status": "Injured Reserve",
+      "comment": ""
     },
     {
       "player": "Alexey Toropchenko",
@@ -773,19 +773,19 @@
       "comment": "Sep 28: Gourde (hip) was placed on the injured non-roster list Monday."
     },
     {
+      "player": "Chris Tanev",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 13",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "John Tavares",
       "team": null,
       "position": "C",
       "estimated_return": "Oct 13",
       "status": "Out",
-      "comment": ""
-    },
-    {
-      "player": "Oliver Ekman-Larsson",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 10",
-      "status": "Day-To-Day",
       "comment": ""
     },
     {
@@ -832,9 +832,9 @@
       "player": "Michael Carcone",
       "team": null,
       "position": "LW",
-      "estimated_return": "Oct 10",
-      "status": "Day-To-Day",
-      "comment": "Oct 9: Carcone is questionable for Saturday's game against Buffalo due to an undisclosed injury, per Brogan Houston of the Deseret News."
+      "estimated_return": "Oct 24",
+      "status": "Out",
+      "comment": "Oct 10: Carcone is week-to-week due to his upper-body injury, the team announced Saturday."
     },
     {
       "player": "Maveric Lamoureux",
