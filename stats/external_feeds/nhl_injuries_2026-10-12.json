@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-10-12T02:39:46.766846+09:00",
+  "fetched_at": "2026-10-12T14:40:45.479772+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -101,6 +101,14 @@
       "comment": "Sep 28: Huberdeau (hip) was placed on injured reserve Monday, per Pat Steinberg of QR Calgary 770 AM."
     },
     {
+      "player": "Jordan Staal",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 13",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Alexander Nikishin",
       "team": null,
       "position": "D",
@@ -117,20 +125,20 @@
       "comment": "Sep 27: Jarvis (shoulder) was placed on the injured non-roster list Sunday."
     },
     {
+      "player": "Connor Bedard",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 7",
+      "status": "Injured Reserve",
+      "comment": "Oct 11: Bedard (shoulder) participated fully in Sunday's practice, per Charlie Roumeliotis of WGN Radio."
+    },
+    {
       "player": "Andrew Mangiapane",
       "team": null,
       "position": "LW",
       "estimated_return": "Oct 25",
       "status": "Injured Reserve",
       "comment": ""
-    },
-    {
-      "player": "Connor Bedard",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Nov 7",
-      "status": "Injured Reserve",
-      "comment": "Oct 5: Bedard (shoulder) was on the ice for Monday's practice session, Scott Powers of The Athletic reports."
     },
     {
       "player": "Logan O'Connor",
@@ -307,14 +315,6 @@
       "estimated_return": "Oct 17",
       "status": "Injured Reserve",
       "comment": "Sep 29: ir-nr"
-    },
-    {
-      "player": "Eetu Luostarinen",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 12",
-      "status": "Day-To-Day",
-      "comment": ""
     },
     {
       "player": "Brad Marchand",
@@ -530,7 +530,7 @@
       "position": "G",
       "estimated_return": "Sep 15",
       "status": "Injured Reserve",
-      "comment": "Oct 11: Shesterkin (lower body) was placed on long-term injured reserve by the Rangers on Sunday, per Mollie Walker of the New York Post."
+      "comment": "Oct 11: Shesterkin will require surgery and a lengthy rehab process to address his season-ending right knee injury, Vince Z. Mercogliano of The Athletic reports Sunday."
     },
     {
       "player": "Joe Veleno",
@@ -605,20 +605,20 @@
       "comment": "Sep 28: MacDermid (upper body) was moved to the injured non-roster list Monday."
     },
     {
-      "player": "Travis Konecny",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Oct 11",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Cam York",
       "team": null,
       "position": "D",
-      "estimated_return": "Oct 11",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 13",
+      "status": "Out",
       "comment": ""
+    },
+    {
+      "player": "Travis Konecny",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Oct 17",
+      "status": "Injured Reserve",
+      "comment": "Oct 11: Konecny (lower body) was placed on injured reserve Sunday, according to the NHL media site."
     },
     {
       "player": "Nikita Grebenkin",
@@ -781,17 +781,17 @@
       "comment": "Sep 28: Gourde (hip) was placed on the injured non-roster list Monday."
     },
     {
-      "player": "John Tavares",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 13",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Chris Tanev",
       "team": null,
       "position": "D",
+      "estimated_return": "Oct 19",
+      "status": "Injured Reserve",
+      "comment": ""
+    },
+    {
+      "player": "John Tavares",
+      "team": null,
+      "position": "C",
       "estimated_return": "Oct 13",
       "status": "Day-To-Day",
       "comment": ""
@@ -893,14 +893,6 @@
       "comment": ""
     },
     {
-      "player": "Victor Olofsson",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Oct 15",
-      "status": "Out",
-      "comment": ""
-    },
-    {
       "player": "Lukas Cormier",
       "team": null,
       "position": "D",
@@ -912,17 +904,17 @@
       "player": "Pierre-Luc Dubois",
       "team": null,
       "position": "LW",
-      "estimated_return": "Oct 11",
-      "status": "Day-To-Day",
-      "comment": "Oct 10: Dubois (illness) will not participate in practice on Saturday, per Sammi Silber of The Hockey News."
+      "estimated_return": "Oct 13",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Matt Roy",
       "team": null,
       "position": "D",
-      "estimated_return": "Oct 11",
-      "status": "Day-To-Day",
-      "comment": ""
+      "estimated_return": "Oct 13",
+      "status": "Out",
+      "comment": "Oct 11: Roy (lower body) isn't expected to play against Seattle on Sunday, according to Tarik El-Bashir of Monumental Sports Network."
     },
     {
       "player": "Patrick Thomas",

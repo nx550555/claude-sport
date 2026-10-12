@@ -1,7 +1,7 @@
 {
   "source_batting": "https://baseballsavant.mlb.com/leaderboard/expected_statistics?type=batter-team&year=2026&position=&team=&filter=&min=q&csv=true",
   "source_pitching": "https://baseballsavant.mlb.com/leaderboard/expected_statistics?type=pitcher-team&year=2026&position=&team=&filter=&min=q&csv=true",
-  "fetched_at": "2026-10-12T02:40:14.547948+09:00",
+  "fetched_at": "2026-10-12T14:41:14.749718+09:00",
   "year": "2026",
   "teams": [
     {
