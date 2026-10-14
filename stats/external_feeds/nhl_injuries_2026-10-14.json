@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-10-14T04:12:34.096239+09:00",
+  "fetched_at": "2026-10-14T13:38:11.470690+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -42,7 +42,7 @@
       "position": "D",
       "estimated_return": "Oct 21",
       "status": "Injured Reserve",
-      "comment": ""
+      "comment": "Oct 13: Grzelcyk (lower body) suffered a \"flare-up\" and could be out for at least \"a few days,\" head coach Lindy Ruff told Rachel Lenzi of The Buffalo News on Tuesday."
     },
     {
       "player": "Rasmus Dahlin",
@@ -109,6 +109,14 @@
       "comment": "Sep 28: Huberdeau (hip) was placed on injured reserve Monday, per Pat Steinberg of QR Calgary 770 AM."
     },
     {
+      "player": "Taylor Hall",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 20",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Jordan Staal",
       "team": null,
       "position": "C",
@@ -141,6 +149,14 @@
       "comment": ""
     },
     {
+      "player": "Zachary L'Heureux",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 14",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Cale Makar",
       "team": null,
       "position": "D",
@@ -165,12 +181,20 @@
       "comment": "Sep 28: Merkulov (undisclosed) was put on non-roster injured reserve Monday."
     },
     {
-      "player": "Conor Garland",
+      "player": "Roope Hintz",
       "team": null,
-      "position": "RW",
-      "estimated_return": "Oct 13",
+      "position": "C",
+      "estimated_return": "Oct 14",
       "status": "Day-To-Day",
-      "comment": ""
+      "comment": "Oct 14: Hintz (undisclosed) was unavailable to speak to the media after Tuesday's game versus the Avalanche, Lia Assimakopoulos of The Dallas Morning News reports."
+    },
+    {
+      "player": "Wyatt Johnston",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 17",
+      "status": "Out",
+      "comment": "Oct 13: Johnston (illness) won't travel to Colorado for Wednesday's game versus the Avalanche, Lia Assimakopoulos of The Dallas Morning News reports."
     },
     {
       "player": "Joel Kiviranta",
@@ -317,6 +341,22 @@
       "comment": "Sep 29: ir-nr"
     },
     {
+      "player": "Jacob Markstrom",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Oct 15",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Radko Gudas",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 15",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Brad Marchand",
       "team": null,
       "position": "LW",
@@ -381,6 +421,14 @@
       "comment": "Sep 17: Fiala (lower leg fracture) is at least three weeks away from being ready to play, Zach Dooley of the Kings' official site reports Thursday."
     },
     {
+      "player": "Jared Spurgeon",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 15",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Nico Sturm",
       "team": null,
       "position": "C",
@@ -421,19 +469,19 @@
       "comment": "Sep 29: Faber underwent a procedure to repair his fractured skull and is without a timetable to return, per Michael Russo of The Athletic."
     },
     {
-      "player": "Mike Matheson",
+      "player": "Florian Xhekaj",
       "team": null,
-      "position": "D",
+      "position": "LW",
       "estimated_return": "Oct 14",
       "status": "Out",
       "comment": ""
     },
     {
-      "player": "Florian Xhekaj",
+      "player": "Mike Matheson",
       "team": null,
-      "position": "LW",
-      "estimated_return": "Oct 13",
-      "status": "Day-To-Day",
+      "position": "D",
+      "estimated_return": "Oct 14",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -475,6 +523,14 @@
       "estimated_return": "Oct 31",
       "status": "Injured Reserve",
       "comment": "Sep 29: ir-nr"
+    },
+    {
+      "player": "Luke Evangelista",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Oct 15",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Connor Brown",
@@ -557,12 +613,20 @@
       "comment": ""
     },
     {
+      "player": "Ridly Greig",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 15",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Nikolas Matinpalo",
       "team": null,
       "position": "D",
-      "estimated_return": "Oct 13",
-      "status": "Day-To-Day",
-      "comment": ""
+      "estimated_return": "Oct 24",
+      "status": "Out",
+      "comment": "Oct 13: Matinpalo (upper body) won't play against St. Louis on Tuesday, and there is no timeline for his return, Bruce Garrioch of Postmedia reports."
     },
     {
       "player": "Artem Zub",
@@ -608,8 +672,8 @@
       "player": "Cam York",
       "team": null,
       "position": "D",
-      "estimated_return": "Oct 13",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 15",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -640,7 +704,7 @@
       "player": "Trevor van Riemsdyk",
       "team": null,
       "position": "D",
-      "estimated_return": "Oct 19",
+      "estimated_return": "Oct 17",
       "status": "Injured Reserve",
       "comment": ""
     },
@@ -768,9 +832,9 @@
       "player": "Dennis Hildeby",
       "team": null,
       "position": "G",
-      "estimated_return": "Oct 13",
-      "status": "Day-To-Day",
-      "comment": "Oct 13: Hildeby is questionable to serve as the backup against the Rangers on Tuesday for an undisclosed reason, Eduardo A. Encina of the Tampa Bay Times reports."
+      "estimated_return": "Oct 15",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Yanni Gourde",
