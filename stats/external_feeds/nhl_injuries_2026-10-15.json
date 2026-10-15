@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-10-15T02:01:38.772904+09:00",
+  "fetched_at": "2026-10-15T13:20:25.354340+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -149,28 +149,28 @@
       "comment": ""
     },
     {
-      "player": "Zachary L'Heureux",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Oct 14",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Cale Makar",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 14",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Logan O'Connor",
       "team": null,
       "position": "RW",
-      "estimated_return": "Oct 16",
+      "estimated_return": "Oct 25",
       "status": "Injured Reserve",
-      "comment": "Oct 8: O'Connor (lower body) will not play Thursday in Calgary following the sudden passing of his father, Myles."
+      "comment": "Oct 14: O'Connor (lower body/personal) was transferred to long-term injured reserve Wednesday, per PuckPedia."
+    },
+    {
+      "player": "Zachary L'Heureux",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 16",
+      "status": "Out",
+      "comment": "Oct 14: L'Heureux (upper body) won't play Wednesday versus the Stars, Evan Rawal of the Denver Gazette reports."
+    },
+    {
+      "player": "Nicolas Roy",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 16",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Georgii Merkulov",
@@ -181,20 +181,12 @@
       "comment": "Sep 28: Merkulov (undisclosed) was put on non-roster injured reserve Monday."
     },
     {
-      "player": "Joel Kiviranta",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Oct 14",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Roope Hintz",
+      "player": "Oskar Back",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 14",
+      "estimated_return": "Oct 17",
       "status": "Day-To-Day",
-      "comment": "Oct 14: Hintz (undisclosed) was unavailable to speak to the media after Tuesday's game versus the Avalanche, Lia Assimakopoulos of The Dallas Morning News reports."
+      "comment": ""
     },
     {
       "player": "Wyatt Johnston",
@@ -202,7 +194,7 @@
       "position": "C",
       "estimated_return": "Oct 17",
       "status": "Out",
-      "comment": "Oct 13: Johnston (illness) won't travel to Colorado for Wednesday's game versus the Avalanche, Lia Assimakopoulos of The Dallas Morning News reports."
+      "comment": "Oct 14: Johnston (illness) is hoping to be available for Saturday's matchup with Chicago, Lia Assimakopoulos of The Dallas Morning News reports."
     },
     {
       "player": "Matt Duchene",
@@ -469,19 +461,19 @@
       "comment": "Sep 29: Faber underwent a procedure to repair his fractured skull and is without a timetable to return, per Michael Russo of The Athletic."
     },
     {
-      "player": "Mike Matheson",
+      "player": "Florian Xhekaj",
       "team": null,
-      "position": "D",
+      "position": "LW",
       "estimated_return": "Oct 17",
       "status": "Out",
       "comment": ""
     },
     {
-      "player": "Florian Xhekaj",
+      "player": "Mike Matheson",
       "team": null,
-      "position": "LW",
-      "estimated_return": "Oct 14",
-      "status": "Day-To-Day",
+      "position": "D",
+      "estimated_return": "Oct 17",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -680,9 +672,17 @@
       "player": "Cam York",
       "team": null,
       "position": "D",
-      "estimated_return": "Oct 15",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 17",
+      "status": "Out",
       "comment": ""
+    },
+    {
+      "player": "Rasmus Ristolainen",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 17",
+      "status": "Injured Reserve",
+      "comment": "Oct 14: Ristolainen (upper body) won't travel with the Flyers ahead of Thursday's game against the Red Wings but is closing in on a return, Charlie O'Connor of PHLY Sports reports."
     },
     {
       "player": "Travis Konecny",
@@ -699,14 +699,6 @@
       "estimated_return": "Feb 13",
       "status": "Injured Reserve",
       "comment": "Oct 10: Grebenkin (back) underwent successful surgery and is expected to miss at least four months."
-    },
-    {
-      "player": "Rasmus Ristolainen",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 15",
-      "status": "Injured Reserve",
-      "comment": ""
     },
     {
       "player": "Trevor van Riemsdyk",
@@ -739,14 +731,6 @@
       "estimated_return": "Oct 15",
       "status": "Day-To-Day",
       "comment": "Oct 14: Nurse was unable to finish Tuesday's game versus the Bruins after getting injured in a fight, and there was no update on his status after the contest, Max Miller of NHL.com reports."
-    },
-    {
-      "player": "Alex Barre-Boulet",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 24",
-      "status": "Injured Reserve",
-      "comment": "Sep 28: Barre-Boulet (undisclosed) will begin the 2026-27 regular season on injured reserve, per Curtis Pashelka of The San Jose Mercury News."
     },
     {
       "player": "Quentin Musty",
@@ -984,8 +968,8 @@
       "player": "Pierre-Luc Dubois",
       "team": null,
       "position": "LW",
-      "estimated_return": "Oct 14",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 17",
+      "status": "Out",
       "comment": ""
     },
     {
