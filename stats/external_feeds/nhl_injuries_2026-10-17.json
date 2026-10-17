@@ -1,24 +1,24 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-10-17T01:31:31.737807+09:00",
+  "fetched_at": "2026-10-17T13:06:17.306466+09:00",
   "starting_goalies": [],
   "injuries": [
+    {
+      "player": "Ian Moore",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Nov 8",
+      "status": "Injured Reserve",
+      "comment": "Oct 16: Head coach Joel Quenneville said Friday that Moore (lower body) is still \"a ways from skating,\" Patrick Present of The Hockey News reports."
+    },
     {
       "player": "Mikael Granlund",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 16",
-      "status": "Day-To-Day",
-      "comment": "Oct 15: Granlund (upper body) did not practice Thursday and is considered day-to-day."
-    },
-    {
-      "player": "Cutter Gauthier",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Oct 16",
-      "status": "Day-To-Day",
-      "comment": ""
+      "estimated_return": "Oct 19",
+      "status": "Out",
+      "comment": "Oct 16: Granlund (upper body) will be with the Ducks for their upcoming four-game road trip, Patrick Present of The Hockey News reports Friday."
     },
     {
       "player": "Ryan Poehling",
@@ -37,19 +37,11 @@
       "comment": "Sep 30: Terry (hip) was moved from the non-roster list to long-term injured reserve Wednesday, Zach Cavanagh of The Sporting Tribune reports."
     },
     {
-      "player": "Ian Moore",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 16",
-      "status": "Injured Reserve",
-      "comment": ""
-    },
-    {
       "player": "Rasmus Dahlin",
       "team": null,
       "position": "D",
-      "estimated_return": "Oct 17",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 21",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -181,19 +173,19 @@
       "comment": ""
     },
     {
-      "player": "Nicolas Roy",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 16",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Zachary L'Heureux",
       "team": null,
       "position": "LW",
-      "estimated_return": "Oct 16",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 19",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Nicolas Roy",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 19",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -208,7 +200,7 @@
       "player": "Georgii Merkulov",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 16",
+      "estimated_return": "Oct 28",
       "status": "Injured Reserve",
       "comment": "Sep 28: Merkulov (undisclosed) was put on non-roster injured reserve Monday."
     },
@@ -216,9 +208,17 @@
       "player": "Oskar Back",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 22",
+      "estimated_return": "Nov 14",
       "status": "Injured Reserve",
-      "comment": "Oct 16: Back (upper body) was placed on injured reserve Friday, retroactive to Oct. 14."
+      "comment": "Oct 16: Head coach Glen Gulutzan said Friday that Back broke his finger and will miss 4-6 weeks, Robert Tiffin of NHL.com reports."
+    },
+    {
+      "player": "David Perron",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 20",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Wyatt Johnston",
@@ -288,9 +288,17 @@
       "player": "Jason Dickinson",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 17",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 20",
+      "status": "Out",
       "comment": ""
+    },
+    {
+      "player": "Ryan Nugent-Hopkins",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 22",
+      "status": "Injured Reserve",
+      "comment": "Oct 16: Nugent-Hopkins (lower body) might be available for Thursday's game against Carolina, Jason Gregor of Sports 1440 Edmonton."
     },
     {
       "player": "Jake Walman",
@@ -298,31 +306,15 @@
       "position": "D",
       "estimated_return": "Oct 17",
       "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Zach Hyman",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Oct 17",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Ryan Nugent-Hopkins",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 17",
-      "status": "Injured Reserve",
-      "comment": "Oct 15: Nugent-Hopkins (lower body) will be sidelined against Utah on Thursday, Mark Spector of Sportsnet reports."
+      "comment": "Oct 16: Walman (upper body) will likely play in Saturday's game against the Mammoth, Jason Gregor of Sports 1440 Edmonton reports."
     },
     {
       "player": "Colton Dach",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 24",
+      "estimated_return": "Oct 17",
       "status": "Injured Reserve",
-      "comment": ""
+      "comment": "Oct 16: Dach (undisclosed) will likely be in the lineup against the Mammoth on Saturday, Jason Gregor of Sports 1440 Edmonton reports."
     },
     {
       "player": "Alec Regula",
@@ -584,15 +576,15 @@
       "player": "Luke Evangelista",
       "team": null,
       "position": "RW",
-      "estimated_return": "Oct 17",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 20",
+      "status": "Out",
       "comment": ""
     },
     {
       "player": "Connor Brown",
       "team": null,
       "position": "RW",
-      "estimated_return": "Oct 17",
+      "estimated_return": "Oct 20",
       "status": "Injured Reserve",
       "comment": ""
     },
@@ -731,6 +723,14 @@
       "estimated_return": "Feb 13",
       "status": "Injured Reserve",
       "comment": "Oct 10: Grebenkin (back) underwent successful surgery and is expected to miss at least four months."
+    },
+    {
+      "player": "Egor Chinakhov",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Oct 17",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Trevor van Riemsdyk",
@@ -1048,8 +1048,8 @@
       "player": "Vladislav Namestnikov",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 17",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 25",
+      "status": "Out",
       "comment": ""
     },
     {
