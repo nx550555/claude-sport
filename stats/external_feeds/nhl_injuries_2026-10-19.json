@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-10-19T00:46:10.704083+09:00",
+  "fetched_at": "2026-10-19T13:22:59.840404+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -107,6 +107,14 @@
       "estimated_return": "Nov 2",
       "status": "Injured Reserve",
       "comment": "Sep 28: Huberdeau (hip) was placed on injured reserve Monday, per Pat Steinberg of QR Calgary 770 AM."
+    },
+    {
+      "player": "Mark Jankowski",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 27",
+      "status": "Out",
+      "comment": "Oct 18: Head coach Rod Brind'Amour said Sunday that Jankowski has ben sent back to Raleigh to have his lower-body injury assessed, Walt Ruff of the Hurricanes' official site reports."
     },
     {
       "player": "Taylor Hall",
@@ -317,14 +325,6 @@
       "comment": "Sep 29: Janmark (undisclosed) does not have a timetable for his return from injury."
     },
     {
-      "player": "James Stefan",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Oct 31",
-      "status": "Injured Reserve",
-      "comment": "Sep 29: ir-nr"
-    },
-    {
       "player": "Atro Leppanen",
       "team": null,
       "position": "D",
@@ -408,17 +408,9 @@
       "player": "Olli Maatta",
       "team": null,
       "position": "D",
-      "estimated_return": "Oct 20",
-      "status": "Out",
-      "comment": ""
-    },
-    {
-      "player": "Jared Spurgeon",
-      "team": null,
-      "position": "D",
       "estimated_return": "Oct 22",
       "status": "Out",
-      "comment": ""
+      "comment": "Oct 18: Maatta (upper body) will be on the Wild's upcoming five-game road trip, according to Michael Russo of The Athletic on Sunday."
     },
     {
       "player": "Nico Sturm",
@@ -426,23 +418,31 @@
       "position": "C",
       "estimated_return": "Oct 20",
       "status": "Injured Reserve",
-      "comment": "Oct 13: Sturm (upper body) was placed on injured reserve Tuesday."
+      "comment": "Oct 18: Sturm (concussion) will be with the team on its upcoming five-game road trip, per Michael Russo of The Athletic on Sunday."
     },
     {
-      "player": "Marcus Foligno",
+      "player": "Jared Spurgeon",
       "team": null,
-      "position": "LW",
-      "estimated_return": "Oct 20",
+      "position": "D",
+      "estimated_return": "Oct 22",
       "status": "Injured Reserve",
-      "comment": ""
+      "comment": "Oct 18: Spurgeon (upper body) will travel with the Wild on their upcoming five-game road trip, Michael Russo of The Athletic reports."
     },
     {
       "player": "Filip Gustavsson",
       "team": null,
       "position": "G",
-      "estimated_return": "Nov 1",
+      "estimated_return": "Nov 19",
       "status": "Injured Reserve",
-      "comment": "Oct 9: Gustavsson (hip) was placed on long-term injured reserve Friday."
+      "comment": "Oct 18: Head coach John Hynes said Sunday that Gustavsson (hip) is slated to miss at least another month, Dylan Loucks of The Hockey News reports."
+    },
+    {
+      "player": "Marcus Foligno",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 24",
+      "status": "Injured Reserve",
+      "comment": ""
     },
     {
       "player": "Nick Foligno",
@@ -653,6 +653,30 @@
       "comment": "Sep 28: MacDermid (upper body) was moved to the injured non-roster list Monday."
     },
     {
+      "player": "Cam York",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 24",
+      "status": "Injured Reserve",
+      "comment": ""
+    },
+    {
+      "player": "Tyson Foerster",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Oct 19",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Sean Couturier",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 19",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Owen Tippett",
       "team": null,
       "position": "RW",
@@ -661,18 +685,10 @@
       "comment": ""
     },
     {
-      "player": "Cam York",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 19",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Rasmus Ristolainen",
       "team": null,
       "position": "D",
-      "estimated_return": "Oct 19",
+      "estimated_return": "Oct 24",
       "status": "Injured Reserve",
       "comment": "Oct 14: Ristolainen (upper body) won't travel with the Flyers ahead of Thursday's game against the Red Wings but is closing in on a return, Charlie O'Connor of PHLY Sports reports."
     },
@@ -784,8 +800,8 @@
       "player": "Ross Johnston",
       "team": null,
       "position": "LW",
-      "estimated_return": "Oct 20",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 24",
+      "status": "Injured Reserve",
       "comment": ""
     },
     {
@@ -1027,14 +1043,6 @@
       "estimated_return": "Nov 1",
       "status": "Out",
       "comment": ""
-    },
-    {
-      "player": "Elias Salomonsson",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 22",
-      "status": "Injured Reserve",
-      "comment": "Oct 15: Salomonsson (shoulder) won't play in Thursday's game against the Blackhawks, Mike McIntyre of the Winnipeg Free Press reports."
     },
     {
       "player": "Connor Hellebuyck",
