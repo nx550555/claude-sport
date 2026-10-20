@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-10-20T03:40:50.075660+09:00",
+  "fetched_at": "2026-10-20T13:33:27.472293+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -34,7 +34,7 @@
       "position": "C",
       "estimated_return": "Oct 20",
       "status": "Day-To-Day",
-      "comment": ""
+      "comment": "Oct 19: Zacha (upper body) is considered a game-time decision for Tuesday's matchup against Dallas, Adam Pellerin of NESN reports."
     },
     {
       "player": "Jason Zucker",
@@ -93,11 +93,19 @@
       "comment": "Sep 28: ir-nr"
     },
     {
+      "player": "Mikael Backlund",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 22",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Samuel Honzek",
       "team": null,
       "position": "LW",
-      "estimated_return": "Oct 22",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 28",
+      "status": "Injured Reserve",
       "comment": ""
     },
     {
@@ -128,7 +136,7 @@
       "player": "Seth Jarvis",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 20",
+      "estimated_return": "Oct 24",
       "status": "Injured Reserve",
       "comment": "Oct 16: Jarvis (shoulder) said Friday that he plans to travel with the Hurricanes during their upcoming five-game road trip, Ryan Henkel of The Hockey News reports."
     },
@@ -533,20 +541,20 @@
       "comment": "Oct 2: Casey will be out of action for 6-8 weeks after undergoing a knee procedure, Kristy Flannery of The Hockey News reports Friday."
     },
     {
-      "player": "Matias Maccelli",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Oct 27",
-      "status": "Out",
-      "comment": ""
-    },
-    {
       "player": "Calum Ritchie",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 27",
+      "estimated_return": "Dec 1",
       "status": "Out",
-      "comment": ""
+      "comment": "Oct 19: Ritchie (lower body) will be out of action for 4-6 weeks, the team announced Monday."
+    },
+    {
+      "player": "Matias Maccelli",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Nov 17",
+      "status": "Out",
+      "comment": "Oct 19: Maccelli (lower body) will miss the next 2-4 weeks, the team announced Monday."
     },
     {
       "player": "Alexander Romanov",
@@ -629,6 +637,14 @@
       "comment": "Sep 28: MacDermid (upper body) was moved to the injured non-roster list Monday."
     },
     {
+      "player": "Tyson Foerster",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Oct 21",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Owen Tippett",
       "team": null,
       "position": "RW",
@@ -642,22 +658,6 @@
       "position": "D",
       "estimated_return": "Oct 24",
       "status": "Injured Reserve",
-      "comment": ""
-    },
-    {
-      "player": "Tyson Foerster",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Oct 19",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Sean Couturier",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 19",
-      "status": "Day-To-Day",
       "comment": ""
     },
     {
@@ -685,20 +685,20 @@
       "comment": "Oct 10: Grebenkin (back) underwent successful surgery and is expected to miss at least four months."
     },
     {
-      "player": "Egor Chinakhov",
+      "player": "Bryan Rust",
       "team": null,
       "position": "RW",
-      "estimated_return": "Oct 19",
-      "status": "Day-To-Day",
-      "comment": "Oct 19: Chinakhov (lower body) is considered a game-time decision for Monday's matchup against Utah, Josh Getzoff of SportsNet Pittsburgh reports."
+      "estimated_return": "Oct 22",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Samuel Girard",
       "team": null,
       "position": "D",
-      "estimated_return": "Oct 19",
-      "status": "Day-To-Day",
-      "comment": "Oct 19: Girard (undisclosed) will be a game-time decision for Monday's matchup with the Mammoth, Josh Getzoff of SportsNet Pittsburgh reports."
+      "estimated_return": "Oct 22",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Trevor van Riemsdyk",
@@ -723,6 +723,14 @@
       "estimated_return": "Oct 24",
       "status": "Injured Reserve",
       "comment": "Sep 27: Graves (lower body) is out indefinitely and was placed on injured reserve Sunday."
+    },
+    {
+      "player": "Alexander Wennberg",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 20",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Quentin Musty",
@@ -829,14 +837,6 @@
       "comment": "Sep 28: Gourde (hip) was placed on the injured non-roster list Monday."
     },
     {
-      "player": "William Nylander",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Oct 19",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "John Tavares",
       "team": null,
       "position": "C",
@@ -899,6 +899,14 @@
       "estimated_return": "Oct 31",
       "status": "Injured Reserve",
       "comment": "Sep 29: ir-nr"
+    },
+    {
+      "player": "John Marino",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 22",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Michael Carcone",
