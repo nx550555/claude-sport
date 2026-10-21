@@ -1,9 +1,17 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-10-21T01:47:25.438089+09:00",
+  "fetched_at": "2026-10-21T13:25:56.979903+09:00",
   "starting_goalies": [],
   "injuries": [
+    {
+      "player": "Judd Caulfield",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Oct 22",
+      "status": "Out",
+      "comment": ""
+    },
     {
       "player": "Ian Moore",
       "team": null,
@@ -27,14 +35,6 @@
       "estimated_return": "Nov 21",
       "status": "Injured Reserve",
       "comment": "Sep 30: Terry (hip) was moved from the non-roster list to long-term injured reserve Wednesday, Zach Cavanagh of The Sporting Tribune reports."
-    },
-    {
-      "player": "Pavel Zacha",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 20",
-      "status": "Day-To-Day",
-      "comment": "Oct 19: Zacha (upper body) is considered a game-time decision for Tuesday's matchup against Dallas, Adam Pellerin of NESN reports."
     },
     {
       "player": "Sam Carrick",
@@ -72,7 +72,7 @@
       "player": "Alex Lyon",
       "team": null,
       "position": "G",
-      "estimated_return": "Oct 24",
+      "estimated_return": "Oct 31",
       "status": "Injured Reserve",
       "comment": "Oct 15: Lyon (upper body) had a setback in his recovery and is without a timeline to return, the team announced Thursday."
     },
@@ -106,7 +106,7 @@
       "position": "C",
       "estimated_return": "Oct 22",
       "status": "Day-To-Day",
-      "comment": ""
+      "comment": "Oct 20: Backlund (upper body) is day-to-day, according to Eric Francis of Sportsnet on Tuesday."
     },
     {
       "player": "Samuel Honzek",
@@ -253,6 +253,14 @@
       "comment": "Sep 29: ir-nr"
     },
     {
+      "player": "J.T. Compher",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 22",
+      "status": "Injured Reserve",
+      "comment": "Oct 20: Compher (undisclosed) joined the Wings for their four-game road trip but won't play versus Seattle on Tuesday, Max Bultman of The Athletic reports."
+    },
+    {
       "player": "Simon Edvinsson",
       "team": null,
       "position": "D",
@@ -261,18 +269,10 @@
       "comment": "Oct 14: Edvinsson (contract dispute) is on the Red Wings' injured, non-roster list, per the NHL media site Wednesday."
     },
     {
-      "player": "J.T. Compher",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Oct 22",
-      "status": "Injured Reserve",
-      "comment": "Oct 13: Compher (undisclosed) will not be available versus the Devils on Tuesday, Ansar Khan of MLive.com reports."
-    },
-    {
       "player": "Mason Appleton",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 26",
+      "estimated_return": "Oct 29",
       "status": "Injured Reserve",
       "comment": ""
     },
@@ -280,7 +280,7 @@
       "player": "Marco Kasper",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 24",
+      "estimated_return": "Oct 29",
       "status": "Injured Reserve",
       "comment": "Oct 6: Kasper (upper body) has been given a week-to-week timetable for return."
     },
@@ -345,8 +345,8 @@
       "team": null,
       "position": "G",
       "estimated_return": "Nov 4",
-      "status": "Out",
-      "comment": "Oct 20: Markstrom (undisclosed) will miss 10-14 days, Jameson Olive of the Panthers' official site reports Tuesday."
+      "status": "Injured Reserve",
+      "comment": ""
     },
     {
       "player": "Brad Marchand",
@@ -371,6 +371,14 @@
       "estimated_return": "Nov 28",
       "status": "Injured Reserve",
       "comment": "Sep 17: Gadjovich (upper body) is out indefinitely, the team announced Thursday."
+    },
+    {
+      "player": "Quinton Byfield",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Oct 22",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Alex Turcotte",
@@ -400,7 +408,7 @@
       "player": "Kevin Fiala",
       "team": null,
       "position": "LW",
-      "estimated_return": "Oct 24",
+      "estimated_return": "Oct 31",
       "status": "Injured Reserve",
       "comment": "Sep 17: Fiala (lower leg fracture) is at least three weeks away from being ready to play, Zach Dooley of the Kings' official site reports Thursday."
     },
@@ -411,14 +419,6 @@
       "estimated_return": "Oct 27",
       "status": "Out",
       "comment": "Oct 18: Maatta (upper body) will be on the Wild's upcoming five-game road trip, according to Michael Russo of The Athletic on Sunday."
-    },
-    {
-      "player": "Nico Sturm",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 27",
-      "status": "Injured Reserve",
-      "comment": "Oct 18: Sturm (concussion) will be with the team on its upcoming five-game road trip, per Michael Russo of The Athletic on Sunday."
     },
     {
       "player": "Jared Spurgeon",
@@ -464,9 +464,9 @@
       "player": "Mike Matheson",
       "team": null,
       "position": "D",
-      "estimated_return": "Oct 20",
-      "status": "Day-To-Day",
-      "comment": ""
+      "estimated_return": "Oct 23",
+      "status": "Out",
+      "comment": "Oct 20: Matheson (lower body) isn't expected to play against San Jose on Tuesday, per Patrick Guillet of DansLesCoulisses.com."
     },
     {
       "player": "Florian Xhekaj",
@@ -677,6 +677,14 @@
       "comment": "Oct 10: Grebenkin (back) underwent successful surgery and is expected to miss at least four months."
     },
     {
+      "player": "Ben Kindel",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 29",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Bryan Rust",
       "team": null,
       "position": "RW",
@@ -720,8 +728,8 @@
       "player": "Alexander Wennberg",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 20",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 22",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -739,14 +747,6 @@
       "estimated_return": "Dec 1",
       "status": "Injured Reserve",
       "comment": "Sep 28: Keyser (upper body) was placed on non-roster injured reserve by the Sharks on Monday, Curtis Pashelka of The San Jose Mercury News reports."
-    },
-    {
-      "player": "Brandon Montour",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 20",
-      "status": "Day-To-Day",
-      "comment": ""
     },
     {
       "player": "Jacob Melanson",
@@ -829,6 +829,14 @@
       "comment": "Sep 28: Gourde (hip) was placed on the injured non-roster list Monday."
     },
     {
+      "player": "Jake McCabe",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 22",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "John Tavares",
       "team": null,
       "position": "C",
@@ -893,20 +901,20 @@
       "comment": "Sep 29: ir-nr"
     },
     {
+      "player": "Michael Carcone",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Nov 1",
+      "status": "Injured Reserve",
+      "comment": "Oct 20: Carcone (upper body) was placed on injured reserve by the Mammoth on Tuesday."
+    },
+    {
       "player": "John Marino",
       "team": null,
       "position": "D",
       "estimated_return": "Oct 22",
       "status": "Day-To-Day",
       "comment": ""
-    },
-    {
-      "player": "Michael Carcone",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Nov 1",
-      "status": "Out",
-      "comment": "Oct 10: Carcone is week-to-week due to his upper-body injury, the team announced Saturday."
     },
     {
       "player": "Maveric Lamoureux",
@@ -920,8 +928,8 @@
       "player": "Marco Rossi",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 20",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 22",
+      "status": "Out",
       "comment": ""
     },
     {
