@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-10-22T02:03:55.337302+09:00",
+  "fetched_at": "2026-10-22T13:25:03.490388+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -37,20 +37,20 @@
       "comment": "Sep 30: Terry (hip) was moved from the non-roster list to long-term injured reserve Wednesday, Zach Cavanagh of The Sporting Tribune reports."
     },
     {
+      "player": "Sam Carrick",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 24",
+      "status": "Injured Reserve",
+      "comment": ""
+    },
+    {
       "player": "Justin Danforth",
       "team": null,
       "position": "RW",
       "estimated_return": "Oct 24",
       "status": "Out",
       "comment": "Oct 21: Danforth (upper body) isn't expected to play Wednesday versus Philadelphia, per Joe Yerdon of Bleacher Report."
-    },
-    {
-      "player": "Sam Carrick",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 24",
-      "status": "Out",
-      "comment": "Oct 21: Carrick (upper body) will not be in the lineup versus the Flyers on Wednesday, Joe Yerdon of Bleacher Report reports."
     },
     {
       "player": "Alex Lyon",
@@ -123,14 +123,6 @@
       "estimated_return": "Oct 27",
       "status": "Out",
       "comment": "Oct 18: Head coach Rod Brind'Amour said Sunday that Jankowski has ben sent back to Raleigh to have his lower-body injury assessed, Walt Ruff of the Hurricanes' official site reports."
-    },
-    {
-      "player": "Seth Jarvis",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 24",
-      "status": "Injured Reserve",
-      "comment": "Oct 16: Jarvis (shoulder) said Friday that he plans to travel with the Hurricanes during their upcoming five-game road trip, Ryan Henkel of The Hockey News reports."
     },
     {
       "player": "Jordan Staal",
@@ -242,7 +234,7 @@
       "position": "LW",
       "estimated_return": "Oct 22",
       "status": "Injured Reserve",
-      "comment": "Oct 20: Compher (undisclosed) joined the Wings for their four-game road trip but won't play versus Seattle on Tuesday, Max Bultman of The Athletic reports."
+      "comment": "Oct 21: Compher (undisclosed) has a \"real good chance\" of playing against Vancouver on Thursday, head coach Todd McLellan told Max Bultman of The Athletic."
     },
     {
       "player": "Simon Edvinsson",
@@ -362,7 +354,7 @@
       "position": "RW",
       "estimated_return": "Oct 22",
       "status": "Day-To-Day",
-      "comment": ""
+      "comment": "Oct 21: Byfield (upper body) is believed to be day-to-day after exiting Tuesday's game against the Capitals, Zach Dooley of the Kings' official site reports Wednesday."
     },
     {
       "player": "Alex Turcotte",
@@ -589,6 +581,14 @@
       "comment": ""
     },
     {
+      "player": "Linus Ullmark",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Oct 22",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Thomas Chabot",
       "team": null,
       "position": "D",
@@ -611,14 +611,6 @@
       "estimated_return": "Oct 31",
       "status": "Injured Reserve",
       "comment": "Sep 28: MacDermid (upper body) was moved to the injured non-roster list Monday."
-    },
-    {
-      "player": "Tyson Foerster",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Oct 21",
-      "status": "Day-To-Day",
-      "comment": "Oct 21: Foerster (hand) will be a game-time decision ahead of Wednesday's clash with Buffalo, Jackie Spiegel of The Philadelphia Inquirer reports."
     },
     {
       "player": "Owen Tippett",
@@ -961,14 +953,6 @@
       "team": null,
       "position": "D",
       "estimated_return": "Nov 8",
-      "status": "Out",
-      "comment": ""
-    },
-    {
-      "player": "Lukas Cormier",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 22",
       "status": "Injured Reserve",
       "comment": ""
     },
