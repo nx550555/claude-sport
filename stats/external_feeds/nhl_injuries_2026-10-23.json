@@ -1,16 +1,32 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-10-23T02:03:01.603012+09:00",
+  "fetched_at": "2026-10-23T13:29:43.623740+09:00",
   "starting_goalies": [],
   "injuries": [
+    {
+      "player": "Jeff Malott",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 24",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Pavel Mintyukov",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 27",
+      "status": "Out",
+      "comment": ""
+    },
     {
       "player": "Judd Caulfield",
       "team": null,
       "position": "RW",
-      "estimated_return": "Oct 22",
-      "status": "Day-To-Day",
-      "comment": ""
+      "estimated_return": "Oct 24",
+      "status": "Injured Reserve",
+      "comment": "Oct 22: Caulfield (personal) remains in Southern California and won't play Thursday versus the Devils, Zach Cavanagh of The Sporting Tribune reports. Per the NHL media site, Caulfield has also been designated a non-roster player."
     },
     {
       "player": "Ian Moore",
@@ -88,9 +104,9 @@
       "player": "Mikael Backlund",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 22",
-      "status": "Day-To-Day",
-      "comment": "Oct 20: Backlund (upper body) is day-to-day, according to Eric Francis of Sportsnet on Tuesday."
+      "estimated_return": "Oct 24",
+      "status": "Out",
+      "comment": "Oct 22: Backlund (upper body) has been ruled out for Thursday's game against the Wild, Pat Steinberg of QR Calgary 770 AM reports."
     },
     {
       "player": "Samuel Honzek",
@@ -141,6 +157,14 @@
       "comment": "Oct 14: Nikishin (contract dispute) is on the Hurricanes' injured, non-roster list, per the NHL media site Wednesday."
     },
     {
+      "player": "Andrew Mangiapane",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 23",
+      "status": "Injured Reserve",
+      "comment": "Oct 22: Mangiapane (lower body) is likely to be available to play Friday, but he probably won't be in the lineup, CHGO Blackhawks reports."
+    },
+    {
       "player": "Bowen Byram",
       "team": null,
       "position": "D",
@@ -149,28 +173,12 @@
       "comment": ""
     },
     {
-      "player": "Andrew Mangiapane",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Oct 25",
-      "status": "Injured Reserve",
-      "comment": ""
-    },
-    {
       "player": "Nicolas Roy",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 23",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Logan O'Connor",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Oct 23",
-      "status": "Injured Reserve",
-      "comment": "Oct 19: O'Connor (lower body) is slated to play in Friday's matchup with Tampa Bay, Conor McGahey of Altitude TV reports."
+      "estimated_return": "Oct 25",
+      "status": "Out",
+      "comment": "Oct 22: Roy (lower body) is expected to miss Friday's game against Tampa Bay, per Aarif Deen of Colorado Hockey Now."
     },
     {
       "player": "Zachary L'Heureux",
@@ -187,6 +195,14 @@
       "estimated_return": "Oct 28",
       "status": "Injured Reserve",
       "comment": "Sep 28: Merkulov (undisclosed) was put on non-roster injured reserve Monday."
+    },
+    {
+      "player": "Radek Faksa",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 25",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Esa Lindell",
@@ -229,12 +245,20 @@
       "comment": "Sep 29: ir-nr"
     },
     {
-      "player": "J.T. Compher",
+      "player": "John Gibson",
       "team": null,
-      "position": "LW",
-      "estimated_return": "Oct 22",
-      "status": "Injured Reserve",
-      "comment": "Oct 21: Compher (undisclosed) has a \"real good chance\" of playing against Vancouver on Thursday, head coach Todd McLellan told Max Bultman of The Athletic."
+      "position": "G",
+      "estimated_return": "Oct 24",
+      "status": "Day-To-Day",
+      "comment": "Oct 23: Gibson sustained an upper-body injury versus the Canucks on Thursday and is questionable to return to the game."
+    },
+    {
+      "player": "Daniil Tarasov",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Oct 24",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Simon Edvinsson",
@@ -265,7 +289,7 @@
       "team": null,
       "position": "C",
       "estimated_return": "Oct 28",
-      "status": "Out",
+      "status": "Injured Reserve",
       "comment": ""
     },
     {
@@ -309,6 +333,14 @@
       "comment": "Sep 29: ir-nr"
     },
     {
+      "player": "Gustav Forsling",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 25",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Jacob Markstrom",
       "team": null,
       "position": "G",
@@ -344,9 +376,9 @@
       "player": "Quinton Byfield",
       "team": null,
       "position": "RW",
-      "estimated_return": "Oct 22",
-      "status": "Day-To-Day",
-      "comment": "Oct 22: Byfield (upper body) will be a game-time decision for Thursday's road clash against the Islanders, per Zach Dooley of the Kings' official site."
+      "estimated_return": "Oct 24",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Alex Turcotte",
@@ -381,20 +413,12 @@
       "comment": "Sep 17: Fiala (lower leg fracture) is at least three weeks away from being ready to play, Zach Dooley of the Kings' official site reports Thursday."
     },
     {
-      "player": "Olli Maatta",
+      "player": "Maxim Shabanov",
       "team": null,
-      "position": "D",
-      "estimated_return": "Oct 27",
+      "position": "RW",
+      "estimated_return": "Oct 24",
       "status": "Out",
-      "comment": "Oct 18: Maatta (upper body) will be on the Wild's upcoming five-game road trip, according to Michael Russo of The Athletic on Sunday."
-    },
-    {
-      "player": "Jared Spurgeon",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 27",
-      "status": "Injured Reserve",
-      "comment": "Oct 18: Spurgeon (upper body) will travel with the Wild on their upcoming five-game road trip, Michael Russo of The Athletic reports."
+      "comment": ""
     },
     {
       "player": "Filip Gustavsson",
@@ -483,14 +507,6 @@
       "estimated_return": "Oct 31",
       "status": "Injured Reserve",
       "comment": "Sep 29: ir-nr"
-    },
-    {
-      "player": "Mavrik Bourque",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 22",
-      "status": "Day-To-Day",
-      "comment": ""
     },
     {
       "player": "Nick Bjugstad",
@@ -586,7 +602,7 @@
       "position": "G",
       "estimated_return": "Oct 29",
       "status": "Injured Reserve",
-      "comment": ""
+      "comment": "Oct 22: Ullmark (lower body) is expected to miss the next 1-2 weeks, Claire Hanna of TSN reports Thursday."
     },
     {
       "player": "Thomas Chabot",
@@ -653,6 +669,14 @@
       "comment": "Oct 10: Grebenkin (back) underwent successful surgery and is expected to miss at least four months."
     },
     {
+      "player": "Egor Chinakhov",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Oct 24",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Samuel Girard",
       "team": null,
       "position": "D",
@@ -701,10 +725,18 @@
       "comment": "Sep 27: Graves (lower body) is out indefinitely and was placed on injured reserve Sunday."
     },
     {
+      "player": "Igor Chernyshov",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 27",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Alexander Wennberg",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 27",
+      "estimated_return": "Nov 9",
       "status": "Out",
       "comment": ""
     },
@@ -813,12 +845,20 @@
       "comment": "Sep 28: Gourde (hip) was placed on the injured non-roster list Monday."
     },
     {
+      "player": "Nick Blankenburg",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 24",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Marshall Rifai",
       "team": null,
       "position": "D",
-      "estimated_return": "Oct 22",
-      "status": "Day-To-Day",
-      "comment": "Oct 22: Rifai (undisclosed) will be a game-time decision for Thursday's home clash against the Rangers, per Luke Fox of Sportsnet."
+      "estimated_return": "Oct 31",
+      "status": "Injured Reserve",
+      "comment": ""
     },
     {
       "player": "John Tavares",
@@ -885,6 +925,14 @@
       "comment": "Sep 29: ir-nr"
     },
     {
+      "player": "John Marino",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 24",
+      "status": "Out",
+      "comment": "Oct 22: Marino (upper body) won't play Thursday in Seattle."
+    },
+    {
       "player": "Michael Carcone",
       "team": null,
       "position": "LW",
@@ -893,27 +941,11 @@
       "comment": "Oct 20: Carcone (upper body) was placed on injured reserve by the Mammoth on Tuesday."
     },
     {
-      "player": "John Marino",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 22",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Maveric Lamoureux",
       "team": null,
       "position": "D",
       "estimated_return": "Feb 12",
       "status": "Injured Reserve",
-      "comment": ""
-    },
-    {
-      "player": "Marco Rossi",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 22",
-      "status": "Day-To-Day",
       "comment": ""
     },
     {
@@ -947,6 +979,14 @@
       "estimated_return": "Dec 21",
       "status": "Injured Reserve",
       "comment": "Sep 28: Co-president of hockey operations Henrik Sedin said Monday that he hopes Demko (hip) will be ready to return before Christmas, Kevin Woodley of NHL.com reports."
+    },
+    {
+      "player": "Mitch Marner",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Oct 24",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Parker Wotherspoon",
@@ -997,6 +1037,14 @@
       "comment": "Sep 29: ir-nr"
     },
     {
+      "player": "Nino Niederreiter",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Oct 25",
+      "status": "Day-To-Day",
+      "comment": "Oct 22: Niederreiter left Thursday's game versus the Stars after taking a stick up high, and there was no update on his status after the contest, Robert Tiffin of NHL.com reports."
+    },
+    {
       "player": "Josh Morrissey",
       "team": null,
       "position": "D",
@@ -1016,7 +1064,7 @@
       "player": "Connor Hellebuyck",
       "team": null,
       "position": "G",
-      "estimated_return": "Oct 25",
+      "estimated_return": "Oct 27",
       "status": "Injured Reserve",
       "comment": "Oct 2: ir-nr"
     },

@@ -1,6 +1,6 @@
 {
   "source": "https://www.basketball-reference.com/leagues/NBA_2026_advanced.html",
-  "fetched_at": "2026-10-23T02:02:38.808355+09:00",
+  "fetched_at": "2026-10-23T13:29:22.582624+09:00",
   "kind": "advanced",
   "player_count": 763,
   "players": [
@@ -15226,7 +15226,7 @@
       "awards": null
     },
     {
-      "player": "Moussa Cisse",
+      "player": "Moussa Cissé",
       "ranker": 374.0,
       "age": 23.0,
       "team_name_abbr": "DAL",
