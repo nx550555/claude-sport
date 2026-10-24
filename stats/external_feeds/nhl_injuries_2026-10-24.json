@@ -1,22 +1,22 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-10-24T01:55:46.812381+09:00",
+  "fetched_at": "2026-10-24T13:20:01.173072+09:00",
   "starting_goalies": [],
   "injuries": [
+    {
+      "player": "Pavel Mintyukov",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 29",
+      "status": "Injured Reserve",
+      "comment": "Oct 23: Mintyukov (lower body) was put on injured reserve Thursday."
+    },
     {
       "player": "Jeff Malott",
       "team": null,
       "position": "LW",
       "estimated_return": "Oct 24",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Pavel Mintyukov",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 27",
       "status": "Day-To-Day",
       "comment": ""
     },
@@ -51,6 +51,14 @@
       "estimated_return": "Nov 21",
       "status": "Injured Reserve",
       "comment": "Sep 30: Terry (hip) was moved from the non-roster list to long-term injured reserve Wednesday, Zach Cavanagh of The Sporting Tribune reports."
+    },
+    {
+      "player": "Jiri Kulich",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 24",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Justin Danforth",
@@ -157,20 +165,20 @@
       "comment": "Oct 14: Nikishin (contract dispute) is on the Hurricanes' injured, non-roster list, per the NHL media site Wednesday."
     },
     {
-      "player": "Andrew Mangiapane",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Oct 23",
-      "status": "Injured Reserve",
-      "comment": "Oct 22: Mangiapane (lower body) is likely to be available to play Friday, but he probably won't be in the lineup, CHGO Blackhawks reports."
-    },
-    {
       "player": "Bowen Byram",
       "team": null,
       "position": "D",
-      "estimated_return": "Oct 23",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 25",
+      "status": "Out",
       "comment": ""
+    },
+    {
+      "player": "Zachary L'Heureux",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Nov 7",
+      "status": "Injured Reserve",
+      "comment": "Oct 23: ir-lt"
     },
     {
       "player": "Nicolas Roy",
@@ -179,14 +187,6 @@
       "estimated_return": "Oct 25",
       "status": "Out",
       "comment": "Oct 22: Roy (lower body) is expected to miss Friday's game against Tampa Bay, per Aarif Deen of Colorado Hockey Now."
-    },
-    {
-      "player": "Zachary L'Heureux",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Oct 28",
-      "status": "Out",
-      "comment": ""
     },
     {
       "player": "Georgii Merkulov",
@@ -283,6 +283,14 @@
       "estimated_return": "Oct 29",
       "status": "Injured Reserve",
       "comment": "Oct 6: Kasper (upper body) has been given a week-to-week timetable for return."
+    },
+    {
+      "player": "Devon Levi",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Oct 31",
+      "status": "Injured Reserve",
+      "comment": "Oct 23: Levi (undisclosed) was placed on injured reserve Friday."
     },
     {
       "player": "Mattias Ekholm",
@@ -469,14 +477,6 @@
       "comment": ""
     },
     {
-      "player": "Mike Matheson",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 23",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Florian Xhekaj",
       "team": null,
       "position": "LW",
@@ -525,14 +525,6 @@
       "comment": "Oct 23: Hellebuyck was traded to the Devils from the Jets on Friday, Darren Dreger of TSN reports."
     },
     {
-      "player": "Nick Bjugstad",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Jan 19",
-      "status": "Injured Reserve",
-      "comment": "Oct 9: Bjugstad (pectoral) was transferred to long-term injured reserve Friday, per PuckPedia."
-    },
-    {
       "player": "Seamus Casey",
       "team": null,
       "position": "D",
@@ -571,6 +563,14 @@
       "estimated_return": "Nov 7",
       "status": "Injured Reserve",
       "comment": "Oct 15: Barzal (knee) will not join the Islanders for their two-game road trip, Andrew Gross of Newsday reports Thursday."
+    },
+    {
+      "player": "Eeli Tolvanen",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Oct 24",
+      "status": "Day-To-Day",
+      "comment": "Oct 23: Tolvanen didn't participate in Friday's practice session due to personal reasons, Mollie Walker of the New York Post reports."
     },
     {
       "player": "Igor Shesterkin",
@@ -645,20 +645,12 @@
       "comment": "Sep 28: MacDermid (upper body) was moved to the injured non-roster list Monday."
     },
     {
-      "player": "Owen Tippett",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Oct 27",
-      "status": "Injured Reserve",
-      "comment": "Oct 19: Tippett (upper body) was placed on injured reserve Monday, per the NHL media site."
-    },
-    {
       "player": "Cam York",
       "team": null,
       "position": "D",
       "estimated_return": "Oct 24",
       "status": "Injured Reserve",
-      "comment": ""
+      "comment": "Oct 23: Head coach Rick Tocchet said Friday that he isn't sure whether York (upper body) will be able to suit up Saturday against the Ducks, Jordan Hall of NBC Sports Philadelphia reports."
     },
     {
       "player": "Rasmus Ristolainen",
@@ -666,7 +658,15 @@
       "position": "D",
       "estimated_return": "Oct 24",
       "status": "Injured Reserve",
-      "comment": "Oct 14: Ristolainen (upper body) won't travel with the Flyers ahead of Thursday's game against the Red Wings but is closing in on a return, Charlie O'Connor of PHLY Sports reports."
+      "comment": "Oct 23: Head coach Rick Tocchet said Friday that Ristolainen (upper body) is a possibility for Saturday's game against the Ducks, Jordan Hall of NBC Sports Philadelphia reports."
+    },
+    {
+      "player": "Owen Tippett",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Oct 27",
+      "status": "Injured Reserve",
+      "comment": "Oct 19: Tippett (upper body) was placed on injured reserve Monday, per the NHL media site."
     },
     {
       "player": "Travis Konecny",
@@ -853,14 +853,6 @@
       "comment": ""
     },
     {
-      "player": "Anthony Cirelli",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 23",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Yanni Gourde",
       "team": null,
       "position": "C",
@@ -1025,8 +1017,8 @@
       "team": null,
       "position": "D",
       "estimated_return": "Dec 5",
-      "status": "Out",
-      "comment": "Oct 23: Desharnais underwent a successful appendectomy surgery Thursday and is expected to miss 4-6 weeks."
+      "status": "Injured Reserve",
+      "comment": ""
     },
     {
       "player": "Pierre-Luc Dubois",
@@ -1069,6 +1061,22 @@
       "comment": "Sep 29: ir-nr"
     },
     {
+      "player": "Vladislav Namestnikov",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 30",
+      "status": "Injured Reserve",
+      "comment": ""
+    },
+    {
+      "player": "Nick Bjugstad",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Mar 11",
+      "status": "Injured Reserve",
+      "comment": "Oct 23: Bjugstad (pectoral), Dawson Mercer, Nico Daws, Alexander Command and a pair of draft picks were traded to the Jets from the Devils on Friday in exchange for Connor Hellebuyck."
+    },
+    {
       "player": "Nino Niederreiter",
       "team": null,
       "position": "RW",
@@ -1083,14 +1091,6 @@
       "estimated_return": "Nov 1",
       "status": "Injured Reserve",
       "comment": "Oct 19: Morrissey (wrist) was placed on injured reserve Monday."
-    },
-    {
-      "player": "Vladislav Namestnikov",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 30",
-      "status": "Out",
-      "comment": ""
     },
     {
       "player": "Garrett Brown",
