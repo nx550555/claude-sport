@@ -1,0 +1,14 @@
+{
+  "source": "https://www.rotowire.com/basketball/injury-report.php",
+  "fetched_at": "2026-10-26T00:59:57.039942+09:00",
+  "injuries": [
+    {
+      "player": "Team",
+      "team": "Pos",
+      "position": "Injury",
+      "injury": "Status",
+      "status": "Est. Return",
+      "estimated_return": null
+    }
+  ]
+}
