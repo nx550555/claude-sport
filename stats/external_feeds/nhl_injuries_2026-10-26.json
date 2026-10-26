@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-10-26T00:59:52.406151+09:00",
+  "fetched_at": "2026-10-26T13:27:03.485033+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -117,6 +117,14 @@
       "comment": ""
     },
     {
+      "player": "Alexander Nikishin",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 29",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Mark Jankowski",
       "team": null,
       "position": "C",
@@ -139,14 +147,6 @@
       "estimated_return": "Dec 3",
       "status": "Injured Reserve",
       "comment": ""
-    },
-    {
-      "player": "Alexander Nikishin",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Nov 1",
-      "status": "Injured Reserve",
-      "comment": "Oct 14: Nikishin (contract dispute) is on the Hurricanes' injured, non-roster list, per the NHL media site Wednesday."
     },
     {
       "player": "Bowen Byram",
@@ -173,6 +173,14 @@
       "comment": "Oct 23: ir-lt"
     },
     {
+      "player": "Radek Faksa",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Oct 27",
+      "status": "Out",
+      "comment": "Oct 25: Faksa (lower body) won't be in the lineup against the Islanders on Sunday, according to Lia Assimakopoulos of The Dallas Morning News."
+    },
+    {
       "player": "Oskar Back",
       "team": null,
       "position": "C",
@@ -194,14 +202,6 @@
       "position": "C",
       "estimated_return": "Oct 27",
       "status": "Out",
-      "comment": ""
-    },
-    {
-      "player": "Radek Faksa",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 25",
-      "status": "Day-To-Day",
       "comment": ""
     },
     {
@@ -325,14 +325,6 @@
       "comment": "Sep 29: ir-nr"
     },
     {
-      "player": "Gustav Forsling",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 25",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Jacob Markstrom",
       "team": null,
       "position": "G",
@@ -443,14 +435,6 @@
       "estimated_return": "Nov 18",
       "status": "Out",
       "comment": ""
-    },
-    {
-      "player": "Florian Xhekaj",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Oct 31",
-      "status": "Injured Reserve",
-      "comment": "Oct 17: Xhekaj (lower body) was placed on injured reserve Saturday, per the NHL media site."
     },
     {
       "player": "Sam Montembeault",
@@ -576,7 +560,7 @@
       "player": "Linus Ullmark",
       "team": null,
       "position": "G",
-      "estimated_return": "Oct 29",
+      "estimated_return": "Nov 7",
       "status": "Injured Reserve",
       "comment": "Oct 22: Ullmark (lower body) is expected to miss the next 1-2 weeks, Claire Hanna of TSN reports Thursday."
     },
@@ -728,9 +712,9 @@
       "player": "Jared McCann",
       "team": null,
       "position": "LW",
-      "estimated_return": "Oct 30",
+      "estimated_return": "Jan 2",
       "status": "Injured Reserve",
-      "comment": ""
+      "comment": "Oct 25: McCann (lower body) will be out for approximately 10 weeks, the team announced Sunday."
     },
     {
       "player": "Jacob Melanson",
@@ -933,14 +917,6 @@
       "comment": ""
     },
     {
-      "player": "Jack Thompson",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 31",
-      "status": "Injured Reserve",
-      "comment": "Sep 29: ir-nr"
-    },
-    {
       "player": "Akil Thomas",
       "team": null,
       "position": "C",
@@ -1016,7 +992,7 @@
       "player": "Vladislav Namestnikov",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 30",
+      "estimated_return": "Nov 3",
       "status": "Injured Reserve",
       "comment": ""
     },
@@ -1029,18 +1005,10 @@
       "comment": "Oct 23: Bjugstad (pectoral), Dawson Mercer, Nico Daws, Alexander Command and a pair of draft picks were traded to the Jets from the Devils on Friday in exchange for Connor Hellebuyck."
     },
     {
-      "player": "Nino Niederreiter",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Oct 25",
-      "status": "Day-To-Day",
-      "comment": "Oct 22: Niederreiter left Thursday's game versus the Stars after taking a stick up high, and there was no update on his status after the contest, Robert Tiffin of NHL.com reports."
-    },
-    {
       "player": "Josh Morrissey",
       "team": null,
       "position": "D",
-      "estimated_return": "Nov 1",
+      "estimated_return": "Nov 5",
       "status": "Injured Reserve",
       "comment": "Oct 19: Morrissey (wrist) was placed on injured reserve Monday."
     },
