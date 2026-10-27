@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-10-27T03:38:09.792572+09:00",
+  "fetched_at": "2026-10-27T13:46:35.206928+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -37,20 +37,20 @@
       "comment": "Sep 30: Terry (hip) was moved from the non-roster list to long-term injured reserve Wednesday, Zach Cavanagh of The Sporting Tribune reports."
     },
     {
+      "player": "Jiri Kulich",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 4",
+      "status": "Out",
+      "comment": "Oct 26: Kulich has been placed in concussion protocol, per Rachel Lenzi of The Buffalo News on Monday."
+    },
+    {
       "player": "Justin Danforth",
       "team": null,
       "position": "RW",
       "estimated_return": "Oct 27",
       "status": "Day-To-Day",
       "comment": ""
-    },
-    {
-      "player": "Jiri Kulich",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 31",
-      "status": "Out",
-      "comment": "Oct 24: Kulich (face) is back in Buffalo for evaluation and won't play against Washington on Saturday, according to Paul Hamilton of WGR Sports Radio 550."
     },
     {
       "player": "Sam Carrick",
@@ -93,14 +93,6 @@
       "comment": "Sep 28: ir-nr"
     },
     {
-      "player": "Mikael Backlund",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 26",
-      "status": "Day-To-Day",
-      "comment": "Oct 26: Backlund (upper body) will be a game-time decision against Toronto on Monday, per Pat Steinberg of QR Calgary 770 AM."
-    },
-    {
       "player": "Jonathan Huberdeau",
       "team": null,
       "position": "LW",
@@ -131,14 +123,6 @@
       "estimated_return": "Nov 7",
       "status": "Out",
       "comment": "Oct 26: Nikishin (not injury related) will need some time before he makes his 2026-27 debut, according to Cory Lavalette of the North State Journal on Monday."
-    },
-    {
-      "player": "Taylor Hall",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Oct 27",
-      "status": "Injured Reserve",
-      "comment": "Oct 26: Hall (upper body) said Monday that he feels good and expects to return to game action Tuesday against the Bruins, Walt Ruff of the Hurricanes' official site reports."
     },
     {
       "player": "Jordan Staal",
@@ -229,11 +213,19 @@
       "comment": "Sep 29: ir-nr"
     },
     {
+      "player": "Albert Johansson",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 29",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Daniil Tarasov",
       "team": null,
       "position": "G",
-      "estimated_return": "Oct 26",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 29",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -360,16 +352,8 @@
       "player": "Mats Zuccarello",
       "team": null,
       "position": "RW",
-      "estimated_return": "Oct 27",
-      "status": "Out",
-      "comment": "Oct 26: Zuccarello (upper body) won't play against the Rangers on Monday, per Zach Dooley of the Kings' official site."
-    },
-    {
-      "player": "Quinton Byfield",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Oct 26",
-      "status": "Day-To-Day",
+      "estimated_return": "Nov 4",
+      "status": "Injured Reserve",
       "comment": ""
     },
     {
@@ -565,20 +549,20 @@
       "comment": ""
     },
     {
+      "player": "Thomas Chabot",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 31",
+      "status": "Out",
+      "comment": "Oct 26: Chabot (upper body) was a full participant in Monday's practice in Vegas and is nearing a return to the lineup, according to Bruce Garrioch of Postmedia."
+    },
+    {
       "player": "Linus Ullmark",
       "team": null,
       "position": "G",
       "estimated_return": "Nov 7",
       "status": "Injured Reserve",
       "comment": "Oct 22: Ullmark (lower body) is expected to miss the next 1-2 weeks, Claire Hanna of TSN reports Thursday."
-    },
-    {
-      "player": "Thomas Chabot",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 31",
-      "status": "Out",
-      "comment": ""
     },
     {
       "player": "William Eklund",
@@ -829,6 +813,14 @@
       "comment": "Sep 28: Gourde (hip) was placed on the injured non-roster list Monday."
     },
     {
+      "player": "Kirill Marchenko",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Oct 28",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Nick Blankenburg",
       "team": null,
       "position": "D",
@@ -955,14 +947,6 @@
       "estimated_return": "Dec 21",
       "status": "Injured Reserve",
       "comment": "Sep 28: Co-president of hockey operations Henrik Sedin said Monday that he hopes Demko (hip) will be ready to return before Christmas, Kevin Woodley of NHL.com reports."
-    },
-    {
-      "player": "Mitch Marner",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Oct 27",
-      "status": "Day-To-Day",
-      "comment": ""
     },
     {
       "player": "Parker Wotherspoon",
