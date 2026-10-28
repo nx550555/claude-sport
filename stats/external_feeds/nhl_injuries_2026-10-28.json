@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-10-28T02:54:02.085688+09:00",
+  "fetched_at": "2026-10-28T14:20:15.110619+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -37,6 +37,14 @@
       "comment": "Sep 30: Terry (hip) was moved from the non-roster list to long-term injured reserve Wednesday, Zach Cavanagh of The Sporting Tribune reports."
     },
     {
+      "player": "Justin Danforth",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Oct 29",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Jiri Kulich",
       "team": null,
       "position": "C",
@@ -45,18 +53,10 @@
       "comment": "Oct 26: Kulich has been placed in concussion protocol, per Rachel Lenzi of The Buffalo News on Monday."
     },
     {
-      "player": "Justin Danforth",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Oct 27",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Sam Carrick",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 27",
+      "estimated_return": "Oct 31",
       "status": "Injured Reserve",
       "comment": ""
     },
@@ -72,7 +72,7 @@
       "player": "Matt Grzelcyk",
       "team": null,
       "position": "D",
-      "estimated_return": "Oct 27",
+      "estimated_return": "Oct 31",
       "status": "Injured Reserve",
       "comment": "Oct 13: Grzelcyk (lower body) suffered a \"flare-up\" and could be out for at least \"a few days,\" head coach Lindy Ruff told Rachel Lenzi of The Buffalo News on Tuesday."
     },
@@ -109,6 +109,14 @@
       "comment": ""
     },
     {
+      "player": "Taylor Hall",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Nov 1",
+      "status": "Out",
+      "comment": "Oct 27: Hall (undisclosed) tweaked something different from his previous upper-body injury and will miss time, Cory Lavalette of the North State Journal reports Tuesday."
+    },
+    {
       "player": "Alexander Nikishin",
       "team": null,
       "position": "D",
@@ -128,16 +136,8 @@
       "player": "Bowen Byram",
       "team": null,
       "position": "D",
-      "estimated_return": "Oct 27",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Nicolas Roy",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 28",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 29",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -147,6 +147,14 @@
       "estimated_return": "Nov 7",
       "status": "Injured Reserve",
       "comment": "Oct 23: ir-lt"
+    },
+    {
+      "player": "Kyle Capobianco",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 29",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Esa Lindell",
@@ -349,6 +357,22 @@
       "comment": "Sep 17: Gadjovich (upper body) is out indefinitely, the team announced Thursday."
     },
     {
+      "player": "Corey Perry",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Oct 29",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Drew Doughty",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 29",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Mats Zuccarello",
       "team": null,
       "position": "RW",
@@ -387,6 +411,14 @@
       "estimated_return": "Oct 31",
       "status": "Injured Reserve",
       "comment": "Sep 17: Fiala (lower leg fracture) is at least three weeks away from being ready to play, Zach Dooley of the Kings' official site reports Thursday."
+    },
+    {
+      "player": "Jared Spurgeon",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 29",
+      "status": "Day-To-Day",
+      "comment": "Oct 28: Spurgeon (undisclosed) did not finish Tuesday's game versus the Mammoth after blocking two shots on the same shift. Head coach John Hynes had no status update on the defenseman after the contest, per Joe Smith of The Athletic reports."
     },
     {
       "player": "Filip Gustavsson",
@@ -608,7 +640,7 @@
       "player": "Ben Kindel",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 31",
+      "estimated_return": "Oct 29",
       "status": "Injured Reserve",
       "comment": "Oct 27: Kindel (vasovagal episode) returned to practice Tuesday and feels normal following his vasovagal episode on Oct. 20, per Wes Crosby of NHL.com."
     },
@@ -656,7 +688,7 @@
       "player": "Trevor van Riemsdyk",
       "team": null,
       "position": "D",
-      "estimated_return": "Oct 29",
+      "estimated_return": "Nov 5",
       "status": "Injured Reserve",
       "comment": ""
     },
@@ -664,7 +696,7 @@
       "player": "Justin Brazeau",
       "team": null,
       "position": "RW",
-      "estimated_return": "Oct 29",
+      "estimated_return": "Nov 3",
       "status": "Injured Reserve",
       "comment": "Sep 27: Brazeau (lower body) was placed on injured reserve by the Penguins on Sunday."
     },
@@ -744,7 +776,7 @@
       "player": "Ross Johnston",
       "team": null,
       "position": "LW",
-      "estimated_return": "Oct 27",
+      "estimated_return": "Oct 29",
       "status": "Injured Reserve",
       "comment": ""
     },
@@ -805,6 +837,14 @@
       "comment": "Sep 28: Gourde (hip) was placed on the injured non-roster list Monday."
     },
     {
+      "player": "Dakota Joshua",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 8",
+      "status": "Injured Reserve",
+      "comment": "Oct 27: Joshua (abdomen) was recalled from his conditioning loan with AHL Toronto on Monday."
+    },
+    {
       "player": "Kirill Marchenko",
       "team": null,
       "position": "RW",
@@ -835,14 +875,6 @@
       "estimated_return": "Nov 27",
       "status": "Injured Reserve",
       "comment": ""
-    },
-    {
-      "player": "Dakota Joshua",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Nov 8",
-      "status": "Injured Reserve",
-      "comment": "Oct 17: Joshua (abdomen) was sent to AHL Toronto on Friday for a conditioning stint."
     },
     {
       "player": "Miles Wood",
@@ -941,6 +973,14 @@
       "comment": "Sep 28: Co-president of hockey operations Henrik Sedin said Monday that he hopes Demko (hip) will be ready to return before Christmas, Kevin Woodley of NHL.com reports."
     },
     {
+      "player": "Carter Hart",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Oct 30",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Parker Wotherspoon",
       "team": null,
       "position": "D",
@@ -1000,7 +1040,7 @@
       "player": "Josh Morrissey",
       "team": null,
       "position": "D",
-      "estimated_return": "Nov 5",
+      "estimated_return": "Nov 3",
       "status": "Injured Reserve",
       "comment": "Oct 19: Morrissey (wrist) was placed on injured reserve Monday."
     },
