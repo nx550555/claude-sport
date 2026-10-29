@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-10-29T03:18:21.361881+09:00",
+  "fetched_at": "2026-10-29T14:30:47.860464+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -93,6 +93,22 @@
       "comment": "Sep 28: ir-nr"
     },
     {
+      "player": "Brennan Othmann",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Oct 30",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Devin Cooley",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Oct 30",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Jonathan Huberdeau",
       "team": null,
       "position": "LW",
@@ -138,6 +154,14 @@
       "position": "D",
       "estimated_return": "Oct 29",
       "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Josh Manson",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Nov 5",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -267,14 +291,6 @@
       "estimated_return": "Nov 9",
       "status": "Injured Reserve",
       "comment": "Oct 24: Levi (undisclosed) is expected to miss a few weeks, per Jason Gregor of Sports 1440 Edmonton."
-    },
-    {
-      "player": "Jason Dickinson",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 28",
-      "status": "Injured Reserve",
-      "comment": ""
     },
     {
       "player": "Alec Regula",
@@ -637,20 +653,28 @@
       "comment": "Oct 10: Grebenkin (back) underwent successful surgery and is expected to miss at least four months."
     },
     {
+      "player": "Justin Brazeau",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Nov 3",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Elmer Soderblom",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Nov 7",
+      "status": "Injured Reserve",
+      "comment": ""
+    },
+    {
       "player": "Ben Kindel",
       "team": null,
       "position": "C",
       "estimated_return": "Oct 29",
       "status": "Injured Reserve",
       "comment": "Oct 27: Kindel (vasovagal episode) returned to practice Tuesday and feels normal following his vasovagal episode on Oct. 20, per Wes Crosby of NHL.com."
-    },
-    {
-      "player": "Elmer Soderblom",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Oct 29",
-      "status": "Day-To-Day",
-      "comment": "Oct 27: Soderblom (upper body) was deemed day-to-day on Tuesday."
     },
     {
       "player": "Evgeni Malkin",
@@ -691,14 +715,6 @@
       "estimated_return": "Nov 5",
       "status": "Injured Reserve",
       "comment": ""
-    },
-    {
-      "player": "Justin Brazeau",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Nov 3",
-      "status": "Injured Reserve",
-      "comment": "Sep 27: Brazeau (lower body) was placed on injured reserve by the Penguins on Sunday."
     },
     {
       "player": "Ryan Graves",
@@ -845,19 +861,27 @@
       "comment": "Sep 28: Gourde (hip) was placed on the injured non-roster list Monday."
     },
     {
-      "player": "Dakota Joshua",
+      "player": "Miles Wood",
       "team": null,
-      "position": "C",
-      "estimated_return": "Nov 8",
+      "position": "LW",
+      "estimated_return": "Nov 7",
       "status": "Injured Reserve",
-      "comment": "Oct 27: Joshua (abdomen) was recalled from his conditioning loan with AHL Toronto on Monday."
+      "comment": "Oct 28: Wood (undisclosed) was transferred to long-term injured reserve Wednesday, David Alter of The Hockey News reports."
+    },
+    {
+      "player": "Chris Tanev",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 31",
+      "status": "Injured Reserve",
+      "comment": "Oct 28: The Maple Leafs announced Wednesday that Tanev (upper body) has been upgraded to day-to-day, Mark Masters of TSN reports."
     },
     {
       "player": "Kirill Marchenko",
       "team": null,
       "position": "RW",
-      "estimated_return": "Oct 28",
-      "status": "Day-To-Day",
+      "estimated_return": "Nov 7",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -883,22 +907,6 @@
       "estimated_return": "Nov 27",
       "status": "Injured Reserve",
       "comment": ""
-    },
-    {
-      "player": "Miles Wood",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Nov 3",
-      "status": "Injured Reserve",
-      "comment": ""
-    },
-    {
-      "player": "Chris Tanev",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 31",
-      "status": "Injured Reserve",
-      "comment": "Oct 15: The Maple Leafs announced Thursday that Tanev (lower body) is considered week-to-week, Mark Masters of TSN reports."
     },
     {
       "player": "Max Domi",
