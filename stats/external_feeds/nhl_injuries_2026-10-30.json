@@ -1,14 +1,14 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-10-30T03:23:33.780478+09:00",
+  "fetched_at": "2026-10-30T14:30:51.310856+09:00",
   "starting_goalies": [],
   "injuries": [
     {
       "player": "Pavel Mintyukov",
       "team": null,
       "position": "D",
-      "estimated_return": "Oct 29",
+      "estimated_return": "Nov 1",
       "status": "Injured Reserve",
       "comment": "Oct 23: Mintyukov (lower body) was put on injured reserve Thursday."
     },
@@ -40,8 +40,16 @@
       "player": "Justin Danforth",
       "team": null,
       "position": "RW",
-      "estimated_return": "Oct 29",
-      "status": "Day-To-Day",
+      "estimated_return": "Oct 31",
+      "status": "Injured Reserve",
+      "comment": "Oct 29: Danforth (upper body) was placed on injured reserve Thursday, per the NHL media site."
+    },
+    {
+      "player": "Konsta Helenius",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 4",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -51,14 +59,6 @@
       "estimated_return": "Nov 4",
       "status": "Out",
       "comment": "Oct 26: Kulich has been placed in concussion protocol, per Rachel Lenzi of The Buffalo News on Monday."
-    },
-    {
-      "player": "Sam Carrick",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Oct 31",
-      "status": "Injured Reserve",
-      "comment": ""
     },
     {
       "player": "Alex Lyon",
@@ -157,14 +157,6 @@
       "comment": ""
     },
     {
-      "player": "Alex Vlasic",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 29",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Josh Manson",
       "team": null,
       "position": "D",
@@ -232,9 +224,9 @@
       "player": "Dylan Larkin",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 31",
-      "status": "Out",
-      "comment": "Oct 29: Larkin (not injury related) will not play until he is traded away from the Red Wings, per Elliotte Friedman of Sportsnet."
+      "estimated_return": "Nov 14",
+      "status": "Injured Reserve",
+      "comment": "Oct 29: ir-nr"
     },
     {
       "player": "Albert Johansson",
@@ -357,26 +349,10 @@
       "comment": "Sep 17: Gadjovich (upper body) is out indefinitely, the team announced Thursday."
     },
     {
-      "player": "Kevin Fiala",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Oct 31",
-      "status": "Injured Reserve",
-      "comment": "Oct 29: Fiala (lower leg) was spotted skating in a non-contact jersey at Kings' morning skate Thursday."
-    },
-    {
-      "player": "Corey Perry",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Oct 29",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Drew Doughty",
+      "player": "Brandt Clarke",
       "team": null,
       "position": "D",
-      "estimated_return": "Oct 29",
+      "estimated_return": "Oct 31",
       "status": "Day-To-Day",
       "comment": ""
     },
@@ -384,9 +360,17 @@
       "player": "Mats Zuccarello",
       "team": null,
       "position": "RW",
-      "estimated_return": "Nov 4",
+      "estimated_return": "Nov 10",
       "status": "Injured Reserve",
-      "comment": ""
+      "comment": "Oct 29: Zuccarello (upper body) is regarded as week-to-week, Zach Dooley of the Kings' official site reports Thursday."
+    },
+    {
+      "player": "Kevin Fiala",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Nov 7",
+      "status": "Injured Reserve",
+      "comment": "Oct 29: Head coach Peter Laviolette said Thursday that Fiala (lower leg) remains on a week-to-week timeline, Zach Dooley of the Kings' official site reports."
     },
     {
       "player": "Alex Turcotte",
@@ -413,20 +397,20 @@
       "comment": "Sep 24: Jenik (undisclosed) was placed on non-roster injured reserve by Los Angeles on Thursday, per Zach Dooley of LA Kings Insider."
     },
     {
+      "player": "Jared Spurgeon",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Nov 6",
+      "status": "Injured Reserve",
+      "comment": ""
+    },
+    {
       "player": "Brock Faber",
       "team": null,
       "position": "D",
       "estimated_return": "Nov 3",
       "status": "Injured Reserve",
       "comment": "Oct 29: Faber (skull) has cleared his return to play protocol and could resume skating within a few days, per Michael Russo of The Athletic."
-    },
-    {
-      "player": "Jared Spurgeon",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Nov 6",
-      "status": "Out",
-      "comment": ""
     },
     {
       "player": "Filip Gustavsson",
@@ -440,7 +424,7 @@
       "player": "Marcus Foligno",
       "team": null,
       "position": "LW",
-      "estimated_return": "Oct 29",
+      "estimated_return": "Nov 3",
       "status": "Injured Reserve",
       "comment": ""
     },
@@ -448,8 +432,16 @@
       "player": "Nick Foligno",
       "team": null,
       "position": "LW",
-      "estimated_return": "Oct 29",
+      "estimated_return": "Nov 3",
       "status": "Injured Reserve",
+      "comment": ""
+    },
+    {
+      "player": "Mike Matheson",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 31",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -499,6 +491,14 @@
       "estimated_return": "Nov 21",
       "status": "Injured Reserve",
       "comment": "Oct 2: Casey will be out of action for 6-8 weeks after undergoing a knee procedure, Kristy Flannery of The Hockey News reports Friday."
+    },
+    {
+      "player": "Ryan Pulock",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Oct 31",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Matias Maccelli",
@@ -581,10 +581,10 @@
       "comment": ""
     },
     {
-      "player": "Thomas Chabot",
+      "player": "Andre Burakovsky",
       "team": null,
-      "position": "D",
-      "estimated_return": "Oct 29",
+      "position": "LW",
+      "estimated_return": "Oct 31",
       "status": "Day-To-Day",
       "comment": ""
     },
@@ -592,9 +592,9 @@
       "player": "Warren Foegele",
       "team": null,
       "position": "LW",
-      "estimated_return": "Oct 29",
-      "status": "Day-To-Day",
-      "comment": ""
+      "estimated_return": "Nov 7",
+      "status": "Out",
+      "comment": "Oct 29: Foegele (knee) is expected to miss an extended period of time, Jackson Starr of the Senators' official site reports Thursday."
     },
     {
       "player": "Linus Ullmark",
@@ -643,14 +643,6 @@
       "estimated_return": "Feb 13",
       "status": "Injured Reserve",
       "comment": "Oct 10: Grebenkin (back) underwent successful surgery and is expected to miss at least four months."
-    },
-    {
-      "player": "Samuel Girard",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Oct 29",
-      "status": "Injured Reserve",
-      "comment": "Oct 29: Girard (undisclosed) is considered a game-time decision for Thursday's home game against the Mammoth, per Seth Rorabaugh of Tribune-Review Sports."
     },
     {
       "player": "Justin Brazeau",
@@ -760,7 +752,7 @@
       "player": "Ross Johnston",
       "team": null,
       "position": "LW",
-      "estimated_return": "Oct 29",
+      "estimated_return": "Oct 31",
       "status": "Injured Reserve",
       "comment": ""
     },
@@ -816,7 +808,7 @@
       "player": "Kirill Marchenko",
       "team": null,
       "position": "RW",
-      "estimated_return": "Nov 7",
+      "estimated_return": "Nov 17",
       "status": "Injured Reserve",
       "comment": ""
     },
