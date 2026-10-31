@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-10-31T02:58:07.295753+09:00",
+  "fetched_at": "2026-10-31T14:17:35.690799+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -112,7 +112,7 @@
       "player": "Devin Cooley",
       "team": null,
       "position": "G",
-      "estimated_return": "Nov 6",
+      "estimated_return": "Nov 14",
       "status": "Injured Reserve",
       "comment": ""
     },
@@ -165,19 +165,19 @@
       "comment": ""
     },
     {
+      "player": "Josh Manson",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Dec 27",
+      "status": "Out",
+      "comment": "Oct 30: Manson (ankle) is expected to miss the next eight weeks, Corey Masisak of The Denver Post reports Friday."
+    },
+    {
       "player": "Logan O'Connor",
       "team": null,
       "position": "RW",
       "estimated_return": "Oct 31",
       "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Josh Manson",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Nov 5",
-      "status": "Out",
       "comment": ""
     },
     {
@@ -248,7 +248,7 @@
       "player": "Marco Kasper",
       "team": null,
       "position": "C",
-      "estimated_return": "Nov 10",
+      "estimated_return": "Nov 14",
       "status": "Injured Reserve",
       "comment": "Oct 30: Head coach Todd McLellan said Friday that Kasper (upper body) is still 10 days to two weeks away from returning to game action, Ansar Khan of MLive.com reports."
     },
@@ -509,6 +509,14 @@
       "comment": "Sep 29: ir-nr"
     },
     {
+      "player": "Anthony Mantha",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Nov 3",
+      "status": "Day-To-Day",
+      "comment": "Oct 30: Mantha (undisclosed) didn't finish Friday's game versus the Golden Knights, and head coach Sheldon Keefe didn't have an update on the winger's status in his postgame comments, Amanda Stein of the Devils' official site reports."
+    },
+    {
       "player": "Seamus Casey",
       "team": null,
       "position": "D",
@@ -613,20 +621,20 @@
       "comment": ""
     },
     {
+      "player": "Warren Foegele",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Nov 14",
+      "status": "Injured Reserve",
+      "comment": "Oct 30: Foegele (knee) was placed on injured reserve Friday, per Bruce Garrioch of Postmedia."
+    },
+    {
       "player": "Andre Burakovsky",
       "team": null,
       "position": "LW",
       "estimated_return": "Oct 31",
       "status": "Day-To-Day",
       "comment": ""
-    },
-    {
-      "player": "Warren Foegele",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Nov 14",
-      "status": "Out",
-      "comment": "Oct 29: Foegele (knee) is expected to miss an extended period of time, Jackson Starr of the Senators' official site reports Thursday."
     },
     {
       "player": "Linus Ullmark",
@@ -949,6 +957,14 @@
       "comment": ""
     },
     {
+      "player": "Filip Chytil",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 7",
+      "status": "Injured Reserve",
+      "comment": ""
+    },
+    {
       "player": "Akil Thomas",
       "team": null,
       "position": "C",
@@ -971,14 +987,6 @@
       "estimated_return": "Dec 21",
       "status": "Injured Reserve",
       "comment": "Sep 28: Co-president of hockey operations Henrik Sedin said Monday that he hopes Demko (hip) will be ready to return before Christmas, Kevin Woodley of NHL.com reports."
-    },
-    {
-      "player": "Carter Hart",
-      "team": null,
-      "position": "G",
-      "estimated_return": "Oct 30",
-      "status": "Day-To-Day",
-      "comment": ""
     },
     {
       "player": "Parker Wotherspoon",
