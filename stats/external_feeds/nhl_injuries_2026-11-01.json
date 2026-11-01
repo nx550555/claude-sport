@@ -1,9 +1,17 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-11-01T02:10:48.720041+09:00",
+  "fetched_at": "2026-11-01T14:46:52.361937+09:00",
   "starting_goalies": [],
   "injuries": [
+    {
+      "player": "Troy Terry",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Nov 6",
+      "status": "Injured Reserve",
+      "comment": "Oct 31: Although Terry's (hip) return doesn't appear to be imminent, he is getting close to playing, Derek Lee of The Hockey News reports Saturday."
+    },
     {
       "player": "Pavel Mintyukov",
       "team": null,
@@ -27,14 +35,6 @@
       "estimated_return": "Nov 25",
       "status": "Injured Reserve",
       "comment": "Oct 13: Poehling (knee) is expected to miss 6-8 weeks with an MCL sprain."
-    },
-    {
-      "player": "Troy Terry",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Nov 21",
-      "status": "Injured Reserve",
-      "comment": "Sep 30: Terry (hip) was moved from the non-roster list to long-term injured reserve Wednesday, Zach Cavanagh of The Sporting Tribune reports."
     },
     {
       "player": "Justin Danforth",
@@ -96,8 +96,8 @@
       "player": "Brennan Othmann",
       "team": null,
       "position": "LW",
-      "estimated_return": "Oct 31",
-      "status": "Day-To-Day",
+      "estimated_return": "Nov 2",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -165,20 +165,20 @@
       "comment": ""
     },
     {
+      "player": "Logan O'Connor",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Nov 2",
+      "status": "Out",
+      "comment": "Oct 31: O'Connor (personal) will not play in Saturday's home clash against the Flames, per Corey Masisak of The Denver Post."
+    },
+    {
       "player": "Josh Manson",
       "team": null,
       "position": "D",
       "estimated_return": "Dec 27",
       "status": "Out",
       "comment": "Oct 30: Manson (ankle) is expected to miss the next eight weeks, Corey Masisak of The Denver Post reports Friday."
-    },
-    {
-      "player": "Logan O'Connor",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Oct 31",
-      "status": "Day-To-Day",
-      "comment": ""
     },
     {
       "player": "Zachary L'Heureux",
@@ -269,6 +269,14 @@
       "comment": "Oct 14: Edvinsson (contract dispute) is on the Red Wings' injured, non-roster list, per the NHL media site Wednesday."
     },
     {
+      "player": "Isaac Howard",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Nov 3",
+      "status": "Out",
+      "comment": "Oct 31: Howard (knee) won't play against the Rangers on Sunday, per Stephen Whyno of the Associated Press."
+    },
+    {
       "player": "Zach Hyman",
       "team": null,
       "position": "LW",
@@ -357,6 +365,14 @@
       "comment": "Sep 17: Gadjovich (upper body) is out indefinitely, the team announced Thursday."
     },
     {
+      "player": "Adrian Kempe",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Nov 4",
+      "status": "Out",
+      "comment": "Oct 31: Kempe (undisclosed) won't be in the lineup against Buffalo on Saturday, per Zach Dooley of the Kings' official site."
+    },
+    {
       "player": "Mats Zuccarello",
       "team": null,
       "position": "RW",
@@ -434,6 +450,14 @@
       "position": "LW",
       "estimated_return": "Nov 3",
       "status": "Injured Reserve",
+      "comment": ""
+    },
+    {
+      "player": "Kirby Dach",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 3",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -565,14 +589,6 @@
       "comment": "Oct 30: Tolvanen didn't participate in Friday's practice session due to personal reasons, Vince Z. Mercogliano of The Athletic reports."
     },
     {
-      "player": "James Reimer",
-      "team": null,
-      "position": "G",
-      "estimated_return": "Nov 1",
-      "status": "Day-To-Day",
-      "comment": "Oct 27: Reimer (upper body) was tagged as day-to-day Tuesday, per Vince Z. Mercogliano of The Athletic."
-    },
-    {
       "player": "Igor Shesterkin",
       "team": null,
       "position": "G",
@@ -613,20 +629,20 @@
       "comment": ""
     },
     {
-      "player": "Warren Foegele",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Nov 14",
-      "status": "Injured Reserve",
-      "comment": "Oct 30: Foegele (knee) was placed on injured reserve Friday, per Bruce Garrioch of Postmedia."
-    },
-    {
       "player": "Andre Burakovsky",
       "team": null,
       "position": "LW",
-      "estimated_return": "Oct 31",
-      "status": "Day-To-Day",
+      "estimated_return": "Nov 21",
+      "status": "Injured Reserve",
       "comment": ""
+    },
+    {
+      "player": "Warren Foegele",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Nov 25",
+      "status": "Injured Reserve",
+      "comment": "Oct 31: Foegele (knee) will miss 3-4 weeks, Jackson Starr of the Senators' official site reports Saturday."
     },
     {
       "player": "Linus Ullmark",
@@ -829,12 +845,20 @@
       "comment": ""
     },
     {
+      "player": "Erik Cernak",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Nov 3",
+      "status": "Out",
+      "comment": "Oct 31: Cernak (undisclosed) won't be in the lineup against Nashville on Saturday, according to Lightning reporter Gabby Shirley."
+    },
+    {
       "player": "Zemgus Girgensons",
       "team": null,
       "position": "C",
-      "estimated_return": "Oct 31",
-      "status": "Day-To-Day",
-      "comment": ""
+      "estimated_return": "Nov 3",
+      "status": "Out",
+      "comment": "Oct 31: Girgensons (lower body) won't play against Nashville on Saturday, per Lightning reporter Gabby Shirley."
     },
     {
       "player": "Yanni Gourde",
