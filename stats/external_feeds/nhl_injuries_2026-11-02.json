@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-11-02T02:53:07.954867+09:00",
+  "fetched_at": "2026-11-02T14:43:35.879396+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -11,14 +11,6 @@
       "estimated_return": "Nov 6",
       "status": "Injured Reserve",
       "comment": "Oct 31: Although Terry's (hip) return doesn't appear to be imminent, he is getting close to playing, Derek Lee of The Hockey News reports Saturday."
-    },
-    {
-      "player": "Pavel Mintyukov",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Nov 1",
-      "status": "Injured Reserve",
-      "comment": "Oct 23: Mintyukov (lower body) was put on injured reserve Thursday."
     },
     {
       "player": "Ian Moore",
@@ -528,8 +520,8 @@
       "player": "Ryan Pulock",
       "team": null,
       "position": "D",
-      "estimated_return": "Nov 5",
-      "status": "Day-To-Day",
+      "estimated_return": "Nov 28",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -565,19 +557,11 @@
       "comment": "Oct 15: Barzal (knee) will not join the Islanders for their two-game road trip, Andrew Gross of Newsday reports Thursday."
     },
     {
-      "player": "Braden Schneider",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Nov 1",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Sean Durzi",
       "team": null,
       "position": "D",
-      "estimated_return": "Nov 1",
-      "status": "Day-To-Day",
+      "estimated_return": "Nov 3",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -659,22 +643,6 @@
       "estimated_return": "Nov 11",
       "status": "Injured Reserve",
       "comment": "Oct 27: Ristolainen (hand) was placed on injured reserve, retroactive to Oct. 24, on Tuesday."
-    },
-    {
-      "player": "Owen Tippett",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Nov 1",
-      "status": "Injured Reserve",
-      "comment": "Oct 19: Tippett (upper body) was placed on injured reserve Monday, per the NHL media site."
-    },
-    {
-      "player": "Travis Konecny",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Nov 1",
-      "status": "Injured Reserve",
-      "comment": "Oct 11: Konecny (lower body) was placed on injured reserve Sunday, according to the NHL media site."
     },
     {
       "player": "Nikita Grebenkin",
@@ -904,7 +872,7 @@
       "player": "Max Domi",
       "team": null,
       "position": "C",
-      "estimated_return": "Nov 21",
+      "estimated_return": "Jan 30",
       "status": "Injured Reserve",
       "comment": "Sep 30: Domi (back) was transferred from the non-roster list to long-term injured reserve Wednesday, per PuckPedia."
     },
@@ -933,20 +901,20 @@
       "comment": "Sep 29: ir-nr"
     },
     {
-      "player": "John Marino",
+      "player": "Kailer Yamamoto",
       "team": null,
-      "position": "D",
-      "estimated_return": "Nov 5",
+      "position": "RW",
+      "estimated_return": "Nov 3",
       "status": "Out",
       "comment": ""
     },
     {
-      "player": "Michael Carcone",
+      "player": "John Marino",
       "team": null,
-      "position": "LW",
-      "estimated_return": "Nov 7",
+      "position": "D",
+      "estimated_return": "Nov 5",
       "status": "Injured Reserve",
-      "comment": "Oct 20: Carcone (upper body) was placed on injured reserve by the Mammoth on Tuesday."
+      "comment": ""
     },
     {
       "player": "Maveric Lamoureux",
@@ -1019,6 +987,14 @@
       "estimated_return": "Nov 14",
       "status": "Injured Reserve",
       "comment": "Sep 29: ir-nr"
+    },
+    {
+      "player": "Cole Koepke",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Nov 3",
+      "status": "Out",
+      "comment": "Nov 1: Koepke (undisclosed) was unavailable for Sunday's game against Carolina, according to Mike McIntyre of the Winnipeg Free Press."
     },
     {
       "player": "Vladislav Namestnikov",
