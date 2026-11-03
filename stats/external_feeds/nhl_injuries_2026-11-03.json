@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-11-03T06:40:48.541483+09:00",
+  "fetched_at": "2026-11-03T15:24:23.962057+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -35,6 +35,14 @@
       "estimated_return": "Nov 25",
       "status": "Injured Reserve",
       "comment": "Oct 13: Poehling (knee) is expected to miss 6-8 weeks with an MCL sprain."
+    },
+    {
+      "player": "Matthew Poitras",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 5",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Zach Benson",
@@ -96,8 +104,8 @@
       "player": "Brennan Othmann",
       "team": null,
       "position": "LW",
-      "estimated_return": "Nov 2",
-      "status": "Day-To-Day",
+      "estimated_return": "Nov 4",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -155,6 +163,14 @@
       "estimated_return": "Dec 3",
       "status": "Injured Reserve",
       "comment": ""
+    },
+    {
+      "player": "Patrick Kane",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Nov 12",
+      "status": "Out",
+      "comment": "Nov 3: Head coach Jeff Blashill said after Monday's 5-2 loss to the Avalanche that Kane has an upper-body injury and will miss at least the next couple of games, Ben Pope of the Chicago Sun-Times reports."
     },
     {
       "player": "Bowen Byram",
@@ -757,6 +773,14 @@
       "comment": "Sep 30: O'Brien (lower body) was placed on non-roster injured reserve Wednesday."
     },
     {
+      "player": "Logan Mailloux",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Nov 25",
+      "status": "Injured Reserve",
+      "comment": "Nov 2: The Blues assigned Mailloux (hand) to AHL Springfield for a conditioning assignment Monday."
+    },
+    {
       "player": "Colton Parayko",
       "team": null,
       "position": "D",
@@ -795,14 +819,6 @@
       "estimated_return": "Nov 12",
       "status": "Injured Reserve",
       "comment": "Sep 30: Tucker had arthroscopic knee surgery and will be re-assessed in six weeks, the team announced Wednesday."
-    },
-    {
-      "player": "Logan Mailloux",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Nov 25",
-      "status": "Injured Reserve",
-      "comment": ""
     },
     {
       "player": "Zemgus Girgensons",
