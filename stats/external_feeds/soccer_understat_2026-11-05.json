@@ -1,0 +1,47 @@
+{
+  "source_group": "understat.com",
+  "fetched_at": "2026-11-05T04:42:01.456038+09:00",
+  "season": "2025-2026",
+  "leagues": {
+    "Premier League": {
+      "source": "https://understat.com/league/EPL/2025",
+      "league_key": "EPL",
+      "league_display": "Premier League",
+      "season": "2025-2026",
+      "teams": [],
+      "team_count": 0
+    },
+    "La Liga": {
+      "source": "https://understat.com/league/La_liga/2025",
+      "league_key": "La_liga",
+      "league_display": "La Liga",
+      "season": "2025-2026",
+      "teams": [],
+      "team_count": 0
+    },
+    "Bundesliga": {
+      "source": "https://understat.com/league/Bundesliga/2025",
+      "league_key": "Bundesliga",
+      "league_display": "Bundesliga",
+      "season": "2025-2026",
+      "teams": [],
+      "team_count": 0
+    },
+    "Serie A": {
+      "source": "https://understat.com/league/Serie_A/2025",
+      "league_key": "Serie_A",
+      "league_display": "Serie A",
+      "season": "2025-2026",
+      "teams": [],
+      "team_count": 0
+    },
+    "Ligue 1": {
+      "source": "https://understat.com/league/Ligue_1/2025",
+      "league_key": "Ligue_1",
+      "league_display": "Ligue 1",
+      "season": "2025-2026",
+      "teams": [],
+      "team_count": 0
+    }
+  }
+}
