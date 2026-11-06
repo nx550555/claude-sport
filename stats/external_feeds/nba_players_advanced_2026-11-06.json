@@ -1,6 +1,6 @@
 {
   "source": "https://www.basketball-reference.com/leagues/NBA_2026_advanced.html",
-  "fetched_at": "2026-11-06T04:50:22.037976+09:00",
+  "fetched_at": "2026-11-06T15:15:45.532011+09:00",
   "kind": "advanced",
   "player_count": 763,
   "players": [
@@ -288,7 +288,7 @@
       "ranker": 10.0,
       "age": 31.0,
       "team_name_abbr": "BOS",
-      "pos": "SG",
+      "pos": "PG",
       "games": 77.0,
       "games_started": 77.0,
       "mp": 2625.0,

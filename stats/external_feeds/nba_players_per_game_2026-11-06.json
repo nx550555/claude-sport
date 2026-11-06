@@ -1,6 +1,6 @@
 {
   "source": "https://www.basketball-reference.com/leagues/NBA_2026_per_game.html",
-  "fetched_at": "2026-11-06T04:49:49.725761+09:00",
+  "fetched_at": "2026-11-06T15:15:12.251983+09:00",
   "kind": "per_game",
   "player_count": 763,
   "players": [
@@ -3309,7 +3309,7 @@
       "ranker": 82.0,
       "age": 31.0,
       "team_name_abbr": "BOS",
-      "pos": "SG",
+      "pos": "PG",
       "games": 77.0,
       "games_started": 77.0,
       "mp_per_g": 34.1,

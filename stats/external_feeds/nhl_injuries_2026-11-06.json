@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-11-06T04:50:40.104403+09:00",
+  "fetched_at": "2026-11-06T15:16:07.713113+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -37,12 +37,20 @@
       "comment": "Oct 13: Poehling (knee) is expected to miss 6-8 weeks with an MCL sprain."
     },
     {
+      "player": "James Hagens",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 8",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Matthew Poitras",
       "team": null,
       "position": "C",
-      "estimated_return": "Nov 5",
-      "status": "Day-To-Day",
-      "comment": ""
+      "estimated_return": "Nov 8",
+      "status": "Out",
+      "comment": "Nov 5: Poitras (nose) won't play Thursday in Pittsburgh, per Kevin Paul Dupont of The Boston Globe."
     },
     {
       "player": "Konsta Helenius",
@@ -114,14 +122,6 @@
       "position": "LW",
       "estimated_return": "Nov 15",
       "status": "Injured Reserve",
-      "comment": ""
-    },
-    {
-      "player": "Taylor Hall",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Nov 5",
-      "status": "Day-To-Day",
       "comment": ""
     },
     {
@@ -269,11 +269,19 @@
       "comment": "Oct 14: Edvinsson (contract dispute) is on the Red Wings' injured, non-roster list, per the NHL media site Wednesday."
     },
     {
+      "player": "Tristan Jarry",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Nov 7",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Isaac Howard",
       "team": null,
       "position": "LW",
       "estimated_return": "Nov 17",
-      "status": "Out",
+      "status": "Injured Reserve",
       "comment": ""
     },
     {
@@ -475,14 +483,6 @@
       "estimated_return": "Nov 30",
       "status": "Injured Reserve",
       "comment": "Sep 29: ir-nr"
-    },
-    {
-      "player": "Jonathan Marchessault",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Nov 5",
-      "status": "Day-To-Day",
-      "comment": ""
     },
     {
       "player": "Seamus Casey",
@@ -789,14 +789,6 @@
       "comment": "Nov 4: Gourde (hip) will miss Thursday's game against Chicago, but he might be available at some point during the upcoming four-game road trip, per Benjamin Pierce of the Lightning's official site."
     },
     {
-      "player": "Zemgus Girgensons",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Nov 5",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "John Tavares",
       "team": null,
       "position": "C",
@@ -869,12 +861,20 @@
       "comment": "Sep 29: ir-nr"
     },
     {
+      "player": "Nate Schmidt",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Nov 7",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Kailer Yamamoto",
       "team": null,
       "position": "RW",
-      "estimated_return": "Nov 5",
-      "status": "Day-To-Day",
-      "comment": ""
+      "estimated_return": "Nov 7",
+      "status": "Out",
+      "comment": "Nov 5: Yamamoto (upper body) won't play Thursday versus the Canadiens."
     },
     {
       "player": "John Marino",
@@ -896,8 +896,8 @@
       "player": "Tom Willander",
       "team": null,
       "position": "D",
-      "estimated_return": "Nov 5",
-      "status": "Day-To-Day",
+      "estimated_return": "Nov 7",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -963,6 +963,14 @@
       "estimated_return": "Nov 14",
       "status": "Injured Reserve",
       "comment": "Sep 29: ir-nr"
+    },
+    {
+      "player": "Haydn Fleury",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Nov 8",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Josh Morrissey",
