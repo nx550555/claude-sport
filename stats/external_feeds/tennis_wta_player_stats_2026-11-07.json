@@ -1,7 +1,7 @@
 {
   "tour": "wta",
   "source_note": "tennisabstract Match Charting Project (MCP) Leaders - last 52 weeks",
-  "fetched_at": "2026-11-07T04:25:26.048188+09:00",
+  "fetched_at": "2026-11-07T14:42:56.633894+09:00",
   "serve": {
     "source": "https://tennisabstract.com/reports/mcp_leaders_serve_women_last52.html",
     "headers": [

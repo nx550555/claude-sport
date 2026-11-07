@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-11-07T04:25:41.100084+09:00",
+  "fetched_at": "2026-11-07T14:43:09.993009+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -85,6 +85,14 @@
       "comment": "Oct 13: Grzelcyk (lower body) suffered a \"flare-up\" and could be out for at least \"a few days,\" head coach Lindy Ruff told Rachel Lenzi of The Buffalo News on Tuesday."
     },
     {
+      "player": "Kevin Bahl",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Nov 8",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Jonathan Huberdeau",
       "team": null,
       "position": "LW",
@@ -160,9 +168,25 @@
       "player": "Zachary L'Heureux",
       "team": null,
       "position": "LW",
-      "estimated_return": "Nov 7",
+      "estimated_return": "Nov 27",
       "status": "Injured Reserve",
       "comment": "Oct 23: ir-lt"
+    },
+    {
+      "player": "Dmitri Voronkov",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Nov 10",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Sean Monahan",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 10",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Miro Heiskanen",
@@ -357,6 +381,14 @@
       "comment": "Sep 17: Gadjovich (upper body) is out indefinitely, the team announced Thursday."
     },
     {
+      "player": "Alex Turcotte",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 7",
+      "status": "Injured Reserve",
+      "comment": "Nov 6: Turcotte (undisclosed) has been upgraded to day-to-day according to head coach Peter Laviolette, per Zach Dooley of the Kings' official site on Friday."
+    },
+    {
       "player": "Mats Zuccarello",
       "team": null,
       "position": "RW",
@@ -373,14 +405,6 @@
       "comment": "Oct 29: Head coach Peter Laviolette said Thursday that Fiala (lower leg) remains on a week-to-week timeline, Zach Dooley of the Kings' official site reports."
     },
     {
-      "player": "Alex Turcotte",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Nov 7",
-      "status": "Injured Reserve",
-      "comment": ""
-    },
-    {
       "player": "Jakub Dvorak",
       "team": null,
       "position": "D",
@@ -395,6 +419,14 @@
       "estimated_return": "Nov 7",
       "status": "Injured Reserve",
       "comment": "Sep 24: Jenik (undisclosed) was placed on non-roster injured reserve by Los Angeles on Thursday, per Zach Dooley of LA Kings Insider."
+    },
+    {
+      "player": "Michael McCarron",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 7",
+      "status": "Day-To-Day",
+      "comment": "Nov 6: McCarron (undisclosed) didn't finish Friday's 4-1 win over the Sharks and is questionable for Saturday's game against Tampa Bay, according to Michael Russo of The Athletic."
     },
     {
       "player": "Nick Foligno",
@@ -539,14 +571,6 @@
       "estimated_return": "Nov 9",
       "status": "Injured Reserve",
       "comment": "Nov 5: Durzi (undisclosed) was put on injured reserve Thursday, per Mollie Walker of the New York Post."
-    },
-    {
-      "player": "Joonas Korpisalo",
-      "team": null,
-      "position": "G",
-      "estimated_return": "Nov 9",
-      "status": "Injured Reserve",
-      "comment": "Nov 4: Korpisalo (foot) was reassigned to AHL Hartford on Wednesday for a conditioning stint, Mollie Walker of the New York Post."
     },
     {
       "player": "Igor Shesterkin",
