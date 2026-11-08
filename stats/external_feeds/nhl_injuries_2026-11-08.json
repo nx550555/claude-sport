@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-11-08T02:43:22.013814+09:00",
+  "fetched_at": "2026-11-08T14:46:18.830352+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -42,7 +42,7 @@
       "position": "C",
       "estimated_return": "Nov 21",
       "status": "Injured Reserve",
-      "comment": "Nov 7: Hagens (back) was put on injured reserve Saturday."
+      "comment": "Nov 7: Head coach Marco Sturm announced Saturday that Hagens (back) is expected to miss multiple weeks, per Jack Studley of Boston Hockey Now."
     },
     {
       "player": "Matthew Poitras",
@@ -104,7 +104,7 @@
       "player": "Jonathan Huberdeau",
       "team": null,
       "position": "LW",
-      "estimated_return": "Nov 11",
+      "estimated_return": "Nov 21",
       "status": "Injured Reserve",
       "comment": "Nov 6: Huberdeau (hip) took the ice in a regular jersey Friday, Pat Steinberg of QR Calgary 770 AM reports."
     },
@@ -125,6 +125,14 @@
       "comment": ""
     },
     {
+      "player": "William Carrier",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Nov 12",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Jordan Staal",
       "team": null,
       "position": "C",
@@ -136,7 +144,7 @@
       "player": "Bowen Byram",
       "team": null,
       "position": "D",
-      "estimated_return": "Nov 7",
+      "estimated_return": "Nov 14",
       "status": "Injured Reserve",
       "comment": "Nov 3: Byram (upper body) was placed on injured reserve Tuesday."
     },
@@ -189,14 +197,6 @@
       "comment": ""
     },
     {
-      "player": "Sam Steel",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Nov 7",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Kyle Capobianco",
       "team": null,
       "position": "D",
@@ -229,20 +229,20 @@
       "comment": "Sep 29: ir-nr"
     },
     {
+      "player": "John Gibson",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Nov 10",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Albert Johansson",
       "team": null,
       "position": "D",
       "estimated_return": "Nov 12",
       "status": "Injured Reserve",
       "comment": "Nov 6: Johansson (undisclosed) will be with the Red Wings for their upcoming four-game road trip, Ansar Khan of MLive.com reports Friday."
-    },
-    {
-      "player": "John Gibson",
-      "team": null,
-      "position": "G",
-      "estimated_return": "Nov 7",
-      "status": "Day-To-Day",
-      "comment": "Nov 6: Gibson (lower body) participated in Friday's practice session, Helene St. James of the Detroit Free Press reports."
     },
     {
       "player": "Marco Kasper",
@@ -277,12 +277,12 @@
       "comment": "Oct 14: Edvinsson (contract dispute) is on the Red Wings' injured, non-roster list, per the NHL media site Wednesday."
     },
     {
-      "player": "Tristan Jarry",
+      "player": "Ryan Nugent-Hopkins",
       "team": null,
-      "position": "G",
-      "estimated_return": "Nov 7",
+      "position": "C",
+      "estimated_return": "Nov 9",
       "status": "Day-To-Day",
-      "comment": ""
+      "comment": "Nov 8: Nugent-Hopkins took a puck to the side of the head in Saturday's game versus the Canucks, Derek Van Diest of NHL.com reports. Per the Sportsnet broadcast, the forward will not finish the game."
     },
     {
       "player": "Isaac Howard",
@@ -291,22 +291,6 @@
       "estimated_return": "Nov 17",
       "status": "Injured Reserve",
       "comment": ""
-    },
-    {
-      "player": "Zach Hyman",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Nov 7",
-      "status": "Injured Reserve",
-      "comment": ""
-    },
-    {
-      "player": "Devon Levi",
-      "team": null,
-      "position": "G",
-      "estimated_return": "Nov 9",
-      "status": "Injured Reserve",
-      "comment": "Oct 24: Levi (undisclosed) is expected to miss a few weeks, per Jason Gregor of Sports 1440 Edmonton."
     },
     {
       "player": "Alec Regula",
@@ -341,20 +325,20 @@
       "comment": "Sep 29: Janmark (undisclosed) does not have a timetable for his return from injury."
     },
     {
-      "player": "Atro Leppanen",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Nov 28",
-      "status": "Injured Reserve",
-      "comment": "Sep 29: ir-nr"
-    },
-    {
       "player": "Anton Lundell",
       "team": null,
       "position": "C",
       "estimated_return": "Nov 8",
       "status": "Out",
-      "comment": "Nov 7: Lundell (undisclosed) won't play against Washington on Saturday, Rob Darragh of the Panthers' official site reports."
+      "comment": "Nov 7: Lundell (undisclosed) is considered questionable to play Sunday versus the Bruins, George Richards of Florida Hockey Now reports."
+    },
+    {
+      "player": "Sandis Vilmanis",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Nov 12",
+      "status": "Out",
+      "comment": "Nov 7: Vilmanis (undisclosed) will probably miss a few games, according to George Richards of Florida Hockey Now on Saturday."
     },
     {
       "player": "Brad Marchand",
@@ -381,14 +365,6 @@
       "comment": "Sep 17: Gadjovich (upper body) is out indefinitely, the team announced Thursday."
     },
     {
-      "player": "Alex Turcotte",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Nov 7",
-      "status": "Injured Reserve",
-      "comment": "Nov 6: Turcotte (undisclosed) has been upgraded to day-to-day according to head coach Peter Laviolette, per Zach Dooley of the Kings' official site on Friday."
-    },
-    {
       "player": "Mats Zuccarello",
       "team": null,
       "position": "RW",
@@ -400,7 +376,7 @@
       "player": "Kevin Fiala",
       "team": null,
       "position": "LW",
-      "estimated_return": "Nov 7",
+      "estimated_return": "Nov 14",
       "status": "Injured Reserve",
       "comment": "Oct 29: Head coach Peter Laviolette said Thursday that Fiala (lower leg) remains on a week-to-week timeline, Zach Dooley of the Kings' official site reports."
     },
@@ -416,7 +392,7 @@
       "player": "Jan Jenik",
       "team": null,
       "position": "C",
-      "estimated_return": "Nov 7",
+      "estimated_return": "Nov 28",
       "status": "Injured Reserve",
       "comment": "Sep 24: Jenik (undisclosed) was placed on non-roster injured reserve by Los Angeles on Thursday, per Zach Dooley of LA Kings Insider."
     },
@@ -424,25 +400,9 @@
       "player": "Michael McCarron",
       "team": null,
       "position": "C",
-      "estimated_return": "Nov 7",
-      "status": "Day-To-Day",
-      "comment": "Nov 6: McCarron (undisclosed) didn't finish Friday's 4-1 win over the Sharks and is questionable for Saturday's game against Tampa Bay, according to Michael Russo of The Athletic."
-    },
-    {
-      "player": "Nick Foligno",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Nov 7",
-      "status": "Injured Reserve",
-      "comment": "Nov 6: Foligno (upper body) might be available to face the Lightning on Saturday, Michael Russo of The Athletic reports."
-    },
-    {
-      "player": "Marcus Foligno",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Nov 7",
-      "status": "Injured Reserve",
-      "comment": "Nov 6: Foligno (lower body) has been ruled out for Friday's game against the Sharks but could play in Saturday's matchup against the Lightning, Michael Russo of The Athletic reports."
+      "estimated_return": "Nov 10",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Filip Gustavsson",
@@ -469,6 +429,14 @@
       "comment": "Nov 5: Faber (skull) skated with his teammates for the first time Thursday, Joe Smith of The Athletic reports."
     },
     {
+      "player": "Josh Anderson",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Nov 10",
+      "status": "Out",
+      "comment": "Nov 7: Anderson (personal) won't play against Toronto on Saturday, Renaud Lavoie of TVA Sports reports."
+    },
+    {
       "player": "Ivan Demidov",
       "team": null,
       "position": "RW",
@@ -488,7 +456,7 @@
       "player": "Sam Montembeault",
       "team": null,
       "position": "G",
-      "estimated_return": "Nov 7",
+      "estimated_return": "Nov 10",
       "status": "Injured Reserve",
       "comment": "Oct 31: Montembeault (lower body) is considered day-to-day, according to Renaud Lavoie of TVA Sports on Saturday."
     },
@@ -507,14 +475,6 @@
       "estimated_return": "Nov 30",
       "status": "Injured Reserve",
       "comment": "Sep 29: ir-nr"
-    },
-    {
-      "player": "Jonathan Marchessault",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Nov 7",
-      "status": "Day-To-Day",
-      "comment": ""
     },
     {
       "player": "Seamus Casey",
@@ -562,6 +522,14 @@
       "position": "D",
       "estimated_return": "Apr 8",
       "status": "Injured Reserve",
+      "comment": ""
+    },
+    {
+      "player": "Alberts Smits",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Nov 9",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -725,6 +693,14 @@
       "comment": "Sep 28: Keyser (upper body) was placed on non-roster injured reserve by the Sharks on Monday, Curtis Pashelka of The San Jose Mercury News reports."
     },
     {
+      "player": "Nikke Kokko",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Nov 14",
+      "status": "Injured Reserve",
+      "comment": "Nov 7: ir-nr"
+    },
+    {
       "player": "Curtis Douglas",
       "team": null,
       "position": "C",
@@ -765,14 +741,6 @@
       "comment": "Sep 30: O'Brien (lower body) was placed on non-roster injured reserve Wednesday."
     },
     {
-      "player": "Mason McTavish",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Nov 7",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Logan Mailloux",
       "team": null,
       "position": "D",
@@ -808,9 +776,17 @@
       "player": "Yanni Gourde",
       "team": null,
       "position": "C",
-      "estimated_return": "Nov 7",
+      "estimated_return": "Nov 12",
       "status": "Injured Reserve",
       "comment": "Nov 4: Gourde (hip) will miss Thursday's game against Chicago, but he might be available at some point during the upcoming four-game road trip, per Benjamin Pierce of the Lightning's official site."
+    },
+    {
+      "player": "Morgan Rielly",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Nov 8",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Kirill Marchenko",
@@ -877,20 +853,20 @@
       "comment": "Sep 29: ir-nr"
     },
     {
+      "player": "Nate Schmidt",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Nov 11",
+      "status": "Out",
+      "comment": "Nov 7: Schmidt (upper body) will miss Saturday's game in Ottawa."
+    },
+    {
       "player": "Kailer Yamamoto",
       "team": null,
       "position": "RW",
       "estimated_return": "Nov 11",
       "status": "Injured Reserve",
       "comment": "Nov 7: Yamamoto (upper body) was placed on injured reserve Friday."
-    },
-    {
-      "player": "Nate Schmidt",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Nov 7",
-      "status": "Day-To-Day",
-      "comment": ""
     },
     {
       "player": "John Marino",
@@ -912,8 +888,8 @@
       "player": "Tom Willander",
       "team": null,
       "position": "D",
-      "estimated_return": "Nov 7",
-      "status": "Day-To-Day",
+      "estimated_return": "Nov 9",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -936,7 +912,7 @@
       "player": "Mackenzie MacEachern",
       "team": null,
       "position": "LW",
-      "estimated_return": "Nov 7",
+      "estimated_return": "Nov 29",
       "status": "Injured Reserve",
       "comment": "Sep 29: ir-nr"
     },
@@ -984,9 +960,9 @@
       "player": "Elias Salomonsson",
       "team": null,
       "position": "D",
-      "estimated_return": "Nov 8",
-      "status": "Day-To-Day",
-      "comment": ""
+      "estimated_return": "Nov 30",
+      "status": "Injured Reserve",
+      "comment": "Nov 7: ir-nr"
     },
     {
       "player": "Haydn Fleury",
