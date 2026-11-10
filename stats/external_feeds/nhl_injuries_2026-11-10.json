@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-11-10T07:15:18.909732+09:00",
+  "fetched_at": "2026-11-10T16:00:48.469269+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -153,8 +153,8 @@
       "team": null,
       "position": "D",
       "estimated_return": "Dec 27",
-      "status": "Out",
-      "comment": "Oct 30: Manson (ankle) is expected to miss the next eight weeks, Corey Masisak of The Denver Post reports Friday."
+      "status": "Injured Reserve",
+      "comment": ""
     },
     {
       "player": "Zachary L'Heureux",
