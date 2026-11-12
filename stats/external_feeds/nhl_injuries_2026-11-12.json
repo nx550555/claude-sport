@@ -1,9 +1,17 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-11-12T04:31:02.089778+09:00",
+  "fetched_at": "2026-11-12T15:57:14.887316+09:00",
   "starting_goalies": [],
   "injuries": [
+    {
+      "player": "Ryan Poehling",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Dec 6",
+      "status": "Injured Reserve",
+      "comment": "Nov 11: Poehling (lower body) was placed on long-term injured reserve by the Ducks on Wednesday."
+    },
     {
       "player": "Ian Moore",
       "team": null,
@@ -19,14 +27,6 @@
       "estimated_return": "Nov 15",
       "status": "Injured Reserve",
       "comment": "Nov 2: Greer (upper body) was placed on injured reserve Monday."
-    },
-    {
-      "player": "Ryan Poehling",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Nov 25",
-      "status": "Injured Reserve",
-      "comment": "Oct 13: Poehling (knee) is expected to miss 6-8 weeks with an MCL sprain."
     },
     {
       "player": "James Hagens",
@@ -90,14 +90,6 @@
       "position": "C",
       "estimated_return": "Nov 28",
       "status": "Out",
-      "comment": ""
-    },
-    {
-      "player": "Samuel Honzek",
-      "team": null,
-      "position": "LW",
-      "estimated_return": "Nov 15",
-      "status": "Injured Reserve",
       "comment": ""
     },
     {
@@ -240,7 +232,7 @@
       "player": "Frederik Andersen",
       "team": null,
       "position": "G",
-      "estimated_return": "Dec 30",
+      "estimated_return": "Jan 9",
       "status": "Injured Reserve",
       "comment": "Sep 29: Andersen (knee) isn't expected back until \"maybe\" December, head coach Mike Babcock told NHL.com on Tuesday."
     },
@@ -283,6 +275,14 @@
       "estimated_return": "Nov 28",
       "status": "Injured Reserve",
       "comment": "Sep 17: Gadjovich (upper body) is out indefinitely, the team announced Thursday."
+    },
+    {
+      "player": "Drew Doughty",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Nov 12",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Erik Gustafsson",
@@ -368,9 +368,17 @@
       "player": "Jonathan Marchessault",
       "team": null,
       "position": "RW",
-      "estimated_return": "Nov 11",
-      "status": "Day-To-Day",
+      "estimated_return": "Nov 13",
+      "status": "Out",
       "comment": ""
+    },
+    {
+      "player": "Anthony Mantha",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Dec 5",
+      "status": "Injured Reserve",
+      "comment": "Nov 11: Mantha (throat) was placed on long-term injured reserve by the Devils on Wednesday, retroactive to Nov. 7."
     },
     {
       "player": "Johnathan Kovacevic",
@@ -378,14 +386,6 @@
       "position": "D",
       "estimated_return": "Nov 12",
       "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Anthony Mantha",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Nov 14",
-      "status": "Out",
       "comment": ""
     },
     {
@@ -525,12 +525,12 @@
       "comment": "Oct 15: Eklund had surgery to repair a torn ankle tendon and will be out 10-12 weeks, Bruce Garrioch of Postmedia reports Thursday."
     },
     {
-      "player": "Rasmus Ristolainen",
+      "player": "Noel Acciari",
       "team": null,
-      "position": "D",
-      "estimated_return": "Nov 11",
-      "status": "Injured Reserve",
-      "comment": "Nov 11: Ristolainen (hand) is considered a game-time decision for Wednesday's game against the Oilers, Jackie Spiegel of The Philadelphia Inquirer reports."
+      "position": "C",
+      "estimated_return": "Nov 14",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Nikita Grebenkin",
@@ -539,14 +539,6 @@
       "estimated_return": "Feb 13",
       "status": "Injured Reserve",
       "comment": "Oct 10: Grebenkin (back) underwent successful surgery and is expected to miss at least four months."
-    },
-    {
-      "player": "Ville Koivunen",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Nov 11",
-      "status": "Day-To-Day",
-      "comment": ""
     },
     {
       "player": "Elmer Soderblom",
@@ -568,7 +560,7 @@
       "player": "Trevor van Riemsdyk",
       "team": null,
       "position": "D",
-      "estimated_return": "Nov 11",
+      "estimated_return": "Nov 14",
       "status": "Injured Reserve",
       "comment": ""
     },
@@ -677,6 +669,14 @@
       "comment": "Sep 30: Tucker had arthroscopic knee surgery and will be re-assessed in six weeks, the team announced Wednesday."
     },
     {
+      "player": "Erik Cernak",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Nov 14",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Brayden Point",
       "team": null,
       "position": "C",
@@ -773,11 +773,19 @@
       "comment": "Sep 29: ir-nr"
     },
     {
-      "player": "Dylan Guenther",
+      "player": "Nick Schmaltz",
       "team": null,
-      "position": "RW",
-      "estimated_return": "Nov 11",
+      "position": "C",
+      "estimated_return": "Nov 12",
       "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Logan Cooley",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 12",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -785,16 +793,16 @@
       "team": null,
       "position": "D",
       "estimated_return": "Nov 14",
-      "status": "Out",
-      "comment": "Nov 9: Schmidt (upper body) has no timeline for his return to the lineup, per Brogan Houston of the Deseret News on Monday."
+      "status": "Injured Reserve",
+      "comment": ""
     },
     {
-      "player": "Kailer Yamamoto",
+      "player": "Dylan Guenther",
       "team": null,
       "position": "RW",
-      "estimated_return": "Nov 11",
+      "estimated_return": "Dec 5",
       "status": "Injured Reserve",
-      "comment": "Nov 7: Yamamoto (upper body) was placed on injured reserve Friday."
+      "comment": ""
     },
     {
       "player": "John Marino",
@@ -850,14 +858,6 @@
       "position": "D",
       "estimated_return": "Nov 24",
       "status": "Out",
-      "comment": ""
-    },
-    {
-      "player": "Parker Wotherspoon",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Nov 11",
-      "status": "Injured Reserve",
       "comment": ""
     },
     {
