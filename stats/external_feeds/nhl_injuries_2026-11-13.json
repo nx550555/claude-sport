@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-11-13T04:49:12.899957+09:00",
+  "fetched_at": "2026-11-13T15:19:35.397770+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -37,20 +37,12 @@
       "comment": "Nov 7: Head coach Marco Sturm announced Saturday that Hagens (back) is expected to miss multiple weeks, per Jack Studley of Boston Hockey Now."
     },
     {
-      "player": "Alex Lyon",
-      "team": null,
-      "position": "G",
-      "estimated_return": "Nov 14",
-      "status": "Injured Reserve",
-      "comment": "Nov 10: Lyon (shoulder) will travel with the Sabres during the team's upcoming road trip, per Heather Engel of NHL.com."
-    },
-    {
       "player": "Konsta Helenius",
       "team": null,
       "position": "C",
-      "estimated_return": "Nov 17",
-      "status": "Out",
-      "comment": "Nov 2: Helenius (upper body) is week-to-week, according to Matthew Fairburn of The Athletic on Monday."
+      "estimated_return": "Nov 19",
+      "status": "Injured Reserve",
+      "comment": ""
     },
     {
       "player": "Justin Danforth",
@@ -101,20 +93,28 @@
       "comment": ""
     },
     {
-      "player": "Patrick Kane",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Nov 12",
-      "status": "Injured Reserve",
-      "comment": "Nov 12: Kane (upper body) will likely be in the lineup versus Buffalo on Thursday, Mark Lazerus of The Athletic reports."
-    },
-    {
       "player": "Bowen Byram",
       "team": null,
       "position": "D",
       "estimated_return": "Nov 14",
       "status": "Injured Reserve",
       "comment": "Nov 3: Byram (upper body) was placed on injured reserve Tuesday."
+    },
+    {
+      "player": "Cale Makar",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Nov 12",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Nathan MacKinnon",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 14",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Josh Manson",
@@ -131,6 +131,14 @@
       "estimated_return": "Nov 27",
       "status": "Injured Reserve",
       "comment": "Oct 23: ir-lt"
+    },
+    {
+      "player": "Lian Bichsel",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Nov 17",
+      "status": "Out",
+      "comment": "Nov 12: Bichsel (lower body) is expected to miss at least two games after getting injured Thursday versus the Jets, Robert Tiffin of NHL.com reports."
     },
     {
       "player": "Miro Heiskanen",
@@ -155,14 +163,6 @@
       "estimated_return": "Nov 17",
       "status": "Injured Reserve",
       "comment": "Oct 24: Back was placed on long-term injured reserve on Saturday."
-    },
-    {
-      "player": "Matt Duchene",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Jan 12",
-      "status": "Injured Reserve",
-      "comment": "Oct 12: Duchene will be out for approximately three months after undergoing surgery to repair a core injury, the team announced Monday."
     },
     {
       "player": "Luke Krys",
@@ -261,19 +261,11 @@
       "comment": "Sep 17: Gadjovich (upper body) is out indefinitely, the team announced Thursday."
     },
     {
-      "player": "Drew Doughty",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Nov 12",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Erik Gustafsson",
       "team": null,
       "position": "D",
-      "estimated_return": "Nov 12",
-      "status": "Day-To-Day",
+      "estimated_return": "Nov 14",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -283,6 +275,14 @@
       "estimated_return": "Nov 28",
       "status": "Injured Reserve",
       "comment": "Sep 24: ir-nr"
+    },
+    {
+      "player": "Joel Eriksson Ek",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 14",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Brock Faber",
@@ -299,6 +299,14 @@
       "estimated_return": "Nov 19",
       "status": "Injured Reserve",
       "comment": "Nov 5: Gustavsson (hip) will travel with the Wild during the team's upcoming three-game road trip, per Joe Smith of The Athletic."
+    },
+    {
+      "player": "Chris Kreider",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Nov 14",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Ivan Demidov",
@@ -629,6 +637,14 @@
       "comment": "Sep 30: Tucker had arthroscopic knee surgery and will be re-assessed in six weeks, the team announced Wednesday."
     },
     {
+      "player": "Anthony Cirelli",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 14",
+      "status": "Out",
+      "comment": "Nov 12: Cirelli (undisclosed) will miss Thursday's game versus the Blue Jackets, Mark Scheig of The Hockey Writers reports."
+    },
+    {
       "player": "Erik Cernak",
       "team": null,
       "position": "D",
@@ -645,12 +661,12 @@
       "comment": ""
     },
     {
-      "player": "Zack MacEwen",
+      "player": "Morgan Rielly",
       "team": null,
-      "position": "C",
-      "estimated_return": "Nov 12",
-      "status": "Day-To-Day",
-      "comment": "Nov 12: MacEwen (wrist) is a game-time decision for Thursday's home clash against the Wild, per Andre Leal of The Hockey News."
+      "position": "D",
+      "estimated_return": "Nov 14",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Colton Sissons",
@@ -658,14 +674,6 @@
       "position": "C",
       "estimated_return": "Nov 19",
       "status": "Injured Reserve",
-      "comment": ""
-    },
-    {
-      "player": "Morgan Rielly",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Nov 12",
-      "status": "Day-To-Day",
       "comment": ""
     },
     {
@@ -733,6 +741,14 @@
       "comment": "Sep 29: ir-nr"
     },
     {
+      "player": "Nick Schmaltz",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 14",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Nate Schmidt",
       "team": null,
       "position": "D",
@@ -747,14 +763,6 @@
       "estimated_return": "Nov 14",
       "status": "Out",
       "comment": "Nov 12: Cooley (upper body) will miss Thursday's game against St. Louis, per Cole Bagley of KSL Sports."
-    },
-    {
-      "player": "Nick Schmaltz",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Nov 12",
-      "status": "Day-To-Day",
-      "comment": "Nov 12: Schmaltz (lower body) is considered a game-time decision for Thursday's matchup against St. Louis, Cole Bagley of KSL Sports reports."
     },
     {
       "player": "Dylan Guenther",
@@ -843,6 +851,14 @@
       "estimated_return": "Nov 14",
       "status": "Injured Reserve",
       "comment": "Sep 29: ir-nr"
+    },
+    {
+      "player": "Dylan DeMelo",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Nov 19",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Elias Salomonsson",
