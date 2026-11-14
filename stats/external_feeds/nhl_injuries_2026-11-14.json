@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-11-14T04:31:59.406467+09:00",
+  "fetched_at": "2026-11-14T15:01:23.713381+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -163,22 +163,6 @@
       "estimated_return": "Nov 17",
       "status": "Injured Reserve",
       "comment": "Oct 24: Back was placed on long-term injured reserve on Saturday."
-    },
-    {
-      "player": "Matt Duchene",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Jan 12",
-      "status": "Injured Reserve",
-      "comment": "Oct 12: Duchene will be out for approximately three months after undergoing surgery to repair a core injury, the team announced Monday."
-    },
-    {
-      "player": "Luke Krys",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Nov 13",
-      "status": "Injured Reserve",
-      "comment": "Sep 29: ir-nr"
     },
     {
       "player": "Albert Johansson",
@@ -352,9 +336,17 @@
       "player": "Jonathan Marchessault",
       "team": null,
       "position": "RW",
-      "estimated_return": "Nov 13",
-      "status": "Day-To-Day",
+      "estimated_return": "Nov 15",
+      "status": "Out",
       "comment": ""
+    },
+    {
+      "player": "Seamus Casey",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Nov 21",
+      "status": "Injured Reserve",
+      "comment": "Nov 13: Casey (knee) was moved to long-term injured reserve on Friday, per PuckPedia."
     },
     {
       "player": "Johnathan Kovacevic",
@@ -379,14 +371,6 @@
       "estimated_return": "Dec 5",
       "status": "Injured Reserve",
       "comment": "Nov 11: Mantha (throat) was placed on long-term injured reserve by the Devils on Wednesday, retroactive to Nov. 7."
-    },
-    {
-      "player": "Seamus Casey",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Nov 21",
-      "status": "Injured Reserve",
-      "comment": "Oct 2: Casey will be out of action for 6-8 weeks after undergoing a knee procedure, Kristy Flannery of The Hockey News reports Friday."
     },
     {
       "player": "Jean-Gabriel Pageau",
@@ -547,6 +531,14 @@
       "estimated_return": "Nov 28",
       "status": "Injured Reserve",
       "comment": "Sep 27: Graves (lower body) is out indefinitely and was placed on injured reserve Sunday."
+    },
+    {
+      "player": "Alexander Wennberg",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 14",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Igor Chernyshov",
@@ -749,15 +741,15 @@
       "comment": "Sep 29: ir-nr"
     },
     {
-      "player": "Nick Schmaltz",
+      "player": "Logan Cooley",
       "team": null,
       "position": "C",
-      "estimated_return": "Nov 14",
-      "status": "Day-To-Day",
+      "estimated_return": "Nov 16",
+      "status": "Out",
       "comment": ""
     },
     {
-      "player": "Logan Cooley",
+      "player": "Nick Schmaltz",
       "team": null,
       "position": "C",
       "estimated_return": "Nov 14",
@@ -797,12 +789,12 @@
       "comment": ""
     },
     {
-      "player": "Filip Chytil",
+      "player": "Guillaume Brisebois",
       "team": null,
-      "position": "C",
-      "estimated_return": "Nov 13",
+      "position": "D",
+      "estimated_return": "Nov 19",
       "status": "Injured Reserve",
-      "comment": "Nov 13: Chytil (shoulder) looks set to return to the lineup against the Rangers on Friday, Jeff Paterson of CanucksArmy.com reports."
+      "comment": ""
     },
     {
       "player": "Mackenzie MacEachern",
@@ -848,9 +840,9 @@
       "player": "Isak Rosen",
       "team": null,
       "position": "RW",
-      "estimated_return": "Nov 14",
-      "status": "Day-To-Day",
-      "comment": "Nov 13: Rosen was not on the ice Friday due to an undisclosed injury, Ken Wiebe of The Winnipeg Free Press reports."
+      "estimated_return": "Nov 17",
+      "status": "Out",
+      "comment": "Nov 13: Rosen (undisclosed) has been ruled out for Saturday's game against the Blackhawks, Ken Wiebe of The Winnipeg Free Press reports."
     },
     {
       "player": "Dylan DeMelo",
@@ -864,7 +856,7 @@
       "player": "Elias Salomonsson",
       "team": null,
       "position": "D",
-      "estimated_return": "Nov 30",
+      "estimated_return": "Nov 17",
       "status": "Injured Reserve",
       "comment": "Nov 7: ir-nr"
     },
