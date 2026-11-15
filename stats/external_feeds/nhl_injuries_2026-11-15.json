@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-11-15T02:55:04.840398+09:00",
+  "fetched_at": "2026-11-15T15:04:51.112424+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -56,7 +56,7 @@
       "player": "Matt Grzelcyk",
       "team": null,
       "position": "D",
-      "estimated_return": "Nov 14",
+      "estimated_return": "Nov 22",
       "status": "Injured Reserve",
       "comment": "Oct 13: Grzelcyk (lower body) suffered a \"flare-up\" and could be out for at least \"a few days,\" head coach Lindy Ruff told Rachel Lenzi of The Buffalo News on Tuesday."
     },
@@ -85,6 +85,14 @@
       "comment": ""
     },
     {
+      "player": "Tyler Bertuzzi",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Nov 17",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Bowen Byram",
       "team": null,
       "position": "D",
@@ -104,7 +112,7 @@
       "player": "Nathan MacKinnon",
       "team": null,
       "position": "C",
-      "estimated_return": "Nov 18",
+      "estimated_return": "Dec 12",
       "status": "Out",
       "comment": "Nov 14: MacKinnon (lower body) will miss at least one month, per Corey Masisak of The Denver Post on Saturday."
     },
@@ -125,6 +133,14 @@
       "comment": "Oct 23: ir-lt"
     },
     {
+      "player": "Miro Heiskanen",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Nov 17",
+      "status": "Out",
+      "comment": "Nov 14: Heiskanen (upper body) is doubtful for Sunday's matchup against Florida, per Mike Heika of the Stars' official site."
+    },
+    {
       "player": "Kyle Capobianco",
       "team": null,
       "position": "D",
@@ -141,14 +157,6 @@
       "comment": "Nov 14: Bichsel (lower body) was placed on injured reserve Saturday."
     },
     {
-      "player": "Miro Heiskanen",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Nov 17",
-      "status": "Out",
-      "comment": "Nov 13: Heiskanen (upper body) has been ruled out against the Sabres on Saturday, Stars TV host Brien Rea reports."
-    },
-    {
       "player": "Oskar Back",
       "team": null,
       "position": "C",
@@ -157,10 +165,18 @@
       "comment": "Oct 24: Back was placed on long-term injured reserve on Saturday."
     },
     {
+      "player": "Matt Duchene",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Jan 12",
+      "status": "Injured Reserve",
+      "comment": "Oct 12: Duchene will be out for approximately three months after undergoing surgery to repair a core injury, the team announced Monday."
+    },
+    {
       "player": "Albert Johansson",
       "team": null,
       "position": "D",
-      "estimated_return": "Nov 14",
+      "estimated_return": "Nov 18",
       "status": "Injured Reserve",
       "comment": "Nov 6: Johansson (undisclosed) will be with the Red Wings for their upcoming four-game road trip, Ansar Khan of MLive.com reports Friday."
     },
@@ -248,8 +264,16 @@
       "player": "Erik Gustafsson",
       "team": null,
       "position": "D",
-      "estimated_return": "Nov 14",
-      "status": "Day-To-Day",
+      "estimated_return": "Nov 17",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Artemi Panarin",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Nov 17",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -272,9 +296,9 @@
       "player": "Mike Matheson",
       "team": null,
       "position": "D",
-      "estimated_return": "Nov 14",
-      "status": "Day-To-Day",
-      "comment": "Nov 14: Matheson (undisclosed) is considered a game-time decision for Saturday's home clash against the Avalanche, per Renaud Lavoie of TVA Sports."
+      "estimated_return": "Nov 16",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Chris Kreider",
@@ -325,6 +349,22 @@
       "comment": ""
     },
     {
+      "player": "Vladislav Kolyachonok",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Nov 18",
+      "status": "Out",
+      "comment": ""
+    },
+    {
+      "player": "Brett Pesce",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Nov 18",
+      "status": "Out",
+      "comment": "Nov 14: Pesce (illness) won't play against Washington on Saturday, Amanda Stein of the Devils' official site reports."
+    },
+    {
       "player": "Seamus Casey",
       "team": null,
       "position": "D",
@@ -341,14 +381,6 @@
       "comment": "Nov 13: The Devils placed Kovacevic (ankle) on injured reserve Friday, retroactive to Nov. 10."
     },
     {
-      "player": "Brett Pesce",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Nov 14",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Anthony Mantha",
       "team": null,
       "position": "RW",
@@ -357,20 +389,20 @@
       "comment": "Nov 11: Mantha (throat) was placed on long-term injured reserve by the Devils on Wednesday, retroactive to Nov. 7."
     },
     {
+      "player": "Logan Stanley",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Nov 17",
+      "status": "Day-To-Day",
+      "comment": "Nov 15: Stanley (lower body) won't return to Saturday's game versus the Ducks."
+    },
+    {
       "player": "Jean-Gabriel Pageau",
       "team": null,
       "position": "C",
-      "estimated_return": "Nov 14",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Mathew Barzal",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Nov 14",
-      "status": "Injured Reserve",
-      "comment": "Nov 9: Barzal (knee) won't be in the lineup against the Sharks on Monday but has been upgraded to day-to-day, Andrew Gross of Newsday reports."
+      "estimated_return": "Nov 17",
+      "status": "Out",
+      "comment": "Nov 14: Pageau (lower body) won't play Saturday versus the Ducks, Andrew Gross of Newsday reports."
     },
     {
       "player": "Calum Ritchie",
@@ -437,6 +469,14 @@
       "comment": ""
     },
     {
+      "player": "Hayden Hodgson",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Nov 17",
+      "status": "Day-To-Day",
+      "comment": "Nov 14: Hodgson sustained a groin injury versus the Penguins on Saturday, Bruce Garrioch of Postmedia reports."
+    },
+    {
       "player": "Nick Cousins",
       "team": null,
       "position": "C",
@@ -469,14 +509,6 @@
       "comment": "Oct 15: Eklund had surgery to repair a torn ankle tendon and will be out 10-12 weeks, Bruce Garrioch of Postmedia reports Thursday."
     },
     {
-      "player": "Noel Acciari",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Nov 14",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Nikita Grebenkin",
       "team": null,
       "position": "RW",
@@ -501,14 +533,6 @@
       "comment": "Oct 22: Rust (lower body) will be re-evaluated in six weeks, Michelle Crechiolo of the Penguins' official site reports Thursday."
     },
     {
-      "player": "Trevor van Riemsdyk",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Nov 19",
-      "status": "Injured Reserve",
-      "comment": ""
-    },
-    {
       "player": "Ryan Graves",
       "team": null,
       "position": "D",
@@ -520,8 +544,8 @@
       "player": "Alexander Wennberg",
       "team": null,
       "position": "C",
-      "estimated_return": "Nov 14",
-      "status": "Day-To-Day",
+      "estimated_return": "Nov 15",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -589,6 +613,22 @@
       "comment": "Sep 30: O'Brien (lower body) was placed on non-roster injured reserve Wednesday."
     },
     {
+      "player": "Aleksanteri Kaskimaki",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 17",
+      "status": "Day-To-Day",
+      "comment": "Nov 14: Kaskimaki sustained an undisclosed injury near the end of Saturday's game versus the Panthers, Lou Korac of NHL.com reports."
+    },
+    {
+      "player": "Philip Broberg",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Nov 17",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Torey Krug",
       "team": null,
       "position": "D",
@@ -616,17 +656,17 @@
       "player": "Erik Cernak",
       "team": null,
       "position": "D",
-      "estimated_return": "Nov 14",
-      "status": "Day-To-Day",
-      "comment": ""
+      "estimated_return": "Nov 17",
+      "status": "Out",
+      "comment": "Nov 14: Cernak (upper body) won't play against Detroit on Saturday, per Diandra Loux of The Hockey News."
     },
     {
       "player": "Anthony Cirelli",
       "team": null,
       "position": "C",
-      "estimated_return": "Nov 14",
-      "status": "Day-To-Day",
-      "comment": ""
+      "estimated_return": "Nov 17",
+      "status": "Out",
+      "comment": "Nov 14: Cirelli (lower body) is set to miss Saturday's game against Detroit, per Diandra Loux of The Hockey News."
     },
     {
       "player": "Brayden Point",
@@ -640,8 +680,8 @@
       "player": "Morgan Rielly",
       "team": null,
       "position": "D",
-      "estimated_return": "Nov 14",
-      "status": "Day-To-Day",
+      "estimated_return": "Nov 17",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -717,19 +757,19 @@
       "comment": "Sep 29: ir-nr"
     },
     {
+      "player": "Nick Schmaltz",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 21",
+      "status": "Out",
+      "comment": "Nov 14: Schmaltz (lower body) isn't expected to play against San Jose on Saturday, and it's unclear when he will be ready to return, Brogan Houston of the Deseret News reports."
+    },
+    {
       "player": "Logan Cooley",
       "team": null,
       "position": "C",
       "estimated_return": "Nov 16",
       "status": "Out",
-      "comment": ""
-    },
-    {
-      "player": "Nick Schmaltz",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Nov 14",
-      "status": "Day-To-Day",
       "comment": ""
     },
     {
