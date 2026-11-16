@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-11-16T03:45:41.953302+09:00",
+  "fetched_at": "2026-11-16T15:03:40.762107+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -11,14 +11,6 @@
       "estimated_return": "Dec 6",
       "status": "Injured Reserve",
       "comment": "Nov 11: Poehling (lower body) was placed on long-term injured reserve by the Ducks on Wednesday."
-    },
-    {
-      "player": "Ian Moore",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Nov 15",
-      "status": "Injured Reserve",
-      "comment": "Nov 11: Moore (lower body) might be an option to play by the end of the week, Derek Lee of The Hockey News reports Wednesday."
     },
     {
       "player": "A.J. Greer",
@@ -141,6 +133,14 @@
       "comment": ""
     },
     {
+      "player": "Tyler Myers",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Nov 17",
+      "status": "Out",
+      "comment": "Nov 15: Myers (upper body) will be evaluated Monday, Robert Tiffin of NHL.com reports."
+    },
+    {
       "player": "Miro Heiskanen",
       "team": null,
       "position": "D",
@@ -173,6 +173,14 @@
       "comment": "Oct 24: Back was placed on long-term injured reserve on Saturday."
     },
     {
+      "player": "Matt Duchene",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Jan 12",
+      "status": "Injured Reserve",
+      "comment": "Oct 12: Duchene will be out for approximately three months after undergoing surgery to repair a core injury, the team announced Monday."
+    },
+    {
       "player": "Albert Johansson",
       "team": null,
       "position": "D",
@@ -195,6 +203,14 @@
       "estimated_return": "Nov 28",
       "status": "Injured Reserve",
       "comment": "Oct 14: Edvinsson (contract dispute) is on the Red Wings' injured, non-roster list, per the NHL media site Wednesday."
+    },
+    {
+      "player": "Ryan Nugent-Hopkins",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 17",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Isaac Howard",
@@ -296,17 +312,17 @@
       "player": "Mike Matheson",
       "team": null,
       "position": "D",
-      "estimated_return": "Nov 19",
+      "estimated_return": "Dec 5",
       "status": "Out",
-      "comment": ""
+      "comment": "Nov 15: Matheson (lower body) will miss approximately 2-3 weeks, the Canadiens announced Sunday."
     },
     {
       "player": "Josh Anderson",
       "team": null,
       "position": "RW",
-      "estimated_return": "Nov 23",
+      "estimated_return": "Dec 14",
       "status": "Injured Reserve",
-      "comment": ""
+      "comment": "Nov 15: Anderson (lower body) will be out for approximately 3-4 weeks, per Renaud Lavoie of TVA Sports on Sunday."
     },
     {
       "player": "Chris Kreider",
@@ -352,8 +368,8 @@
       "player": "Jonathan Marchessault",
       "team": null,
       "position": "RW",
-      "estimated_return": "Nov 15",
-      "status": "Day-To-Day",
+      "estimated_return": "Nov 17",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -525,6 +541,14 @@
       "comment": "Oct 15: Eklund had surgery to repair a torn ankle tendon and will be out 10-12 weeks, Bruce Garrioch of Postmedia reports Thursday."
     },
     {
+      "player": "Denver Barkey",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 17",
+      "status": "Out",
+      "comment": "Nov 15: Barkey (illness) won't play against Edmonton on Sunday, per Adam Kimelman of NHL.com."
+    },
+    {
       "player": "Nikita Grebenkin",
       "team": null,
       "position": "RW",
@@ -557,10 +581,10 @@
       "comment": "Sep 27: Graves (lower body) is out indefinitely and was placed on injured reserve Sunday."
     },
     {
-      "player": "Alexander Wennberg",
+      "player": "Kiefer Sherwood",
       "team": null,
-      "position": "C",
-      "estimated_return": "Nov 15",
+      "position": "LW",
+      "estimated_return": "Nov 17",
       "status": "Day-To-Day",
       "comment": ""
     },
@@ -568,17 +592,25 @@
       "player": "Igor Chernyshov",
       "team": null,
       "position": "LW",
-      "estimated_return": "Nov 28",
+      "estimated_return": "Dec 8",
       "status": "Injured Reserve",
-      "comment": ""
+      "comment": "Nov 15: Head coach Ryan Warsofsky said Sunday that Chernyshov (upper body) is not close to returning to game action, per Curtis Pashelka of The San Jose Mercury News."
     },
     {
       "player": "Quentin Musty",
       "team": null,
       "position": "LW",
-      "estimated_return": "Dec 1",
+      "estimated_return": "Jan 1",
       "status": "Injured Reserve",
-      "comment": "Sep 28: Musty (upper body) was put on non-roster injured reserve Monday, according to Curtis Pashelka of The San Jose Mercury News."
+      "comment": "Nov 15: Head coach Ryan Warsofsky said Sunday that Musty (upper body) isn't close to returning, Curtis Pashelka of The San Jose Mercury News reports."
+    },
+    {
+      "player": "Alexander Wennberg",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 17",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Kyle Keyser",
