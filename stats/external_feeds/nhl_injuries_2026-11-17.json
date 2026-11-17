@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-11-17T06:55:58.514276+09:00",
+  "fetched_at": "2026-11-17T16:41:16.015149+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -32,7 +32,7 @@
       "player": "Konsta Helenius",
       "team": null,
       "position": "C",
-      "estimated_return": "Nov 19",
+      "estimated_return": "Nov 21",
       "status": "Injured Reserve",
       "comment": ""
     },
@@ -163,6 +163,14 @@
       "estimated_return": "Nov 17",
       "status": "Injured Reserve",
       "comment": "Oct 24: Back was placed on long-term injured reserve on Saturday."
+    },
+    {
+      "player": "Matt Duchene",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Jan 12",
+      "status": "Injured Reserve",
+      "comment": "Oct 12: Duchene will be out for approximately three months after undergoing surgery to repair a core injury, the team announced Monday."
     },
     {
       "player": "Albert Johansson",
@@ -429,20 +437,28 @@
       "comment": ""
     },
     {
+      "player": "Sean Durzi",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Nov 22",
+      "status": "Injured Reserve",
+      "comment": "Nov 16: Durzi (lower body) wore a regular jersey during Monday's morning skate and should be ready to play against the Hurricanes on Sunday, Colin Stephenson of Newsday reports."
+    },
+    {
+      "player": "Pavel Dorofeyev",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Nov 22",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Alberts Smits",
       "team": null,
       "position": "D",
       "estimated_return": "Nov 22",
       "status": "Injured Reserve",
       "comment": ""
-    },
-    {
-      "player": "Sean Durzi",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Nov 22",
-      "status": "Injured Reserve",
-      "comment": "Nov 5: Durzi (undisclosed) was put on injured reserve Thursday, per Mollie Walker of the New York Post."
     },
     {
       "player": "Igor Shesterkin",
@@ -779,14 +795,6 @@
       "estimated_return": "Dec 5",
       "status": "Injured Reserve",
       "comment": "Sep 29: ir-nr"
-    },
-    {
-      "player": "Logan Cooley",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Nov 16",
-      "status": "Day-To-Day",
-      "comment": ""
     },
     {
       "player": "Nick Schmaltz",
