@@ -1,9 +1,17 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-11-18T05:46:09.383038+09:00",
+  "fetched_at": "2026-11-18T16:03:14.194884+09:00",
   "starting_goalies": [],
   "injuries": [
+    {
+      "player": "Beckett Sennecke",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Nov 19",
+      "status": "Out",
+      "comment": ""
+    },
     {
       "player": "Ryan Poehling",
       "team": null,
@@ -83,6 +91,14 @@
       "estimated_return": "Nov 19",
       "status": "Day-To-Day",
       "comment": "Nov 17: Kochetkov (illness) did not practice on Tuesday, per Walt Ruff of the Hurricanes' official site."
+    },
+    {
+      "player": "Connor Bedard",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 19",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Bowen Byram",
@@ -293,20 +309,20 @@
       "comment": "Sep 24: ir-nr"
     },
     {
+      "player": "Filip Gustavsson",
+      "team": null,
+      "position": "G",
+      "estimated_return": "Nov 23",
+      "status": "Injured Reserve",
+      "comment": "Nov 17: Gustavsson (hip) could rejoin the Wild on Monday ahead of their game versus the Sharks, Michael Russo of The Athletic reports."
+    },
+    {
       "player": "Olli Maatta",
       "team": null,
       "position": "D",
       "estimated_return": "Nov 25",
       "status": "Injured Reserve",
       "comment": ""
-    },
-    {
-      "player": "Filip Gustavsson",
-      "team": null,
-      "position": "G",
-      "estimated_return": "Nov 19",
-      "status": "Injured Reserve",
-      "comment": "Nov 5: Gustavsson (hip) will travel with the Wild during the team's upcoming three-game road trip, per Joe Smith of The Athletic."
     },
     {
       "player": "Alexandre Texier",
@@ -397,20 +413,20 @@
       "comment": "Nov 13: Casey (knee) was moved to long-term injured reserve on Friday, per PuckPedia."
     },
     {
+      "player": "Jean-Gabriel Pageau",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 19",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Logan Stanley",
       "team": null,
       "position": "D",
       "estimated_return": "Nov 19",
       "status": "Out",
       "comment": ""
-    },
-    {
-      "player": "Jean-Gabriel Pageau",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Nov 17",
-      "status": "Day-To-Day",
-      "comment": "Nov 17: Pageau (lower body) will be a game-time decision ahead of Tuesday's matchup with Columbus, Stefen Rosner of NHL.com reports."
     },
     {
       "player": "Calum Ritchie",
@@ -482,6 +498,14 @@
       "position": "LW",
       "estimated_return": "Jan 25",
       "status": "Injured Reserve",
+      "comment": ""
+    },
+    {
+      "player": "Thomas Chabot",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Nov 19",
+      "status": "Day-To-Day",
       "comment": ""
     },
     {
@@ -661,27 +685,27 @@
       "comment": "Sep 30: Tucker had arthroscopic knee surgery and will be re-assessed in six weeks, the team announced Wednesday."
     },
     {
+      "player": "Zemgus Girgensons",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 19",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
+      "player": "Brandon Hagel",
+      "team": null,
+      "position": "LW",
+      "estimated_return": "Nov 19",
+      "status": "Out",
+      "comment": "Nov 17: Hagel (undisclosed) won't play against Washington on Tuesday, Benjamin Pierce of the Lightning's official site reports."
+    },
+    {
       "player": "Conor Geekie",
       "team": null,
       "position": "C",
-      "estimated_return": "Nov 25",
+      "estimated_return": "Nov 22",
       "status": "Injured Reserve",
-      "comment": ""
-    },
-    {
-      "player": "Erik Cernak",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Nov 17",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Anthony Cirelli",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Nov 17",
-      "status": "Day-To-Day",
       "comment": ""
     },
     {
@@ -760,9 +784,9 @@
       "player": "Nick Schmaltz",
       "team": null,
       "position": "C",
-      "estimated_return": "Nov 21",
-      "status": "Out",
-      "comment": "Nov 14: Schmaltz (lower body) isn't expected to play against San Jose on Saturday, and it's unclear when he will be ready to return, Brogan Houston of the Deseret News reports."
+      "estimated_return": "Nov 25",
+      "status": "Injured Reserve",
+      "comment": ""
     },
     {
       "player": "Nate Schmidt",
