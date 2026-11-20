@@ -2,7 +2,7 @@
   "league": "nrl",
   "source": "https://www.nrl.com/ladder/",
   "strategy": "playwright_nrl",
-  "fetched_at": "2026-11-20T05:27:36.166420+09:00",
+  "fetched_at": "2026-11-20T15:56:14.253401+09:00",
   "team_count": 17,
   "teams": [
     {

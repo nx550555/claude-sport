@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-11-20T05:27:43.663269+09:00",
+  "fetched_at": "2026-11-20T15:56:23.734305+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -10,7 +10,7 @@
       "position": "C",
       "estimated_return": "Dec 6",
       "status": "Injured Reserve",
-      "comment": "Nov 11: Poehling (lower body) was placed on long-term injured reserve by the Ducks on Wednesday."
+      "comment": "Nov 19: Poehling (knee) is on the Ducks' current road trip and has resumed skating, Derek Lee of The Hockey News reports Thursday."
     },
     {
       "player": "A.J. Greer",
@@ -27,14 +27,6 @@
       "estimated_return": "Nov 25",
       "status": "Injured Reserve",
       "comment": "Nov 7: Head coach Marco Sturm announced Saturday that Hagens (back) is expected to miss multiple weeks, per Jack Studley of Boston Hockey Now."
-    },
-    {
-      "player": "Mattias Samuelsson",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Nov 19",
-      "status": "Day-To-Day",
-      "comment": "Nov 19: Samuelsson (undisclosed) is considered a game-time decision for Thursday's road clash against the Capitals, per Paul Hamilton of WGR Sports Radio 550."
     },
     {
       "player": "Konsta Helenius",
@@ -104,16 +96,16 @@
       "player": "Gavin Brindley",
       "team": null,
       "position": "C",
-      "estimated_return": "Nov 19",
-      "status": "Day-To-Day",
-      "comment": ""
+      "estimated_return": "Nov 25",
+      "status": "Out",
+      "comment": "Nov 20: Brindley is in concussion protocol and is considered out indefinitely, Bailey Curtis of DNVR Sports reports."
     },
     {
       "player": "Cale Makar",
       "team": null,
       "position": "D",
       "estimated_return": "Nov 28",
-      "status": "Out",
+      "status": "Injured Reserve",
       "comment": ""
     },
     {
@@ -141,12 +133,28 @@
       "comment": "Oct 23: ir-lt"
     },
     {
+      "player": "Mathieu Olivier",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Nov 21",
+      "status": "Day-To-Day",
+      "comment": ""
+    },
+    {
       "player": "Sean Monahan",
       "team": null,
       "position": "C",
       "estimated_return": "Nov 25",
       "status": "Out",
       "comment": ""
+    },
+    {
+      "player": "Oskar Back",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 22",
+      "status": "Injured Reserve",
+      "comment": "Nov 19: Back (finger) is expected to return within the next week, Robert Tiffin of NHL.com reports Thursday."
     },
     {
       "player": "Tyler Myers",
@@ -171,14 +179,6 @@
       "estimated_return": "Nov 27",
       "status": "Injured Reserve",
       "comment": "Nov 14: Bichsel (lower body) was placed on injured reserve Saturday."
-    },
-    {
-      "player": "Oskar Back",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Nov 22",
-      "status": "Injured Reserve",
-      "comment": "Oct 24: Back was placed on long-term injured reserve on Saturday."
     },
     {
       "player": "Matt Duchene",
@@ -224,8 +224,8 @@
       "player": "Ryan Nugent-Hopkins",
       "team": null,
       "position": "C",
-      "estimated_return": "Nov 19",
-      "status": "Day-To-Day",
+      "estimated_return": "Nov 21",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -309,11 +309,11 @@
       "comment": "Sep 24: ir-nr"
     },
     {
-      "player": "Yakov Trenin",
+      "player": "Quinn Hughes",
       "team": null,
-      "position": "C",
+      "position": "D",
       "estimated_return": "Nov 21",
-      "status": "Out",
+      "status": "Day-To-Day",
       "comment": ""
     },
     {
@@ -322,7 +322,15 @@
       "position": "G",
       "estimated_return": "Nov 23",
       "status": "Injured Reserve",
-      "comment": "Nov 17: Gustavsson (hip) could rejoin the Wild on Monday ahead of their game versus the Sharks, Michael Russo of The Athletic reports."
+      "comment": "Nov 19: Gustavsson (hip) was reassigned to AHL Iowa on a conditioning assignment Thursday."
+    },
+    {
+      "player": "Yakov Trenin",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 21",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Olli Maatta",
@@ -421,19 +429,19 @@
       "comment": "Nov 13: Casey (knee) was moved to long-term injured reserve on Friday, per PuckPedia."
     },
     {
-      "player": "Jean-Gabriel Pageau",
+      "player": "Ryan Pulock",
       "team": null,
-      "position": "C",
-      "estimated_return": "Nov 19",
+      "position": "D",
+      "estimated_return": "Nov 21",
       "status": "Day-To-Day",
-      "comment": "Nov 19: Pageau (lower body) will be a game-time call against the Jets on Thursday, Andrew Gross of Newsday reports."
+      "comment": ""
     },
     {
       "player": "Logan Stanley",
       "team": null,
       "position": "D",
-      "estimated_return": "Nov 19",
-      "status": "Day-To-Day",
+      "estimated_return": "Nov 21",
+      "status": "Out",
       "comment": ""
     },
     {
@@ -504,25 +512,17 @@
       "player": "Nick Cousins",
       "team": null,
       "position": "C",
-      "estimated_return": "Nov 19",
-      "status": "Day-To-Day",
+      "estimated_return": "Nov 21",
+      "status": "Out",
       "comment": ""
     },
     {
       "player": "Hayden Hodgson",
       "team": null,
       "position": "RW",
-      "estimated_return": "Nov 19",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Thomas Chabot",
-      "team": null,
-      "position": "D",
-      "estimated_return": "Nov 19",
-      "status": "Day-To-Day",
-      "comment": ""
+      "estimated_return": "Nov 21",
+      "status": "Out",
+      "comment": "Nov 19: Hodgson (groin) is slated to miss Thursday's game against Philadelphia."
     },
     {
       "player": "Warren Foegele",
@@ -560,9 +560,9 @@
       "player": "Nick Robertson",
       "team": null,
       "position": "LW",
-      "estimated_return": "Nov 19",
-      "status": "Day-To-Day",
-      "comment": "Nov 19: Robertson left Thursday's morning skate early, raising doubts regarding his availability against St. Louis, Seth Rorabaugh of Tribune-Review Sports reports."
+      "estimated_return": "Nov 21",
+      "status": "Out",
+      "comment": ""
     },
     {
       "player": "Elmer Soderblom",
@@ -621,10 +621,18 @@
       "comment": "Sep 28: Keyser (upper body) was placed on non-roster injured reserve by the Sharks on Monday, Curtis Pashelka of The San Jose Mercury News reports."
     },
     {
+      "player": "Jake O'Brien",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Dec 10",
+      "status": "Injured Reserve",
+      "comment": "Nov 19: The Kraken indicated Thursday that O'Brien (lower body) remains week-to-week, Mike Benton of the Kraken Audio Network reports."
+    },
+    {
       "player": "Nikke Kokko",
       "team": null,
       "position": "G",
-      "estimated_return": "Nov 19",
+      "estimated_return": "Nov 21",
       "status": "Injured Reserve",
       "comment": "Nov 7: ir-nr"
     },
@@ -645,20 +653,12 @@
       "comment": "Oct 25: McCann (lower body) will be out for approximately 10 weeks, the team announced Sunday."
     },
     {
-      "player": "Jake O'Brien",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Nov 28",
-      "status": "Injured Reserve",
-      "comment": "Sep 30: O'Brien (lower body) was placed on non-roster injured reserve Wednesday."
-    },
-    {
       "player": "Ross Johnston",
       "team": null,
       "position": "LW",
-      "estimated_return": "Nov 19",
-      "status": "Day-To-Day",
-      "comment": ""
+      "estimated_return": "Nov 21",
+      "status": "Out",
+      "comment": "Nov 19: Johnston (upper body) will miss Thursday's game against Pittsburgh, per the NHL media site."
     },
     {
       "player": "Torey Krug",
@@ -685,6 +685,14 @@
       "comment": "Sep 30: Tucker had arthroscopic knee surgery and will be re-assessed in six weeks, the team announced Wednesday."
     },
     {
+      "player": "Zemgus Girgensons",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 22",
+      "status": "Out",
+      "comment": ""
+    },
+    {
       "player": "Brandon Hagel",
       "team": null,
       "position": "LW",
@@ -693,18 +701,10 @@
       "comment": "Nov 19: Hagel (lower body) was placed on injured reserve by the Lightning on Thursday, retroactive to Nov. 15, Eduardo A. Encina of the Tampa Bay Times reports."
     },
     {
-      "player": "Zemgus Girgensons",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Nov 19",
-      "status": "Day-To-Day",
-      "comment": "Nov 18: Girgensons is considered day-to-day due to an upper-body injury, Lightning reporter Gabby Shirley reports Wednesday."
-    },
-    {
       "player": "Conor Geekie",
       "team": null,
       "position": "C",
-      "estimated_return": "Nov 22",
+      "estimated_return": "Nov 27",
       "status": "Injured Reserve",
       "comment": ""
     },
@@ -819,6 +819,14 @@
       "estimated_return": "Feb 12",
       "status": "Injured Reserve",
       "comment": ""
+    },
+    {
+      "player": "Brendan Gallagher",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Nov 21",
+      "status": "Day-To-Day",
+      "comment": "Nov 20: Gallagher (lower body) won't return to Thursday's game versus the Kraken."
     },
     {
       "player": "Guillaume Brisebois",
