@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-11-21T04:57:03.199425+09:00",
+  "fetched_at": "2026-11-21T15:51:51.464710+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -179,14 +179,6 @@
       "estimated_return": "Nov 27",
       "status": "Injured Reserve",
       "comment": "Nov 14: Bichsel (lower body) was placed on injured reserve Saturday."
-    },
-    {
-      "player": "Matt Duchene",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Jan 12",
-      "status": "Injured Reserve",
-      "comment": "Oct 12: Duchene will be out for approximately three months after undergoing surgery to repair a core injury, the team announced Monday."
     },
     {
       "player": "William Wallinder",
@@ -445,27 +437,11 @@
       "comment": ""
     },
     {
-      "player": "Joe Veleno",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Dec 27",
-      "status": "Injured Reserve",
-      "comment": "Nov 20: Veleno (lower body) skated on his own before Friday's practice session, Colin Stephenson of Newsday reports."
-    },
-    {
       "player": "Oliver Bjorkstrand",
       "team": null,
       "position": "RW",
-      "estimated_return": "Nov 22",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
-      "player": "Pavel Dorofeyev",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Nov 22",
-      "status": "Day-To-Day",
+      "estimated_return": "Nov 25",
+      "status": "Injured Reserve",
       "comment": ""
     },
     {
@@ -474,7 +450,23 @@
       "position": "D",
       "estimated_return": "Nov 22",
       "status": "Injured Reserve",
-      "comment": "Nov 16: Durzi (lower body) wore a regular jersey during Monday's morning skate and should be ready to play against the Hurricanes on Sunday, Colin Stephenson of Newsday reports."
+      "comment": "Nov 20: Durzi (lower body) will likely be a game-time decision for Sunday's matchup against the Hurricanes, Jim Cerny of NHL.com reports."
+    },
+    {
+      "player": "Joe Veleno",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Dec 27",
+      "status": "Injured Reserve",
+      "comment": "Nov 20: Veleno (lower body) skated on his own before Friday's practice session, Colin Stephenson of Newsday reports."
+    },
+    {
+      "player": "Pavel Dorofeyev",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Nov 22",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Alberts Smits",
@@ -637,14 +629,6 @@
       "comment": "Nov 19: The Kraken indicated Thursday that O'Brien (lower body) remains week-to-week, Mike Benton of the Kraken Audio Network reports."
     },
     {
-      "player": "Nikke Kokko",
-      "team": null,
-      "position": "G",
-      "estimated_return": "Nov 21",
-      "status": "Injured Reserve",
-      "comment": "Nov 7: ir-nr"
-    },
-    {
       "player": "Curtis Douglas",
       "team": null,
       "position": "C",
@@ -725,6 +709,14 @@
       "comment": ""
     },
     {
+      "player": "Cole McWard",
+      "team": null,
+      "position": "D",
+      "estimated_return": "Nov 28",
+      "status": "Injured Reserve",
+      "comment": ""
+    },
+    {
       "player": "Kirill Marchenko",
       "team": null,
       "position": "RW",
@@ -797,20 +789,20 @@
       "comment": "Sep 29: ir-nr"
     },
     {
-      "player": "Dylan Guenther",
-      "team": null,
-      "position": "RW",
-      "estimated_return": "Nov 21",
-      "status": "Injured Reserve",
-      "comment": "Nov 20: Guenther (upper body) skated in a regular sweater during Friday's practice session, Brogan Houston of the Deseret News reports."
-    },
-    {
       "player": "John Marino",
       "team": null,
       "position": "D",
       "estimated_return": "Nov 21",
       "status": "Injured Reserve",
-      "comment": "Nov 18: Marino (upper body) took the ice Wednesday in a regular jersey, Chase Beardsley of The Hockey Writers reports, indicating he's been cleared for contact."
+      "comment": "Nov 20: Marino (upper body) is day-to-day and close to returning, per Cole Bagley of KSL Sports on Friday."
+    },
+    {
+      "player": "Dylan Guenther",
+      "team": null,
+      "position": "RW",
+      "estimated_return": "Nov 21",
+      "status": "Injured Reserve",
+      "comment": "Nov 20: Guenther (upper body) was upgraded to day-to-day ahead of Saturday's matchup with Anaheim, Cole Bagley of KSL Sports reports."
     },
     {
       "player": "Nick Schmaltz",
