@@ -2,7 +2,7 @@
   "league": "top14",
   "source": "https://en.wikipedia.org/wiki/2025%E2%80%9326_Top_14_season",
   "strategy": "wikipedia_table",
-  "fetched_at": "2026-11-23T04:26:49.202869+09:00",
+  "fetched_at": "2026-11-23T16:15:09.813737+09:00",
   "team_count": 14,
   "teams": [
     {
@@ -30,7 +30,7 @@
       "pd_per_game": 9.12
     },
     {
-      "team": "Stade Français",
+      "team": "Stade Français Paris",
       "gp": 26,
       "w": null,
       "l": null,
