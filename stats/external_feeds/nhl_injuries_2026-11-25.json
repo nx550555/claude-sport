@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-11-25T07:18:09.840118+09:00",
+  "fetched_at": "2026-11-25T17:09:38.347441+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -181,18 +181,18 @@
       "comment": "Oct 23: ir-lt"
     },
     {
-      "player": "Sean Monahan",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Nov 25",
-      "status": "Day-To-Day",
-      "comment": ""
-    },
-    {
       "player": "Mathieu Olivier",
       "team": null,
       "position": "RW",
       "estimated_return": "Dec 3",
+      "status": "Injured Reserve",
+      "comment": ""
+    },
+    {
+      "player": "Sean Monahan",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 25",
       "status": "Day-To-Day",
       "comment": ""
     },
@@ -229,14 +229,6 @@
       "comment": "Nov 14: Bichsel (lower body) was placed on injured reserve Saturday."
     },
     {
-      "player": "Matt Duchene",
-      "team": null,
-      "position": "C",
-      "estimated_return": "Jan 12",
-      "status": "Injured Reserve",
-      "comment": "Oct 12: Duchene will be out for approximately three months after undergoing surgery to repair a core injury, the team announced Monday."
-    },
-    {
       "player": "Sam Montembeault",
       "team": null,
       "position": "G",
@@ -259,6 +251,14 @@
       "estimated_return": "Nov 28",
       "status": "Injured Reserve",
       "comment": "Oct 14: Edvinsson (contract dispute) is on the Red Wings' injured, non-roster list, per the NHL media site Wednesday."
+    },
+    {
+      "player": "Filip Hallander",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 27",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Zach Hyman",
@@ -657,15 +657,15 @@
       "team": null,
       "position": "LW",
       "estimated_return": "Nov 27",
-      "status": "Out",
-      "comment": "Nov 24: McMichael (lower body) isn't expected to play against the Islanders on Wednesday, according to Lou Korac of NHL.com."
+      "status": "Injured Reserve",
+      "comment": ""
     },
     {
       "player": "Brandon Carlo",
       "team": null,
       "position": "D",
-      "estimated_return": "Nov 25",
-      "status": "Day-To-Day",
+      "estimated_return": "Dec 2",
+      "status": "Injured Reserve",
       "comment": ""
     },
     {
@@ -899,6 +899,14 @@
       "estimated_return": "Dec 21",
       "status": "Injured Reserve",
       "comment": "Sep 28: Co-president of hockey operations Henrik Sedin said Monday that he hopes Demko (hip) will be ready to return before Christmas, Kevin Woodley of NHL.com reports."
+    },
+    {
+      "player": "Marc Gatcomb",
+      "team": null,
+      "position": "C",
+      "estimated_return": "Nov 27",
+      "status": "Day-To-Day",
+      "comment": ""
     },
     {
       "player": "Vincent Desharnais",
