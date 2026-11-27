@@ -1,7 +1,7 @@
 {
   "source_goalies": "https://www.dailyfaceoff.com/starting-goalies/ (often blocked, WebSearch fallback)",
   "source_injuries": "https://www.espn.com/nhl/injuries",
-  "fetched_at": "2026-11-27T06:21:12.734545+09:00",
+  "fetched_at": "2026-11-27T17:00:09.983251+09:00",
   "starting_goalies": [],
   "injuries": [
     {
@@ -144,8 +144,8 @@
       "player": "Gavin Brindley",
       "team": null,
       "position": "C",
-      "estimated_return": "Dec 1",
-      "status": "Out",
+      "estimated_return": "Dec 8",
+      "status": "Injured Reserve",
       "comment": ""
     },
     {
